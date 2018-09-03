@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['web']], function() {
+Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
 		    Route::group(['middleware' => ['auth.admin:admin']], function() {
 

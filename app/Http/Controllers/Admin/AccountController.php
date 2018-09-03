@@ -29,7 +29,7 @@ class AccountController extends Controller
 	     	    return redirect()->route('admin.dashboard');
 	     	    
 		      } else {
-		        return redirect()->route('admin.get.login')->with('failure','Authentication failed');
+		        return redirect()->route('admin.get.login')->with('failure','The email or password you entered is incorrect.');
 		      }
 	     }
 
@@ -51,7 +51,7 @@ class AccountController extends Controller
 		         $validator->after(function($validator) use($email) {
 		           $query = User::where('email', $email);
 		           if ($query->count() == 0)
-		           $validator->errors()->add('email', 'The Email does not belong to existing account.');
+		           $validator->errors()->add('email', 'The email you entered does not belong to admin account.');
 		         });
 	        endif;
 
@@ -66,6 +66,6 @@ class AccountController extends Controller
 	              $message->to($email);
 	              $message->subject("Admin Forgot Password");
 	          });
-		          return redirect()->route('admin.get.forgot')->with('success','Success');
+		      return redirect()->route('admin.get.forgot')->with('success','Success');
 	     }
 }

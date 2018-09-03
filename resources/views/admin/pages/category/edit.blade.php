@@ -52,7 +52,7 @@
                 <div class="form-group">
                   <label for="icon">Icon&nbsp;<span class="req">*</span></label>
                   <input class="form-control" name="icon" placeholder="Icon" type="file" value=""><br />
-                  <img src="{{ URL::asset('cat_icons/'.$category->icon) }}" alt="" width="120" />
+                  <img src="{{ URL::asset('cat_images/'.$category->icon) }}" alt="" width="120" />
                 </div>
 
                 <div class="form-group">

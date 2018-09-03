@@ -46,7 +46,7 @@
                   <td>{!! MyHelper::showCategories($data->id) !!}</td>
                   <td>{{ $data->slug }}</td>
                   <td>{{ $data->page_title }}</td>
-                  <td><img src="{{ URL::asset('images/'.$status_img) }}" /></td>
+                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                   <td>
                      <a class="btn btn-primary" href="{{ route('categories.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['categories.destroy', $data->id]]) !!}

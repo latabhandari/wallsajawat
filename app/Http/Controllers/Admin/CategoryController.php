@@ -46,7 +46,7 @@ class CategoryController extends Controller
          $params             =    $request->all();
 
          $file               =    $request->file('icon');
-         $destinationPath    =    public_path('cat_icons');
+         $destinationPath    =    public_path('cat_images');
          $filename           =    $file->getClientOriginalName();
          $file->move($destinationPath, $filename);
 
@@ -111,7 +111,7 @@ class CategoryController extends Controller
 
         $file               =    $request->file('icon');
         if (! empty($file)):
-            $destinationPath    =    public_path('cat_icons');
+            $destinationPath    =    public_path('cat_images');
             $filename           =    $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
             $fields['icon']                 =    $filename;

@@ -22,22 +22,8 @@ class DashboardController extends Controller
     //
     public function dashboard()
         {
-            /* dashboard */
-            $start_time  =  mktime(0, 0, 0, date('m'), date('d'), date('Y'));
-            $end_time    =  mktime(23, 59, 59, date('m'), date('d'), date('Y'));
-
-            $new_ads     =  Ads::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
-            $total_ads   =  Ads::count();
-
-            $total_users =  User::where('is_admin', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
-            $new_users   =  User::where('is_admin', 0)->count();
-
-            $total_category          =  Category::where('parent_id', '=', 0)->count();
-            $total_sub_category      =  Category::where('parent_id', '!=', 0)->count();
-            $states                  =  State::count();
-            $cities                  =  City::count();
-            
-            return view('admin.pages.dashboard.home', compact('new_ads', 'total_ads', 'total_users', 'new_users', 'total_category', 'total_sub_category', 'states', 'cities'));
+            /* dashboard */            
+            return view('admin.pages.dashboard.home');
         }
         
     public function subscribes()

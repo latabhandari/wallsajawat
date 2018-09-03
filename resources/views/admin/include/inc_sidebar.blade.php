@@ -33,41 +33,7 @@ switch ($segment2)
                   <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.dashboard') }}"><span>Dashboard</span></a>
                   </li>
-                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>State</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('state.index') }}">View States</a></li>
-                         <li><a class="" href="{{ route('state.create') }}">Add State</a>a></li>
-                        </ul>
-                  </li>
-                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>City</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('city.index') }}">View Cities</a></li>
-                         <li><a class="" href="{{ route('city.create') }}">Add City</a>a></li>
-                       </ul>
-                  </li>
-
-
-                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Attribute</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('attribute.index') }}">View Attributes</a></li>
-                         <li><a class="" href="{{ route('attribute.create') }}">Add Attribute</a>a></li>
-                       </ul>
-                  </li>
-
-
-
+                
                   <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
                      <a href="#">
                      <i class=""></i><span>Category</span>
@@ -80,20 +46,10 @@ switch ($segment2)
                   </li>
 
                   <li class="">
-                     <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.ads') }}"><span>Ads</span></a>
-                  </li>
-
-                  <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
                   </li>
 
-                  <li class="">
-                     <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.subscribes') }}"><span>Subscribe Users</span></a>
-                  </li>
-				  
-				   <li class="">
-                     <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.contactus') }}"><span>Contact Us</span></a>
-                  </li>
+                  
 
                   <li class="">
                      <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.settings') }}"><span>Settings</span></a>
