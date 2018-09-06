@@ -142,7 +142,7 @@
                         <!-- <a class="prev" id="prev" onClick="plusSlides(-1)" width="15">&#10094;</a>-->
                         <li>
                             <div class="img-block">
-                                <img src="Images/Sliderimg1.png">
+                                <img src="{{ asset('build/assets/images/Sliderimg1.png') }}">
                                 <div class="trending-content">
                                     <h4>QUOTES</h4>
                                 </div>
@@ -150,7 +150,7 @@
                         </li>
                         <li>
                             <div class="img-block">
-                                <img src="Images/Sliderimg2.png">
+                                <img src="{{ asset('build/assets/images/Sliderimg2.png') }}">
                                 <div class="trending-content">
                                     <h4>ILLUTRATION ART</h4>
                                 </div>
@@ -158,7 +158,7 @@
                         </li>
                         <li>
                             <div class="img-block">
-                                <img src="Images/Sliderimg3.png">
+                                <img src="{{ asset('build/assets/images/Sliderimg3.png') }}">
                                 <div class="trending-content">
                                     <h4>NATURE AND LANDSCAPE</h4>
                                 </div>
@@ -166,7 +166,7 @@
                         </li>
                         <li>
                             <div class="img-block">
-                                <img src="Images/Sliderimg3.png">
+                                <img src="{{ asset('build/assets/images/Sliderimg3.png') }}">
                                 <div class="trending-content">
                                     <h4>NATURE AND LANDSCAPE</h4>
                                 </div>
@@ -259,7 +259,7 @@
             <div class="privilege-sec">
                 <div class="privilege-body">
                     <h1>Become our <span>privilege partner<span></h1>
-                        <img src="Images/hands.png" alt="privilege partner"/>
+                        <img src="{{ asset('build/assets/images/hands.png') }}" alt="privilege partner"/>
                     </div>
                 </div>
                 <div class="footer-sec">
@@ -300,9 +300,9 @@
                             <li class="accept">
                                 <h3> WE ACCEPT</h3>
                                 <ul>
-                                    <li> <img src="Images/master.png" alt="mastercard"/></li>
-                                    <li> <img src="Images/Visa.png" alt="visa"/></li>
-                                    <li><img src="Images/Rupay.png" alt="rupay"/></li>
+                                    <li> <img src="{{ asset('build/assets/images/master.png') }}" alt="mastercard"/></li>
+                                    <li> <img src="{{ asset('build/assets/images/Visa.png') }}" alt="visa"/></li>
+                                    <li><img src="{{ asset('build/assets/images/Rupay.png') }} alt="rupay"/></li>
                                 </ul>
                             </li>
                         </ul>
