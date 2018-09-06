@@ -302,7 +302,7 @@
                                 <ul>
                                     <li> <img src="{{ asset('build/assets/images/master.png') }}" alt="mastercard"/></li>
                                     <li> <img src="{{ asset('build/assets/images/Visa.png') }}" alt="visa"/></li>
-                                    <li><img src="{{ asset('build/assets/images/Rupay.png') }} alt="rupay"/></li>
+                                    <li><img src="{{ asset('build/assets/images/Rupay.png') }}"" alt="rupay"/></li>
                                 </ul>
                             </li>
                         </ul>
