@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    echo '<h1>Coming Soon!</h1>';
+    die();
 });
 
 Auth::routes();
@@ -27,6 +29,8 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/', 'HomeController@index')->name('home.index');
+
+
 
 });
 
