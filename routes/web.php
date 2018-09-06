@@ -28,9 +28,7 @@ Route::group(['prefix' => 'beta', 'middleware' => ['']], function() {
 
     Route::get('/', 'HomeController@dashboard')->name('home');
 
-
 });
-
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
 		    Route::group(['middleware' => ['auth.admin:admin']], function() {
