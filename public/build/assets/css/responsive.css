@@ -1,0 +1,723 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 479px) {
+.center-container {
+	width: 100%;
+}
+.left-th {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.left-th h5 {
+	font-size: 10px;
+}
+.right-th {
+	width: 100%;
+	float: none;
+	display: none;
+}
+header .logo {
+	float: left;
+	width: 65%;
+}
+.main-menu2 {
+	display: none;
+}
+header .logo img {
+	height: 35px;
+	margin-left: 10px;
+}
+.main-menu {
+	display: none;
+}
+.menu-icons {
+	width: 100%;
+	float: none;
+}
+.menu-icons ul {
+	margin-top: 0px;
+}
+.home-banner {
+	min-height: 200px;
+	margin-top: 0px;
+}
+.seller-sec h3 {
+	padding-top: 10px;
+	font-size: 15px;
+}
+.seller-sec h4 {
+	font-size: 12px;
+}
+.seller-imgs {
+	width: 100%;
+}
+.seller-imgs .image2 {
+	width: 100%;
+	float: none;
+	margin-top: 5px;
+}
+.seller-imgs .image1 {
+	width: 75%;
+	float: none;
+	min-height: 150px;
+	margin: 0 auto;
+}
+.seller-imgs .image1 h4, .seller-imgs .image2 .sub-img1 h4, .seller-imgs .image2 .sub-img2 h4 {
+	padding-top: 75px;
+}
+.seller-imgs .image2 .sub-img1, .seller-imgs .image2 .sub-img2, .seller-imgs .image3 {
+	width: 75%;
+	min-height: 150px;
+	float: none;
+	margin: 0 auto 5px;
+	padding: 5px 0px;
+}
+.seller-imgs .image3 {
+	padding-top: 3px;
+}
+.seller-imgs .image3 .image3-part1 h4, .seller-imgs .image3 .image3-part2 h4, .seller-imgs .image3 .image3-part3 h4 {
+	padding-top: 75px;
+}
+.seller-imgs .image3 .image3-part1, .seller-imgs .image3 .image3-part2, .seller-imgs .image3 .image3-part3 {
+	width: 100%;
+	min-height: 150px;
+	float: none;
+	margin: 0 auto 5px;
+}
+.product-sec .main-product li {
+	margin-left: 0px;
+}
+.product-sec .main-product ul {
+	width: 70%;
+	margin: 0 auto;
+}
+.product-sec .main-product ul li .product-btm {
+	width: 100%;
+	margin: 10px 0px;
+}
+.main-product ul li img {
+	width: 100%;
+}
+.product-sec .main-product ul li .product-btm .product-price {
+	width: 77%;
+}
+.artist-sec .artist-imgs {
+	width: 67%;
+}
+.artist-sec .artist-imgs .artist-part1 h3, .artist-sec .artist-imgs .artist-part2 h3, .artist-sec .artist-imgs .artist-part3 h3 {
+	padding-top: 100px;
+	margin-top: 0px;
+}
+.artist-sec .artist-imgs .artist-part1, .artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	Float: none;
+	margin-top: 5px;
+	margin-left: -10px;
+}
+.tips-head h3 {
+	font-size: 20px;
+}
+.tips-body ul {
+	width: 90%;
+}
+.tips-body ul li {
+	float: none;
+	width: 100%;
+}
+.tips-body ul li h3 {
+	font-size: 16px!important;
+}
+.tips-body ul li h4 {
+	font-size: 12px!important;
+}
+.tips-body ul li img {
+	width: 100%;
+	margin-top: 5px;
+}
+.privilege-sec {
+	display: none;
+}
+.footer-sec .foot1 {
+	width: 80%;
+	float: none;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.footer-sec .foot2 {
+	width: 100%;
+	float: none;
+	margin-top: 20px;
+}
+.footer-sec .foot2 ul li {
+	width: 100%;
+	float: none;
+	text-align: center;
+	clear: both;
+}
+.footer-sec .foot2 ul .follow-us ul li {
+	float: left;
+	width: 30%;
+	clear: none;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+.footer-sec .foot2 ul .accept ul li {
+	width: 30%;
+	float: left;
+	margin-bottom: 10px;
+	clear: none;
+}
+.footer-sec .foot2 ul .information-sec h3 {
+	font-size: 18px;
+}
+.footer-sec .foot2 ul .information-sec ul li h4 a {
+	font-size: 13px;
+}
+.footer-sec .foot1 h4 {
+	font-size: 13px;
+}
+.follow-us h3 {
+	font-size: 16px
+}
+.follow-us ul {
+	width: 76%;
+	margin: 0 auto;
+}
+.follow-us ul li {
+	font-size: 20px;
+}
+.footer-sec .foot2 ul .accept h3 {
+	font-size: 16px;
+}
+.accept ul {
+	width: 85%;
+	margin: 0 auto;
+}
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 767px) {
+.center-container {
+	width: 100%;
+}
+.main-menu2 {
+	display: none;
+}
+.left-th {
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.left-th h5 {
+	font-size: 10px;
+}
+.right-th {
+	width: 100%;
+	float: none;
+	display: none;
+}
+header .logo {
+	float: left;
+	width: 50%;
+}
+header .logo img {
+	height: 35px;
+	margin-left: 10px;
+}
+.main-menu {
+	display: none;
+}
+.menu-icons {
+	width: 23%;
+	float: right;
+}
+.menu-icons ul {
+	margin-top: 0px;
+}
+.home-banner {
+	min-height: 200px;
+	margin-top: 70px;
+}
+.seller-sec h3 {
+	padding-top: 10px;
+	font-size: 15px;
+}
+.seller-sec h4 {
+	font-size: 12px;
+}
+.seller-imgs {
+	width: 100%;
+}
+.seller-imgs .image2 {
+	width: 100%;
+	float: none;
+	margin-top: 5px;
+}
+.seller-imgs .image1 {
+	width: 75%;
+	float: none;
+	min-height: 150px;
+	margin: 0 auto;
+}
+.seller-imgs .image1 h4, .seller-imgs .image2 .sub-img1 h4, .seller-imgs .image2 .sub-img2 h4 {
+	padding-top: 75px;
+}
+.seller-imgs .image2 .sub-img1, .seller-imgs .image2 .sub-img2, .seller-imgs .image3 {
+	width: 69%;
+	min-height: 150px;
+	float: none;
+	margin: 0 auto 5px;
+	padding: 5px 0px;
+}
+.seller-imgs .image3 {
+	padding-top: 3px;
+}
+.product-sec .main-product ul li .product-btm .product-price {
+	width: 78%
+}
+.seller-imgs .image3 .image3-part1 h4, .seller-imgs .image3 .image3-part2 h4, .seller-imgs .image3 .image3-part3 h4 {
+	padding-top: 75px;
+}
+.seller-imgs .image3 .image3-part1, .seller-imgs .image3 .image3-part2, .seller-imgs .image3 .image3-part3 {
+	width: 100%;
+	min-height: 150px;
+	float: none;
+	margin: 0 auto 5px;
+}
+.product-sec .main-product li {
+	margin-left: 0px;
+}
+.product-sec .main-product {
+	width: 100%;
+	margin: 0 auto;
+}
+.product-sec .main-product ul {
+	width: 40%;
+}
+.artist-sec .artist-imgs {
+	width: 35%;
+}
+.product-sec .main-product ul li .product-btm {
+	width: 100%;
+	margin: 10px 0px;
+}
+.artist-sec .artist-imgs .artist-part1 h3, .artist-sec .artist-imgs .artist-part2 h3, .artist-sec .artist-imgs .artist-part3 h3 {
+	padding-top: 100px;
+	margin-top: 0px;
+}
+.main-product ul li img {
+	width: 100%;
+}
+.artist-sec .artist-imgs .artist-part1 {
+	margin-left: 35px;
+}
+.artist-sec .artist-imgs .artist-part1, .artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	Float: none;
+	margin-top: 5px;
+	margin-left: -10px;
+}
+.tips-head h3 {
+	font-size: 20px;
+}
+.tips-body ul {
+	width: 90%;
+}
+.tips-body ul li {
+	float: none;
+	width: 100%;
+}
+.tips-body ul li h3 {
+	font-size: 16px!important;
+}
+.tips-body ul li h4 {
+	font-size: 12px!important;
+}
+.tips-body ul li img {
+	width: 100%;
+	margin-top: 5px;
+}
+.privilege-sec {
+	display: none;
+}
+.footer-sec .foot1 {
+	width: 80%;
+	float: none;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.footer-sec .foot2 {
+	width: 100%;
+	float: none;
+	margin-top: 20px;
+}
+.footer-sec .foot2 ul li {
+	width: 100%;
+	float: none;
+	text-align: center;
+	clear: both;
+}
+.footer-sec .foot2 ul .follow-us ul li {
+	float: left;
+	width: 30%;
+	clear: none;
+	margin-bottom: 10px;
+	margin-top: 12px;
+}
+.footer-sec .foot2 ul .accept ul li {
+	width: 30%;
+	float: left;
+	margin-bottom: 10px;
+	clear: none;
+}
+.footer-sec .foot2 ul .information-sec h3 {
+	font-size: 18px;
+}
+.footer-sec .foot2 ul .information-sec ul li h4 a {
+	font-size: 13px;
+}
+.footer-sec .foot1 h4 {
+	font-size: 13px;
+}
+.follow-us h3 {
+	font-size: 16px
+}
+.follow-us ul {
+	width: 76%;
+	margin: 0 auto;
+}
+.follow-us ul li {
+	font-size: 20px;
+}
+.footer-sec .foot2 ul .accept h3 {
+	font-size: 16px;
+}
+.accept ul {
+	width: 85%;
+	margin: 0 auto;
+}
+}
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1023px) {
+.center-container {
+	width: 100%;
+}
+.left-th {
+	width: 36%;
+}
+.main-menu2 {
+	display: none;
+}
+.left-th h5 {
+	font-size: 10px;
+}
+.right-th {
+	width: 56%;
+}
+.right-th ul li {
+	font-size: 12px;
+}
+header .logo img {
+	height: 37px;
+	margin-left: 7px;
+}
+.product-sec .main-product {
+	width: 100%;
+	margin: 0 auto;
+}
+.main-menu {
+	width: 80%;
+}
+.main-menu ul a li h4 {
+	font-size: 11px;
+}
+.menu-icons li {
+	padding: 6px 5px;
+}
+.menu-icons {
+	width: 20%;
+}
+.menu-icons ul {
+	margin-top: 0px;
+}
+.main-menu ul a li {
+	padding: 12px 16px 10px 10px;
+}
+.home-banner {
+	min-height: 300px;
+	margin-top: 90px;
+}
+.seller-imgs .image1 {
+	width: 50%;
+}
+.seller-imgs .image2 .sub-img1 {
+	width: 50%;
+}
+.seller-imgs .image2 .sub-img2 {
+	width: 49%;
+}
+.seller-imgs .image3 .image3-part1 {
+	width: 25%;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part2 {
+	width: 50%;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part3 {
+	width: 24%;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part1 h4, .seller-imgs .image3 .image3-part2 h4, .seller-imgs .image3 .image3-part3 h4 {
+	padding-top: 100px;
+}
+.product-sec .main-product li {
+	float: left;
+	margin-left: 10px;
+	width: 30%;
+}
+.product-sec .main-product li img {
+	width: 100%;
+}
+.product-sec .main-product ul li .product-btm .product-price {
+	width: 78%
+}
+.product-price {
+	float: left;
+	width: 50%!important;
+}
+.product-icons {
+	float: right;
+	width: 30%!important;
+}
+.artist-sec .artist-imgs {
+	padding-top: 50px;
+	width: 98%;
+	margin: 0 auto;
+}
+.artist-sec .artist-imgs .artist-part1, .artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	width: 30%;
+	float: left;
+	text-align: center;
+	min-height: 227px;
+	background-size: contain;
+}
+.artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	margin-left: 5px;
+}
+.artist-sec .artist-imgs .artist-part1 h4, .artist-sec .artist-imgs .artist-part2 h4, .artist-sec .artist-imgs .artist-part3 h4 {
+	font-size: 11px;
+}
+.artist-sec .artist-imgs .artist-part1 h3, .artist-sec .artist-imgs .artist-part2 h3, .artist-sec .artist-imgs .artist-part3 h3 {
+	font-size: 15px;
+}
+.tips-head h3 {
+	font-size: 20px;
+}
+.tips-body ul {
+	width: 90%;
+}
+.tips-body ul li {
+	float: left;
+	width: 49%;
+	margin-left: 5px;
+}
+.tips-body ul li h3 {
+	font-size: 16px!important;
+}
+.tips-body ul li h4 {
+	font-size: 12px!important;
+}
+.tips-body ul li img {
+	width: 100%;
+	margin-top: 5px;
+}
+.privilege-sec {
+	width: 100%;
+	min-height: 100px;
+}
+.privilege-body {
+	padding-left: 140px;
+	padding-top: 28px;
+}
+.privilege-sec img {
+	height: 60px;
+}
+.privilege-sec h1 {
+	font-size: 31px;
+	margin-left: 90px;
+}
+.footer-sec .foot1 h4 {
+	font-size: 12px;
+}
+.foot2 ul li h3 {
+	font-size: 16px;
+}
+.footer-sec .foot2 ul .information-sec ul li h4 a {
+	font-size: 14px;
+}
+.footer-sec .foot2 ul .follow-us ul li {
+	font-size: 20px;
+}
+.accept ul li {
+	float: none!important;
+}
+}
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1224px) {
+.center-container {
+	width: 100%;
+}
+.left-th {
+	width: 36%;
+}
+.main-menu2 {
+	display: none;
+}
+.left-th h5 {
+	font-size: 10px;
+}
+.right-th {
+	width: 42%;
+}
+.right-th ul li {
+	font-size: 12px;
+}
+header .logo img {
+	height: 37px;
+	margin-left: 7px;
+}
+.main-menu {
+	width: 60%;
+}
+.main-menu ul a li h4 {
+	font-size: 11px;
+}
+.menu-icons li {
+	padding: 6px 5px;
+}
+.menu-icons {
+	width: 20%;
+	margin-top: 25px;
+}
+.menu-icons ul {
+	margin-top: 0px;
+}
+.main-menu ul a li {
+	padding: 12px 16px 10px 10px;
+}
+.home-banner {
+	min-height: 400px;
+	margin-top: 90px;
+}
+.seller-imgs .image1 {
+	width: 50%;
+}
+.seller-imgs .image2 .sub-img1 {
+	width: 50%;
+}
+.seller-imgs .image2 .sub-img2 {
+	width: 49%;
+}
+.seller-imgs .image3 .image3-part1 {
+	width: 25%;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part2 {
+	width: 50%;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part3 {
+	width: 249px;
+	;
+	min-height: 200px;
+}
+.seller-imgs .image3 .image3-part1 h4, .seller-imgs .image3 .image3-part2 h4, .seller-imgs .image3 .image3-part3 h4 {
+	padding-top: 100px;
+}
+.product-sec .main-product li {
+	float: left;
+	margin-left: 10px;
+	width: 30%;
+}
+.product-sec .main-product li img {
+	width: 100%;
+}
+.product-price {
+	float: left;
+	width: 50%!important;
+}
+.product-icons {
+	float: right;
+	width: 30%!important;
+}
+.artist-sec .artist-imgs {
+	padding-top: 50px;
+	width: 98%;
+	margin: 0 auto;
+}
+.artist-sec .artist-imgs .artist-part1 {
+	margin-left: 50px;
+}
+.artist-sec .artist-imgs .artist-part1, .artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	width: 30%;
+	float: left;
+	text-align: center;
+	min-height: 300px;
+	background-size: contain;
+}
+.artist-sec .artist-imgs .artist-part2, .artist-sec .artist-imgs .artist-part3 {
+	margin-left: 5px;
+}
+.artist-sec .artist-imgs .artist-part1 h4, .artist-sec .artist-imgs .artist-part2 h4, .artist-sec .artist-imgs .artist-part3 h4 {
+	font-size: 11px;
+}
+.artist-sec .artist-imgs .artist-part1 h3, .artist-sec .artist-imgs .artist-part2 h3, .artist-sec .artist-imgs .artist-part3 h3 {
+	font-size: 15px;
+}
+.tips-head h3 {
+	font-size: 20px;
+}
+.tips-body ul {
+	width: 90%;
+}
+.tips-body ul li {
+	float: left;
+	width: 49%;
+	margin-left: 5px;
+}
+.tips-body ul li h3 {
+	font-size: 16px!important;
+}
+.tips-body ul li h4 {
+	font-size: 12px!important;
+}
+.tips-body ul li img {
+	width: 100%;
+	margin-top: 5px;
+}
+.privilege-sec {
+	width: 100%;
+	min-height: 135px;
+	background-size: contain;
+}
+.privilege-body {
+	padding-left: 200px;
+	padding-top: 42px;
+}
+.privilege-sec img {
+	height: 70px;
+}
+.privilege-sec h1 {
+	font-size: 38px;
+	margin-left: 0px;
+}
+.footer-sec .foot1 h4 {
+	font-size: 12px;
+}
+.foot2 ul li h3 {
+	font-size: 16px;
+}
+.footer-sec .foot2 ul .information-sec ul li h4 a {
+	font-size: 14px;
+}
+.footer-sec .foot2 ul .follow-us ul li {
+	font-size: 20px;
+}
+.accept ul li {
+	float: none!important;
+}
+}

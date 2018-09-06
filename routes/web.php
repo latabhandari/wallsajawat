@@ -19,21 +19,25 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 //Email Verification
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
+/************** Frontend Url ******************/
 
 Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/', 'HomeController@index')->name('home.index');
 
-
-
 });
 
+
+/*************** Close *****************************/
+
+
+/************** Admin Url ******************/
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
@@ -87,3 +91,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
         });
 
 });
+
+/************** Close Admin Url ******************/
