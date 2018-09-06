@@ -114,7 +114,7 @@ header .logo img {
 	font-size: 20px;
 }
 .home-banner {
-	background-image: url(../Images/Banner.jpg);
+	background-image: url(../images/Banner.jpg);
 	min-height: 520px;
 	margin-top: 100;
 	background-size: cover;
@@ -140,7 +140,7 @@ header .logo img {
 	width: 50%;
 	float: left;
 	min-height: 200px;
-	background-image: url(../Images/Tree.jpg);
+	background-image: url(../images/Tree.jpg);
 }
 .seller-imgs .image1 h4, .seller-imgs .image2 .sub-img1 h4, .seller-imgs .image2 .sub-img2 h4 {
 	color: #fff;
@@ -155,7 +155,7 @@ header .logo img {
 	width: 330px;
 	min-height: 200px;
 	float: left;
-	background-image: url(../Images/Floral.jpg);
+	background-image: url(../images/Floral.jpg);
 	background-repeat: no-repeat;
 	margin-left: 2px;
 }
@@ -163,7 +163,7 @@ header .logo img {
 	width: 330px;
 	min-height: 200px;
 	float: right;
-	background-image: url(../Images/Texture.jpg)
+	background-image: url(../images/Texture.jpg)
 }
 .seller-imgs .image3 {
 	width: 100%;
@@ -173,7 +173,7 @@ header .logo img {
 .seller-imgs .image3 .image3-part1 {
 	width: 330px;
 	;
-	background-image: url(../Images/interior.jpg);
+	background-image: url(../images/interior.jpg);
 	min-height: 300px;
 	float: left;
 	margin-right: 2px;
@@ -181,14 +181,14 @@ header .logo img {
 .seller-imgs .image3 .image3-part2 {
 	width: 664px;
 	;
-	background-image: url(../Images/elements.jpg);
+	background-image: url(../images/elements.jpg);
 	min-height: 300px;
 	float: left;
 	margin-right: 2px;
 }
 .seller-imgs .image3 .image3-part3 {
 	width: 331px;
-	background-image: url(../Images/all-elements.png);
+	background-image: url(../images/all-elements.png);
 	min-height: 300px;
 	float: left;
 }
@@ -265,14 +265,14 @@ header .logo img {
 	padding-bottom: 50px;
 }
 .artist-sec .artist-imgs .artist-part1 {
-	background-image: url(../Images/Artist.jpg);
+	background-image: url(../images/Artist.jpg);
 	min-height: 277px;
 	width: 277px;
 	float: left;
 	text-align: center;
 }
 .artist-sec .artist-imgs .artist-part2 {
-	background-image: url(../Images/Vastu.jpg);
+	background-image: url(../images/Vastu.jpg);
 	min-height: 277px;
 	width: 277px;
 	float: left;
@@ -280,7 +280,7 @@ header .logo img {
 	text-align: center;
 }
 .artist-sec .artist-imgs .artist-part3 {
-	background-image: url(../Images/Memorywall.jpg);
+	background-image: url(../images/Memorywall.jpg);
 	min-height: 277px;
 	width: 277px;
 	float: right;
