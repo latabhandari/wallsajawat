@@ -184,21 +184,21 @@
                 <div class="main-product">
                     <ul>
                         <li>
-                            <img src="Images/Product1.jpg" alt="Design1"/>
+                            <img src="{{ asset('build/assets/images/Product1.jpg') }}" alt="Design1"/>
                             <div class="product-btm">
                                 <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
                                 <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
                             </div>
                         </li>
                         <li>
-                            <img src="Images/Product3.jpg" alt="Design1"/>
+                            <img src="{{ asset('build/assets/images/Product3.jpg') }}" alt="Design1"/>
                             <div class="product-btm">
                                 <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
                                 <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
                             </div>
                         </li>
                         <li>
-                            <img src="Images/Product2.jpg" alt="Design1"/>
+                            <img src="{{ asset('build/assets/images/Product2.jpg') }}" alt="Design1"/>
                             <div class="product-btm">
                                 <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
                                 <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
@@ -239,14 +239,14 @@
                     <div class="tips-body">
                         <ul>
                             <li>
-                                <img src="Images/tips-tree.jpg" alt="tips-tree"/>
+                                <img src="{{ asset('build/assets/images/tips-tree.jpg') }}" alt="tips-tree"/>
                                 <h3>30 travel decor ideas for the wanderlust in you</h3>
                                 <h4>This is a list of the number of ways people can bring their fondness for travel,
                                 memories and memorabilia into their living and office spaces.
                                 </h4>
                             </li>
                             <li>
-                                <img src="Images/Tips-flower.jpg" alt="tips-tree"/>
+                                <img src="{{ asset('build/assets/images/Tips-flower.jpg') }}" alt="tips-tree"/>
                                 <h3>Top 20 Home Decor Ideas using seamless pattern & texture</h3>
                                 <h4>Patterns and repetitions have a calming effect on the mind and soothe our aura.
                                 Here are 20 ways they can be part of home decor.
