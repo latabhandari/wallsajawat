@@ -24,7 +24,7 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
 
-Route::group(['prefix' => 'beta', function() {
+Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/', 'HomeController@index')->name('home.index');
 
