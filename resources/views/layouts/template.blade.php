@@ -22,7 +22,7 @@
 
         <header>
             <div class="center-container">
-                <div class="logo"><img src="{{ asset('images/logo.jpg') }}" alt="Interior Xpression"/></div>
+                <div class="logo"><img src="{{ asset('build/assets/images/logo.jpg') }}" alt="Interior Xpression"/></div>
                 <div class="main-menu">
                     <ul>
                         <a href="#">
