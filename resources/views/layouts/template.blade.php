@@ -2,15 +2,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Interior Xpression</title>
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width,intial-scale=1.0">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="{{ asset('build/assets/css/stylesheet.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link href="{{ asset('buld/assets/css/responsive.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('buld/assets/css/jquery.bxslider.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('build/assets/css/responsive.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('build/assets/css/jquery.bxslider.min.css') }}" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
 </head>
@@ -308,11 +308,11 @@
                         </ul>
                     </div>
                     <div class="btm-sec">
-                        <h4>Copyright © 2018 wallpapers, All Rights Reserved.</h4>
+                        <h4>Copyright &copy; 2018 wallpapers, All Rights Reserved.</h4>
                     </div>
                 </div>
             </div>
-            <script src="{{ asset('buld/assets/js/jquery.bxslider.min.js') }}" type="text/javascript"></script>
+            <script src="{{ asset('build/assets/js/jquery.bxslider.min.js') }}" type="text/javascript"></script>
             <script>
             $(document).ready(function(){
             $('.bxslider').bxSlider({
