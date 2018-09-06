@@ -337,7 +337,7 @@ header .logo img {
 }
 .privilege-sec {
 	width: 100%;
-	background-image: url(../Images/privilege.png); 	
+	background-image: url(../images/privilege.png); 	
 	min-height: 177px;
 }
 .privilege-sec h1 {
@@ -362,7 +362,7 @@ header .logo img {
 	padding-left: 250px;
 }
 .footer-sec {
-	background-image: url(../Images/footer.png);
+	background-image: url(../images/footer.png);
 	min-height: 250px;
 	width: 100%;
 	overflow: hidden;
