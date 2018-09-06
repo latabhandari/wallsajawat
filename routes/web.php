@@ -24,11 +24,13 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 
 
-Route::group(['prefix' => 'beta', 'middleware' => ['']], function() {
+Route::group(['prefix' => 'beta', function() {
 
-    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/', 'HomeController@index')->name('home.index');
 
 });
+
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
 		    Route::group(['middleware' => ['auth.admin:admin']], function() {
