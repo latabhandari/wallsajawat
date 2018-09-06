@@ -46,7 +46,7 @@ class CategoryController extends Controller
          $params             =    $request->all();
 
          $file               =    $request->file('icon');
-         $destinationPath    =    public_path('cat_images');
+         $destinationPath    =    public_path('catalog/category');
          $filename           =    $file->getClientOriginalName();
          $file->move($destinationPath, $filename);
 
@@ -111,7 +111,7 @@ class CategoryController extends Controller
 
         $file               =    $request->file('icon');
         if (! empty($file)):
-            $destinationPath    =    public_path('cat_images');
+            $destinationPath    =    public_path('catalog/category');
             $filename           =    $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
             $fields['icon']                 =    $filename;
@@ -139,8 +139,7 @@ class CategoryController extends Controller
     {
         //
          $id = Categories::find( $id );
-         $id ->delete();
-
+         $id->delete();
          return redirect()->route('categories.index')->with('success','Category deleted successfully');
     }
 }

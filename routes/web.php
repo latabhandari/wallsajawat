@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Email Verification
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
@@ -31,7 +33,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::post('/settings', 'SettingsController@store')->name('admin.saved.settings');
 
             Route::get('/logout', 'DashboardController@logout')->name('admin.logout');
-            Route::get('/ads', 'AdsController@index')->name('admin.ads');
+            //Route::get('/ads', 'AdsController@index')->name('admin.ads');
 
             Route::get('/user/ads/{userid}', 'UserController@ads')->name('admin.user.ads');
 
@@ -47,10 +49,16 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::get('/contact-us-users', 'DashboardController@contactUsUsers')->name('admin.contactus');
             Route::delete('/destroy-contact-us/{id}', 'DashboardController@destroyContactUs')->name('admin.contactus.destroy');
 
+            Route::resource('product', 'ProductController');
             Route::resource('categories', 'CategoryController');
-            Route::resource('state', 'StateController');
-            Route::resource('city', 'CityController');
-            Route::resource('attribute', 'AttributeController');
+
+
+            Route::get('/product/destroyimg/{id}', 'ProductController@destroyimg')->name('admin.product.delete');
+
+
+            //Route::resource('state', 'StateController');
+            //Route::resource('city', 'CityController');
+            //Route::resource('attribute', 'AttributeController');
 
    	    });
 

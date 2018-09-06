@@ -16,14 +16,26 @@ use App\State as State;
 use App\City as City;
 use App\Newsletter as Newsletter;
 use App\Contact as Contact;
+use App\Product as Product;
 
 class DashboardController extends Controller
 {
     //
     public function dashboard()
         {
-            /* dashboard */            
-            return view('admin.pages.dashboard.home');
+            /* dashboard */
+            $start_time              =  mktime(0, 0, 0, date('m'), 1, date('Y'));
+            $end_time                =  mktime(23, 59, 59, date('m'), date('d'), date('Y'));
+
+            $total_products_month    =  Product::where('created_timestamp', '>=', $start_time)->where('created_timestamp', '<=', $end_time)->count();
+            $total_products          =  Product::count();
+
+            $total_users             =  User::where('is_admin', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
+            $new_users               =  User::where('is_admin', 0)->count();
+
+            $total_category          =  Category::where('parent_id', '=', 0)->count();
+            $total_sub_category      =  Category::where('parent_id', '!=', 0)->count();            
+            return view('admin.pages.dashboard.home', compact('total_products_month', 'total_products', 'total_users', 'new_users', 'total_category', 'total_sub_category'));
         }
         
     public function subscribes()

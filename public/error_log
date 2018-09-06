@@ -1,0 +1,1 @@
+[04-Sep-2018 09:53:44 UTC] PHP Fatal error:  Cannot redeclare App\User::profile() in /home/otwa0y36qdl7/public_html/wallsajawat/app/User.php on line 39

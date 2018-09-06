@@ -41,10 +41,7 @@ class UserController extends Controller
 	public function info($userid = null)
 	  {
 	  	    $request     =  User::findOrFail($userid);
-	  	    $profile     =  Profile::with(['city:id,name', 'state:id,name'])->where('user_id', $userid)->first();
-	  	    $total_ads   =  Ads::where('user_id', $userid)->count();
-            $fav_ads     =  FavoriteAds::where('user_id', $userid)->count();
-
+	  	    $profile     =  Profile::where('user_id', $userid)->firstOrFail();
 			return view('admin.pages.users.info', compact('request', 'profile', 'total_ads', 'fav_ads'))->with('i', (request()->input('page', 1) - 1) * 10);
 	  }
 }

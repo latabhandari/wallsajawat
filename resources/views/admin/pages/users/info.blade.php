@@ -13,7 +13,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>{{  $total_ads }}</h3>
+              <h3></h3>
               <p>Ads Post</p>
             </div>
             <div class="icon">
@@ -27,7 +27,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{  $fav_ads }}</h3>
+              <h3></h3>
               <p>Favorite Ads</p>
             </div>
             <div class="icon">
@@ -88,17 +88,7 @@
                         <td><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{ empty($request->ip_address) ? 'N/A' : $request->ip_address }}</td>
                       </tr>
 
-                      <tr>
-                        <th>Total Ads Post:</th>
-                        <td><strong>{{ $total_ads }}</strong></td>
-                      </tr>
-
-                      <tr>
-                        <th>Total Favorite Ads:</th>
-                        <td><strong>{{ $fav_ads }}</strong></td>
-                      </tr>
-
-
+            
                     </tbody></table>
                   </div>
                   
@@ -113,7 +103,7 @@
                             <tbody>
                               <tr>
                                 <th style="width:50%">Address:</th>
-                                <td>{{ $profile->address }}</td>
+                                <td>{{ $request->profile->address }}</td>
                               </tr>
                               <tr>
                                 <th>City:</th>
@@ -126,7 +116,7 @@
 
                               <tr>
                                 <th>Zipcode:</th>
-                                <td>{{ $profile->zipcode }}</td>
+                                <td>{{ $request->profile->pin }}</td>
                               </tr>
                             </tbody>
                           </table>

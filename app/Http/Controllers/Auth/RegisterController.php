@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Mail;
+use Illuminate\Http\Request;
+use App\Mail\EmailVerification;
+use Illuminate\Auth\Events\Registered;
+
+use App\Profile as Profile;
 class RegisterController extends Controller
 {
     /*
@@ -67,6 +73,55 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+			'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
         ]);
+    }
+	
+	public function register(Request $request)
+    {
+
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $email = new EmailVerification($user);
+
+        Mail::to($user->email)->send($email);
+
+        return view('auth.emails.verification');
+
+    }
+
+	
+	
+	public function verify($token)
+    {
+        if ( ! $token)
+        {
+            return  redirect('login')->with('flash-error','Email Verification Token not provided!');
+        }
+
+
+        $user = User::where('email_token',$token)->first();
+
+
+        if ( ! $user)
+        {
+            return  redirect('login')->with('flash-error','Invalid Email Verification Token!');
+        }
+
+        $user->verified = 1;
+		$user->email_token = '';
+
+        if ($user->save()) {
+
+            $profile = Profile::create([
+            'user_id' => $user->id,
+        	]);		
+			//return view('auth.emails.emailconfirm',['user'=>$user]);
+			return redirect('/');
+
+        }
+
     }
 }

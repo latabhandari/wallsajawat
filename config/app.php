@@ -160,6 +160,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+		
+		//Needed for Passport API
+		Laravel\Passport\PassportServiceProvider::class, 
 
     ],
 

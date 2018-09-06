@@ -62,6 +62,34 @@ class MyHelper
 						$field   .= '</select>';
 						return $field;
 			}
+
+		public static function tep_draw_pull_down_category($name = '', $values = '', $product_id = '', $flag = 0) 
+			{
+				$field  = '<select multiple id="" class="form-control" name="' . $name . '"';
+				$field .= '>';
+
+				$category_ids = [];
+				if ( ! empty($product_id))
+					{
+						$res = DB::table('product_categories')->where('product_id', $product_id)->get();
+						foreach ($res as $result)
+						$category_ids[] = $result->category_id;	
+					}
+				else
+					    $field .= '<option disabled selected value="">-- Select Categories --</option>';
+				
+				
+				
+				for ($i = 0, $n = sizeof($values); $i < $n; $i++) 
+				    {
+						$selected = (in_array($values[$i]['id'], $category_ids) ? "selected = 'selected'" : '');
+													
+						$field   .= '<option value="' . $values[$i]['id'].'" '.$selected.'';
+						$field   .= '>' . ucwords($values[$i]['text']) . '</option>';
+					}
+						$field   .= '</select>';
+						return $field;
+			}
 			
 		public static function generateRandomString($length = 10, $flag = 0) 
 			{
