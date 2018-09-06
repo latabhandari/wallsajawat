@@ -22,6 +22,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Email Verification
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
+
+
+Route::group(['prefix' => 'beta', 'middleware' => ['web']], function() {
+
+    Route::get('/', 'HomeController@dashboard')->name('home');
+
+
+});
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
 		    Route::group(['middleware' => ['auth.admin:admin']], function() {
