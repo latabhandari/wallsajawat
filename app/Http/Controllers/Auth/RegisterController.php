@@ -103,6 +103,18 @@ class RegisterController extends Controller
             if (empty($user))
             return  redirect('login')->with('flash-error','Invalid Email Verification Token!');
 
+
+            $user->verified   = 1;
+            $user->email_token = '';
+
+            if ($user->save()) 
+             {
+
+                $profile = Profile::create(['user_id' => $user->id]);
+                            //return view('auth.emails.emailconfirm',['user'=>$user]);
+                return redirect('/beta');
+             }
+
         /*
 
 <<<<<<< HEAD
