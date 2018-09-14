@@ -74,7 +74,7 @@ class LoginController extends Controller
         if ($authUser)
         return $authUser;
 
-        return User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $provider, 'provider_id' => $user->id, 'unix_timestamp' => time()]);
+        return User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $provider, 'provider_id' => $user->id, 'unix_timestamp' => time(), 'verified' => 1]);
      }
 
     protected function authenticated(Request $request, $user)
