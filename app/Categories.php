@@ -10,6 +10,6 @@ class Categories extends Model
     //
      use SoftDeletes;
      protected $table     =  'categories';
-     protected $fillable  =  ['name', 'slug', 'parent_id', 'status', 'icon', 'page_title', 'meta_description', 'meta_keywords'];
+     protected $fillable  =  ['name', 'slug', 'parent_id', 'status', 'icon', 'page_title', 'meta_description', 'meta_keywords', 'wallpaper_pos', 'wallpaper_image'];
      protected $dates     =  ['deleted_at'];
 }

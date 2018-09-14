@@ -12,7 +12,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Product</h3>
+              <h3 class="box-title">Add Product</h3>
             </div>
             <!-- /.box-header -->
 
@@ -53,7 +53,7 @@
 
                 <div class="form-group">
                   <label for="price">Price&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="price" placeholder="Price" type="text" value="{{ old('price') }}">
+                  <input style="width:10%;display:inline" class="form-control" name="price" placeholder="Price" type="text" value="{{ old('price') }}"><span style="font-weight:bold;font-style:italic;display:inline;padding-left:3px">/Sq Feet</span>
                 </div>
 
                 <div class="form-group">

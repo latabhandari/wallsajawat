@@ -57,6 +57,23 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>
+                  <select name="wallpaper_pos" class="form-control">
+                     <option value="">-- Select --</option>
+                     <option value="1">-- 1 --</option>
+                     <option value="2">-- 2 --</option>
+                     <option value="3">-- 3 --</option>
+                     <option value="4">-- 4 --</option>
+                     <option value="5">-- 5 --</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="wallpaper_image">Wallpaper Image</label>
+                  <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
+                </div>
+
+                <div class="form-group">
                   <label for="page_title">Page Title&nbsp;</label>
                   <input class="form-control" name="page_title" placeholder="Page Title" type="text" value="{{ old('page_title') }}">
                 </div>

@@ -13,6 +13,7 @@
     <link href="{{ asset('build/assets/css/jquery.bxslider.min.css') }}" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 </head>
 <body>
     <div class="container">
@@ -20,43 +21,11 @@
         @include('pages.include.top_head')
 
           @include('pages.include.header')
-    
-        
+
             <div class="home-banner"> </div>
-            <div class="seller-sec">
-                <div class="seller-top">
-                    <h3>TOP SELLERS</h3>
-                    <h4>WALLPAPER</h4>
-                </div>
-                <div class="seller-imgs">
-                    <div class="image1">
-                        <h4>TREE</h4>
-                    </div>
-                    <div class="image2">
-                        <div class="sub-img1">
-                            <h4>FLORAL</h4>
-                        </div>
-                        <div class="sub-img2">
-                            <h4>TEXTURE</h4>
-                        </div>
-                        <!--<ul><li><img src="Images/Tree1.jpg" width="638"></li>
-                        <li><img src="Images/Floral.jpg" width="330"></li>
-                        <li><img src="Images/Texture.jpg" width="330"></li></ul>-->
-                    </div>
-                    <div class="image3">
-                        <div class="image3-part1">
-                            <h4>INTERIOR</h4>
-                        </div>
-                        <div class="image3-part2">
-                            <h4>ELEMENTS</h4>
-                        </div>
-                        <div class="image3-part3">
-                            <h4>ALL</h4>
-                            <h3>TOP SELLERS</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            @include('pages.include.home_wallpaper')
+
             <div class="slider-sec">
                 <div class="slider-head"> <h3>TOP SELLERS</h3><h4>POSTERS</h4></div>
                 <div class="center-container">
@@ -103,29 +72,20 @@
                     <h3>BEST SELLING</h3>
                     <h4>PRODUCTS</h4>
                 </div>
+
                 <div class="main-product">
                     <ul>
+                        @foreach ($best_selling_products as $selling_products)
                         <li>
-                            <img src="{{ asset('build/assets/images/Product1.jpg') }}" alt="Design1"/>
-                            <div class="product-btm">
-                                <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
+                            <a href="{{ route('product.detail', $selling_products->slug) }}"><img src="{{ asset('build/assets/catalog/product/Product1.jpg') }}" alt="" /></a>
+                             <div class="product-btm">
+                                <a href="{{ route('product.detail', $selling_products->slug) }}">
+                                     <div class="product-price"><i class="fas fa-rupee-sign"></i><span>{{ $selling_products->price }} / roll</span></div>
+                                </a>
                                 <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
-                            </div>
+                             </div>
                         </li>
-                        <li>
-                            <img src="{{ asset('build/assets/images/Product3.jpg') }}" alt="Design1"/>
-                            <div class="product-btm">
-                                <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
-                                <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="{{ asset('build/assets/images/Product2.jpg') }}" alt="Design1"/>
-                            <div class="product-btm">
-                                <div class="product-price"><i class="fas fa-rupee-sign"></i><span>10,249/roll</span></div>
-                                <div class="product-icons"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></div>
-                            </div>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -183,73 +143,16 @@
                     <h1>Become our <span>privilege partner<span></h1>
                         <img src="{{ asset('build/assets/images/hands.png') }}" alt="privilege partner"/>
                     </div>
-                </div>
-                <div class="footer-sec">
-                    <div class="foot1">
-                        <h4>Discover the widest range
-                        of unique wallpapers, also customize
-                        your own designs and buy them online.
-                        Get free home delivery anywhere in India.
-                        </h4>
-                    </div>
-                    <div class="foot2">
-                        <ul>
-                            <li class="information-sec">
-                                <h3>INFORMATION</h3>
-                                <ul>
-                                    <li>
-                                        <h4><a href="#">About Us</a></h4>
-                                    </li>
-                                    <li>
-                                        <h4><a href="#">Contact Us</a></h4>
-                                    </li>
-                                    <li>
-                                        <h4><a href="#">Terms of Use</a></h4>
-                                    </li>
-                                    <li>
-                                        <h4><a href="#">Return/Refund Policies</a></h4>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="follow-us">
-                                <h3> FOLLOW UP ON</h3>
-                                <ul>
-                                    <li> <i class="fab fa-facebook-f"></i></li>
-                                    <li> <i class="fab fa-twitter"></i></li>
-                                    <li> <i class="fab fa-instagram"></i></li>
-                                </ul>
-                            </li>
-                            <li class="accept">
-                                <h3> WE ACCEPT</h3>
-                                <ul>
-                                    <li> <img src="{{ asset('build/assets/images/master.png') }}" alt="mastercard"/></li>
-                                    <li> <img src="{{ asset('build/assets/images/Visa.png') }}" alt="visa"/></li>
-                                    <li><img src="{{ asset('build/assets/images/Rupay.png') }}"" alt="rupay"/></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="btm-sec">
-                        <h4>Copyright &copy; 2018 wallpapers, All Rights Reserved.</h4>
-                    </div>
-                </div>
+            </div>
+
+            @include('pages.include.footer')
+
             </div>
             <script src="{{ asset('build/assets/js/jquery.bxslider.min.js') }}" type="text/javascript"></script>
             <script>
-            $(document).ready(function(){
-            $('.bxslider').bxSlider({
-            minSlides: 1,
-            maxSlides: 3,
-            slideWidth: 400,
-            slideMargin: 30,
-            pager: true,
-            auto: true,
-            controls:true,
-            infiniteLoop: true
-            
-            
-            });
-            });
+             $(document).ready(function() {
+                $('.bxslider').bxSlider({minSlides:1,maxSlides:3,slideWidth:400,slideMargin:30,pager:true,auto:true,controls:true,infiniteLoop: true});
+             });
             </script>
         </body>
     </html>

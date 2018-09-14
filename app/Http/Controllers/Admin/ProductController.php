@@ -44,7 +44,7 @@ class ProductController extends Controller
     {
         //
 
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'short_desc' => 'required', 'description' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required']);
 
         $params                            =    $request->all();
 
@@ -118,7 +118,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'short_desc' => 'required', 'description' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required']);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];

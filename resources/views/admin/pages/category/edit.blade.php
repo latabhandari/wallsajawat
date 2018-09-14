@@ -56,6 +56,24 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>
+                  <select name="wallpaper_pos" class="form-control">
+                     <option value="">-- Select --</option>
+                     <option value="1" {{ ($category->wallpaper_pos == 1) ? 'selected' : '' }}>-- 1 --</option>
+                     <option value="2" {{ ($category->wallpaper_pos == 2) ? 'selected' : '' }}>-- 2 --</option>
+                     <option value="3" {{ ($category->wallpaper_pos == 3) ? 'selected' : '' }}>-- 3 --</option>
+                     <option value="4" {{ ($category->wallpaper_pos == 4) ? 'selected' : '' }}>-- 4 --</option>
+                     <option value="5" {{ ($category->wallpaper_pos == 5) ? 'selected' : '' }}>-- 5 --</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="wallpaper_image">Wallpaper Image</label>
+                  <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
+                   <img src="{{ URL::asset('catalog/category/'.$category->wallpaper_image) }}" alt="" width="120" />
+                </div>
+
+                <div class="form-group">
                   <label for="page_title">Page Title&nbsp;</label>
                   <input class="form-control" name="page_title" placeholder="Page Title" type="text" value="{{ $category->page_title }}">
                 </div>

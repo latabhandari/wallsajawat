@@ -17,19 +17,38 @@ Route::get('/', function () {
     die();
 });
 
-Auth::routes();
+
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
 //Email Verification
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');
 
-
 /************** Frontend Url ******************/
 
 Route::group(['prefix' => 'beta'], function() {
 
+    Auth::routes();
+
     Route::get('/', 'HomeController@index')->name('home.index');
+
+    Route::get('/about', 'CmsController@about')->name('about');
+    Route::get('/contact', 'CmsController@contact')->name('contact');
+    Route::post('/contact', 'CmsController@contactpost')->name('contactpost');
+    Route::get('/terms', 'CmsController@terms')->name('terms');
+    Route::get('/policy', 'CmsController@policy')->name('policy');
+    Route::get('/our-range', 'CmsController@range')->name('range');
+    Route::get('/wallpaper-installer', 'CmsController@installer')->name('wallpaper_installer');
+    Route::get('/how-to-measure', 'CmsController@measure')->name('how_to_measure');
+    Route::get('/offers', 'CmsController@offers')->name('offers');
+
+    Route::get('/product/{slug}', 'ProductController@detail')->name('product.detail');
+
+    Route::post('/product/option', 'ProductController@option')->name('product.option');
+    Route::post('/product/cart', 'ProductController@cart')->name('product.cart');
+    Route::get('/cart', 'ProductController@viewCart')->name('cart');
+    Route::get('/cart/delete/{rowId}', 'ProductController@deleteItem')->name('cart.item.delete');
+    Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update');
 
 });
 
@@ -72,8 +91,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::get('/product/destroyimg/{id}', 'ProductController@destroyimg')->name('admin.product.delete');
 
+            Route::resource('measurement', 'MeasurementController');
 
-            //Route::resource('state', 'StateController');
+            Route::resource('offers', 'OffersController');
+            
             //Route::resource('city', 'CityController');
             //Route::resource('attribute', 'AttributeController');
 

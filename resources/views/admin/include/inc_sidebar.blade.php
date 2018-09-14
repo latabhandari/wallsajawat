@@ -60,6 +60,31 @@ switch ($segment2)
                   </li>
 
 
+                   <li class="treeview {{ isset($product_active) ? $product_active : '' }}">
+                     <a href="#">
+                     <i class=""></i><span>Measurement</span>
+                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                     </a>
+                        <ul class="treeview-menu">
+                          <li><a href="{{ route('measurement.index') }}">View Measurements</a></li>
+                          <li><a class="" href="{{ route('measurement.create') }}">Add Measurement</a>a></li>
+                        </ul>
+                  </li>
+
+                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
+                     <a href="#">
+                     <i class=""></i><span>Offers</span>
+                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                     </a>
+                       <ul class="treeview-menu">
+                         <li><a href="{{ route('offers.index') }}">View Offers</a></li>
+                         <li><a class="" href="{{ route('offers.create') }}">Add Offer</a>a></li>
+                        </ul>
+                  </li>
+
+
+
+
                   <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
                   </li>

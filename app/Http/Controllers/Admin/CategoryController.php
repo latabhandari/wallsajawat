@@ -48,13 +48,27 @@ class CategoryController extends Controller
          $file               =    $request->file('icon');
          $destinationPath    =    public_path('catalog/category');
          $filename           =    $file->getClientOriginalName();
-         $file->move($destinationPath, $filename);
+         $icon               =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', $filename);
+         $file->move($destinationPath, $icon);
 
          $fields['name']                    =    $params['name'];
          $fields['slug']                    =    $params['slug'];
          $fields['parent_id']               =    $params['parent'];
          $fields['status']                  =    $params['status'];
-         $fields['icon']                    =    $filename;
+         $fields['icon']                    =    $icon;
+
+         $fields['wallpaper_pos']           =    $params['wallpaper_pos'];
+
+         if ($request->hasFile('wallpaper_image')) 
+          {
+             $file                          =    $request->file('wallpaper_image');
+             $destinationPath               =    public_path('catalog/category');
+             $filename                      =    $file->getClientOriginalName();
+             $wimage                        =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', $filename);
+             $file->move($destinationPath, $wimage);
+             $fields['wallpaper_image']     =    $wimage;
+          }
+                 
          $fields['created_at_timestamp']    =    time();
 
          $fields['page_title']              =    $params['page_title'];
@@ -117,7 +131,22 @@ class CategoryController extends Controller
             $fields['icon']                 =    $filename;
         endif;
 
+        $fields['wallpaper_pos']           =    $params['wallpaper_pos'];
+
+        if ($request->hasFile('wallpaper_image')) 
+          {
+             $file                       =    $request->file('wallpaper_image');
+             $destinationPath            =    public_path('catalog/category');
+             $filename                   =    mt_rand() . $file->getClientOriginalName();
+             $file->move($destinationPath, $filename);
+             $fields['wallpaper_image']  =    $filename;
+
+          }
+
+
         $fields['updated_at_timestamp']     =    time();
+
+
 
         $fields['page_title']               =    $params['page_title'];
         $fields['meta_description']         =    $params['meta_description'];

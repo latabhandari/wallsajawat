@@ -28,8 +28,8 @@
                 <tr>
                   <th>S. No</th>
                   <th>Name</th>
-                  <th>Slug</th>
-                  <th>Title</th>
+                  <th>Sku</th>
+                  <th>Price</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -37,31 +37,28 @@
                 <tbody>
 
                 @foreach ($products as $data)
-                @php
-                  $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
-                @endphp
+                  @php
+                    $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
+                  @endphp
 
-                <tr>
-                  <td>{{ ++$i }}</td>
-                  <td>{{ $data->name }}</td>
-                  <td>{{ $data->slug }}</td>
-                  <td>{{ $data->page_title }}</td>
-                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
-                  <td>
-                     <a class="btn btn-primary" href="{{ route('product.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
-                     {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['product.destroy', $data->id]]) !!}
-                    <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                    {!! Form::close() !!}
-				  </td>
-                </tr>
+                    <tr>
+                      <td>{{ ++$i }}</td>
+                      <td>{{ $data->name }}</td>
+                      <td>{{ $data->sku }}</td>
+                      <td>{{ $data->price }}</td>
+                      <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
+                      <td>
+                         <a class="btn btn-primary" href="{{ route('product.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
+                         {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['product.destroy', $data->id]]) !!}
+                           <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
+                         {!! Form::close() !!}
+    				          </td>
+                    </tr>
 
-                @endforeach
+                 @endforeach
                
-              
                 </tbody>
-                
               </table>
-
 
             </div>
             <!-- /.box-body -->
@@ -88,11 +85,10 @@
       'ordering'    : true,
       'info'        : true,
       'autoWidth'   : false,
-     dom: 'Bfrtip',
-       buttons: [
+      dom: 'Bfrtip',
+        buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
-    
     })
   })
 </script>

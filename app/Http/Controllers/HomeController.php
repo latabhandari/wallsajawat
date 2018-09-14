@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Categories as Categories;
+use App\Product as Product;
+use Cart;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +27,8 @@ class HomeController extends Controller
      */
     public function index()
         {
-            return view('pages.home');
+            $wallpaper_images      = Categories::where('wallpaper_pos', '!=', 0)->orderBy('wallpaper_pos', 'asc')->get();
+            $best_selling_products = Product::get();
+            return view('pages.home', compact('wallpaper_images', 'best_selling_products'));
         }
 }
