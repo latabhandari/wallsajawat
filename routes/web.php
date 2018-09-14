@@ -50,6 +50,9 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/cart/delete/{rowId}', 'ProductController@deleteItem')->name('cart.item.delete');
     Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update');
 
+    Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+    Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
 });
 
 
