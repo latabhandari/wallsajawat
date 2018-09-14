@@ -28,23 +28,23 @@ class ProductController extends Controller
       	  switch($format)
 	      	   {
 	      	   		case 'feet':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $uprice		  =  $price * $width_height;
-			      	   	                 break;
+			      	   	                  $width_height    =  $width * $height;
+			      	   	                  $uprice		      =  $price * $width_height;
+			      	   	                  break;
 
 	      	   	    case 'inch':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $per_square_feet =  $width_height / 144;
-			      	   	                 $uprice		  =  $price * $per_square_feet;
-			      	   	                 break;
+			      	   	                  $width_height    =  $width * $height;
+			      	   	                  $per_square_feet =  $width_height / 144;
+			      	   	                  $uprice		      =  $price * $per_square_feet;
+			      	   	                  break;
 	      	   	    case 'centimeter':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $per_square_feet =  $width_height / 929;
-			      	   	                 $uprice		  =  $price * $per_square_feet;
-			      	   	                 break;
+			      	   	                  $width_height    =  $width * $height;
+			      	   	                  $per_square_feet =  $width_height / 929;
+			      	   	                  $uprice		      =  $price * $per_square_feet;
+			      	   	                  break;
 	      	   }
 
-	      echo json_encode(['status' => true, 'price' => round($uprice)]);
+	        echo json_encode(['status' => true, 'price' => round($uprice)]);
       }
 
     public function cart(Request $request)

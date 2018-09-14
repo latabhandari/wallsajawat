@@ -39,20 +39,14 @@
                   {!! MyHelper::tep_draw_pull_down_category('categories[]', MyHelper::tep_get_category_tree(3), $product->id) !!}
                 </div>
 
-
                 <div class="form-group">
                   <label for="category">Name&nbsp;<span class="req">*</span></label>
                   <input class="form-control" name="name" placeholder="Name" type="text" value="{{ $product->name }}">
                 </div>
 
                 <div class="form-group">
-                  <label for="slug">Slug&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="slug" placeholder="Slug" type="text" value="{{ $product->slug }}">
-                </div>
-
-                <div class="form-group">
                   <label for="sku">Sku&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="sku" placeholder="Slug" type="text" value="{{ $product->sku }}">
+                  <input class="form-control" name="sku" placeholder="Sky" type="text" value="{{ $product->sku }}">
                 </div>
 
                 <div class="form-group">

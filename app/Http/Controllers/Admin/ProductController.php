@@ -49,7 +49,7 @@ class ProductController extends Controller
         $params                            =    $request->all();
 
         $fields['name']                    =    $params['name'];
-        $fields['slug']                    =    $params['name'];//str_slug($params['name']). '-'.mt_rand(1111,9999);
+        $fields['slug']                    =    str_slug($params['name']). '-'.mt_rand(1111,9999);
         $fields['sku']                     =    $params['sku'];
         $fields['short_desc']              =    $params['short_desc'];
         $fields['description']             =    $params['description'];

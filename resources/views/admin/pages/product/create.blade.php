@@ -48,7 +48,7 @@
 
                 <div class="form-group">
                   <label for="sku">Sku&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="sku" placeholder="Slug" type="text" value="{{ old('sku') }}">
+                  <input class="form-control" name="sku" placeholder="Sku" type="text" value="{{ old('sku') }}">
                 </div>
 
                 <div class="form-group">
