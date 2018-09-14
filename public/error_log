@@ -1,1 +1,2 @@
 [04-Sep-2018 09:53:44 UTC] PHP Fatal error:  Cannot redeclare App\User::profile() in /home/otwa0y36qdl7/public_html/wallsajawat/app/User.php on line 39
+[07-Sep-2018 11:19:12 UTC] PHP Fatal error:  Cannot use Request as Request because the name is already in use in /home/otwa0y36qdl7/public_html/wallsajawat/app/Http/Controllers/API/UserController.php on line 19

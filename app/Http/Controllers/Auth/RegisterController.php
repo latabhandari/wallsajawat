@@ -119,7 +119,7 @@ class RegisterController extends Controller
             'user_id' => $user->id,
         	]);		
 			//return view('auth.emails.emailconfirm',['user'=>$user]);
-			return redirect('/');
+			return redirect('/beta');
 
         }
 

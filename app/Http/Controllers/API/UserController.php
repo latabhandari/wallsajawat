@@ -4,8 +4,9 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
-use App\User; 
+use App\User as User; 
 use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Hash;
 use Validator;
 
 use Mail;
@@ -15,6 +16,7 @@ use App\Profile as Profile;
 use App\Countries as Countries;
 use App\States as States;
 use App\Cities as Cities;
+use App\Categories as Categories;
 
 
 
@@ -34,13 +36,16 @@ public $successStatus = 200;
             $user = Auth::user(); 
 			$user_id = $user->id;
 			Profile::where('user_id', $user_id)->update(['device_token' => request('device_token')]);
-            $success['token'] =  $user->createToken('MyApp')-> accessToken; 
-            return response()->json(['success' => $success], $this-> successStatus); 
+            //$success['token'] =  $user->createToken('MyApp')-> accessToken; 
+            return response()->json(['success' => [['token' => $user->createToken('MyApp')-> accessToken, 'name'=>$user->name]], 'udata' => 1]); 
         } 
         else{ 
-            return response()->json(['error'=>'Unauthorised'], 401); 
+            //return response()->json(['error'=>'Unauthorised'], 401); 
+			 return response()->json(['error' => [['token' => 'Unauthorised']], 'udata' => 0]); 
         } 
     }
+	
+	
 /** 
      * Register api 
      * 
@@ -49,17 +54,17 @@ public $successStatus = 200;
     public function register(Request $request) 
     { 
         $validator = Validator::make($request->all(), [ 
-            'name' => 'required', 
-            'email' => 'required|email|max:255|unique:users', 
-            'password' => 'required|min:6', 
-            'c_password' => 'required|same:password|min:6', 
-			'mobile' => 'required'
-			
-			
+            'name' => 'required|max:255', 
+            'email' => 'required|email|max:255|unique:users|email', 
+            'password' => 'required|min:6|max:255', 
+            'c_password' => 'required|same:password', 
+			'mobile' => 'required|digits:10|numeric'			
         ]);
+		
 		if ($validator->fails()) 
 		{ 
-            return response()->json(['error'=>$validator->errors()], 401);            
+            //return response()->json(['error'=>$validator->errors()], 401); 
+			return response()->json(['error'=>'validation error', 'udata' => 0]);            
         }
 		$input = $request->all(); 
         $input['password'] = bcrypt($input['password']); 
@@ -72,7 +77,74 @@ public $successStatus = 200;
         $success['name'] =  $user->name;
 		$email = new EmailVerification($user);
         Mail::to($user->email)->send($email);
-		return response()->json(['success'=>$success], $this-> successStatus); 
+		//return response()->json(['success'=>$success], $this-> successStatus); 
+		return response()->json(['udata' => 1]);
+    }
+	
+	public function change_password(Request $request) 
+    { 
+		$user = Auth::user();
+		if($user->id != '')
+		{
+			$validator = Validator::make($request->all(), [ 
+			'old_password' => 'required|min:6|max:255', 
+            'password' => 'required|min:6|max:255', 
+            'c_password' => 'required|same:password'		
+        	]);
+			if ($validator->fails()) 
+			{ 
+				return response()->json(['error'=>'validation error', 'udata' => 0]);           
+			}
+			else
+			{
+				$get = User::select('password')->where([['id',$user->id]])->first();				
+				if(Hash::check(request('old_password'), $get->password))
+				{
+					User::where('id', $user->id)->update(['password' => bcrypt(request('password'))]);				
+					return response()->json(['udata' => 1]);
+				}
+				else
+				{
+					return response()->json(['error'=>'old password doesn`t match', 'udata' => 0]);
+				}
+			}
+		}
+		else
+		{
+			return response()->json(['udata' => 0]); 
+		}
+    }
+	
+	public function edit_profile(Request $request) 
+    { 
+		$user = Auth::user();
+		if($user->id != '')
+		{
+			$validator = Validator::make($request->all(), [ 
+            'name' => 'required|max:255',
+            'address' => '', 
+            'country' => '', 
+			'state' => '', 
+			'city' => '', 
+            'pin' => 'size:6', 
+			'profile' => ''	,
+			'mobile' => 'required|digits:10|numeric'		
+        	]);
+			if ($validator->fails()) 
+			{ 
+				return response()->json(['error'=>$validator->errors(), 'udata' => 0]);           
+			}
+			else
+			{
+				Profile::where('user_id', $user->id)->update(['address' => request('address'), 'country' => request('country'), 'state' => request('state'), 'city' => request('city'), 'pin' => request('pin'), 'profile' => request('profile')]);				
+				User::where('id', $user->id)->update(['name' => request('name'), 'mobile' => request('mobile')]);
+				return response()->json(['udata' => 1]);
+			}
+		}
+		else
+		{
+			return response()->json(['udata' => 0]); 
+		}
     }
 /** 
      * details api 
@@ -116,7 +188,13 @@ public $successStatus = 200;
     } 
 	public function categories() 
     {
-		$categories = Categories::where('status', 1)->select('name', 'id', 'slug', 'icon', 'parent_id')->get();
-		return response()->json(['success' => $categories], $this-> successStatus);        
+		$categories = Categories::where([['status','=',1],['parent_id','=', 0]])->select('name', 'id', 'icon')->get();
+		return response()->json(['success' => $categories, 'udata' => 1]);     
+	}	
+	public function subcategories() 
+    {
+		$parent_id = request('parent_id');
+		$categories = Categories::where([['status','=',1],['parent_id','=', $parent_id]])->select('name', 'id', 'icon')->get();
+		return response()->json(['success' => $categories, 'udata' => 1]);       
 	}
 }
