@@ -53,7 +53,7 @@
 
                 <div class="form-group">
                   <label for="price">Price&nbsp;<span class="req">*</span></label>
-                  <input style="width:10%;display:inline" class="form-control" name="price" placeholder="Price" type="text" value="{{ old('price') }}"><span style="font-weight:bold;font-style:italic;display:inline;padding-left:3px">/Per Role</span>
+                  <input style="width:10%;display:inline" class="form-control" name="price" placeholder="Price" type="text" value="{{ old('price') }}"><span style="font-weight:bold;font-style:italic;display:inline;padding-left:3px">/Per Roll</span>
                 </div>
 
                 <div class="form-group">
