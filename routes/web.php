@@ -58,8 +58,7 @@ Route::group(['prefix' => 'beta'], function() {
 
 /*************** Close *****************************/
 
-
-/************** Admin Url ******************/
+/************** Admin Url **************************/
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => ['web']], function() {
 
@@ -91,7 +90,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::resource('product', 'ProductController');
             Route::resource('categories', 'CategoryController');
 
-
             Route::get('/product/destroyimg/{id}', 'ProductController@destroyimg')->name('admin.product.delete');
 
             Route::resource('measurement', 'MeasurementController');
@@ -99,6 +97,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::resource('offers', 'OffersController');
             
             //Route::resource('city', 'CityController');
+
             //Route::resource('attribute', 'AttributeController');
 
    	    });
@@ -113,7 +112,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
     		 Route::post('/forgot', 'AccountController@forgotpassword')->name('admin.post.forgot');
         });
-
+        
 });
 
 /************** Close Admin Url ******************/
