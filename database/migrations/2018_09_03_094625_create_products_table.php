@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->text('short_desc')->comment('Short Description');
             $table->longText('description')->comment('Description');
             $table->string('price', 32)->comment('Price');
+            $table->unsignedSmallInteger('stock_item')->comment('Stock Item');
             $table->tinyInteger('status')->comment('0 - Inactive, 1 - Active')->default(0);
             $table->string('page_title', 96)->comment('Page Title')->nullable();
             $table->string('meta_description')->comment('Meta Description')->nullable();

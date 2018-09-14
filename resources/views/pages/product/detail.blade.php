@@ -13,7 +13,7 @@
      <div class=''>
      	<select id="material_type" name="material_type">
      		@foreach ($measurements as $data)
-                <option value="{{ strtolower($data->name) }}">{{ $data->name }}</option>
+                <option data-attr="{{ strtolower($data->name) }}" data-value="{{ $data->square_feet_value }}" value="{{ $data->id }}">{{ $data->name }}</option>
             @endforeach
      	</select>
 
@@ -76,7 +76,10 @@ $.validator.setDefaults({
 	var price = {{ $detail->price }}
 	$("#material_type").change(function() 
 	   {  
-	   		var size_format = $(this).val();
+	   	    var size = $('option:selected', this).attr('data-value');
+	   	    var measurement = $('option:selected', this).attr('data-attr');
+	   	    $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement);
+	   		/*var size_format = $(this).val();
 	   	
 			if(size_format == "feet")
 			  { 
@@ -92,6 +95,8 @@ $.validator.setDefaults({
 			    { 
                    $("#cal_price").text("INR "+(price/(30*30*30)).toFixed(7)+"/ Sq.cm");
 			    }
+			    */
+
 			//$("#cal_price").text()");
       });
 
@@ -110,12 +115,11 @@ $.validator.setDefaults({
     }
 });
 
-
         function pricecalculate()
          {
          	var w_width  =  $('#w_width').val();
          	var w_height =  $('#w_height').val();
-         	var format   =  $("#material_type option:selected").val();
+         	var mid      =  $("#material_type option:selected").val();
 
          	if (w_width && w_height)
          		 {
@@ -123,7 +127,7 @@ $.validator.setDefaults({
 						           type: "POST",
 						           url: WallSajawat.getSitePath('product/option'),
 						           dataType: "json",
-						           data: {"width": w_width, "height": w_height, "format": format, "price": price},
+						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
 						           success: function (resp) {
 
 						           	  	$("#cal_price").text("INR " + resp.price);
@@ -135,7 +139,4 @@ $.validator.setDefaults({
          }
 
 </script>
-
 @endsection
-
-

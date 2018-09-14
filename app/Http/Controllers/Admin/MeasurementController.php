@@ -40,11 +40,12 @@ class MeasurementController extends Controller
     public function store(Request $request)
     {
         //
-         request()->validate(['name' => 'required', 'display_order' => 'required']);
+         request()->validate(['name' => 'required', 'square_feet_value' => 'required', 'display_order' => 'required']);
 
          $params                            =    $request->all();
 
          $fields['name']                    =    $params['name'];
+         $fields['square_feet_value']       =    $params['square_feet_value'];
          $fields['display_order']           =    $params['display_order'];
          $fields['status']                  =    $params['status'];
                  
@@ -87,10 +88,11 @@ class MeasurementController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'display_order' => 'required']);
+        request()->validate(['name' => 'required', 'square_feet_value' => 'required', 'display_order' => 'required']);
 
         $params                            =    $request->all();
         $fields['name']                    =    $params['name'];
+        $fields['square_feet_value']       =    $params['square_feet_value'];
         $fields['display_order']           =    $params['display_order'];
         $fields['status']                  =    $params['status'];
 

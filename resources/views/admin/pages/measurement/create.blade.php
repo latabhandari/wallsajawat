@@ -37,6 +37,12 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="square_feet_value">1 Square Feet = &nbsp;<span class="req">*</span></label>
+                  <input class="form-control" name="square_feet_value" placeholder="Measurement in Square Foot" type="text" value="{{ old('square_feet_value') }}">
+                  <p style="font-size:12px;font-style:italic;color:#888">for eg: 1 Square Foot = 144 Square Inch</p>
+                </div>
+
+                <div class="form-group">
                   <label for="display_order">Display Order&nbsp;<span class="req">*</span></label>
                   <input class="form-control" name="display_order" placeholder="Display Order" type="text" value="{{ old('display_order') }}">
                 </div>

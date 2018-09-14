@@ -8,5 +8,5 @@ class Measurement extends Model
 {
     //
     protected $table     = 'measurements';
-    protected $fillable  = ['name', 'display_order', 'status'];
+    protected $fillable  = ['name', 'square_feet_value', 'display_order', 'status'];
 }

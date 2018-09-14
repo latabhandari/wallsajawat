@@ -51,6 +51,11 @@
                   <input class="form-control" name="sku" placeholder="Sku" type="text" value="{{ old('sku') }}">
                 </div>
 
+                 <div class="form-group">
+                  <label for="stock_item">Items in Stock&nbsp;<span class="req">*</span></label>
+                  <input class="form-control" name="stock_item" placeholder="Items in Stock" type="text" value="{{ old('stock_item') }}">
+                </div>
+
                 <div class="form-group">
                   <label for="price">Price&nbsp;<span class="req">*</span></label>
                   <input style="width:10%;display:inline" class="form-control" name="price" placeholder="Price" type="text" value="{{ old('price') }}"><span style="font-weight:bold;font-style:italic;display:inline;padding-left:3px">/Per Roll</span>

@@ -14,7 +14,7 @@ class ProductController extends Controller
     public function detail($slug)
       {
       	  $detail        =  Product::where('slug', $slug)->firstOrFail();
-      	  $measurements  =  Measurement::select('id', 'name')->where('status', 1)->get();
+      	  $measurements  =  Measurement::select('id', 'name', 'square_feet_value')->where('status', 1)->get();
       	  return view('pages.product.detail', compact('detail', 'measurements'));
       }
 
@@ -23,26 +23,16 @@ class ProductController extends Controller
       	  $params  = 	$request->all();
       	  $width   = 	$params['width'];
       	  $height  = 	$params['height'];
-      	  $format  = 	$params['format'];
-      	  $price   = 	$params['price'];
-      	  switch($format)
-	      	   {
-	      	   		case 'feet':
-			      	   	                  $width_height    =  $width * $height;
-			      	   	                  $uprice		      =  $price * $width_height;
-			      	   	                  break;
+      	  $mid     = 	$params['mid'];
+          $price   =  $params['price'];
 
-	      	   	    case 'inch':
-			      	   	                  $width_height    =  $width * $height;
-			      	   	                  $per_square_feet =  $width_height / 144;
-			      	   	                  $uprice		      =  $price * $per_square_feet;
-			      	   	                  break;
-	      	   	    case 'centimeter':
-			      	   	                  $width_height    =  $width * $height;
-			      	   	                  $per_square_feet =  $width_height / 929;
-			      	   	                  $uprice		      =  $price * $per_square_feet;
-			      	   	                  break;
-	      	   }
+          $mres    =  Measurement::select('square_feet_value')->where('id', $mid)->firstOrFail();
+
+          $square_feet_value = $mres->square_feet_value;
+
+          $width_height    =  $width * $height;
+          $per_square_feet =  $width_height / $square_feet_value;
+          $uprice          =  $price * $per_square_feet;
 
 	        echo json_encode(['status' => true, 'price' => round($uprice)]);
       }
@@ -64,18 +54,18 @@ class ProductController extends Controller
 	      	   {
 	      	   		case 'feet':
 			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $uprice		  =  $price * $width_height;
+			      	   	                 $uprice		      =  $price * $width_height;
 			      	   	                 break;
 
 	      	   	    case 'inch':
 			      	   	                 $width_height    =  $width * $height;
 			      	   	                 $per_square_feet =  $width_height / 144;
-			      	   	                 $uprice		  =  $price * $per_square_feet;
+			      	   	                 $uprice		      =  $price * $per_square_feet;
 			      	   	                 break;
 	      	   	    case 'centimeter':
 			      	   	                 $width_height    =  $width * $height;
 			      	   	                 $per_square_feet =  $width_height / 929;
-			      	   	                 $uprice		  =  $price * $per_square_feet;
+			      	   	                 $uprice		      =  $price * $per_square_feet;
 			      	   	                 break;
 	      	   }
 

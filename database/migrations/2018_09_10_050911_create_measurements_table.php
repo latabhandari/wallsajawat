@@ -16,6 +16,7 @@ class CreateMeasurementsTable extends Migration
         Schema::create('measurements', function (Blueprint $table) {
             $table->increments('id')->comment('Id');
             $table->string('name')->comment('Name');
+            $table->string('square_feet_value')->comment('Measurement in Square Feet, for eg: 1 Square Foot = 144 Square Inch');
             $table->unsignedTinyInteger('display_order')->comment('Display Order')->default(0);
             $table->unsignedTinyInteger('status')->comment('Status')->default(0);
             $table->timestamps();
