@@ -41,8 +41,8 @@
                         <td>{{ $data->mobile }}</td>
                         <td>{{ date('D, j M\'y h:i a', $data->unix_timestamp) }}</td>
                         <td>
-                          <a class="btn btn-primary" href="{{ route('admin.user.favads',$data->id) }}"><span class="fa fa-star"></span></a>
-                          <a class="btn btn-primary" href="{{ route('admin.user.info',$data->id) }}"><span class="fa fa-eye"></span></a>
+                          --
+                          <a style="display:none" class="btn btn-primary" href="{{ route('admin.user.info',$data->id) }}"><span class="fa fa-eye"></span></a>
                         </td>
                       </tr>
                   @endforeach
