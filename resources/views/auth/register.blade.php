@@ -37,8 +37,8 @@
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" />
 
                                 @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                    <span class="error" role="alert">
+                                        {{ $errors->first('name') }}
                                     </span>
                                 @endif
                             </div>
@@ -51,8 +51,8 @@
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" />
 
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                    <span class="error" role="alert">
+                                        {{ $errors->first('email') }}
                                     </span>
                                 @endif
                             </div>
@@ -65,8 +65,8 @@
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" />
 
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                    <span class="error" role="alert">
+                                        {{ $errors->first('password') }}
                                     </span>
                                 @endif
                             </div>
@@ -82,8 +82,6 @@
 
 
 
-
-
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -93,7 +91,7 @@
                         </div>
 
 
-                        
+
                     </form>
                 </div>
             </div>
