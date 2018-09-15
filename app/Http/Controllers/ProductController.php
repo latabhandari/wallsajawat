@@ -79,7 +79,7 @@ class ProductController extends Controller
 	      	   }
       */
 
-     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => 1, 'price' => $uprice, 'options' => ['type' => $material_type, 'width' => $width, 'height' => $height]]);
+     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => 1, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
 
     	return redirect()->route('cart');
      }
