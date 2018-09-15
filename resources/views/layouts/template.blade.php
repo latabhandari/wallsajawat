@@ -123,20 +123,20 @@
                         <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
                     </div>
                 </div>
-                <div class="col-sm-4 text-center selling-imgs">
-                    <img src="{{ asset('build/assets/images/Product2.png') }}" alt=""/>
-                    <div class="img-price">
-                        <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;10,249/roll</span>
-                        <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-center selling-imgs">
-                    <img src="{{ asset('build/assets/images/Product3.png') }}" alt=""/>
-                    <div class="img-price">
-                        <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;10,249/roll</span>
-                        <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
+
+                @foreach ($best_selling_products as $selling_products)
+                    <a href="{{ route('product.detail', $selling_products->slug) }}">
+                        <div class="col-sm-4 text-center selling-imgs">
+                            <img src="{{ asset('build/assets/images/Product1.png') }}" alt=""/>
+                            <div class="img-price">
+                                <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
+                                <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+
+
             </div>
         </div>
     </div>
