@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
-
 @section('content')
+
+@if(Cart::count())
 
 <form name="updateform" action="{{ route('cart.item.update') }}" method="POST">
 	@csrf	
@@ -16,8 +17,7 @@
 						</tr>
 					</thead>
 					<tbody>
-					 
-					 
+					
 						@foreach(Cart::content() as $row)
 						<tr>
 							<td data-th="Product">
@@ -63,4 +63,10 @@
 					</tfoot>
 				</table>
 	</form>
+
+	@else
+
+     <p>No product in cart</p>
+     
+	@enif
 @endsection
