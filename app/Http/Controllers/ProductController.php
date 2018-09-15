@@ -42,7 +42,7 @@ class ProductController extends Controller
      	$params		        =  $request->all();
      	$width        		=  $params['width'];
      	$height       		=  $params['height'];
-     	$material_type      =  $params['material_type'];
+     	$material_type_id =  $params['material_type'];
      	$id           		=  $params['id'];
      	$product      		=  Product::find($id);
 
@@ -50,7 +50,16 @@ class ProductController extends Controller
      	$type         		=  $product->type;
      	$price         		=  $product->price;
 
-     	switch($material_type)
+      $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
+
+      $square_feet_value = $mres->square_feet_value;
+
+      $width_height      =  $width * $height;
+      $per_square_feet   =  $width_height / $square_feet_value;
+      $uprice            =  $price * $per_square_feet;
+
+
+     	/*switch($material_type)
 	      	   {
 	      	   		case 'feet':
 			      	   	                 $width_height    =  $width * $height;
@@ -68,6 +77,7 @@ class ProductController extends Controller
 			      	   	                 $uprice		      =  $price * $per_square_feet;
 			      	   	                 break;
 	      	   }
+      */
 
      	Cart::add(['id' => $id, 'name' => $productname, 'qty' => 1, 'price' => $uprice, 'options' => ['type' => $material_type, 'width' => $width, 'height' => $height]]);
 
