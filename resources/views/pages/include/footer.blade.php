@@ -2,11 +2,11 @@
                     <div class="container">
                         <div class="row footer-sec">
                             <div class="col-sm-4 foot-sec1">
-                                <h5>Discover the widest range <br>
+                                <p>Discover the widest range <br>
                                 of unique wallpapers, also customize<br>
                                 your own designs and buy them online. <br>
                                 Get free home delivery anywhere in India.<br>
-                                </h5>
+                                </p>
                             </div>
                             <div class="col-sm-8">
                                 <div class="row">
