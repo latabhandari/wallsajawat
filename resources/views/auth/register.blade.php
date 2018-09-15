@@ -77,13 +77,6 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" />
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="error" role="alert">
-                                        {{ $errors->first('password_confirmation') }}
-                                    </span>
-                                @endif
-
                             </div>
                         </div>
 
