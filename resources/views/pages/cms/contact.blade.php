@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div class="container">
-	
+ <div class="container">
 	<form method="POST" action="{{ route('contactpost') }}" aria-label="{{ __('Contact') }}">
 		@csrf
 		<div class="form-group">
@@ -33,5 +32,5 @@
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
-</div>
+  </div>
 @endsection
