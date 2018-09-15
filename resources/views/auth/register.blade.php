@@ -87,7 +87,7 @@
                         <div class="form-group row">
                             <label for="google-captcha" class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
                             <div class="col-md-6">
-                                {!! NoCaptcha::renderJs() !!}
+                                {!! NoCaptcha::display() !!}
 
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="error">
