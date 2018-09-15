@@ -51,6 +51,7 @@ class ProductController extends Controller
         $fields['name']                    =    $params['name'];
         $fields['slug']                    =    str_slug($params['name']). '-'.mt_rand(1111,9999);
         $fields['sku']                     =    $params['sku'];
+        $fields['stock_item']              =    $params['stock_item'];
         $fields['short_desc']              =    $params['short_desc'];
         $fields['description']             =    $params['description'];
         $fields['price']                   =    $params['price'];
@@ -123,6 +124,7 @@ class ProductController extends Controller
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
         $fields['sku']                      =    $params['sku'];
+        $fields['stock_item']               =    $params['stock_item'];
         $fields['short_desc']               =    $params['short_desc'];
         $fields['description']              =    $params['description'];
         $fields['price']                    =    $params['price'];
