@@ -6,7 +6,7 @@
 		@csrf
 		<div class="form-group">
 			<label for="name">Name </label>
-			<input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
+			<input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" autocomplete="off" />
 			@if ($errors->has('name'))
 			<span class="error" role="alert">
 				{{ $errors->first('name') }}
@@ -15,7 +15,7 @@
 		</div>
 		<div class="form-group">
 			<label for="email">Email </label>
-			<input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
+			<input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" autocomplete="off" />
 			@if ($errors->has('email'))
 			<span class="error" role="alert">
 				{{ $errors->first('email') }}
