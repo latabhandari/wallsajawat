@@ -67,6 +67,8 @@
 	@else
 
      <p>No product in cart</p>
-     
-	@enif
+
+	@endif
+
+	
 @endsection
