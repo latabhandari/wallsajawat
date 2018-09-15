@@ -73,7 +73,7 @@ $.validator.setDefaults({
 </script>
 
 <script>
-	var price = {{ $detail->price }}
+	var price = {{ $detail->price }};
 	$("#material_type").change(function() 
 	   {  
 	   	    var size = $('option:selected', this).attr('data-value');
@@ -110,10 +110,10 @@ $.validator.setDefaults({
 
 
 		$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
+		    headers: {
+		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		    }
+		});
 
         function pricecalculate()
          {
@@ -123,6 +123,7 @@ $.validator.setDefaults({
 
          	if (w_width && w_height)
          		 {
+         		 	console.log(WallSajawat.getSitePath('product/option'));
 						$.ajax({
 						           type: "POST",
 						           url: WallSajawat.getSitePath('product/option'),
