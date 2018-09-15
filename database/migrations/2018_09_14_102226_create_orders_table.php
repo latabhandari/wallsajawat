@@ -39,7 +39,7 @@ class CreateOrdersTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->index(['order_id']);
+            $table->index(['order_number']);
 
         });
     }
