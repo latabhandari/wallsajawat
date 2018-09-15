@@ -13,12 +13,12 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="mynavbar">
                                     <ul class="nav navbar-nav">
-                                        <li class="active"><a href="{{ route('range') }}">OUR RANGE</li>
-                                        <li><a href="{{ route('about') }}">ABOUT US</li>
-                                        <li><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</li>
-                                        <li><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</li>
-                                        <li><a href="{{ route('offers') }}">OFFERS</li>
-                                        <li><a href="{{ route('contact') }}">CONTACT US</li>
+                                        <li class="active"><a href="{{ route('range') }}">OUR RANGE</a></li>
+                                        <li><a href="{{ route('about') }}">ABOUT US</a></li>
+                                        <li><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>
+                                        <li><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</a></li>
+                                        <li><a href="{{ route('offers') }}">OFFERS</a></li>
+                                        <li><a href="{{ route('contact') }}">CONTACT US</a></li>
                                     </ul>
                                 </div>
                             </div>
