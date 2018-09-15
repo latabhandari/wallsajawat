@@ -68,7 +68,7 @@
 
      <p>No product in cart</p>
 
-	 <a href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
+	 <a style="width:15%" href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
 
 
 	@endif
