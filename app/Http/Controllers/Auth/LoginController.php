@@ -69,11 +69,13 @@ class LoginController extends Controller
 
     public function findOrCreateUser($user, $provider)
      {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser  = User::where('provider_id', $user->id)->first();
         if ($authUser)
         return $authUser;
 
-        return User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $provider, 'provider_id' => $user->id, 'unix_timestamp' => time(), 'verified' => 1]);
+        $uprovider = (strtolower($provider) == 'google') ? "1" : "2";
+
+        return User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $uprovider, 'provider_id' => $user->id, 'unix_timestamp' => time(), 'verified' => 1]);
      }
 
     protected function authenticated(Request $request, $user)

@@ -26,6 +26,8 @@ class CreateOffersTable extends Migration
 
             $table->timestamps();
 
+            $table->index(['coupon']);
+
         });
     }
 

@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
 
             $table->increments('id')->comment('Id');
 
-            $table->unsignedInteger('order_id')->comment('Order Id');
+            $table->unsignedInteger('order_number')->comment('Order Number');
 
             $table->unsignedInteger('user_id')->comment('User Id');
 
@@ -25,9 +25,9 @@ class CreateOrdersTable extends Migration
 
             $table->string('discount')->comment('Discount')->nullable();
             
-            $table->string('sub_total')->comment('Sub Total (Cart Total)');
+            $table->string('total_amount')->comment('Total Amount (Products Total)');
 
-            $table->string('amount_paid')->comment('Amount Paid - (Sub Total - Discount)');
+            $table->string('payable_amount')->comment('Payable Amount - (Total Amount - Discount Applied)');
 
             $table->ipAddress('ip_address')->comment('Ip Address');
 
@@ -38,6 +38,8 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
+
+            $table->index(['order_id']);
 
         });
     }

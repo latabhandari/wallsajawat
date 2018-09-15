@@ -13,11 +13,11 @@ class AdminTableSeeder extends Seeder
     {
         //
 	DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'lata@outsourcingservicesusa.com',
-            'password' => bcrypt('admin'),
-            'is_admin' => 1,
-            'unix_timestamp' => time()
-        ]);
+                                    'name' => 'admin',
+                                    'email' => 'admin@gmail.com',
+                                    'password' => bcrypt('admin'),
+                                    'is_admin' => 1,
+                                    'unix_timestamp' => time()
+                              ]);
     }
 }

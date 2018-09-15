@@ -22,6 +22,7 @@ class CreateProductImagesTable extends Migration
 
             $table->index(['product_id']);
             $table->foreign('product_id')->references('id')->on('products');
+            
         });
     }
 

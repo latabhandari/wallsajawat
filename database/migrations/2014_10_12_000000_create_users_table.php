@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
                 $table->string('password')->comment('Password')->nullable();
                 $table->string('mobile')->comment('Mobile')->nullable();
 
-                $table->string('provider', 32)->comment('Provider')->nullable();
+                $table->enum('provider', ['0', '1', '2'])->comment('0 - Site, 1 - Google, 2 - Facebook')->default('0');
                 $table->string('provider_id')->comment('Provider Id')->nullable();
 
                 $table->unsignedTinyInteger('is_admin')->comment('0 - User, 1 - Admin')->default(0);
