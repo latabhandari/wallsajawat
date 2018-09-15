@@ -15,6 +15,8 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+@yield('css')
+@yield('js')
 </head>
 <body>
    

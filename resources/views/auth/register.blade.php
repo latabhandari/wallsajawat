@@ -2,7 +2,12 @@
 
 @section('content')
 
-<link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+@section('css')
+  <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet" />
+@endsection
+@section('js')
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+@endsection
 
 <div class="container">
     <div class="row justify-content-center">
@@ -74,12 +79,24 @@
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" />
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="google-captcha" class="col-md-4 col-form-label text-md-right">{{ __('Captcha') }}</label>
+                            <div class="col-md-6">
+                                {!! NoCaptcha::renderJs() !!}
+
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="error">
+                                        {{ $errors->first('g-recaptcha-response') }}
+                                    </span>
+                                @endif
+
+                            </div>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -88,8 +105,6 @@
                                 </button>
                             </div>
                         </div>
-
-
 
                     </form>
                 </div>

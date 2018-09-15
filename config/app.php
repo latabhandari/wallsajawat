@@ -164,7 +164,9 @@ return [
 		//Needed for Passport API
 		Laravel\Passport\PassportServiceProvider::class,
 
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class 
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class, 
 
     ],
 
@@ -217,6 +219,7 @@ return [
     	'Form' => Collective\Html\FormFacade::class,
     	'Html' => Collective\Html\HtmlFacade::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 
