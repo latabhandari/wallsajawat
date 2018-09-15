@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+
+<link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -23,7 +26,7 @@
                         </div>
                         
                     </div>
-                    
+
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
