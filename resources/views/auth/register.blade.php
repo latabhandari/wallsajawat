@@ -6,7 +6,7 @@
   <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet" />
 @endsection
 @section('js')
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+  {!! NoCaptcha::renderJs() !!}
 @endsection
 
 <div class="container">
