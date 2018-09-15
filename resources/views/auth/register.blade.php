@@ -8,6 +8,22 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+
+
+                    <div class="form-grup">
+                        <div class="col-md-12 text-center">
+                           <div class="col-md-6 text-center">
+                                   <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
+                                     <span class="fa fa-facebook"></span> Sign in with Facebook
+                                   </a>
+                                   <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google') }}">
+                                        <span class="fa fa-google"></span> Sign in with Google
+                                   </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
