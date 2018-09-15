@@ -17,17 +17,14 @@
 </head>
 <body>
     <div class="container">
-
         @include('pages.include.top_head')
-
         @include('pages.include.header')
         
         <div class="content">
             @yield('content')
-        </div>            
+        </div>
         
         @include('pages.include.footer')
-
-     </div>
-  </body>
+    </div>
+</body>
 </html>
