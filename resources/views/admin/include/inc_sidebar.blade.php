@@ -22,7 +22,7 @@ switch ($segment3)
           case 'users':
                              $users_active      =   'active';//'menu-open';
                              break;
-          case 'setting':
+          case 'settings':
                              $settings_active   =   'active';//'menu-open';
                              break;
    }
