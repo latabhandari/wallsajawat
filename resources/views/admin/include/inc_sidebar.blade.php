@@ -28,7 +28,7 @@ switch ($segment3)
    }
 ?>
 <style>
- .activelink{color:#FFF !important}
+ .activelink{background:#39454a !important}
 </style>
 
             <section class="sidebar">
