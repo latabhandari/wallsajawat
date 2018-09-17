@@ -36,6 +36,11 @@ switch ($segment2)
                   <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.dashboard') }}"><span>Dashboard</span></a>
                   </li>
+
+                  <li class="">
+                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
+                  </li>
+
                 
                   <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
                      <a href="#">

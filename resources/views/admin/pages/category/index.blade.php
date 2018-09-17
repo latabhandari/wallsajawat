@@ -52,7 +52,7 @@
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['categories.destroy', $data->id]]) !!}
                     <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
                     {!! Form::close() !!}
-				  </td>
+				          </td>
                 </tr>
 
                 @endforeach
