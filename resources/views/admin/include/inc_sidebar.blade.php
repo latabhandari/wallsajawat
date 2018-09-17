@@ -1,9 +1,8 @@
 <?php
 
-$segment1 = Request::segment(1);
-echo $segment2 = Request::segment(2);
+$segment3 = Request::segment(3);
 
-switch ($segment2)
+switch ($segment3)
    {
           case 'dashboard':
                              $dashboard_active  =  'active';
