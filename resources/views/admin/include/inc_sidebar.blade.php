@@ -41,22 +41,14 @@ switch ($segment2)
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
                   </li>
 
-                   <li class="">
+                  <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
                   </li>
 
-                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Offers</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('offers.index') }}">View Offers</a></li>
-                         <li><a class="" href="{{ route('offers.create') }}">Add Offer</a>a></li>
-                        </ul>
+
+                  <li class="">
+                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
                   </li>
-
-
 
 
                   <li class="">

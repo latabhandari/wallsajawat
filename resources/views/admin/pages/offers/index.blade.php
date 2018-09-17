@@ -23,6 +23,8 @@
                   </div>
               @endif
 
+              <p style="text-align:right"><a class="" href="{{ route('offers.create') }}"><button type="button" class="btn btn-primary">Add Offers</button></a></p>
+
               <table id="offers" class="table table-bordered table-striped">
                 <thead>
                 <tr>
