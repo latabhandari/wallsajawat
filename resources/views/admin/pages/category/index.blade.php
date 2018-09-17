@@ -23,7 +23,7 @@
                   </div>
               @endif
 
-              <p style="text-align:right"><a class="" href="{{ route('categories.create') }}"><button type="button" class="btn btn-info">Add Category</button></a></p>
+              <p style="text-align:right"><a class="" href="{{ route('categories.create') }}"><button type="button" class="btn btn-primary">Add Category</button></a></p>
 
               <table id="category" class="table table-bordered table-striped">
                 <thead>
