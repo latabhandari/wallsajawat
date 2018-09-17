@@ -35,8 +35,6 @@ switch ($segment3)
                <!-- sidebar menu: : style can be found in sidebar.less -->
                <ul class="sidebar-menu" data-widget="tree">
 
-                  <li class="header">MAIN NAVIGATION</li>
-
                   <li class="">
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.dashboard') }}"><span>Dashboard</span></a>
                   </li>
