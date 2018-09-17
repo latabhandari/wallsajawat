@@ -71,7 +71,7 @@ class LoginController extends Controller
      {
         //$authUser  = User::where('provider_id', $user->id)->first();
 
-        $authUser  = User::where([['email', '=', $user->email], ['verified', '=', 1]])->first();
+        $authUser    = User::where([['email', '=', $user->email], ['verified', '=', 1]])->first();
         if ($authUser)
         return $authUser;
 
