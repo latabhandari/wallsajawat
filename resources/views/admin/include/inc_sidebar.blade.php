@@ -1,6 +1,6 @@
 <?php
 
-$segment3 = Request::segment(3);
+echo $segment3 = Request::segment(3);
 
 switch ($segment3)
    {
