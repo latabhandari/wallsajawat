@@ -1,7 +1,7 @@
 <?php
 
 $segment1 = Request::segment(1);
-$segment2 = Request::segment(2);
+echo $segment2 = Request::segment(2);
 
 switch ($segment2)
    {
@@ -10,14 +10,18 @@ switch ($segment2)
                              break;
 
           case 'categories':
-                             $category_active   =   '';//'menu-open';
+                             $category_active   =   'active';//'menu-open';
                              break;
           case  'product':
-                             $product_active    =  '';
+                             $product_active    =  'active';
+                             break;
+
+          case  'offers':
+                             $offers_active     =  'active';
                              break;
 
           case 'users':
-                             $users_active      =   '';//'menu-open';
+                             $users_active      =   'active';//'menu-open';
                              break;
           case 'setting':
                              $settings_active   =   'active';//'menu-open';
@@ -31,6 +35,7 @@ switch ($segment2)
             <section class="sidebar">
                <!-- sidebar menu: : style can be found in sidebar.less -->
                <ul class="sidebar-menu" data-widget="tree">
+
                   <li class="header">MAIN NAVIGATION</li>
 
                   <li class="">
@@ -38,28 +43,25 @@ switch ($segment2)
                   </li>
 
                   <li class="">
-                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
+                     <a class="{{ isset($category_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
                   </li>
 
                   <li class="">
-                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
+                     <a class="{{ isset($product_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
                   </li>
-
 
                   <li class="">
-                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
+                     <a class="{{ isset($offers_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
                   </li>
-
 
                   <li class="">
-                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
+                     <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
                   </li>
-
-                  
-
+                
                   <li class="">
                      <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.settings') }}"><span>Settings</span></a>
                   </li>
+
 				          <li class="">
                      <a href="{{ route('admin.logout') }}">Logout</a>
                   </li>
