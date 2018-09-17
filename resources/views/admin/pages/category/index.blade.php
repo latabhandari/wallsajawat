@@ -23,6 +23,8 @@
                   </div>
               @endif
 
+              <p>sfd</p>
+
               <table id="category" class="table table-bordered table-striped">
                 <thead>
                 <tr>
