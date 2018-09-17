@@ -41,39 +41,8 @@ switch ($segment2)
                      <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
                   </li>
 
-                
-                  <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Category</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('categories.index') }}">View Categories</a></li>
-                         <li><a class="" href="{{ route('categories.create') }}">Add Category</a>a></li>
-                        </ul>
-                  </li>
-
-                  <li class="treeview {{ isset($product_active) ? $product_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Product</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                       <ul class="treeview-menu">
-                         <li><a href="{{ route('product.index') }}">View Products</a></li>
-                         <li><a class="" href="{{ route('product.create') }}">Add Product</a>a></li>
-                        </ul>
-                  </li>
-
-
-                   <li class="treeview {{ isset($product_active) ? $product_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Measurement</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                        <ul class="treeview-menu">
-                          <li><a href="{{ route('measurement.index') }}">View Measurements</a></li>
-                          <li><a class="" href="{{ route('measurement.create') }}">Add Measurement</a>a></li>
-                        </ul>
+                   <li class="">
+                     <a class="{{ isset($dashboard_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
                   </li>
 
                   <li class="treeview {{ isset($loan_categories_active) ? $loan_categories_active : '' }}">
