@@ -32,7 +32,7 @@
 
             <!-- form start -->
 
-            {!! Form::open(['route' => '', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
+            {!! Form::open(['route' => 'admin.user.store', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
 
               <div class="box-body">
 

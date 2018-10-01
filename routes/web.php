@@ -75,6 +75,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::get('/user/ads/{userid}', 'UserController@ads')->name('admin.user.ads');
             Route::get('/user/create', 'UserController@create')->name('admin.user.create');
+            Route::post('/user/store', 'UserController@store')->name('admin.user.store');
 
             Route::delete('/user/ad/destroy/{id}', 'UserController@adsdestroy')->name('admin.user.ads.destroy');
 
