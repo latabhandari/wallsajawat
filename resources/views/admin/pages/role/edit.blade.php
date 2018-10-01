@@ -77,7 +77,7 @@
 
                       <li>Users
                          <ul class="permission">
-                           <li><input name="view_users" type="checkbox" value="1" {{ ($permission_obj["view_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Users&nbsp;&nbsp;&nbsp;<input name="add_users" type="checkbox" value="1" {{ ($permission_obj["add_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Users&nbsp;&nbsp;&nbsp;<input name="edit_users" type="checkbox" value="1" {{ ($permission_obj["edit_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Users&nbsp;&nbsp;&nbsp;<input name="delete_users" type="checkbox" value="1" {{ ($permission_obj["delete_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Users</li>
+                           <li><input name="view_users" type="checkbox" value="1" {{ ($permission_obj["view_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Users&nbsp;&nbsp;&nbsp;<input name="add_user" type="checkbox" value="1" {{ ($permission_obj["add_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Users&nbsp;&nbsp;&nbsp;<input name="edit_user" type="checkbox" value="1" {{ ($permission_obj["edit_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Users&nbsp;&nbsp;&nbsp;<input name="destroy_user" type="checkbox" value="1" {{ ($permission_obj["destroy_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Users</li>
                          </ul>
                       </li>
                   </ul>                    
