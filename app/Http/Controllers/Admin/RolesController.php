@@ -114,8 +114,33 @@ class RolesController extends Controller
 
          // close
 
+        // Offers
 
-         // Roles
+         if (isset($params['view_offers']))
+         $permission['view_offers']               =    $params['view_offers'];
+            else
+         $permission['view_offers']               =    0;
+
+         if (isset($params['add_offer']))
+         $permission['add_offer']                 =    $params['add_offer'];
+            else
+         $permission['add_offer']                 =    0;
+
+         if (isset($params['edit_offer']))
+         $permission['edit_offer']               =    $params['edit_offer'];
+            else
+         $permission['edit_offer']               =    0;
+
+         if (isset($params['destroy_offer']))
+         $permission['destroy_offer']             =    $params['destroy_offer'];
+            else
+         $permission['destroy_offer']             =    0;
+
+         // close
+
+
+
+         // Users
 
          if (isset($params['view_users']))
          $permission['view_users']               =    $params['view_users'];
@@ -264,7 +289,33 @@ class RolesController extends Controller
          // close
 
 
-         // Roles
+        // Offers
+
+         if (isset($params['view_offers']))
+         $permission['view_offers']               =    $params['view_offers'];
+            else
+         $permission['view_offers']               =    0;
+
+         if (isset($params['add_offer']))
+         $permission['add_offer']                 =    $params['add_offer'];
+            else
+         $permission['add_offer']                 =    0;
+
+         if (isset($params['edit_offer']))
+         $permission['edit_offer']               =    $params['edit_offer'];
+            else
+         $permission['edit_offer']               =    0;
+
+         if (isset($params['destroy_offer']))
+         $permission['destroy_offer']             =    $params['destroy_offer'];
+            else
+         $permission['destroy_offer']             =    0;
+
+         // close
+
+
+
+         // Users
 
          if (isset($params['view_users']))
          $permission['view_users']               =    $params['view_users'];
