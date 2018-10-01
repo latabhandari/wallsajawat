@@ -12,7 +12,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Category</h3>
+              <h3 class="box-title">User</h3>
             </div>
             <!-- /.box-header -->
 
@@ -36,19 +36,10 @@
 
               <div class="box-body">
 
-                <div class="form-group">
-                  <label for="category">Parent&nbsp;<span class="req">*</span></label>
-                  {!! MyHelper::tep_draw_pull_down_menu('parent', MyHelper::tep_get_category_tree(1), 0) !!}
-                </div>
-
+              
                 <div class="form-group">
                   <label for="category">Name&nbsp;<span class="req">*</span></label>
                   <input class="form-control" name="name" placeholder="Name" type="text" value="{{ old('name') }}">
-                </div>
-
-                <div class="form-group">
-                  <label for="slug">Slug&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="slug" placeholder="Slug" type="text" value="{{ old('slug') }}">
                 </div>
 
                 <div class="form-group">
@@ -56,39 +47,7 @@
                   <input class="form-control" name="icon" placeholder="Icon" type="file" value="">
                 </div>
 
-                <div class="form-group">
-                  <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>
-                  <select name="wallpaper_pos" class="form-control">
-                     <option value="">-- Select --</option>
-                     <option value="1">-- 1 --</option>
-                     <option value="2">-- 2 --</option>
-                     <option value="3">-- 3 --</option>
-                     <option value="4">-- 4 --</option>
-                     <option value="5">-- 5 --</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="wallpaper_image">Wallpaper Image</label>
-                  <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
-                </div>
-
-                <div class="form-group">
-                  <label for="page_title">Page Title&nbsp;</label>
-                  <input class="form-control" name="page_title" placeholder="Page Title" type="text" value="{{ old('page_title') }}">
-                </div>
-
-                <div class="form-group">
-                  <label for="meta_description">Meta Description&nbsp;</label>
-                  <input class="form-control" name="meta_description" placeholder="Meta Description"text" value="{{ old('meta_description') }}">
-                </div>
-
-                <div class="form-group">
-                  <label for="meta_keywords">Meta Keywords&nbsp;</label>
-                  <input class="form-control" name="meta_keywords" placeholder="Meta Keywords" type="text" value="{{ old('meta_keywords') }}">
-                </div>
-
-
+                
                 <div class="form-group">
                   <label for="category">Status&nbsp;</label>
                   <select class="form-control" name="status">
