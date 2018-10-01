@@ -52,10 +52,10 @@ class RolesController extends Controller
 
          $fields['name']                    =    $params['name'];
 
-         if (isset($params['view_category']))
-         $permission['view_category']       =    $params['view_category'];
+         if (isset($params['view_categories']))
+         $permission['view_categories']       =    $params['view_categories'];
             else
-         $permission['view_category']       =    0;
+         $permission['view_categories']       =    0;
 
          if (isset($params['add_category']))
          $permission['add_category']        =    $params['add_category'];
@@ -67,33 +67,32 @@ class RolesController extends Controller
             else
          $permission['edit_category']       =    0;
 
-         if (isset($params['delete_category']))
-         $permission['delete_category']       =    $params['delete_category'];
+         if (isset($params['destroy_category']))
+         $permission['destroy_category']       =    $params['destroy_category'];
             else
-         $permission['delete_category']       =    0;
+         $permission['destroy_category']       =    0;
 
+        // Product
 
-        // Loan
-
-        if (isset($params['view_loan_category']))
-         $permission['view_loan_category']       =    $params['view_loan_category'];
+        if (isset($params['view_products']))
+         $permission['view_products']           =    $params['view_products'];
             else
-         $permission['view_loan_category']       =    0;
+         $permission['view_products']           =    0;
 
-         if (isset($params['add_loan_category']))
-         $permission['add_loan_category']        =    $params['add_loan_category'];
+         if (isset($params['add_product']))
+         $permission['add_product']             =    $params['add_product'];
             else
-         $permission['add_loan_category']        =    0;
+         $permission['add_product']             =    0;
 
-         if (isset($params['edit_loan_category']))
-         $permission['edit_loan_category']            =    $params['edit_loan_category'];
+         if (isset($params['edit_product']))
+         $permission['edit_product']            =    $params['edit_product'];
             else
-         $permission['edit_loan_category']            =    0;
+         $permission['edit_product']            =    0;
 
-         if (isset($params['delete_loan_category']))
-         $permission['delete_loan_category']            =    $params['delete_loan_category'];
+         if (isset($params['destroy_product']))
+         $permission['destroy_product']            =    $params['destroy_product'];
             else
-         $permission['delete_loan_category']            =    0;
+         $permission['destroy_product']            =    0;
 
 
         // Roles
@@ -103,21 +102,20 @@ class RolesController extends Controller
             else
          $permission['view_roles']               =    0;
 
-         if (isset($params['add_roles']))
-         $permission['add_roles']                =    $params['add_roles'];
+         if (isset($params['add_role']))
+         $permission['add_role']                 =    $params['add_role'];
             else
-         $permission['add_roles']                =    0;
+         $permission['add_role']                 =    0;
 
-         if (isset($params['edit_roles']))
-         $permission['edit_roles']               =    $params['edit_roles'];
+         if (isset($params['edit_role']))
+         $permission['edit_role']               =    $params['edit_role'];
             else
-         $permission['edit_roles']               =    0;
+         $permission['edit_role']               =    0;
 
-         if (isset($params['delete_roles']))
-         $permission['delete_roles']             =    $params['delete_roles'];
+         if (isset($params['destroy_role']))
+         $permission['destroy_role']             =    $params['destroy_role'];
             else
-         $permission['delete_roles']             =    0;
-
+         $permission['destroy_role']             =    0;
 
          // close
 
@@ -129,20 +127,22 @@ class RolesController extends Controller
             else
          $permission['view_users']               =    0;
 
-         if (isset($params['add_users']))
-         $permission['add_users']                =    $params['add_users'];
+         if (isset($params['add_user']))
+         $permission['add_user']                 =    $params['add_user'];
             else
-         $permission['add_users']                =    0;
+         $permission['add_user']                 =    0;
 
-         if (isset($params['edit_users']))
-         $permission['edit_users']               =    $params['edit_users'];
+         if (isset($params['edit_user']))
+         $permission['edit_user']                =    $params['edit_user'];
             else
-         $permission['edit_users']               =    0;
+         $permission['edit_user']                =    0;
 
-         if (isset($params['delete_users']))
-         $permission['delete_users']             =    $params['delete_users'];
+         if (isset($params['destroy_user']))
+         $permission['destroy_user']             =    $params['destroy_user'];
             else
-         $permission['delete_users']             =    0;
+         $permission['destroy_user']             =    0;
+
+         // close
 
 
          // close
@@ -206,10 +206,10 @@ class RolesController extends Controller
      
          $fields['name']                    =    $params['name'];
 
-         if (isset($params['view_category']))
-         $permission['view_category']       =    $params['view_category'];
+         if (isset($params['view_categories']))
+         $permission['view_categories']       =    $params['view_categories'];
             else
-         $permission['view_category']       =    0;
+         $permission['view_categories']       =    0;
 
          if (isset($params['add_category']))
          $permission['add_category']        =    $params['add_category'];
@@ -221,32 +221,32 @@ class RolesController extends Controller
             else
          $permission['edit_category']       =    0;
 
-         if (isset($params['delete_category']))
-         $permission['delete_category']       =    $params['delete_category'];
+         if (isset($params['destroy_category']))
+         $permission['destroy_category']       =    $params['destroy_category'];
             else
-         $permission['delete_category']       =    0;
+         $permission['destroy_category']       =    0;
 
-        // Loan
+        // Product
 
-        if (isset($params['view_loan_category']))
-         $permission['view_loan_category']       =    $params['view_loan_category'];
+        if (isset($params['view_products']))
+         $permission['view_products']           =    $params['view_products'];
             else
-         $permission['view_loan_category']       =    0;
+         $permission['view_products']           =    0;
 
-         if (isset($params['add_loan_category']))
-         $permission['add_loan_category']        =    $params['add_loan_category'];
+         if (isset($params['add_product']))
+         $permission['add_product']             =    $params['add_product'];
             else
-         $permission['add_loan_category']        =    0;
+         $permission['add_product']             =    0;
 
-         if (isset($params['edit_loan_category']))
-         $permission['edit_loan_category']       =    $params['edit_loan_category'];
+         if (isset($params['edit_product']))
+         $permission['edit_product']            =    $params['edit_product'];
             else
-         $permission['edit_loan_category']       =    0;
+         $permission['edit_product']            =    0;
 
-         if (isset($params['delete_loan_category']))
-         $permission['delete_loan_category']            =    $params['delete_loan_category'];
+         if (isset($params['destroy_product']))
+         $permission['destroy_product']            =    $params['destroy_product'];
             else
-         $permission['delete_loan_category']            =    0;
+         $permission['destroy_product']            =    0;
 
 
         // Roles
@@ -256,20 +256,20 @@ class RolesController extends Controller
             else
          $permission['view_roles']               =    0;
 
-         if (isset($params['add_roles']))
-         $permission['add_roles']                =    $params['add_roles'];
+         if (isset($params['add_role']))
+         $permission['add_role']                 =    $params['add_role'];
             else
-         $permission['add_roles']                =    0;
+         $permission['add_role']                 =    0;
 
-         if (isset($params['edit_roles']))
-         $permission['edit_roles']               =    $params['edit_roles'];
+         if (isset($params['edit_role']))
+         $permission['edit_role']               =    $params['edit_role'];
             else
-         $permission['edit_roles']               =    0;
+         $permission['edit_role']               =    0;
 
-         if (isset($params['delete_roles']))
-         $permission['delete_roles']             =    $params['delete_roles'];
+         if (isset($params['destroy_role']))
+         $permission['destroy_role']             =    $params['destroy_role'];
             else
-         $permission['delete_roles']             =    0;
+         $permission['destroy_role']             =    0;
 
          // close
 
@@ -281,20 +281,20 @@ class RolesController extends Controller
             else
          $permission['view_users']               =    0;
 
-         if (isset($params['add_users']))
-         $permission['add_users']                =    $params['add_users'];
+         if (isset($params['add_user']))
+         $permission['add_user']                 =    $params['add_user'];
             else
-         $permission['add_users']                =    0;
+         $permission['add_user']                 =    0;
 
-         if (isset($params['edit_users']))
-         $permission['edit_users']               =    $params['edit_users'];
+         if (isset($params['edit_user']))
+         $permission['edit_user']                =    $params['edit_user'];
             else
-         $permission['edit_users']               =    0;
+         $permission['edit_user']                =    0;
 
-         if (isset($params['delete_users']))
-         $permission['delete_users']             =    $params['delete_users'];
+         if (isset($params['destroy_user']))
+         $permission['destroy_user']             =    $params['destroy_user'];
             else
-         $permission['delete_users']             =    0;
+         $permission['destroy_user']             =    0;
 
          // close
 
