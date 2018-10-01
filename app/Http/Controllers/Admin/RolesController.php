@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Roles as Roles;
 
 class RolesController extends Controller
 {
@@ -307,7 +308,7 @@ class RolesController extends Controller
          Roles::find($id)->update($fields);
 
          return redirect()->route('roles.index')->with('success','Role updated successfully');
-         
+
     }
 
     /**
