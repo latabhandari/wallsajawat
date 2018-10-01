@@ -38,6 +38,7 @@
                        {
                   @endphp
                   <td>
+                     <a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a>
 
                         @php
                           $edit_roles = MyHelper::getPermission('edit_roles');
