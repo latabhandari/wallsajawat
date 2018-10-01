@@ -37,6 +37,7 @@
                      if ($data->id != 1)
                        {
                   @endphp
+
                   <td>
                      <a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a>
 
@@ -72,6 +73,8 @@
                         {
                     @endphp
                             <td>Permission denied</td>
+                            <td><a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a></td>
+                            
                     @php
                       }
                     @endphp
