@@ -41,14 +41,9 @@ class RolesController extends Controller
     {
         //
 
-        $params    =  $request->all();
-              
-         $validator = Validator::make($params, [
-                'name' => 'required',
-         ]);
+         request()->validate(['name'  => 'required']);
 
-         if ($validator->fails())
-         return redirect()->back()->withErrors($validator)->withInput();
+         $params    =  $request->all();
 
          $fields['name']                    =    $params['name'];
 
@@ -194,15 +189,10 @@ class RolesController extends Controller
     public function update(Request $request, $id)
     {
         //
-
-        $params    =  $request->all();
          
-         $validator =  Validator::make($params, [
-                'name' => 'required',
-         ]);
+         request()->validate(['name'  => 'required']);
 
-         if ($validator->fails())
-         return redirect()->back()->withErrors($validator)->withInput();
+         $params    =  $request->all();
      
          $fields['name']                    =    $params['name'];
 
