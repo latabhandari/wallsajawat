@@ -52,11 +52,20 @@
                        </ul>
                     </li>
 
-                    <li>Loan Category
+                    <li>Product
                        <ul class="permission">
-                         <li><input name="view_loan_category" type="checkbox" value="1">&nbsp;View Category&nbsp;&nbsp;&nbsp;<input name="add_loan_category" type="checkbox" value="1">&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input name="edit_loan_category" type="checkbox" value="1">&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input name="delete_loan_category" type="checkbox" value="1">&nbsp;Delete Category</li>
+                         <li><input name="view_product" type="checkbox" value="1">&nbsp;View Category&nbsp;&nbsp;&nbsp;<input name="add_category" type="checkbox" value="1">&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input name="edit_product" type="checkbox" value="1">&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input name="delete_category" type="checkbox" value="1">&nbsp;Delete Product</li>
                        </ul>
                     </li>
+
+
+                    <li>Offers
+                       <ul class="permission">
+                         <li><input name="view_offers" type="checkbox" value="1">&nbsp;View Offers&nbsp;&nbsp;&nbsp;<input name="add_offers" type="checkbox" value="1">&nbsp;Add Offers&nbsp;&nbsp;&nbsp;<input name="edit_offers" type="checkbox" value="1">&nbsp;Edit Offers&nbsp;&nbsp;&nbsp;<input name="delete_offers" type="checkbox" value="1">&nbsp;Delete Product</li>
+                       </ul>
+                    </li>
+
+
 
                     <li>Roles
                        <ul class="permission">
@@ -69,6 +78,8 @@
                                <li><input name="view_users" type="checkbox" value="1">&nbsp;View Users&nbsp;&nbsp;&nbsp;<input name="add_users" type="checkbox" value="1">&nbsp;Add Users&nbsp;&nbsp;&nbsp;<input name="edit_users" type="checkbox" value="1">&nbsp;Edit Users&nbsp;&nbsp;&nbsp;<input name="delete_users" type="checkbox" value="1">&nbsp;Delete User</li>
                              </ul>
                     </li>
+
+
 
                   </ul>
                     
