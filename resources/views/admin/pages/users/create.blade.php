@@ -42,12 +42,7 @@
                   <input class="form-control" name="name" placeholder="Name" type="text" value="{{ old('name') }}">
                 </div>
 
-                <div class="form-group">
-                  <label for="icon">Icon&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="icon" placeholder="Icon" type="file" value="">
-                </div>
-
-                
+                          
                 <div class="form-group">
                   <label for="category">Status&nbsp;</label>
                   <select class="form-control" name="status">
