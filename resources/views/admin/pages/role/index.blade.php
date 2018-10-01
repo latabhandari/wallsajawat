@@ -1,3 +1,7 @@
+@php
+   use App\Helpers\MyHelper as MyHelper;
+@endphp
+
 @extends('admin.layout.master')
 
 @section('content')
@@ -74,7 +78,7 @@
                     @endphp
                             <td>Permission denied</td>
                             <td><a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a></td>
-                            
+
                     @php
                       }
                     @endphp
