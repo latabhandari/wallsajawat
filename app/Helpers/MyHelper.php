@@ -12,6 +12,20 @@ class MyHelper
 		  	  	return Session::get($key);
 		   }
 
+		  public static function getPermission($index = '') 
+			 {
+			  	  $id 		 = Session::get('admin_id');
+			  	  $role_id   = DB::table('admin')->select('role_id')->where('id', $id)->first()->role_id;
+			  	  if ($role_id == 1)
+			  	    return TRUE;
+			  	  else
+			  	    {
+		 				$permission = DB::table('roles')->select('permission')->where('id', $role_id)->first()->permission;
+		 				$permission_obj = json_decode($permission);
+		 				return $permission_obj->permission->$index;
+			  	    }
+			 }
+
 		  public static function tep_get_category_tree($flag = '', $parent_id = '0', $spacing = '', $exclude = '', $category_tree_array = '', $include_itself = false) 
 		    {
 				if ( ! is_array($category_tree_array)) $category_tree_array = array();
