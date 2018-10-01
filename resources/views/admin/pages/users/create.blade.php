@@ -42,6 +42,18 @@
                   <input class="form-control" name="name" placeholder="Name" type="text" value="{{ old('name') }}">
                 </div>
 
+                <div class="form-group">
+                  <label for="email">Email&nbsp;<span class="req">*</span></label>
+                  <input class="form-control" name="email" placeholder="Email" type="text" value="{{ old('email') }}">
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password&nbsp;<span class="req">*</span></label>
+                  <input class="form-control" name="password" placeholder="Password" type="text" value="{{ old('password') }}">
+                </div>
+
+
+
                           
                 <div class="form-group">
                   <label for="category">Status&nbsp;</label>
