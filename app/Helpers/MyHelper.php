@@ -5,6 +5,8 @@ use DB;
 use App\Categories as Categories;
 use Session;
 
+use Auth;
+
 class MyHelper 
    {
 		  public static function getSessionValue($key = null)
