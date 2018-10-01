@@ -1,4 +1,5 @@
 <?php
+use App\Helpers\MyHelper as MyHelper;
 
 echo $segment3 = Request::segment(3);
 
@@ -74,7 +75,7 @@ switch ($segment3)
 
                      </ul>
                   </li>
-                  
+
 
                   <li class="">
                      <a class="{{ isset($offers_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
