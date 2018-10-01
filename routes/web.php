@@ -97,7 +97,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::resource('offers', 'OffersController');
 
-            Route::resource('roles', 'RoleController');
+            Route::resource('roles', 'RolesController');
             
             //Route::resource('city', 'CityController');
 
