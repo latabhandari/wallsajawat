@@ -47,6 +47,35 @@ switch ($segment3)
                      <a class="{{ isset($product_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
                   </li>
 
+                  <li class="treeview {{ isset($roles_active) ? $roles_active : '' }}">
+                     <a href="#">
+                     <i class=""></i><span>Role</span>
+                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                     </a>
+                     <ul class="treeview-menu">
+
+                        @php
+                          $view_roles = MyHelper::getPermission('view_roles');
+                          if ( ! empty($view_roles)) {
+                        @endphp 
+                         <li><a href="{{ route('roles.index') }}">View Roles</a></li>
+                        @php
+                         }
+                        @endphp
+
+                        @php
+                          $add_roles = MyHelper::getPermission('add_roles');
+                          if ( ! empty($add_roles)) {
+                        @endphp 
+                         <li><a class="" href="{{ route('roles.create') }}">Add Role</a></li>
+                        @php
+                         }
+                        @endphp
+
+                     </ul>
+                  </li>
+                  
+
                   <li class="">
                      <a class="{{ isset($offers_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
                   </li>
