@@ -95,6 +95,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::resource('measurement', 'MeasurementController');
 
             Route::resource('offers', 'OffersController');
+
+            Route::resource('roles', 'RoleController');
             
             //Route::resource('city', 'CityController');
 
