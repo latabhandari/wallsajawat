@@ -11,6 +11,15 @@ use App\ProductImages as ProductImages;
 
 class ProductController extends Controller
 {
+      public function __construct()
+ {
+   $currentAction = \Route::currentRouteAction();
+list($controller, $method) = explode('@', $currentAction);
+echo $method;
+
+ }
+
+
     /**
      * Display a listing of the resource.
      *

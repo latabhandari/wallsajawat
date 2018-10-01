@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use DB;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
 use App\User as User; 
@@ -17,6 +18,8 @@ use App\Countries as Countries;
 use App\States as States;
 use App\Cities as Cities;
 use App\Categories as Categories;
+use App\Product as Products;
+use App\ProductImages as ProductImages;
 
 
 
@@ -81,6 +84,63 @@ public $successStatus = 200;
 		return response()->json(['udata' => 1]);
     }
 	
+	
+    public function social_register(Request $request) 
+    { 
+        $validator = Validator::make($request->all(), [ 
+            'name' => 'required|max:255', 
+            'email' => 'required|email|max:255|email', 
+			'provider' => 'required|max:255', 
+			'provider_id' => 'required|max:255', 
+        ]);
+		function getToken($length){
+			$token = "";
+			$codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			$codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
+			$codeAlphabet.= "0123456789";
+			$max = strlen($codeAlphabet); // edited
+	   
+		   for ($i=0; $i < $length; $i++) {
+			   $token .= $codeAlphabet[random_int(0, $max-1)];
+		   }
+	   
+		   return $token;
+	   }
+		if ($validator->fails()) 
+		{ 
+            //return response()->json(['error'=>$validator->errors()], 401); 
+			return response()->json(['error'=>'validation error', 'udata' => 0]);            
+        }
+		$input = $request->all(); 
+		$get = User::select('id' , 'email')->where([['email', '=' ,$input['email']]])->first();	
+		if($get['id']){
+			Auth::attempt(['email' => $get->email, 'password' => 'socialloginwastu', 'verified' => 1]) ;
+			$user = Auth::user(); 
+			$user_id = $user->id;
+			Profile::where('user_id', $user_id)->update(['device_token' => $input['device_token']]);
+			return response()->json(['success' => [['token' => $user->createToken('MyApp')->accessToken, 'name'=>$user->name]], 'udata' => 1]); 
+			
+
+		}	
+		else{
+
+			$input['password'] = bcrypt('socialloginwastu'); 
+			$input['email_token'] = bin2hex(openssl_random_pseudo_bytes(30));
+			$input['unix_timestamp'] = time();
+			$input['verified']    = 1;
+     		$user = User::create($input); 
+			$profile = Profile::create(['user_id' => $user->id]);
+			Auth::attempt(['email' => $user->email, 'password' => 'socialloginwastu', 'verified' => 1]) ;
+			$user2 = Auth::user(); 
+			$user_id = $user2->id;
+			Profile::where('user_id', $user2->id)->update(['device_token' => $input['device_token']]);
+			return response()->json(['success' => [['token' => $user2->createToken('MyApp')->accessToken, 'name'=>$user2->name]], 'udata' => 1]); 
+
+		}
+		
+    }
+	
+
 	public function change_password(Request $request) 
     { 
 		$user = Auth::user();
@@ -146,15 +206,29 @@ public $successStatus = 200;
 			return response()->json(['udata' => 0]); 
 		}
     }
-/** 
-     * details api 
-     * 
-     * @return \Illuminate\Http\Response 
-     */ 
+
     public function details() 
     { 
-        $user = Auth::user(); 
-        return response()->json(['success' => $user], $this-> successStatus); 
+		$user = Auth::user();
+		if($user->id != '')
+		{	
+			$d = $user->id;	
+			$data = DB::table('users')->join('profile', 
+			function($join) use($d){$join->on('users.id', '=', 'profile.user_id')
+			->where('users.id', '=', $d);})
+			->get();	
+			return response()->json(['success' => $data, 'udata' => 1]);    
+		}
+		else
+		{
+			return response()->json(['udata' => 0]); 
+		}	
+    } 
+	public function products() 
+    { 
+		$products = Products::where('status', 1)->select('*')->get();
+		//$products2 = ProductImages::where('product_id', $products->id)->select('*')->get();
+		return response()->json(['success' => $products, 'udata' => 1]);    
     } 
 	
 	public function countries() 

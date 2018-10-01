@@ -5,9 +5,18 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Offer as Offers;
+use Route;
 
 class OffersController extends Controller
 {
+    public function __construct()
+ {
+   $currentAction = \Route::currentRouteAction();
+list($controller, $method) = explode('@', $currentAction);
+echo $method;
+
+ }
+
     /**
      * Display a listing of the resource.
      *

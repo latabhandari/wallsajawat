@@ -5,6 +5,9 @@
 
     RewriteEngine On
 
+    RewriteCond %{SERVER_PORT} 80
+    RewriteRule ^(.*)$ https://www.wallsajawat.com/$1 [R=301,L]
+
     # for remove slashes end of url 
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 
