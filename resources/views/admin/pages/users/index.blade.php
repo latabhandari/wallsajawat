@@ -21,7 +21,7 @@
                   </div>
               @endif
 
-              <p style="text-align:right"><a class="" href="{{ route('user.create') }}"><button type="button" class="btn btn-primary">Add Users</button></a></p>
+              <p style="text-align:right"><a class="" href="{{ route('admin.user.create') }}"><button type="button" class="btn btn-primary">Add Users</button></a></p>
 
               <table id="users" class="table table-bordered table-striped">
                 <thead>

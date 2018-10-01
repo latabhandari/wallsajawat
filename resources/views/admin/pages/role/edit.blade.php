@@ -68,7 +68,6 @@
                       </ul>
                     </li>
 
-
                       <li>Roles
                          <ul class="permission">
                            <li><input name="view_roles" type="checkbox" value="1" {{ ($permission_obj["view_roles"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Roles&nbsp;&nbsp;&nbsp;<input name="add_role" type="checkbox" value="1" {{ ($permission_obj["add_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Roles&nbsp;&nbsp;&nbsp;<input name="edit_role" type="checkbox" value="1" {{ ($permission_obj["edit_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Roles&nbsp;&nbsp;&nbsp;<input name="destroy_role" type="checkbox" value="1" {{ ($permission_obj["destroy_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Roles</li>
