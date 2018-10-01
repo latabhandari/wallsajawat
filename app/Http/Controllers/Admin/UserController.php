@@ -18,30 +18,23 @@ class UserController extends Controller
 	        $users = User::where('is_admin', 0)->get();
 	        return view('admin.pages.users.index', compact('users'))->with('i', (request()->input('page', 1) - 1) * 10);
 	    }
+   
+     public function create($userid = null)
+	   {
+			return view('admin.pages.users.create');
+	   }
 
-	 public function ads($userid = null)
-	    {
-	    	$ads = Ads::with(['city:id,name', 'user:id,name'])->where('user_id', $userid)->get(); 
-	        return view('admin.pages.users.ads', compact('ads'))->with('i', (request()->input('page', 1) - 1) * 10);
-	    }
-
-	public function adsdestroy($id = null)
-		 {
-		 		$rec = Ads::find($id);
-        		$rec->delete();
-		 		return redirect()->back()->with('delete', 'Deleted successfully!');
-		 }      
-
-	public function favoriteads($userid = null)
-	  {
-			$ads = FavoriteAds::with(['user:id,name', 'ads:id,title,description,unix_timestamp'])->where('user_id', $userid)->get(); 
-	        return view('admin.pages.users.favads', compact('ads'))->with('i', (request()->input('page', 1) - 1) * 10);
-	  }
-
-	public function info($userid = null)
-	  {
+	  public function store($userid = null)
+	   {
 	  	    $request     =  User::findOrFail($userid);
 	  	    $profile     =  Profile::where('user_id', $userid)->firstOrFail();
 			return view('admin.pages.users.info', compact('request', 'profile', 'total_ads', 'fav_ads'))->with('i', (request()->input('page', 1) - 1) * 10);
-	  }
+	   }
+
+	 public function info($userid = null)
+	   {
+	  	    $request     =  User::findOrFail($userid);
+	  	    $profile     =  Profile::where('user_id', $userid)->firstOrFail();
+			return view('admin.pages.users.info', compact('request', 'profile', 'total_ads', 'fav_ads'))->with('i', (request()->input('page', 1) - 1) * 10);
+	   }
 }
