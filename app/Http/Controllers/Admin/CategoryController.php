@@ -17,9 +17,6 @@ class CategoryController extends Controller
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
             });
-
-            $currentAction = \Route::currentRouteAction();
-            list($controller, $method) = explode('@', $currentAction);
          }
 
 
