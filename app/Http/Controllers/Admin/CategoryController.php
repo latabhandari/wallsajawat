@@ -12,18 +12,10 @@ class CategoryController extends Controller
 {
     protected  $user;
 
-    public function __construct()
-         {
-       
-            $this->middleware('auth');
-            $this->user = Auth::user();
-
-            print_r($this->user); die;
-
-            $currentAction = \Route::currentRouteAction();
-            list($controller, $method) = explode('@', $currentAction);
-
-           switch ($method)
+    protected function checkPermissions($method)
+        {
+            echo $method;
+            switch ($method)
             {
                 case 'index':
                                $permission = MyHelper::getPermission('index_categories', $this->user->id);
@@ -33,10 +25,9 @@ class CategoryController extends Controller
                                break;
             }
 
-            if (empty($permission))
-            return redirect()->route('dashboard.index')->with('failure','Not Authorised');
-         }
-
+            //if (empty($permission))
+            //return redirect()->route('dashboard.index')->with('failure','Not Authorised');
+        }   
 
     /**
      * Display a listing of the resource.
@@ -46,6 +37,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        $this->checkPermissions(__METHOD__);
+
         $categories = Categories::get();
         return view('admin.pages.category.index', compact('categories'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
@@ -58,6 +51,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
+        $this->checkPermissions(__METHOD__);
         return view('admin.pages.category.create');
     }
 
@@ -70,6 +64,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
+
          request()->validate(['name' => 'required', 'slug' => 'required', 'icon' => 'required|mimes:jpeg,bmp,png,tiff|max:4096']);
 
          $params             =    $request->all();
@@ -130,6 +125,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
+        $this->checkPermissions(__METHOD__);
         $category  = Categories::findOrFail($id);
         return view('admin.pages.category.edit',compact('category'));
     }
@@ -196,6 +192,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //
+         $this->checkPermissions(__METHOD__);
          $id = Categories::find( $id );
          $id->delete();
          return redirect()->route('categories.index')->with('success','Category deleted successfully');
