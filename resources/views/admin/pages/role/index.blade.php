@@ -66,8 +66,8 @@
                       @endphp
 
                        @php
-                                $destroy_offer = MyHelper::getPermission('destroy_offer');
-                                if ( ! empty($destroy_offer)) {
+                                $destroy_role = MyHelper::getPermission('destroy_role');
+                                if ( ! empty($destroy_role)) {
                       @endphp
 
 
