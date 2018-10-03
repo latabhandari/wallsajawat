@@ -26,7 +26,6 @@
                         if ( ! empty($add_role)) {
               @endphp
 
-
               <p style="text-align:right"><a class="" href="{{ route('roles.create') }}"><button type="button" class="btn btn-primary">Add Role</button></a></p>
 
               @php
@@ -56,11 +55,29 @@
                   <td>{{ ++$i }}</td>
                   <td>{{ $data->name }}</td>
                   <td>
+                     @php
+                          $edit_role = MyHelper::getPermission('edit_role');
+                          if ( ! empty($edit_role)) {
+                     @endphp
                      <a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a>
+
+                      @php
+                               }
+                      @endphp
+
+                       @php
+                                $destroy_offer = MyHelper::getPermission('destroy_offer');
+                                if ( ! empty($destroy_offer)) {
+                      @endphp
+
 
                         {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['roles.destroy', $data->id]]) !!}
                         <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button></td>
                         {!! Form::close() !!}
+
+                         @php
+                                }
+                         @endphp
 
                       </td>
                 </tr>

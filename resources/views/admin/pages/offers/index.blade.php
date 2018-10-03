@@ -68,10 +68,26 @@
                   <td>{{ date('D, j M Y h:i a', $data->unix_timestamp) }}</td>
                   <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                   <td>
+                    @php
+                        $edit_offer = MyHelper::getPermission('edit_offer');
+                        if ( ! empty($edit_offer)) {
+                    @endphp
                      <a class="btn btn-primary" href="{{ route('offers.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
-                     {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['offers.destroy', $data->id]]) !!}
-                    <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                    {!! Form::close() !!}
+
+                     @php
+                        }
+                     @endphp
+
+                      @php
+                                $destroy_offer = MyHelper::getPermission('destroy_offer');
+                                if ( ! empty($destroy_offer)) {
+                      @endphp
+                       {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['offers.destroy', $data->id]]) !!}
+                      <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
+                       {!! Form::close() !!}
+                    @php
+                      }
+                    @endphp
 				          </td>
                 </tr>
 

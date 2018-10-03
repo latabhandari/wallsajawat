@@ -65,10 +65,30 @@
                   <td>{{ $data->page_title }}</td>
                   <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                   <td>
+                    @php
+                        $edit_category = MyHelper::getPermission('edit_category');
+                        if ( ! empty($edit_category)) {
+                    @endphp
+
                      <a class="btn btn-primary" href="{{ route('categories.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
+
+                     @php
+                        }
+                     @endphp
+
+                     @php
+                        $destroy_category = MyHelper::getPermission('destroy_category');
+                        if ( ! empty($destroy_category)) {
+                     @endphp
+
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['categories.destroy', $data->id]]) !!}
                     <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
                     {!! Form::close() !!}
+
+                    @php
+                        }
+                    @endphp
+
 				          </td>
                 </tr>
 

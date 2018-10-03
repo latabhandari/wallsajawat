@@ -64,9 +64,27 @@
                         <td>{{ $data->mobile }}</td>
                         <td>{{ date('D, j M\'y h:i a', $data->unix_timestamp) }}</td>
                         <td>
-                          --
-                          <a style="display:none" class="btn btn-primary" href="{{ route('admin.user.info',$data->id) }}"><span class="fa fa-eye"></span></a>
-                        </td>
+                            @php
+                                $edit_user = MyHelper::getPermission('edit_user');
+                                if ( ! empty($edit_user)) {
+                            @endphp
+                             <a class="btn btn-primary" href="#"><span class="fa fa-edit"></span></a>
+
+                             @php
+                                }
+                             @endphp
+
+                              @php
+                                        $destroy_user = MyHelper::getPermission('destroy_user');
+                                        if ( ! empty($destroy_user)) {
+                              @endphp
+                               {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['']]) !!}
+                              <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
+                               {!! Form::close() !!}
+                            @php
+                              }
+                            @endphp
+                          </td>
                       </tr>
                   @endforeach
                 </tbody>

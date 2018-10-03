@@ -28,7 +28,6 @@
                         if ( ! empty($add_product)) {
               @endphp
 
-
               <p style="text-align:right"><a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a></p>
 
               @php
@@ -67,10 +66,28 @@
                       <td>{{ $data->price }}</td>
                       <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                       <td>
+                        @php
+                         $edit_product = MyHelper::getPermission('edit_product');
+                         if ( ! empty($edit_category)) {
+                        @endphp
                          <a class="btn btn-primary" href="{{ route('product.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
+
+                         @php
+                           }
+                         @endphp
+
+                          @php
+                              $destroy_product = MyHelper::getPermission('destroy_product');
+                              if ( ! empty($destroy_product)) {
+                          @endphp
                          {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['product.destroy', $data->id]]) !!}
                            <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
                          {!! Form::close() !!}
+
+                         @php
+                           }
+                         @endphp
+
     				          </td>
                     </tr>
 
