@@ -4,6 +4,10 @@
  <link rel="stylesheet" href="{{ URL::asset('backend/theme/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 @stop
 
+@php
+   use App\Helpers\MyHelper as MyHelper;
+@endphp
+
 @section('content')
   <section class="content">
       <div class="row">
