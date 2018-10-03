@@ -24,8 +24,8 @@
               @endif
 
               @php
-                        $add_category = MyHelper::getPermission('add_category');
-                        if ( ! empty($add_category)) {
+                        $create_category = MyHelper::getPermission('create_category');
+                        if ( ! empty($create_category)) {
               @endphp
 
               <p style="text-align:right"><a class="" href="{{ route('categories.create') }}"><button type="button" class="btn btn-primary">Add Category</button></a></p>

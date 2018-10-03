@@ -24,8 +24,8 @@
               @endif
 
               @php
-                        $add_offer = MyHelper::getPermission('add_offer');
-                        if ( ! empty($add_offer)) {
+                        $create_offer = MyHelper::getPermission('create_offer');
+                        if ( ! empty($create_offer)) {
               @endphp
 
               <p style="text-align:right"><a class="" href="{{ route('offers.create') }}"><button type="button" class="btn btn-primary">Add Offers</button></a></p>

@@ -24,8 +24,8 @@
               @endif
 
               @php
-                        $add_product = MyHelper::getPermission('add_product');
-                        if ( ! empty($add_product)) {
+                        $create_product = MyHelper::getPermission('create_product');
+                        if ( ! empty($create_product)) {
               @endphp
 
               <p style="text-align:right"><a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a></p>

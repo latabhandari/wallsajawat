@@ -22,8 +22,8 @@
               @endif
 
               @php
-                        $add_role = MyHelper::getPermission('add_role');
-                        if ( ! empty($add_role)) {
+                        $create_role = MyHelper::getPermission('create_role');
+                        if ( ! empty($create_role)) {
               @endphp
 
               <p style="text-align:right"><a class="" href="{{ route('roles.create') }}"><button type="button" class="btn btn-primary">Add Role</button></a></p>
