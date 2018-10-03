@@ -23,7 +23,22 @@
                   </div>
               @endif
 
+              @php
+                        $add_category = MyHelper::getPermission('add_category');
+                        if ( ! empty($add_category)) {
+              @endphp
+
               <p style="text-align:right"><a class="" href="{{ route('categories.create') }}"><button type="button" class="btn btn-primary">Add Category</button></a></p>
+
+              @php
+                       }
+              @endphp
+
+
+              @php
+                        $index_categories = MyHelper::getPermission('index_categories');
+                        if ( ! empty($index_categories)) {
+              @endphp
 
               <table id="category" class="table table-bordered table-striped">
                 <thead>
@@ -63,6 +78,10 @@
                 </tbody>
                 
               </table>
+
+              @php
+                    }
+              @endphp
 
 
             </div>
