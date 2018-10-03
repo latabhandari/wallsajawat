@@ -72,21 +72,21 @@
                         @endphp
                          <a class="btn btn-primary" href="{{ route('product.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
 
-                         @php
+                        @php
                            }
-                         @endphp
+                        @endphp
 
-                          @php
+                        @php
                               $destroy_product = MyHelper::getPermission('destroy_product');
                               if ( ! empty($destroy_product)) {
-                          @endphp
+                        @endphp
                          {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['product.destroy', $data->id]]) !!}
                            <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
                          {!! Form::close() !!}
 
-                         @php
+                        @php
                            }
-                         @endphp
+                        @endphp
 
     				          </td>
                     </tr>

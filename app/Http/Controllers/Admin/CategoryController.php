@@ -11,12 +11,20 @@ class CategoryController extends Controller
 {
 
     public function __construct()
- {
-   $currentAction = \Route::currentRouteAction();
-list($controller, $method) = explode('@', $currentAction);
-echo $method;
+         {
+           $currentAction = \Route::currentRouteAction();
+           list($controller, $method) = explode('@', $currentAction);
+           switch ($method)
+            {
+                case 'index':
+                               MyHelper::getPermission('index_categories');
+                               break;
+                default:
+                               MyHelper::getPermission($method.'_category');
+                               break;
+            }
 
- }
+         }
 
 
     /**
