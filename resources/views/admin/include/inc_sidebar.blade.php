@@ -69,8 +69,8 @@ switch ($segment3)
                         @endphp
 
                         @php
-                          $add_role = MyHelper::getPermission('add_role');
-                          if ( ! empty($add_role)) {
+                          $create_role = MyHelper::getPermission('create_role');
+                          if ( ! empty($create_role)) {
                         @endphp 
                          <li><a class="" href="{{ route('roles.create') }}">Add Role</a></li>
                         @php
