@@ -17,7 +17,7 @@ class MyHelper
 		  public static function getPermission($index = '') 
 			 {
 			 	  $userid    =  Auth::user()->id;
-			 	  $userid    =  12;
+			 	  //$userid    =  12;
 			  	  $role_id   =  DB::table('users')->select('is_admin')->where('id', $userid)->first()->is_admin;
 
 			  	  if ($role_id == 1)
