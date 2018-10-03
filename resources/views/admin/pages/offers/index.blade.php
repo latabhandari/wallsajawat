@@ -23,7 +23,21 @@
                   </div>
               @endif
 
+              @php
+                        $add_offer = MyHelper::getPermission('add_offer');
+                        if ( ! empty($add_offer)) {
+              @endphp
+
               <p style="text-align:right"><a class="" href="{{ route('offers.create') }}"><button type="button" class="btn btn-primary">Add Offers</button></a></p>
+
+              @php
+                       }
+              @endphp
+
+              @php
+                        $index_offers = MyHelper::getPermission('index_offers');
+                        if ( ! empty($index_offers)) {
+              @endphp
 
               <table id="offers" class="table table-bordered table-striped">
                 <thead>
@@ -67,6 +81,10 @@
                 </tbody>
                 
               </table>
+
+              @php
+                      }
+              @endphp
 
 
             </div>
