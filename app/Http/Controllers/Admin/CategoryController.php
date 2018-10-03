@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Categories as Categories;
 use App\Helpers\MyHelper as MyHelper;
 use Auth;
+use Route;
 
 class CategoryController extends Controller
 {
