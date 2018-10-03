@@ -15,6 +15,8 @@ class CategoryController extends Controller
     public function __construct()
          {
             
+            dd(Auth::guard('auth.admin')->user());
+            
 echo "dfsdfdfd";
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
