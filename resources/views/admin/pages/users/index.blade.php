@@ -21,7 +21,24 @@
                   </div>
               @endif
 
+              @php
+                        $add_user = MyHelper::getPermission('add_user');
+                        if ( ! empty($add_user)) {
+              @endphp
+
+
               <p style="text-align:right"><a class="" href="{{ route('admin.user.create') }}"><button type="button" class="btn btn-primary">Add User</button></a></p>
+
+              @php
+                        }
+              @endphp
+
+
+              @php
+                        $index_users = MyHelper::getPermission('index_users');
+                        if ( ! empty($index_users)) {
+              @endphp
+
 
               <table id="users" class="table table-bordered table-striped">
                 <thead>
@@ -50,6 +67,10 @@
                   @endforeach
                 </tbody>
               </table>
+
+              @php
+                     }
+              @endphp
             
             </div>
             <!-- /.box-body -->
