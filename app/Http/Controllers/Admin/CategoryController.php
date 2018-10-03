@@ -19,7 +19,7 @@ class CategoryController extends Controller
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
                 print_r($this->user); die;
-                return $next($request);
+               // return $next($request);
             });
 
 echo "dfsdf";
