@@ -21,6 +21,24 @@
                   </div>
               @endif
 
+              @php
+                        $add_role = MyHelper::getPermission('add_role');
+                        if ( ! empty($add_role)) {
+              @endphp
+
+
+              <p style="text-align:right"><a class="" href="{{ route('roles.create') }}"><button type="button" class="btn btn-primary">Add Role</button></a></p>
+
+              @php
+                       }
+              @endphp
+
+
+              @php
+                        $index_roles = MyHelper::getPermission('index_roles');
+                        if ( ! empty($index_roles)) {
+              @endphp
+
 
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
@@ -53,6 +71,10 @@
                 </tbody>
                 
               </table>
+
+              @php
+                        }
+              @endphp
 
             </div>
             <!-- /.box-body -->
