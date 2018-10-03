@@ -15,9 +15,10 @@ class CategoryController extends Controller
     public function __construct()
          {
        
+            $this->middleware('auth');
             $this->user = Auth::user();
 
-            print_r($this->user);
+            print_r($this->user); die;
 
             $currentAction = \Route::currentRouteAction();
             list($controller, $method) = explode('@', $currentAction);
