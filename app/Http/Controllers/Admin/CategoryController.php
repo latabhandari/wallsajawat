@@ -10,7 +10,7 @@ use Auth;
 
 class CategoryController extends Controller
 {
-    private $user;
+    protected  $user;
 
     public function __construct()
          {
@@ -22,6 +22,7 @@ class CategoryController extends Controller
                 return $next($request);
             });
 
+echo "dfsdf";
             print_r($this->user); die;
 
            switch ($method)
