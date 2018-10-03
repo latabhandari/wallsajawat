@@ -15,13 +15,7 @@ class CategoryController extends Controller
     public function __construct()
          {
        
-            
-            $this->middleware(function ($request, $next) {
-
-                     $this->user = Auth::user();
-                     return $next($request);
-             });
-
+            $this->user = Auth::user();
 
             $currentAction = \Route::currentRouteAction();
             list($controller, $method) = explode('@', $currentAction);
