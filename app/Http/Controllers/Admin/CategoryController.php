@@ -10,7 +10,8 @@ use Auth;
 
 class CategoryController extends Controller
 {
-
+    private $user;
+    
     public function __construct()
          {
             $currentAction = \Route::currentRouteAction();
