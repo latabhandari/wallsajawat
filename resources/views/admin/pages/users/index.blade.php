@@ -78,9 +78,9 @@
                                         $destroy_user = MyHelper::getPermission('destroy_user');
                                         if ( ! empty($destroy_user)) {
                               @endphp
-                               {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['']]) !!}
+                               
                               <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                               {!! Form::close() !!}
+                               
                             @php
                               }
                             @endphp
