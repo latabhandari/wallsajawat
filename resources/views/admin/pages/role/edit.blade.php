@@ -64,7 +64,7 @@
 
                     <li>Offers
                        <ul class="permission">
-                         <li><input name="index_offers" type="checkbox" {{ ($permission_obj["index_offers"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Offers&nbsp;&nbsp;&nbsp;<input name="add_offer" type="checkbox" value="1" {{ ($permission_obj["add_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Offer&nbsp;&nbsp;&nbsp;<input name="edit_offer" type="checkbox" value="1" {{ ($permission_obj["edit_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Offer&nbsp;&nbsp;&nbsp;<input name="destroy_offer" type="checkbox" value="1" {{ ($permission_obj["destroy_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Product</li>
+                         <li><input name="index_offers" type="checkbox" {{ ($permission_obj["index_offers"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Offers&nbsp;&nbsp;&nbsp;<input name="add_offer" type="checkbox" value="1" {{ ($permission_obj["add_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Offer&nbsp;&nbsp;&nbsp;<input name="edit_offer" type="checkbox" value="1" {{ ($permission_obj["edit_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Offer&nbsp;&nbsp;&nbsp;<input name="destroy_offer" type="checkbox" value="1" {{ ($permission_obj["destroy_offer"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Offer</li>
                       </ul>
                     </li>
 
