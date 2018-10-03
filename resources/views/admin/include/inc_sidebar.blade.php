@@ -60,8 +60,8 @@ switch ($segment3)
                      <ul class="treeview-menu">
 
                         @php
-                          $view_roles = MyHelper::getPermission('view_roles');
-                          if ( ! empty($view_roles)) {
+                          $index_roles = MyHelper::getPermission('index_roles');
+                          if ( ! empty($index_roles)) {
                         @endphp 
                          <li><a href="{{ route('roles.index') }}">View Roles</a></li>
                         @php
@@ -69,8 +69,8 @@ switch ($segment3)
                         @endphp
 
                         @php
-                          $add_roles = MyHelper::getPermission('add_roles');
-                          if ( ! empty($add_roles)) {
+                          $add_role = MyHelper::getPermission('add_role');
+                          if ( ! empty($add_role)) {
                         @endphp 
                          <li><a class="" href="{{ route('roles.create') }}">Add Role</a></li>
                         @php
