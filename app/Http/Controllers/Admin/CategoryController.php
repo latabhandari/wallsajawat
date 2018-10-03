@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Categories as Categories;
 use App\Helpers\MyHelper as MyHelper;
+use Auth;
 
 class CategoryController extends Controller
 {
@@ -14,13 +15,14 @@ class CategoryController extends Controller
          {
            $currentAction = \Route::currentRouteAction();
            list($controller, $method) = explode('@', $currentAction);
+           $userid = Auth::user()->id;
            switch ($method)
             {
                 case 'index':
-                               $permission = MyHelper::getPermission('index_categories');
+                               $permission = MyHelper::getPermission('index_categories', $userid);
                                break;
                 default:
-                               $permission = MyHelper::getPermission($method.'_category');
+                               $permission = MyHelper::getPermission($method.'_category', $userid);
                                break;
             }
 
