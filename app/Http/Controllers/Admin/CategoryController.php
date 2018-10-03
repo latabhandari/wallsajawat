@@ -10,7 +10,12 @@ use App\Helpers\MyHelper as MyHelper;
 class CategoryController extends Controller
 {
 
-
+    public function __construct()
+         {
+           $currentAction = \Route::currentRouteAction();
+           list($controller, $method) = explode('@', $currentAction);
+          
+         }
 
 
     /**
