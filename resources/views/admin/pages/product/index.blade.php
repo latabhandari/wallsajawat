@@ -23,7 +23,24 @@
                   </div>
               @endif
 
+              @php
+                        $add_product = MyHelper::getPermission('add_product');
+                        if ( ! empty($add_product)) {
+              @endphp
+
+
               <p style="text-align:right"><a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a></p>
+
+              @php
+                       }
+              @endphp
+
+
+              @php
+                        $index_products = MyHelper::getPermission('index_products');
+                        if ( ! empty($index_products)) {
+              @endphp
+
 
               <table id="category" class="table table-bordered table-striped">
                 <thead>
@@ -61,6 +78,10 @@
                
                 </tbody>
               </table>
+
+              @php
+                    }
+              @endphp
 
             </div>
             <!-- /.box-body -->

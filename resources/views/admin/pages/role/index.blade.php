@@ -37,51 +37,14 @@
                 <tr>
                   <td>{{ ++$i }}</td>
                   <td>{{ $data->name }}</td>
-                  @php
-                     if ($data->id != 1)
-                       {
-                  @endphp
-
                   <td>
                      <a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a>
-
-                        @php
-                          $edit_roles = MyHelper::getPermission('edit_roles');
-                          if ( ! empty($edit_roles)) {
-                        @endphp 
-                         <a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a>
-                        @php
-                         }
-                        @endphp
-
-                      &nbsp;
-
-                      @php
-                          $delete_roles = MyHelper::getPermission('delete_roles');
-                          if ( ! empty($delete_roles)) {
-                      @endphp 
 
                         {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['roles.destroy', $data->id]]) !!}
                         <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button></td>
                         {!! Form::close() !!}
 
-                      @php
-                          }
-                      @endphp 
-
-
                       </td>
-                    @php
-                       }
-                       else
-                        {
-                    @endphp
-                            <td>Permission denied</td>
-                            <td><a class="btn btn-primary" href="{{ route('roles.edit',$data->id) }}"><span class="fa fa-edit"></a></td>
-
-                    @php
-                      }
-                    @endphp
                 </tr>
 
                 @endforeach
