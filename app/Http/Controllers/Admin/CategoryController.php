@@ -17,13 +17,15 @@ class CategoryController extends Controller
            switch ($method)
             {
                 case 'index':
-                               MyHelper::getPermission('index_categories');
+                               $permission = MyHelper::getPermission('index_categories');
                                break;
                 default:
-                               MyHelper::getPermission($method.'_category');
+                               $permission = MyHelper::getPermission($method.'_category');
                                break;
             }
 
+            if (empty($permission))
+            return redirect()->route('dashboard.index')->with('failure','Not Authorised');
          }
 
 
