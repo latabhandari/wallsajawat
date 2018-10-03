@@ -14,8 +14,7 @@ class CategoryController extends Controller
 
     public function __construct()
          {
-            $currentAction = \Route::currentRouteAction();
-            list($controller, $method) = explode('@', $currentAction);
+            
 
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
@@ -25,6 +24,9 @@ class CategoryController extends Controller
 
 echo "dfsdf";
             print_r($this->user); die;
+
+            $currentAction = \Route::currentRouteAction();
+            list($controller, $method) = explode('@', $currentAction);
 
            switch ($method)
             {
