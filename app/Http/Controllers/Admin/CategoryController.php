@@ -11,7 +11,7 @@ use Auth;
 class CategoryController extends Controller
 {
     private $user;
-    
+
     public function __construct()
          {
             $currentAction = \Route::currentRouteAction();
@@ -21,6 +21,8 @@ class CategoryController extends Controller
                 $this->user = Auth::user();
                 return $next($request);
             });
+
+            print_r($this->user); die;
 
            switch ($method)
             {
