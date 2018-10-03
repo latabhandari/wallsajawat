@@ -15,17 +15,11 @@ class CategoryController extends Controller
     public function __construct()
          {
             
-            dd(Auth::guard('auth.admin')->user());
-            
-echo "dfsdfdfd";
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
                 print_r($this->user); die;
                // return $next($request);
             });
-
-echo "dfsdf";
-            print_r($this->user); die;
 
             $currentAction = \Route::currentRouteAction();
             list($controller, $method) = explode('@', $currentAction);
