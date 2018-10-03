@@ -13,6 +13,15 @@ class RolesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+ {
+   $currentAction = \Route::currentRouteAction();
+list($controller, $method) = explode('@', $currentAction);
+echo $method;
+
+ }
+ 
     public function index()
     {
         //
