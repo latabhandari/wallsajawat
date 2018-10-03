@@ -13,18 +13,21 @@ class CategoryController extends Controller
 
     public function __construct()
          {
-           $currentAction = \Route::currentRouteAction();
-           list($controller, $method) = explode('@', $currentAction);
+            $currentAction = \Route::currentRouteAction();
+            list($controller, $method) = explode('@', $currentAction);
 
-           $this->middleware('auth');
-           
+            $this->middleware(function ($request, $next) {
+                $this->user = Auth::user();
+                return $next($request);
+            });
+
            switch ($method)
             {
                 case 'index':
-                               $permission = MyHelper::getPermission('index_categories');
+                               $permission = MyHelper::getPermission('index_categories', $this->user->id);
                                break;
                 default:
-                               $permission = MyHelper::getPermission($method.'_category');
+                               $permission = MyHelper::getPermission($method.'_category', $this->user->id);
                                break;
             }
 
