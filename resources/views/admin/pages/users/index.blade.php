@@ -26,8 +26,8 @@
               @endif
 
               @php
-                        $add_user = MyHelper::getPermission('add_user');
-                        if ( ! empty($add_user)) {
+                        $create_user = MyHelper::getPermission('create_user');
+                        if ( ! empty($create_user)) {
               @endphp
 
 
