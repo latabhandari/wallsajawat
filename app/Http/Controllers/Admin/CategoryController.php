@@ -15,7 +15,7 @@ class CategoryController extends Controller
 
     protected function checkPermissions($method)
         {
-            echo Route::getCurrentRoute()->getActionName();
+            list($controller, $method) = explode('@', Route::getCurrentRoute()->getActionName());
             switch ($method)
             {
                 case 'index':
