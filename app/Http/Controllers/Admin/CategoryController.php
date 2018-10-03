@@ -14,9 +14,24 @@ class CategoryController extends Controller
 
     public function __construct()
          {
-            $this->middleware(function ($request, $next) {
-                $this->user = Auth::user();
-            });
+            parent::__construct();
+            
+
+            $currentAction = \Route::currentRouteAction();
+            list($controller, $method) = explode('@', $currentAction);
+
+           switch ($method)
+            {
+                case 'index':
+                               $permission = MyHelper::getPermission('index_categories', $this->user->id);
+                               break;
+                default:
+                               $permission = MyHelper::getPermission($method.'_category', $this->user->id);
+                               break;
+            }
+
+            if (empty($permission))
+            return redirect()->route('dashboard.index')->with('failure','Not Authorised');
          }
 
 
@@ -28,7 +43,6 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        print_r($this->user);
         $categories = Categories::get();
         return view('admin.pages.category.index', compact('categories'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
