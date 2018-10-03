@@ -13,6 +13,15 @@ use App\Profile as Profile;
 class UserController extends Controller
 {
     //
+
+     public function __construct()
+ {
+   $currentAction = \Route::currentRouteAction();
+list($controller, $method) = explode('@', $currentAction);
+echo $method;
+
+ }
+ 
      public function index()
 	    {
 	        $users = User::where('is_admin', 0)->get();
