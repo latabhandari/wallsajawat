@@ -68,7 +68,7 @@
                       <td>
                         @php
                          $edit_product = MyHelper::getPermission('edit_product');
-                         if ( ! empty($edit_category)) {
+                         if ( ! empty($edit_product)) {
                         @endphp
                          <a class="btn btn-primary" href="{{ route('product.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
 
