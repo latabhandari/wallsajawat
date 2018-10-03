@@ -18,10 +18,10 @@ class CategoryController extends Controller
             switch ($method)
             {
                 case 'index':
-                               $permission = MyHelper::getPermission('index_categories', $this->user->id);
+                               $permission = MyHelper::getPermission('index_categories');
                                break;
                 default:
-                               $permission = MyHelper::getPermission($method.'_category', $this->user->id);
+                               $permission = MyHelper::getPermission($method.'_category');
                                break;
             }
 
