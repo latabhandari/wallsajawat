@@ -21,7 +21,7 @@ list($controller, $method) = explode('@', $currentAction);
 echo $method;
 
  }
- 
+
     public function index()
     {
         //
@@ -56,10 +56,10 @@ echo $method;
 
          $fields['name']                    =    $params['name'];
 
-         if (isset($params['view_categories']))
-         $permission['view_categories']       =    $params['view_categories'];
+         if (isset($params['index_categories']))
+         $permission['index_categories']       =    $params['index_categories'];
             else
-         $permission['view_categories']       =    0;
+         $permission['index_categories']       =    0;
 
          if (isset($params['add_category']))
          $permission['add_category']        =    $params['add_category'];
@@ -78,10 +78,10 @@ echo $method;
 
         // Product
 
-        if (isset($params['view_products']))
-         $permission['view_products']           =    $params['view_products'];
+        if (isset($params['index_products']))
+         $permission['index_products']           =    $params['index_products'];
             else
-         $permission['view_products']           =    0;
+         $permission['index_products']           =    0;
 
          if (isset($params['add_product']))
          $permission['add_product']             =    $params['add_product'];
@@ -101,10 +101,10 @@ echo $method;
 
         // Roles
 
-         if (isset($params['view_roles']))
-         $permission['view_roles']               =    $params['view_roles'];
+         if (isset($params['index_roles']))
+         $permission['index_roles']               =    $params['index_roles'];
             else
-         $permission['view_roles']               =    0;
+         $permission['index_roles']               =    0;
 
          if (isset($params['add_role']))
          $permission['add_role']                 =    $params['add_role'];
@@ -125,10 +125,10 @@ echo $method;
 
         // Offers
 
-         if (isset($params['view_offers']))
-         $permission['view_offers']               =    $params['view_offers'];
+         if (isset($params['index_offers']))
+         $permission['index_offers']               =    $params['index_offers'];
             else
-         $permission['view_offers']               =    0;
+         $permission['index_offers']               =    0;
 
          if (isset($params['add_offer']))
          $permission['add_offer']                 =    $params['add_offer'];
@@ -151,10 +151,10 @@ echo $method;
 
          // Users
 
-         if (isset($params['view_users']))
-         $permission['view_users']               =    $params['view_users'];
+         if (isset($params['index_users']))
+         $permission['index_users']               =    $params['index_users'];
             else
-         $permission['view_users']               =    0;
+         $permission['index_users']               =    0;
 
          if (isset($params['add_user']))
          $permission['add_user']                 =    $params['add_user'];
@@ -230,10 +230,10 @@ echo $method;
      
          $fields['name']                    =    $params['name'];
 
-         if (isset($params['view_categories']))
-         $permission['view_categories']       =    $params['view_categories'];
+         if (isset($params['index_categories']))
+         $permission['index_categories']       =    $params['index_categories'];
             else
-         $permission['view_categories']       =    0;
+         $permission['index_categories']       =    0;
 
          if (isset($params['add_category']))
          $permission['add_category']        =    $params['add_category'];
@@ -252,10 +252,10 @@ echo $method;
 
         // Product
 
-        if (isset($params['view_products']))
-         $permission['view_products']           =    $params['view_products'];
+        if (isset($params['index_products']))
+         $permission['index_products']           =    $params['index_products'];
             else
-         $permission['view_products']           =    0;
+         $permission['index_products']           =    0;
 
          if (isset($params['add_product']))
          $permission['add_product']             =    $params['add_product'];
@@ -275,10 +275,10 @@ echo $method;
 
         // Roles
 
-         if (isset($params['view_roles']))
-         $permission['view_roles']               =    $params['view_roles'];
+         if (isset($params['index_roles']))
+         $permission['index_roles']               =    $params['index_roles'];
             else
-         $permission['view_roles']               =    0;
+         $permission['index_roles']               =    0;
 
          if (isset($params['add_role']))
          $permission['add_role']                 =    $params['add_role'];
@@ -300,10 +300,10 @@ echo $method;
 
         // Offers
 
-         if (isset($params['view_offers']))
-         $permission['view_offers']               =    $params['view_offers'];
+         if (isset($params['index_offers']))
+         $permission['index_offers']               =    $params['index_offers'];
             else
-         $permission['view_offers']               =    0;
+         $permission['index_offers']               =    0;
 
          if (isset($params['add_offer']))
          $permission['add_offer']                 =    $params['add_offer'];
@@ -326,10 +326,10 @@ echo $method;
 
          // Users
 
-         if (isset($params['view_users']))
-         $permission['view_users']               =    $params['view_users'];
+         if (isset($params['index_users']))
+         $permission['index_users']               =    $params['index_users'];
             else
-         $permission['view_users']               =    0;
+         $permission['index_users']               =    0;
 
          if (isset($params['add_user']))
          $permission['add_user']                 =    $params['add_user'];
