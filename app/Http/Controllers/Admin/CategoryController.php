@@ -15,14 +15,16 @@ class CategoryController extends Controller
          {
            $currentAction = \Route::currentRouteAction();
            list($controller, $method) = explode('@', $currentAction);
-           $userid = Auth::user()->id;
+
+           $this->middleware('auth');
+           
            switch ($method)
             {
                 case 'index':
-                               $permission = MyHelper::getPermission('index_categories', $userid);
+                               $permission = MyHelper::getPermission('index_categories');
                                break;
                 default:
-                               $permission = MyHelper::getPermission($method.'_category', $userid);
+                               $permission = MyHelper::getPermission($method.'_category');
                                break;
             }
 
