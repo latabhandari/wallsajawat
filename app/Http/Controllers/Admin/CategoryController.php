@@ -14,7 +14,18 @@ class CategoryController extends Controller
          {
            $currentAction = \Route::currentRouteAction();
            list($controller, $method) = explode('@', $currentAction);
-          
+           switch ($method)
+            {
+                case 'index':
+                               $permission = MyHelper::getPermission('index_categories');
+                               break;
+                default:
+                               $permission = MyHelper::getPermission($method.'_category');
+                               break;
+            }
+
+            if (empty($permission))
+            return redirect()->route('dashboard.index')->with('failure','Not Authorised');
          }
 
 
