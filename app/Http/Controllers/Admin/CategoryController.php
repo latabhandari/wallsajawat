@@ -17,6 +17,8 @@ class CategoryController extends Controller
        
             $this->user = Auth::user();
 
+            print_r($this->user);
+
             $currentAction = \Route::currentRouteAction();
             list($controller, $method) = explode('@', $currentAction);
 
