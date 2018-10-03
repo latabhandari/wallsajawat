@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function __construct()
          {
             
-
+echo "dfsdfdfd";
             $this->middleware(function ($request, $next) {
                 $this->user = Auth::user();
                 print_r($this->user); die;
