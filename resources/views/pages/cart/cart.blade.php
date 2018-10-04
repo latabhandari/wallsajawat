@@ -22,16 +22,15 @@
 					<div class="cart-box">
 						<div class="title">
 							<div class="row">
-								<div class="col-sm-2">Product</div>
-								<div class="col-sm-4">Description</div>
+								<div class="col-sm-2">Image</div>
+								<div class="col-sm-4">Product</div>
 								<div class="col-sm-2">Item Price</div>
 								<div class="col-sm-2">Quantity</div>
 								<div class="col-sm-2">Total</div>
 							</div>
 						</div>
 
-
-						@foreach(Cart::content() as $row)
+					@foreach(Cart::content() as $row)
 						@php
 						  $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
 						  $measurement_info  = App\Helpers\MyHelper::getMeasurement($row->options->type);
@@ -81,7 +80,9 @@
 						<div class="col-sm-6">
 							<a href="product-listing.html" title="Continue Shopping" class="back-link"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Continue Shopping</a>
 						</div>
+
 						<div class="col-sm-6">
+							<button type="submit" name="updatebtn" class="btn btn-info">Update</button>
 							<a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
 						</div>
 					</div>
