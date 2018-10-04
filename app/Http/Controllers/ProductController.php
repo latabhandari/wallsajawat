@@ -15,6 +15,8 @@ class ProductController extends Controller
     public function detail($slug)
       {
       	  $detail         =  Product::where('slug', $slug)->firstOrFail();
+
+          echo $detail->id; die;
           $product_images =  ProductImages::where('product_id', $detail->id)->get();
       	  $measurements   =  Measurement::select('id', 'name', 'square_feet_value')->where('status', 1)->get();
       	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images'));
