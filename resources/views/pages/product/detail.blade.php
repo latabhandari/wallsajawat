@@ -454,11 +454,6 @@ $.validator.setDefaults({
 
          	if (w_width && w_height)
          		 {
-
-              alert(w_width);
-              alert(w_height);
-              alert(mid);
-              alert(price);
       						$.ajax({
       						           type: "POST",
       						           url: WallSajawat.getSitePath('product/option'),
