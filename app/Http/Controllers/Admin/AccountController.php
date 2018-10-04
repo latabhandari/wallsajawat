@@ -25,7 +25,8 @@ class AccountController extends Controller
 	     	 # $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
 			  $user      = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0]])->first();
 
-			  print_r($user);
+			  print_r($user); die;
+			  
 
 	     	  if ($user) {
 
