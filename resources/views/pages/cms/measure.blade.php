@@ -48,7 +48,7 @@
 				<li><b>Width</b> - Measure the horizontal distance of the wall, from corner to corner.</li>
 				<li><b>Height</b>&nbsp;– Measure the vertical height at each corner of the wall. Some walls are not perfectly square. If there is a difference in height, always select the greater of the two height measurements.</li>
 				</ul>
-				<p class="text-center"> <img src="Images/width-height.png" alt=""></p>
+				<p class="text-center"> <img src="{{ asset('build/assets/images/width-height.png') }}" alt=""></p>
 				
 				<p></p><h4>For Partial Wall Coverings</h4><p></p>
 				<p>Make registration marks along the area that you want to cover.</p>
@@ -57,7 +57,7 @@
 				<li><b>Width</b> - Measure the horizontal distance between registration marks.</li>
 				<li><b>Height</b>&nbsp;– Measure the vertical height at each corner of the registration mark. You may want to cover a variety of heights. In case of difference in height, always select the greater of the two height measurements.</li>
 				</ul>
-				<p class="text-center"> <img src="Images/width-height1.png" alt=""></p>
+				<p class="text-center"> <img src="{{ asset('build/assets/images/width-height1.png') }}" alt=""></p>
 				<p>Most wallpaper designs are pretty flexible and trimming the edges to achieve a perfect finish does not harm the overall look. Always use a measuring tape to get the most accurate measurement. Finally, add a few extra inches along the sides of your wallpaper. This will give you a little breathing space in case of any odd mistakes!
 				Got any queries? Simply call us </p>
 			</div>
