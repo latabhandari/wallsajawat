@@ -453,7 +453,7 @@ $.validator.setDefaults({
          	if (w_width && w_height)
          		 {
       						$.ajax({
-      						           type: "GET",
+      						           type: "POST",
       						           url: WallSajawat.getSitePath('product/option'),
       						           dataType: "json",
       						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
