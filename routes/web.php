@@ -76,9 +76,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::get('/user/create', 'UserController@create')->name('admin.user.create');
             Route::post('/user/store', 'UserController@store')->name('admin.user.store');
 
-            Route::get('/user/edit', 'UserController@edit')->name('admin.user.edit');
+            Route::get('/user/edit/{id}', 'UserController@edit')->name('admin.user.edit');
 
-            Route::post('/user/update', 'UserController@store')->name('admin.user.update');
+            Route::post('/user/update/{id}', 'UserController@update')->name('admin.user.update');
 
             Route::get('/user/info/{userid}', 'UserController@info')->name('admin.user.info');
 
