@@ -46,6 +46,7 @@ class ProductController extends Controller
      	$height       		=  $params['height'];
      	$material_type_id =  $params['material_type'];
      	$id           		=  $params['id'];
+      $qty              =  $params['qty'];
      	$product      		=  Product::find($id);
 
      	$productname  		=  $product->name; 
@@ -59,6 +60,8 @@ class ProductController extends Controller
       $width_height      =  $width * $height;
       $per_square_feet   =  $width_height / $square_feet_value;
       $uprice            =  $price * $per_square_feet;
+
+
 
 
      	/*switch($material_type)
@@ -81,7 +84,7 @@ class ProductController extends Controller
 	      	   }
       */
 
-     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => 1, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
+     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
 
     	return redirect()->route('cart');
      }
