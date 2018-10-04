@@ -23,9 +23,7 @@
         @include('pages.include.top_head')
         @include('pages.include.header')
         
-        <div class="container content_area">
-            @yield('content')
-        </div>
+        @yield('content')
         
         @include('pages.include.footer')
     
