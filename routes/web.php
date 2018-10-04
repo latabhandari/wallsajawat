@@ -76,6 +76,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::get('/user/create', 'UserController@create')->name('admin.user.create');
             Route::post('/user/store', 'UserController@store')->name('admin.user.store');
 
+            Route::post('/user/store', 'UserController@store')->name('admin.user.update');
+
             Route::get('/user/info/{userid}', 'UserController@info')->name('admin.user.info');
 
             Route::get('/subscribeUsers', 'DashboardController@subscribes')->name('admin.subscribes');
