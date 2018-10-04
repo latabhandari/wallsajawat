@@ -511,6 +511,62 @@ footer {
 }
 
 
+/*how to measure page*/
+.title {
+    margin: 2% 0;
+    width: 100%;
+    float: left;
+}
+.measure-title ul{
+  list-style-type:none; 
+}
+.measure-title ul li{
+  float:left;
+}
+.title h3{
+  padding:0 0 0 0!important;
+}
+.title ul li a{
+  color: #606060;
+  text-decoration:none;
+}
+.title ul li {
+    float: left;
+    display: inline;
+    padding: 0 15px;
+    background: url(../images/arrow.png) no-repeat left 6px;
+    text-transform: capitalize;
+}
+.title ul li:first-child{
+  background:none;
+}
+.measure-title,.measure-title ul{
+  padding-bottom:0px!important;
+  margin-bottom:0px!important;
+}
+.measure-content{
+  padding-left:40px!important;
+}
+.measure-content p{
+  padding: 0px 0px 15px 40px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.measure-content ul{
+  list-style-type:none;
+}
+.measure-content ul li{
+  padding: 4px 0 4px 20px;
+  background: url(../images/arrow-right.png) no-repeat 0px 8px;
+}
+
+
+
+
+
+
+
+
 
  @media only screen and (min-device-width : 320px) and (max-device-width : 478px) {
 .row {
