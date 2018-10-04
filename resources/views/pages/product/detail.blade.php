@@ -74,14 +74,18 @@
             <div class="price-text">
               <p>INR {{ $detail->price }}</p>
             </div>
+
+            <form name="product" id="product" action="{{ route('product.cart') }}" method="post">
+            	@csrf
+
 			<div class="form-element-50-50">        
 				<ul>
 					<li><label>Measurement in</label>
-						<select name="size_format" id="size_format" class="istyle7">
-							<option value="feet">Feet</option>
-							<option value="inch">Inch</option>
-							<option value="cm">Centimeter</option> 
-						</select>
+						<select id="material_type" name="material_type" class="istyle7">
+				     		@foreach ($measurements as $data)
+				                <option data-attr="{{ strtolower($data->name) }}" data-value="{{ $data->square_feet_value }}" value="{{ $data->id }}">{{ $data->name }}</option>
+				            @endforeach
+				     	</select>
 					</li>
 						<li><label>Width:</label>
 						<input type="text" name="txtwidth" id="txtwidth" value="" class="istyle8" width="50">
@@ -95,15 +99,21 @@
 					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
 				</ul>
 			</div>
+
             <div class="">
               <p><strong>Quantity:</strong> Please select Quantity.</p>
               <div class="row">
                 <div class="col-sm-12">
                   <input type="number" name="" placeholder="1" class="form-control">
-                  <a href="cart.html" title="Add to Bag" class="btn">Add to Bag <i class="fa fa-cart-plus" aria-hidden="true"></i></a>
+                  <button  type="submit"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
                 </div>
               </div>
             </div>
+
+            </form>
+
+
+
           </div>
           <!-- end product-txtb -->
         </div>
