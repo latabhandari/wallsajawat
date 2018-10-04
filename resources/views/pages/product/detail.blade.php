@@ -454,20 +454,24 @@ $.validator.setDefaults({
 
          	if (w_width && w_height)
          		 {
-         		 	console.log(WallSajawat.getSitePath('product/option'));
-						$.ajax({
-						           type: "POST",
-						           url: WallSajawat.getSitePath('product/option'),
-						           dataType: "json",
-						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
-						           success: function (resp) {
 
-						           	  	$("#cal_price").text("INR " + resp.price);
-						           }
+              alert(w_width);
+              alert(w_height);
+              alert(mid);
+              alert(price);
+      						$.ajax({
+      						           type: "POST",
+      						           url: WallSajawat.getSitePath('product/option'),
+      						           dataType: "json",
+      						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
+      						           success: function (resp) {
 
-						       });
+      						           	  	$("#cal_price").text("INR " + resp.price);
+      						           }
 
-         		 }
+      						       });
+
+              }
          }
 
 </script>
