@@ -34,7 +34,7 @@ class UserController extends Controller
 
 	         $fields['name']                    =    $params['name'];
 	         $fields['email']                   =    $params['email'];
-	         $fields['password']                =    Hash::make($params['password']);
+	         $fields['password']                =    bcrypt($params['password']);
 	         $fields['status']                  =    $params['status'];
 	         $fields['role_id']                 =    $params['role'];
 	         $fields['unix_timestamp']          =    time();
