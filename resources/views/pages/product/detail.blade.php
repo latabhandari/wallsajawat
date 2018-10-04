@@ -88,10 +88,10 @@
 				     	</select>
 					</li>
 						<li><label>Width:</label>
-						<input type="text" name="txtwidth" id="width" value="" class="istyle8" width="50">
+						<input type="text" name="width" id="width" value="" class="istyle8" width="50">
 					</li>
 					<li><label>Height:</label>
-						<input type="text" name="txtheight" id="height" value="" class="istyle8">
+						<input type="text" name="height" id="height" value="" class="istyle8">
 					</li>
 					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
 				</ul>
@@ -102,7 +102,7 @@
               <div class="row">
                 <div class="col-sm-12">
                   <input type="number" name="" placeholder="1" class="form-control">
-                  <button  type="submit"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
+                  <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
                 </div>
               </div>
             </div>
