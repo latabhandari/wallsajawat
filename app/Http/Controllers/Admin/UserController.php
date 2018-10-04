@@ -27,14 +27,13 @@ class UserController extends Controller
 
 	  public function store()
 	   {
-	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password', 'role_id']);
+	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password' => 'required', 'role' => 'required', 'status' => 'required']);
 
 	         $params            				=    $request->all();
 
 	         $fields['name']                    =    $params['name'];
 	         $fields['email']                   =    $params['email'];
 	         $fields['password']                =    Hash::make($params['password']);
-	         $fields['email_token']             =    $params['email_token'];
 	         $fields['status']                  =    $params['status'];
 	         $fields['role_id']                 =    $params['role_id'];
 	         $fields['unix_timestamp']          =    time();
