@@ -25,7 +25,7 @@ class UserController extends Controller
 			return view('admin.pages.users.create', compact('roles'));
 	   }
 
-	  public function store()
+	  public function store(Request $request)
 	   {
 	  	     request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required', 'status' => 'required']);
 
