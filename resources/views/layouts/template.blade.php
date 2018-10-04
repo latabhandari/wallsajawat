@@ -145,6 +145,7 @@
                 @foreach ($best_selling_products as $selling_products)
 
                      @php
+                         use App\Helpers\MyHelper as MyHelper;
                         $prod_image_info = MyHelper::getProductImage($selling_products->id);
                      @endphp
 
