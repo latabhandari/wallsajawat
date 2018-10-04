@@ -456,7 +456,7 @@ $.validator.setDefaults({
       						           type: "POST",
       						           url: WallSajawat.getSitePath('product/option'),
       						           dataType: "json",
-      						           data: {"width": w_width},
+      						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
       						           success: function (resp) {
 
       						           	  	$("#cal_price").text("INR " + resp.price);
