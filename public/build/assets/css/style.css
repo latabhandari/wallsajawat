@@ -94,7 +94,7 @@
   width: 98%!important;
 }
 .main-img {
-  background-image: url(../Images/Banner.jpg);
+  background-image: url(../images/Banner.jpg);
   min-height: 500px;
   margin-left: 12px;
   background-size: cover;
@@ -165,19 +165,19 @@
   text-transform: uppercase;
 }
 .sub-img1 {
-  background-image: url(../Images/Tree.png);
+  background-image: url(../images/Tree.png);
   min-height: 200px;
   padding: 0px;
   width: 670px;
 }
 .sub-img2 {
-  background-image: url(../Images/Floral.png);
+  background-image: url(../images/Floral.png);
   min-height: 200px;
   padding: 0px;
   margin-left: 3px;
 }
 .sub-img3 {
-  background-image: url(../Images/Texture.png);
+  background-image: url(../images/Texture.png);
   min-height: 200px;
   padding: 0px;
   margin-left: 3px;
@@ -186,19 +186,19 @@
   margin-top: 3px;
 }
 .sub-img4 {
-  background-image: url(../Images/Interior.png);
+  background-image: url(../images/Interior.png);
   min-height: 300px;
   padding: 0px;
 }
 .sub-img5 {
-  background-image: url(../Images/elements.png);
+  background-image: url(../images/elements.png);
   min-height: 300px;
   padding: 0px;
   margin-left: 3px;
   width: 670px;
 }
 .sub-img6 {
-  background-image: url(../Images/All-elements.png);
+  background-image: url(../images/All-elements.png);
   min-height: 300px;
   padding: 0px;
   margin-left: 3px;
@@ -272,7 +272,7 @@
   clear: both
 }
 .priv-img {
-  background-image: url(../Images/privilege.png);
+  background-image: url(../images/privilege.png);
   background-size: cover;
   min-height: 150px;
 }
@@ -294,7 +294,7 @@
 /*footer*/
 
 footer {
-  background-image: url(../Images/footer.png);
+  background-image: url(../images/footer.png);
   color: #ebebeb;
 }
 .foot-sec1 h5 {
@@ -332,7 +332,7 @@ footer {
 }
 /*login-page*/
 .login-banner {
-  background-image: url(../Images/background1.png);
+  background-image: url(../images/background1.png);
   background-size: cover;
   width: 100%;
   min-height: 500px;
@@ -371,7 +371,7 @@ footer {
 
 /*forget password page*/
 .login-banner {
-  background-image: url(../Images/background1.png);
+  background-image: url(../images/background1.png);
   background-size: cover;
   width: 100%;
   min-height: 500px;
@@ -401,7 +401,7 @@ footer {
 /*product-page*/
 .product-banner {
   width: 100%;
-  background-image: url("../Images/product-main2.png");
+  background-image: url("../images/product-main2.png");
   min-height: 450px;
   background-size: cover;
 }
@@ -460,7 +460,7 @@ footer {
 }
 /*signup-page*/
 .login-banner {
-  background-image: url(../Images/background1.png);
+  background-image: url(../images/background1.png);
   background-size: cover;
   width: 100%;
   min-height: 500px;
