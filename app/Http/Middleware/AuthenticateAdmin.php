@@ -22,9 +22,9 @@ class AuthenticateAdmin
                 case 'admin':
                                     if (! empty($userinfo)):
                                         $admin_id  =  $userinfo->id;
-                                        $is_admin  =  $userinfo->is_admin;
+                                        $role_id  =  $userinfo->role_id;
 
-                                        if (! empty($admin_id) && ! empty($is_admin))
+                                        if (! empty($admin_id) && ! empty($role_id))
                                         return $next($request);
                                     endif;
                                         return redirect()->route('admin.get.login');
@@ -32,8 +32,8 @@ class AuthenticateAdmin
 
                 case 'login':
                                     if ( ! empty($userinfo)):
-                                        $is_admin = $userinfo->is_admin;
-                                        if (! empty($is_admin))
+                                        $role_id = $userinfo->role_id;
+                                        if (! empty($role_id))
                                         return redirect()->route('admin.dashboard');
                                     endif;
                                          return $next($request);
