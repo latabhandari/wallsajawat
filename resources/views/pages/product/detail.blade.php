@@ -52,7 +52,7 @@
         <div class="col-sm-5">
           <!-- start product-txtb -->
           <div class="product-txtb">
-            <h3>Lorem Ipsum</h3>
+            <h3>{{ $detail->name }}</h3>
             <p class="cag-title">1100 orders this month</p>
             <div class="rating">
               <div class="row">
@@ -66,42 +66,14 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                     <span>1</span>
-                    |<span>Style #1299528</span>
+                    |<span>Style #{{ $detail->sku }}</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="price-text">
-              <p>INR 2,756.12</p>
+              <p>INR {{ $detail->price }}</p>
             </div>
-           <!-- <div class="color">
-              <p><strong>Color:</strong> Stealth Gray (008) / Black</p>
-              <div class="row">
-                <div class="col-sm-12">
-                  <ul class="color-dd">
-                    <li><a href="#" title="gray"><img src="images/product/color_gray.jpg" width="25" height="15" alt="gray"></a></li>
-                    <li><a href="#" title="red"><img src="images/product/color_red.jpg" width="25" height="15" alt="red"></a></li>
-                    <li><a href="#" title="green"><img src="images/product/color_green.jpg" width="25" height="15" alt="green"></a></li>
-                    <li><a href="#" title="black"><img src="images/product/color_black.jpg" width="25" height="15" alt="black"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="size">
-              <p>Please select a size</p>
-              <div class="row">
-                <div class="col-sm-12">
-                  <ul class="size-dd">
-                    <li><a href="#" title="SM"><span class="color-box">SM</span></a></li>
-                    <li><a href="#" title="MD"><span class="color-box">MD</span></a></li>
-                    <li><a href="#" title="LG"><span class="color-box">LG</span></a></li>
-                    <li><a href="#" title="XL"><span class="color-box">XL</span></a></li>
-                    <li><a href="#" title="XXL"><span class="color-box">XXL</span></a></li>
-                    <li><a href="#" title="3XL"><span class="color-box">3XL</span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>-->
 			<div class="form-element-50-50">        
 				<ul>
 					<li><label>Measurement in</label>
@@ -114,14 +86,13 @@
 						<li><label>Width:</label>
 						<input type="text" name="txtwidth" id="txtwidth" value="" class="istyle8" width="50">
 						<input type="hidden" name="maxarea" id="maxarea" class="istyle8" value="40">
-
 					</li>
 					<li><label>Height:</label>
 
 						<input type="text" name="txtheight" id="txtheight" value="" class="istyle8">
 						<label id="areaerror" class="error" style="display: none;"></label>
 					</li>
-					<li>Price : <span id="cal_price">INR 130 / Sq.Ft</span></li>
+					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
 				</ul>
 			</div>
             <div class="">
