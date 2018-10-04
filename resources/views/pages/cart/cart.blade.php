@@ -46,7 +46,6 @@
 								</div>
 								<div class="col-sm-4">
 									<h5>{{ $row->name }}</h5>
-									<p>{{ $measurement_info->name }}</p>
 									<p>Size (Width x Height): {{ $row->options->width }} {{ $measurement_info->name }} * {{ $row->options->height }} {{ $measurement_info->name }}</p>
 								</div>
 								<div class="col-sm-2">INR {{ round($row->price) }}</div>
