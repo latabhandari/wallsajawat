@@ -70,10 +70,10 @@
 				     	</select>
 					</li>
 						<li><label>Width:</label>
-						<input type="text" name="width" id="width" value="" class="istyle8" width="50">
+						<input type="text" name="width" id="width" value="" class="istyle8" width="50" autocomplete="off" />
 					</li>
 					<li><label>Height:</label>
-						<input type="text" name="height" id="height" value="" class="istyle8">
+						<input type="text" name="height" id="height" value="" class="istyle8" autocomplete="off" />
 					</li>
 					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
 				</ul>
@@ -89,10 +89,7 @@
               </div>
             </div>
 
-            <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off">
-
-            <div class=''><input type="text" name="width" id="w_width" placeholder="width" autocomplete="off"></div>
-            <div class=''><input type="text" name="height" id="w_height" placeholder="height" autocomplete="off"></div>
+            <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off" />
 
             </form>
 
