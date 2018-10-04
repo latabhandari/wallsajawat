@@ -134,21 +134,10 @@
         </div>
         <div class="container selling-img-sec">
             <div class="row">
-                <div class="col-sm-4 text-center selling-imgs">
-                    <img src="{{ asset('build/assets/images/Product1.png') }}" alt=""/>
-                    <div class="img-price">
-                        <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;10,249/roll</span>
-                        <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
-                    </div>
-                </div>
-
                 @foreach ($best_selling_products as $selling_products)
-
                      @php
-                        
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
                      @endphp
-
                     <a href="{{ route('product.detail', $selling_products->slug) }}">
                         <div class="col-sm-4 text-center selling-imgs">
                             <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
@@ -160,7 +149,6 @@
                     </a>
                 @endforeach
                 
-
             </div>
         </div>
     </div>
