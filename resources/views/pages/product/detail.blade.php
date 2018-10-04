@@ -65,7 +65,7 @@
               </div>
             </div>
             <div class="price-text">
-              <p><i class="fa fa-inr">&nbsp;</i> {{ $detail->price }}</p>
+              <p><i class="fa fa-inr">&nbsp;</i>{{ $detail->price }}</p>
             </div>
 
             <form name="product" id="product" action="{{ route('product.cart') }}" method="post">
@@ -86,7 +86,7 @@
 					<li><label>Height:</label>
 						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
 					</li>
-					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i> {{ $detail->price }} / Sq.Feet</span></li>
+					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $detail->price }} / Sq.Feet</span></li>
 				</ul>
 			</div>
 
