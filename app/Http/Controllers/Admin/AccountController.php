@@ -32,13 +32,8 @@ class AccountController extends Controller
 								    'password' => array(
 									                     'value'    => $request->input('password'),
 									                     'operator' => '='
-								    ),
-								    'role_id' => array(
-								                         'value'    => 0,
-								                         'operator' => '>'
 								    )
 								);
-
 
 	     	  if (Auth::attempt($userdata)) {
 
