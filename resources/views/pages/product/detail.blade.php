@@ -438,11 +438,11 @@ $.validator.setDefaults({
 		});  
 
 
-		$.ajaxSetup({
+		/*$.ajaxSetup({
 		    headers: {
 		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 		    }
-		});
+		});*/
 
         function pricecalculate()
          {
@@ -457,6 +457,9 @@ $.validator.setDefaults({
       						           url: WallSajawat.getSitePath('product/option'),
       						           dataType: "json",
       						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
+                             beforeSend: function (request) {
+                                return request.setRequestHeader('X-CSRF-Token', $("meta[name='csrf-token']").attr('content'));
+                            },
       						           success: function (resp) {
 
       						           	  	$("#cal_price").text("INR " + resp.price);
