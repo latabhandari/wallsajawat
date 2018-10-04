@@ -22,9 +22,9 @@
                                     <div class="col-sm-4">
                                         <h4>FOLLOW US ON</h4>
                                         <ul class="nav navbar-nav follow-list">
-                                            <li><i class="fab fa-facebook-f"></i></li>
-                                            <li><i class="fab fa-twitter"></i></li>
-                                            <li><i class="fab fa-instagram"></i></li>
+                                            <li><i class="fa fa-facebook-f"></i></li>
+                                            <li><i class="fa fa-twitter"></i></li>
+                                            <li><i class="fa fa-instagram"></i></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
