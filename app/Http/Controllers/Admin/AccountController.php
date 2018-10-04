@@ -10,8 +10,6 @@ use Validator;
 use App\User as User;
 use Mail;
 
-use DB;
-
 class AccountController extends Controller
 {
     //
@@ -24,20 +22,10 @@ class AccountController extends Controller
 	     {
 	     	  request()->validate(['email' => 'required|email', 'password' => 'required']);
  
- DB::enableQueryLog();
+	     	  $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
+			  //$userdata  = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0)->get();
 
-	     	 # $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
-			  $user      = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0]])->first();
-
-
-dd(DB::getQueryLog());
-
-			  print_r($user); die;
-
-
-	     	  if ($user) {
-
-	     	  	Auth::loginUsingId($user->id);
+	     	  if (Auth::attempt($userdata)) {
 
 	     	    return redirect()->route('admin.dashboard');
 	     	    
