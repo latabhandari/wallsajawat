@@ -61,7 +61,7 @@ switch ($segment3)
                   </li>
 
                   <li class="">
-                     <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
+                     <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('user.index') }}"><span>Users</span></a>
                   </li>
                 
                   <li class="">
