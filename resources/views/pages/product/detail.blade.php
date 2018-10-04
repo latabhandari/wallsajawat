@@ -12,7 +12,7 @@
           <div class="product-imgb">
             <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
               @php
-                print_r($product_images); die;
+                dd($product_images); die;
               @endphp
 
             </div>
