@@ -57,12 +57,13 @@ class UserController extends Controller
     public function update(Request $request, $id)
      {
         //
-         request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required', 'mobile' => 'required']);
+         request()->validate(['name' => 'required', 'email' => 'required', 'role' => 'required', 'mobile' => 'required']);
 
          $params            				=    $request->all();
 
          $fields['name']                    =    $params['name'];
          $fields['email']                   =    $params['email'];
+         if ($params['password'])
          $fields['password']                =    bcrypt($params['password']);
          $fields['mobile']                  =    $params['mobile'];
          $fields['role_id']                 =    $params['role'];
