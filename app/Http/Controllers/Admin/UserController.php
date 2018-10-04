@@ -27,7 +27,8 @@ class UserController extends Controller
 
 	  public function store()
 	   {
-	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password' => 'required', 'role' => 'required', 'status' => 'required']);
+	  	     request()->validate(['name' => 'required', 'email' => ['required', User::exists('email')->where(function ($query) {
+            		$query->where('status', 1); }),], 'password' => 'required', 'role' => 'required', 'status' => 'required']);
 
 	         $params            				=    $request->all();
 
