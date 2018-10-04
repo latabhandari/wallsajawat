@@ -53,7 +53,16 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="category">Status&nbsp;</label>
+                  <label for="roles">Roles&nbsp;</label>
+                  <select class="form-control" name="status">
+                      @foreach ($roles as $role)
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                      @endforeach
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="status">Status&nbsp;</label>
                   <select class="form-control" name="status">
                       <option value="1">Active</option>
                       <option value="0">Inactive</option>

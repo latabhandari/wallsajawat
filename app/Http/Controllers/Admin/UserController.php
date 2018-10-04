@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User as User;
 use App\Profile as Profile;
+use App\Roles as Roles;
 
 
 class UserController extends Controller
@@ -20,7 +21,8 @@ class UserController extends Controller
    
      public function create($userid = null)
 	   {
-			return view('admin.pages.users.create');
+	   	    $roles = Roles::get();
+			return view('admin.pages.users.create', compact('roles'));
 	   }
 
 	  public function store()
@@ -30,11 +32,13 @@ class UserController extends Controller
 	         $params            				=    $request->all();
 
 	         $fields['name']                    =    $params['name'];
-	         $fields['slug']                    =    $params['slug'];
-	         $fields['parent_id']               =    $params['parent'];
+	         $fields['email']                   =    $params['email'];
+	         $fields['password']                =    Hash::make($params['password']);
+	         $fields['email_token']             =    $params['email_token'];
 	         $fields['status']                  =    $params['status'];
-	         $fields['icon']                    =    $icon;
-
+	         $fields['role_id']                 =    $params['role_id'];
+	         $fields['unix_timestamp']          =    time();
+	
 	         User::create($fields);
 
 	         return redirect()->route('users.index')->with('success','User added successfully');
