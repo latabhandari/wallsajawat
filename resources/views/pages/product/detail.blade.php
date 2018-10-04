@@ -25,7 +25,7 @@
                     <img src="{{ asset('catalog/product/'.$image->image) }}" width="281" height="345" alt="product">
                   </a>
                 </li>
-                @foreach
+                @endforeach
               </ul>
             </div>
             <!-- end product-thumbnails -->
