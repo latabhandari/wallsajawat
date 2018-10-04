@@ -25,7 +25,6 @@ class UserController extends Controller
 			return view('admin.pages.users.create', compact('roles'));
 	   }
 
-
      public function edit($id)
 	    {
 	        //
