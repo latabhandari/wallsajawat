@@ -52,6 +52,13 @@ switch ($segment3)
                      <a class="{{ isset($offers_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
                   </li>
 
+                  <li class="">
+                     <a class="{{ isset($roles_active) ? 'activelink' : '' }}" href="{{ route('roles.index') }}"><span>Offers</span></a>
+                  </li>
+
+
+
+
                   <li class="treeview {{ isset($roles_active) ? $roles_active : '' }}">
                      <a href="#">
                      <i class=""></i><span>Role</span>
