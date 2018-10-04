@@ -20,6 +20,10 @@ switch ($segment3)
                              $offers_active     =  'active';
                              break;
 
+          case  'roles':
+                             $roles_active      =  'active';
+                             break;
+
           case 'users':
                              $users_active      =   'active';//'menu-open';
                              break;
@@ -55,35 +59,6 @@ switch ($segment3)
                   <li class="">
                      <a class="{{ isset($roles_active) ? 'activelink' : '' }}" href="{{ route('roles.index') }}"><span>Roles</span></a>
                   </li>
-
-                  <li class="treeview {{ isset($roles_active) ? $roles_active : '' }}">
-                     <a href="#">
-                     <i class=""></i><span>Role</span>
-                       <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                     </a>
-                     <ul class="treeview-menu">
-
-                        @php
-                          $index_roles = MyHelper::getPermission('index_roles');
-                          if ( ! empty($index_roles)) {
-                        @endphp 
-                         <li><a href="{{ route('roles.index') }}">View Roles</a></li>
-                        @php
-                         }
-                        @endphp
-
-                        @php
-                          $create_role = MyHelper::getPermission('create_role');
-                          if ( ! empty($create_role)) {
-                        @endphp 
-                         <li><a class="" href="{{ route('roles.create') }}">Add Role</a></li>
-                        @php
-                         }
-                        @endphp
-
-                     </ul>
-                  </li>
-                  
 
                   <li class="">
                      <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('admin.users') }}"><span>Users</span></a>
