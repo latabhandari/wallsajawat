@@ -24,11 +24,13 @@ class AccountController extends Controller
 	     {
 	     	  request()->validate(['email' => 'required|email', 'password' => 'required']);
  
+ DB::enableQueryLog();
+
 	     	 # $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
 			  $user      = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0]])->first();
 
-DB::enableQueryLog();
-DB::getQueryLog();
+
+dd(DB::getQueryLog());
 
 			  print_r($user); die;
 
