@@ -25,6 +25,15 @@ class UserController extends Controller
 			return view('admin.pages.users.create', compact('roles'));
 	   }
 
+
+     public function edit($id)
+	    {
+	        //
+	        $user  = User::findOrFail($id);
+	        return view('admin.pages.users.edit',compact('user'));
+	    }
+
+
 	  public function store(Request $request)
 	   {
 	  	     request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required', 'status' => 'required']);
@@ -42,6 +51,26 @@ class UserController extends Controller
 
 	         return redirect()->route('admin.users')->with('success','User added successfully');
 	   }
+
+
+    public function update(Request $request, $id)
+     {
+        //
+         request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required']);
+
+         $params            				=    $request->all();
+
+         $fields['name']                    =    $params['name'];
+         $fields['email']                   =    $params['email'];
+         $fields['password']                =    bcrypt($params['password']);
+         $fields['status']                  =    $params['status'];
+         $fields['role_id']                 =    $params['role'];
+         $fields['unix_timestamp']          =    time();
+
+         User::find($id)->update($fields);
+
+         return redirect()->route('admin.users')->with('success','User updated successfully');
+     }
 
 
 	 public function info($userid = null)

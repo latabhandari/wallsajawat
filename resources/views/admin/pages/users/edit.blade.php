@@ -32,36 +32,35 @@
 
             <!-- form start -->
 
-            {!! Form::open(['route' => 'admin.user.store', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
-
+            {!! Form::model($user, ['autocomplete' => 'off', 'role' => 'form', 'method' => 'PATCH', 'route' => ['user.update', $user->id]]) !!}
               <div class="box-body">
 
-              
                 <div class="form-group">
                   <label for="category">Name&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="name" placeholder="Name" type="text" value="{{ old('name') }}">
+                  <input class="form-control" name="name" placeholder="Name" type="text" value="{{ $user->name }}">
                 </div>
 
                 <div class="form-group">
                   <label for="email">Email&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="email" placeholder="Email" type="text" value="{{ old('email') }}">
+                  <input class="form-control" name="email" placeholder="Email" type="text" value="{{ $user->email }}">
                 </div>
 
                 <div class="form-group">
                   <label for="password">Password&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="password" placeholder="Password" type="text" value="{{ old('password') }}">
+                  <input class="form-control" name="password" placeholder="Password" type="password" value="">
                 </div>
 
                 <div class="form-group">
                   <label for="roles">Roles&nbsp;</label>
                   <select class="form-control" name="role">
                       <option value="">-- Select --</option>
-                      <option value="0">User</option>
+                      <option value="0" {{ ($user->role == 0) ? 'selected' : '' }}>User</option>
                       @foreach ($roles as $role)
-                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                        <option value="{{ $role->id }}" {{ ($user->role_id == $role->id) ? 'selected' : '' }}>{{ $role->name }}</option>
                       @endforeach
                   </select>
                 </div>
+                
 
               </div>
               <!-- /.box-body -->
