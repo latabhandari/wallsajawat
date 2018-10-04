@@ -89,6 +89,11 @@
               </div>
             </div>
 
+            <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off">
+
+            <div class=''><input type="text" name="width" id="w_width" placeholder="width" autocomplete="off"></div>
+            <div class=''><input type="text" name="height" id="w_height" placeholder="height" autocomplete="off"></div>
+
             </form>
 
 
@@ -106,17 +111,7 @@
       <div class="row">
         <div class="col-sm-8">
           <h3>Product Description</h3>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</li>
-            <li>Proin massa dolor, vulputate quis mauris ut,</li>
-            <li>Full mesh back delivers strategic ventilation</li>
-            <li>gravida viverra metus. Nulla eget augue blandit </li>
-            <li>blandit metus tincidunt aliquam a at nunc. Etiam molestie</li>
-            <li>Nulla nec ornare nibh. Duis viverra turpis nulla,</li>
-            <li>nec euismod nunc porta posuere</li>
-            <li>Quisque pharetra quam at magna semper facilisis. </li>
-          </ul>
-          <p><a href="#" title="Shop all Men's Tank Tops &amp; Sleeveless T's">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></p>
+          <p>{{ $detail->description }}</p>
         </div>
         <div class="col-sm-4">
           
@@ -367,8 +362,6 @@
     <!-- end recommend-product -->
   </div>
 </div>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script>
