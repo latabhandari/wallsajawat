@@ -25,7 +25,6 @@ class UserController extends Controller
 
 	  public function store()
 	   {
-	   	     die('sfasfd');
 	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password', 'role_id']);
 
 	         $params            				=    $request->all();
