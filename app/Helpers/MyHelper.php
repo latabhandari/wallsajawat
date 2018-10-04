@@ -11,7 +11,7 @@ use App\Measurement as Measurement;
 
 class MyHelper 
    {
-   	      public static function getMeasurement($id);
+   	      public static function getMeasurement($id)
    	       {
 				 return Measurement::where('id', $id)->first();
    	       }
