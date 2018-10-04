@@ -24,36 +24,55 @@
     @include('pages.include.header')
 
     <div class="contanier banner-img">
-        <div class="row">
-            <div class="col-sm-12 main-img">
-            </div>
-        </div>
+      <div class="row">
+        <div class="col-sm-12 main-img"> </div>
+      </div>
     </div>
 
     <div class="wallpaper-sec">
-        <div class="container">
-            <div class="row heading-sec">
-                <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"/> </div>
-                <div class="col-sm-2 text-center center-content"><h4> TOP SELLERS</h4></div>
-                <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"/></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center sub-head"><h6>WALLPAPER</h6></div>
-            </div>
+      <div class="container">
+        <div class="row heading-sec">
+          <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"/> </div>
+          <div class="col-sm-2 text-center center-content">
+            <h4> TOP SELLERS</h4>
+          </div>
+          <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"/></div>
         </div>
-        <div class="img-container">
-            <div class="row">
-                <div class="col-sm-6 sub-img1"><h5>Tree</h5></div>
-                <div class="col-sm-3 sub-img2"><h5>Floral</h5></div>
-                <div class="col-sm-3 sub-img3"><h5>Texture</h5></div>
-            </div>
-            <div class="row img-sec1">
-                <div class="col-sm-3 sub-img4"><h5>Interior</h5></div>
-                <div class="col-sm-6 sub-img5"><h5>Elements</h5></div>
-                <div class="col-sm-3 sub-img6"><h5>All</h5><h4>Top Sellers</h4></div>
-            </div>
+        <div class="row">
+          <div class="col-sm-12 text-center sub-head">
+            <h6>WALLPAPER</h6>
+          </div>
         </div>
+      </div>
+      <div class="img-container">
+        <div class="row">
+          <div class="col-sm-6 sub-img1">
+            <h5>Tree</h5>
+          </div>
+          <div class="col-sm-3 sub-img2">
+            <h5>Floral</h5>
+          </div>
+          <div class="col-sm-3 sub-img3">
+            <h5>Texture</h5>
+          </div>
+        </div>
+        <div class="row img-sec1">
+          <div class="col-sm-3 sub-img4">
+            <h5>Interior</h5>
+          </div>
+          <div class="col-sm-6 sub-img5">
+            <h5>Elements</h5>
+          </div>
+          <div class="col-sm-3 sub-img6">
+            <h5>All</h5>
+            <h4>Top Sellers</h4>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+
     <div class="slider-sec">
         <div class="slider-head"> <h3>TOP SELLERS</h3><h4>POSTERS</h4></div>
         <div class="center-container">
@@ -141,6 +160,7 @@
             </div>
         </div>
     </div>
+
     <div class="artist-sec">
         <div class="container">
             <div class="row artist-sec">
