@@ -5,20 +5,60 @@
 @if(Cart::count())
 
 <form name="updateform" action="{{ route('cart.item.update') }}" method="POST">
-	@csrf	
-                 <table id="cart" class="table table-hover table-condensed">
-    				<thead>
-						<tr>
-							<th style="width:50%">Product</th>
-							<th style="width:10%">Price</th>
-							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center">Subtotal</th>
-							<th style="width:10%"></th>
-						</tr>
-					</thead>
-					<tbody>
-					
+	@csrf
+	     <div class="main-container">
+			<div class="container">
+				<!-- start cart -->
+				<div class="cart">
+					<div class="row">
+						<div class="col-sm-8">
+							<h2>YOUR BAG</h2>
+						</div>
+						<div class="col-sm-4">
+							<a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
+						</div>
+					</div>
+					<!-- start cart-box -->
+					<div class="cart-box">
+						<div class="title">
+							<div class="row">
+								<div class="col-sm-2">Product</div>
+								<div class="col-sm-4">Description</div>
+								<div class="col-sm-2">Item Price</div>
+								<div class="col-sm-2">Quantity</div>
+								<div class="col-sm-2">Total</div>
+							</div>
+						</div>
+
+
 						@foreach(Cart::content() as $row)
+
+						<div class="cart-row">
+							<div class="row">
+								<div class="col-sm-2">
+									<div class="imgb">
+										<img src="images/product/img_product_detail1.jpg" width="281" height="345" alt="product">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<h5>{{ $row->name }}</h5>
+									<p>{{ $row->options->type }}</p>
+									<p>{{ $row->options->width }} * {{ $row->options->height }}</p>
+								</div>
+								<div class="col-sm-2">INR {{ round($row->price) }}</div>
+								<div class="col-sm-2">
+									<select name="update[{{ $row->rowId }}]">
+										  @for($i = 1; $i <= 10; $i++)
+										  {{ $selected = ($i == $row->qty) ? "selected" : "" }}
+										  <option value="{{ $i }}" {{ ($i == $row->qty) ? "selected" : "" }}>{{ $i }}</option>
+										  @endfor
+									</select>
+									<a class="remove" href="{{ route('cart.item.delete', $row->rowId) }}">Remove</a>
+								</div>
+								<div class="col-sm-2">INR {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
+							</div>
+						</div>
+
 						<tr>
 							<td data-th="Product">
 								<div class="row">
@@ -47,31 +87,39 @@
 						</tr>
 
 						@endforeach
-					
-					</tbody>
 
-					<tfoot>
-						<tr class="visible-xs">
-							<td class="text-center"><strong>Total 1.99</strong></td>
-						</tr>
-						<tr>
-							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-							<td colspan="2" class="hidden-xs"><button type="submit" name="updatebtn" class="btn btn-info">Update</button></td>
-							<td class="hidden-xs text-center"><strong>Total {{ Cart::total() }}</strong></td>
-							<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
-						</tr>
-					</tfoot>
-				</table>
-	</form>
+						<div class="subtotal">
+							<div class="row">
+								<div class="col-sm-10 text-right">
+									<span>Subtotal</span>
+								</div>
+								<div class="col-sm-2">
+									INR {{ Cart::total() }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end cart-box -->
+					<div class="row">
+						<div class="col-sm-6">
+							<a href="product-listing.html" title="Continue Shopping" class="back-link"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Continue Shopping</a>
+						</div>
+						<div class="col-sm-6">
+							<a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
+						</div>
+					</div>
+				</div>
+				<!-- end cart -->
+			</div>
+		</div>
+   </form>
 
 	@else
 
-     <p>No product in cart</p>
+    <p>No product in cart</p>
 
-	 <a style="width:15%" href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
-
-
+	<a style="width:15%" href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
+	
 	@endif
-
 
 @endsection
