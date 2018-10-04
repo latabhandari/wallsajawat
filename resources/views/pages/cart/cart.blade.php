@@ -68,7 +68,7 @@
 									</select>
 									<a class="remove" href="{{ route('cart.item.delete', $row->rowId) }}">Remove</a>
 								</div>
-								<div class="col-sm-2">INR {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
+								<div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
 							</div>
 						</div>
 
