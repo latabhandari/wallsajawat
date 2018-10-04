@@ -18,7 +18,7 @@ class MyHelper
 			 {
 			 	  $userid    =  Auth::user()->id;
 			 	  //$userid    =  12;
-			  	  $role_id   =  DB::table('users')->select('is_admin')->where('id', $userid)->first()->is_admin;
+			  	  $role_id   =  DB::table('users')->select('role_id')->where('id', $userid)->first()->role_id;
 
 			  	  if ($role_id == 1)
 			  	    return TRUE;
