@@ -7,9 +7,14 @@ use Session;
 
 use Auth;
 use App\ProductImages as ProductImages;
+use App\Measurement as Measurement;
 
 class MyHelper 
    {
+   	      public static function getMeasurement($id);
+   	       {
+				 return Measurement::where('id', $id)->first();
+   	       }
    	      public static function getProductImage($id)
    	       {
    	       		return ProductImages::where('id', $id)->first();

@@ -33,9 +33,10 @@
 
 						@foreach(Cart::content() as $row)
 						@php
-						  $prod_image_info = App\Helpers\MyHelper::getProductImage($row->id);
+						  $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
+						  $measurement_info  = App\Helpers\MyHelper::getMeasurement($row->options->type);
 						@endphp
-						
+
 						<div class="cart-row">
 							<div class="row">
 								<div class="col-sm-2">
@@ -45,7 +46,7 @@
 								</div>
 								<div class="col-sm-4">
 									<h5>{{ $row->name }}</h5>
-									<p>{{ $row->options->type }}</p>
+									<p>{{ $measurement_info->name }}</p>
 									<p>{{ $row->options->width }} * {{ $row->options->height }}</p>
 								</div>
 								<div class="col-sm-2">INR {{ round($row->price) }}</div>
