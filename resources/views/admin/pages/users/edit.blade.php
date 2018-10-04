@@ -51,6 +51,12 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="mobile">Mobile&nbsp;<span class="req">*</span></label>
+                  <input class="form-control" name="mobile" placeholder="Mobile" type="text" value="{{ $user->mobile }}">
+                </div>
+
+
+                <div class="form-group">
                   <label for="roles">Roles&nbsp;</label>
                   <select class="form-control" name="role">
                       <option value="">-- Select --</option>

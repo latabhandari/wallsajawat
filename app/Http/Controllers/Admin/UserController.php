@@ -37,14 +37,14 @@ class UserController extends Controller
 
 	  public function store(Request $request)
 	   {
-	  	     request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required', 'status' => 'required']);
+	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password' => 'required', 'role' => 'required', 'status' => 'required', 'mobile' => 'required']);
 
 	         $params            				=    $request->all();
 
 	         $fields['name']                    =    $params['name'];
 	         $fields['email']                   =    $params['email'];
 	         $fields['password']                =    bcrypt($params['password']);
-	         $fields['status']                  =    $params['status'];
+	         $fields['mobile']                  =    $params['mobile'];
 	         $fields['role_id']                 =    $params['role'];
 	         $fields['unix_timestamp']          =    time();
 	
@@ -57,13 +57,14 @@ class UserController extends Controller
     public function update(Request $request, $id)
      {
         //
-         request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required']);
+         request()->validate(['name' => 'required', 'email' => ['required'], 'password' => 'required', 'role' => 'required', 'mobile' => 'required']);
 
          $params            				=    $request->all();
 
          $fields['name']                    =    $params['name'];
          $fields['email']                   =    $params['email'];
          $fields['password']                =    bcrypt($params['password']);
+         $fields['mobile']                  =    $params['mobile'];
          $fields['role_id']                 =    $params['role'];
 
          User::find($id)->update($fields);
