@@ -11,6 +11,9 @@
           <!-- start product-imgb -->
           <div class="product-imgb">
             <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
+              @php
+                print_r($product_images); die;
+              @endphp
               <a href="{{ asset('catalog/product/'.$image[0]->image) }}">
                 <img src="{{ asset('catalog/product/'.$image[0]->image) }}" alt="product" width="612" height="650" class="product-small">
               </a>
