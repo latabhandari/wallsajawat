@@ -56,7 +56,7 @@
                   <label for="roles">Roles&nbsp;</label>
                   <select class="form-control" name="role">
                       <option value="">-- Select --</option>
-                      <option value="0">User</option>
+                      <option value="1">Admin</option>
                       @foreach ($roles as $role)
                         <option value="{{ $role->id }}">{{ $role->name }}</option>
                       @endforeach
