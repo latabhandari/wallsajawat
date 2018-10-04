@@ -58,7 +58,7 @@
 									<h5>{{ $row->name }}</h5>
 									<p class="minfo">Size (Width x Height): {{ $row->options->width }} {{ $measurement_info->name }} * {{ $row->options->height }} {{ $measurement_info->name }}</p>
 								</div>
-								<div class="col-sm-2">INR {{ round($row->price) }}</div>
+								<div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ round($row->price) }}</div>
 								<div class="col-sm-2">
 									<select name="update[{{ $row->rowId }}]">
 										  @for($i = 1; $i <= 10; $i++)
@@ -81,7 +81,7 @@
 									<span>Subtotal</span>
 								</div>
 								<div class="col-sm-2">
-									INR {{ Cart::total() }}
+									<i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}
 								</div>
 							</div>
 						</div>
