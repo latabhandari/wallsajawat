@@ -78,7 +78,7 @@
 					<!-- end cart-box -->
 					<div class="row">
 						<div class="col-sm-6">
-							<a href="product-listing.html" title="Continue Shopping" class="back-link"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Continue Shopping</a>
+							<a href="{{ route('home.index') }}" title="Continue Shopping" class="back-link"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Continue Shopping</a>
 						</div>
 
 						<div class="col-sm-6">
