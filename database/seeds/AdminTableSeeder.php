@@ -16,7 +16,7 @@ class AdminTableSeeder extends Seeder
                                     'name' => 'admin',
                                     'email' => 'admin@gmail.com',
                                     'password' => bcrypt('admin'),
-                                    'is_admin' => 1,
+                                    'role_id' => 1,
                                     'unix_timestamp' => time()
                               ]);
     }
