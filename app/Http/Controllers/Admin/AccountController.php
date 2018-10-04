@@ -22,9 +22,12 @@ class AccountController extends Controller
 	     {
 	     	  request()->validate(['email' => 'required|email', 'password' => 'required']);
  
-	     	  $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
+	     	 # $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
+			  $user      = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0)->first();
 
-	     	  if (Auth::attempt($userdata)) {
+	     	  if ($user) {
+
+	     	  	Auth::loginUsingId($user->id);
 
 	     	    return redirect()->route('admin.dashboard');
 	     	    
