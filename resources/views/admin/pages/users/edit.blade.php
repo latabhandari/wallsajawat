@@ -32,7 +32,7 @@
 
             <!-- form start -->
 
-            {!! Form::model($user, ['autocomplete' => 'off', 'role' => 'form', 'method' => 'PATCH', 'route' => ['admin.user.update', $user->id]]) !!}
+            {!! Form::model($user, ['autocomplete' => 'off', 'role' => 'form', 'method' => 'PATCH', 'route' => ['user.update', $user->id]]) !!}
               <div class="box-body">
 
                 <div class="form-group">

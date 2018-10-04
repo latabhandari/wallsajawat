@@ -31,7 +31,7 @@
               @endphp
 
 
-              <p style="text-align:right"><a class="" href="{{ route('admin.user.create') }}"><button type="button" class="btn btn-primary">Add User</button></a></p>
+              <p style="text-align:right"><a class="" href="{{ route('user.create') }}"><button type="button" class="btn btn-primary">Add User</button></a></p>
 
               @php
                         }
@@ -68,7 +68,7 @@
                                 $edit_user = MyHelper::getPermission('edit_user');
                                 if ( ! empty($edit_user)) {
                             @endphp
-                             <a class="btn btn-primary" href="{{ route('admin.user.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
+                             <a class="btn btn-primary" href="{{ route('user.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
 
                              @php
                                 }
