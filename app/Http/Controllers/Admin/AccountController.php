@@ -22,9 +22,9 @@ class AccountController extends Controller
 	     {
 	     	  request()->validate(['email' => 'required|email', 'password' => 'required']);
  
-	     	  //$userdata  = array(['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['status', '=', 1]);
+	     	  $userdata  = array('email' => $request->input('email')], 'password' => $request->input('password'));
 
-	     	  $userdata  = array(
+	     	  /*$userdata  = array(
 								    'email' => array(
 												        'value'    => $request->input('email'),
 												        'operator' => '='
@@ -34,6 +34,7 @@ class AccountController extends Controller
 									                     'operator' => '='
 								    )
 								);
+			  */
 
 	     	  if (Auth::attempt($userdata)) {
 
