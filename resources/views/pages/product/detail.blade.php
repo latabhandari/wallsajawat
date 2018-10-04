@@ -409,32 +409,6 @@
 </div>
 
 
-<div class="container" style="float: left;line-height: 26px;margin:10px 0">
-	<form name="product" id="product" action="{{ route('product.cart') }}" method="post">
-		@csrf
-     <div>product name : {{ $detail->name }}</div>
-     <div>sku : {{ $detail->sku }}</div>
-     <div>price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></div>
-     <div>product name : {{ $detail->name }}</div>
-     <div>short_desc : {!! $detail->short_desc !!}</div>
-     <div class=''>
-     	<select id="material_type" name="material_type">
-     		@foreach ($measurements as $data)
-                <option data-attr="{{ strtolower($data->name) }}" data-value="{{ $data->square_feet_value }}" value="{{ $data->id }}">{{ $data->name }}</option>
-            @endforeach
-     	</select>
-
-     </div>
-     <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off">
-
-     <div class=''><input type="text" name="width" id="w_width" placeholder="width" autocomplete="off"></div>
-     <div class=''><input type="text" name="height" id="w_height" placeholder="height" autocomplete="off"></div>
-
-     <input type="submit" name="submit" value="Add to cart">
-
-    </form>
-
-</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script>
