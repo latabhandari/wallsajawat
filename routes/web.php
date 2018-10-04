@@ -66,21 +66,21 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
 			Route::get('/dashboard', 'DashboardController@dashboard')->name('admin.dashboard');
 
-            Route::get('/users', 'UserController@index')->name('admin.users');
+            //Route::get('/users', 'UserController@index')->name('admin.users');
             Route::get('/settings', 'SettingsController@index')->name('admin.settings');
             Route::post('/settings', 'SettingsController@store')->name('admin.saved.settings');
 
             Route::get('/logout', 'DashboardController@logout')->name('admin.logout');
             //Route::get('/ads', 'AdsController@index')->name('admin.ads');
 
-            Route::get('/user/create', 'UserController@create')->name('admin.user.create');
-            Route::post('/user/store', 'UserController@store')->name('admin.user.store');
+            //Route::get('/user/create', 'UserController@create')->name('admin.user.create');
+            //Route::post('/user/store', 'UserController@store')->name('admin.user.store');
 
-            Route::get('/user/edit/{id}', 'UserController@edit')->name('admin.user.edit');
+            //Route::get('/user/edit/{id}', 'UserController@edit')->name('admin.user.edit');
 
-            Route::post('/user/update/{id}', 'UserController@update')->name('admin.user.update');
+            //Route::post('/user/update/{id}', 'UserController@update')->name('admin.user.update');
 
-            Route::get('/user/info/{userid}', 'UserController@info')->name('admin.user.info');
+            //Route::get('/user/info/{userid}', 'UserController@info')->name('admin.user.info');
 
             Route::get('/subscribeUsers', 'DashboardController@subscribes')->name('admin.subscribes');
             Route::delete('/destroy/{id}', 'DashboardController@destroy')->name('admin.subscribes.destroy');
@@ -98,6 +98,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::resource('offers', 'OffersController');
 
             Route::resource('roles', 'RolesController');
+
+            Route::resource('user', 'UserController');
+
             
             //Route::resource('city', 'CityController');
 
