@@ -150,36 +150,7 @@
         </div>
     </div>
 
-    <div class="artist-sec">
-        <div class="container">
-            <div class="row artist-sec">
-                <div class="col-sm-4 artist-img">
-                    <div class="artist-img1">
-                        <h5>ARTIST CORNER</h5>
-                        <h6>Show the world your artworks.</h6>
-                        <h6>Build collections and increase sales!</h6>
-                        <span><a href="#">Read More</a></span>
-                    </div>
-                </div>
-                <div class="col-sm-4 artist-img">
-                    <div class="artist-img2">
-                        <h5>VAASTU FRIENDLY SPACES</h5>
-                        <h6>Make your home and office spaces</h6>
-                        <h6>more blissful and positive.</h6>
-                        <span><a href="#">Read More</a></span>
-                    </div>
-                </div>
-                <div class="col-sm-4 artist-img">
-                    <div class="artist-img3">
-                        <h5>MEMORY WALL</h5>
-                        <h6>Make a wall for all the special moments</h6>
-                        <h6>you have had with your loved ones.</h6>
-                        <span><a href="#">Read More</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="tips-sec">
         <div class="container">
             <div class="row heading-sec tips-head">
