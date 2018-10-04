@@ -10,6 +10,8 @@ use Validator;
 use App\User as User;
 use Mail;
 
+use DB;
+
 class AccountController extends Controller
 {
     //
