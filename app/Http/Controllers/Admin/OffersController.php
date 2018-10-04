@@ -9,13 +9,6 @@ use Route;
 
 class OffersController extends Controller
 {
-    public function __construct()
- {
-   $currentAction = \Route::currentRouteAction();
-list($controller, $method) = explode('@', $currentAction);
-echo $method;
-
- }
 
     /**
      * Display a listing of the resource.

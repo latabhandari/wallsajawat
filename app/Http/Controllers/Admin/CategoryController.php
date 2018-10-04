@@ -26,9 +26,6 @@ class CategoryController extends Controller
                                $permission = MyHelper::getPermission($method.'_category');
                                break;
             }
-
-            //if (empty($permission))
-            //return redirect()->route('dashboard.index')->with('failure','Not Authorised');
         }   
 
     /**
