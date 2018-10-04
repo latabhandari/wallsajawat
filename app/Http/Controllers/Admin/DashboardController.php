@@ -30,8 +30,8 @@ class DashboardController extends Controller
             $total_products_month    =  Product::where('created_timestamp', '>=', $start_time)->where('created_timestamp', '<=', $end_time)->count();
             $total_products          =  Product::count();
 
-            $total_users             =  User::where('is_admin', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
-            $new_users               =  User::where('is_admin', 0)->count();
+            $total_users             =  User::where('role_id', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
+            $new_users               =  User::where('role_id', 0)->count();
 
             $total_category          =  Category::where('parent_id', '=', 0)->count();
             $total_sub_category      =  Category::where('parent_id', '!=', 0)->count();            
