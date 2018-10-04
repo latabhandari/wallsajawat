@@ -142,8 +142,8 @@
                         <div class="col-sm-4 text-center selling-imgs">
                             <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
                             <div class="img-price">
-                                <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
-                                <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
+                                <span class="lefttxt"><i class="fa fa-rupee-sign"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
+                                <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fas fa-star"></i></span>
                             </div>
                         </div>
                     </a>
