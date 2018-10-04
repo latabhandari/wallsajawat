@@ -36,7 +36,7 @@ class ProductController extends Controller
           $per_square_feet =  $width_height / $square_feet_value;
           $uprice          =  $price * $per_square_feet;
 
-	        echo json_encode(['status' => true, 'price' => round($uprice), 'type' => $mres->name]);
+	        echo json_encode(['status' => true, 'price' => round($uprice), 'type' => ucfirst($mres->name)]);
       }
 
     public function cart(Request $request)

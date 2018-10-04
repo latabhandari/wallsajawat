@@ -75,7 +75,7 @@
 					<li><label>Height:</label>
 						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
 					</li>
-					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
+					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Feet</span></li>
 				</ul>
 			</div>
 
@@ -459,7 +459,7 @@ $.validator.setDefaults({
       						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
       						           success: function (resp) {
 
-      						           	  	$("#cal_price").text("INR " + resp.price);
+      						           	  	$("#cal_price").text("INR " + resp.price + ' / Sq.' + resp.type);
       						           }
 
       						       });
