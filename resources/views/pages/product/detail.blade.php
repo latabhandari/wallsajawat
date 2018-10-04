@@ -11,38 +11,20 @@
           <!-- start product-imgb -->
           <div class="product-imgb">
             <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
-              <a href="images/product/img_product_detail1_lg.jpg">
-                <img src="images/product/img_product_detail1.jpg" alt="product" width="612" height="650" class="product-small">
+              <a href="{{ asset('catalog/product/'.$image[0]->image) }}">
+                <img src="{{ asset('catalog/product/'.$image[0]->image) }}" alt="product" width="612" height="650" class="product-small">
               </a>
             </div>
             <!-- start product-thumbnails -->
             <div class="product-thumbnails">
               <ul class="thumbnails">
+                @foreach ($product_images as $image)
                 <li>
-                  <a href="images/product/img_product_detail1_lg.jpg" data-standard="images/product/img_product_detail1.jpg">
-                    <img src="images/product/product-thumb1.jpg" width="281" height="345" alt="product">
+                  <a href="{{ asset('catalog/product/'.$image->image) }}" data-standard="{{ asset('catalog/product/'.$image->image) }}">
+                    <img src="{{ asset('catalog/product/'.$image->image) }}" width="281" height="345" alt="product">
                   </a>
                 </li>
-                <li>
-                  <a href="images/product/img_product_detail2_lg.jpg" data-standard="images/product/img_product_detail2.jpg">
-                    <img src="images/product/product-thumb2.jpg" width="281" height="345" alt="product">
-                  </a>
-                </li>
-                <li>
-                  <a href="images/product/img_product_detail3_lg.jpg" data-standard="images/product/img_product_detail3.jpg">
-                    <img src="images/product/product-thumb3.jpg" width="281" height="345" alt="product">
-                  </a>
-                </li>
-				<li>
-                  <a href="images/product/img_product_detail3_lg.jpg" data-standard="images/product/img_product_detail3.jpg">
-                    <img src="images/product/product-thumb3.jpg" width="281" height="345" alt="product">
-                  </a>
-                </li>
-				<li>
-                  <a href="images/product/img_product_detail3_lg.jpg" data-standard="images/product/img_product_detail3.jpg">
-                    <img src="images/product/product-thumb3.jpg" width="281" height="345" alt="product">
-                  </a>
-                </li>
+                @foreach
               </ul>
             </div>
             <!-- end product-thumbnails -->

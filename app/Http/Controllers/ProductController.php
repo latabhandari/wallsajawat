@@ -7,15 +7,17 @@ use App\Http\Controllers\Controller;
 use App\Product as Product;
 use App\Measurement as Measurement;
 use Cart;
+use App\ProductImages as ProductImages;
 
 class ProductController extends Controller
 {
     //
     public function detail($slug)
       {
-      	  $detail        =  Product::where('slug', $slug)->firstOrFail();
-      	  $measurements  =  Measurement::select('id', 'name', 'square_feet_value')->where('status', 1)->get();
-      	  return view('pages.product.detail', compact('detail', 'measurements'));
+      	  $detail         =  Product::where('slug', $slug)->firstOrFail();
+          $product_images =  Product::where('product_id', $detail->id)->get();
+      	  $measurements   =  Measurement::select('id', 'name', 'square_feet_value')->where('status', 1)->get();
+      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images'));
       }
 
     public function option(Request $request)
