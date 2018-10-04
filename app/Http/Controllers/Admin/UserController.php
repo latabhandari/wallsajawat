@@ -40,7 +40,7 @@ class UserController extends Controller
 	
 	         User::create($fields);
 
-	         return redirect()->route('users.index')->with('success','User added successfully');
+	         return redirect()->route('admin.users')->with('success','User added successfully');
 	   }
 
 

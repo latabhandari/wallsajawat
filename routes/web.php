@@ -73,13 +73,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
             Route::get('/logout', 'DashboardController@logout')->name('admin.logout');
             //Route::get('/ads', 'AdsController@index')->name('admin.ads');
 
-            Route::get('/user/ads/{userid}', 'UserController@ads')->name('admin.user.ads');
             Route::get('/user/create', 'UserController@create')->name('admin.user.create');
             Route::post('/user/store', 'UserController@store')->name('admin.user.store');
-
-            Route::delete('/user/ad/destroy/{id}', 'UserController@adsdestroy')->name('admin.user.ads.destroy');
-
-            Route::get('/user/favoriteads/{userid}', 'UserController@favoriteads')->name('admin.user.favads');
 
             Route::get('/user/info/{userid}', 'UserController@info')->name('admin.user.info');
 
