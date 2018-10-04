@@ -145,8 +145,8 @@
                 @foreach ($best_selling_products as $selling_products)
 
                      @php
-                         use App\Helpers\MyHelper as MyHelper;
-                        $prod_image_info = MyHelper::getProductImage($selling_products->id);
+                        
+                        $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
                      @endphp
 
                     <a href="{{ route('product.detail', $selling_products->slug) }}">
