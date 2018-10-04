@@ -30,7 +30,8 @@ class UserController extends Controller
 	    {
 	        //
 	        $user  = User::findOrFail($id);
-	        return view('admin.pages.users.edit',compact('user'));
+	        $roles = Roles::get();
+	        return view('admin.pages.users.edit',compact('user', 'roles'));
 	    }
 
 
