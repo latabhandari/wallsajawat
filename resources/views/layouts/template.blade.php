@@ -71,8 +71,6 @@
       </div>
     </div>
 
-
-
     <div class="slider-sec">
         <div class="slider-head"> <h3>TOP SELLERS</h3><h4>POSTERS</h4></div>
         <div class="center-container">
@@ -145,9 +143,14 @@
                 </div>
 
                 @foreach ($best_selling_products as $selling_products)
+
+                     @php
+                        $prod_image_info = MyHelper::getProductImage($selling_products->id);
+                     @endphp
+
                     <a href="{{ route('product.detail', $selling_products->slug) }}">
                         <div class="col-sm-4 text-center selling-imgs">
-                            <img src="{{ asset('build/assets/images/Product1.png') }}" alt=""/>
+                            <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
                             <div class="img-price">
                                 <span class="lefttxt"><i class="fas fa-rupee-sign"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
                                 <span class="righttxt"><i class="fas fa-share-alt"></i><i class="fas fa-star"></i></span>
@@ -229,7 +232,7 @@
                             <img src="{{ asset('build/assets/images/hands.png') }}" alt="" />
                         </div>
                 </div>
-            </div>
+        </div>
     </div>
 
     @include('pages.include.footer')

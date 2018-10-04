@@ -6,9 +6,14 @@ use App\Categories as Categories;
 use Session;
 
 use Auth;
+use App\ProductImages as ProductImages;
 
 class MyHelper 
    {
+   	      public static function getProductImage($id)
+   	       {
+   	       		return ProductImages::where('id', $id)->first();
+   	       }
 		  public static function getSessionValue($key = null)
 		   {
 		  	  	return Session::get($key);
