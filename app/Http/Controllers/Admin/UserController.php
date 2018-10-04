@@ -50,7 +50,7 @@ class UserController extends Controller
 	
 	         User::create($fields);
 
-	         return redirect()->route('admin.users')->with('success','User added successfully');
+	         return redirect()->route('user.index')->with('success','User added successfully');
 	   }
 
 
@@ -68,7 +68,7 @@ class UserController extends Controller
 
          User::find($id)->update($fields);
 
-         return redirect()->route('admin.users')->with('success','User updated successfully');
+         return redirect()->route('user.index')->with('success','User updated successfully');
      }
 
 
