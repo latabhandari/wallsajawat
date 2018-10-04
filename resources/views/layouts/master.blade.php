@@ -9,6 +9,7 @@
 <meta content="width=device-width,initial-scale=1.0" name="viewport">
 
 
+<link href="{{ asset('build/assets/css/easyzoom.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
 
 <link href="{{ asset('build/assets/css/jquery.bxslider.min.css') }}" rel="stylesheet" type="text/css">
@@ -34,6 +35,8 @@
         
 	    <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 	    <script src="{{ asset('build/assets/js/jquery.bxslider.min.js') }}" type="text/javascript"></script>
+	    <script type="text/javascript" src="{{ asset('build/assets/js/easyzoom.js') }}"></script>
+	    
 	    <script>
 	      $(document).ready(function() {
 	             $('.bxslider').bxSlider({
