@@ -24,7 +24,7 @@ class AccountController extends Controller
  
 	     	  $userdata  = array('email' => $request->input('email'), 'password' => $request->input('password'));
 
-	     	  print_r($userdata);
+	     	  print_r($userdata); die;
 
 	     	  /*$userdata  = array(
 								    'email' => array(
