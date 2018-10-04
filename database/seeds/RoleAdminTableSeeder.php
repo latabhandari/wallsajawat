@@ -12,5 +12,12 @@ class RoleAdminTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('roles')->insert([
+                                    'name' => 'Admin',
+                                    'permission' => '{"permission":"all"}',
+                                    'created_at_timestamp' => time()
+                              ]);
+        }
+
     }
 }

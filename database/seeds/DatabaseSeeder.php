@@ -13,10 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(UsersTableSeeder::class);
 	$this->call([
+                    RoleAdminTableSeeder::class,
             		AdminTableSeeder::class,
                     CountriesTableSeeder::class,
                     StatesTableSeeder::class,
                     CitiesTableSeeder::class,
+                    
     	       ]);
     }
 }
