@@ -1,3 +1,33 @@
+<?php
+$segment = Request::segment(2);
+
+switch ($segment)
+   {
+          case 'our-range':
+                                          $our_range_active              =  'active';
+                                          break;
+
+          case 'about':
+                                          $about_active                  =   'active';
+                                          break;
+          case  'wallpaper-installer':
+                                          $wallpaper_installer_active    =  'active';
+                                          break;
+
+          case  'how-to-measure':
+                                          $how_measure_active            =  'active';
+                                          break;
+
+          case  'offers':
+                                          $offers_active                 =  'active';
+                                          break;
+
+          case 'contact':
+                                          $contact_active                 =   'active';
+                                          break;
+   }
+?>
+
             <div class="header">
               <div class="container">
                 <div class="row btn-bar">
@@ -8,12 +38,12 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         <div class="collapse navbar-collapse" id="mynavbar">
                           <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ route('range') }}">OUR RANGE</a></li>
-                            <li><a href="{{ route('about') }}">ABOUT US</a></li>
-                            <li><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>
-                            <li><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</a></li>
-                            <li><a href="{{ route('offers') }}">OFFERS</a></li>
-                            <li><a href="{{ route('contact') }}">CONTACT US</a></li>
+                            <li class="{{ isset($our_range_active) ? 'active' : '' }}"><a href="{{ route('range') }}">OUR RANGE</a></li>
+                            <li class="{{ isset($about_active) ? 'active' : '' }}"><a href="{{ route('about') }}">ABOUT US</a></li>
+                            <li class="{{ isset($wallpaper_installer_active) ? 'active' : '' }}"><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>
+                            <li class="{{ isset($how_measure_active) ? 'active' : '' }}"><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</a></li>
+                            <li class="{{ isset($offers_active) ? 'active' : '' }}"><a href="{{ route('offers') }}">OFFERS</a></li>
+                            <li class="{{ isset($contact_active) ? 'active' : '' }}"><a href="{{ route('contact') }}">CONTACT US</a></li>
 
                           </ul>
                         </div>
