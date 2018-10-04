@@ -88,13 +88,10 @@
 				     	</select>
 					</li>
 						<li><label>Width:</label>
-						<input type="text" name="txtwidth" id="txtwidth" value="" class="istyle8" width="50">
-						<input type="hidden" name="maxarea" id="maxarea" class="istyle8" value="40">
+						<input type="text" name="txtwidth" id="width" value="" class="istyle8" width="50">
 					</li>
 					<li><label>Height:</label>
-
-						<input type="text" name="txtheight" id="txtheight" value="" class="istyle8">
-						<label id="areaerror" class="error" style="display: none;"></label>
+						<input type="text" name="txtheight" id="height" value="" class="istyle8">
 					</li>
 					<li>Price : <span id="cal_price">INR {{ $detail->price }} / Sq.Ft</span></li>
 				</ul>
@@ -388,8 +385,6 @@
     <!-- end recommend-product -->
   </div>
 </div>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script>
