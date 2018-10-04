@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
                 $table->enum('provider', ['0', '1', '2'])->comment('0 - Site, 1 - Google, 2 - Facebook')->default('0');
                 $table->string('provider_id')->comment('Provider Id')->nullable();
 
-                $table->unsignedTinyInteger('is_admin')->comment('0 - User, 1 - Admin')->default(0);
+                $table->unsignedTinyInteger('role_id')->comment('0 - User, 1 - Admin, 2 - ..., ... etc')->default(0);
                 $table->unsignedInteger('unix_timestamp')->comment('Unix Timestamp');
                 $table->unsignedInteger('last_login')->comment('Last Login Timestamp')->default(0);
                 $table->string('ip_address')->comment('Ip Address')->nullable();
