@@ -369,6 +369,9 @@
   </div>
 </div>
 
+
+@endsection
+
 @section('bottom_yield')
 
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
@@ -376,108 +379,108 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script>
   $.validator.setDefaults({
-  		submitHandler: function()  {
-  			alert("submitted!");
-  		}
+      submitHandler: function()  {
+        alert("submitted!");
+      }
   });
 
-	$(document).ready(function() {
-		// validate the comment form when it is submitted
-	
-		// validate signup form on keyup and submit
-		$("#product").validate({
-			rules: {
-				width: {
-							required: true, 
-							number: true,
-				},
-				height: {
-							required: true, 
-							number: true,
-				}
-			},
-			messages: {
-							width: {
-								required: "Please enter width",
-								number: "accept only number and float values"
-							},
-							height: {
-								required: "Please enter height",
-								number: "accept only number and float values"
-							}
-					  },
-			submitHandler: function()  {
-					return true;
-			}
-		});
+  $(document).ready(function() {
+    // validate the comment form when it is submitted
+  
+    // validate signup form on keyup and submit
+    $("#product").validate({
+      rules: {
+        width: {
+              required: true, 
+              number: true,
+        },
+        height: {
+              required: true, 
+              number: true,
+        }
+      },
+      messages: {
+              width: {
+                required: "Please enter width",
+                number: "accept only number and float values"
+              },
+              height: {
+                required: "Please enter height",
+                number: "accept only number and float values"
+              }
+            },
+      submitHandler: function()  {
+          return true;
+      }
+    });
 
 
-	});
+  });
 
 </script>
 
 <script>
-	var price = {{ $detail->price }};
-	$("#material_type").change(function() 
-	   {  
-	   	    var size = $('option:selected', this).attr('data-value');
-	   	    var measurement = $('option:selected', this).attr('data-attr');
-	   	    $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement);
-	   		/*var size_format = $(this).val();
-	   	
-			if(size_format == "feet")
-			  { 
-          	     $("#cal_price").text("INR " + price + "/ Sq.Ft");
-			  }
-		
-			if(size_format == "inch")
-			  { 
-          	     $("#cal_price").text("INR "+(price/(12*12*12)).toFixed(5)+"/ Sq.inch");
-			  }
+  var price = {{ $detail->price }};
+  $("#material_type").change(function() 
+     {  
+          var size = $('option:selected', this).attr('data-value');
+          var measurement = $('option:selected', this).attr('data-attr');
+          $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement);
+        /*var size_format = $(this).val();
+      
+      if(size_format == "feet")
+        { 
+                 $("#cal_price").text("INR " + price + "/ Sq.Ft");
+        }
+    
+      if(size_format == "inch")
+        { 
+                 $("#cal_price").text("INR "+(price/(12*12*12)).toFixed(5)+"/ Sq.inch");
+        }
 
-			  if(size_format == "centimeter")
-			    { 
+        if(size_format == "centimeter")
+          { 
                    $("#cal_price").text("INR "+(price/(30*30*30)).toFixed(7)+"/ Sq.cm");
-			    }
-			    */
+          }
+          */
 
-			//$("#cal_price").text()");
+      //$("#cal_price").text()");
       });
 
-	    $("#w_width").bind("keyup keypress blur change",function(){
-			pricecalculate();
-		});
+      $("#w_width").bind("keyup keypress blur change",function(){
+      pricecalculate();
+    });
 
-		$("#w_height").bind("keyup keypress blur change",function(){
-			pricecalculate();
-		});  
+    $("#w_height").bind("keyup keypress blur change",function(){
+      pricecalculate();
+    });  
 
 
-		$.ajaxSetup({
-		    headers: {
-		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-		    }
-		});
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 
         function pricecalculate()
          {
-         	var w_width  =  $('#w_width').val();
-         	var w_height =  $('#w_height').val();
-         	var mid      =  $("#material_type option:selected").val();
+          var w_width  =  $('#w_width').val();
+          var w_height =  $('#w_height').val();
+          var mid      =  $("#material_type option:selected").val();
 
-         	if (w_width && w_height)
-         		 {
-      						$.ajax({
-      						           type: "POST",
-      						           url: WallSajawat.getSitePath('product/option'),
-      						           dataType: "json",
-      						           data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
-      						           success: function (resp) {
+          if (w_width && w_height)
+             {
+                  $.ajax({
+                             type: "POST",
+                             url: WallSajawat.getSitePath('product/option'),
+                             dataType: "json",
+                             data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
+                             success: function (resp) {
 
-      						           	  	$("#cal_price").text("INR " + resp.price + ' / Sq.' + resp.type);
-      						           }
+                                  $("#cal_price").text("INR " + resp.price + ' / Sq.' + resp.type);
+                             }
 
-      						       });
+                         });
 
               }
          }
