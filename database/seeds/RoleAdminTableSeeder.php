@@ -17,7 +17,5 @@ class RoleAdminTableSeeder extends Seeder
                                     'permission' => '{"permission":"all"}',
                                     'created_at_timestamp' => time()
                               ]);
-        }
-
     }
 }
