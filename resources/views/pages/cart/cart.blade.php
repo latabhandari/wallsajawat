@@ -32,12 +32,15 @@
 
 
 						@foreach(Cart::content() as $row)
-
+						@php
+						  $prod_image_info = App\Helpers\MyHelper::getProductImage($row->id);
+						@endphp
+						
 						<div class="cart-row">
 							<div class="row">
 								<div class="col-sm-2">
 									<div class="imgb">
-										<img src="images/product/img_product_detail1.jpg" width="281" height="345" alt="product">
+										<img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="product">
 									</div>
 								</div>
 								<div class="col-sm-4">
