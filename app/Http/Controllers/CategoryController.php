@@ -14,11 +14,11 @@ class CategoryController extends Controller
 
           echo "demo";
 
-Categories::where('slug', $slug)->first()
+Categories::where('slug', $slug)->first();
       	  dd(Categories::where('slug', $slug)->first()); 
 
       	  DB::enableQueryLog();
-      	  
+
 
       	  die;
 
