@@ -13,8 +13,11 @@ class CategoryController extends Controller
           echo $slug;
 
           echo "demo";
+          
+          DB::enableQueryLog();
 
-Categories::where('slug', $slug)->first();
+		  Categories::where('slug', $slug)->first();
+
       	  dd(Categories::where('slug', $slug)->first()); 
 
       	  DB::enableQueryLog();
