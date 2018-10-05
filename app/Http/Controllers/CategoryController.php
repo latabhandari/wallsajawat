@@ -10,17 +10,17 @@ class CategoryController extends Controller
 {
     //
     public function product($slug)
-      {
-          echo $slug;
+      {          
+          //$category_info  =  Categories::where('slug', $slug)->firstOrFail();
+	     // print_r($category_info); die;
 
-          
-          $category_info  = Categories::where('slug', 'test')->firstOrFail();
-		  dd($category_info); die;
-
-      	  $products = DB::table('products')
+      	  /*$products = DB::table('products')
 						->join('product_catetgories', 'products.id', '=', 'product_catetgories.product_id')
-			            ->where('category_id', $category_info->id)
+			            ->where('category_id', 1)
 			            ->get();
+			            */
+			            
           
+          return view('pages.category.product', compact('products'));
       }
 }
