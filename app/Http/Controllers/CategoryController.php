@@ -10,6 +10,7 @@ class CategoryController extends Controller
     //
     public function product($slug)
       {
+      	echo $slug;
       	  $category_info  = Categories::where('slug', $slug)->firstOrFail();
 
       	  $users = DB::table('products')
