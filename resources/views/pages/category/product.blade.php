@@ -55,9 +55,12 @@
                @php
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
                 @endphp
-              <div class="col-sm-3 text-center selling-imgs"> <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt="">
+
+              <div class="col-sm-3 text-center selling-imgs"> 
+                  <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
                  <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
               </div>
+
         @endforeach
 
   
