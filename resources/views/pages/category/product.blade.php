@@ -46,12 +46,12 @@
 <div class="container selling-img-sec">
   <div class="row">
     <div class="col-sm-12 text-left selling-img-heading">
-      <h4>AVAILABLE DESIGNS(61)</h4>
+      <h4>AVAILABLE DESIGNS({{ count($products) }})</h4>
     </div>
     <div class="col-sm-12">
       <div class="row">
-
-        @foreach ($products as $product)
+        @if(count($products))
+          @foreach ($products as $product)
                @php
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
                 @endphp
@@ -60,8 +60,10 @@
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
                  <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
               </div>
-
-        @endforeach
+          @endforeach
+        @else
+                <p>Sorry no product found</p>
+        @endif
 
   
       </div>
