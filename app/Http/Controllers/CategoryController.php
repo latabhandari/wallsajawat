@@ -13,6 +13,7 @@ class CategoryController extends Controller
       {          
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
 
+DB::enableQueryLog();
           dd(DB::getQueryLog());
 
 
