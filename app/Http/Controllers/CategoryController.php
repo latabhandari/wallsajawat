@@ -12,6 +12,7 @@ class CategoryController extends Controller
     public function product($slug)
       {          
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
+          print_r($category_info);
           $products = DB::table('products')
 						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
 			            ->where('category_id', $category_info->id)
