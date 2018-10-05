@@ -19,8 +19,12 @@ class CategoryController extends Controller
 			            ->where('category_id', 1)
 			            ->get();
 			            */
-			            
-          
+
+          $products = DB::table('products')
+						->join('product_catetgories', 'products.id', '=', 'product_catetgories.product_id')
+			            ->where('category_id', 1)
+			            ->get();
+
           return view('pages.category.product', compact('products'));
       }
 }
