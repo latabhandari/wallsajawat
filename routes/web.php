@@ -51,7 +51,10 @@ Route::group(['prefix' => 'beta'], function() {
     Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update');
 
     Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('social_login');
-    Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('social_callback');;
+    Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('social_callback');
+
+
+    Route::get('category/{slug}', 'CategoryController@product')->name('category.product');
 
 });
 

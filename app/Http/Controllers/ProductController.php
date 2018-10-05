@@ -12,6 +12,8 @@ use App\ProductImages as ProductImages;
 class ProductController extends Controller
 {
     //
+
+    
     public function detail($slug)
       {
       	  $detail         =  Product::where('slug', $slug)->firstOrFail();
