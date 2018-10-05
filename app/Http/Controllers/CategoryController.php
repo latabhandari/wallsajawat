@@ -13,31 +13,14 @@ class CategoryController extends Controller
       {
           echo $slug;
 
-          echo "demo";
-
-          DB::enableQueryLog();
-
-		  Categories::where('slug', $slug)->first();
-
-      	  dd(Categories::where('slug', $slug)->first()); 
-
-      	  DB::enableQueryLog();
-
-
-      	  die;
-
-
-      	  $category_info  = Categories::where('slug', $slug)->firstOrFail();
+          
+          $category_info  = Categories::where('slug', 'test')->firstOrFail();
 		  dd($category_info); die;
-/*
 
       	  $products = DB::table('products')
 						->join('product_catetgories', 'products.id', '=', 'product_catetgories.product_id')
 			            ->where('category_id', $category_info->id)
 			            ->get();
-
-		  dd($products);*/
-
           
       }
 }
