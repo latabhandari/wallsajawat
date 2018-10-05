@@ -21,7 +21,7 @@ class CategoryController extends Controller
 			            */
 
           $products = DB::table('products')
-						->join('product_catetgories', 'products.id', '=', 'product_catetgories.product_id')
+						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
 			            ->where('category_id', 1)
 			            ->get();
 
