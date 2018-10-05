@@ -12,7 +12,7 @@ class CategoryController extends Controller
       {
       	echo $slug;
       	  $category_info  = Categories::where('slug', $slug)->firstOrFail();
-dd($category_info);
+dd($category_info); die;
 
 
       	  $products = DB::table('products')
