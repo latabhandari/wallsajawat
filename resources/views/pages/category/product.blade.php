@@ -24,12 +24,11 @@
             <div class="col-sm-12">
               <div class="row">
                 <div class="col-sm-3"> <span class="rightbannertxt"><i class="fa fa-share-alt"></i></span></div>
-				<div class="col-sm-8">
-					<div class="productpg-info-main">
-						<p>Fusce eu tellus hendrerit, pellentesque nunc eget, tempus justo. Suspendisse in diam purus. Mauris fringilla ante finibus enim sodales feugiat. </p>	
-					</div>
-				</div>
-				
+          				<div class="col-sm-8">
+          					<div class="productpg-info-main">
+          						<p>Fusce eu tellus hendrerit, pellentesque nunc eget, tempus justo. Suspendisse in diam purus. Mauris fringilla ante finibus enim sodales feugiat. </p>	
+          					</div>
+          				</div>
               </div>
             </div>
           </div>
@@ -51,18 +50,17 @@
     </div>
     <div class="col-sm-12">
       <div class="row">
-        <div class="col-sm-3 text-center selling-imgs"> <img src="Images/Product4.jpg" alt="">
-          <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;10,249/roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
-        </div>
-        <div class="col-sm-3 text-center selling-imgs"> <img src="Images/Product5.jpg" alt="">
-          <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;10,249/roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
-        </div>
-        <div class="col-sm-3 text-center selling-imgs"> <img src="Images/Product6.jpg" alt="">
-          <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;10,249/roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
-        </div>
-        <div class="col-sm-3 text-center selling-imgs"> <img src="Images/Product7.jpg" alt="">
-          <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;10,249/roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
-        </div>
+
+        @foreach ($products as $product)
+               @php
+                        $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
+                @endphp
+              <div class="col-sm-3 text-center selling-imgs"> <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt="">
+                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
+              </div>
+        @endforeach
+
+  
       </div>
     </div>
   </div>
