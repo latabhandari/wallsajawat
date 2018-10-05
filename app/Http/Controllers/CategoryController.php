@@ -16,6 +16,6 @@ class CategoryController extends Controller
 						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
 			            ->where('category_id', $category_info['id'])
 			            ->get();
-          return view('pages.category.product', compact('products'));
+          return view('pages.category.product', compact('products', 'category_info'));
       }
 }

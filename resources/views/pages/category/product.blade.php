@@ -19,7 +19,7 @@
         <div class="col-sm-4 product-info">
           <div class="row">
             <div class="col-sm-12">
-              <h1>Cascade Classic</h1>
+              <h1>{{ $category_info->name }}</h1>
             </div>
             <div class="col-sm-12">
               <div class="row">
