@@ -14,8 +14,9 @@ class CategoryController extends Controller
       	echo $slug;
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
 
-
+print_r($category_info);
 dd($category_info);
+
 
 DB::enableQueryLog();
           dd(DB::getQueryLog());
