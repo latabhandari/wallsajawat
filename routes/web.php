@@ -54,7 +54,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('social_callback');
 
 
-    Route::get('category/{slug}', 'CategoryController@product')->name('category.product');
+    Route::get('/category/{slug}', 'CategoryController@product')->name('category.product');
 
 });
 
