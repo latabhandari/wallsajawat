@@ -62,7 +62,7 @@
               </div>
           @endforeach
         @else
-                <p>Sorry no product found</p>
+                <p style="padding:0 0 0 15px">Sorry no product found.!</p>
         @endif
 
   
