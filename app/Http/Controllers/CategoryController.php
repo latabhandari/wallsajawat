@@ -15,7 +15,7 @@ class CategoryController extends Controller
           echo "demo";
 
 
-      	  dd(Categories::where('slug', $slug)->firstOrFail()); 
+      	  dd(Categories::where('slug', $slug)->first()); 
 
       	  die;
 
