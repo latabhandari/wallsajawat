@@ -14,6 +14,7 @@ class CategoryController extends Controller
       	echo $slug;
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
 
+
 DB::enableQueryLog();
           dd(DB::getQueryLog());
 
@@ -23,6 +24,9 @@ DB::enableQueryLog();
 						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
 			            ->where('category_id', 1)
 			            ->get();
+
+			            dd(DB::getQueryLog());
+
 
           return view('pages.category.product', compact('products'));
       }
