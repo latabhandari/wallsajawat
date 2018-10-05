@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Categories as Categories;
+use DB;
 
 class CategoryController extends Controller
 {
@@ -13,7 +14,7 @@ class CategoryController extends Controller
           echo $slug;
 
           echo "demo";
-          
+
           DB::enableQueryLog();
 
 		  Categories::where('slug', $slug)->first();
