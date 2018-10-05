@@ -12,10 +12,11 @@ class CategoryController extends Controller
     public function product($slug)
       {          
       	echo $slug;
+      	dd(Categories::where('slug', $slug)->firstOrFail());
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
 
 print_r($category_info);
-dd($category_info);
+
 
 
 DB::enableQueryLog();
