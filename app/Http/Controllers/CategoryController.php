@@ -10,13 +10,18 @@ class CategoryController extends Controller
     //
     public function product($slug)
       {
-      	echo $slug;
+          echo $slug;
 
-      	dd(Categories::where('slug', $slug)->firstOrFail()); die;
+          echo "demo";
+
+
+      	  dd(Categories::where('slug', $slug)->firstOrFail()); 
+
+      	  die;
 
 
       	  $category_info  = Categories::where('slug', $slug)->firstOrFail();
-dd($category_info); die;
+		  dd($category_info); die;
 /*
 
       	  $products = DB::table('products')
