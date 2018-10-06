@@ -267,7 +267,7 @@
                              data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
                              success: function (resp) {
 
-                                  $("#cal_price").text("INR " + resp.price + ' / Sq.' + resp.type);
+                                  $("#cal_price").text("INR " + resp.price);
                              }
 
                          });
