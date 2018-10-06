@@ -30,8 +30,8 @@
                 <tr>
                   <th>S. No</th>
                   <th>Name</th>
-                  <th>Width</th>
-                  <th>Height</th>
+                  <th>Width (Square Feet)</th>
+                  <th>Height (Square Feet)</th>
                   <th>Action</th>
                 </tr>
                 </thead>
