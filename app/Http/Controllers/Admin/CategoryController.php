@@ -64,7 +64,7 @@ class CategoryController extends Controller
     {
         //
 
-         request()->validate(['name' => 'required', 'slug' => 'required', 'icon' => 'required|mimes:jpeg,bmp,png,tiff|max:4096']);
+         request()->validate(['name' => 'required', 'slug' => 'required');
 
          $params                            =    $request->all();
 
@@ -132,7 +132,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'slug' => 'required', 'status']);
+        request()->validate(['name' => 'required', 'slug' => 'required', 'status' => 'required']);
 
         $params                             =    $request->all();
         $fields['parent_id']                =    $params['parent'];
