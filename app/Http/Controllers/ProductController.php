@@ -86,7 +86,7 @@ class ProductController extends Controller
 
      	$productname  		=  $product->name; 
      	$type         		=  $product->type;
-     	$price         		=  $product->price;
+     	$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
 
       $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
 
