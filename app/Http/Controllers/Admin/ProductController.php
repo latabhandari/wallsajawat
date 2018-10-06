@@ -8,6 +8,7 @@ use App\Product as Product;
 
 use App\ProductCategory as ProductCategory;
 use App\ProductImages as ProductImages;
+use App\Dimension as Dimension;
 
 class ProductController extends Controller
 {
@@ -21,7 +22,8 @@ class ProductController extends Controller
     {
         //
         $products = Product::get();
-        return view('admin.pages.product.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 10);
+        $rolls    = Dimension::get();
+        return view('admin.pages.product.index', compact('products', 'rolls'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -108,7 +110,8 @@ class ProductController extends Controller
         //
         $product  = Product::findOrFail($id);
         $images   = ProductImages::select('id', 'image')->where('product_id', $id)->get();
-        return view('admin.pages.product.edit',compact('product', 'images'));
+        $rolls    = Dimension::get();
+        return view('admin.pages.product.edit',compact('product', 'images', 'rolls'));
     }
 
     /**

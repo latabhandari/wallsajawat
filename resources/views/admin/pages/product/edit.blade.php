@@ -60,6 +60,14 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="stock_item">Roll&nbsp;<span class="req">*</span></label>
+                  @foreach ($rolls as $roll)
+                    <option value="{{ $roll->id }}" {{ ($roll->id == $product->roll_id) ? "selected" : "" }}>{{ $roll->name }} [{{ $roll->width }}] * [{{ $roll->height }}]</option>
+                  @endforeach
+                </div>
+
+
+                <div class="form-group">
                   <label for="short_desc">Short Description&nbsp;<span class="req">*</span></label>
                   <textarea cols="25" id="editor1" class="form-control" name="short_desc" placeholder="Short Description">{{ $product->short_desc }}</textarea>
                 </div>
