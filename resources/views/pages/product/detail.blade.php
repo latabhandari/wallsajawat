@@ -133,15 +133,19 @@
          <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 324px;">
           <ul class="bxslider" style="width: 10215%; position: relative; transition-duration: 0s; transform: translate3d(-1120px, 0px, 0px);">
 
-          @foreach($fetature_products as $feature_product)
+          @foreach($featured_products as $featured_product)
+              @php
+                  $prod_image_info = App\Helpers\MyHelper::getProductImage($featured_product->id);
+              @endphp
+
             <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
               <div class="imgb">
-                <img src="{{ asset('catalog/product/'.$feature_product->image) }}" width="300" height="360" alt="product">
+                <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="300" height="360" alt="product">
               </div>
               <div class="overlay">
-                <h5>{{ $feature_product }}</h5>
+                <h5>{{ $featured_product->name }}</h5>
                 <div class="price">
-                  <span>INR {{ $feature_product->price }}</span>
+                  <span>INR {{ $featured_product->price }}</span>
                 </div>
               </div>
             </li>
