@@ -64,7 +64,7 @@ class CategoryController extends Controller
     {
         //
 
-         request()->validate(['name' => 'required', 'slug' => 'required');
+         request()->validate(['name' => 'required', 'slug' => 'required']);
 
          $params                            =    $request->all();
 
