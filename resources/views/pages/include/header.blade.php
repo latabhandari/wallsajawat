@@ -53,13 +53,15 @@ switch ($segment)
                   <div class="col-sm-2 menu_icons">
                     <ul class="nav menu-icons pull-right">
                       <li><i class="fa fa-search"></i></li>
-                      <li><div class="dropdown">
+                      <li>
+
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+
+                        <div class="dropdown">
                                     <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu sub-dropdown">
                                       @guest
-                                           <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                                           <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
                                            <li><a href="#">My Cart</a></li>
                                       @else   
                                             <li><a href="#">My Wishlist</a></li>
