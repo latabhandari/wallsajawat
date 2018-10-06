@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
 
-                @foreach ($dimension as $data)
+                @foreach ($dimensions as $data)
         
                 <tr>
                   <td>{{ ++$i }}</td>
