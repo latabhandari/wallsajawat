@@ -15,6 +15,8 @@ class DimensionController extends Controller
     public function index()
     {
         //
+        $dimensions = Dimension::get();
+        return view('admin.pages.dimension.index', compact('dimensions'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -25,6 +27,7 @@ class DimensionController extends Controller
     public function create()
     {
         //
+        return view('admin.pages.dimension.create');
     }
 
     /**
@@ -36,6 +39,18 @@ class DimensionController extends Controller
     public function store(Request $request)
     {
         //
+         request()->validate(['name' => 'required', 'width' => 'required', 'height' => 'required']);
+
+         $params                             =    $request->all();
+         $fields['name']                     =    $params['name'];
+         $fields['width']                    =    $params['width'];
+         $fields['height']                   =    $params['height'];
+
+         $fields['created_at_timestamp']    =    time();
+
+         Dimension::create($fields);
+
+         return redirect()->route('dimensions.index')->with('success','Dimension created successfully');
     }
 
     /**
@@ -58,6 +73,8 @@ class DimensionController extends Controller
     public function edit($id)
     {
         //
+        $dimension  = Dimension::findOrFail($id);
+        return view('admin.pages.dimension.edit',compact('dimension'));
     }
 
     /**
@@ -70,6 +87,18 @@ class DimensionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        request()->validate(['name' => 'required', 'slug' => 'required', 'status']);
+
+        $params                             =    $request->all();
+        $fields['name']                     =    $params['name'];
+        $fields['width']                    =    $params['width'];
+        $fields['height']                   =    $params['height'];
+
+        $fields['updated_at_timestamp']     =    time();
+
+        Dimension::find($id)->update($fields);
+
+        return redirect()->route('dimensions.index')->with('success','Dimension updated successfully');
     }
 
     /**
@@ -81,5 +110,8 @@ class DimensionController extends Controller
     public function destroy($id)
     {
         //
+         $id = Dimension::find($id);
+         $id->delete();
+         return redirect()->route('dimensions.index')->with('success','Dimension deleted successfully');
     }
 }
