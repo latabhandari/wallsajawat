@@ -30,6 +30,9 @@ switch ($segment3)
           case 'settings':
                              $settings_active   =   'active';//'menu-open';
                              break;
+          case 'dimension':
+                             $dimension_active  =   'active';//'menu-open';
+                             break;
    }
 ?>
 <style>
@@ -48,6 +51,8 @@ switch ($segment3)
                      <a class="{{ isset($category_active) ? 'activelink' : '' }}" href="{{ route('categories.index') }}"><span>Categories</span></a>
                   </li>
 
+
+
                   <li class="">
                      <a class="{{ isset($product_active) ? 'activelink' : '' }}" href="{{ route('product.index') }}"><span>Products</span></a>
                   </li>
@@ -55,6 +60,11 @@ switch ($segment3)
                   <li class="">
                      <a class="{{ isset($offers_active) ? 'activelink' : '' }}" href="{{ route('offers.index') }}"><span>Offers</span></a>
                   </li>
+
+                  <li class="">
+                     <a class="{{ isset($dimension_active) ? 'activelink' : '' }}" href="{{ route('dimension.index') }}"><span>Dimenstions</span></a>
+                  </li>
+
 
                   <li class="">
                      <a class="{{ isset($roles_active) ? 'activelink' : '' }}" href="{{ route('roles.index') }}"><span>Roles</span></a>
