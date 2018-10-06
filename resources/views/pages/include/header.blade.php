@@ -57,10 +57,18 @@ switch ($segment)
                                     <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>
                                     <span class="caret"></span></button>
                                     <ul class="dropdown-menu sub-dropdown">
-                                        <li><a href="#">My Wishlist</a></li>
-                                        <li><a href="#">My Orders</a></li>
-                                        <li><a href="#">My Cart</a></li>
-                                        </ul>
+                                      @guest
+                                           <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                                           <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                                           <li><a href="#">My Cart</a></li>
+                                      @else   
+                                            <li><a href="#">My Wishlist</a></li>
+                                            <li><a href="#">My Orders</a></li>
+                                            <li><a href="#">My Cart</a></li>
+                                      @endguest
+
+                                       
+                                    </ul>
                                 </div>
                             </li>
                       <li>
