@@ -22,6 +22,8 @@ class CreateDimensionsTable extends Migration
             $table->integer('created_at_timestamp')->comment('Created TimeStamp')->nullable();
             $table->integer('updated_at_timestamp')->comment('Updated TimeStamp')->nullable();
 
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }
