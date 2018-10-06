@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Dimenstion as Dimenstion;
+use App\Dimension as Dimension;
 
 class DimensionController extends Controller
 {
