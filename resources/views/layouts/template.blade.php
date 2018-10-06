@@ -32,13 +32,13 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="heading-sec">
-                            <div class="col-sm-5 text-right side-bars"><img src="images/bar.jpg"> </div>
+                            <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"> </div>
                             
                             <div class="col-sm-2 text-center center-content">
                                 <h4 class="text-center"> TOP SELLERS</h4>
                             </div>
                             
-                            <div class="col-sm-5 side-bars"> <img src="images/bar.jpg"></div>
+                            <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"></div>
                             
                         </div>
                     </div>
