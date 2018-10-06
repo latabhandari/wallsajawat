@@ -127,6 +127,9 @@
     <!-- end product-description -->
 
     <!-- start recommend-product -->
+
+    @if(count($featured_products))
+
     <div class="recommend-product">
       <h3>Recommend Product</h3>
       <div class="bx-wrapper" style="max-width: 1090px;">
@@ -153,6 +156,8 @@
 
       </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
     </div>
+    
+    @endif
     <!-- end recommend-product -->
   </div>
 </div>
