@@ -63,9 +63,11 @@
 
                 <div class="form-group">
                   <label for="stock_item">Roll&nbsp;<span class="req">*</span></label>
+                  <select name="roll_id" class="form-control">
                   @foreach ($rolls as $roll)
                     <option value="{{ $roll->id }}">{{ $roll->name }} [{{ $roll->width }}] * [{{ $roll->height }}]</option>
                   @endforeach
+                </select>
                 </div>
 
                 <div class="form-group">
