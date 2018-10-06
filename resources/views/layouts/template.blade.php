@@ -43,18 +43,28 @@
         </div>
       </div>
       <div class="img-container">
+
         <div class="row">
-          <div class="col-sm-6 sub-img1">
-            <h5>Tree</h5>
+          @php
+            $i = 1;
+          @endphp      
+          @foreach ($wallpaper_images as $wall_image)  
+          <div class="col-sm-6 sub-img{{ $i++ }}">
+            <h5>{{ $wall_image }}</h5>
           </div>
-          <div class="col-sm-3 sub-img2">
+          <!--<div class="col-sm-3 sub-img2">
             <h5>Floral</h5>
           </div>
           <div class="col-sm-3 sub-img3">
             <h5>Texture</h5>
-          </div>
+          </div>-->
+
+          @endforeach
+
+
         </div>
-        <div class="row img-sec1">
+
+       <!-- <div class="row img-sec1">
           <div class="col-sm-3 sub-img4">
             <h5>Interior</h5>
           </div>
@@ -65,7 +75,9 @@
             <h5>All</h5>
             <h4>Top Sellers</h4>
           </div>
-        </div>
+        </div> -->
+
+
       </div>
     </div>
 
