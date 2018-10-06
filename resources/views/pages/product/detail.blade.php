@@ -65,7 +65,7 @@
               </div>
             </div>
             <div class="price-text">
-              <p><i class="fa fa-inr">&nbsp;</i>{{ getProductSquareFeetPrice($detail->id) }}</p>
+              <p><i class="fa fa-inr">&nbsp;</i>{{ App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id) }}</p>
             </div>
 
             <form name="product" id="product" action="{{ route('product.cart') }}" method="post">
