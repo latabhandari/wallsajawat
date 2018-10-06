@@ -15,7 +15,6 @@ class CreateDimensionsTable extends Migration
     {
         Schema::create('dimensions', function (Blueprint $table) {
             $table->increments('id')->comment('Id');
-
             $table->string('name')->comment('Name');
             $table->string('width')->comment('Width (Square Feet)');
             $table->string('height')->comment('Height (Square Feet)');
