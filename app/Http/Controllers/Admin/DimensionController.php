@@ -47,7 +47,7 @@ class DimensionController extends Controller
          $fields['width']                    =    $params['width'];
          $fields['height']                   =    $params['height'];
 
-         $fields['created_at_timestamp']    =    time();
+         $fields['created_at_timestamp']    =     time();
 
          Dimension::create($fields);
 

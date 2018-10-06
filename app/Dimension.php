@@ -9,5 +9,5 @@ class Dimension extends Model
     //
     protected $table    = 'dimensions';
 	
-	protected $fillable = ['id', 'name', 'created_at_timestamp', 'updated_at_timestamp'];
+	protected $fillable = ['id', 'name', 'width', 'height', 'created_at_timestamp', 'updated_at_timestamp'];
 }
