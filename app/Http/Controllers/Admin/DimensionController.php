@@ -51,7 +51,7 @@ class DimensionController extends Controller
 
          Dimension::create($fields);
 
-         return redirect()->route('dimensions.index')->with('success','Dimension created successfully');
+         return redirect()->route('dimension.index')->with('success','Dimension created successfully');
     }
 
     /**
@@ -99,7 +99,7 @@ class DimensionController extends Controller
 
         Dimension::find($id)->update($fields);
 
-        return redirect()->route('dimensions.index')->with('success','Dimension updated successfully');
+        return redirect()->route('dimension.index')->with('success','Dimension updated successfully');
     }
 
     /**
@@ -113,6 +113,6 @@ class DimensionController extends Controller
         //
          $id = Dimension::find($id);
          $id->delete();
-         return redirect()->route('dimensions.index')->with('success','Dimension deleted successfully');
+         return redirect()->route('dimension.index')->with('success','Dimension deleted successfully');
     }
 }
