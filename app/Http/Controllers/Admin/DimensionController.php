@@ -88,7 +88,7 @@ class DimensionController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'slug' => 'required', 'status']);
+        request()->validate(['name' => 'required', 'width' => 'required', 'height' => 'required']);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
