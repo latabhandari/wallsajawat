@@ -134,7 +134,9 @@
           <ul class="bxslider" style="width: 10215%; position: relative; transition-duration: 0s; transform: translate3d(-1120px, 0px, 0px);">
 
           @foreach($featured_products as $featured_product)
+
               @php
+              echo rand();
                   $prod_image_info = App\Helpers\MyHelper::getProductImage($featured_product->id);
               @endphp
 
