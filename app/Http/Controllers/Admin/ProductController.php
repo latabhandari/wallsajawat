@@ -45,7 +45,7 @@ class ProductController extends Controller
     {
         //
 
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required', 'roll_id' => 'required']);
 
         $params                            =    $request->all();
 
@@ -57,6 +57,7 @@ class ProductController extends Controller
         $fields['description']             =    $params['description'];
         $fields['price']                   =    $params['price'];
         $fields['status']                  =    $params['status'];
+        $fields['roll_id']                 =    $params['roll_id'];
         $fields['created_timestamp']       =    time();
 
         $fields['page_title']              =    $params['page_title'];
@@ -120,7 +121,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'short_desc' => 'required', 'description' => 'required', 'roll_id' => 'required']);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
@@ -130,6 +131,7 @@ class ProductController extends Controller
         $fields['description']              =    $params['description'];
         $fields['price']                    =    $params['price'];
         $fields['status']                   =    $params['status'];
+        $fields['roll_id']                 =    $params['roll_id'];
 
         $fields['updated_timestamp']        =    time();
 
