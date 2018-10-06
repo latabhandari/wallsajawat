@@ -142,21 +142,39 @@
             </div>
         </div>
         <div class="container selling-img-sec">
-            <div class="row">
+            
                 @foreach ($best_selling_products as $selling_products)
                      @php
+                        $i = 0;
+                        if ($i == 0)
+                        echo '<div class="row">';
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
                      @endphp
-                    <a href="{{ route('product.detail', $selling_products->slug) }}">
-                        <div class="col-sm-4 text-center selling-imgs">
-                            <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
-                            <div class="img-price">
-                                <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
-                                <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span>
+                        
+                            <div class="col-sm-4 text-center selling-imgs">
+                                <a href="{{ route('product.detail', $selling_products->slug) }}">
+                                    <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
+                                </a>
+                                    <div class="img-price">
+                                        <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
+                                        <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span>
+                                    </div>
                             </div>
-                        </div>
-                    </a>
+                            @php
+                               $i++;
+                               if ($i % 3 == 0)
+                                   {
+                                      echo '</div>';
+                                      $i = 0;
+                                   }
+                            @endphp
                 @endforeach
+                @php
+                    if ($i != 0)
+                    echo '</div>';
+                @endphp
+
+
             </div>
         </div>
     </div>
