@@ -83,7 +83,11 @@
 					<li><label>Height:</label>
 						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
 					</li>
-					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id) }} / Sq.Feet</span></li>
+          @php
+            $sq_feet_price = App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id);
+
+          @endphp
+					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>
 				</ul>
 			</div>
 
@@ -210,7 +214,8 @@
 </script>
 
 <script>
-  var pid = {{ $detail->id }};
+  var pid   = {{ $detail->id }};
+  var price = {{ $sq_feet_price }};
   $("#material_type").change(function() 
      {  
           var size = $('option:selected', this).attr('data-value');
