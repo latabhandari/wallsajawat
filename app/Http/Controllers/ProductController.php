@@ -24,8 +24,8 @@ class ProductController extends Controller
           $product_category_id = ProductCategory::select('category_id')->where('product_id', $detail->id)->first()->category_id;
           $featured_products   = DB::table('products')
                                       ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
-                                      ->where('category_id', $product_category_id)
-                                      ->where('product_id !=', $detail->id)
+                                      ->where('product_categories.category_id', $product_category_id)
+                                      ->where('product_categories.product_id !=', $detail->id)
                                       ->get();
           /* close */
 
