@@ -8,9 +8,23 @@ use Session;
 use Auth;
 use App\ProductImages as ProductImages;
 use App\Measurement as Measurement;
+use App\Dimension as Dimension;
+use App\Product as Product;
 
 class MyHelper 
    {
+   		  public static function getProductSquareFeetPrice($id)
+   	       {
+   	       	 $product_info    = Product::where("id", $id)->first();
+   	       	 $product_roll_id = $product_info->roll_id;
+
+   	       	 $roll_info       = Dimension::where("id", $product_roll_id)->first();
+   	       	 $total_dimension = $roll_info->width * $roll_info * height;
+
+   	       	 return $product_info->price / $total_dimension;
+				
+   	       }
+
    	      public static function getMeasurement($id)
    	       {
 				 return Measurement::where('id', $id)->first();
