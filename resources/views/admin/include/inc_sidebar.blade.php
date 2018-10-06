@@ -62,7 +62,7 @@ switch ($segment3)
                   </li>
 
                   <li class="">
-                     <a class="{{ isset($dimension_active) ? 'activelink' : '' }}" href="{{ route('dimension.index') }}"><span>Dimenstions</span></a>
+                     <a class="{{ isset($dimension_active) ? 'activelink' : '' }}" href="{{ route('dimension.index') }}"><span>Dimentions</span></a>
                   </li>
 
 
