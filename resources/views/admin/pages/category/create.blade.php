@@ -51,10 +51,6 @@
                   <input class="form-control" name="slug" placeholder="Slug" type="text" value="{{ old('slug') }}">
                 </div>
 
-                <div class="form-group">
-                  <label for="icon">Icon&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="icon" placeholder="Icon" type="file" value="">
-                </div>
 
                 <div class="form-group">
                   <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>

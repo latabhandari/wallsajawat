@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->increments('id')->comment('Id');
             $table->string('name')->comment('Name');
             $table->string('slug')->comment('Slug');
-            $table->string('icon')->comment('Icon');
             $table->tinyInteger('status')->comment('0 - Inactive, 1 - Active')->default(0);
             $table->unsignedInteger('parent_id')->comment('Parent Id')->default(0);
 

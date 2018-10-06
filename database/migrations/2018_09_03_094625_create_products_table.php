@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->text('short_desc')->comment('Short Description');
             $table->longText('description')->comment('Description');
             $table->string('price', 32)->comment('Price');
+            $table->unsignedInteger('roll_id')->comment('Roll Id');
             $table->unsignedSmallInteger('stock_item')->comment('Stock Item');
             $table->tinyInteger('status')->comment('0 - Inactive, 1 - Active')->default(0);
             $table->string('page_title', 96)->comment('Page Title')->nullable();
@@ -31,6 +32,8 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('updated_timestamp')->comment('Updated Timestamp')->nullable();
             $table->timestamps();
             $table->index(['id', 'name']);
+
+            $table->foreign('roll_id')->references('id')->on('dimensions');
 
         });
     }

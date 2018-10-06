@@ -50,12 +50,6 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="icon">Icon&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="icon" placeholder="Icon" type="file" value=""><br />
-                  <img src="{{ URL::asset('catalog/category/'.$category->icon) }}" alt="" width="120" />
-                </div>
-
-                <div class="form-group">
                   <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>
                   <select name="wallpaper_pos" class="form-control">
                      <option value="">-- Select --</option>
