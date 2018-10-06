@@ -104,6 +104,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::resource('user', 'UserController');
 
+            Route::resource('dimension', 'DimensionController');
+
             
             //Route::resource('city', 'CityController');
 
