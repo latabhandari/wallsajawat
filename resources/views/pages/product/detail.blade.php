@@ -213,7 +213,7 @@
 </script>
 
 <script>
-  var price = {{ $detail->price }};
+  var pid = {{ $detail->id }};
   $("#material_type").change(function() 
      {  
           var size = $('option:selected', this).attr('data-value');
@@ -267,7 +267,7 @@
                              type: "POST",
                              url: WallSajawat.getSitePath('product/option'),
                              dataType: "json",
-                             data: {"width": w_width, "height": w_height, "mid": mid, "price": price},
+                             data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
                              success: function (resp) {
 
                                   $("#cal_price").text("INR " + resp.price + ' / Sq.' + resp.type);

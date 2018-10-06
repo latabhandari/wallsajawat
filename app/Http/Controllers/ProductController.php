@@ -10,7 +10,7 @@ use Cart;
 use App\ProductImages as ProductImages;
 use App\ProductCategory as ProductCategory;
 use DB;
-
+use App\Helpers\MyHelper;
 class ProductController extends Controller
 {
     //    
@@ -32,7 +32,30 @@ class ProductController extends Controller
       	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));
       }
 
+
     public function option(Request $request)
+      {
+          $params  =  $request->all();
+          $width   =  $params['width'];
+          $height  =  $params['height'];
+          $mid     =  $params['mid'];
+          $pid     =  $params['pid'];
+
+          $price   =  MyHelper::getProductSquareFeetPrice($pid);
+
+          $mres    =  Measurement::select('name', 'square_feet_value')->where('id', $mid)->firstOrFail();
+
+          $square_feet_value = $mres->square_feet_value;
+
+          $width_height    =  $width * $height;
+          $per_square_feet =  $width_height / $square_feet_value;
+          $uprice          =  $price * $per_square_feet;
+
+          echo json_encode(['status' => true, 'price' => round($uprice), 'type' => ucfirst($mres->name)]);
+      }
+
+
+    public function option1(Request $request)
       {
       	  $params  = 	$request->all();
       	  $width   = 	$params['width'];
