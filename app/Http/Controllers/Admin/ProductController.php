@@ -22,8 +22,7 @@ class ProductController extends Controller
     {
         //
         $products = Product::get();
-        $rolls    = Dimension::get();
-        return view('admin.pages.product.index', compact('products', 'rolls'))->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('admin.pages.product.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -34,7 +33,8 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('admin.pages.product.create');
+        $rolls    = Dimension::get();
+        return view('admin.pages.product.create', compact('rolls'));
     }
 
     /**
