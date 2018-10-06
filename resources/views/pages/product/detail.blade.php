@@ -94,7 +94,7 @@
               <p><strong>Quantity:</strong> Please select Quantity.</p>
               <div class="row">
                 <div class="col-sm-12">
-                  <input type="number" name="qty" placeholder="1" min="1"class="form-control" value="1" />
+                  <input type="number" name="qty" placeholder="1" min="1" max="25" class="form-control" value="1" />
                   <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
                 </div>
               </div>
