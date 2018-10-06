@@ -8,6 +8,7 @@ use App\Product as Product;
 use App\Measurement as Measurement;
 use Cart;
 use App\ProductImages as ProductImages;
+use App\ProductCategory as ProductCategory;
 
 class ProductController extends Controller
 {
@@ -17,7 +18,17 @@ class ProductController extends Controller
       	  $detail         =  Product::where('slug', $slug)->firstOrFail();
           $product_images =  ProductImages::where('product_id', $detail->id)->get();
       	  $measurements   =  Measurement::select('id', 'name', 'square_feet_value')->where('status', 1)->get();
-      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images'));
+
+          /* featured products */
+          $product_category_id = ProductCategory::select('category_id')->where('product_id', $detail->id)->first()->category_id;
+          $featured_products   = DB::table('products')
+                                      ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
+                                      ->where('category_id', $product_category_id)
+                                      ->get();
+
+          /* close */
+
+      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));
       }
 
     public function option(Request $request)

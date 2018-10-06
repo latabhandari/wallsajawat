@@ -61,7 +61,6 @@
 
           @endforeach
 
-
         </div>
 
        <!-- <div class="row img-sec1">

@@ -129,216 +129,25 @@
     <!-- start recommend-product -->
     <div class="recommend-product">
       <h3>Recommend Product</h3>
-      <div class="bx-wrapper" style="max-width: 1090px;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 324px;"><ul class="bxslider" style="width: 10215%; position: relative; transition-duration: 0s; transform: translate3d(-1120px, 0px, 0px);"><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product2.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product3.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product4.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product5.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="false">
-          <div class="imgb">
-            <img src="images/product/img_product1.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="false">
-          <div class="imgb">
-            <img src="images/product/img_product2.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="false">
-          <div class="imgb">
-            <img src="images/product/img_product3.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product4.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;">
-          <div class="imgb">
-            <img src="images/product/img_product5.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li aria-hidden="true" style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;">
-          <div class="imgb">
-            <img src="images/product/img_product1.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product2.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product3.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product4.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-        <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product5.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li>
-      <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product1.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product2.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product3.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-          <div class="imgb">
-            <img src="images/product/img_product4.jpg" width="300" height="360" alt="product">
-          </div>
-          <div class="overlay">
-            <h5>BN Threadborne™ Mesh Singlet</h5>
-            <div class="price">
-              <span>INR 2,757.89</span>
-              <span><s>INR 3,757.89</s></span>
-            </div>
-          </div>
-        </li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
+      <div class="bx-wrapper" style="max-width: 1090px;">
+         <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 324px;">
+          <ul class="bxslider" style="width: 10215%; position: relative; transition-duration: 0s; transform: translate3d(-1120px, 0px, 0px);">
+
+          @foreach($fetature_products as $feature_product)
+            <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
+              <div class="imgb">
+                <img src="{{ asset('catalog/product/'.$feature_product->image) }}" width="300" height="360" alt="product">
+              </div>
+              <div class="overlay">
+                <h5>{{ $feature_product }}</h5>
+                <div class="price">
+                  <span>INR {{ $feature_product->price }}</span>
+                </div>
+              </div>
+            </li>
+          @endforeach
+
+      </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
     </div>
     <!-- end recommend-product -->
   </div>
