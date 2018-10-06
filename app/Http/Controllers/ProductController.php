@@ -26,7 +26,7 @@ class ProductController extends Controller
                                       ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
                                       ->where('category_id', $product_category_id)
                                       ->get();
-
+print_r(count($featured_products));
           /* close */
 
       	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));
