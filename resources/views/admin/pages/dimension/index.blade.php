@@ -45,7 +45,7 @@
                   <td>{{ $data->name }}</td>
                   <td>{{ $data->width }}</td>
                   <td>{{ $data->height }}</td>
-                  <td>{{ date('d, j m y h:i a', $data->created_at_timestamp }}</td>
+                  <td>{{ date('d, j m y h:i a', $data->created_at_timestamp) }}</td>
                   <td>
                      <a class="btn btn-primary" href="{{ route('dimension.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['dimension.destroy', $data->id]]) !!}
