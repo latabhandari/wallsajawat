@@ -10,7 +10,10 @@
   transition: all 0.6s ease;
   border-bottom:1px solid #f2f2f2;
 }
-
+.wall-img{
+    min-height: 200px;
+    width: 670px;
+}
 .top-bar {
   background-color: #333333;
   padding: 5px 0;

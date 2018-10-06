@@ -27,58 +27,47 @@
       </div>
     </div>
 
-    <div class="wallpaper-sec">
-      <div class="container">
-        <div class="row heading-sec">
-          <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"/> </div>
-          <div class="col-sm-2 text-center center-content">
-            <h4> TOP SELLERS</h4>
-          </div>
-          <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"/></div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 text-center sub-head">
-            <h6>WALLPAPER</h6>
-          </div>
-        </div>
-      </div>
-      <div class="img-container">
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="heading-sec">
+                            <div class="col-sm-5 text-right side-bars"><img src="images/bar.jpg"> </div>
+                            
+                            <div class="col-sm-2 text-center center-content">
+                                <h4 class="text-center"> TOP SELLERS</h4>
+                            </div>
+                            
+                            <div class="col-sm-5 side-bars"> <img src="images/bar.jpg"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <h6 class="text-center">WALLPAPER</h6>
+                </div>
+                <div class="col-sm-12">
 
-        <div class="row">
-          @php
-            $i = 1;
-          @endphp      
-          @foreach ($wallpaper_images as $wall_image)  
-          <div class="col-sm-6" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
-            <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
-          </div>
-          <!--<div class="col-sm-3 sub-img2">
-            <h5>Floral</h5>
-          </div>
-          <div class="col-sm-3 sub-img3">
-            <h5>Texture</h5>
-          </div>-->
+                    @php
+                       $i = 1;
+                    @endphp      
+                    @foreach ($wallpaper_images as $wall_image)  
+                     <div class="sub-img{{ $i++ }}" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }});min-height: 200px;width: 670px">
+                        <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
+                    </div>
+                    @endforeach
 
-          @endforeach
-
-        </div>
-
-       <!-- <div class="row img-sec1">
-          <div class="col-sm-3 sub-img4">
-            <h5>Interior</h5>
-          </div>
-          <div class="col-sm-6 sub-img5">
-            <h5>Elements</h5>
-          </div>
-          <div class="col-sm-3 sub-img6">
-            <h5>All</h5>
-            <h4>Top Sellers</h4>
-          </div>
-        </div> -->
-
-
-      </div>
+                    <div class="sub-img6" style="background-image: url(Images/All-elements.png);min-height: 300px;width:318px;margin-left: 3px">
+                        <a href="">
+                            <h5>All</h5>
+                            <h4>Top Sellers</h4>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
     </div>
+
 
     <div class="slider-sec">
         <div class="slider-head"> <h3>TOP SELLERS</h3><h4>POSTERS</h4></div>
