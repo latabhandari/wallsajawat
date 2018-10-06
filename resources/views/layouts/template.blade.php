@@ -142,10 +142,11 @@
             </div>
         </div>
         <div class="container selling-img-sec">
-            
+                @php
+                    $i = 0;
+                @endphp            
                 @foreach ($best_selling_products as $selling_products)
                      @php
-                        $i = 0;
                         if ($i == 0)
                         echo '<div class="row">';
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
