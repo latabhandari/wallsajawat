@@ -14,7 +14,14 @@ class CreateDimensionsTable extends Migration
     public function up()
     {
         Schema::create('dimensions', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->comment('Id');
+
+            $table->string('name')->comment('Name');
+            $table->string('width')->comment('Width (Square Feet)');
+            $table->string('height')->comment('Height (Square Feet)');
+            $table->integer('created_at_timestamp')->comment('Created TimeStamp')->nullable();
+            $table->integer('updated_at_timestamp')->comment('Updated TimeStamp')->nullable();
+
             $table->timestamps();
         });
     }
