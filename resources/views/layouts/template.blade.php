@@ -49,7 +49,7 @@
             $i = 1;
           @endphp      
           @foreach ($wallpaper_images as $wall_image)  
-          <div class="col-sm-6 sub-img{{ $i++ }}">
+          <div class="col-sm-6" style="background: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
             <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
           </div>
           <!--<div class="col-sm-3 sub-img2">
