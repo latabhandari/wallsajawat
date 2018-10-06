@@ -125,32 +125,7 @@
       </div>
     </div>
     <!-- end product-description -->
-    <div class="product-tab-info">
-      <div class="tab-nav clearfix">
-        <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#product" role="tab" data-toggle="tab" title="Product">Product</a></li>
-          <li role="presentation"><a href="#product2" role="tab" data-toggle="tab" title="Product 2">Product 2</a></li>
-          <li role="presentation"><a href="#product3" role="tab" data-toggle="tab" title="Product 3">Product 3</a></li>
-        </ul>
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane active" id="product">
-          <h4>Product</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="tab-pane" id="product2">
-          <h4>Product 2</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="tab-pane" id="product3">
-          <h4>Product 3</h4>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-      </div>
-    </div>
+
     <!-- start recommend-product -->
     <div class="recommend-product">
       <h3>Recommend Product</h3>
