@@ -9,6 +9,7 @@ use App\Measurement as Measurement;
 use Cart;
 use App\ProductImages as ProductImages;
 use App\ProductCategory as ProductCategory;
+use DB;
 
 class ProductController extends Controller
 {
