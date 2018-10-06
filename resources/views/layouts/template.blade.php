@@ -175,7 +175,6 @@
                     echo '</div>';
                 @endphp
 
-
             </div>
         </div>
     </div>
