@@ -50,7 +50,7 @@
           @endphp      
           @foreach ($wallpaper_images as $wall_image)  
           <div class="col-sm-6 sub-img{{ $i++ }}">
-            <h5>{{ $wall_image }}</h5>
+            <h5>{{ $wall_image->name }}</h5>
           </div>
           <!--<div class="col-sm-3 sub-img2">
             <h5>Floral</h5>
