@@ -68,11 +68,13 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>City</label>
-											<select class="form-control" name="city">
-												@foreach ($cities as $city)
-												  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
-												@endforeach
-											</select>
+											<div id="cityContainer">
+												<select class="form-control" name="city">
+													@foreach ($cities as $city)
+													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
+													@endforeach
+												</select>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -209,8 +211,18 @@
 	                             dataType: "json",
 	                             data: {},
 	                             success: function (resp) {
+	                             	if (resp.status == true)
+	                             		 {
+	                             		 	 var h = '';
+	                             		 	 h += '<select class="form-control" name="city">';
+	                             		 	 $.each(resp.cities, function(a, b) {
+	                             		 	 	h += '<option value="' + b.i + '">' + b.n + '</option>'
+	                             		 	 }
+	                             		 	 h += '</select>';
+	                             		 	 $("#cityContainer").html(h);
+	                             		 }
 
-	                                  $("#cal_price").text("INR " + resp.price);
+	                                  
 	                             }
                          });
 
