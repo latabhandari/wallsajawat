@@ -114,7 +114,7 @@
 										<div class="form-group">
 											<label>Country <samp>*</samp></label>
 											<select class="form-control" name="country_id">
-												<option value="">India</option>
+												<option value="101">India</option>
 											</select>
 											@if ($errors->has('country_id'))
 			                                    <span class="error" role="alert">

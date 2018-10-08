@@ -172,7 +172,7 @@ class ProductController extends Controller
             echo json_encode(['status' => true, 'cities' => $cities]);
         }
 
-      public function checkoutStore()
+      public function checkoutStore(Request $request)
            {
                request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|size:6|integer', 'mobile' => 'required']);
 
@@ -189,7 +189,7 @@ class ProductController extends Controller
                
                Profile::find(Auth::user()->id)->update($fields);
 
-               
+
            }
 
 }
