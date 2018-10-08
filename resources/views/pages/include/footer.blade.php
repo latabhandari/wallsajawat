@@ -13,7 +13,7 @@
                                     <div class="col-sm-4">
                                         <h4>INFORMATION</h4>
                                         <ul class="nav info-list">
-                                            <li><a href="{{ route('about') }}">About Us</a></li>
+                                            <a href="{{ route('about') }}"><li>About Us</li></a>
                                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                             <li><a href="#">Terms of Use</a></li>
                                             <li><a href="#">Return/Refund policies</a></li>
