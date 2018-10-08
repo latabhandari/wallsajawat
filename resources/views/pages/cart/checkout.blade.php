@@ -70,7 +70,7 @@
 											<label>City</label>
 											<select class="form-control" name="city">
 												@foreach ($cities as $city)
-												  <option {{ $city_id == $city->id ? "selected" : "" }}value="{{ $city->id }}">{{ $city->name }}</option>
+												  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
 												@endforeach
 											</select>
 										</div>
