@@ -14,6 +14,9 @@ use App\States as States;
 use DB;
 use App\Helpers\MyHelper;
 
+use App\User as User;
+use App\Profile as Profile;
+
 
 class ProductController extends Controller
 {
