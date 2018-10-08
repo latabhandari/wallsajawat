@@ -103,9 +103,9 @@
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
 											<input type="text" name="postal_code" class="form-control" value="{{ $user->profile->pin }}" />
-											@if ($errors->has('password'))
+											@if ($errors->has('postal_code'))
 			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('password') }}
+			                                        {{ $errors->first('postal_code') }}
 			                                    </span>
 			                                @endif
 										</div>
@@ -116,9 +116,9 @@
 											<select class="form-control" name="country_id">
 												<option value="">India</option>
 											</select>
-											@if ($errors->has('postal_code'))
+											@if ($errors->has('country_id'))
 			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('postal_code') }}
+			                                        {{ $errors->first('country_id') }}
 			                                    </span>
 			                                @endif
 										</div>
