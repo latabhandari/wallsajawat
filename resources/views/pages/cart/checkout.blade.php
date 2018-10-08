@@ -82,7 +82,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Email Address <samp>*</samp></label>
-											<input type="text" class="form-control" {{ $user->email }}>
+											<input type="text" class="form-control" value="{{ $user->email }}">
 										</div>
 									</div>
 								</div>
