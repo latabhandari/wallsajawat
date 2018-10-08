@@ -28,7 +28,6 @@
 
         <div class="col-sm-12 text-center">
             <div class="title measure-title">
-                <h3>How to Measure</h3>
                 <ul class="navbar">
                     <li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     <li>Login</li>
