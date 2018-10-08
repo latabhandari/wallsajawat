@@ -25,6 +25,16 @@
 						<div class="sub-heading">
 							<h3><span>1</span> Shipping</h3>
 						</div>
+
+						@php
+						   $city_id  = $user->profile->city_id
+						   $state_id = $user->profile->state_id
+						   if (empty($city_id) && empty($state_id)):
+						     $city_id   = env('DEFAULT_CITY') 
+						     $state_id  = env('DEFAULT_STATE')
+						   endif
+						@endphp
+
 						<div class="form">
 							<form action="#">
 								<div class="row">
@@ -48,7 +58,7 @@
 											<label>State <samp>*</samp></label>
 											<select class="form-control" name="city">
 												@foreach ($states as $state)
-												  <option value="{{ $state->id }}">{{ $state->name }}</option>
+												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
 												@endforeach
 											</select>
 
@@ -59,7 +69,7 @@
 											<label>City</label>
 											<select class="form-control" name="city">
 												@foreach ($cities as $city)
-												  <option value="{{ $city->id }}">{{ $city->name }}</option>
+												  <option {{ $city_id == $city->id ? "selected" : "" }}value="{{ $city->id }}">{{ $city->name }}</option>
 												@endforeach
 											</select>
 										</div>
