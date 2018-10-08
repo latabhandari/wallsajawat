@@ -36,30 +36,17 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Last Name <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<label>Address Line<samp>*</samp></label>
+											<input type="text" class="form-control" value="{{ $user->profile->address }}">
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label>Address Line 1 <samp>*</samp></label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label>Address Line 2</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
+						
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>City <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control" >
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -89,33 +76,17 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Phone Number <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control" value="{{ $user->mobile }}">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Email Address <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control" {{ $user->email }}>
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
-									<h5>Shipping Method</h5>
-									<div class="label-list">
-										<label>
-											<samp>7–12 business days</samp>
-											<input type="radio" name="shipping_method" id="aramex">
-											<strong>Aramex</strong>
-											<span>Pay duties and taxes now</span>
-										</label>
-										<label>
-											<samp>3–5 business days</samp>
-											<input type="radio" name="shipping_method" id="express">
-											<strong>Express</strong>
-											<span>Pay duties and taxes now</span>
-										</label>
-									</div>
-								</div>
+								
 							</form>
 						</div>
 					</div>

@@ -94,7 +94,7 @@
 
 						<div class="col-sm-6">
 							<button type="submit" name="updatebtn" class="btn btn-info">Update</button>
-							<a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
+							<a href="{{ route('cart.checkout') }}" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
 						</div>
 					</div>
 				</div>
