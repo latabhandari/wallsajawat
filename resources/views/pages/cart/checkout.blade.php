@@ -221,7 +221,7 @@
 							</table>
 							<div class="row">
 								<div class="col-sm-12">
-									<a href="order-details.html" class="btn btn-block">Submit Order</a>
+									<button type="submit" class="btn btn-block">Submit Order</button>
 								</div>
 							</div>
 						</div>
