@@ -158,17 +158,10 @@
 									<td>Items:</td>
 									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
 								</tr>
-								<tr>
-									<td>Shipping:</td>
-									<td class="text-right">INR 2,124</td>
-								</tr>
-								<tr>
-									<td>Duties & Taxes:</td>
-									<td class="text-right">INR 1,739</td>
-								</tr>
+								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right">INR 6,619</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
 								</tr>
 							</table>
 							<div class="row">
