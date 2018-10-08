@@ -42,13 +42,13 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Full Name <samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->name }}">
+											<input type="text" name="name" class="form-control" value="{{ $user->name }}">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Address Line<samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->profile->address }}">
+											<input type="text" name="address" class="form-control" value="{{ $user->profile->address }}">
 										</div>
 									</div>
 								</div>
@@ -57,7 +57,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
-											<select class="form-control" name="state" onchange="getCities(this.value)">
+											<select class="form-control" name="state_id" onchange="getCities(this.value)">
 												@foreach ($states as $state)
 												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
 												@endforeach
@@ -69,7 +69,7 @@
 										<div class="form-group">
 											<label>City</label>
 											<div id="cityContainer">
-												<select class="form-control" name="city">
+												<select class="form-control" name="city_id">
 													@foreach ($cities as $city)
 													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
 													@endforeach
@@ -104,7 +104,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Email Address <samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->email }}">
+											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}">
 										</div>
 									</div>
 								</div>

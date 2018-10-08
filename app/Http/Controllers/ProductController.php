@@ -18,12 +18,6 @@ use App\Helpers\MyHelper;
 class ProductController extends Controller
 {
     //    
-
-    public function logout()
-     {
-        Auth::logout();
-        return rediect()->route('home.index');
-     }
      
     public function detail($slug)
       {
@@ -177,6 +171,22 @@ class ProductController extends Controller
             $cities = Cities::select('id AS i', 'name AS n')->where('state_id', $state_id)->get();
             echo json_encode(['status' => true, 'cities' => $cities]);
         }
+
+      public function checkoutStore()
+           {
+               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|size:6|integer', 'mobile' => 'required']);
+
+               $params                            =    $request->all();
+
+               $fields['name']                    =    $params['name'];
+               $fields['address']                 =    $params['address'];
+               $fields['city_id']                 =    $params['city_id'];
+               $fields['state_id']                =    $params['state_id'];
+               $fields['postal_code']             =    $params['postal_code'];
+               $fields['mobile']                  =    $params['mobile'];
+
+               Profile::find(Auth::user()->id)->update($fields);
+           }
 
 }
 
