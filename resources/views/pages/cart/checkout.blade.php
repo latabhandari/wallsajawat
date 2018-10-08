@@ -16,6 +16,10 @@
 <div class="main-container">
 	<div class="container">
 		<!-- start checkout -->
+
+		<form name="checkout" action="{{ route('cart.checkout.store') }}" method="POST">
+								@csrf
+
 		<div class="checkout">
 			<div class="row">
 				<div class="col-sm-8">
@@ -37,8 +41,7 @@
 						@endphp
 
 						<div class="form">
-							<form name="checkout" action="{{ route('cart.checkout.store') }}" method="POST">
-								@csrf
+							
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
@@ -140,8 +143,6 @@
 										</div>
 									</div>
 								</div>
-								
-							</form>
 						</div>
 					</div>
 					<!-- end form-box -->
@@ -229,6 +230,8 @@
 				</div>
 			</div>
 		</div>
+
+	  </form>
 		<!-- end checkout -->
 	</div>
 </div>
