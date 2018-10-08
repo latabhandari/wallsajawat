@@ -155,8 +155,8 @@ class ProductController extends Controller
            {
                  $user   = \Auth::user();
                  
-                 $states = States::where('country_id', 101)->all();
-                 $cities = Cities::where('state_id', 12)->all();
+                 $states = States::where('country_id', 101)->get();
+                 $cities = Cities::where('state_id', 12)->get();
                  return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
            }
           else
