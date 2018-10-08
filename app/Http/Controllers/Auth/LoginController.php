@@ -80,7 +80,11 @@ class LoginController extends Controller
 
         $uprovider = (strtolower($provider) == 'google') ? "1" : "2";
 
-        return User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $uprovider, 'provider_id' => $user->id, 'unix_timestamp' => time(), 'verified' => 1]);
+        $user = User::create(['name' => $user->name, 'email' => $user->email, 'provider' => $uprovider, 'provider_id' => $user->id, 'unix_timestamp' => time(), 'verified' => 1]);
+
+        Profile::create(['user_id' => $user->id])
+        return $user;
+        
      }
 
     protected function authenticated(Request $request, $user)
