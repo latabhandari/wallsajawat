@@ -210,6 +210,10 @@
 	                             url: WallSajawat.getSitePath('getcities/' +  state_id),
 	                             dataType: "json",
 	                             data: {},
+	                             beforeSend: function() {
+       								 // setting a timeout
+        							 $('#cityContainer').html('loading...');
+    							 },
 	                             success: function (resp) {
 	                             	if (resp.status == true)
 	                             		 {
