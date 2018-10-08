@@ -18,6 +18,13 @@ use App\Helpers\MyHelper;
 class ProductController extends Controller
 {
     //    
+
+    public function logout()
+     {
+        Auth::logout();
+        return rediect()->route('home.index');
+     }
+     
     public function detail($slug)
       {
       	  $detail         =  Product::where('slug', $slug)->firstOrFail();
