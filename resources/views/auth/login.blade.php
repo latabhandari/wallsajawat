@@ -49,6 +49,16 @@
                                         <span class="fa fa-google"></span> Sign in with Google
                                    </a>
                             </div>
+
+                            <div class="col-md-6 text-center">
+                                   <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
+                                     <span class="fa fa-facebook"></span> Sign in with Facebook
+                                   </a>
+                                   <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google') }}">
+                                        <span class="fa fa-google"></span> Sign in with Google
+                                   </a>
+                            </div>
+                            
                         </div>
                         
                     </div>
