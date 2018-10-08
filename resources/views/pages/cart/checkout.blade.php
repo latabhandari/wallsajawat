@@ -37,7 +37,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Address Line<samp>*</samp></label>
-											<input type="text" class="form-control" value="">
+											<input type="text" class="form-control" value="{{ $user->profile->address }}">
 										</div>
 									</div>
 								</div>
@@ -45,14 +45,14 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>City <samp>*</samp></label>
-											<input type="text" class="form-control" >
+											<label>State <samp>*</samp></label>
+											<input type="text" class="form-control" value="{{ $user->profile->state }}">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Region</label>
-											<input type="text" class="form-control">
+											<label>City</label>
+											<input type="text" class="form-control" value="{{ $user->profile->city }}">
 										</div>
 									</div>
 								</div>
@@ -60,14 +60,14 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control" value="{{ $user->profile->pin }}" />
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Country <samp>*</samp></label>
 											<select class="form-control">
-												<option>Country</option>
+												<option>India</option>
 											</select>
 										</div>
 									</div>
