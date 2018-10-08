@@ -16,6 +16,7 @@ use App\Helpers\MyHelper;
 
 use App\User as User;
 use App\Profile as Profile;
+use Auth;
 
 
 class ProductController extends Controller
