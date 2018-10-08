@@ -238,6 +238,6 @@
 
 @endsection
 
-@section('botom_yield')
+@section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 @endsection
