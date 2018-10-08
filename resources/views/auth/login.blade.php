@@ -25,7 +25,18 @@
 
 
     <div class="row justify-content-center">
-        <div class="col-md-8">
+
+        <div class="col-sm-12 text-center">
+            <div class="title measure-title">
+                <h3>How to Measure</h3>
+                <ul class="navbar">
+                    <li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li>Login</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
 
@@ -77,7 +88,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
 
