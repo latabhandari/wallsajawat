@@ -113,53 +113,44 @@
 						</div>
 					</div>
 					<!-- end form-box -->
-					<!-- start form-box -->
-					<div class="form-box">
-						<div class="sub-heading">
-							<h3><span>2</span> Billing & Payment</h3>
-						</div>
-						<div class="form">
-							<h5>Payment Method</h5>
-							<div class="form-group">
-								<label><input type="checkbox" name=""> My billing address is the same as my shipping address</label>
-							</div>
-							<div class="form-group">
-								<div class="row">
-									<div class="col-sm-12">
-										<label class="card-info">
-											<input type="radio" name="">
-											<img src="images/visa.gif" width="37" height="23" alt="visa">
-											<img src="images/mastercard.gif" width="37" height="23" alt="mastercard">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Card Number <samp>*</samp></label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Expiration Date <samp>*</samp></label>
-										<div class="row">
-											<div class="col-sm-4 padding-right-none">
-												<input type="text" class="form-control">		
-											</div>
-											<div class="col-sm-8">
-												<input type="text" class="form-control">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end form-box -->
+					
 				</div>
-			
+				<div class="col-sm-4">
+					<div class="rightcol-fixed">
+						<div class="add-coupon">
+							<h5>Redeem a coupon or promotion</h5>
+							<label>Enter the code below and click Apply</label>
+							<div class="row">
+								<div class="col-sm-8">
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-sm-4 padding-left-none">
+									<input type="submit" value="Apply" class="btn btn-block">
+								</div>
+							</div>
+						</div>
+						<!-- start order-summary -->
+						<div class="order-summary">
+							<table>
+								<tr>
+									<td>Items:</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+								</tr>
+								
+								<tr class="total">
+									<td>Order Total:</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+								</tr>
+							</table>
+							<div class="row">
+								<div class="col-sm-12">
+									<a href="order-details.html" class="btn btn-block">Submit Order</a>
+								</div>
+							</div>
+						</div>
+						<!-- end order-summary -->
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end checkout -->
