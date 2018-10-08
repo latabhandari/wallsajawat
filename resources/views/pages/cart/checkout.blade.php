@@ -46,8 +46,6 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->profile->state }}">
-
 											<select class="form-control" name="city">
 												@foreach ($states as $state)
 												  <option value="{{ $state->id }}">{{ $state->name }}</option>
