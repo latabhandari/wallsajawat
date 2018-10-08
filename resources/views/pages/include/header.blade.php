@@ -64,7 +64,7 @@ switch ($segment)
                                         <ul class="dropdown-menu sub-dropdown">
                                             <li><a href="#">My Wishlist</a></li>
                                             <li><a href="#">My Orders</a></li>
-                                            <li><a href="#">My Cart</a></li>
+                                            <li><a href="{{ route('cart') }}">My Cart</a></li>
                                         </ul>
                                        </div>
                                       @endguest
