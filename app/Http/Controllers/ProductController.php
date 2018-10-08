@@ -165,5 +165,11 @@ class ProductController extends Controller
             }
        }
 
+      public function getCities($state_id = '')
+        {
+            $cities = Cities::select('id AS i', 'name AS n')->where('state_id', $state_id)->get();
+            echo json_encode(['status' => true, 'cities' => $cities]);
+        }
+
 }
 

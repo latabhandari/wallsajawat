@@ -41,7 +41,7 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>First Name <samp>*</samp></label>
+											<label>Full Name <samp>*</samp></label>
 											<input type="text" class="form-control" value="{{ $user->name }}">
 										</div>
 									</div>
@@ -57,7 +57,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
-											<select class="form-control" name="city">
+											<select class="form-control" name="state" onchange="getCities(this.value)">
 												@foreach ($states as $state)
 												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
 												@endforeach
@@ -80,14 +80,14 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->profile->pin }}" />
+											<input type="text" name="postal_code" class="form-control" value="{{ $user->profile->pin }}" />
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Country <samp>*</samp></label>
-											<select class="form-control">
-												<option>India</option>
+											<select class="form-control" name="country_id">
+												<option value="">India</option>
 											</select>
 										</div>
 									</div>
@@ -198,5 +198,26 @@
 		<!-- end checkout -->
 	</div>
 </div>
+
+<script>
+
+	function getCities(state_id)
+		 {
+					$.ajax({
+	                             type: "POST",
+	                             url: WallSajawat.getSitePath('getcities/' +  state_id),
+	                             dataType: "json",
+	                             data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+	                             success: function (resp) {
+
+	                                  $("#cal_price").text("INR " + resp.price);
+	                             }
+                         });
+
+		 }
+
+
+
+</script>
 
 @endsection
