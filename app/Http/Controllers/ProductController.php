@@ -174,7 +174,7 @@ class ProductController extends Controller
 
       public function checkoutStore(Request $request)
            {
-               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|size:6|integer', 'mobile' => 'required']);
+               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|size:6|numeric', 'mobile' => 'required']);
 
                $params                             =    $request->all();
 
