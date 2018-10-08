@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'unix_timestamp' => time()
         ]);
 
-        Profile::create(['user_id' => $user->id])
+        Profile::create(['user_id' => $user->id]);
         return $user;
 
     }
