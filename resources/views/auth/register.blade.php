@@ -113,7 +113,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <input type="submit" class="btn btn-block">
+                                <input type="submit" class="btn btn-success">
                                     {{ __('Register') }}
                                 </button>
                             </div>
