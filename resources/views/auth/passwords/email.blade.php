@@ -20,14 +20,13 @@
             <div class="title measure-title">
                 <ul class="navbar">
                     <li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                    <li>Login</li>
+                    <li>{{ __('Reset Password') }}</li>
                 </ul>
             </div>
         </div>
 
         <div class="col-sm-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
