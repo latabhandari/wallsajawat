@@ -113,7 +113,51 @@
 						</div>
 					</div>
 					<!-- end form-box -->
-					
+					<!-- start form-box -->
+					<div class="form-box">
+						<div class="sub-heading">
+							<h3><span>2</span> Billing & Payment</h3>
+						</div>
+						<div class="form">
+							<h5>Payment Method</h5>
+							<div class="form-group">
+								<label><input type="checkbox" name=""> My billing address is the same as my shipping address</label>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-12">
+										<label class="card-info">
+											<input type="radio" name="">
+											<img src="images/visa.gif" width="37" height="23" alt="visa">
+											<img src="images/mastercard.gif" width="37" height="23" alt="mastercard">
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Card Number <samp>*</samp></label>
+										<input type="text" class="form-control">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label>Expiration Date <samp>*</samp></label>
+										<div class="row">
+											<div class="col-sm-4 padding-right-none">
+												<input type="text" class="form-control">		
+											</div>
+											<div class="col-sm-8">
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end form-box -->
 				</div>
 				<div class="col-sm-4">
 					<div class="rightcol-fixed">
