@@ -159,42 +159,7 @@
 					</div>
 					<!-- end form-box -->
 				</div>
-				<div class="col-sm-4">
-					<div class="rightcol-fixed">
-						<div class="add-coupon">
-							<h5>Redeem a coupon or promotion</h5>
-							<label>Enter the code below and click Apply</label>
-							<div class="row">
-								<div class="col-sm-8">
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-sm-4 padding-left-none">
-									<input type="submit" value="Apply" class="btn btn-block">
-								</div>
-							</div>
-						</div>
-						<!-- start order-summary -->
-						<div class="order-summary">
-							<table>
-								<tr>
-									<td>Items:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
-								</tr>
-								
-								<tr class="total">
-									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
-								</tr>
-							</table>
-							<div class="row">
-								<div class="col-sm-12">
-									<a href="order-details.html" class="btn btn-block">Submit Order</a>
-								</div>
-							</div>
-						</div>
-						<!-- end order-summary -->
-					</div>
-				</div>
+			
 			</div>
 		</div>
 		<!-- end checkout -->
