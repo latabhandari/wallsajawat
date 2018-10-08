@@ -63,6 +63,9 @@ class LoginController extends Controller
 
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
+        if ($request->has('redirect_url'))
+        return Redirect::to($request->input('redirect_url'));
+           else
         return redirect()->route('home.index');
         //return redirect($this->redirectTo);
      }
