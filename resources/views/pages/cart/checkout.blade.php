@@ -47,12 +47,23 @@
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
 											<input type="text" class="form-control" value="{{ $user->profile->state }}">
+
+											<select class="form-control" name="city">
+												@foreach ($states as $state)
+												  <option value="{{ $state->id }}">{{ $state->name }}</option>
+												@endforeach
+											</select>
+
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>City</label>
-											<input type="text" class="form-control" value="{{ $user->profile->city }}">
+											<select class="form-control" name="city">
+												@foreach ($cities as $city)
+												  <option value="{{ $city->id }}">{{ $city->name }}</option>
+												@endforeach
+											</select>
 										</div>
 									</div>
 								</div>
@@ -76,7 +87,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Phone Number <samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->mobile }}">
+											<input type="text" class="form-control" name="mobile" value="{{ $user->mobile }}">
 										</div>
 									</div>
 									<div class="col-sm-6">

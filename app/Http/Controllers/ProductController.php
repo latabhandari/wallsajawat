@@ -9,8 +9,12 @@ use App\Measurement as Measurement;
 use Cart;
 use App\ProductImages as ProductImages;
 use App\ProductCategory as ProductCategory;
+use App\Cities as Cities;
+use App\States as States;
 use DB;
 use App\Helpers\MyHelper;
+
+
 class ProductController extends Controller
 {
     //    
@@ -149,8 +153,11 @@ class ProductController extends Controller
        {
           if(\Auth::check())
            {
-                 $user = \Auth::user();
-                 return view('pages.cart.checkout', compact('user'));  
+                 $user   = \Auth::user();
+                 
+                 $states = States::where('country_id', 101)->all();
+                 $cities = Cities::where('state_id', 12)->all();
+                 return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
            }
           else
             {
