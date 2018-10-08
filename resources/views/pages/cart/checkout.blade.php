@@ -31,7 +31,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>First Name <samp>*</samp></label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control" value="{{ $user->name }}">
 										</div>
 									</div>
 									<div class="col-sm-6">
