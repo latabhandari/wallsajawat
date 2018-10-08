@@ -204,10 +204,10 @@
 	function getCities(state_id)
 		 {
 					$.ajax({
-	                             type: "POST",
+	                             type: "GET",
 	                             url: WallSajawat.getSitePath('getcities/' +  state_id),
 	                             dataType: "json",
-	                             data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+	                             data: {},
 	                             success: function (resp) {
 
 	                                  $("#cal_price").text("INR " + resp.price);
