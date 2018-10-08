@@ -42,25 +42,25 @@
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
 
-                    <div class="form-grup">
-                        <div class="col-md-12 text-center">
-                           <div class="col-md-4 text-center">
-                                   <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
-                                     <span class="fa fa-facebook"></span> Sign in with Facebook
-                                   </a>
+                        <div class="form-grup" style="margin:0 0 20px 0">
+                            <div class="col-md-12 text-center">
+                               <div class="col-md-4 text-center">
+                                       <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
+                                         <span class="fa fa-facebook"></span> Sign in with Facebook
+                                       </a>
+                                </div>
+
+                                <div class="col-md-4 text-center">
+                                       <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google') }}">
+                                            <span class="fa fa-google"></span> Sign in with Google
+                                       </a>
+                                </div>
+
+                                <div class="col-md-4 text-center"></div>
+
                             </div>
-
-                            <div class="col-md-4 text-center">
-                                   <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google') }}">
-                                        <span class="fa fa-google"></span> Sign in with Google
-                                   </a>
-                            </div>
-
-                            <div class="col-md-4 text-center"></div>
-
+                            
                         </div>
-                        
-                    </div>
 
                     
 
