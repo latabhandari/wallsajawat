@@ -29,10 +29,11 @@
 						@php
 						   $city_id  = $user->profile->city_id;
 						   $state_id = $user->profile->state_id;
-						   if (empty($city_id) && empty($state_id)):
-						     $city_id   = env('DEFAULT_CITY') 
-						     $state_id  = env('DEFAULT_STATE')
-						   endif
+						   if (empty($city_id) && empty($state_id))
+						    {
+						       $city_id   = env('DEFAULT_CITY') 
+						       $state_id  = env('DEFAULT_STATE')
+						    }
 						@endphp
 
 						<div class="form">
