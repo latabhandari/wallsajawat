@@ -30,7 +30,7 @@
 
         <div class="col-sm-8">
             <div class="card">
-                  <div class="card-body" style="margin:20px 0 20px 60px">
+                  <div class="card-body" style="margin:10px 0 40px 60px">
 
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
