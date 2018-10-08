@@ -156,7 +156,7 @@
 							<table>
 								<tr>
 									<td>Items:</td>
-									<td class="text-right"><i class="fa fa-inr"> {{ Cart::total() }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
 								</tr>
 								<tr>
 									<td>Shipping:</td>
