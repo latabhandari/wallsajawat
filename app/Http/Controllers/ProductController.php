@@ -149,7 +149,7 @@ class ProductController extends Controller
        {
           if(\Auth::check())
            {
-                 $user = Auth::user();
+                 $user = \Auth::user();
                  return view('pages.cart.checkout', compact('user'));  
            }
           else
