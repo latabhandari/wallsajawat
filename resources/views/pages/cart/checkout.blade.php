@@ -31,8 +31,8 @@
 						</div>
 
 						@php
-						   $city_id  = $user->profile->city_id;
-						   $state_id = $user->profile->state_id;
+						   $city_id  = $user->profile->city;
+						   $state_id = $user->profile->state;
 						   if (empty($city_id) && empty($state_id))
 						    {
 						       $city_id   = 1119; //env('DEFAULT_CITY'); 
