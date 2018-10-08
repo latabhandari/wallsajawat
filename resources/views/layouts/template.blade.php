@@ -57,7 +57,7 @@
                     </div>
                     @endforeach
 
-                    <div class="sub-img6" style="background-image: url({{ asset('build/assets/images/All-elements.png') }});min-height: 300px;width:318px;margin-left: 3px">
+                    <div class="sub-img6" style="background-image: url({{ asset('build/assets/images/All-elements.png') }});">
                         <a href="">
                             <h5>All</h5>
                             <h4>Top Sellers</h4>
