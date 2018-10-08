@@ -13,10 +13,6 @@
 
 @section('content')
 
-@php
- print_r($user)
-@endphp
-
 <div class="main-container">
 	<div class="container">
 		<!-- start checkout -->
