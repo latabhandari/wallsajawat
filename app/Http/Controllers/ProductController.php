@@ -187,9 +187,9 @@ class ProductController extends Controller
                User::find(Auth::user()->id)->update($fields);
 
                $pfields['address']                 =    $params['address'];
-               $pfields['city_id']                 =    $params['city_id'];
-               $pfields['state_id']                =    $params['state_id'];
-               $pfields['postal_code']             =    $params['postal_code'];
+               $pfields['city']                 =    $params['city_id'];
+               $pfields['state']                =    $params['state_id'];
+               $pfields['pin']             =    $params['postal_code'];
                
                Profile::where('user_id', Auth::user()->id)->update($pfields);
 
