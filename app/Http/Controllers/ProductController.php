@@ -161,7 +161,7 @@ class ProductController extends Controller
            }
           else
             {
-                return redirect('login?redirect_url='.url()->previous());
+                return redirect('login?redirect_url='.route('login'));
             }
        }
 
