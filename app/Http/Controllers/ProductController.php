@@ -149,7 +149,7 @@ class ProductController extends Controller
        {
           if(\Auth::check())
            {
-                 return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));  
+                 return view('pages.cart.checkout');  
            }
           else
             {
