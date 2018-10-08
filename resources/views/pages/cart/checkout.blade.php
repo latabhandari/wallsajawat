@@ -37,7 +37,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Address Line<samp>*</samp></label>
-											<input type="text" class="form-control" value="{{ $user->profile->address }}">
+											<input type="text" class="form-control" value="{{ $user->user->address }}">
 										</div>
 									</div>
 								</div>
