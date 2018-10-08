@@ -37,18 +37,30 @@
 						@endphp
 
 						<div class="form">
-							<form action="#">
+							<form name="checkout" action="{{ route('cart.checkout.store') }}" method="POST">
+								@csrf
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Full Name <samp>*</samp></label>
 											<input type="text" name="name" class="form-control" value="{{ $user->name }}">
+											@if ($errors->has('name'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('name') }}
+			                                    </span>
+			                                @endif
+
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Address Line<samp>*</samp></label>
 											<input type="text" name="address" class="form-control" value="{{ $user->profile->address }}">
+											@if ($errors->has('address'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('address') }}
+			                                    </span>
+			                                @endif
 										</div>
 									</div>
 								</div>
@@ -74,6 +86,11 @@
 													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
 													@endforeach
 												</select>
+												@if ($errors->has('city_id'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('city_id') }}
+			                                    </span>
+			                                @endif
 											</div>
 										</div>
 									</div>
@@ -83,6 +100,11 @@
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
 											<input type="text" name="postal_code" class="form-control" value="{{ $user->profile->pin }}" />
+											@if ($errors->has('password'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('password') }}
+			                                    </span>
+			                                @endif
 										</div>
 									</div>
 									<div class="col-sm-6">
@@ -91,6 +113,11 @@
 											<select class="form-control" name="country_id">
 												<option value="">India</option>
 											</select>
+											@if ($errors->has('postal_code'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('postal_code') }}
+			                                    </span>
+			                                @endif
 										</div>
 									</div>
 								</div>
@@ -99,6 +126,11 @@
 										<div class="form-group">
 											<label>Phone Number <samp>*</samp></label>
 											<input type="text" class="form-control" name="mobile" value="{{ $user->mobile }}">
+											@if ($errors->has('mobile'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('mobile') }}
+			                                    </span>
+			                                @endif
 										</div>
 									</div>
 									<div class="col-sm-6">

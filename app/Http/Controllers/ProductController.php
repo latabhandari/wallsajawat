@@ -176,16 +176,20 @@ class ProductController extends Controller
            {
                request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|size:6|integer', 'mobile' => 'required']);
 
-               $params                            =    $request->all();
+               $params                             =    $request->all();
 
-               $fields['name']                    =    $params['name'];
-               $fields['address']                 =    $params['address'];
-               $fields['city_id']                 =    $params['city_id'];
-               $fields['state_id']                =    $params['state_id'];
-               $fields['postal_code']             =    $params['postal_code'];
-               $fields['mobile']                  =    $params['mobile'];
+               $fields['name']                     =    $params['name'];
+               $fields['mobile']                   =    $params['mobile'];
+               User::find(Auth::user()->id)->update($fields);
 
+               $pfields['address']                 =    $params['address'];
+               $pfields['city_id']                 =    $params['city_id'];
+               $pfields['state_id']                =    $params['state_id'];
+               $pfields['postal_code']             =    $params['postal_code'];
+               
                Profile::find(Auth::user()->id)->update($fields);
+
+               
            }
 
 }
