@@ -97,7 +97,7 @@ a, a:focus, a:hover{
   width: 98%!important;
 }
 .main-img {
-  background-image: url(../Images/Banner.jpg);
+  background-image: url(../images/Banner.jpg);
   min-height: 500px;
   margin-left: 12px;
   background-size: cover;
