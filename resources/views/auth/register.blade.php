@@ -30,7 +30,6 @@
 
         <div class="col-sm-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
                   <div class="card-body">
                     <div class="form-grup">
                         <div class="col-md-12 text-center">
