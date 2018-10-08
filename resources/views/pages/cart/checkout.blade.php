@@ -217,7 +217,7 @@
 	                             		 	 h += '<select class="form-control" name="city">';
 	                             		 	 $.each(resp.cities, function(a, b) {
 	                             		 	 	h += '<option value="' + b.i + '">' + b.n + '</option>'
-	                             		 	 }
+	                             		 	 });
 	                             		 	 h += '</select>';
 	                             		 	 $("#cityContainer").html(h);
 	                             		 }
