@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12">
+        <div class="col-sm-8">
             <div class="card">
                 <div class="card-body">
 
@@ -101,6 +101,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-sm-4"></div>
     </div>
 </div>
 @endsection
