@@ -13,10 +13,10 @@
                                     <div class="col-sm-4">
                                         <h4>INFORMATION</h4>
                                         <ul class="nav info-list">
-                                            <li>About Us</li>
-                                            <li>Contact Us</li>
-                                            <li>Terms of Use</li>
-                                            <li>Return/Refund policies</li>
+                                            <li><a href="{{ route('about') }}">About Us</a></li>
+                                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                                            <li><a href="#">Terms of Use</a></li>
+                                            <li><a href="#">Return/Refund policies</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
@@ -42,7 +42,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-12 text-center footer-btm">
-                                <h5>Copyright &copy; 2018 wallpapers, All Rights Reserved.</h5>
+                                <h5>Copyright &copy; {{ date("Y") }} wallpapers, All Rights Reserved.</h5>
                             </div>
                         </div>
                     </div>
