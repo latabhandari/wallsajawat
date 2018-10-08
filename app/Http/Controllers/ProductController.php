@@ -145,5 +145,17 @@ class ProductController extends Controller
       }
 
 
+      public function checkout()
+       {
+          if(\Auth::check())
+           {
+                 return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));  
+           }
+          else
+            {
+                return redirect('login?redirect_url='.url()->previous());
+            }
+       }
+
 }
 
