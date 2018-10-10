@@ -18,7 +18,7 @@
 		<!-- start checkout -->
 
 		<form name="checkout" action="{{ route('cart.checkout.store') }}" method="POST">
-								@csrf
+		@csrf
 
 		<div class="checkout">
 			<div class="row">
@@ -194,6 +194,9 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="rightcol-fixed">
+
+					<form name="coupon" action="{{ route('cart.checkout.coupon') }}" method="POST">	
+					@csrf
 						<div class="add-coupon">
 							<h5>Redeem a coupon or promotion</h5>
 							<label>Enter the code below and click Apply</label>
@@ -206,6 +209,8 @@
 								</div>
 							</div>
 						</div>
+					</form>
+
 						<!-- start order-summary -->
 						<div class="order-summary">
 							<table>

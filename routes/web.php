@@ -58,6 +58,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/checkout', 'ProductController@checkout')->name('cart.checkout');
     Route::post('/checkout', 'ProductController@checkoutStore')->name('cart.checkout.store');
     Route::get('/getcities/{state_id}', 'ProductController@getCities')->name('checkout.cities');
+    Route::post('/coupon', 'ProductController@coupon')->name('cart.checkout.coupon');
 
 });
 
