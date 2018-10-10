@@ -60,6 +60,13 @@ class CheckoutController extends Controller
           {
               $params = $request->all();
               $coupon = $params['coupon'];
+              if (session('discount'))
+	              {
+						$arr = ["status" => false, "msg" => "coupon code does not exist!"];
+						echo json_encode($arr);
+						return;
+	              }
+
               if ($coupon)
               	 {	
               	 	$current_day   = date('d'); 
