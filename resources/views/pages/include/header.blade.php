@@ -53,23 +53,9 @@ switch ($segment)
                   <div class="col-sm-2 menu_icons">
                     <ul class="nav menu-icons pull-right">
                       <li><i class="fa fa-search"></i></li>
+                      <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                       <li>
-                                      @guest
-                                           <a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a>
-                                      @else
-                                      <div class="dropdown">
-                                        <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu sub-dropdown">
-                                            <li><a href="#">My Wishlist</a></li>
-                                            <li><a href="#">My Orders</a></li>
-                                            <li><a href="{{ route('cart') }}">My Cart</a></li>
-                                        </ul>
-                                       </div>
-                                      @endguest
-                            </li>
-                      <li>
+
                         <div class="dropdown">
                           <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="caret"></span></button>
                           <ul class="dropdown-menu sub-dropdown">
@@ -77,8 +63,11 @@ switch ($segment)
                             @guest
                                  <li><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
                                  <li><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                                <li><a href="#">Retailer login</a></li>
+                                 <li><a href="#">Retailer login</a></li>
                             @else   
+                                 <li><a class="" href="#">{{ __('Profile') }}</a></li>
+                                 <li><a class="" href="#">{{ __('Orders') }}</a></li>
+                                 <li><a class="" href="#">{{ __('Wishlist') }}</a></li>
                                  <li><a class="" href="#">{{ __('Profile') }}</a></li>
                                  <li><a class="" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">

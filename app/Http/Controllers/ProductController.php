@@ -153,13 +153,11 @@ class ProductController extends Controller
         	return redirect()->route('cart');
       }
 
-
       public function checkout()
        {
           if(\Auth::check())
            {
                  $user   = \Auth::user();
-                 
                  $states = States::where('country_id', 101)->get();
                  $cities = Cities::where('state_id', 13)->get();
                  return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
