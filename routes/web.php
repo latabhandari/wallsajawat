@@ -53,12 +53,12 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('social_login');
     Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('social_callback');
 
+    Route::get('/getcities/{state_id}', 'ProductController@getCities')->name('checkout.cities');
 
     Route::get('/category/{slug}', 'CategoryController@product')->name('category.product');
-    Route::get('/checkout', 'ProductController@checkout')->name('cart.checkout');
-    Route::post('/checkout', 'ProductController@checkoutStore')->name('cart.checkout.store');
-    Route::get('/getcities/{state_id}', 'ProductController@getCities')->name('checkout.cities');
-    Route::post('/coupon', 'ProductController@coupon')->name('cart.checkout.coupon');
+    Route::get('/checkout', 'CheckoutController@checkout')->name('cart.checkout');
+    Route::post('/checkout', 'CheckoutController@checkoutStore')->name('cart.checkout.store');
+    Route::post('/coupon', 'CheckoutController@coupon')->name('cart.checkout.coupon');
 
 });
 
