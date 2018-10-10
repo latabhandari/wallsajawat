@@ -60,7 +60,7 @@
 								</div>
 								<div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ round($row->price) }}</div>
 								<div class="col-sm-2">
-									<select name="update[{{ $row->rowId }}]">
+									<select name="update[{{ $row->rowId }}]" onchange="this.form.submit()">
 										  @for($i = 1; $i <= 10; $i++)
 										  {{ $selected = ($i == $row->qty) ? "selected" : "" }}
 										  <option value="{{ $i }}" {{ ($i == $row->qty) ? "selected" : "" }}>{{ $i }}</option>
