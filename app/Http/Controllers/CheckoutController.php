@@ -10,7 +10,7 @@ use Auth;
 
 use App\Cities as Cities;
 use App\States as States;
-use App\Offers as Offers;
+use App\Offer as Offer;
 
 class CheckoutController extends Controller
 {
@@ -69,7 +69,7 @@ class CheckoutController extends Controller
               	 	//$end_date      = mktime(23, 59, 59, $current_month, $current_day, $current_day);
               	 	$current_time    = time();
 
-              	 	$record        = Offers::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limt(1)->first();
+              	 	$record        = Offer::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limt(1)->first();
 					if ($record === null) 
 						{
 						   $cart_total = Cart::total();
