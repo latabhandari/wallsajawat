@@ -55,7 +55,7 @@ switch ($segment)
                       <li><i class="fa fa-search"></i></li>
                       <li>
                                       @guest
-                                           <a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>
+                                           <a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i></a>
                                       @else
                                       <div class="dropdown">
                                         <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>
