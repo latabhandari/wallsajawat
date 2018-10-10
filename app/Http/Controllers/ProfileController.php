@@ -14,7 +14,6 @@ class ProfileController extends Controller
      public function __construct()
 	    {
 	        $this->middleware('auth');
-	        $this->_userid = Auth::user()->id;
 	    }
 
      public function mywishlist()
@@ -22,7 +21,7 @@ class ProfileController extends Controller
         	$users = DB::table('wishlists')
 		            			->join('products', 'wishlists.pid', '=', 'products.id')
 		            			->select('products.*')
-		           		 		->where('wishlists.user_id', $this->_userid)
+		           		 		->where('wishlists.user_id', Auth::user()->id)
 		           				->get();
 		    print_r($users);
 
