@@ -211,6 +211,7 @@
 						<!-- start order-summary -->
 
 						@php
+						  $discount = 	session('discount');
 						  $cart_total = App\Helpers\MyHelper::removeComma(Cart::total());
 						  $total      = $cart_total - $discount;
 
@@ -223,9 +224,7 @@
 								</tr>
 
 								@php
-								   $discount = 0;
-								   if (session('discount')) {
-								   $discount = 	session('discount');
+								   if ($discount) {
 								@endphp
 
 									<tr>
