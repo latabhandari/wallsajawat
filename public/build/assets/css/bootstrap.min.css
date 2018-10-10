@@ -8,7 +8,7 @@
  .rgt-top a{color:#fff;}
  .crt, .crt:hover{display:inline !important;background:none !important;}
  .crt span{top:3px;right:4px;width:18px;border-radius:10px;background:#28a745;position:absolute;height:18px;color:#fff;font-size:12px;text-align:center}
- ul .info-list {margin: 0; padding: 0;}
- ul .info-list li {list-style-type: none; line-height:20px}
- ul .info-list li a, ul .info-list li a:hover {color:#fff}
+ ul.info-list {margin: 0; padding: 0;}
+ ul.info-list li {list-style-type: none; line-height:20px}
+ ul.info-list li a, ul .info-list li a:hover {color:#fff}
 /*# sourceMappingURL=bootstrap.min.css.map */
