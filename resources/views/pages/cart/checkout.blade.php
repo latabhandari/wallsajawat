@@ -271,19 +271,18 @@
 
 	$('#apply_coupon').on('click', function() {
 		var coupon = $.trim($("#coupon").val());
-
 		if (! coupon)
 			{
 				$("#cpn_err").html('please enter coupon code!');
 				return false;
 			}
 			 
-			 $(this).attr('disabled', true)
+			 $(this).attr('disabled', true);
 
 			 $.ajaxSetup({
-							        headers: {
-							            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-							        }
+					        headers: {
+					            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+					        }
     					});
 
 
