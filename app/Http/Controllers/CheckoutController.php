@@ -11,6 +11,7 @@ use Auth;
 use App\Cities as Cities;
 use App\States as States;
 use App\Offer as Offer;
+use Cart;
 
 class CheckoutController extends Controller
 {
