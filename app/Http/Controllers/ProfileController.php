@@ -15,6 +15,6 @@ class ProfileController extends Controller
 
      public function mywishlist()
        {
-           return view('pages.wishlist.wishlist';
+           return view('pages.wishlist.wishlist');
        }
 }
