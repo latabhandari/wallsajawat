@@ -202,8 +202,9 @@
 									<input type="text" class="form-control" name="coupon" placeholder="Coupon Code">
 								</div>
 								<div class="col-sm-4 padding-left-none">
-									<input type="submit" value="Apply" class="btn btn-block" id="apply_coupon">
+									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" autocomplete="off" />
 								</div>
+								<p>sfsdf</p>
 							</div>
 						</div>
 
@@ -271,7 +272,7 @@
 	$('#apply_coupon').on('click', function() {
 		console.log(3);
 
-	}
+	});
 
 
 
