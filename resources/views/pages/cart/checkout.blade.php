@@ -233,7 +233,7 @@
 								@endphp
 
 									<tr>
-									  <td>Items:</td>
+									  <td>Discount:</td>
 									  <td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $discount }}</td>
 								    </tr>
 
