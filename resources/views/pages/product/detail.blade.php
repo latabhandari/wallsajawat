@@ -47,7 +47,7 @@
           <div class="product-txtb">
             <h3>{{ $detail->name }}</h3>
             <p class="cag-title">1100 orders this month</p>
-            <p class="wishlist"><a href="javascript:void(0)">[Add to wishlist]</a></p>
+            <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
             <div class="rating">
               <div class="row">
                 <div class="col-sm-12">
@@ -280,6 +280,20 @@
 
               }
          }
+
+        $("#addwishlist").on('click', function() {
+
+                  $.ajax({
+                             type: "POST",
+                             url: WallSajawat.getSitePath('wishlist'),
+                             dataType: "json",
+                             data: {"pid": pid},
+                             success: function (resp) {
+                                alert(resp.msg);
+                             }
+
+                         });
+        }); 
 
         $(document).ready(function() {
                $('.bxslider').bxSlider({

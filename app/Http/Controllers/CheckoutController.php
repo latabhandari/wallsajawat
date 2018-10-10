@@ -17,7 +17,7 @@ use App\Helpers\MyHelper as MyHelper;
 class CheckoutController extends Controller
 {
     //
-
+		
    public function __construct()
     {
         $this->middleware('auth');
