@@ -199,10 +199,10 @@
 							<label>Enter the code below and click Apply</label>
 							<div class="row">
 								<div class="col-sm-8">
-									<input type="text" class="form-control" name="coupon" placeholder="Coupon Code">
+									<input type="text" class="form-control" name="coupon" placeholder="Coupon Code" autocomplete="off" />
 								</div>
 								<div class="col-sm-4 padding-left-none">
-									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" autocomplete="off" />
+									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" />
 								</div>
 								<p class="cpn_err"></p>
 							</div>
