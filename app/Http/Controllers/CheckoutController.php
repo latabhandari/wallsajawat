@@ -69,7 +69,7 @@ class CheckoutController extends Controller
               	 	//$end_date      = mktime(23, 59, 59, $current_month, $current_day, $current_day);
               	 	$current_time    = time();
 
-              	 	$record        = Offer::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limt(1)->first();
+              	 	$record        = Offer::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limit(1)->first();
 					if ($record === null) 
 						{
 						   $cart_total = Cart::total();
