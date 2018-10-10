@@ -39,7 +39,7 @@
             <div class="card">
                 <div class="card-body" style="margin:10px 0 40px 60px">
 
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                    <form method="POST" action="{{ route('login') . '?' . Request::server('QUERY_STRING') }}. '?' . Request::server('QUERY_STRING')" aria-label="{{ __('Login') }}">
                         @csrf
 
                         <div class="form-grup">
