@@ -26,6 +26,8 @@
           </div>
         </div>
         <!-- start cart-box -->
+
+    @if(count($wishlists))
         <div class="cart-box">
           <div class="title">
             <div class="row">
@@ -36,11 +38,18 @@
               <div class="col-sm-2">Total</div>
             </div>
           </div>
+
+          @foreach($wishlists) as $row)
+            @php
+              $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
+              $measurement_info  = App\Helpers\MyHelper::getMeasurement($row->options->type);
+            @endphp
+
           <div class="cart-row">
             <div class="row">
               <div class="col-sm-2">
                 <div class="imgb">
-                  <img src="images/product/img_product_detail1.jpg" width="281" height="345" alt="product">
+                  <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="product">
                 </div>
               </div>
               <div class="col-sm-4">
@@ -57,31 +66,20 @@
                   <option>3</option>
                   <option>4</option>
                 </select>
-                <a href="#" class="remove">Remove</a>
+                <a class="remove" href="{{ route('cart.item.delete', $row->rowId) }}">Remove</a>
               </div>
-              <div class="col-sm-2">INR 2,756.12</div>
+              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
             </div>
           </div>
-          <div class="subtotal">
-            <div class="row">
-              <div class="col-sm-10 text-right">
-                <span>Subtotal</span>
-              </div>
-              <div class="col-sm-2">
-                INR 2,756.12
-              </div>
-            </div>
-          </div>
+       @endforeach
+
         </div>
-        <!-- end cart-box -->
-        <div class="row">
-          <div class="col-sm-6">
-            <a href="product-listing.html" title="Continue Shopping" class="back-link"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Continue Shopping</a>
-          </div>
-          <div class="col-sm-6">
-            <a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
-          </div>
-        </div>
+    @else
+        <div>Sorry, no product in your wishlist.</div>     
+
+    @endif
+
+
       </div>
     </div>
 </div>

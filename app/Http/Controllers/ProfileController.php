@@ -19,13 +19,11 @@ class ProfileController extends Controller
 
      public function mywishlist()
        {
-        	$users = DB::table('wishlists')
+        	$wishlists = DB::table('wishlists')
 		            			->join('products', 'wishlists.pid', '=', 'products.id')
 		            			->select('products.*')
 		           		 		->where('wishlists.user_id', Auth::user()->id)
 		           				->get();
-		    print_r($users);
-
-           return view('pages.wishlist.wishlist');
+           return view('pages.wishlist.wishlist', compact('wishlists'));
        }
 }
