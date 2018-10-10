@@ -56,10 +56,12 @@ class CheckoutController extends Controller
 
         public function coupon(Request $request)
           {
+          	echo "1";
               $params = $request->all();
               $coupon = $params['coupon'];
               if ($coupon)
               	 {	
+              	 	echo "2";
               	 	$current_day   = date('d'); 
               	 	$current_month = date('m'); 
               	 	$current_day   = date('y'); 
@@ -75,12 +77,14 @@ class CheckoutController extends Controller
 						   switch ($type)
 							    {
 							    	case 1:
+							    				echo "3";
 							    				$discount     = $record->discount;
 							    				$cal_discount = $cart_total * $discount / 100;
 							    				$total        = $cart_total - $cal_discount; 
 
 							    				break;
 							    	case 2:
+							    				echo "4";
 							    				$discount     = $record->discount;
 							    				$total        = $cart_total - $discount; 
 
