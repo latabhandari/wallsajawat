@@ -270,13 +270,14 @@
 		 }
 
 	$('#apply_coupon').on('click', function() {
-		var coupon = $.trim($("#coupon").val())
+		var coupon = $.trim($("#coupon").val());
 		if (! coupon)
 			{
 				$("#cpn_err").html('please enter coupon code!');
 				return false;
 			}
-			    $(this).attr('disabled', true)
+			 
+			 $(this).attr('disabled', true)
 
 			 $.ajaxSetup({
 							        headers: {
@@ -297,6 +298,7 @@
 	                             success: function (resp) {
 	                             	if (resp.status == true)
 	                             		 {
+	                             		 	
 	                             		 }
 
 	                                  
