@@ -86,21 +86,19 @@ class CheckoutController extends Controller
 
 							    				break;
 							    }
-							    	session(['total' => $total, 'discount' => $discount]);
+							    	session(['discount' => $discount]);
 							    	$arr = ["status" => true, "msg" => "applied"];
 						}
 					else
 						{
 							$arr = ["status" => false, "msg" => "coupon code does not exist!"];
 						}
-
-
               	 }
               else
               	 {
-              	 	    $arr = ["status" => false, "msg" => "please enter coupon code!"];
+              	 	        $arr = ["status" => false, "msg" => "please enter coupon code!"];
               	 }
-              			 echo json_encode($arr);
+              			    echo json_encode($arr);
           } 
 
 }

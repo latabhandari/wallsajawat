@@ -215,10 +215,25 @@
 									<td>Items:</td>
 									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
 								</tr>
+
+								@php
+								   $discount = 0;
+								   if (session('discount')) {
+								   $discount = 	session('discount');
+								@endphp
+
+									<tr>
+									  <td>Items:</td>
+									  <td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+								    </tr>
+
+								@php
+								  }
+								@endphp
 								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() - $discount }}</td>
 								</tr>
 							</table>
 							<div class="row">
@@ -285,7 +300,6 @@
 					        }
     					});
 
-
 					$.ajax({
 	                             type: "POST",
 	                             url: WallSajawat.getSitePath('coupon'),
@@ -299,14 +313,9 @@
 	                             	if (resp.status == true)
 	                             		 {
 
-	                             		 }
-
-	                                  
+	                             		 }	                                  
 	                             }
                          });
-
-
-
 	});
 
 
