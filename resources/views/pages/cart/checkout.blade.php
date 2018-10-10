@@ -232,13 +232,13 @@
 									
 								  $cart_total = Cart::total();	
 								  $cart_total = App\Helpers\MyHelper::removeComma($cart_total);
-								  $total      = $cart_total - $discount;
+								  //$total      = $cart_total - $discount;
 
 								@endphp
 								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $total }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $cart_total }}</td>
 								</tr>
 							</table>
 							<div class="row">
