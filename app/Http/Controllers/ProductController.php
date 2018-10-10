@@ -175,8 +175,8 @@ class ProductController extends Controller
                  else
                    {
                          $wishlist = new Wishlist;
-                         $wishlist->user_id        = $userid
-                         $wishlist->pid            = $pid
+                         $wishlist->user_id        = $userid;
+                         $wishlist->pid            = $pid;
                          $wishlist->unix_timestamp = time();
                          $wishlist->ip_address     = request()->ip();
                          $wishlist->save();
