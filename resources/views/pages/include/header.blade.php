@@ -66,9 +66,8 @@ switch ($segment)
                                  <li><a href="#">Retailer login</a></li>
                             @else   
                                  <li><a class="" href="#">{{ __('Profile') }}</a></li>
-                                 <li><a class="" href="#">{{ __('Orders') }}</a></li>
-                                 <li><a class="" href="#">{{ __('Wishlist') }}</a></li>
-                                 <li><a class="" href="#">{{ __('Profile') }}</a></li>
+                                 <li><a class="" href="#">{{ __('My Orders') }}</a></li>
+                                 <li><a class="" href="#">{{ __('My Wishlist') }}</a></li>
                                  <li><a class="" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
                                     @csrf
