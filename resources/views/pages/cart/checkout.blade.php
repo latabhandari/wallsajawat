@@ -194,22 +194,18 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="rightcol-fixed">
-
-					<form name="coupon" action="{{ route('cart.checkout.coupon') }}" method="POST">	
-					@csrf
 						<div class="add-coupon">
 							<h5>Redeem a coupon or promotion</h5>
 							<label>Enter the code below and click Apply</label>
 							<div class="row">
 								<div class="col-sm-8">
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" name="coupon" placeholder="Coupon Code">
 								</div>
 								<div class="col-sm-4 padding-left-none">
-									<input type="submit" value="Apply" class="btn btn-block">
+									<input type="submit" value="Apply" class="btn btn-block" id="apply_coupon">
 								</div>
 							</div>
 						</div>
-					</form>
 
 						<!-- start order-summary -->
 						<div class="order-summary">
@@ -271,6 +267,11 @@
                          });
 
 		 }
+
+	$('#apply_coupon').on('click', function() {
+		console.log(3);
+
+	}
 
 
 
