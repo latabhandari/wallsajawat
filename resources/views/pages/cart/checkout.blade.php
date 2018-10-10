@@ -199,7 +199,7 @@
 							<label>Enter the code below and click Apply</label>
 							<div class="row">
 								<div class="col-sm-8">
-									<input type="text" class="form-control" name="coupon" placeholder="Coupon Code" autocomplete="off" />
+									<input type="text" class="form-control" name="coupon" id="coupon" placeholder="Coupon Code" autocomplete="off" />
 								</div>
 								<div class="col-sm-4 padding-left-none">
 									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" />
@@ -270,7 +270,40 @@
 		 }
 
 	$('#apply_coupon').on('click', function() {
-		console.log(3);
+		var coupon = $.trim($("#coupon").val())
+		if (! coupon)
+			{
+				$("#cpn_err").html('please enter coupon code!');
+				return false;
+			}
+			    $(this).attr('disabled', true)
+
+			 $.ajaxSetup({
+							        headers: {
+							            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+							        }
+    					});
+
+
+					$.ajax({
+	                             type: "POST",
+	                             url: WallSajawat.getSitePath('coupon'),
+	                             dataType: "json",
+	                             data: {coupon: coupon},
+	                             beforeSend: function() {
+       								 // setting a timeout
+        							 $('#apply_coupon').val('...');
+    							 },
+	                             success: function (resp) {
+	                             	if (resp.status == true)
+	                             		 {
+	                             		 }
+
+	                                  
+	                             }
+                         });
+
+
 
 	});
 

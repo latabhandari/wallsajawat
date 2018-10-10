@@ -53,9 +53,11 @@ class CheckoutController extends Controller
                Profile::where('user_id', Auth::user()->id)->update($pfields);
            }
 
-        public function coupon()
+        public function coupon(Reauest $request)
           {
-
-          }
+              $params = $request->all();
+              $coupon = $params['coupon'];
+              echo $coupon;
+          } 
 
 }
