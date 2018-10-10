@@ -130,7 +130,7 @@ class ProductController extends Controller
     	return redirect()->route('cart');
      }
 
-     public function viewCart()
+     public function viewCart(Request $request)
      {
       /* here delete the coupon discount */
         $request->session()->forget('discount');
