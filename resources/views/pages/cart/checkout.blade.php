@@ -230,8 +230,7 @@
 								@php
 								  }
 									
-								  $cart_total = Cart::total();	
-								  $cart_total = App\Helpers\MyHelper::removeComma($cart_total);
+								  $cart_total = (int) Cart::total();	
 								  //$total      = $cart_total - $discount;
 
 								@endphp
