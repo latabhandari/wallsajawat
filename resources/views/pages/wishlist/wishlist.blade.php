@@ -52,10 +52,8 @@
                 </div>
               </div>
               <div class="col-sm-4">
-                <h5>Men's BN Threadborne Run Mesh Singlet</h5>
-                <p>Sku: 1299528-008-SM</p>
-                <p>Size: Small</p>
-                <p>Color: STEALTH GRAY / Black</p>
+                <h5>{{ $row->name }}</h5>
+                <p>Sku: {{ $row->sku }}</p>
               </div>
               <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
               <div class="col-sm-2">
