@@ -57,7 +57,7 @@
                 <p>Size: Small</p>
                 <p>Color: STEALTH GRAY / Black</p>
               </div>
-              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
+              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
               <div class="col-sm-2">
                 <select class="form-control">
                   <option>1</option>
@@ -67,7 +67,7 @@
                 </select>
                 <a class="remove" href="#">Remove</a>
               </div>
-              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
+              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
             </div>
           </div>
        @endforeach
