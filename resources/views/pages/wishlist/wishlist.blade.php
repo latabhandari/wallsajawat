@@ -49,7 +49,7 @@
             <div class="row">
               <div class="col-sm-2">
                 <div class="imgb">
-                  <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="product">
+                  <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $row->name }}">
                 </div>
               </div>
               <div class="col-sm-4">
@@ -58,7 +58,7 @@
                 <p>Size: Small</p>
                 <p>Color: STEALTH GRAY / Black</p>
               </div>
-              <div class="col-sm-2">INR 2,756.12</div>
+              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
               <div class="col-sm-2">
                 <select class="form-control">
                   <option>1</option>
@@ -66,7 +66,7 @@
                   <option>3</option>
                   <option>4</option>
                 </select>
-                <a class="remove" href="{{ route('cart.item.delete', $row->rowId) }}">Remove</a>
+                <a class="remove" href="#">Remove</a>
               </div>
               <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
             </div>
