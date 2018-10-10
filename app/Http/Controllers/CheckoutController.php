@@ -12,6 +12,7 @@ use App\Cities as Cities;
 use App\States as States;
 use App\Offer as Offer;
 use Cart;
+use App\Helpers\MyHelper as MyHelper;
 
 class CheckoutController extends Controller
 {
@@ -73,7 +74,7 @@ class CheckoutController extends Controller
               	 	$record        = Offer::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limit(1)->first();
 					if ( ! ($record == null)) 
 						{
-						   $cart_total = App\Helpers\MyHelper::removeComma(Cart::total());
+						   $cart_total = MyHelper::removeComma(Cart::total());
 						   $type       = (int) $record->type;
 						   switch ($type)
 							    {
