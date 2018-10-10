@@ -13,6 +13,11 @@ use App\Product as Product;
 
 class MyHelper 
    {
+   	      public static function removeComma($string = '')
+   	       {
+   	       	  preg_replace('/[^0-9,]/s', '', $string);
+   	       }
+
    		  public static function getProductSquareFeetPrice($id)
    	       {
    	       	 $product_info    = Product::where("id", $id)->first();

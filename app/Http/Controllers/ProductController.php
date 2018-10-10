@@ -144,7 +144,7 @@ class ProductController extends Controller
      public function deleteItem($rowId)
       {
       	  Cart::remove($rowId);
-		  return redirect()->route('cart');
+		      return redirect()->route('cart');
       }
 
      public function updateItem(Request $request)

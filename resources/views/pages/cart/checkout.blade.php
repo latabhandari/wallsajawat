@@ -229,11 +229,10 @@
 
 								@php
 								  }
-
-								  $cart_total = Cart::total();
-
-
-								  $total 	  =  $cart_total;
+									
+								  $cart_total = Cart::total();	
+								  $cart_total = App\Helpers\MyHelper::removeComma($cart_total);
+								  $total      = $cart_total - $discount;
 
 								@endphp
 								
