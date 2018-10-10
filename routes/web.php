@@ -59,6 +59,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/checkout', 'CheckoutController@checkout')->name('cart.checkout');
     Route::post('/checkout', 'CheckoutController@checkoutStore')->name('cart.checkout.store');
     Route::post('/coupon', 'CheckoutController@coupon')->name('cart.checkout.coupon');
+    Route::post('/wishlist', 'CheckoutController@wishlist')->name('product.wishlist');
 
 });
 

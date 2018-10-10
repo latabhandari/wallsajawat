@@ -159,5 +159,35 @@ class ProductController extends Controller
             echo json_encode(['status' => true, 'cities' => $cities]);
         }
 
+      public function wishlist(Request $request)
+       {
+         if(\Auth::check())
+           {
+                 $params  = $request->all();
+                 $pid     = $params['pid'];
+                 $userid  = \Auth::user()->id;
+                 $query   = Wishlist::where(['user_id' => $userid, 'pid' => $pid])->get();
+                 if (count($query))
+                   {
+                         $arr = ['status' => false, "msg" => "Already in your wishlist"];
+                   }
+                 else
+                   {
+                         $wishlist = new Wishlist;
+                         $wishlist->user_id        = $userid
+                         $wishlist->pid            = $pid
+                         $wishlist->unix_timestamp = time();
+                         $wishlist->ip_address     = request()->ip();
+                         $wishlist->save();
+                         $arr = ['status' => true, "msg" => "Successfully added in your wishlist"];
+                   }
+           }
+          else
+            {
+                 $arr = ['status' => false, "msg" => "You need to signin or signup to add a wishlist"];
+            }
+                 echo json_encode(['status' => true, 'cities' => $cities]);
+       }
+
 }
 
