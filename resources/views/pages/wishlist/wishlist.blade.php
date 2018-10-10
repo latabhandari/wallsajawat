@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          @foreach($wishlists) as $row)
+          @foreach($wishlists as $row)
             @php
               $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
               $measurement_info  = App\Helpers\MyHelper::getMeasurement($row->options->type);
