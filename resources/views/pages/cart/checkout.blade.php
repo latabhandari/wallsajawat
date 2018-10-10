@@ -291,7 +291,7 @@
 	                             type: "POST",
 	                             url: WallSajawat.getSitePath('coupon'),
 	                             dataType: "json",
-	                             data: {coupon: coupon},
+	                             data: {"coupon": coupon},
 	                             beforeSend: function() {
        								 // setting a timeout
         							 $('#apply_coupon').val('...');

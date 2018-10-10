@@ -105,9 +105,6 @@ class ProductController extends Controller
       $per_square_feet   =  $width_height / $square_feet_value;
       $uprice            =  $price * $per_square_feet;
 
-
-
-
      	/*switch($material_type)
 	      	   {
 	      	   		case 'feet':
