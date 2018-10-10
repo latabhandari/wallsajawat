@@ -233,7 +233,7 @@
 								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() - $discount }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ (Cart::total() - $discount) }}</td>
 								</tr>
 							</table>
 							<div class="row">
