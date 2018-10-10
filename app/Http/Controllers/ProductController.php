@@ -127,6 +127,11 @@ class ProductController extends Controller
 
      	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
 
+
+      /* here delete the coupon discount */
+        $request->session()->forget('discount');
+      /* close delete the coupon discount */
+
     	return redirect()->route('cart');
      }
 
