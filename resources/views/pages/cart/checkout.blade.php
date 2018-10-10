@@ -317,8 +317,13 @@
 	                             success: function (resp) {
 	                             	if (resp.status == true)
 	                             		 {
-
-	                             		 }	                                  
+	                             		 	location.href = location.href;
+	                             		 }
+	                             	else
+	                             	     {
+	                             	     	$('#apply_coupon').val('Apply').attr('disabled', false);
+	                             	     	$('#cpn_err').html(resp.msg);
+	                             	     }	                                  
 	                             }
                          });
 	});
