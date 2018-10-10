@@ -204,7 +204,7 @@
 								<div class="col-sm-4 padding-left-none">
 									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" autocomplete="off" />
 								</div>
-								<p>sfsdf</p>
+								<p class="cpn_err"></p>
 							</div>
 						</div>
 

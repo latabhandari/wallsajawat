@@ -9,4 +9,5 @@
  .crt, .crt:hover{display:inline !important;background:none !important;}
  .crt span{top:3px;right:4px;width:18px;border-radius:10px;background:#28a745;position:absolute;height:18px;color:#fff;font-size:12px;text-align:center}
 
+.cpn_err {float:left;width:100%;padding:0 0 0 15px;font-size:13px;color:#e22525}
 /*# sourceMappingURL=bootstrap.min.css.map */
