@@ -71,6 +71,8 @@ class CheckoutController extends Controller
 
               	 	$record        = Offer::where('start_date', '<=', $current_time)->where('end_date', '>=', $current_time)->where('coupon', $coupon)->where('status', 1)->limit(1)->first();
               	 	print_r($record);
+
+              	 	dd($record);
 					if ($record === null) 
 						{
 						   $cart_total = Cart::total();
