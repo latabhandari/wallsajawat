@@ -15,8 +15,7 @@ class MyHelper
    {
    	      public static function removeComma($string = '')
    	       {
-   	       	  $string =  preg_replace('/[^0-9,]/s', '', $string);
-   	       	  return round($string, 0);
+   	       	  return preg_replace('/[^0-9,]/s', '', round($string, 0));
    	       }
 
    		  public static function getProductSquareFeetPrice($id)
