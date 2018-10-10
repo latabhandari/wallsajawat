@@ -230,7 +230,10 @@
 								@php
 								  }
 
-								  $total = Cart::total() - $discount;
+								  $cart_total = Cart::total();
+
+
+								  $total =  $cart_total - $discount;
 
 								@endphp
 								
