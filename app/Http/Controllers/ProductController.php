@@ -153,46 +153,11 @@ class ProductController extends Controller
         	return redirect()->route('cart');
       }
 
-      public function checkout()
-       {
-          if(\Auth::check())
-           {
-                 $user   = \Auth::user();
-                 $states = States::where('country_id', 101)->get();
-                 $cities = Cities::where('state_id', 13)->get();
-                 return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
-           }
-          else
-            {
-                return redirect(route('login').'?redirect_url='.route('cart.checkout'));
-            }
-       }
-
       public function getCities($state_id = '')
         {
             $cities = Cities::select('id AS i', 'name AS n')->where('state_id', $state_id)->get();
             echo json_encode(['status' => true, 'cities' => $cities]);
         }
-
-      public function checkoutStore(Request $request)
-           {
-               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|digits:6|numeric', 'mobile' => 'required']);
-
-               $params                             =    $request->all();
-
-               $fields['name']                     =    $params['name'];
-               $fields['mobile']                   =    $params['mobile'];
-               User::find(Auth::user()->id)->update($fields);
-
-               $pfields['address']                 =    $params['address'];
-               $pfields['city']                 =    $params['city_id'];
-               $pfields['state']                =    $params['state_id'];
-               $pfields['pin']             =    $params['postal_code'];
-               
-               Profile::where('user_id', Auth::user()->id)->update($pfields);
-
-
-           }
 
 }
 
