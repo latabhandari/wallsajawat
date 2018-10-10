@@ -209,11 +209,17 @@
 						</div>
 
 						<!-- start order-summary -->
+
+						@php
+						  $cart_total = App\Helpers\MyHelper::removeComma(Cart::total());
+						  $total      = $cart_total - $discount;
+
+						@endphp
 						<div class="order-summary">
 							<table>
 								<tr>
 									<td>Items:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $cart_total }}</td>
 								</tr>
 
 								@php
@@ -224,21 +230,16 @@
 
 									<tr>
 									  <td>Items:</td>
-									  <td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}</td>
+									  <td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $discount }}</td>
 								    </tr>
 
 								@php
 								  }
-									
-								  $cart_total = Cart::total();	
-								  $cart_total = App\Helpers\MyHelper::removeComma($cart_total);
-								  $total      = $cart_total - $discount;
-
 								@endphp
 								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $cart_total }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $total }}</td>
 								</tr>
 							</table>
 							<div class="row">
