@@ -229,11 +229,14 @@
 
 								@php
 								  }
+
+								  $total = Cart::total() - $discount;
+
 								@endphp
 								
 								<tr class="total">
 									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ (Cart::total() - $discount) }}</td>
+									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $total }}</td>
 								</tr>
 							</table>
 							<div class="row">
