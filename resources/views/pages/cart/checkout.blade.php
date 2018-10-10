@@ -205,6 +205,11 @@
 									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" />
 								</div>
 								<p class="cpn_err" id="cpn_err"></p>
+
+								@if (Session::has('discount_status'))
+							        <p class="cpn_suc" id="cpn_suc">{!! session('discount_status') !!}</p>
+							   @endif
+
 							</div>
 						</div>
 
