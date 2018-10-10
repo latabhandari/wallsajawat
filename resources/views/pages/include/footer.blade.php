@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <h4>INFORMATION</h4>
-                                        <ul class="nav info-list">
+                                        <ul class="info-list">
                                             <a href="{{ route('about') }}"><li>About Us</li></a>
                                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                             <li><a href="#">Terms of Use</a></li>
