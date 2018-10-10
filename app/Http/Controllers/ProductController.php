@@ -187,7 +187,7 @@ class ProductController extends Controller
             {
                  $arr = ['status' => false, "msg" => "You need to signin or signup to add a wishlist"];
             }
-                 echo json_encode(['status' => true, 'cities' => $cities]);
+                 echo json_encode($arr );
        }
 
 }
