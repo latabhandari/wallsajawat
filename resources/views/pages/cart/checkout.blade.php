@@ -204,7 +204,7 @@
 								<div class="col-sm-4 padding-left-none">
 									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" />
 								</div>
-								<p class="cpn_err"></p>
+								<p class="cpn_err" id="cpn_err"></p>
 							</div>
 						</div>
 
@@ -271,6 +271,7 @@
 
 	$('#apply_coupon').on('click', function() {
 		var coupon = $.trim($("#coupon").val());
+
 		if (! coupon)
 			{
 				$("#cpn_err").html('please enter coupon code!');
@@ -298,7 +299,7 @@
 	                             success: function (resp) {
 	                             	if (resp.status == true)
 	                             		 {
-	                             		 	
+
 	                             		 }
 
 	                                  
