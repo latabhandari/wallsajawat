@@ -56,6 +56,9 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/getcities/{state_id}', 'ProductController@getCities')->name('checkout.cities');
     Route::post('/wishlist', 'ProductController@wishlist')->name('product.wishlist');
 
+
+    Route::get('/wishlist', 'ProfileController@mywishlist')->name('profile.wishlist');
+
     Route::get('/category/{slug}', 'CategoryController@product')->name('category.product');
     Route::get('/checkout', 'CheckoutController@checkout')->name('cart.checkout');
     Route::post('/checkout', 'CheckoutController@checkoutStore')->name('cart.checkout.store');
