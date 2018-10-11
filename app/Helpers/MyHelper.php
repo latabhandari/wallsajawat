@@ -15,7 +15,7 @@ class MyHelper
    {
    	      public static function getCategories()
    	       {
-   	       	  return Category::select('id, name, slug')->where('status', 1)->get();
+   	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
    	       }
 
    	      public static function removeComma($string = '')
