@@ -57,9 +57,9 @@
       <div class="row">
         @if(count($products))
           @foreach ($products as $product)
-               @php
+              @php
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
-                @endphp
+              @endphp
 
               <div class="col-sm-3 text-center selling-imgs"> 
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
@@ -70,7 +70,6 @@
                 <p style="padding:0 0 0 15px">Sorry no product found.!</p>
         @endif
 
-  
       </div>
     </div>
   </div>
