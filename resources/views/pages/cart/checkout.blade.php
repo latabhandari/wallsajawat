@@ -11,6 +11,9 @@
 <link href="{{ asset('build/assets/css/stylesheet.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style type="text/css" media="screen">
+	.sub-heading h3{margin:5px 0 0 0}
+</style>
 @endsection
 
 @section('content')
