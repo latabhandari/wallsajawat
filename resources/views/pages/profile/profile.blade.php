@@ -152,6 +152,46 @@
 
 								</div>
 
+
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Password <samp>*</samp></label>
+											<select id="state" class="form-control" name="state" onchange="getCities(this.value)">
+												@foreach ($states as $state)
+												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
+												@endforeach
+											</select>
+											@if ($errors->has('state'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('state') }}
+			                                    </span>
+			                                @endif
+
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Confirm Password</label>
+											<div id="cityContainer">
+												<select class="form-control" name="city">
+													@foreach ($cities as $city)
+													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
+													@endforeach
+												</select>
+											</div>
+
+												@if ($errors->has('city'))
+					                                    <span class="error" role="alert">
+					                                        {{ $errors->first('city') }}
+					                                    </span>
+			                                    @endif
+										</div>
+									</div>
+								</div>
+
+
+
 								<input type="hidden" id="user_city_id" value="{{ $city_id }}" />
 
 
