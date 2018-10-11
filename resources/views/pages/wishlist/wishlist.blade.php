@@ -32,7 +32,7 @@
               <div class="col-sm-4">Description</div>
               <div class="col-sm-2">Item Price</div>
               <div class="col-sm-2">Quantity</div>
-              <div class="col-sm-2">Total</div>
+              <div class="col-sm-2">Action</div>
             </div>
           </div>
 
@@ -41,30 +41,32 @@
               $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
             @endphp
 
-          <div class="cart-row">
-            <div class="row">
-              <div class="col-sm-2">
-                <div class="imgb">
-                  <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $row->name }}">
+            <div class="cart-row">
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="imgb">
+                    <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $row->name }}">
+                  </div>
                 </div>
+                <div class="col-sm-4">
+                  <h5>{{ $row->name }}</h5>
+                  <p>Sku: {{ $row->sku }}</p>
+                </div>
+                <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
+                <div class="col-sm-2">
+
+                  <select class="form-control">
+                    @for($i = 1; $i <= 10; $i++)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                    @endfor
+                  </select>
+
+                  <a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}">Remove</a>
+                </div>
+                <div class="col-sm-2"><button type="submit" title="Add to Cart" class="btn pull-right">Add to Cart</button></div>
               </div>
-              <div class="col-sm-4">
-                <h5>{{ $row->name }}</h5>
-                <p>Sku: {{ $row->sku }}</p>
-              </div>
-              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
-              <div class="col-sm-2">
-                <select class="form-control">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </select>
-                <a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}">Remove</a>
-              </div>
-              <div class="col-sm-2"><a href="#" title="Add to Cart" class="btn pull-right">Add to Cart</a></div>
             </div>
-          </div>
+
        @endforeach
 
         </div>
