@@ -145,7 +145,7 @@
                   $prod_image_info = App\Helpers\MyHelper::getProductImage($featured_product->id);
               @endphp
 
-            <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
+  <a href="{{ route('product.detail', $featured_product->slug) }}"><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
               <div class="imgb">
                 <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="300" height="360" alt="product">
               </div>
@@ -155,7 +155,7 @@
                   <span>INR {{ $featured_product->price }}</span>
                 </div>
               </div>
-            </li>
+            </li></a>
           @endforeach
 
       </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
