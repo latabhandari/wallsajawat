@@ -110,10 +110,10 @@
 			<div class="cart">
 				<div class="row">
 					<div class="col-sm-12">
-						<p>No product in cart</p>
+						<h4>No product in cart</h4>
 					</div>
 					<div class="col-sm-12">
-						<a style="width:15%" href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
+						<a style="width:15%" href="{{ route('home.index') }}" class="btn btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
