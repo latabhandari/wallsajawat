@@ -38,8 +38,6 @@ switch ($segment)
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                         <div class="collapse navbar-collapse" id="mynavbar">
                           <ul class="nav navbar-nav">
-                            <li class="{{ isset($our_range_active) ? 'active' : '' }}"><a href="{{ route('range') }}">OUR RANGE</a></li>
-
                             <li class="dropdown">
                               <a href="#" class="dropdown-toggle user-option" data-toggle="dropdown" >OUR RANGE <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
