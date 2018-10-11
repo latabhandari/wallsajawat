@@ -28,7 +28,7 @@ class CmsController extends Controller
      	 return view('pages.cms.contact');
      }
 
-    public function contactpost()
+    public function contactpost(Request $request)
      {
      	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required|min:10|numeric']);
 
