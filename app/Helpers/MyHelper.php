@@ -10,7 +10,7 @@ use App\ProductImages as ProductImages;
 use App\Measurement as Measurement;
 use App\Dimension as Dimension;
 use App\Product as Product;
-use App\Category as Category;
+use App\Categories as Category;
 class MyHelper 
    {
    	      public static function getCategories()
