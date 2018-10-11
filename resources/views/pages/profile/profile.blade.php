@@ -31,12 +31,12 @@
 						</div>
 
 						@php
-						   $city_id  = $user->profile->city;
-						   $state_id = $user->profile->state;
+						   $city_id  = $user->city;
+						   $state_id = $user->state;
 						   if (empty($city_id) && empty($state_id))
 						    {
-						       $city_id   = 1119; //env('DEFAULT_CITY'); 
-						       $state_id  = 13; //env('DEFAULT_STATE');
+						       $city_id   = env('DEFAULT_CITY', 1119); 
+						       $state_id  = env('DEFAULT_STATE', 13);
 						    }
 						@endphp
 
