@@ -8,7 +8,7 @@ use Auth;
 use DB;
 use App\Cities as Cities;
 use App\States as States;
-use App\Users as Users;
+use App\User as User;
 use App\Profile as Profile;
 
 class ProfileController extends Controller
@@ -58,7 +58,7 @@ class ProfileController extends Controller
 
          $userid                            =    Auth::user()->id;
 
-         Users::where('id', $userid)->update($fields);
+         User::where('id', $userid)->update($fields);
 
 
          $pfields['address']                 =    $params['pfields'];
