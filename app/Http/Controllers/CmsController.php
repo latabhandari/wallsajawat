@@ -30,7 +30,7 @@ class CmsController extends Controller
 
     public function contactpost()
      {
-     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required']);
+     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required|min:10|numeric']);
 
      	 $params = $request->all();
 

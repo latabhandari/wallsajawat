@@ -70,10 +70,10 @@
 
 								<div class="form-group">
 									<label for="email" class="width20 floatL">Email address:</label>
-									<input type="email" class="form-control width80" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{ old('email') }}" />
-									@if ($errors->has('msg'))
+									<input type="email" class="form-control width80" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{ old('email') }}" name="email" />
+									@if ($errors->has('email'))
 										<span class="error" role="alert">
-											{{ $errors->first('msg') }}
+											{{ $errors->first('email') }}
 										</span>
 									@endif
 
