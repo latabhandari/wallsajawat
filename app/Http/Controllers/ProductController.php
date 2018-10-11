@@ -191,5 +191,15 @@ class ProductController extends Controller
                  echo json_encode($arr );
        }
 
+
+     public function wishlist(Request $request)
+       {
+          $params     =  $request->all(); 
+          $random_id  =  $params["wishlist_id"];
+          Wishlist::where(['random_string' => $random_id])->delete();
+          return redirect()->back();
+       }
+
+
 }
 
