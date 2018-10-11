@@ -17,7 +17,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<div class="title measure-title">
+			<div class="title mrgnlft40">
 				<h3>About Us</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
