@@ -20,7 +20,7 @@
 			<div class="title measure-title">
 				<h2 class="paddingBottom20">FAQs</h2>
 				<ul class="navbar">
-					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li><a href="">FAQs</a></li>
 				</ul>
 			</div>
