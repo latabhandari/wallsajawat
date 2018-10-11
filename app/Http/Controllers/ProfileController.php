@@ -10,6 +10,7 @@ use App\Cities as Cities;
 use App\States as States;
 use App\User as User;
 use App\Profile as Profile;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
