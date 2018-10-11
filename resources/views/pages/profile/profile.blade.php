@@ -77,11 +77,16 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
-											<select class="form-control" name="state_id" onchange="getCities(this.value)">
+											<select class="form-control" name="state" onchange="getCities(this.value)">
 												@foreach ($states as $state)
 												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
 												@endforeach
 											</select>
+											@if ($errors->has('state'))
+			                                    <span class="error" role="alert">
+			                                        {{ $errors->first('state') }}
+			                                    </span>
+			                                @endif
 
 										</div>
 									</div>
@@ -89,14 +94,14 @@
 										<div class="form-group">
 											<label>City</label>
 											<div id="cityContainer">
-												<select class="form-control" name="city_id">
+												<select class="form-control" name="city">
 													@foreach ($cities as $city)
 													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
 													@endforeach
 												</select>
-												@if ($errors->has('city_id'))
+												@if ($errors->has('city'))
 			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('city_id') }}
+			                                        {{ $errors->first('city') }}
 			                                    </span>
 			                                @endif
 											</div>
@@ -107,10 +112,10 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
-											<input type="text" name="postal_code" class="form-control" value="{{ $user->pin }}" />
-											@if ($errors->has('postal_code'))
+											<input type="text" name="pin" class="form-control" value="{{ $user->pin }}" />
+											@if ($errors->has('pin'))
 			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('postal_code') }}
+			                                        {{ $errors->first('pin') }}
 			                                    </span>
 			                                @endif
 										</div>
