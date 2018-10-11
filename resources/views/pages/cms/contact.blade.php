@@ -50,7 +50,7 @@
 
 								<div class="form-group">
 									<label for="name" class="width20 floatL">Name:</label>
-									<input type="text" name="name" class="form-control width80" id="name" placeholder="Enter Name">
+									<input type="text" name="name" class="form-control width80" id="name" placeholder="Enter Name" value="{{ old('name') }}" />
 										@if ($errors->has('name'))
 											<span class="error" role="alert">
 												{{ $errors->first('name') }}
@@ -60,7 +60,7 @@
 							
 								<div class="form-group">
 									<label for="tel" class="width20 floatL">Phone:</label>
-									<input type="tel" class="form-control width80" id="tel" name="phone" placeholder="Enter Phone Number">
+									<input type="tel" class="form-control width80" id="tel" name="phone" placeholder="Enter Phone Number" value="{{ old('phone') }}" />
 									@if ($errors->has('phone'))
 										<span class="error" role="alert">
 											{{ $errors->first('phone') }}
@@ -70,7 +70,7 @@
 
 								<div class="form-group">
 									<label for="email" class="width20 floatL">Email address:</label>
-									<input type="email" class="form-control width80" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+									<input type="email" class="form-control width80" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{ old('email') }}" />
 									@if ($errors->has('msg'))
 										<span class="error" role="alert">
 											{{ $errors->first('msg') }}
@@ -81,7 +81,7 @@
 
 								<div class="form-group">
 									<label for="comment" class="width20 floatL">Message:</label>
-									<textarea class="form-control width80" rows="5" id="comment" name="msg"></textarea>
+									<textarea class="form-control width80" rows="5" id="comment" name="msg">{{ old('msg') }}</textarea>
 									@if ($errors->has('msg'))
 										<span class="error" role="alert">
 											{{ $errors->first('msg') }}
