@@ -13,11 +13,8 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style type="text/css" media="screen">
 .nocart span {
-	font-size:14px;
-	border: 1px solid #ddd;
-	line-height: 40px
+	font-size:16px;border:1px solid #ddd;line-height:14px;padding:20px 0 20px 10px;font-weight:bold;width:100%;float:left;margin:0 0 20px 0
 }
-	
 </style>
 @endsection
 
