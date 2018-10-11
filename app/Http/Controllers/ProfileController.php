@@ -10,7 +10,6 @@ use App\Cities as Cities;
 use App\States as States;
 use App\User as User;
 use App\Profile as Profile;
-use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
@@ -49,10 +48,19 @@ class ProfileController extends Controller
 
       public function updateProfile(Request $request)
        {
-        
-         request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|confirm_password|min:6']);
 
          $params                            =    $request->all();
+
+         if ( ! empty($params['password']) OR ! empty($params['password_confirmation']))
+           {
+              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6']);
+
+              $fields['password']           =    Hash::make($params['name']);
+           }
+        else
+           {
+              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => ' required', 'mobile' => 'required']);
+           }         
 
          $fields['name']                    =    $params['name'];
          $fields['mobile']                  =    $params['mobile'];
