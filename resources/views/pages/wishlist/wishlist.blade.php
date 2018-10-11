@@ -28,7 +28,7 @@
         <div class="cart-box">
           <div class="title">
             <div class="row">
-              <div class="col-sm-2">Product</div>
+              <div class="col-sm-2">Image</div>
               <div class="col-sm-4">Description</div>
               <div class="col-sm-2">Item Price</div>
               <div class="col-sm-4">Action</div>
