@@ -39,6 +39,23 @@ switch ($segment)
                         <div class="collapse navbar-collapse" id="mynavbar">
                           <ul class="nav navbar-nav">
                             <li class="{{ isset($our_range_active) ? 'active' : '' }}"><a href="{{ route('range') }}">OUR RANGE</a></li>
+
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle user-option" data-toggle="dropdown" >OUR RANGE <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="product-page.html">Ethnic</a></li>
+                                                <li><a href="product-page.html">Interior/ Architect Choice</a></li>
+                                                <li><a href="product-page.html">Flora</a></li>
+                                                <li><a href="product-page.html">Kids pattern/ Junior Zone</a></li>
+                                                <li><a href="product-page.html">3D</a></li>
+                                                <li><a href="product-page.html">Bricks & Stones</a></li>
+                                                <li><a href="product-page.html">Classic</a></li>
+                                                <li><a href="product-page.html">See More <i class="fa fa-caret-right pull-right" aria-hidden="true" style="margin-top:4px;"></i></a></li>
+                                </ul>
+                            </li>
+
+
+
                             <li class="{{ isset($about_active) ? 'active' : '' }}"><a href="{{ route('about') }}">ABOUT US</a></li>
                             <li class="{{ isset($wallpaper_installer_active) ? 'active' : '' }}"><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>
                             <li class="{{ isset($how_measure_active) ? 'active' : '' }}"><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</a></li>
