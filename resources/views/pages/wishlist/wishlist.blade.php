@@ -60,7 +60,7 @@
                   <option>3</option>
                   <option>4</option>
                 </select>
-                <a class="remove" href="#">Remove</a>
+                <a class="remove" href="{{ route('wishlist.remove', $row->random_string) }}">Remove</a>
               </div>
               <div class="col-sm-2"><a href="#" title="Add to Cart" class="btn pull-right">Add to Cart</a></div>
             </div>

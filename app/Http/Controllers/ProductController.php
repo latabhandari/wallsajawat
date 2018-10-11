@@ -192,7 +192,7 @@ class ProductController extends Controller
        }
 
 
-     public function wishlist(Request $request)
+     public function wishlistRemove(Request $request)
        {
           $params     =  $request->all(); 
           $random_id  =  $params["wishlist_id"];
