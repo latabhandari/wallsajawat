@@ -7,6 +7,9 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css" />
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<meta name="keywords" content="{{ $category_info->meta_keywords }}" />
+<meta name="description" content="{{  $category_info->meta_description }}" />
+
 @endsection
 
 @section('content')
