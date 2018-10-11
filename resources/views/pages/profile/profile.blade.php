@@ -40,8 +40,8 @@
 						   $state_id = $user->state;
 						   if (empty($city_id) && empty($state_id))
 						    {
-						       $city_id   = env('DEFAULT_CITY', 1119); 
-						       $state_id  = env('DEFAULT_STATE', 13);
+						    	$state_id  = env('DEFAULT_STATE', 13);
+						        $city_id   = env('DEFAULT_CITY', 1119); 
 						    }
 						@endphp
 
@@ -147,6 +147,8 @@
 
 								</div>
 
+								<input type="hidden" id="user_city_id" value="{{ $city_id }}">
+
 
 								<div class="row">
 									<div class="col-sm-6">
@@ -195,8 +197,11 @@
 	                             		 {
 	                             		 	 var h = '';
 	                             		 	 h += '<select class="form-control" name="city">';
+	                             		 	 var sel = '';
+	                             		 	 var user_city_id = parseInt($.trim($("#user_city_id").val()));
 	                             		 	 $.each(resp.cities, function(a, b) {
-	                             		 	 	h += '<option value="' + b.i + '">' + b.n + '</option>'
+	                             		 	 	sel = (user_city_id == b.i) ? "selected"  : "" ;
+	                             		 	 	h += '<option ' + sel + ' value="' + b.i + '">' + b.n + '</option>'
 	                             		 	 });
 	                             		 	 h += '</select>';
 	                             		 	 $("#cityContainer").html(h);
@@ -207,46 +212,6 @@
                          });
 
 		 }
-
-	$('#apply_coupon').on('click', function() {
-		var coupon = $.trim($("#coupon").val());
-		if (! coupon)
-			{
-				$("#cpn_err").html('please enter coupon code!');
-				return false;
-			}
-			 
-			 $(this).attr('disabled', true);
-
-			 $.ajaxSetup({
-					        headers: {
-					            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-					        }
-    					});
-
-					$.ajax({
-	                             type: "POST",
-	                             url: WallSajawat.getSitePath('coupon'),
-	                             dataType: "json",
-	                             data: {"coupon": coupon},
-	                             beforeSend: function() {
-       								 // setting a timeout
-        							 $('#apply_coupon').val('...');
-    							 },
-	                             success: function (resp) {
-	                             	if (resp.status == true)
-	                             		 {
-	                             		 	location.href = location.href;
-	                             		 }
-	                             	else
-	                             	     {
-	                             	     	$('#apply_coupon').val('Apply').attr('disabled', false);
-	                             	     	$('#cpn_err').html(resp.msg);
-	                             	     }	                                  
-	                             }
-                         });
-	});
-
 
 
 </script>
