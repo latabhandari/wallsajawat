@@ -157,35 +157,23 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Password <samp>*</samp></label>
-											<select id="state" class="form-control" name="state" onchange="getCities(this.value)">
-												@foreach ($states as $state)
-												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
-												@endforeach
-											</select>
-											@if ($errors->has('state'))
+											<input type="password" class="form-control" name="password" value="" />
+											@if ($errors->has('password'))
 			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('state') }}
+			                                        {{ $errors->first('password') }}
 			                                    </span>
 			                                @endif
-
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Confirm Password</label>
-											<div id="cityContainer">
-												<select class="form-control" name="city">
-													@foreach ($cities as $city)
-													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
-													@endforeach
-												</select>
-											</div>
-
-												@if ($errors->has('city'))
-					                                    <span class="error" role="alert">
-					                                        {{ $errors->first('city') }}
-					                                    </span>
-			                                    @endif
+											<input type="password" class="form-control" name="confirm_password" value="" />
+											@if ($errors->has('confirm_password'))
+				                                    <span class="error" role="alert">
+				                                        {{ $errors->first('confirm_password') }}
+				                                    </span>
+		                                    @endif
 										</div>
 									</div>
 								</div>
