@@ -140,17 +140,7 @@
 									</div>
 
 								</div>
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label>Email Address <samp>*</samp></label>
-											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}">
-										</div>
-									</div>
 
-									<div class="col-sm-6"></div>
-
-								</div>
 
 
 								<div class="row">
@@ -178,7 +168,15 @@
 									</div>
 								</div>
 
-
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label>Email Address <samp>*</samp></label>
+											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}">
+										</div>
+									</div>
+									<div class="col-sm-6"></div>
+								</div>
 
 								<input type="hidden" id="user_city_id" value="{{ $city_id }}" />
 
