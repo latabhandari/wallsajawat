@@ -31,8 +31,7 @@
               <div class="col-sm-2">Product</div>
               <div class="col-sm-4">Description</div>
               <div class="col-sm-2">Item Price</div>
-              <div class="col-sm-2">Quantity</div>
-              <div class="col-sm-2">Action</div>
+              <div class="col-sm-4">Action</div>
             </div>
           </div>
 
@@ -53,17 +52,7 @@
                   <p>Sku: {{ $row->sku }}</p>
                 </div>
                 <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
-                <div class="col-sm-2">
-
-                  <select class="form-control">
-                    @for($i = 1; $i <= 10; $i++)
-                        <option value="{{ $i }}">{{ $i }}</option>
-                    @endfor
-                  </select>
-
-                  <a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}">Remove</a>
-                </div>
-                <div class="col-sm-2"><a href="{{ route('product/', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a></div>
+                <div class="col-sm-4"><a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn btn-danger">Remove</button></a><a href="{{ route('product/', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a></div>
               </div>
             </div>
 
