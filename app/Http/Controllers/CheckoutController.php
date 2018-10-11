@@ -13,6 +13,7 @@ use App\States as States;
 use App\Offer as Offer;
 use Cart;
 use App\Helpers\MyHelper as MyHelper;
+use App\Wishlist as Wishlist;
 
 class CheckoutController extends Controller
 {
