@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Terms')
+@section('title', 'Frequently Asked Questions')
 
 @section('top_yield')
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
