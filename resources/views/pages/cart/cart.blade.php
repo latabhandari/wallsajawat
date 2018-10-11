@@ -37,7 +37,7 @@
 								<div class="col-sm-4">Product</div>
 								<div class="col-sm-2">Item Price</div>
 								<div class="col-sm-2">Quantity</div>
-								<div class="col-sm-2">Total</div>
+								<div class="col-sm-2">Action</div>
 							</div>
 						</div>
 
@@ -71,7 +71,6 @@
 								<div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
 							</div>
 						</div>
-
 					
 						@endforeach
 

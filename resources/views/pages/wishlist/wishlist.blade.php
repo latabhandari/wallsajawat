@@ -62,7 +62,7 @@
                 </select>
                 <a class="remove" href="#">Remove</a>
               </div>
-              <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
+              <div class="col-sm-2"><a href="#" title="Add to Cart" class="btn pull-right">Add to Cart</a></div>
             </div>
           </div>
        @endforeach
