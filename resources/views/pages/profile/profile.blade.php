@@ -225,7 +225,7 @@
 	                             	if (resp.status == true)
 	                             		 {
 	                             		 	 var h = '';
-	                             		 	 h += '<select class="form-control" name="city">';
+	                             		 	 h += '<select class="form-control" name="city"><samp>*</samp>';
 	                             		 	 var sel = '';
 	                             		 	 var user_city_id = parseInt($.trim($("#user_city_id").val()));
 	                             		 	 $.each(resp.cities, function(a, b) {
