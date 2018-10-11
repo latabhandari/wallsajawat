@@ -16,16 +16,15 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 text-center">
-			<div class="title mrgnlft40">
-				<h3>About Us</h3>
+		<div class="title measure-title">
+				<h3>Wallpaper Installer</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href=""><strong>About Us</strong></a></li>
+					<li><a href="">Wallpaper Installer</a></li>
 				</ul>
-			</div>
 		</div>
-		<div class="col-sm-12 mrgnlft40">
+
+		<div class="col-sm-12 measure-content">
 			<div class="row">
 				<div class="about-sec">
 					<p>Aliquam augue sem, varius id felis id, mattis tincidunt ipsum. Proin a dui et tellus sodales aliquet. Vestibulum imperdiet, purus eget tempor mollis, enim purus congue urna, nec placerat erat metus a magna. Vestibulum sodales mauris vel justo porta, ut semper neque rhoncus. Aliquam ac viverra velit. Etiam ac rutrum purus. Duis tincidunt dui ac massa tincidunt, sit amet bibendum ex consequat. Etiam nulla nisi, volutpat sed viverra vitae, vulputate nec leo.</p>
