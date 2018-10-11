@@ -112,6 +112,12 @@ a, a:focus, a:hover{
   margin: 0 auto;
   padding: 30px 0;
 }
+.about-img-sec {
+    width: 66%;
+    margin: 0 auto;
+    float: none;
+    overflow: hidden;
+}
 .slider-head {
   width: 100%;
   text-align: center;
