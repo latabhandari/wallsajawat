@@ -8,6 +8,8 @@ use Auth;
 use DB;
 use App\Cities as Cities;
 use App\States as States;
+use App\Users as Users;
+use App\Profile as Profile;
 
 class ProfileController extends Controller
 {
