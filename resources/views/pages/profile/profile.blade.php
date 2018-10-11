@@ -97,7 +97,7 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>City</label>
+											<label>City <samp>*</samp></label>
 											<div id="cityContainer">
 												<select class="form-control" name="city">
 													@foreach ($cities as $city)
@@ -225,7 +225,7 @@
 	                             	if (resp.status == true)
 	                             		 {
 	                             		 	 var h = '';
-	                             		 	 h += '<select class="form-control" name="city"><samp>*</samp>';
+	                             		 	 h += '<select class="form-control" name="city">';
 	                             		 	 var sel = '';
 	                             		 	 var user_city_id = parseInt($.trim($("#user_city_id").val()));
 	                             		 	 $.each(resp.cities, function(a, b) {
