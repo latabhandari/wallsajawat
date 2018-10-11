@@ -10,6 +10,9 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style type="text/css" media="screen">
+  .alert-success{margin:20px 10px 10px 30px;padding:10px;} 	
+</style>
 @endsection
 
 @section('content')
@@ -38,6 +41,13 @@
 						<div class="col-sm-12 ">
 							<form class="contact-form" method="POST" action="{{ route('contactpost') }}" aria-label="{{ __('Contact') }}">
 							  @csrf	
+
+							    @if ($success = Session::get('success'))
+					                  <div class="alert alert-success">
+					                      <p>Thanks for contacting us. we'll contact you soon!</p>
+					                  </div>
+					            @endif
+
 								<div class="form-group">
 									<label for="name" class="width20 floatL">Name:</label>
 									<input type="text" name="name" class="form-control width80" id="name" placeholder="Enter Name">

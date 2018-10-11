@@ -30,18 +30,22 @@ class CmsController extends Controller
 
     public function contactpost()
      {
-     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required']);
+     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required']);
 
      	 $params = $request->all();
 
      	 $data['name']   		= 	$params['name'];
-     	 $data['email']  		= 	$params['email'];
+         $data['email']         =   $params['email'];
+     	 $data['phone']  		= 	$params['phone'];
      	 $data['msg']    		= 	$params['msg'];
      	 $data['ip']     		= 	$request->ip();
      	 $data['user_agent']    = 	$request->header('User-Agent');
-     	 $data['timestamp']     = 	time();   	 
+     	 $data['timestamp']     = 	time(); 
 
-     	 return view('pages.cms.contact');
+         //Contact::insert($data);  
+
+         return redirect()->route('contact')->with('success','success'); 
+
      }
 
     public function terms()
