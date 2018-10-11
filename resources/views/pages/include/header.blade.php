@@ -65,7 +65,7 @@ switch ($segment)
                   </div>
                   <div class="col-sm-2 menu_icons">
                     <ul class="nav menu-icons pull-right">
-                      <li><input type="search" placeholder="Search"></li>
+                      <li><i class="fa fa-search"></i></li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                       <li>
 
