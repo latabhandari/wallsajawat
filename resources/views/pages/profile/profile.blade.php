@@ -23,11 +23,10 @@
 		<div class="checkout">
 			<div class="row">
 				<div class="col-sm-10">
-					<h2>Update Profile Checkout</h2>
 					<!-- start form-box -->
 					<div class="form-box">
 						<div class="sub-heading">
-							<h3><span>1</span> Shipping</h3>
+							<h3 style="margin:5px 0">Update Profile</h3>
 						</div>
 
 						@php
