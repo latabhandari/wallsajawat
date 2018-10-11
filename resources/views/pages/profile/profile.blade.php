@@ -9,6 +9,9 @@
 <link href="{{ asset('build/assets/css/stylesheet.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style type="text/css" media="screen">
+  .alert-success{margin:20px 10px 10px 30px;padding:10px;} 	
+</style>
 @endsection
 
 @section('content')
