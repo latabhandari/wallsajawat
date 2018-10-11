@@ -22,7 +22,7 @@
 			<div class="title mrgnlft40">
 				<h3>About Us</h3>
 				<ul class="navbar">
-					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li><a href=""><strong>About Us</strong></a></li>
 				</ul>
 			</div>

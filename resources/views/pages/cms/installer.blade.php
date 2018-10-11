@@ -22,7 +22,7 @@
 			<div class="title measure-title">
 				<h3>Wallpaper Installer</h3>
 				<ul class="navbar">
-					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li><a href="">Wallpaper Installer</a></li>
 				</ul>
 			</div>
