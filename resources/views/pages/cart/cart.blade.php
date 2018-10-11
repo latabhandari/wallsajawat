@@ -109,10 +109,10 @@
 		<div class="container">
 			<div class="cart">
 				<div class="row">
-					<div class="col-sm-8">
-						<h2>No product in cart</h2>
+					<div class="col-sm-12">
+						<p>No product in cart</p>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-12">
 						<a style="width:15%" href="{{ route('home.index') }}" class="btn btn-success btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
