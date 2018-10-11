@@ -63,7 +63,7 @@
 
                   <a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}">Remove</a>
                 </div>
-                <div class="col-sm-2"><button type="submit" title="Add to Cart" class="btn pull-right">Add to Cart</button></div>
+                <div class="col-sm-2"><button type="submit" title="Add to Cart" class="btn pull-left">Add to Cart</button></div>
               </div>
             </div>
 
