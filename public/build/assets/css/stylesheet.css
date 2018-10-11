@@ -1354,6 +1354,9 @@ p {
 	color: #fff;
 	font-weight: normal;
 }
+
+.add-coupon h5{color:#2a2931 !important}
+
 .checkout .sub-heading {
 	background: #2a2931;
 	padding: 8px 15px;
