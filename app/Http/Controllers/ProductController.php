@@ -167,7 +167,7 @@ class ProductController extends Controller
                  $params  = $request->all();
                  $pid     = $params['pid'];
                  $userid  = \Auth::user()->id;
-                 $query   = Wishlist::where(['user_id' => $userid, 'pid' => $pid, 'random_string' => str_random(24)])->get();
+                 $query   = Wishlist::where(['user_id' => $userid, 'pid' => $pid])->get();
                  if (count($query))
                    {
                          $arr = ['status' => false, "msg" => "Already in your wishlist"];
@@ -179,6 +179,7 @@ class ProductController extends Controller
                          $wishlist->pid            = $pid;
                          $wishlist->unix_timestamp = time();
                          $wishlist->ip_address     = request()->ip();
+                         $wishlist->random_string  = str_random(24);
                          $wishlist->save();
                          $arr = ['status' => true, "msg" => "Successfully added in your wishlist"];
                    }
