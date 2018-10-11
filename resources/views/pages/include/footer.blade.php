@@ -15,8 +15,7 @@
                                         <ul class="info-list">
                                             <a href="{{ route('about') }}"><li>About Us</li></a>
                                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                                            <li><a href="#">Terms of Use</a></li>
-                                            <li><a href="#">Return/Refund policies</a></li>
+                                            <li><a href="{{ route('faq') }}">Faq</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
