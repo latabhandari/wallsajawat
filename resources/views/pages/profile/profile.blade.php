@@ -22,7 +22,7 @@
 
 		<div class="checkout">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-10">
 					<h2>Update Profile Checkout</h2>
 					<!-- start form-box -->
 					<div class="form-box">
@@ -57,7 +57,7 @@
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Address Line<samp>*</samp></label>
+											<label>Address<samp>*</samp></label>
 											<input type="text" name="address" class="form-control" value="{{ $user->address }}">
 											@if ($errors->has('address'))
 			                                    <span class="error" role="alert">
@@ -146,114 +146,6 @@
 						</div>
 					</div>
 					<!-- end form-box -->
-					<!-- start form-box -->
-					<div class="form-box">
-						<div class="sub-heading">
-							<h3><span>2</span> Billing & Payment</h3>
-						</div>
-						<div class="form">
-							<h5>Payment Method</h5>
-							<div class="form-group">
-								<label><input type="checkbox" name=""> My billing address is the same as my shipping address</label>
-							</div>
-							<div class="form-group">
-								<div class="row">
-									<div class="col-sm-12">
-										<label class="card-info">
-											<input type="radio" name="">
-											<img src="images/visa.gif" width="37" height="23" alt="visa">
-											<img src="images/mastercard.gif" width="37" height="23" alt="mastercard">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Card Number <samp>*</samp></label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Expiration Date <samp>*</samp></label>
-										<div class="row">
-											<div class="col-sm-4 padding-right-none">
-												<input type="text" class="form-control">		
-											</div>
-											<div class="col-sm-8">
-												<input type="text" class="form-control">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end form-box -->
-				</div>
-				<div class="col-sm-4">
-					<div class="rightcol-fixed">
-						<div class="add-coupon">
-							<h5>Redeem a coupon or promotion</h5>
-							<label>Enter the code below and click Apply</label>
-							<div class="row">
-								<div class="col-sm-8">
-									<input type="text" class="form-control" name="coupon" id="coupon" placeholder="Coupon Code" autocomplete="off" />
-								</div>
-								<div class="col-sm-4 padding-left-none">
-									<input type="button" value="Apply" class="btn btn-block" id="apply_coupon" />
-								</div>
-								<p class="cpn_err" id="cpn_err"></p>
-
-								@if (Session::has('discount_status'))
-							        <p class="cpn_suc" id="cpn_suc">{!! session('discount_status') !!}</p>
-							   @endif
-
-							</div>
-						</div>
-
-						<!-- start order-summary -->
-
-						@php
-						  $discount = 	session('discount');
-						  $cart_total = App\Helpers\MyHelper::removeComma(Cart::total());
-						  $total      = $cart_total - $discount;
-
-						@endphp
-						<div class="order-summary">
-							<table>
-								<tr>
-									<td>Items:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $cart_total }}</td>
-								</tr>
-
-								@php
-								   if ($discount) {
-								@endphp
-
-									<tr>
-									  <td>Discount:</td>
-									  <td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $discount }}</td>
-								    </tr>
-
-								@php
-								  }
-								@endphp
-								
-								<tr class="total">
-									<td>Order Total:</td>
-									<td class="text-right"><i class="fa fa-inr">&nbsp;</i> {{ $total }}</td>
-								</tr>
-							</table>
-							<div class="row">
-								<div class="col-sm-12">
-									<button type="submit" class="btn btn-block">Submit Order</button>
-								</div>
-							</div>
-						</div>
-						<!-- end order-summary -->
-					</div>
 				</div>
 			</div>
 		</div>
