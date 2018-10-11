@@ -36,47 +36,47 @@
 				<div class="col-sm-7">
 					<div class="row">
 						<div class="col-sm-12 ">
-							<form class="contact-form">
+							<form class="contact-form" method="POST" action="{{ route('contactpost') }}" aria-label="{{ __('Contact') }}">
+							  @csrf	
 								<div class="form-group">
 									<label for="name" class="width20 floatL">Name:</label>
-									<input type="text" class="form-control width80" id="InputName" placeholder="Enter Name">
+									<input type="text" name="name" class="form-control width80" id="name" placeholder="Enter Name">
+										@if ($errors->has('name'))
+											<span class="error" role="alert">
+												{{ $errors->first('name') }}
+											</span>
+										@endif
 								</div>
-								<div class="form-group">
-									<label for="name" class="width20 floatL">Company Name:</label>
-									<input type="text" class="form-control width80" id="InputCompanyName" placeholder="Enter Company Name">
-								</div>
+							
 								<div class="form-group">
 									<label for="tel" class="width20 floatL">Phone:</label>
-									<input type="tel" class="form-control width80" id="InputPhone" placeholder="Enter Phone Number">
+									<input type="tel" class="form-control width80" id="tel" name="phone" placeholder="Enter Phone Number">
+									@if ($errors->has('phone'))
+										<span class="error" role="alert">
+											{{ $errors->first('phone') }}
+										</span>
+									@endif
 								</div>
+
 								<div class="form-group">
-									<label for="exampleInputEmail1" class="width20 floatL">Email address:</label>
-									<input type="email" class="form-control width80" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+									<label for="email" class="width20 floatL">Email address:</label>
+									<input type="email" class="form-control width80" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+									@if ($errors->has('msg'))
+										<span class="error" role="alert">
+											{{ $errors->first('msg') }}
+										</span>
+									@endif
+
 								</div>
-								<div class="form-group">
-									<label for="inputAddress2" class="width20 floatL">Address:</label>
-									<input type="text" class="form-control width80" id="inputAddress2" placeholder="Apartment, studio, or floor">
-								</div>
-								<div class="form-row">
-									<div class="form-group col-md-6 paddingLeft0">
-										<label for="inputCity" class="width40 floatL">City</label>
-										<input type="text" class="form-control width60" id="inputCity" placeholder="City">
-									</div>
-									<div class="form-group col-md-4 paddingLeft0">
-										<label for="inputState" class="width20 floatL">State</label>
-										<select id="inputState" class="form-control width80">
-											<option selected="">Choose...</option>
-											<option>...</option>
-										</select>
-									</div>
-									<div class="form-group col-md-2 paddingLeft0 paddingRght0">
-										<label for="inputZip" class="width30 floatL">Zip</label>
-										<input type="text" class="form-control width70" id="inputZip" placeholder="Zip">
-									</div>
-								</div>
+
 								<div class="form-group">
 									<label for="comment" class="width20 floatL">Message:</label>
-									<textarea class="form-control width80" rows="5" id="comment"></textarea>
+									<textarea class="form-control width80" rows="5" id="comment" name="msg"></textarea>
+									@if ($errors->has('msg'))
+										<span class="error" role="alert">
+											{{ $errors->first('msg') }}
+										</span>
+									@endif
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn contact-submit">Submit</button>
