@@ -147,7 +147,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Password</label>
-											<input type="password" class="form-control" name="password" value="" />
+											<input type="password" class="form-control" name="password" value="" placeholder="Password (optional)" />
 											@if ($errors->has('password'))
 			                                    <span class="error" role="alert">
 			                                        {{ $errors->first('password') }}
@@ -172,7 +172,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Email Address <samp>*</samp></label>
-											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}">
+											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}" />
 										</div>
 									</div>
 									<div class="col-sm-6"></div>
