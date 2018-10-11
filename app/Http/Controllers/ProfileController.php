@@ -30,13 +30,13 @@ class ProfileController extends Controller
 
       public function profile()
        {
-           $profile = DB::table('users')
+           $user = DB::table('users')
                       ->join('profile', 'users.id', '=', 'profile.user_id')
                       ->select('users.name', 'users.email', 'users.mobile', 'profile.address', 'profile.city', 'profile.state', 'profile.pin', 'profile.country', 'profile.profile')
                       ->where('users.id', Auth::user()->id)
                       ->first();
 
-           return view('pages.profile.profile', compact('profile'));
+           return view('pages.profile.profile', compact('user'));
        }
 
       public function updateProfile()
