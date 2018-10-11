@@ -57,7 +57,7 @@ class ProfileController extends Controller
            {
               request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6']);
 
-              $fields['password']           =    Hash::make($params['name']);
+              $fields['password']           =    Hash::make($params['password']);
            }
         else
            {
