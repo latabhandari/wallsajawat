@@ -824,9 +824,13 @@ padding-right:0!important;}
 .sub-head {
   margin-left: 2%;
 }
-.sub-img1, .sub-img2, .sub-img3 , .sub-img4 , .sub-img5, .sub-img6 {
-  width: 100%!important;
+.sub-img1,.sub-img2,.sub-img3,.sub-img4,.sub-img5,.sub-img6{
+  position:relative;
+  float:left;
+  margin-top:3px;
 }
+
+
 .sub-img1>h5, .sub-img2>h5, .sub-img3>h5 {
   margin-top: 0;
   padding-top: 38%;
