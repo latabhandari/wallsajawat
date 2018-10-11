@@ -11,6 +11,14 @@
 <link href="{{ asset('build/assets/css/stylesheet.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style type="text/css" media="screen">
+.nocart span {
+	font-size:14px;
+	border: 1px solid #ddd;
+	line-height: 40px
+}
+	
+</style>
 @endsection
 
 @section('content')
@@ -109,8 +117,8 @@
 		<div class="container">
 			<div class="cart">
 				<div class="row">
-					<div class="col-sm-12">
-						<h4>No product in cart</h4>
+					<div class="col-sm-12 nocart">
+						<span>No product in cart</span>
 					</div>
 					<div class="col-sm-12">
 						<a style="width:15%" href="{{ route('home.index') }}" class="btn btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
