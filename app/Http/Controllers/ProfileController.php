@@ -21,7 +21,7 @@ class ProfileController extends Controller
        {
         	$wishlists = DB::table('wishlists')
 		            			->join('products', 'wishlists.pid', '=', 'products.id')
-		            			->select('products.name', 'products.sku', 'product.id', 'products.price', 'wishlists.random_string')
+		            			->select('products.name', 'products.sku', 'products.id', 'products.price', 'wishlists.random_string')
 		           		 		->where('wishlists.user_id', Auth::user()->id)
 		           				->get();
            return view('pages.wishlist.wishlist', compact('wishlists'));
