@@ -152,7 +152,7 @@
 
 								</div>
 
-								<input type="hidden" id="user_city_id" value="{{ $city_id }}">
+								<input type="hidden" id="user_city_id" value="{{ $city_id }}" />
 
 
 								<div class="row">
