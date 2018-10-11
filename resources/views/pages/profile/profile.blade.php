@@ -158,7 +158,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Confirm Password</label>
-											<input type="password" class="form-control" name="password_confirmation" value="" />
+											<input type="password" class="form-control" name="password_confirmation" value="" placeholder="Confirm Password (optional)" />
 											@if ($errors->has('password_confirmation'))
 				                                    <span class="error" role="alert">
 				                                        {{ $errors->first('password_confirmation') }}
