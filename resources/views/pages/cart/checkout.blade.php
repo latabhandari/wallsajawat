@@ -12,7 +12,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style type="text/css" media="screen">
-	.sub-heading h3{margin:5px 0 0 0}
+	.sub-heading h3{margin:3px 0 0 0}
 </style>
 @endsection
 
