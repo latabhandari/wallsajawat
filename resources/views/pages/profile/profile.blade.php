@@ -58,7 +58,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Address Line<samp>*</samp></label>
-											<input type="text" name="address" class="form-control" value="{{ $user->profile->address }}">
+											<input type="text" name="address" class="form-control" value="{{ $user->address }}">
 											@if ($errors->has('address'))
 			                                    <span class="error" role="alert">
 			                                        {{ $errors->first('address') }}
