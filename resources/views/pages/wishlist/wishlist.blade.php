@@ -52,7 +52,7 @@
                   <p>Sku: {{ $row->sku }}</p>
                 </div>
                 <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
-                <div class="col-sm-4"><a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a>&nbsp;&nbsp;<a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left">Remove</button></a></div>
+                <div class="col-sm-4"><a class="remove" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left" style="margin-top:0px">Remove</button></a>&nbsp;&nbsp;<a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a></div>
               </div>
             </div>
 
