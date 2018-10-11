@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Auth;
 use DB;
+use App\Cities as Cities;
+use App\States as States;
 
 class ProfileController extends Controller
 {
