@@ -19,6 +19,7 @@ class CreateWishlistsTable extends Migration
             $table->unsignedInteger('pid')->comment('Product Id');
             $table->unsignedInteger('unix_timestamp')->comment('Unix Timestamp');
             $table->string('ip_address')->comment('Ip Address')->nullable();
+            $table->string('random_string', 32)->comment('Random String');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

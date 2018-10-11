@@ -167,7 +167,7 @@ class ProductController extends Controller
                  $params  = $request->all();
                  $pid     = $params['pid'];
                  $userid  = \Auth::user()->id;
-                 $query   = Wishlist::where(['user_id' => $userid, 'pid' => $pid])->get();
+                 $query   = Wishlist::where(['user_id' => $userid, 'pid' => $pid, 'random_string' => str_random(24))->get();
                  if (count($query))
                    {
                          $arr = ['status' => false, "msg" => "Already in your wishlist"];

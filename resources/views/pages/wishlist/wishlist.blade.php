@@ -70,7 +70,6 @@
         </div>
     @else
         <div>Sorry, no product in your wishlist.</div>     
-
     @endif
 
 

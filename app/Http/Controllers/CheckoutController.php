@@ -62,9 +62,9 @@ class CheckoutController extends Controller
               $coupon = $params['coupon'];
               if (session('discount'))
 	              {
-						$arr = ["status" => false, "msg" => "You've already applied coupon code!"];
-						echo json_encode($arr);
-						return;
+        						$arr = ["status" => false, "msg" => "You've already applied coupon code!"];
+        						echo json_encode($arr);
+        						return;
 	              }
 
               if ($coupon)
