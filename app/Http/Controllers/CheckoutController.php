@@ -111,4 +111,12 @@ class CheckoutController extends Controller
               			    echo json_encode($arr);
           } 
 
+
+    public function wishlistRemove($random_id = '')
+       {
+          Wishlist::where(['random_string' => $random_id])->delete();
+          return redirect()->back();
+       }
+
+
 }
