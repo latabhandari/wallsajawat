@@ -41,6 +41,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/wallpaper-installer', 'CmsController@installer')->name('wallpaper_installer');
     Route::get('/how-to-measure', 'CmsController@measure')->name('how_to_measure');
     Route::get('/offers', 'CmsController@offers')->name('offers');
+    Route::get('/faq', 'CmsController@faq')->name('faq');
 
     Route::get('/product/{slug}', 'ProductController@detail')->name('product.detail');
 

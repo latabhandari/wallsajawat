@@ -23,10 +23,17 @@ class CmsController extends Controller
      	 return view('pages.cms.about');
      }
 
+    public function faq()
+     {
+         return view('pages.cms.faq');
+     }
+
     public function contact()
      {
      	 return view('pages.cms.contact');
      }
+
+
 
     public function contactpost(Request $request)
      {
