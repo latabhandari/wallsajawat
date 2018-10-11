@@ -36,7 +36,10 @@ class ProfileController extends Controller
                       ->where('users.id', Auth::user()->id)
                       ->first();
 
-           return view('pages.profile.profile', compact('user'));
+            $states = States::where('country_id', 101)->get();
+            $cities = Cities::where('state_id', 13)->get();
+
+            return view('pages.profile.profile', compact('user', 'states', 'cities'));
        }
 
       public function updateProfile()
