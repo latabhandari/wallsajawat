@@ -192,10 +192,8 @@ class ProductController extends Controller
        }
 
 
-     public function wishlistRemove(Request $request)
+     public function wishlistRemove($random_id = '')
        {
-          $params     =  $request->all(); 
-          $random_id  =  $params["wishlist_id"];
           Wishlist::where(['random_string' => $random_id])->delete();
           return redirect()->back();
        }
