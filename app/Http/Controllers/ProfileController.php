@@ -47,6 +47,27 @@ class ProfileController extends Controller
       public function updateProfile()
        {
 
+         request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required']);
+
+         $params                            =    $request->all();
+
+         $fields['name']                    =    $params['name'];
+         $fields['mobile']                  =    $params['mobile'];
+
+         $userid                            =    Auth::user()->id;
+
+         Users::where('id', $userid)->update($fields);
+
+
+         $pfields['address']                 =    $params['pfields'];
+         $pfields['city']                    =    $params['city'];
+         $pfields['state']                   =    $params['state'];
+         $pfields['pin']                     =    $params['status'];
+
+         Profile::where('user_id', $userid)->update($pfields);
+
+         return redirect()->route('profile')->with('success','created successfully');
+
        }
 
 

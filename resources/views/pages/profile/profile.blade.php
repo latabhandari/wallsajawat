@@ -29,6 +29,12 @@
 							<h3 style="margin:5px 0">Update Profile</h3>
 						</div>
 
+						@if ($success = Session::get('success'))
+			                  <div class="alert alert-success">
+			                      <p>Your Profile has been updated successfully!</p>
+			                  </div>
+			            @endif
+
 						@php
 						   $city_id  = $user->city;
 						   $state_id = $user->state;
