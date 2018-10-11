@@ -77,6 +77,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
 			'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
             'unix_timestamp' => time()
+            'verified' => 1
         ]);
 
         Profile::create(['user_id' => $user->id]);
