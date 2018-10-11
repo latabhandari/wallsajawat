@@ -835,6 +835,48 @@ padding-right:0!important;}
   margin-top: 0;
   padding-top: 38%;
 }
+
+.sub-img1{
+
+  min-height: 200px;
+  width: 670px
+ 
+}
+
+.sub-img2{
+ min-height:200px;
+ margin-left:3px; 
+ width:318px
+}
+
+.sub-img3{
+  min-height: 200px;
+  margin-left: 3px;
+  width:318px
+ 
+}
+
+.sub-img4{
+  min-height: 300px;
+  width:318px
+ 
+}
+
+.sub-img5{
+  min-height: 300px;
+  margin-left: 3px;
+  width: 670px;
+ 
+}
+
+.sub-img6{
+  min-height: 300px;
+  width:318px;
+  margin-left: 3px
+ 
+}
+
+
 .sub-img4>h5, .sub-img6>h5, .sub-img5>h5 {
   margin-top: 0;
   padding-top: 55%;
