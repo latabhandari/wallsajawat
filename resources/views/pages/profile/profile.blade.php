@@ -168,10 +168,10 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Confirm Password</label>
-											<input type="password" class="form-control" name="confirm_password" value="" />
-											@if ($errors->has('confirm_password'))
+											<input type="password" class="form-control" name="password_confirmation" value="" />
+											@if ($errors->has('password_confirmation'))
 				                                    <span class="error" role="alert">
-				                                        {{ $errors->first('confirm_password') }}
+				                                        {{ $errors->first('password_confirmation') }}
 				                                    </span>
 		                                    @endif
 										</div>

@@ -49,6 +49,25 @@ class ProfileController extends Controller
       public function updateProfile(Request $request)
        {
 
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'pin' => 'required',
+            'mobile' => 'required',
+            'password' => 'sometimes|required|min:3|confirmed',
+            'password_confirmation' => 'required|min:3'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/profile')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
+
+
          request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|confirm_password|min:6']);
 
          $params                            =    $request->all();
