@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>Untitled Document</title>
+<title>WallSajawat</title>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,intial-scale=1.0">

@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', $category_info->name)
+
 @section('top_yield')
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />

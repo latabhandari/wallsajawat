@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Policy')
+
 @section('top_yield')
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('build/assets/css/jquery.bxslider.min.css') }}" rel="stylesheet" type="text/css">
