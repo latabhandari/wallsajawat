@@ -156,7 +156,7 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
-											<label>Password <samp>*</samp></label>
+											<label>Password</label>
 											<input type="password" class="form-control" name="password" value="" />
 											@if ($errors->has('password'))
 			                                    <span class="error" role="alert">
