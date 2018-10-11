@@ -8,6 +8,8 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
 @endsection
 
 @section('content')
@@ -16,23 +18,44 @@
 	<div class="row">
 		<div class="col-sm-12 text-center">
 			<div class="title measure-title">
-				<h3>Installer</h3>
+				<h3>Wallpaper Installer</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href="">Installer</a></li>
+					<li><a href="">Wallpaper Installer</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="col-sm-12">
 			<div class="measure-content">
-				<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+				<h4 style="padding-left:40px; margin-bottom:20px;">Wall sajawat installation network in India</h4>
+				
+				<p class="weight400">Our list of wallpaper installers in various cities is given below. We are continuously working to expand our network of installers across India. In case you  have a reference or wish to tie-up with us, please feel to drop us an email at info@wallsajawat.com. Please note the installation charges are separate and are not included in the cost of the wallpapers.</p>
+				
+				<p class="weight400 marginBottom20 paddingbtm0">Wallpaper Installers are currently available in the following cities:</p>
+				
+				<ul>
+				<li>Ahmedabad</li>
+				<li>Bangalore</li>
+				<li>Baroda</li>
+				<li>Chennai</li>
+				<li>Delhi</li>
+				<li>Faridabad</li>
+				<li>Gurgaon</li>
+				<li>Hyderabad</li>
+				<li>Kolkata</li>
+				<li>Mumbai</li>
+				<li>NCR</li>
+				<li>Noida</li>
+				<li>Pune</li>
+				</ul>
+				<p class="weight400"><span class="weight600">Please note:</span> Wall sajawat provides the installation as a service to customers. Except for Delhi / NCR, we would not be held responsible for any delay or damage in the installation of your wallpaper by these service providers. We can assure you that they are trained installers, but any installation job comes with a certain risk and we would not be held liable for the same. You are free to negotiate the terms and costs of the job with the installer independently. <span class="weight600">Please note installation charges are extra.</span></p>
+				<p class="weight400">Please call us for contact details once you place your order and we would be happy to provide the same for you.</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 @endsection
-
 
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>

@@ -71,6 +71,6 @@ class CmsController extends Controller
 
     public function offers()
      {
-     	 return view('pages.cms.about');
+     	 return view('pages.cms.offers');
      }
 }
