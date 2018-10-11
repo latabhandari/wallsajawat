@@ -102,7 +102,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Postal Code <samp>*</samp></label>
-											<input type="text" name="postal_code" class="form-control" value="{{ $user->profile->pin }}" />
+											<input type="text" name="postal_code" class="form-control" value="{{ $user->pin }}" />
 											@if ($errors->has('postal_code'))
 			                                    <span class="error" role="alert">
 			                                        {{ $errors->first('postal_code') }}
