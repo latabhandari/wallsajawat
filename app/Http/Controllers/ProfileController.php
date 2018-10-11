@@ -61,10 +61,10 @@ class ProfileController extends Controller
          User::where('id', $userid)->update($fields);
 
 
-         $pfields['address']                 =    $params['pfields'];
+         $pfields['address']                 =    $params['address'];
          $pfields['city']                    =    $params['city'];
          $pfields['state']                   =    $params['state'];
-         $pfields['pin']                     =    $params['status'];
+         $pfields['pin']                     =    $params['pin'];
 
          Profile::where('user_id', $userid)->update($pfields);
 
