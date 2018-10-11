@@ -49,7 +49,7 @@ class ProfileController extends Controller
       public function updateProfile(Request $request)
        {
 
-         request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|required|confirmed_password|min:6']);
+         request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|confirm_password|min:6']);
 
          $params                            =    $request->all();
 
