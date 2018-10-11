@@ -56,7 +56,7 @@ class ProfileController extends Controller
             'state' => 'required',
             'pin' => 'required',
             'mobile' => 'required',
-            'password' => 'sometimes|required|min:3|confirmed',
+            'password' => 'present|required|min:3|confirmed',
             'password_confirmation' => 'required|min:3'
         ]);
 
@@ -68,7 +68,7 @@ class ProfileController extends Controller
 
 
 
-         request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|confirm_password|min:6']);
+         //request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'sometimes|confirm_password|min:6']);
 
          $params                            =    $request->all();
 
