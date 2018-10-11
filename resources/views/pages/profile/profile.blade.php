@@ -120,21 +120,7 @@
 			                                @endif
 										</div>
 									</div>
-									<div class="col-sm-6">
-										<div class="form-group">
-											<label>Country <samp>*</samp></label>
-											<select class="form-control" name="country_id">
-												<option value="101">India</option>
-											</select>
-											@if ($errors->has('country_id'))
-			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('country_id') }}
-			                                    </span>
-			                                @endif
-										</div>
-									</div>
-								</div>
-								<div class="row">
+
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Phone Number <samp>*</samp></label>
@@ -146,12 +132,18 @@
 			                                @endif
 										</div>
 									</div>
+
+								</div>
+								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Email Address <samp>*</samp></label>
 											<input type="text" class="form-control" readonly name="email" value="{{ $user->email }}">
 										</div>
 									</div>
+
+									<div class="col-sm-6"></div>
+
 								</div>
 
 
