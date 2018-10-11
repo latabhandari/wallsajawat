@@ -77,7 +77,7 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>State <samp>*</samp></label>
-											<select class="form-control" name="state" onchange="getCities(this.value)">
+											<select id="state" class="form-control" name="state" onchange="getCities(this.value)">
 												@foreach ($states as $state)
 												  <option {{ $state_id == $state->id ? "selected" : "" }} value="{{ $state->id }}">{{ $state->name }}</option>
 												@endforeach
@@ -99,12 +99,13 @@
 													  <option {{ $city_id == $city->id ? "selected" : "" }} value="{{ $city->id }}">{{ $city->name }}</option>
 													@endforeach
 												</select>
-												@if ($errors->has('city'))
-			                                    <span class="error" role="alert">
-			                                        {{ $errors->first('city') }}
-			                                    </span>
-			                                @endif
 											</div>
+
+												@if ($errors->has('city'))
+					                                    <span class="error" role="alert">
+					                                        {{ $errors->first('city') }}
+					                                    </span>
+			                                    @endif
 										</div>
 									</div>
 								</div>
@@ -170,6 +171,13 @@
 </div>
 
 <script>
+
+	$(document).ready(function() {
+
+		var i = $('#state option:selected').val();
+		getCities(i);
+
+	});
 
 	function getCities(state_id)
 		 {
