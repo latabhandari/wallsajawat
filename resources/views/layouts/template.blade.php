@@ -52,11 +52,9 @@
                        $i = 1;
                     @endphp      
                     @foreach ($wallpaper_images as $wall_image)  
-                     <a href="{{ route('category.product', $wall_image->slug) }}">
-                         <div class="sub-img{{ $i++ }}" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
-                            <h5>{{ $wall_image->name }}</h5>
-                         </div>
-                     </a>
+                     <div class="sub-img{{ $i++ }}" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
+                        <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
+                    </div>
                     @endforeach
 
                     <div class="sub-img6" style="background-image: url({{ asset('build/assets/images/All-elements.png') }});min-height: 300px;width:318px;margin-left: 3px">
