@@ -43,18 +43,16 @@ switch ($segment)
                             <li class="dropdown">
                               <a href="#" class="dropdown-toggle user-option" data-toggle="dropdown" >OUR RANGE <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                  <li><a href="product-page.html">Ethnic</a></li>
-                                                <li><a href="product-page.html">Interior/ Architect Choice</a></li>
-                                                <li><a href="product-page.html">Flora</a></li>
-                                                <li><a href="product-page.html">Kids pattern/ Junior Zone</a></li>
-                                                <li><a href="product-page.html">3D</a></li>
-                                                <li><a href="product-page.html">Bricks & Stones</a></li>
-                                                <li><a href="product-page.html">Classic</a></li>
-                                                <li><a href="product-page.html">See More <i class="fa fa-caret-right pull-right" aria-hidden="true" style="margin-top:4px;"></i></a></li>
+                                    @php
+                                        $category_list = App\Helpers\MyHelper::getCategories();
+                                    @endphp
+                                    @if(count($category_list))
+                                       @foreach ($category_list as $category)
+                                        <li><a href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
+                                       @endforeach
+                                    @endif
                                 </ul>
                             </li>
-
-
 
                             <li class="{{ isset($about_active) ? 'active' : '' }}"><a href="{{ route('about') }}">ABOUT US</a></li>
                             <li class="{{ isset($wallpaper_installer_active) ? 'active' : '' }}"><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>

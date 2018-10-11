@@ -10,9 +10,14 @@ use App\ProductImages as ProductImages;
 use App\Measurement as Measurement;
 use App\Dimension as Dimension;
 use App\Product as Product;
-
+use App\Category as Category;
 class MyHelper 
    {
+   	      public static function getCategories()
+   	       {
+   	       	  return Category::select('id, name, slug')->where('status', 1)->get();
+   	       }
+
    	      public static function removeComma($string = '')
    	       {
    	       	  return floor(str_replace(',','', $string));
