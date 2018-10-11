@@ -65,6 +65,9 @@ Route::group(['prefix' => 'beta'], function() {
     Route::post('/coupon', 'CheckoutController@coupon')->name('cart.checkout.coupon');
 
     Route::get('/wishlist/remove/{random_id}', 'CheckoutController@wishlistRemove')->name('wishlist.remove');
+
+    Route::get('/profile', 'ProfileController@profile')->name('profile');
+    Route::post('/profile', 'ProfileController@updateProfile')->name('profile.update');
     
 
 });

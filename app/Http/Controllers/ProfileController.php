@@ -26,4 +26,23 @@ class ProfileController extends Controller
 		           				->get();
            return view('pages.wishlist.wishlist', compact('wishlists'));
        }
+
+
+      public function profile()
+       {
+           $profile = DB::table('users')
+                      ->join('profile', 'users.id', '=', 'profile.user_id')
+                      ->select('users.name', 'users.email', 'users.mobile', 'profile.address', 'profile.city', 'profile.state', 'profile.pin', 'profile.country', 'profile.profile')
+                      ->where('users.id', Auth::user()->id)
+                      ->first();
+
+           return view('pages.profile.profile', compact('profile'));
+       }
+
+      public function updateProfile()
+       {
+
+       }
+
+
 }
