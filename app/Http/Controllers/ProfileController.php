@@ -44,7 +44,7 @@ class ProfileController extends Controller
             return view('pages.profile.profile', compact('user', 'states', 'cities'));
        }
 
-      public function updateProfile()
+      public function updateProfile(Request $request)
        {
 
          request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required']);
