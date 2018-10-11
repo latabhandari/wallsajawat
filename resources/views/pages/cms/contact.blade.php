@@ -13,6 +13,94 @@
 @endsection
 
 @section('content')
+
+ <div class="container">
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<div class="title measure-title">
+				<h3>Contact Us</h3>
+				<ul class="navbar">
+					<li class="nobackground"><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li><a href=""><strong>Contact us</strong></a></li>
+					
+				</ul>
+			</div>
+		</div>
+		
+		<!--form sec-->
+		<div class="col-sm-12 paddingleft40">
+			<div class="row">
+				<div class="col-sm-12">
+					<p><strong>You can also leave your query by filling the form below. We will get back to you at the earliest!</strong></p>
+				</div>
+				<div class="col-sm-7">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<form class="contact-form">
+								<div class="form-group">
+									<label for="name" class="width20 floatL">Name:</label>
+									<input type="text" class="form-control width80" id="InputName" placeholder="Enter Name">
+								</div>
+								<div class="form-group">
+									<label for="name" class="width20 floatL">Company Name:</label>
+									<input type="text" class="form-control width80" id="InputCompanyName" placeholder="Enter Company Name">
+								</div>
+								<div class="form-group">
+									<label for="tel" class="width20 floatL">Phone:</label>
+									<input type="tel" class="form-control width80" id="InputPhone" placeholder="Enter Phone Number">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputEmail1" class="width20 floatL">Email address:</label>
+									<input type="email" class="form-control width80" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+								</div>
+								<div class="form-group">
+									<label for="inputAddress2" class="width20 floatL">Address:</label>
+									<input type="text" class="form-control width80" id="inputAddress2" placeholder="Apartment, studio, or floor">
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-6 paddingLeft0">
+										<label for="inputCity" class="width40 floatL">City</label>
+										<input type="text" class="form-control width60" id="inputCity" placeholder="City">
+									</div>
+									<div class="form-group col-md-4 paddingLeft0">
+										<label for="inputState" class="width20 floatL">State</label>
+										<select id="inputState" class="form-control width80">
+											<option selected="">Choose...</option>
+											<option>...</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2 paddingLeft0 paddingRght0">
+										<label for="inputZip" class="width30 floatL">Zip</label>
+										<input type="text" class="form-control width70" id="inputZip" placeholder="Zip">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="comment" class="width20 floatL">Message:</label>
+									<textarea class="form-control width80" rows="5" id="comment"></textarea>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn contact-submit">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End of form sec-->
+		
+		<!--map sec-->
+		<div class="col-sm-12 paddingleft40">
+			<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=GAUTAM%20BUDDHA%20NAGAR%2C%20UTTAR%20PRADESH%20(UP)+(Wall%20sajawat)&amp;ie=UTF8&amp;t=&amp;z=9&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Google Maps iframe generator</a></iframe></div><br>
+		</div>
+		<!--End of map sec-->
+	</div>
+</div>
+
+
+
+
+
  <div class="container">
 	<form method="POST" action="{{ route('contactpost') }}" aria-label="{{ __('Contact') }}">
 		@csrf
