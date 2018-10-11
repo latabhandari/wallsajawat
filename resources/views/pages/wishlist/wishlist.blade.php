@@ -21,9 +21,6 @@
           <div class="col-sm-8">
             <h2>YOUR WISHLIST</h2>
           </div>
-          <div class="col-sm-4">
-            <a href="checkout.html" title="Proceed to Checkout" class="btn pull-right">Proceed to Checkout</a>
-          </div>
         </div>
         <!-- start cart-box -->
 
