@@ -29,8 +29,8 @@ class CheckoutController extends Controller
           if(\Auth::check())
            {
                  $user   = \Auth::user();
-                 $states = States::where('country_id', 101)->get();
-                 $cities = Cities::where('state_id', 13)->get();
+                 $states = States::where('country_id', env('DEFAULT_COUNTRY', 101))->get();
+                 $cities = Cities::where('state_id', env('DEFAULT_STATE', 13))->get();
                  return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
            }
           else
@@ -41,7 +41,7 @@ class CheckoutController extends Controller
 
       public function checkoutStore(Request $request)
            {
-               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'country_id' => 'required', 'postal_code' => 'required|digits:6|numeric', 'mobile' => 'required']);
+               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'postal_code' => 'required|digits:6|numeric', 'mobile' => 'required']);
 
                $params                             =    $request->all();
 
@@ -55,6 +55,8 @@ class CheckoutController extends Controller
                $pfields['pin']                     =    $params['postal_code'];
                
                Profile::where('user_id', Auth::user()->id)->update($pfields);
+
+               
            }
 
         public function coupon(Request $request)
