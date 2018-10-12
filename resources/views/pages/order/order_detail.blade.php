@@ -105,7 +105,7 @@
 												<div class="order-name-sec">
 													<div class="col-sm-8">
 														<p class="marginZero">SHIP TO</p>
-														<p class="user-order-name">{{ Helpers\MyHelper::getCustomerShippingAddress($order->id) }}</p>
+														<p class="user-order-name">{{ App\Helpers\MyHelper::getCustomerShippingAddress($order->id) }}</p>
 													</div>
 													<div class="col-sm-4 text-right paddingLeftRght0">
 														<div class="row">
