@@ -33,7 +33,8 @@ class OrderController extends Controller
         {
 
 			$discount 					 = 	session('discount');
-        	$order['order_number']       =  rand(11111111, 99999999); 
+			$order_number                =  rand(11111111, 99999999);
+        	$order['order_number']       =  $order_number;
         	$order['user_id']            =  Auth::user()->id;
         	$order['coupon']             =  session('coupon');
         	$order['discount']           =  session('discount');
@@ -67,11 +68,19 @@ class OrderController extends Controller
 
 				    OrderProducts::insert($data);
   		       }
-  		    Session::forget('coupon');
-  		    Session::forget('discount');
-  		    Cart::destroy();
+  		    /* remove session for coupon and destroy cart */
+	  		    Session::forget('coupon');
+	  		    Session::forget('discount');
+	  		    Cart::destroy();
+	  		/* close */
 
-  		    echo "success";
+	  		    return redirect()->route('order', $order_number);
   		 }
+
+  	public function order($order_number)
+  	  {
+  	  		$order = '';
+			return view('pages.order.order_detail', compact('order'));
+  	  }
 
 }
