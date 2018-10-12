@@ -27,6 +27,8 @@ class CreateOrdersTable extends Migration
             
             $table->string('total_amount')->comment('Total Amount (Products Total)');
 
+            $table->longText('shipping_address')->comment('Shipping Address');
+
             $table->string('payable_amount')->comment('Payable Amount - (Total Amount - Discount Applied)');
 
             $table->ipAddress('ip_address')->comment('Ip Address');

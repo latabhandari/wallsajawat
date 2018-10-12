@@ -43,7 +43,8 @@ class OrderController extends Controller
 
 		    $payable_amount  			 =  $cart_total - $discount;
 
-        	$order['payable_amount']     =  $payable_amount;
+            $order['payable_amount']     =  $payable_amount;
+        	$order['shipping_address']   =  session('shipping_address');
         	$order['ip_address']         =  $request->ip();
         	$order['user_agent']         =  $request->header('User-Agent');
         	$order['unix_timestamp']     =  time();
@@ -71,7 +72,8 @@ class OrderController extends Controller
 
   		        /* remove session for coupon and destroy cart */
     	  		    Session::forget('coupon');
-    	  		    Session::forget('discount');
+                    Session::forget('discount');
+    	  		    Session::forget('shipping_address');
     	  		    Cart::destroy();
 	  		    /* close */
 

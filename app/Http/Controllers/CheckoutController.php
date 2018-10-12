@@ -51,14 +51,16 @@ class CheckoutController extends Controller
 
                $fields['name']                     =    $params['name'];
                $fields['mobile']                   =    $params['mobile'];
-               User::find(Auth::user()->id)->update($fields);
+               //User::find(Auth::user()->id)->update($fields);
 
                $pfields['address']                 =    $params['address'];
                $pfields['city']                    =    $params['city_id'];
                $pfields['state']                   =    $params['state_id'];
                $pfields['pin']                     =    $params['postal_code'];
-               
-               Profile::where('user_id', Auth::user()->id)->update($pfields);
+
+               session(['shipping_address' => json_encode($pfields)]);
+
+               //Profile::where('user_id', Auth::user()->id)->update($pfields);
 
                return redirect()->route('order.store');
            }
