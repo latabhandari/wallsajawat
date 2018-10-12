@@ -65,8 +65,6 @@ class OrderController extends Controller
                     $data['price']               =  round($row->price);
                     $data['qty']                 =  $row->qty;
 				    $data['price']               =  $row->price;
-
-
 				    $data['dimension']           =  json_encode($mdata);
 
 				    OrderProducts::insert($data);

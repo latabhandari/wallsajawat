@@ -172,7 +172,7 @@
 															<div>
 																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{!! $product_info[0]['short_desc'] !!}</div>
 															</div>	
-															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
+															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> {{ $product->price }}</h4>
 															<div class="col-sm-12 ">
 																<button class="btn buyagain-btn" type="submit">Buy it again</button>
 															</div>
