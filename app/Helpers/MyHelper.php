@@ -19,7 +19,7 @@ class MyHelper
    {
 
          
-         public static function getShippingAddress($id = '')
+         public static function getCustomerShippingAddress($id = '')
    	       {
    	       	  $info       =  Order::select('shipping_address')->where('id', $id)->first();
    	       	  $ship_info  =  json_decode($info->shipping_address);
@@ -39,11 +39,6 @@ class MyHelper
    	       {
    	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
    	       }
-
-   	      public static function getCustomerShippingAddress($order_id = '')
-   	       {
-   	       	  return 'Delhi';
-   	       } 
 
    	      public static function getOrderProducts($orderid = '')
    	       {
