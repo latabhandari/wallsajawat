@@ -104,7 +104,7 @@ class CheckoutController extends Controller
 
 							    				break;
 							    }
-							    	session(['discount' => $discount]);
+							    	session(['discount' => $discount, 'coupon' => $coupon]);
 							    	$request->session()->flash('discount_status', 'Successfully applied!');
 							    	$arr = ["status" => true, "msg" => "applied"];
 						}

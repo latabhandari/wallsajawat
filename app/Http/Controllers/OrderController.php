@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
+use App\OrderProducts as OrderProducts;
+use App\Order as Order;
+ App\Helpers\MyHelper as MyHelper;
+
 class OrderController extends Controller
 {
     /**
@@ -21,9 +27,49 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function store(Request $request)
         {
+
+			$discount 					 = 	session('discount');
+        	$order['order_number']       =  rand(1111111111, 9999999999); 
+        	$order['user_id']            =  Auth::user()->id;
+        	$order['coupon']             =  session('coupon');
+        	$order['discount']           =  session('discount');
+        	$order['total_amount']       =  Cart::total();
+
         	
-  		}
+		    $cart_total 				 = MyHelper::removeComma(Cart::total());
+		    $payable_amount  			 = $cart_total - $discount;
+
+        	$order['payable_amount']     = $payable_amount;
+        	$order['ip_address']         = $request->ip();
+        	$order['user_agent']         = $request->ip();
+        	$order['unix_timestamp']     = $request->ip();
+        	$order['unix_timestamp']     = $request->header('User-Agent');
+
+        	$order_id                    = Order::create($order)->id;
+
+        	foreach(Cart::content() as $row) 
+        	   {
+        	   	    $mdata                       =  [];
+        	   	    $mid                         =  $row->options->type; 
+        	   	    $mdata['measurement_id']     =  $mid;
+				    $measurement_info  			 =  App\Helpers\MyHelper::getMeasurement($mid);
+				    $mdata['measurement_name']   =  $measurement_info->name;
+				    $mdata['width']  		     =  $measurement_info->width;
+				    $mdata['height']             =  $measurement_info->height;
+
+				    $data['order_id']            =  $order_id;
+				    $data['product_id']          =  $row->id;
+				    $data['price']               =  round($row->price);
+				    $data['dimension']           =  json_encode($mdata);
+
+				    OrderProducts::insert($data);
+
+  		       }
+  		    Session::forget('coupon');
+  		    Session::forget('discount');
+
+  		    echo "success";
 
 }
