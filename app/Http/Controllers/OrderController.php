@@ -39,7 +39,7 @@ class OrderController extends Controller
         	$order['discount']           =  session('discount');
 
         	$cart_total 				 =  MyHelper::removeComma(Cart::total());
-        	$order['total_amount']       =  $cart_total
+        	$order['total_amount']       =  $cart_total;
 
 		    $payable_amount  			 =  $cart_total - $discount;
 
