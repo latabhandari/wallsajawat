@@ -80,7 +80,7 @@
 							<div class="tab-pane fade active in" id="Dashboard1" role="tabpanel">
 								<div class="col-sm-12">
 									<div class="placed-order-count">
-										<h5><span class="weight600">1 order</span> placed in</h5>
+										<h5><span class="weight600">{{ count($orders) }} order</span> placed in</h5>
 									</div>
 								</div>
 
@@ -136,7 +136,7 @@
 
 										@php
 										  $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
-										  $product_info    = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc', 'id']);
+										  $product_info    = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
 										  $dimension       = json_decode($product->dimension);
 										@endphp
 
@@ -170,7 +170,7 @@
 															</div>
 															
 															<div>
-																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{{ $dimension->width }}</div>
+																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{{ $product_info->short_desc }}</div>
 															</div>	
 															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
 															<div class="col-sm-12 ">
