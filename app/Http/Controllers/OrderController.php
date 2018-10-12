@@ -37,26 +37,26 @@ class OrderController extends Controller
         	$order['user_id']            =  Auth::user()->id;
         	$order['coupon']             =  session('coupon');
         	$order['discount']           =  session('discount');
-        	$order['total_amount']       =  Cart::total();
 
-        	
-		    $cart_total 				 = MyHelper::removeComma(Cart::total());
-		    $payable_amount  			 = $cart_total - $discount;
+        	$cart_total 				 =  MyHelper::removeComma(Cart::total());
+        	$order['total_amount']       =  $cart_total
 
-        	$order['payable_amount']     = $payable_amount;
-        	$order['ip_address']         = $request->ip();
-        	$order['user_agent']         = $request->header('User-Agent');
-        	$order['unix_timestamp']     = time();
+		    $payable_amount  			 =  $cart_total - $discount;
 
-        	$order_id                    = Order::create($order)->id;
+        	$order['payable_amount']     =  $payable_amount;
+        	$order['ip_address']         =  $request->ip();
+        	$order['user_agent']         =  $request->header('User-Agent');
+        	$order['unix_timestamp']     =  time();
+
+        	$order_id                    =  Order::create($order)->id;
 
         	foreach(Cart::content() as $row) 
         	   {
         	   	    $mdata                       =  [];
         	   	    $mid                         =  $row->options->type; 
-        	   	    $mdata['measurement_id']     =  $mid;
+        	   	    $mdata['mid']     			 =  $mid;
 				    $measurement_info  			 =  MyHelper::getMeasurement($mid);
-				    $mdata['measurement_name']   =  $measurement_info->name;
+				    $mdata['name']               =  $measurement_info->name;
 				    $mdata['width']  		     =  $measurement_info->width;
 				    $mdata['height']             =  $measurement_info->height;
 
@@ -66,7 +66,6 @@ class OrderController extends Controller
 				    $data['dimension']           =  json_encode($mdata);
 
 				    OrderProducts::insert($data);
-
   		       }
   		    Session::forget('coupon');
   		    Session::forget('discount');
