@@ -17,10 +17,7 @@ class MyHelper
 
    	  	 public static function getProductInfo($id = '', $fields = array())
    	       {
-			  $fields_comma_separated  = "'".implode("', '", $fields)."'";
-			  echo $fields_comma_separated;
-
-   	       	  return Product::select($fields_comma_separated)->where('id', $id)->first();
+   	       	  return Product::select("'" . implode("','", $fields) . "'")->where('id', $id)->first();
    	       }
 
    	      public static function getCategories()
