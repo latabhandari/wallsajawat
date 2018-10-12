@@ -137,6 +137,7 @@
 										@php
 										  $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
 										  $product_info    = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
+										  print_r($product_info); die;
 										  $dimension       = json_decode($product->dimension);
 										@endphp
 
