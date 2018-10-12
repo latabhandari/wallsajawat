@@ -57,8 +57,8 @@ class OrderController extends Controller
         	   	    $mdata['mid']     			 =  $mid;
 				    $measurement_info  			 =  MyHelper::getMeasurement($mid);
 				    $mdata['name']               =  $measurement_info->name;
-				    $mdata['width']  		     =  $measurement_info->width;
-				    $mdata['height']             =  $measurement_info->height;
+				    $mdata['width']  		     =  $row->options->width;
+				    $mdata['height']             =  $row->options->height;
 
 				    $data['order_id']            =  $order_id;
 				    $data['product_id']          =  $row->id;
