@@ -11,7 +11,7 @@ use App\Measurement as Measurement;
 use App\Dimension as Dimension;
 use App\Product as Product;
 use App\Categories as Category;
-user App\OrderProducts as OrderProducts;
+use App\OrderProducts as OrderProducts;
 class MyHelper 
    {
    	      public static function getCategories()
