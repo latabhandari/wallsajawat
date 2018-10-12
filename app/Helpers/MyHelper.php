@@ -27,7 +27,7 @@ class MyHelper
    	       	  $stateobj   =  State::select('name')->where('id', $ship_info->state)->first();
    	       	  $pincode    =  $ship_info->pin;
 
-   	       	  return $ship_info->address . ', ' . $cityobj->city . ', ' . $stateobj->name .', ' . $ship_info->pincode;
+   	       	  return $ship_info->address . ', ' . $cityobj->city . ', ' . $stateobj->name .', ' . $pincode;
    	       }
 
    	  	 public static function getProductInfo($id = '', $fields = array())
