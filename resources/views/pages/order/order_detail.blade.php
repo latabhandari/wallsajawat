@@ -124,9 +124,21 @@
 										</div>
 									</div>
 								</div>
+
 								<div class="col-sm-12">
 									<div class="row">
 										<div class="order-main-body">
+										@php
+											$order_products = App\Helpers\MyHelper::getOrderProducts($order->id);
+										@endphp
+
+										@foreach ($order_products as $product)
+
+										@php
+										  $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
+										@endphp
+
+
 											<div class="row">
 												<div class="col-sm-12">
 													<h4>Delivered XX-Apr-2018</h4>
@@ -138,13 +150,13 @@
 													<div class="row">
 														<div class="col-sm-3">
 															<div class="order-img">
-																<img src="Images/Product6.jpg" alt="">
+																<img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
 															</div>
 														</div>
 														<div class="col-sm-9 order-desc">
 															<div>
 																<h4 class="order-product-title col-sm-12">
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+																	{{ $product->name }}
 																</h4>
 															</div>
 															<div>
@@ -177,6 +189,10 @@
 													</div>
 												</div>
 											</div>
+
+											@endforeach
+
+
 										</div>
 									</div>
 								</div>

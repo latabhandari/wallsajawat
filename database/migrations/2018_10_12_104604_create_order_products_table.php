@@ -21,6 +21,8 @@ class CreateOrderProductsTable extends Migration
 
             $table->unsignedInteger('product_id')->comment('Product Id');
 
+            $table->unsignedSmallInteger('qty')->comment('Quantity');
+
             $table->string('price')->comment('Price');
 
             $table->string('dimension')->comment('Dimension');
