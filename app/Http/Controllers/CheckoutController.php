@@ -41,7 +41,6 @@ class CheckoutController extends Controller
           }
           else
                       return redirect()->route('home.index');
-          endif;
        }
 
       public function checkoutStore(Request $request)
