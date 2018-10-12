@@ -25,7 +25,7 @@ class MyHelper
    	       	  $ship_info  =  json_decode($info->shipping_address);
    	       	  $cityobj    =  City::select('name')->where('id', $ship_info->city)->first();
    	       	  $stateobj   =  State::select('name')->where('id', $ship_info->state)->first();
-   	       	  $pincode    =  $ship_info->pincode;
+   	       	  $pincode    =  $ship_info->pin;
 
    	       	  return $ship_info->address . ', ' . $cityobj->city . ', ' . $stateobj->name .', ' . $ship_info->pincode;
    	       }
