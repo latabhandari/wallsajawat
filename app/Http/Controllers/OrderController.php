@@ -71,5 +71,6 @@ class OrderController extends Controller
   		    Session::forget('discount');
 
   		    echo "success";
+  		 }
 
 }
