@@ -26,6 +26,7 @@ class CheckoutController extends Controller
 
     public function checkout()
        {
+          print_r(Cart::content());
           if (Cart::count()) {
                 if(\Auth::check())
                  {
