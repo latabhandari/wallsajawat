@@ -15,17 +15,12 @@ class MyHelper
    {
    	      public static function getCategories()
    	       {
-   	       	   /*$userinfo   =  DB::table('users')
-									->join('profile', 'users.id', '=', 'profile.user_id')
-			            			->where('users.id', $id)
-			           				->first();
-			   */
-			    return "delhi";       				
+   	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
    	       }
 
-   	      public static function getCustomerInfo($userid = "")
+   	      public static function getCustomerInfo()
    	       {
-   	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
+   	       	  //return Category::select('id', 'name', 'slug')->where('status', 1)->get();
    	       } 
 
    	      public static function removeComma($string = '')
