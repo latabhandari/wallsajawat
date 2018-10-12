@@ -14,6 +14,14 @@ use App\Categories as Category;
 use App\OrderProducts as OrderProducts;
 class MyHelper 
    {
+
+   	  	 public static function getProductInfo($id = '', $fields = array())
+   	       {
+			  $fields_comma_separated  = "'".implode("','", $fields)."'";
+
+   	       	  return Product::select($fields_comma_separated)->where('id', $id)->first();
+   	       }
+
    	      public static function getCategories()
    	       {
    	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
