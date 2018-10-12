@@ -8,6 +8,7 @@ use Auth;
 
 use App\OrderProducts as OrderProducts;
 use App\Order as Order;
+use App\Helpers\MyHelper as MyHelper;
 use Cart;
 
 class OrderController extends Controller
@@ -38,7 +39,7 @@ class OrderController extends Controller
         	$order['total_amount']       =  Cart::total();
 
         	
-		    $cart_total 				 = App\Helpers\MyHelper::removeComma(Cart::total());
+		    $cart_total 				 = MyHelper::removeComma(Cart::total());
 		    $payable_amount  			 = $cart_total - $discount;
 
         	$order['payable_amount']     = $payable_amount;
