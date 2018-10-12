@@ -15,10 +15,11 @@ class MyHelper
    {
    	      public static function getCategories()
    	       {
-   	       	   $userinfo   =  DB::table('users')
+   	       	   /*$userinfo   =  DB::table('users')
 									->join('profile', 'users.id', '=', 'profile.user_id')
 			            			->where('users.id', $id)
 			           				->first();
+			   */
 			    return "delhi";       				
    	       }
 
