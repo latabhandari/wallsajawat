@@ -68,13 +68,14 @@ class OrderController extends Controller
 
 				    OrderProducts::insert($data);
   		       }
-  		    /* remove session for coupon and destroy cart */
-	  		    Session::forget('coupon');
-	  		    Session::forget('discount');
-	  		    Cart::destroy();
-	  		/* close */
 
-	  		    return redirect()->route('order', $order_number);
+  		        /* remove session for coupon and destroy cart */
+    	  		    Session::forget('coupon');
+    	  		    Session::forget('discount');
+    	  		    Cart::destroy();
+	  		    /* close */
+
+	  		        return redirect()->route('order', $order_number);
   		 }
 
   	public function order()
