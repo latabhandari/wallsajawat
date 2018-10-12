@@ -32,7 +32,7 @@ class OrderController extends Controller
         {
 
 			$discount 					 = 	session('discount');
-        	$order['order_number']       =  rand(1111111111, 9999999999); 
+        	$order['order_number']       =  rand(11111111, 99999999); 
         	$order['user_id']            =  Auth::user()->id;
         	$order['coupon']             =  session('coupon');
         	$order['discount']           =  session('discount');
