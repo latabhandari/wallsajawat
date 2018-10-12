@@ -77,9 +77,9 @@ class OrderController extends Controller
 	  		    return redirect()->route('order', $order_number);
   		 }
 
-  	public function order($order_number)
+  	public function order($order_number = '')
   	  {
-  	  		$order = Order::where("order_number", $order_number)->findOrFail();
+  	  		$order = Order::where("order_number", $order_number)->firstOrFail();
 			return view('pages.order.order_detail', compact('order'));
   	  }
 
