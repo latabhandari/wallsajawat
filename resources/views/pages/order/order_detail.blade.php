@@ -54,6 +54,243 @@
 	</div>
 </div>
 
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade active in" id="Dashboard" role="tabpanel">
+					<div class="row">
+						<div class="col-sm-12 paddingLeftRght0">
+							<div class="collapse navbar-collapse marginBottom20 paddingLeftRght0" id="mynavbar">
+								<ul class="nav nav-tabs " id="dashboards-tabs" role="tablist">
+									<li class="nav-item active">
+										<a class="nav-link" id="dashboard1-tab" data-toggle="tab" href="#Dashboard1" role="tab">Orders</a>
+									</li>
+					
+									<li>
+										<a class="nav-link" id="dashboard2-tab" data-toggle="tab" href="#Dashboard2" role="tab">Cancelled Orders</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!---->
+						
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="Dashboard1" role="tabpanel">
+								<div class="col-sm-12">
+									<div class="placed-order-count">
+										<h5><span class="weight600">1 order</span> placed in</h5>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row ">
+										<div class="order-head">
+											<div class="col-sm-4 paddingLeftRght0">
+												<div class="order-date-sec">
+													<div class="col-sm-6">
+														<p class="marginZero">ORDERED PLACED</p>
+														<p class="placed-date">xx April 2018</p>
+													</div>
+													<div class="col-sm-6">
+														<p class="marginZero">TOTAL</p>
+														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 999</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="order-name-sec">
+													<div class="col-sm-8">
+														<p class="marginZero">SHIP TO</p>
+														<p class="user-order-name">Rm No-82 Ttc,Konkan Bhavan, Mumbai, Maharashtra, 400701 </p>
+													</div>
+													<div class="col-sm-4 text-right paddingLeftRght0">
+														<div class="row">
+															<div class="col-sm-12">
+																<p class="order-no marginZero">ORDER # XXX-XXXXXXX-XXXXXXX</p>
+															</div>
+															
+															<div class="col-sm-12">
+																<p class="order-details-txt col-sm-6 paddingLeftRght0 text-center">Order details</p>
+																<p class="order-invoice-txt col-sm-6 paddingLeftRght0">Invoice No. XXX </p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="order-main-body">
+											<div class="row">
+												<div class="col-sm-12">
+													<h4>Delivered XX-Apr-2018</h4>
+												</div>
+												<div class="col-sm-12">
+													<p class="order-status">Your package was delivered</p>
+												</div>
+												<div class="col-sm-9">
+													<div class="row">
+														<div class="col-sm-3">
+															<div class="order-img">
+																<img src="Images/Product6.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-sm-9 order-desc">
+															<div>
+																<h4 class="order-product-title col-sm-12">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+																</h4>
+															</div>
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Quantity</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8">XX</div>
+															</div>
+
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-size col-sm-8">12 Feet x 12 Feet</div>
+															</div>
+															
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">Matt Finish Wallpaper</div>
+															</div>	
+															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
+															<div class="col-sm-12 ">
+																<button class="btn buyagain-btn" type="submit">Buy it again</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 order-buttons">
+													<div class="row">
+														<div class="col-sm-12 paddingLeftRght0">
+															<button class="btn askproduct-btn" type="submit"><a href="">Refund/ Replace Order</a></button>
+														</div>
+														
+														<div class="col-sm-12 paddingLeftRght0 overhidden">
+															<button class="btn reviewproduct-btn" type="submit"><a href="">Write a product review</a></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!---->
+							<div class="tab-pane fade" id="Dashboard2" role="tabpanel">
+								<!--<div class="cancelled-order-sec text-center paddingTop20 paddingBottom20">
+									<h4>We aren't finding any cancelled orders. <a href="">View all orders</a></h4>
+								</div>-->
+																<div class="col-sm-12">
+									<div class="placed-order-count">
+										<h5><span class="weight600">1 order</span> Cancelled</h5>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row ">
+										<div class="order-head">
+											<div class="col-sm-4 paddingLeftRght0">
+												<div class="order-date-sec">
+													<div class="col-sm-6">
+														<p class="marginZero">ORDERED PLACED</p>
+														<p class="placed-date">xx April 2018</p>
+													</div>
+													<div class="col-sm-6">
+														<p class="marginZero">TOTAL</p>
+														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 999</p>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="order-name-sec">
+													<div class="col-sm-8">
+														<p class="marginZero">CANCELLED BY</p>
+														<p class="user-order-name">xyz &nbsp; &nbsp; &nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></p>
+													</div>
+													<div class="col-sm-4 text-right paddingLeftRght0">
+														<div class="row">
+															<div class="col-sm-12">
+																<p class="order-no">ORDER # XXX-XXXXXXX-XXXXXXX</p>
+															</div>
+															<div class="col-sm-2"></div>
+															<div class="col-sm-10">
+																<p class="order-details-txt col-sm-6 paddingLeftRght0">Order details</p>
+																<p class="order-invoice-txt col-sm-6 paddingLeftRght0">Invoice &nbsp; &nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="order-main-body">
+											<div class="row">
+												<div class="col-sm-12">
+													<h4>Delivered XX-Apr-2018</h4>
+												</div>
+												<div class="col-sm-12">
+													<p class="order-status">Your package was delivered</p>
+												</div>
+												<div class="col-sm-9">
+													<div class="row">
+														<div class="col-sm-3">
+															<div class="order-img">
+																<img src="Images/Product6.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-sm-9 order-desc">
+															<div>
+																<h4 class="order-product-title col-sm-12">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+																</h4>
+															</div>
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Quantity</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8">XX</div>
+															</div>
+
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-size col-sm-8">12 Feet x 12 Feet</div>
+															</div>
+															
+															<div>
+																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">Matt Finish Wallpaper</div>
+															</div>	
+															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
+															<div class="col-sm-12 ">
+																<button class="btn buyagain-btn" type="submit">Buy it again</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 order-buttons">
+													<div class="row">
+														<div class="col-sm-12 paddingLeftRght0 width100">
+															<button class="btn cancelled-btn" type="submit"><a href=""> Cancelled Order</a></button>
+														</div>		
+														<div class="cancelled-date text-center">
+															<h5 class="paddingTop20" style="display:inline-block; width:100%;">Cancelled on:<span> XX XX XXXX</span></h5><h5>
+														</h5></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 @endsection
 
 @section('bottom_yield')
