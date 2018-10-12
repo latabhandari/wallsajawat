@@ -44,9 +44,8 @@ class OrderController extends Controller
 
         	$order['payable_amount']     = $payable_amount;
         	$order['ip_address']         = $request->ip();
-        	$order['user_agent']         = $request->ip();
-        	$order['unix_timestamp']     = $request->ip();
-        	$order['unix_timestamp']     = $request->header('User-Agent');
+        	$order['user_agent']         = $request->header('User-Agent');
+        	$order['unix_timestamp']     = time();
 
         	$order_id                    = Order::create($order)->id;
 
@@ -70,6 +69,7 @@ class OrderController extends Controller
   		       }
   		    Session::forget('coupon');
   		    Session::forget('discount');
+  		    Cart::destroy();
 
   		    echo "success";
   		 }
