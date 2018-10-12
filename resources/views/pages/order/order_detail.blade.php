@@ -83,6 +83,10 @@
 										<h5><span class="weight600">1 order</span> placed in</h5>
 									</div>
 								</div>
+
+
+								@foreach ($orders as $order)
+
 								<div class="col-sm-12">
 									<div class="row ">
 										<div class="order-head">
@@ -90,7 +94,7 @@
 												<div class="order-date-sec">
 													<div class="col-sm-6">
 														<p class="marginZero">ORDER PLACED</p>
-														<p class="placed-date">{{ date('j,D M\'y H:i', $order->unix_timestamp) }}</p>
+														<p class="placed-date">{{ date('D, j M\'y H:i', $order->unix_timestamp) }}</p>
 													</div>
 													<div class="col-sm-6">
 														<p class="marginZero">TOTAL</p>
@@ -177,6 +181,9 @@
 										</div>
 									</div>
 								</div>
+							@endforeach
+
+
 							</div>
 							<!---->
 							<div class="tab-pane fade" id="Dashboard2" role="tabpanel">
