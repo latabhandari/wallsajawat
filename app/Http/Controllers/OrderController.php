@@ -10,6 +10,7 @@ use App\OrderProducts as OrderProducts;
 use App\Order as Order;
 use App\Helpers\MyHelper as MyHelper;
 use Cart;
+use Session;
 
 class OrderController extends Controller
 {
