@@ -17,7 +17,7 @@ class MyHelper
 
    	  	 public static function getProductInfo($id = '', $fields = array())
    	       {
-   	       	  return Product::select("'" . implode("','", $fields) . "'")->where('id', $id)->first();
+   	       	  return Product::where('id', $id)->pluck("'" . implode("','", $fields) . "'")->first();
    	       }
 
    	      public static function getCategories()
