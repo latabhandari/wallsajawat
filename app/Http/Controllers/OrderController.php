@@ -79,7 +79,7 @@ class OrderController extends Controller
 
   	public function order($order_number)
   	  {
-  	  		$order = '';
+  	  		$order = Order::where("order_number", $order_number)->findOrFail();
 			return view('pages.order.order_detail', compact('order'));
   	  }
 

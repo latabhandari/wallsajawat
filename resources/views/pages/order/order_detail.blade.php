@@ -21,8 +21,8 @@
 		<div class="col-sm-12">
 			<div class="title measure-title">
 				<ul class="navbar orderul">
-					<li class="nobackground"><a href="">Your Account</a></li>
-					<li class="weight600"><a href="">Your Orders</a></li>
+					<li><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li class="weight600">Your Orders</li>
 				</ul>
 			</div>
 		</div>
@@ -89,12 +89,12 @@
 											<div class="col-sm-4 paddingLeftRght0">
 												<div class="order-date-sec">
 													<div class="col-sm-6">
-														<p class="marginZero">ORDERED PLACED</p>
-														<p class="placed-date">xx April 2018</p>
+														<p class="marginZero">ORDER PLACED</p>
+														<p class="placed-date">{{ date('j,D M\'y H:i', $order->unix_timestamp) }}</p>
 													</div>
 													<div class="col-sm-6">
 														<p class="marginZero">TOTAL</p>
-														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 999</p>
+														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
 													</div>
 												</div>
 											</div>
@@ -107,7 +107,7 @@
 													<div class="col-sm-4 text-right paddingLeftRght0">
 														<div class="row">
 															<div class="col-sm-12">
-																<p class="order-no marginZero">ORDER # XXX-XXXXXXX-XXXXXXX</p>
+																<p class="order-no marginZero">ORDER # {{ $order->order_number }}</p>
 															</div>
 															
 															<div class="col-sm-12">
