@@ -198,7 +198,7 @@
 							</table>
 							<div class="row">
 								<div class="col-sm-12">
-									<button type="submit" class="btn btn-block">Submit Order</button>
+									<button type="submit" class="btn btn-block">Place Order</button>
 								</div>
 							</div>
 						</div>
