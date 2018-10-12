@@ -137,7 +137,6 @@
 										@php
 										  $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
 										  $product_info    = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
-										  print_r($product_info); die;
 										  $dimension       = json_decode($product->dimension);
 										@endphp
 
@@ -171,7 +170,7 @@
 															</div>
 															
 															<div>
-																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{{ $product_info->short_desc }}</div>
+																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{{ $product_info['short_desc'] }}</div>
 															</div>	
 															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
 															<div class="col-sm-12 ">
