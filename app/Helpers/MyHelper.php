@@ -12,6 +12,9 @@ use App\Dimension as Dimension;
 use App\Product as Product;
 use App\Categories as Category;
 use App\OrderProducts as OrderProducts;
+use App\Order as Order;
+use App\Cities as City;
+use App\States as State;
 class MyHelper 
    {
 
