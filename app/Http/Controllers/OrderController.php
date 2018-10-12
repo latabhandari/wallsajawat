@@ -9,6 +9,7 @@ use Auth;
 use App\OrderProducts as OrderProducts;
 use App\Order as Order;
 use App\Helpers\MyHelper as MyHelper;
+use Cart;
 
 class OrderController extends Controller
 {
