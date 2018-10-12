@@ -21,6 +21,9 @@ class CreateOrderProductsTable extends Migration
 
             $table->unsignedInteger('product_id')->comment('Product Id');
 
+
+            
+
             $table->foreign('order_id')->references('id')->on('orders');
 
             $table->foreign('product_id')->references('id')->on('products');
