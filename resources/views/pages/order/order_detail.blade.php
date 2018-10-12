@@ -135,9 +135,11 @@
 										@foreach ($order_products as $product)
 
 										@php
-										  $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
-										  $product_info    = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
-										  $dimension       = json_decode($product->dimension);
+										  $prod_image_info  = App\Helpers\MyHelper::getProductImage($product->id);
+										  $product_info     = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
+										  $dimension        = json_decode($product->dimension);
+
+										  $shipping_address = App\Helpers\MyHelper::getShippingAddress($order->id);
 										@endphp
 
 

@@ -15,6 +15,18 @@ use App\OrderProducts as OrderProducts;
 class MyHelper 
    {
 
+         
+         public static function getShippingAddress($id = '')
+   	       {
+   	       	  $info       =  Order::select('shipping_address')->where('id', $id)->first();
+   	       	  $ship_info  =  json_decode($info->shipping_address);
+   	       	  $cityobj    =  City::select('name')->where('id', $ship_info->city)->first();
+   	       	  $stateobj   =  State::select('name')->where('id', $ship_info->state)->first();
+   	       	  $pincode    =  $ship_info->pincode;
+
+   	       	  return $ship_info->address . ', ' . $cityobj->city . ', ' . $stateobj->name .', ' . $ship_info->pincode;
+   	       }
+
    	  	 public static function getProductInfo($id = '', $fields = array())
    	       {
    	       	  return Product::where('id', $id)->get($fields)->toArray();
