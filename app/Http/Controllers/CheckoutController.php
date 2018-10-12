@@ -26,17 +26,22 @@ class CheckoutController extends Controller
 
     public function checkout()
        {
-          if(\Auth::check())
-           {
-                 $user   = \Auth::user();
-                 $states = States::where('country_id', env('DEFAULT_COUNTRY', 101))->get();
-                 $cities = Cities::where('state_id', env('DEFAULT_STATE', 13))->get();
-                 return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
-           }
+          if (Cart::count()) {
+                if(\Auth::check())
+                 {
+                       $user   = \Auth::user();
+                       $states = States::where('country_id', env('DEFAULT_COUNTRY', 101))->get();
+                       $cities = Cities::where('state_id', env('DEFAULT_STATE', 13))->get();
+                       return view('pages.cart.checkout', compact('user', 'cities', 'states'));  
+                 }
+                else
+                  {
+                      return redirect(route('login').'?redirect_url='.route('cart.checkout'));
+                  }
+          }
           else
-            {
-                return redirect(route('login').'?redirect_url='.route('cart.checkout'));
-            }
+                      return redirect()->route('home.index');
+          endif;
        }
 
       public function checkoutStore(Request $request)
