@@ -54,7 +54,7 @@ class OrderController extends Controller
         	   	    $mdata                       =  [];
         	   	    $mid                         =  $row->options->type; 
         	   	    $mdata['measurement_id']     =  $mid;
-				    $measurement_info  			 =  App\Helpers\MyHelper::getMeasurement($mid);
+				    $measurement_info  			 =  MyHelper::getMeasurement($mid);
 				    $mdata['measurement_name']   =  $measurement_info->name;
 				    $mdata['width']  		     =  $measurement_info->width;
 				    $mdata['height']             =  $measurement_info->height;
