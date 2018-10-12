@@ -18,9 +18,9 @@ class MyHelper
    	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
    	       }
 
-   	      public static function getCustomerInfo()
+   	      public static function getCustomerShippingAddress($order_id = '')
    	       {
-   	       	  //return Category::select('id', 'name', 'slug')->where('status', 1)->get();
+   	       	  return 'Delhi';
    	       } 
 
    	      public static function removeComma($string = '')
