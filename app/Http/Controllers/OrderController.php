@@ -8,7 +8,7 @@ use Auth;
 
 use App\OrderProducts as OrderProducts;
 use App\Order as Order;
- App\Helpers\MyHelper as MyHelper;
+use App\Helpers\MyHelper as MyHelper;
 
 class OrderController extends Controller
 {
