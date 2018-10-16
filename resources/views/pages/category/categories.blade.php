@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', $category_info->name)
+@section('title', 'All Categories')
 
 @section('top_yield')
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
