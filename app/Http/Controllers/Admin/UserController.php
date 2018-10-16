@@ -46,8 +46,9 @@ class UserController extends Controller
 	         $fields['mobile']                  =    $params['mobile'];
 	         $fields['role_id']                 =    $params['role'];
 	         $fields['verified']                =    1;
+	         $fields['added_by_admin']          =    1;
 	         $fields['unix_timestamp']          =    time();
-	
+
 	         $user = User::create($fields);
 
 	         Profile::create(['user_id' => $user->id]);
