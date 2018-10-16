@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->tinyInteger('status')->comment('0 - Inactive, 1 - Active')->default(0);
             $table->unsignedInteger('parent_id')->comment('Parent Id')->default(0);
 
-            $table->unsignedTinyInteger('wallpaper_pos')->comment('Category wallpaper position home page')->nullable();
+            //$table->unsignedTinyInteger('wallpaper_pos')->comment('Category wallpaper position home page')->nullable();
             $table->string('wallpaper_image')->comment('Wallpaper Image')->nullable();
 
             $table->string('page_title', 96)->comment('Page Title')->nullable();

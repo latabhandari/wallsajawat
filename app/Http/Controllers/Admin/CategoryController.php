@@ -63,16 +63,16 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-         request()->validate(['name' => 'required', 'slug' => 'required']);
+         request()->validate(['name' => 'required', 'slug' => 'required', 'status' => 'required']);
 
          $params                            =    $request->all();
 
          $fields['name']                    =    $params['name'];
          $fields['slug']                    =    strtolower($params['slug']) . '-' . mt_rand();
-         $fields['parent_id']               =    $params['parent'];
+         //$fields['parent_id']               =    $params['parent'];
          $fields['status']                  =    $params['status'];
 
-         $fields['wallpaper_pos']           =    $params['wallpaper_pos'];
+         //$fields['wallpaper_pos']           =    $params['wallpaper_pos'];
 
          if ($request->hasFile('wallpaper_image')) 
           {
@@ -136,7 +136,7 @@ class CategoryController extends Controller
         request()->validate(['name' => 'required', 'slug' => 'required', 'status' => 'required']);
 
         $params                             =    $request->all();
-        $fields['parent_id']                =    $params['parent'];
+        //$fields['parent_id']                =    $params['parent'];
         $fields['name']                     =    $params['name'];
         $fields['slug']                     =    strtolower($params['slug']).'-'.mt_rand();
         $fields['status']                   =    $params['status'];
