@@ -82,14 +82,21 @@
                   <input class="form-control" name="meta_keywords" placeholder="Meta Keywords" type="text" value="{{ $category->page_title }}">
                 </div>
 
+                @php
+                  if ($category->id > 5)
+                @endphp
+
                 <div class="form-group">
                   <label for="category">Status&nbsp;</label>
                   <select class="form-control" name="status">
                       <option value="1" {{ ($category->status == 1) ? "selected='selected'" : ""}}>Active</option>
                       <option value="0" {{ ($category->status == 0) ? "selected='selected'" : ""}}>Inactive</option>
                   </select>
-
                 </div>
+
+                 @php
+                  endif
+                 @endphp
 
 
               </div>
