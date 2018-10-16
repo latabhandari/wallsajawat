@@ -69,7 +69,7 @@ class CategoryController extends Controller
          $params                            =    $request->all();
 
          $fields['name']                    =    $params['name'];
-         $fields['slug']                    =    $params['slug'];
+         $fields['slug']                    =    strtolower($params['slug']);
          $fields['parent_id']               =    $params['parent'];
          $fields['status']                  =    $params['status'];
 
@@ -140,7 +140,7 @@ class CategoryController extends Controller
         $params                             =    $request->all();
         $fields['parent_id']                =    $params['parent'];
         $fields['name']                     =    $params['name'];
-        $fields['slug']                     =    $params['slug'];
+        $fields['slug']                     =    strtolower($params['slug']);
         $fields['status']                   =    $params['status'];
 
         $fields['wallpaper_pos']            =    $params['wallpaper_pos'];
