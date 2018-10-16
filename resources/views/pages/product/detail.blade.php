@@ -51,6 +51,7 @@
             <h3>{{ $detail->name }}</h3>
             <p class="cag-title">1100 orders this month</p>
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
+            <p>{{ $detail->short_desc }}</p>
             <div class="rating">
               <div class="row">
                 <div class="col-sm-12">
