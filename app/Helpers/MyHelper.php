@@ -112,7 +112,7 @@ class MyHelper
 						$category = DB::table('categories')->where('parent_id', $parent_id)->first();
 						$category_tree_array[] = array('id' => $parent_id, 'text' => $category->name);
 				  }
-						$categories_query = DB::table('categories')->where('parent_id', $parent_id)->orderBy('name', 'asc')->get()->toArray();
+						$categories_query = DB::table('categories')->whereNull('deleted_at')->where('parent_id', $parent_id)->orderBy('name', 'asc')->get()->toArray();
 						foreach ($categories_query as $categories)
 						  {
 						  	 $categories = (array) $categories;

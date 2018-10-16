@@ -135,7 +135,7 @@
                      @php
                         if ($i == 0)
                         echo '<div class="row">';
-                        $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
+                        $prod_image_info = '';//App\Helpers\MyHelper::getProductImage($selling_products->id);
                      @endphp
                         
                             <div class="col-sm-4 text-center selling-imgs">
