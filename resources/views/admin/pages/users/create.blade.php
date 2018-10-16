@@ -25,7 +25,7 @@
                     @endif
                     
                     @if(Session::has('error'))
-                      <div class="alert-box success">
+                      <div class="alert alert-danger">
                         <p><i class="fa fa-exclamation-circle"></i> {{ Session::get('error') }} </p>
                       </div>
                     @endif
