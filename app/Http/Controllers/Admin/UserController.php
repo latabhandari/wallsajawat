@@ -45,6 +45,7 @@ class UserController extends Controller
 	         $fields['password']                =    bcrypt($params['password']);
 	         $fields['mobile']                  =    $params['mobile'];
 	         $fields['role_id']                 =    $params['role'];
+	         $fields['verified']                =    1;
 	         $fields['unix_timestamp']          =    time();
 	
 	         $user = User::create($fields);
