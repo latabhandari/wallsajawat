@@ -39,21 +39,28 @@ class UserController extends Controller
 	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password' => 'required', 'role' => 'required', 'mobile' => 'required']);
 
 	         $params            				=    $request->all();
+	         $query                             =    User::where(['email' => $params['email'], 'verified' => 1]);
+		     if ($query->count() > 0)
+			     {
+			         return redirect()->route('user.index')->with('failure','Email belongs to an existing account!');
+			     } 
+		     else
+		      {
+		         $fields['name']                    =    $params['name'];
+		         $fields['email']                   =    $params['email'];
+		         $fields['password']                =    bcrypt($params['password']);
+		         $fields['mobile']                  =    $params['mobile'];
+		         $fields['role_id']                 =    $params['role'];
+		         $fields['verified']                =    1;
+		         $fields['added_by_admin']          =    1;
+		         $fields['unix_timestamp']          =    time();
 
-	         $fields['name']                    =    $params['name'];
-	         $fields['email']                   =    $params['email'];
-	         $fields['password']                =    bcrypt($params['password']);
-	         $fields['mobile']                  =    $params['mobile'];
-	         $fields['role_id']                 =    $params['role'];
-	         $fields['verified']                =    1;
-	         $fields['added_by_admin']          =    1;
-	         $fields['unix_timestamp']          =    time();
+		         $user = User::create($fields);
 
-	         $user = User::create($fields);
+		         Profile::create(['user_id' => $user->id]);
 
-	         Profile::create(['user_id' => $user->id]);
-
-	         return redirect()->route('user.index')->with('success','User added successfully');
+		         return redirect()->route('user.index')->with('success','User added successfully');
+		      }
 	   }
 
 
