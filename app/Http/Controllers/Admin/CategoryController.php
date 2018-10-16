@@ -139,6 +139,8 @@ class CategoryController extends Controller
         //$fields['parent_id']                =    $params['parent'];
         $fields['name']                     =    $params['name'];
         $fields['slug']                     =    strtolower($params['slug']).'-'.mt_rand();
+
+        if ($id > 5)
         $fields['status']                   =    $params['status'];
 
         $fields['wallpaper_pos']            =    $params['wallpaper_pos'];
