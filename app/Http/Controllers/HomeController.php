@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
         {
-            $wallpaper_images      = Categories::where('wallpaper_pos', '!=', 0)->orderBy('wallpaper_pos', 'asc')->get();
+            $wallpaper_images      = Categories::where('wallpaper_pos', '>', 0)->orderBy('wallpaper_pos', 'asc')->get();
             dd($wallpaper_images);
             $best_selling_products = Product::get();
             return view('pages.home', compact('wallpaper_images', 'best_selling_products'));
