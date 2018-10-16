@@ -68,7 +68,7 @@ class MyHelper
    	       }
    	      public static function getProductImage($id)
    	       {
-   	       		return ProductImages::where('id', $id)->first();
+   	       		return ProductImages::where('product_id', $id)->first();
    	       }
 		  public static function getSessionValue($key = null)
 		   {
