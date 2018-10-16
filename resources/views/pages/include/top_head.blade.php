@@ -8,8 +8,7 @@
                 <div class="rgt-top">
                    <span><i class="fa fa-map-marker"></i>
                      @guest 
-                      <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                      &nbsp;|&nbsp;<a href="{{ route('register') }}">{{ __('Register') }}</a>
+                      <a href="{{ route('login') }}">{{ __('Login') }}</a>&nbsp;|&nbsp;<a href="{{ route('register') }}">{{ __('Register') }}</a>
                      @endguest
                     </span> 
                    <span><i class="fa fa-phone"></i><a href="tel:0123456789">{{ __('+91 0123456789') }}</a></span>
