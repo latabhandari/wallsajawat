@@ -63,7 +63,6 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-
          request()->validate(['name' => 'required', 'slug' => 'required']);
 
          $params                            =    $request->all();
@@ -90,7 +89,6 @@ class CategoryController extends Controller
          $fields['page_title']              =    $params['page_title'];
          $fields['meta_description']        =    $params['meta_description'];
          $fields['meta_keywords']           =    $params['meta_keywords'];
-
 
          Categoryies::where('wallpaper_pos', $params['wallpaper_pos'])->update(['wallpaper_pos' => 0]);
 
