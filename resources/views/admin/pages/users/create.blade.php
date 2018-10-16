@@ -49,7 +49,7 @@
 
                 <div class="form-group">
                   <label for="password">Password&nbsp;<span class="req">*</span></label>
-                  <input class="form-control" name="password" placeholder="Password" type="text" value="{{ old('password') }}">
+                  <input class="form-control" name="password" placeholder="Password" type="password" value="{{ old('password') }}">
                 </div>
 
                 <div class="form-group">
