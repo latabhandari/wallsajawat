@@ -31,8 +31,8 @@ class OrderController extends Controller
      */
     public function store(Request $request)
         {
-			$discount 					 = 	session('discount');
-			$order_number                =  rand(11111111, 99999999);
+			    $discount 					 = 	session('discount');
+			    $order_number                =  rand(11111111, 99999999);
         	$order['order_number']       =  $order_number;
         	$order['user_id']            =  Auth::user()->id;
         	$order['coupon']             =  session('coupon');
@@ -77,13 +77,13 @@ class OrderController extends Controller
     	  		    Cart::destroy();
 	  		    /* close */
 
-	  		        return redirect()->route('order', $order_number);
+	  		        return redirect()->route('orders');
   		 }
 
   	public function order()
   	  {
   	  		$orders = Order::where("user_id", Auth::user()->id)->orderBy('unix_timestamp', 'desc')->get();
-			return view('pages.order.order_detail', compact('orders'));
+			    return view('pages.order.order_detail', compact('orders'));
   	  }
 
 }

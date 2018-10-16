@@ -74,7 +74,7 @@ switch ($segment)
                               <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="caret"></span></button>
                               <ul class="dropdown-menu sub-dropdown">
                                  <li><a class="" href="{{ route('profile') }}">{{ __('Profile') }}</a></li>
-                                 <li><a class="" href="#">{{ __('My Orders') }}</a></li>
+                                 <li><a class="" href="{{ route('orders') }}">{{ __('My Orders') }}</a></li>
                                  <li><a class="" href="{{ route('profile.wishlist') }}">{{ __('My Wishlist') }}</a></li>
                                  <li><a class="" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
