@@ -33,7 +33,7 @@
     </div>
     <div class="col-sm-12">
       <div class="entire-sec text-center"> <a href="">
-        <h2>View Entire Collection<span class="caret"></span></h2>
+        <h2>View All Categories ({{ count($categories) }})<span class="caret"></span></h2>
         </a> </div>
     </div>
   </div>
@@ -41,9 +41,6 @@
 
 <div class="container selling-img-sec">
   <div class="row">
-    <div class="col-sm-12 text-left selling-img-heading">
-      <h4>ALL CATEGORIES({{ count($categories) }})</h4>
-    </div>
     <div class="col-sm-12">
       <div class="row">
         @if(count($categories))
