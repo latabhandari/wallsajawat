@@ -84,6 +84,7 @@
 
                 @php
                   if ($category->id > 5)
+                     {
                 @endphp
 
                 <div class="form-group">
@@ -95,7 +96,7 @@
                 </div>
 
                  @php
-                  endif
+                   }
                  @endphp
 
 
