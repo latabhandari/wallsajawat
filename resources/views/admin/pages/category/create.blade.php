@@ -36,10 +36,10 @@
 
               <div class="box-body">
 
-                <div class="form-group">
+                <!--<div class="form-group">
                   <label for="category">Parent&nbsp;<span class="req">*</span></label>
                   {!! MyHelper::tep_draw_pull_down_menu('parent', MyHelper::tep_get_category_tree(1), 0) !!}
-                </div>
+                </div> -->
 
                 <div class="form-group">
                   <label for="category">Name&nbsp;<span class="req">*</span></label>
