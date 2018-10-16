@@ -35,7 +35,6 @@
             {!! Form::open(['route' => 'user.store', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
 
               <div class="box-body">
-
               
                 <div class="form-group">
                   <label for="category">Name&nbsp;<span class="req">*</span></label>

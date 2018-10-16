@@ -91,6 +91,9 @@ class CategoryController extends Controller
          $fields['meta_description']        =    $params['meta_description'];
          $fields['meta_keywords']           =    $params['meta_keywords'];
 
+
+         Categoryies::where('wallpaper_pos', $params['wallpaper_pos'])->update(['wallpaper_pos' => 0]);
+
          Categories::create($fields);
 
          return redirect()->route('categories.index')->with('success','Category created successfully');
@@ -157,6 +160,9 @@ class CategoryController extends Controller
         $fields['page_title']               =    $params['page_title'];
         $fields['meta_description']         =    $params['meta_description'];
         $fields['meta_keywords']            =    $params['meta_keywords'];
+
+
+        Categoryies::where('wallpaper_pos', $params['wallpaper_pos'])->update(['wallpaper_pos' => 0]);
 
         Categories::find($id)->update($fields);
 
