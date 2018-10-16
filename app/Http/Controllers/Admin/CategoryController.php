@@ -133,7 +133,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'slug' => 'required', 'status' => 'required']);
+        request()->validate(['name' => 'required', 'slug' => 'required']);
 
         $params                             =    $request->all();
         //$fields['parent_id']                =    $params['parent'];
