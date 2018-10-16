@@ -68,6 +68,17 @@
                 </div>
 
 
+                <div class="form-group">
+                  <label for="category">Status&nbsp;</label>
+                  <select class="form-control" name="status">
+                      <option value="1" {{ ($user->status == 1) ? "selected='selected'" : ""}}>Active</option>
+                      <option value="0" {{ ($user->status == 0) ? "selected='selected'" : ""}}>Inactive</option>
+                  </select>
+
+                </div>
+                
+
+
               </div>
               <!-- /.box-body -->
 
