@@ -68,6 +68,15 @@
                   </select>
                 </div>
 
+                <div class="form-group">
+                  <label for="status">Status&nbsp;</label>
+                  <select class="form-control" name="status">
+                      <option value="1">Active</option>
+                      <option value="0">Inactive</option>
+                  </select>
+                </div>
+
+
               </div>
               <!-- /.box-body -->
 
