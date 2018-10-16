@@ -10,6 +10,7 @@ use Socialite;
 use App\User as User;
 use App\Profile as Profile;
 
+use Redirect;
 class LoginController extends Controller
 {
     /*
@@ -90,6 +91,9 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
       {
+            if ($request->has('redirect_url'))
+            return Redirect::to($request->input('redirect_url'));
+
             return redirect()->route('home.index');
       }
 

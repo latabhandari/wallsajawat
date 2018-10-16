@@ -16,30 +16,35 @@
 @endsection
 
 @section('content')
-
- <div class="container">
+<div class="top-banner contact">
+<div class="container">
 	<div class="row">
-		<div class="col-sm-12 text-center">
-			<div class="title measure-title">
+		<div class="col-sm-12">
+			<div class="title mrgnlft40">
 				<h3>Contact Us</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href=""><strong>Contact us</strong></a></li>
-					
+					<li><a href=""><strong>Contact Us</strong></a></li>
 				</ul>
 			</div>
 		</div>
-		
-		<!--form sec-->
-		<div class="col-sm-12 paddingleft40">
-			<div class="row">
-				<div class="col-sm-12">
-					<p><strong>You can also leave your query by filling the form below. We will get back to you at the earliest!</strong></p>
-				</div>
-				<div class="col-sm-7">
+	</div>
+</div>
+</div>
+
+<div class="main contact sec-padding">
+ <div class="container">
+	
+			
+			
+					
+
+				<div class="contact-wrap">
 					<div class="row">
-						<div class="col-sm-12 ">
+						<div class="col-sm-6">
 							<form class="contact-form" method="POST" action="{{ route('contactpost') }}" aria-label="{{ __('Contact') }}">
+								<p><strong>You can also leave your query by filling the form below. We will get back to you at the earliest!</strong></p>
+
 							  @csrf	
 
 							    @if ($success = Session::get('success'))
@@ -93,19 +98,17 @@
 								</div>
 							</form>
 						</div>
+
+			<div class="col-sm-6 paddingleft40">
+			<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=GAUTAM%20BUDDHA%20NAGAR%2C%20UTTAR%20PRADESH%20(UP)+(Wall%20sajawat)&amp;ie=UTF8&amp;t=&amp;z=9&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Google Maps iframe generator</a></iframe></div><br>
+		</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--End of form sec-->
+
 		
-		<!--map sec-->
-		<div class="col-sm-12 paddingleft40">
-			<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=GAUTAM%20BUDDHA%20NAGAR%2C%20UTTAR%20PRADESH%20(UP)+(Wall%20sajawat)&amp;ie=UTF8&amp;t=&amp;z=9&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Google Maps iframe generator</a></iframe></div><br>
-		</div>
-		<!--End of map sec-->
-	</div>
-</div>
+
 
 @endsection
 

@@ -31,7 +31,7 @@ switch ($segment)
             <div class="header">
               <div class="container">
                 <div class="row btn-bar">
-                  <div class="col-sm-2 logo"><a href="{{ route('home.index') }}"><h2>Logo</h2></a></div>
+                  <div class="col-sm-2 logo"><h3><a href="{{ route('home.index') }}">Logo</a></h3></div>
                   <div class="col-sm-8 main_menu">
                     <nav class="navbar navbar-default">
                       <div class="navbar-header">

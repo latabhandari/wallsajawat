@@ -135,8 +135,8 @@
 										@foreach ($order_products as $product)
 
 										@php
-										  $prod_image_info  = App\Helpers\MyHelper::getProductImage($product->id);
-										  $product_info     = App\Helpers\MyHelper::getProductInfo($product->id, ['short_desc']);
+										  $prod_image_info  = App\Helpers\MyHelper::getProductImage($product->product_id);
+										  $product_info     = App\Helpers\MyHelper::getProductInfo($product->product_id, ['short_desc']);
 										  $dimension        = json_decode($product->dimension);
 										@endphp
 

@@ -17,6 +17,7 @@
 @section('content')
 
 <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+<div class="login-page sec-padding">
 
 <div class="container">
 
@@ -37,39 +38,41 @@
             </div>
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="card">
-                <div class="card-body" style="margin:10px 0 40px 60px">
+                <div class="card-body" style="">
 
                     <form method="POST" action="{{ route('login'). '?' . Request::server('QUERY_STRING') }}" aria-label="{{ __('Login') }}">
                         @csrf
 
-                        <div class="form-grup">
-                            <div class="col-md-12 text-center" style="margin:0 0 20px 0">
-                               <div class="col-md-5 text-center">
-                                       <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
+                        <div class="form-group row">
+                            
+                               <div class="col-md-6">
+                                       <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook'). '?' . Request::server('QUERY_STRING')  }}">
                                          <span class="fa fa-facebook"></span> Sign in with Facebook
                                        </a>
                                 </div>
-
-                                <div class="col-md-5 text-center">
-                                       <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google') }}">
+                         
+                           
+                                <div class="col-md-6">
+                                       <a class="btn btn-block btn-social btn-google" href="{{ route('social_login', 'google'). '?' . Request::server('QUERY_STRING')  }}">
                                             <span class="fa fa-google"></span> Sign in with Google
                                        </a>
                                 </div>
-
-                                <div class="col-md-2 text-center"></div>
-
                             </div>
+                            </div>
+
+                                
+
                             
-                        </div>
+                     
 
                     
 
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  autocomplete="off" />
+                            
+                            <div class="col-md-12">
+                                <input id="email" type="email" placeholder="Email Address" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  autocomplete="off" />
 
                                 @if ($errors->has('email'))
                                     <span class="error" role="alert">
@@ -81,10 +84,9 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" />
+                        
+                            <div class="col-md-12">
+                                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" />
 
                                 @if ($errors->has('password'))
                                     <span class="error" role="alert">
@@ -95,15 +97,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div class="form-group row ">
+                            <div class="col-md-6">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
+                            </div>
+                                <div class="col-md-6">
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
+                            </div>
                             </div>
                         </div>
                     </form>
@@ -113,6 +117,7 @@
 
         <div class="col-sm-4"></div>
     </div>
+</div>
 </div>
 @endsection
 

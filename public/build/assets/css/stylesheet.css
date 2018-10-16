@@ -1737,7 +1737,8 @@ p {
 }
 .recommend-product .overlay {
 	padding: 10px 5px;
-	visibility: hidden;
+	visibility: visible;
+	
 }
 .recommend-product h5 {
 	padding-bottom: 5px;

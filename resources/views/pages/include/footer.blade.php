@@ -2,6 +2,7 @@
                     <div class="container">
                         <div class="row footer-sec">
                             <div class="col-sm-4 foot-sec1">
+                                <div class="white-logo"><h3><a href="index.php">Logo</a></h3></div>
                                 <p>Discover the widest range <br>
                                 of unique wallpapers, also customize<br>
                                 your own designs and buy them online. <br>
@@ -11,7 +12,7 @@
                             <div class="col-sm-8">
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        <h4>INFORMATION</h4>
+                                        <h3>INFORMATION</h3>
                                         <ul class="info-list">
                                             <a href="{{ route('about') }}"><li>About Us</li></a>
                                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
@@ -19,7 +20,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
-                                        <h4>FOLLOW US ON</h4>
+                                        <h3>FOLLOW US ON</h3>
                                         <ul class="nav navbar-nav follow-list">
                                             <li><i class="fa fa-facebook-f"></i></li>
                                             <li><i class="fa fa-twitter"></i></li>
@@ -27,7 +28,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">
-                                        <h4>WE ACCEPT</h4>
+                                        <h3>WE ACCEPT</h3>
                                         <ul class="nav navbar-nav follow-list2">
                                             <li><img src="{{ asset('build/assets/images/master.png') }}" alt="mastercard"/></li>
                                             <li><img src="{{ asset('build/assets/images/Visa.png') }}" alt="visa"/></li>

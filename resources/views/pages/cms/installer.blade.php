@@ -15,25 +15,35 @@
 @endsection
 
 @section('content')
-
+<div class="top-banner installer">
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 text-center">
-			<div class="title measure-title">
+		<div class="col-sm-12">
+			<div class="title mrgnlft40">
 				<h3>Wallpaper Installer</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href="">Wallpaper Installer</a></li>
+					<li><a href=""><strong>Wallpaper Installer</strong></a></li>
 				</ul>
 			</div>
 		</div>
+	</div>
+</div>
+</div>
+
+
+<div class="installer-page main sec-padding-sm paddingtop0">
+<div class="container">
+	
+	<div class="row">
 		<div class="col-sm-12">
 			<div class="measure-content">
-				<h4 style="padding-left:40px; margin-bottom:20px;">Wall sajawat installation network in India</h4>
+				
+				<h3 style="margin-bottom:20px;" class="page-header"><strong>Wall sajawat installation network in India</strong></h3>
 				
 				<p class="weight400">Our list of wallpaper installers in various cities is given below. We are continuously working to expand our network of installers across India. In case you  have a reference or wish to tie-up with us, please feel to drop us an email at info@wallsajawat.com. Please note the installation charges are separate and are not included in the cost of the wallpapers.</p>
-				
-				<p class="weight400 marginBottom20 paddingbtm0">Wallpaper Installers are currently available in the following cities:</p>
+				<h3 class=" marginBottom20 "><strong>Wallpaper Installers are currently available in the following cities:</strong></h3>
+				<div class="well">
 				
 				<ul>
 				<li>Ahmedabad</li>
@@ -50,11 +60,18 @@
 				<li>Noida</li>
 				<li>Pune</li>
 				</ul>
-				<p class="weight400"><span class="weight600">Please note:</span> Wall sajawat provides the installation as a service to customers. Except for Delhi / NCR, we would not be held responsible for any delay or damage in the installation of your wallpaper by these service providers. We can assure you that they are trained installers, but any installation job comes with a certain risk and we would not be held liable for the same. You are free to negotiate the terms and costs of the job with the installer independently. <span class="weight600">Please note installation charges are extra.</span></p>
-				<p class="weight400">Please call us for contact details once you place your order and we would be happy to provide the same for you.</p>
 			</div>
 		</div>
+				<div class="row">
+					<div class="col-md-12">
+					<p class="weight400"><span class="weight600">Please note:</span> Wall sajawat provides the installation as a service to customers. Except for Delhi / NCR, we would not be held responsible for any delay or damage in the installation of your wallpaper by these service providers. We can assure you that they are trained installers, but any installation job comes with a certain risk and we would not be held liable for the same. You are free to negotiate the terms and costs of the job with the installer independently. <br/><span class="weight600">Please note installation charges are extra.</span></p>
+				<p class="weight400">Please call us for contact details once you place your order and we would be happy to provide the same for you.</p>
+			</div>
+			</div>
+		</div>
+		</div>
 	</div>
+</div>
 </div>
 
 @endsection

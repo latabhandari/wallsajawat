@@ -31,21 +31,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="heading-sec">
-                            <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"> </div>
-                            
-                            <div class="col-sm-2 text-center center-content">
-                                <h4 class="text-center"> TOP SELLERS</h4>
-                            </div>
-                            
-                            <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"></div>
-                            
+                        <div class="heading-sec text-center">
+                                <h2 class="text-center"> TOP SELLERS</h2>
+                                <h4 class="subheading">Wallpaper</h4>
+                        </div>
+                               
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12">
-                    <h6 class="text-center">WALLPAPER</h6>
-                </div>
+             
+
+              
                 <div class="col-sm-12">
 
                     @php
@@ -66,11 +61,16 @@
                     
                 </div>
             </div>
-    </div>
+            </div>
+
+
 
 
     <div class="slider-sec">
-        <div class="slider-head"> <h3>TOP SELLERS</h3><h4>POSTERS</h4></div>
+        <div class="heading-sec text-center">
+                                <h2 class="text-center"> TOP SELLERS</h2>
+                                <h4 class="subheading">Posters</h4>
+                        </div>
         <div class="center-container">
             <ul class="bxslider">
                 <!-- <a class="prev" id="prev" onClick="plusSlides(-1)" width="15">&#10094;</a>-->
@@ -121,13 +121,10 @@
     </div>
     <div class="selling-sec">
         <div class="container">
-            <div class="row heading-sec">
-                <div class="col-sm-5 text-right side-bars"><img src="{{ asset('build/assets/images/bar.jpg') }}"/> </div>
-                <div class="col-sm-2 text-center center-content"><h4> BEST SELLING</h4></div>
-                <div class="col-sm-5 side-bars"> <img src="{{ asset('build/assets/images/bar.jpg') }}"/></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 text-center sub-head"><h6>PRODUCTS</h6></div>
+          
+            <div class="heading-sec text-center">
+                                <h2 class="text-center">Best Selling</h2>
+                                <h4 class="subheading">Products</h4>
             </div>
         </div>
         <div class="container selling-img-sec">
@@ -142,6 +139,7 @@
                      @endphp
                         
                             <div class="col-sm-4 text-center selling-imgs">
+                                <div class="box-inner">
                                 <a href="{{ route('product.detail', $selling_products->slug) }}">
                                     <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
                                 </a>
@@ -149,6 +147,7 @@
                                         <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
                                         <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span>
                                     </div>
+                                </div>
                             </div>
                             @php
                                $i++;
@@ -171,10 +170,9 @@
     
     <div class="tips-sec">
         <div class="container">
-            <div class="row heading-sec tips-head">
-                <div class="col-sm-4 text-right side-bars-tips"><img src="{{ asset('build/assets/images/bar.jpg') }}"/> </div>
-                <div class="col-sm-4 text-center center-content-tips"><h3> Tips & Tricks for Interior Decor</h3></div>
-                <div class="col-sm-4 side-bars-right"> <img src="{{ asset('build/assets/images/bar.jpg') }}"/></div>
+            <div class="heading-sec text-center">
+                                <h2 class="text-center">Tips & Tricks for Interior </h2>
+                                <h4 class="subheading">Decor</h4>
             </div>
         </div>
         <div class="tips-img-sec">
@@ -182,16 +180,16 @@
                 <img src="{{ asset('build/assets/images/tips-tree.jpg') }}" alt=""/>
                 <div class="tips-cont-1 text-left">
                     <h4>30 travel decor ideas for the wanderlust in you</h4>
-                    <h5>This is a list of the number of ways people can bring their fondness for travel,
-                    memories and memorabilia into their living and office spaces.</h5>
+                    <p>This is a list of the number of ways people can bring their fondness for travel,
+                    memories and memorabilia into their living and office spaces.</p>
                 </div>
             </div>
             <div class="col-sm-6 text-left tips-img2">
                 <img src="{{ asset('build/assets/images/Tips-flower.jpg') }}" alt=""/>
                 <div class="tips-cont text-left">
                     <h4>Top 20 Home Decor Ideas using seamless pattern & texture</h4>
-                    <h5>Patterns and repetitions have a calming effect on the mind and soothe our aura.
-                    Here are 20 ways they can be part of home decor.</h5>
+                    <p>Patterns and repetitions have a calming effect on the mind and soothe our aura.
+                    Here are 20 ways they can be part of home decor.</p>
                 </div>
             </div>
         </div>

@@ -15,21 +15,24 @@
 @endsection
 
 @section('content')
-
+<div class="top-banner offers">
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 text-center">
-			<div class="title measure-title">
-				<h3 class="paddingBottom20">Offers</h3>
-				<ul class="navbar">
-					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-					<li><a href="">Offers</a></li>
-				</ul>
+		<div class="col-sm-12">
+			<div class="title mrgnlft40">
+				
 			</div>
 		</div>
+	</div>
+</div>
+</div>
+<div class="main offers sec-padding">
+<div class="container">
+	<div class="row">
+		
 		<div class="col-sm-12">
 			<div class="measure-content paddingBottom20">
-				<img src="{{ asset('build/assets/images/offer-banner.jpg') }}" alt="">
+			
 				<p>Please read the terms and conditions below:</p>
 				
 				<ul>
@@ -45,6 +48,45 @@
 			</div>
 		</div>
 	</div>
+</div>
+</div>
+<div class="offer-block sec-padding">
+<div class="container">
+<div class="row">
+            <div class="col-md-4">
+                <div class="single-how-we-works text-center">
+                    <div class="how-we-works-thumb">
+                    <img src="{{ asset('build/assets/images/coupon.png') }}" alt="" class="img-responsive">
+                    </div>
+                    <h6>Get Discount By Coupon</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <a href="#" class="btn btn-brand">Get This</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="single-how-we-works text-center">
+                    <div class="how-we-works-thumb">
+                    <img src="{{ asset('build/assets/images/deal.png') }}" alt="" class="img-responsive">
+                    </div>
+                    <h6>Get Discount By Deal</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <a href="#" class="btn btn-brand">Get This</a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="single-how-we-works text-center">
+                    <div class="how-we-works-thumb">
+                    <img src="{{ asset('build/assets/images/voucher.png') }}" alt="" class="img-responsive">
+                    </div>
+                    <h6>Gift Cash Voucher</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <a href="#" class="btn btn-brand">Get This</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
