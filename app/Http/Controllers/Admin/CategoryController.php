@@ -149,9 +149,12 @@ class CategoryController extends Controller
           {
              $file                       =    $request->file('wallpaper_image');
              $destinationPath            =    public_path('catalog/category');
-             $filename                   =    mt_rand() . $file->getClientOriginalName();
-             $file->move($destinationPath, $filename);
-             $fields['wallpaper_image']  =    $filename;
+
+             $filename                   =    $file->getClientOriginalName();
+             $wimage                     =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', $filename);
+
+             $file->move($destinationPath, $wimage);
+             $fields['wallpaper_image']  =    $wimage;
 
           }
 
