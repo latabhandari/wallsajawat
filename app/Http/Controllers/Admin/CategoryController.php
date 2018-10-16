@@ -143,7 +143,7 @@ class CategoryController extends Controller
         if ($id > 5)
         $fields['status']                   =    $params['status'];
 
-        $fields['wallpaper_pos']            =    $params['wallpaper_pos'];
+        //$fields['wallpaper_pos']            =    $params['wallpaper_pos'];
 
         if ($request->hasFile('wallpaper_image')) 
           {
