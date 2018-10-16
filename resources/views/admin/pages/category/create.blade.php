@@ -52,7 +52,7 @@
                 </div>
 
 
-                <div class="form-group">
+               <!--  <div class="form-group">
                   <label for="wallpaper_pos">Wallpaper Position&nbsp;</label>
                   <select name="wallpaper_pos" class="form-control">
                      <option value="">-- Select --</option>
@@ -62,10 +62,10 @@
                      <option value="4">-- 4 --</option>
                      <option value="5">-- 5 --</option>
                   </select>
-                </div>
+                </div> -->
 
                 <div class="form-group">
-                  <label for="wallpaper_image">Wallpaper Image</label>
+                  <label for="wallpaper_image">Image</label>
                   <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
                 </div>
 
