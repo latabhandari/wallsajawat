@@ -287,6 +287,7 @@
 	                             	     {
 	                             	     	$('#apply_coupon').val('Apply').attr('disabled', false);
 	                             	     	$('#cpn_err').html(resp.msg);
+	                             	     	$('#cpn_suc').css('display', 'none');
 	                             	     }	                                  
 	                             }
                          });
