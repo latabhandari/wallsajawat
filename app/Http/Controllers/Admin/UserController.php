@@ -42,7 +42,7 @@ class UserController extends Controller
 	         $query                             =    User::where(['email' => $params['email'], 'verified' => 1]);
 		     if ($query->count() > 0)
 			     {
-			         return redirect()->route('user.create')->->withInput($request->input())->with('error','Email belongs to an existing account!');
+			         return redirect()->route('user.create')->withInput($request->input())->with('error','Email belongs to an existing account!');
 			     } 
 		     else
 		      {
