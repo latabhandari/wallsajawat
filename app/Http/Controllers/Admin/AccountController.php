@@ -18,21 +18,31 @@ class AccountController extends Controller
 	     	 return view('admin.pages.authentication.index');
 	     }
 
-         public function login(Request $request)
-	     {
-	     	  request()->validate(['email' => 'required|email', 'password' => 'required']);
- 
-	     	  $userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
-			  //$userdata  = User::where([['email', '=', $request->input('email')], ['password', '=', $request->input('password')], ['role_id', '>', 0)->get();
+     public function login(Request $request)
+     {
+     	request()->validate(['email' => 'required|email', 'password' => 'required']);
 
-	     	  if (Auth::attempt($userdata)) {
+     	$userdata  = array('email' => $request->input('email'), 'password'  => $request->input('password'));
 
-	     	    return redirect()->route('admin.dashboard');
-	     	    
-		      } else {
-		        return redirect()->route('admin.get.login')->with('failure','The email or password you entered is incorrect.');
-		      }
-	     }
+     	if (Auth::attempt($userdata)) 
+     	   {
+
+     		   $role_id = Auth::user()->role_id;
+               if (! empty($role_id))
+               	 {
+               	 	return redirect()->route('admin.dashboard');
+               	 }
+                else
+                	{
+                	   Auth::logout();
+                	   return redirect()->route('admin.get.login')->with('failure','You don\'t have permission to access the administrator.');
+                	}
+	       } 
+	    else 
+	        {
+	           return redirect()->route('admin.get.login')->with('failure','The email or password you entered is incorrect.');
+	        }
+     }
 
 	 public function forgot()
 	     {
