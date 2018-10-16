@@ -24,18 +24,9 @@
         <div class="col-sm-4 product-info">
           <div class="row">
             <div class="col-sm-12">
-              <h1>{{ $category_info->name }}</h1>
+              <h1>All Categories</h1>
             </div>
-            <div class="col-sm-12">
-              <div class="row">
-                <div class="col-sm-3"> <span class="rightbannertxt"><i class="fa fa-share-alt"></i></span></div>
-          				<div class="col-sm-8">
-          					<div class="productpg-info-main">
-          						<p>Fusce eu tellus hendrerit, pellentesque nunc eget, tempus justo. Suspendisse in diam purus. Mauris fringilla ante finibus enim sodales feugiat. </p>	
-          					</div>
-          				</div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -51,25 +42,21 @@
 <div class="container selling-img-sec">
   <div class="row">
     <div class="col-sm-12 text-left selling-img-heading">
-      <h4>AVAILABLE DESIGNS({{ count($products) }})</h4>
+      <h4>ALL CATEGORIES({{ count($categories) }})</h4>
     </div>
     <div class="col-sm-12">
       <div class="row">
-        @if(count($products))
-          @foreach ($products as $product)
-              @php
-                        $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
-              @endphp
-
+        @if(count($categories))
+          @foreach ($categories as $category)
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
-                  <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
-                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
+                  <a href="{{ route('category.product', $category->slug) }}"><img src="{{ asset('catalog/product/'.$wallpaper_image->image) }}" alt=""></a>
+                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $category->name }}</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
                </div>
               </div>
           @endforeach
         @else
-                <p style="padding:0 0 0 15px">Sorry no product found.!</p>
+                <p style="padding:0 0 0 15px">Sorry no category found.!</p>
         @endif
 
       </div>
