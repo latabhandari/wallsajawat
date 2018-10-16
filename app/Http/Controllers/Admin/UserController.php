@@ -47,7 +47,9 @@ class UserController extends Controller
 	         $fields['role_id']                 =    $params['role'];
 	         $fields['unix_timestamp']          =    time();
 	
-	         User::create($fields);
+	         $user = User::create($fields);
+
+	         Profile::create(['user_id' => $user->id]);
 
 	         return redirect()->route('user.index')->with('success','User added successfully');
 	   }
