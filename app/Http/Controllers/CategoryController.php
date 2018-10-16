@@ -13,7 +13,7 @@ class CategoryController extends Controller
       {          
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
           $products = DB::table('products')
-            ->select('products.id', 'products.name', 'products.slug')
+            ->select('products.id', 'products.name', 'products.slug', 'products.price')
 						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
 			            ->where('category_id', $category_info['id'])
 			            ->get();
