@@ -61,6 +61,9 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/wishlist', 'ProfileController@mywishlist')->name('profile.wishlist');
 
     Route::get('/category/{slug}', 'CategoryController@product')->name('category.product');
+    Route::get('/categories', 'CategoryController@categories')->name('categories');
+
+
     Route::get('/checkout', 'CheckoutController@checkout')->name('cart.checkout');
     Route::post('/checkout', 'CheckoutController@checkoutStore')->name('cart.checkout.store');
     Route::post('/coupon', 'CheckoutController@coupon')->name('cart.checkout.coupon');

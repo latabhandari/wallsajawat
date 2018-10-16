@@ -48,6 +48,7 @@ switch ($segment)
                                        @foreach ($category_list as $category)
                                         <li><a href="{{ route('category.product', $category->slug) }}">{{ $category->name }}</a></li>
                                        @endforeach
+                                       <li><a href="{{ route('categories') }}">{{ __('See More') }}</a></li>
                                     @endif
                                 </ul>
                             </li>

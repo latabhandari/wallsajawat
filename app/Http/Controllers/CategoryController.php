@@ -9,6 +9,12 @@ use DB;
 class CategoryController extends Controller
 {
     //
+    public function categories()
+      {
+         $categories = Categories::get();
+         return view('pages.category.categories', compact('categories'));
+      }
+
     public function product($slug)
       {          
           $category_info  =  Categories::where('slug', $slug)->firstOrFail();
