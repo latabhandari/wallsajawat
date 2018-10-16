@@ -50,7 +50,7 @@
           @foreach ($categories as $category)
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
-                  <a href="{{ route('category.product', $category->slug) }}"><img src="{{ asset('catalog/product/'.$category->wallpaper_image) }}" alt=""></a>
+                  <a href="{{ route('category.product', $category->slug) }}"><img src="{{ asset('catalog/category/'.$category->wallpaper_image) }}" alt=""></a>
                  <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $category->name }}</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
                </div>
               </div>
