@@ -46,6 +46,7 @@
                   <th>S. No</th>
                   <th>Name</th>
                   <th>Slug</th>
+                  <th>Position</th>
                   <th>Title</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -62,6 +63,7 @@
                   <td>{{ ++$i }}</td>
                   <td>{!! MyHelper::showCategories($data->id) !!}</td>
                   <td>{{ $data->slug }}</td>
+                  <td>{{ $data->wallpaper_pos }}</td>
                   <td>{{ $data->page_title }}</td>
                   <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                   <td>
