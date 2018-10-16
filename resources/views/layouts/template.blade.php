@@ -135,13 +135,13 @@
                      @php
                         if ($i == 0)
                         echo '<div class="row">';
-                        $prod_image_info = '';//App\Helpers\MyHelper::getProductImage($selling_products->id);
+                        $prod_image_info = App\Helpers\MyHelper::getProductImage($selling_products->id);
                      @endphp
                         
                             <div class="col-sm-4 text-center selling-imgs">
                                 <div class="box-inner">
                                 <a href="{{ route('product.detail', $selling_products->slug) }}">
-                                    <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
+                                    <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt="" />
                                 </a>
                                     <div class="img-price">
                                         <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
