@@ -742,11 +742,22 @@ footer {
   padding-bottom: 15px;
   margin: 0 auto;
 }
+
+.selling-imgs .box-inner .lefttxt{
+  width: auto;
+  padding: 0 15px;
+}
+.selling-imgs img{
+  min-height: 248px;
+  width: 100%;
+  height: auto;
+}
 .lefttxt {
   width: 44%;
   float: left;
   color: #003366;
   font-size: 15px;
+
 }
 .righttxt {
   margin-left: 75px;
@@ -860,6 +871,32 @@ footer {
 .top-banner.offers{
    background-image:url(../images/offer-banner.jpg);  
 }
+.top-banner.faq{
+background-image:url(../images/faq-bg.jpg); 
+}
+
+.cart-head{
+  background: #f1f1f1;
+  padding-top:0;
+  padding-bottom: 0;
+  min-height: 0;
+}
+.cart-head .title h3{
+}
+ .cart .title{
+  border:none;
+  color:#000!;
+}
+.cart-head{
+padding-top:30px;
+
+}
+.cart-head .title ul li{
+font-size: 24px;
+}
+.cart-head .title h3{
+  margin:0;
+}
 
 .title .navbar{padding-left:0;}
 .title ul li{padding-right:15px}
@@ -877,6 +914,7 @@ footer {
   color:#000!important;
   font-size:42px;
   font-weight: bold;
+  margin-top:30px;
 }
 .top-banner .title h3{
   color:#fff!important;
@@ -891,12 +929,13 @@ footer {
     float: left;
     display: inline;
 
-    background: url(../images/arrow.png) no-repeat left 6px;
+    /*background: url(../images/arrow.png) no-repeat left 6px;*/
+    background: none;
     text-transform: capitalize;
     padding-left:10px;
 }
 .title ul li:first-child{
-  background:none;
+  background:none!important;
 }
 .measure-title,.measure-title ul{
   padding-bottom:0px!important;
@@ -1167,6 +1206,12 @@ padding-right:0!important;}
   margin-top:10px;
   margin-bottom:10px
 }
+.faq-list li{
+  margin:0 0 15px;
+  list-style:square;
+}
+.mysearch {background: #f1f1f1;
+    padding-top: 15px;}
 
 
  @media (min-width : 320px) and (max-width : 767px){
@@ -1212,7 +1257,7 @@ iframe{width: 83%!important;}
 .cart .title{margin-top:15px;margin-bottom:20px;border-bottom: 1px solid #ccc;padding:0 0 10px;}
 .cart .title h4{margin-bottom: 0;}
 .product-imgb{margin-bottom: 20px}
-.product-txtb .rating-star, .product-txtb .rating-star span{margin-right:0;}
+.product-txtb .rating-star, .product-txtb .rating-star span{margin-right:0;padding-left:5px;}
 .form-element-50-50 ul li.width, .form-element-50-50 ul li.height{float:left;width: 50%;}
 .form-element-50-50 ul li{margin-bottom: 15px;}
 .form-element-50-50 ul li.width input, .form-element-50-50 ul li.height input{width:32%;}
@@ -1226,9 +1271,15 @@ span#cal_price{font-size:14px;}
 .add-coupon .padding-left-none{padding-left:15px!important;}
 .sub-img1>a>h5, .sub-img2>a>h5, .sub-img3>a>h5, .sub-img4>a>h5, 
 .sub-img6>a>h5, .sub-img5>a>h5, .sub-img6>a>h4{padding-top:0!important;}
+.product-txtb{padding:20px;}
+.product-txtb .btn{padding: 14px 10px!important;
+    font-size: 13px!important;}
+.product-txtb #product .form-control{width: 80px;margin-right: 10px;}
 
 
 }
+
+
 
  @media only screen and (min-device-width : 320px) and (max-device-width : 478px) {
 .row {
@@ -1552,7 +1603,7 @@ span#cal_price{font-size:14px;}
 }
 
 
-@media only screen and (min-device-width :768px) and (max-device-width : 991px) {
+@media (min-width :768px) and (max-width : 991px) {
 
 ul.follow-list2{float: none!important}
 ul.follow-list2 li{float: left!important}

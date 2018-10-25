@@ -13,12 +13,12 @@
 @endsection
 
 @section('content')
-
+<div class="top-banner faq">
 <div class="container">
 	<div class="row">
-		<div class="col-sm-12 text-center">
+		<div class="col-sm-12">
 			<div class="title measure-title">
-				<h2 class="paddingBottom20">FAQs</h2>
+				<h3 class="paddingBottom20">FAQs</h3>
 				<ul class="navbar">
 					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
 					<li><a href="">FAQs</a></li>
@@ -26,20 +26,27 @@
 			</div>
 		</div>
 	</div>
-
+</div>
+</div>
+<div class="faq-header sec-padding-sm">
+<div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<div class="measure-content">
+			<div class="page-header">
 
-             <h4>Top 10 Customised Wallpaper FAQs:</h4>
+             <h2>Top 10 Customised Wallpaper FAQs:</h2>
 
              </div>
          </div>
      </div>
-				<div class="row">
-					<div class="col-sm-12">
+ </div>
+</div>
+<div class="list-block">
+<div class="container">
+  <div class="row">
+	<div class="col-sm-8">
 				
-				<ul>
+				<ul class="faq-list">
 				<li>The surface of my wall is not flat. Can I still install wallpaper on it?</li>
 				<li>Will my wall paint peel off or my walls get damaged when I remove the wallpaper?</li>
 				<li>Can I get someone from Wall Sajawat to install the wallpaper at my home or office or workplace?</li>
@@ -51,7 +58,20 @@
 				<li>Can I clean my Wallpaper?</li>
 				<li>Do you ship overseas?</li>
 				</ul>	
-				
+	</div>
+	<div class="col-sm-4">
+		<div class="img-box">
+			<img src="{{ asset('build/assets/images/faq.jpg') }}" alt="" class="img-responsive">
+		</div>
+	</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
 				<p class="topborder paddingTop20 weight600"></p>
 				<div class="panel-group" id="accordion">
 			    	<div class="panel panel-default">

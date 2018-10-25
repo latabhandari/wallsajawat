@@ -1299,6 +1299,7 @@ p {
 	float: left;
 	margin-right: 5px;
 	color: #fff;
+	margin-top: 4px!important;
 }
 .cart .cart-box {
 	margin: 30px 0;

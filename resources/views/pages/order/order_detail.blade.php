@@ -27,7 +27,8 @@
 			</div>
 		</div>
 		<!---->
-		
+	</div>
+		<div class="row">
 		<div class="col-sm-6 paddingBottom20">
 			<div class="order-heading">
 				<h2 class="weight600 marginZero">Your Orders</h2>
@@ -52,7 +53,7 @@
 		</div>
 		<!---->
 	</div>
-</div>
+
 
 
 <div class="container">
@@ -328,7 +329,7 @@
 	</div>
 </div>
 
-
+</div>
 @endsection
 
 @section('bottom_yield')

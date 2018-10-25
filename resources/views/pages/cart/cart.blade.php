@@ -22,7 +22,17 @@
 @section('content')
 
 @if(Cart::count())
-
+<div class="cart-head">
+	<div class="container">
+<div class="title">
+			
+				<ul class="navbar">
+					<li class="nobackground"><a href="{{ route('home.index') }}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+					<li><a href=""><strong>Cart</strong></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 <form name="updateform" action="{{ route('cart.item.update') }}" method="POST">
 	@csrf
 	     <div class="main-container">

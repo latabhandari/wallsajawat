@@ -14,12 +14,20 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
     @include('pages.include.top_head')
 
     @include('pages.include.header')
+     <div class="mysearch">
+              <div class="container">
+            <div class="form-group">
+              <input type="search" name="" placeholder="Search" class="form-control">
+            </div>
+          </div>
+    </div>
 
     <div class="contanier banner-img">
       <div class="row">
@@ -226,5 +234,18 @@
                                     });
        });
     </script>
+
+    <script>
+var j = jQuery.noConflict();
+j(document).ready(function(){
+ j(".searchbtn").click(function(){
+  j(".mysearch").slideToggle();
+    });
+});
+
+  }
+</script>
+
+
    </body>
 </html>
