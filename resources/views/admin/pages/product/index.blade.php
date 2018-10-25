@@ -33,7 +33,7 @@
                 <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
                   <option>-- Select Category --</option>
                    @foreach ($categories as $category)
-                       <option value="{{ $category->id }}">{{ $category->name }}</option>
+                       <option {{  ($category_id == $category->id) ? "selected" : "" }} value="{{ $category->id }}">{{ $category->name }}</option>
                    @endforeach
                 </select>
                 <a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a>
@@ -68,6 +68,7 @@
                   @php
                     $status_img   =  ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
                     $categoryinfo =  MyHelper::getCategoryInfoById($data->id, ['name']);
+
                   @endphp
 
                     <tr>

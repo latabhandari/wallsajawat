@@ -38,7 +38,7 @@ class ProductController extends Controller
              }
         
         $categories = Categories::get();
-        return view('admin.pages.product.index', compact('products', 'categories'))->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('admin.pages.product.index', compact('products', 'categories', 'category_id'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
