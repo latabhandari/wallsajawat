@@ -65,7 +65,7 @@
                   <td>{!! MyHelper::showCategories($data->id) !!}</td>
                   <td>{{ $data->slug }}</td>
                   <td>{{ $data->page_title }}</td>
-                  <td><img src="{{ URL::asset('catalog/category/'.$data->wallpaper_image) }}" alt="" width="80" height="80" /></td>
+                  <td><img src="{{ URL::asset('catalog/category/'.$data->wallpaper_image) }}" alt="" width="60" height="50" /></td>
                   <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                   <td>
                     @php
