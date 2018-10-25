@@ -23,7 +23,7 @@ ul li{list-style-type:none;padding-left:10px}
               <div class="row">
                 <!-- accepted payments column -->
                 <div class="col-xs-6">
-                  <p class="lead">Information</p>
+                  <p class="lead">Details</p>
                   <div class="table-responsive">
                     <table class="table">
                       <tbody>
@@ -56,10 +56,14 @@ ul li{list-style-type:none;padding-left:10px}
                         <th>Items in Stock:</th>
                         <td>{{ $product->stock_item }}</td>
                       </tr>
+                      @php
+                        $roll_info = MyHelper::getRoleDimenstionById($product->roll_id);
+                        $roll_dimension = $roll_info->width . ' width * '.$roll_info->height . ' height';
+                      @endphp
 
                       <tr>
                         <th>Role Dimension:</th>
-                        <td>{{ $product->roll_id }}</td>
+                        <td>{{ $roll_dimension }}</td>
                       </tr>
 
                       <tr>
@@ -78,7 +82,7 @@ ul li{list-style-type:none;padding-left:10px}
                       </tr>
 
                       <tr>
-                        <th>Meta Description:</th>
+                        <th>Meta keywords:</th>
                         <td>{{ $product->meta_keywords }}</td>
                       </tr>
 
