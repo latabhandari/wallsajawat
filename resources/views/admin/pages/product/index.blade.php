@@ -68,7 +68,7 @@
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
-                      <td>{{ $data->page_title }}</td>
+                      <td>{{ ($data->page_title) ?  $data->page_title : "N/A" }}</td>
                       <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                       <td>
                         @php
