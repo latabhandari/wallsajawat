@@ -30,7 +30,7 @@
               @endphp
 
               <p style="text-align:right">
-                <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0">
+                <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
                   <option>-- Select Category --</option>
                    @foreach ($categories as $category)
                        <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -49,7 +49,7 @@
               @endphp
 
 
-              <table id="category" class="table table-bordered table-striped">
+              <table id="products" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>S. No</th>
@@ -133,7 +133,7 @@
 <script src="{{ URL::asset('backend/theme/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
 <script>
   $(function () {
-    $('#category').DataTable({
+    $('#products').DataTable({
       'paging'      : true,
       'lengthChange': false,
       'searching'   : true,
@@ -146,5 +146,13 @@
         ]
     })
   })
+</script>
+
+<script>
+  function filter(value)
+     {
+        var url = window.location.href.split('?')[0];
+        console.log(url);
+     }
 </script>
 @stop
