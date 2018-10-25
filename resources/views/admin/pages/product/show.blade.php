@@ -28,6 +28,7 @@ ul li{list-style-type:none;padding-left:10px}
                     <table class="table">
                       <tbody>
                       @php
+                        use App\Helpers\MyHelper as MyHelper;
                         $categoryinfo =  MyHelper::getCategoryInfoById($product->id, ['name']);
                       @endphp    
                       <tr>
@@ -65,7 +66,7 @@ ul li{list-style-type:none;padding-left:10px}
                         <td>{{ $product->stock_item }}</td>
                       </tr>
                       @php
-                        $roll_info = App\Helpers\MyHelper::getRollDimenstionById($product->roll_id);
+                        $roll_info = MyHelper::getRollDimenstionById($product->roll_id);
                         $roll_dimension = $roll_info->width . ' Width * '.$roll_info->height . ' Height';
 
                         $product_images = App\Helpers\MyHelper::getProductImages($product->id);
