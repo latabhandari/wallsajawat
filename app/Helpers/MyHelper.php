@@ -20,7 +20,7 @@ class MyHelper
    {
    	     public static function getRollDimenstionById($roll_id = '')
    	       {
-   	       	  return Dimension::findOrFail($id);
+   	       	  return Dimension::findOrFail($roll_id);
    	       }
 
          public static function getCategoryInfoById($product_id = '', $fields = array())
