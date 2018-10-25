@@ -97,7 +97,7 @@ ul li{list-style-type:none;padding-left:10px}
                   <p class="lead">Product Images</p>
                   @php
                           if (count($product_images)):
-                             echo '<div style=\'float:left;width:100%;margin:15px 0\' class=\'\'>';
+                             echo '<div style=\'float:left;width:100%\' class=\'\'>';
                              foreach ($product_images as $img):
                                 echo "<div style=\"float:left;width:80px;text-align:center\" class=\'\'><img src='".asset('catalog/product/'.$img->image)."' width=\"60\" style=\"margin:20px 0 5px 0\" height=\"60\" /></div>";
                              endforeach;
