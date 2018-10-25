@@ -156,7 +156,10 @@
   function filter(value)
      {
         var url = window.location.href.split('?')[0];
+        if (value)
         location.href = url + '?id=' + value
+          else
+        location.href = url
      }
 </script>
 @stop
