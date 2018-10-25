@@ -11,6 +11,9 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style type="text/css" media="screen">
+.clrwht{color:#fff}
+</style>
 @endsection
 
 
@@ -44,7 +47,7 @@
                     @php
                         $redirect_url = Request::get('redirect_url');
                         if ($redirect_url)
-                        echo "<p>You need to signin or signup to proceed the checkout</p>";
+                        echo "<p class='clrwht'>You need to signin or signup to proceed the checkout</p>";
                     @endphp
 
                     <form method="POST" action="{{ route('login'). '?' . Request::server('QUERY_STRING') }}" aria-label="{{ __('Login') }}">
