@@ -222,7 +222,7 @@ class ProductController extends Controller
      public function status($id, $status)
         {
              //
-             $status = ! $status
+             $status = ! $status;
              Product::where('id', $id)->update(['status' => $status]);
              return redirect()->route('product.index')->with('success','Changed status successfully');
         }
