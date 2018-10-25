@@ -12,7 +12,11 @@
 <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet" />
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
-{!! NoCaptcha::renderJs() !!}
+
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+</script>
+
 @endsection
 
 
@@ -110,7 +114,7 @@
                         <div class="form-group row">
                           
                             <div class="col-md-6">
-                                {!! app('captcha')->display() !!}
+                                {!! NoCaptcha::display() !!}
 
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="error">
@@ -142,4 +146,11 @@
 
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
+
 @endsection
