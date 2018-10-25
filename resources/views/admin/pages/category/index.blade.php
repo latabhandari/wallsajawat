@@ -95,7 +95,7 @@
 
                   @php
                     if ($i == 5)
-                    echo "<hr />";
+                    echo "<tr><td>----------</td></tr>";
                   @endphp
 
                 @endforeach
