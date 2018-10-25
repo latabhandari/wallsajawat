@@ -58,12 +58,12 @@ ul li{list-style-type:none;padding-left:10px}
                       </tr>
                       @php
                         $roll_info = App\Helpers\MyHelper::getRollDimenstionById($product->roll_id);
-                        $roll_dimension = $roll_info->width . ' width * '.$roll_info->height . ' height';
+                        $roll_dimension = $roll_info->width . ' Width * '.$roll_info->height . ' Height';
                       @endphp
 
                       <tr>
                         <th>Role Dimension:</th>
-                        <td>{{ $roll_dimension }}</td>
+                        <td>{{ $roll_dimension }} [Square Feet]</td>
                       </tr>
 
                       <tr>
