@@ -94,7 +94,7 @@
                 </tr>
 
                   @php
-                    if ($i / 5 == 1)
+                    if ($i == 5)
                     echo "<hr />";
                   @endphp
 
