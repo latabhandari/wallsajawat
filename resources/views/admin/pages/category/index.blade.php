@@ -55,11 +55,12 @@
 
                 @foreach ($categories as $data)
                 @php
+                  $i = 0;
                   $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
                 @endphp
 
                 <tr>
-                  <td>{{ ++$i }}</td>
+                  <td>{{ $i++ }}</td>
                   <td>{!! MyHelper::showCategories($data->id) !!}</td>
                   <td>{{ $data->slug }}</td>
                   <td>{{ $data->page_title }}</td>
@@ -96,7 +97,6 @@
                     if ($i / 5 == 1)
                     echo "<hr />";
                   @endphp
-
 
                 @endforeach
                
