@@ -13,9 +13,7 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Products</h3>
-              <select>
-                <option value="">111</option>
-              </select>
+              
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -32,6 +30,11 @@
               @endphp
 
               <p style="text-align:right"><a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a></p>
+              <p>
+                <select>
+                <option value="">111</option>
+              </select>
+              </p>
 
               @php
                        }
