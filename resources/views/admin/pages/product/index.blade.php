@@ -59,6 +59,7 @@
                   @php
                     $status_img   =  ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
                     $categoryinfo =  MyHelper::getCategoryInfoById($data->category_id, ['name']);
+                    echo $data->category_id;
                     print_r($categoryinfo);
 
                   @endphp
