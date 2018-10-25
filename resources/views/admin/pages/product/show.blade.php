@@ -96,6 +96,12 @@ ul li{list-style-type:none;padding-left:10px}
                       </tr>
 
                       <tr>
+                        <th>Updated at:</th>
+                        <td>{{ date('D, j M\'y h:i a', $product->updated_timestamp) }}</td>
+                      </tr>
+
+
+                      <tr>
                         <th>Page Title:</th>
                         <td>{{ $product->page_title }}</td>
                       </tr>
