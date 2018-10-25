@@ -49,6 +49,7 @@
                   <th>Name</th>
                   <th>Sku</th>
                   <th>Price</th>
+                  <th>Page Title</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tr>
@@ -67,6 +68,8 @@
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
+                      <td>Rs. {{ $data->price }}</td>
+                      <td>Rs. {{ $data->title }}</td>
                       <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                       <td>
                         @php
