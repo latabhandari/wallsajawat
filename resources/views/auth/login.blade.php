@@ -12,7 +12,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style type="text/css" media="screen">
-.clrwht{color:#ffdb50}
+.clrchk{color:#ffdb50}
 </style>
 @endsection
 
