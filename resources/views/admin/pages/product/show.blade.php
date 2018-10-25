@@ -57,7 +57,7 @@ ul li{list-style-type:none;padding-left:10px}
                         <td>{{ $product->stock_item }}</td>
                       </tr>
                       @php
-                        $roll_info = MyHelper::getRoleDimenstionById($product->roll_id);
+                        $roll_info = App\Helpers\MyHelper::getRoleDimenstionById($product->roll_id);
                         $roll_dimension = $roll_info->width . ' width * '.$roll_info->height . ' height';
                       @endphp
 
