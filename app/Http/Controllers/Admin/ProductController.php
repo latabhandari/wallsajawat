@@ -10,6 +10,7 @@ use App\ProductCategory as ProductCategory;
 use App\ProductImages as ProductImages;
 use App\Dimension as Dimension;
 use App\Categories as Categories;
+use DB;
 
 class ProductController extends Controller
 {
