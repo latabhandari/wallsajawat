@@ -18,7 +18,6 @@ use App\Cities as City;
 use App\States as State;
 class MyHelper 
    {
-
          public static function getCategoryInfoById($product_id = '', $fields = array())
    	       {
    	       	  $category_id  = ProductCategory::where('product_id', $product_id)->first()->category_id;
