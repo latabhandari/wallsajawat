@@ -27,6 +27,14 @@ ul li{list-style-type:none;padding-left:10px}
                   <div class="table-responsive">
                     <table class="table">
                       <tbody>
+                      @php
+                        $categoryinfo =  MyHelper::getCategoryInfoById($product->id, ['name']);
+                      @endphp    
+                      <tr>
+                        <th style="width:50%">Category:</th>
+                        <td>{{ $categoryinfo[0]['name'] }} </td>
+                      </tr>
+
                       <tr>
                         <th style="width:50%">Name:</th>
                         <td>{{ $product->name }} </td>
