@@ -25,9 +25,19 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+
+	<div class="row">
 		<div class="col-sm-12">
 			<div class="measure-content">
-				<p>Top 10 Customised Wallpaper FAQs:</p>
+
+             <h4>Top 10 Customised Wallpaper FAQs:</h4>
+
+             </div>
+         </div>
+     </div>
+				<div class="row">
+					<div class="col-sm-12">
 				
 				<ul>
 				<li>The surface of my wall is not flat. Can I still install wallpaper on it?</li>
@@ -42,43 +52,97 @@
 				<li>Do you ship overseas?</li>
 				</ul>	
 				
-				<p class="topborder paddingTop20 weight600">The surface of my wall is not flat. Can I still install wallpaper on it?</p>
-			
-				<p class="weight400 paddingBottom20">No. For best results, wallpapers are installed on absolutely flat/smooth surfaces. Therefore, we recommend that you choose a smooth surface for installing our customised wallpaper to avoid bumps and achieve a perfect finish.</p>
-				
-				<p class="topborder paddingTop20 weight600">Will my wall paint peel off or my walls get damaged when I remove the wallpaper?</p>
-				<p class="weight400 paddingBottom20">In most cases, your wall will not get damaged. However, we cannot guarantee the condition of your wall surface before you apply the wallpaper. Wall Sajawat will not take any responsibility for any damage that occurs while removing the wallpaper or paint touch-ups that might be required.</p>
-				
-				<p class="topborder paddingTop20 weight600">Can I get someone from Wall Sajawat to install the wallpaper at my home or office or workplace?</p>
-				<p class="weight400 paddingBottom20">Sure! We offer installation service within 48 hours in Delhi-NCR at a nominal charge.</p>
-				
-				<p class="topborder paddingTop20 weight600">Is there a minimum size / order quantity for custom wallpaper orders?</p>
-				<p class="weight400 paddingBottom20">Yes, the minimum customised wallpaper size we accept is 40 Sq. Ft.</p>
-				
-				<p class="topborder paddingTop20 weight600">I really liked one of your wallpaper designs, but I need a different size. What do I do?</p>
-				<p class="weight400 ">No problem! You can customize the size of any existing wallpaper design to suit your requirements by following these steps:</p>			
-				
-				<ul class="paddingBottom20">
-				<li>Select the wallpaper design from our website.</li>
-				<li>Go to the Custom Size option.</li>
-				<li>Fill-in the required Width and Height of the wallpaper.</li>
-				<li>Since the Height and Width ratio of the size you entered is different than our original image, you need to crop the image to decide the actual part of the image that you would like us to print.</li>
-				<li>To Crop the image, Move the crop box on the wallpaper design by dragging with your mouse.</li>
-				<li>You can also Re-size the crop box by dragging the small corner squares.</li>
-				<li>Preview of the re-sized image before confirming your order.</li>
-				<li>If you are happy with what you see, continue to place your order to print.</li>
-				<li>If you want to re-size your wallpaper again, you will be prompted to go back to Step 5 above.</li>
+				<p class="topborder paddingTop20 weight600"></p>
+				<div class="panel-group" id="accordion">
+			    	<div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">The surface of my wall is not flat. Can I still install wallpaper on it?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse1" class="panel-collapse collapse in">
+			        <div class="panel-body">No. For best results, wallpapers are installed on absolutely flat/smooth surfaces. Therefore, we recommend that you choose a smooth surface for installing our customised wallpaper to avoid bumps and achieve a perfect finish.</div>
+			      </div>
+                 </div>
+
+                 <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Will my wall paint peel off or my walls get damaged when I remove the wallpaper?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse2" class="panel-collapse collapse">
+			        <div class="panel-body">In most cases, your wall will not get damaged. However, we cannot guarantee the condition of your wall surface before you apply the wallpaper. Wall Sajawat will not take any responsibility for any damage that occurs while removing the wallpaper or paint touch-ups that might be required.</div>
+			      </div>
+                 </div>
+			     
+			     <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Can I get someone from Wall Sajawat to install the wallpaper at my home or office or workplace?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse3" class="panel-collapse collapse ">
+			        <div class="panel-body">Sure! We offer installation service within 48 hours in Delhi-NCR at a nominal charge.</div>
+			      </div>
+                 </div>
+
+                 <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Is there a minimum size / order quantity for custom wallpaper orders?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse4" class="panel-collapse collapse">
+			        <div class="panel-body">Yes, the minimum customised wallpaper size we accept is 40 Sq. Ft.</div>
+			      </div>
+                 </div>
+
+                 <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">I really liked one of your wallpaper designs, but I need a different size. What do I do?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse5" class="panel-collapse collapse">
+			        <div class="panel-body">No problem! You can customize the size of any existing wallpaper design to suit your requirements by following these steps:
+			    <ul class="paddingBottom20">
+					<li>Select the wallpaper design from our website.</li>
+					<li>Go to the Custom Size option.</li>
+					<li>Fill-in the required Width and Height of the wallpaper.</li>
+					<li>Since the Height and Width ratio of the size you entered is different than our original image, you need to crop the image to decide the actual part of the image that you would like us to print.</li>
+					<li>To Crop the image, Move the crop box on the wallpaper design by dragging with your mouse.</li>
+					<li>You can also Re-size the crop box by dragging the small corner squares.</li>
+					<li>Preview of the re-sized image before confirming your order.</li>
+					<li>If you are happy with what you see, continue to place your order to print.</li>
+					<li>If you want to re-size your wallpaper again, you will be prompted to go back to Step 5 above.</li>
 				</ul>
-				
-				<p class="topborder paddingTop20 weight600">I want to go for a Custom Size wallpaper. How do I calculate the size I need ?</p>
-				<p class="weight400 paddingBottom20">Don’t worry! Simply calculate the measurement of your wall/area where you wish to install a wallpaper. Provide us with the measurements in cm, inch or foot and leave the rest to us. We will convert your measurements into Sq Ft and let you know the exact Custom Size of wallpaper you need. For more information on how to get the precise measurements of your wall, please refer to the “How to Measure" section on our website.</p>	
-				
-				
-				<p class="topborder paddingTop20 weight600">Under what conditions can I return my wallpaper?</p>
-				<p class="weight400">You may return your wallpaper in case of:</p>
-				<ul>
-				<li>Damaged or tampered packaging at the time of receipt. Please DO NOT accept your order in such cases and ask the courier executive to take it back. Additionally, please inform us about the situation via email so that we can take corrective action at the earliest.</li>
-				<li>If the wallpaper you receive is incorrect or does not match the specifications (in terms of size and design) provided by you. In this case you need to:
+			        </div>
+			      </div>
+                 </div>
+   				
+   				 <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">I want to go for a Custom Size wallpaper. How do I calculate the size I need ?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse6" class="panel-collapse collapse">
+			        <div class="panel-body">Don’t worry! Simply calculate the measurement of your wall/area where you wish to install a wallpaper. Provide us with the measurements in cm, inch or foot and leave the rest to us. We will convert your measurements into Sq Ft and let you know the exact Custom Size of wallpaper you need. For more information on how to get the precise measurements of your wall, please refer to the “How to Measure" section on our website.</div>
+			      </div>
+                 </div>
+
+             <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Under what conditions can I return my wallpaper?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse7" class="panel-collapse collapse">
+			        <div class="panel-body">You may return your wallpaper in case of:
+			     <ul>
+						<li>Damaged or tampered packaging at the time of receipt. Please DO NOT accept your order in such cases and ask the courier executive to take it back. Additionally, please inform us about the situation via email so that we can take corrective action at the earliest.</li>
+						<li>If the wallpaper you receive is incorrect or does not match the specifications (in terms of size and design) provided by you. In this case you need to:
 					<ul>
 						<li>Inform our customer care about the discrepancy via email within 24 hours of order receipt.</li>
 						<li>Email us a photo-proof of the discrepancy in your order within 24 hours.</li>
@@ -86,20 +150,69 @@
 					</ul>
 				</li>
 				</ul>
+				<p>For more details, please read our <a href="#">Return Policy.</a></p>
+			        </div>
+			      </div>
+                 </div>
+
+              <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Can I exchange my wallpaper for a new one?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse8" class="panel-collapse collapse">
+			        <div class="panel-body">We offer an exchange only if your order is incorrect or defective (does not match your specifications in terms of size or design). In such cases, we will resend a fresh order to you. For more information on order exchange, please read our Return Policy.</div>
+			      </div>
+                 </div>
+
+
+                 <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Can I clean my Wallpaper?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse9" class="panel-collapse collapse">
+			        <div class="panel-body">Yes, you can clean your customised wallpaper with a damp sponge dipped into a solution of water and mild soapy cleaning detergent. Avoid excessive scrubbing or using harsh chemical-based detergents that may damage the surface of your wallpaper.</div>
+			      </div>
+                 </div>
+               
+
+                <div class="panel panel-default">
+			      	<div class="panel-heading">
+			        	<h4 class="panel-title">
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Do you ship overseas?</a>
+			        	</h4>
+					</div>
+			      <div id="collapse9" class="panel-collapse collapse">
+			        <div class="panel-body">Yes, we do – to USA, UK, Middle East and the Far East, but shipping charges would be extra.</div>
+			      </div>
+                 </div>
+
+				</div>
 				
-				<p class="weight400 paddingBottom20">For more details, please read our <a href="">Return Policy.</a></p>
-				
-				<p class="topborder paddingTop20 weight600">Can I exchange my wallpaper for a new one?</p>
-				<p class="weight400 paddingBottom20">We offer an exchange only if your order is incorrect or defective (does not match your specifications in terms of size or design). In such cases, we will resend a fresh order to you. For more information on order exchange, please read our Return Policy.</p>
 				
 				
-				<p class="topborder paddingTop20 weight600">Can I clean my Wallpaper?</p>
-				<p class="weight400 paddingBottom20">Yes, you can clean your customised wallpaper with a damp sponge dipped into a solution of water and mild soapy cleaning detergent. Avoid excessive scrubbing or using harsh chemical-based detergents that may damage the surface of your wallpaper.</p>
 				
 				
-				<p class="topborder paddingTop20 weight600">Do you ship overseas?</p>
-				<p class="weight400 paddingBottom20">Yes, we do – to USA, UK, Middle East and the Far East, but shipping charges would be extra.</p>
 				
+				
+				
+				
+				
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		
 			</div>
 		</div>
 	</div>

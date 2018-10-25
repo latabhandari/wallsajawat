@@ -78,16 +78,17 @@
 						
 						<div class="tab-content">
 							<div class="tab-pane fade active in" id="Dashboard1" role="tabpanel">
+								<div class="row">
 								<div class="col-sm-12">
 									<div class="placed-order-count">
 										<h5><span class="weight600">{{ count($orders) }} order</span> placed in</h5>
 									</div>
 								</div>
+							</div>
 
 								@foreach ($orders as $order)
-
-								<div class="col-sm-12">
-									<div class="row ">
+                              
+									
 										<div class="order-head">
 											<div class="col-sm-4 paddingLeftRght0">
 												<div class="order-date-sec">
@@ -122,12 +123,15 @@
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
+							
+							
+								
 
-								<div class="col-sm-12">
-									<div class="row">
+								
+									
 										<div class="order-main-body">
+											<div class="row">
+											<div class="col-sm-12">
 										@php
 											$order_products = App\Helpers\MyHelper::getOrderProducts($order->id);
 										@endphp
@@ -145,9 +149,13 @@
 												<div class="col-sm-12">
 													<h4>Delivered XX-Apr-2018</h4>
 												</div>
+											</div>
+											<div class="row">
 												<div class="col-sm-12">
 													<p class="order-status">Your package was delivered</p>
 												</div>
+											</div>
+											<div class="row">
 												<div class="col-sm-9">
 													<div class="row">
 														<div class="col-sm-3">
@@ -156,26 +164,32 @@
 															</div>
 														</div>
 														<div class="col-sm-9 order-desc">
-															<div>
+															<div class="row">
+														
 																<h4 class="order-product-title col-sm-12">
 																	{{ $product->name }}
 																</h4>
 															</div>
-															<div>
-																<h5 class="col-sm-3 paddingRght0">Quantity</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8">{{ $product->qty }}</div>
+														
+															<div class="row">
+																<h5 class="col-sm-3 col-xs-4 paddingRght0">Quantity</h5><span class="col-sm-1 col-xs-2 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8 col-xs-6">{{ $product->qty }}</div>
 															</div>
 
-															<div>
-																<h5 class="col-sm-3 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-size col-sm-8">{{ $dimension->width }} {{ $dimension->name }} x {{ $dimension->height }} {{ $dimension->name }}</div>
+															<div class="row">
+																<h5 class="col-sm-3 col-xs-4 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 col-xs-2 paddingTop10">:</span><div class="wallpaper-size col-sm-8 col-xs-6">{{ $dimension->width }} {{ $dimension->name }} x {{ $dimension->height }} {{ $dimension->name }}</div>
 															</div>
 															
-															<div>
-																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">{!! $product_info[0]['short_desc'] !!}</div>
-															</div>	
+															<div class="row">
+																<h5 class="col-sm-3 col-xs-4 paddingRght0">Description</h5><span class="col-sm-1 col-xs-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8 col-xs-6">{!! $product_info[0]['short_desc'] !!}</div>
+															</div>
+															<div class="row">	
 															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> {{ $product->price }}</h4>
+														</div>
+														<div class="row">
 															<div class="col-sm-12 ">
 																<button class="btn buyagain-btn" type="submit">Buy it again</button>
 															</div>
+														</div>
 														</div>
 													</div>
 												</div>
@@ -200,9 +214,9 @@
 								</div>
 							@endforeach
 
-
-							</div>
-							<!---->
+                          
+                          </div>
+						
 							<div class="tab-pane fade" id="Dashboard2" role="tabpanel">
 								<!--<div class="cancelled-order-sec text-center paddingTop20 paddingBottom20">
 									<h4>We aren't finding any cancelled orders. <a href="">View all orders</a></h4>
@@ -274,15 +288,15 @@
 																</h4>
 															</div>
 															<div>
-																<h5 class="col-sm-3 paddingRght0">Quantity</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8">XX</div>
+																<h5 class="col-sm-3 col-xs-3 paddingRght0">Quantity</h5><span class="col-sm-1 col-xs-1 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8 col-xs-8">XX</div>
 															</div>
 
 															<div>
-																<h5 class="col-sm-3 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-size col-sm-8">12 Feet x 12 Feet</div>
+																<h5 class="col-sm-3 col-xs-3 paddingRght0">Size (Width x Height)</h5><span class="col-sm-1 col-xs-1 paddingTop10">:</span><div class="wallpaper-size col-sm-8 col-xs-8">12 Feet x 12 Feet</div>
 															</div>
 															
 															<div>
-																<h5 class="col-sm-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8">Matt Finish Wallpaper</div>
+																<h5 class="col-sm-3 col-xs-3 paddingRght0">Description</h5><span class="col-sm-1 paddingTop10 col-xs-1">:</span><div class="wallpaper-material col-sm-8 col-xs-8">Matt Finish Wallpaper</div>
 															</div>	
 															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> 999</h4>
 															<div class="col-sm-12 ">
@@ -296,7 +310,7 @@
 														<div class="col-sm-12 paddingLeftRght0 width100">
 															<button class="btn cancelled-btn" type="submit"><a href=""> Cancelled Order</a></button>
 														</div>		
-														<div class="cancelled-date text-center">
+														<div class="cancelled-date ">
 															<h5 class="paddingTop20" style="display:inline-block; width:100%;">Cancelled on:<span> XX XX XXXX</span></h5><h5>
 														</h5></div>
 													</div>

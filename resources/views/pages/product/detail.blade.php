@@ -82,10 +82,10 @@
 				            @endforeach
 				     	</select>
 					</li>
-						<li><label>Width:</label>
+						<li class="width"><label>Width:</label>
 						<input type="text" name="width" id="w_width" value="" class="istyle8" width="50" autocomplete="off" />
 					</li>
-					<li><label>Height:</label>
+					<li class="height"><label>Height:</label>
 						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
 					</li>
           @php
@@ -100,7 +100,7 @@
               <p><strong>Quantity:</strong> Please select Quantity.</p>
               <div class="row">
                 <div class="col-sm-12">
-                  <input type="number" name="qty" placeholder="1" min="1" max="25" class="form-control" value="1" />
+                  <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
                   <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
                 </div>
               </div>

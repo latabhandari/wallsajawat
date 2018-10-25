@@ -31,10 +31,10 @@
         <div class="cart-box">
           <div class="title">
             <div class="row">
-              <div class="col-sm-2">Image</div>
-              <div class="col-sm-4">Description</div>
-              <div class="col-sm-2">Item Price</div>
-              <div class="col-sm-4">Action</div>
+              <div class="col-sm-2 hidden-xs">Image</div>
+              <div class="col-sm-4 hidden-xs">Description</div>
+              <div class="col-sm-2 hidden-xs">Item Price</div>
+              <div class="col-sm-4 hidden-xs">Action</div>
             </div>
           </div>
 
@@ -46,16 +46,26 @@
             <div class="cart-row">
               <div class="row">
                 <div class="col-sm-2">
+                  <div class="title hidden-md hidden-sm hidden-lg">
+                    <h4>Image</h4>
+                  </div>
                   <div class="imgb">
                     <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $row->name }}">
                   </div>
                 </div>
                 <div class="col-sm-4">
+                  <div class="title hidden-md hidden-sm hidden-lg">
+                    <h4>Description</h4>
+                  </div>
                   <h5>{{ $row->name }}</h5>
                   <p>Sku: {{ $row->sku }}</p>
                 </div>
-                <div class="col-sm-2"><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
-                <div class="col-sm-4">&nbsp;&nbsp;<a class="remove" style="margin-top:0px" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left">Remove</button></a><a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a></div>
+                <div class="col-sm-2"><div class="title hidden-md hidden-sm hidden-lg">
+                    <h4>Item Price</h4>
+                  </div><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
+                <div class="col-sm-4"><div class="title hidden-md hidden-sm hidden-lg">
+                    <h4>Action</h4>
+                  </div>&nbsp;&nbsp;<a class="remove" style="margin-top:0px" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left">Remove</button></a><a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a></div>
               </div>
             </div>
 

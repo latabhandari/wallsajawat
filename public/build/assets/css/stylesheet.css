@@ -635,6 +635,8 @@ img.author {
 	float: none;
 	margin: 20px 0 0;
 }
+.checkout .form{padding:30px 15px 5px!important;}
+
 }
 
 
@@ -1126,6 +1128,14 @@ p {
 	text-align: center;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
+	max-height: 515px;
+	height: auto;
+}
+.product-imgb .easyzoom img{
+	width: 650px!important;
+    height: auto!important;
+    max-width: 100%;
 }
 .product-thumbnails {
 	width: 70px;

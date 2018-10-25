@@ -94,7 +94,7 @@
 									@endif
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn contact-submit">Submit</button>
+									<button type="submit" class="btn contact-submit btn-brand">Submit</button>
 								</div>
 							</form>
 						</div>
