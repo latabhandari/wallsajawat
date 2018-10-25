@@ -40,6 +40,11 @@ ul li{list-style-type:none;padding-left:10px}
                         <th style="width:50%">Name:</th>
                         <td>{{ $product->name }} </td>
                       </tr>
+
+                      <tr>
+                        <th style="width:50%">Slug:</th>
+                        <td>{{ $product->slug }} </td>
+                      </tr>
                       
                       <tr>
                         <th>Sku:</th>
@@ -80,6 +85,11 @@ ul li{list-style-type:none;padding-left:10px}
                       <tr>
                         <th>Status:</th>
                         <td>{{ ($product->status == 0) ? "Inactive" : "Active" }}</td>
+                      </tr>
+
+                      <tr>
+                        <th>Created at:</th>
+                        <td>{{ date('D, j M\'y', $product->created_timestamp) }}</td>
                       </tr>
 
                       <tr>
