@@ -71,12 +71,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="short_desc">Short Description&nbsp;<span class="req">*</span></label>
+                  <label for="short_desc">Short Description</label>
                   <textarea cols="25" id="editor1" class="form-control" name="short_desc" placeholder="Short Description">{{ old('short_desc') }}</textarea>
                 </div>
 
                 <div class="form-group">
-                  <label for="desc">Description&nbsp;<span class="req">*</span></label>
+                  <label for="desc">Description</label>
                   <textarea cols="25" id="editor2" class="form-control" name="description" placeholder="Description">{{ old('description') }}</textarea>
                 </div>
 

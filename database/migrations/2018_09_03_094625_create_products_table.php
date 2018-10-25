@@ -19,8 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('name')->comment('Name');
             $table->string('slug')->comment('Slug');
             $table->string('sku')->comment('Sku');
-            $table->text('short_desc')->comment('Short Description');
-            $table->longText('description')->comment('Description');
+            $table->text('short_desc')->comment('Short Description')->nullable();
+            $table->longText('description')->comment('Description')->nullable();
             $table->string('price', 32)->comment('Price');
             $table->unsignedInteger('roll_id')->comment('Roll Id');
             $table->unsignedSmallInteger('stock_item')->comment('Stock Item');
