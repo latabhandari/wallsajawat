@@ -71,7 +71,7 @@
                       <td>{{ ($data->page_title) ?  $data->page_title : "N/A" }}</td>
                       <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
                       <td>
-                        <a class="btn btn-warning" href="{{ route('admin.product.view',$data->id) }}"><span class="fa fa-eye"></span></a>
+                        <a class="btn btn-warning" href="{{ route('product.show',$data->id) }}"><span class="fa fa-eye"></span></a>
 
                         @php
                          $edit_product = MyHelper::getPermission('edit_product');
