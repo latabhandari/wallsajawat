@@ -95,7 +95,7 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th style="width:50%">Images:</th>
-                        <td>{{ $request->loan_number }}</td>
+                        <td></td>
                       </tr>
                       
                    </tbody></table>
