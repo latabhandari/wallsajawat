@@ -30,7 +30,7 @@
               @endphp
 
               <p style="text-align:right">
-                <select class="form-control" style="width:10%;display:inline">
+                <select class="form-control" style="width:10%;display:inline;margin:0 10px 0 0">
                   <option>-- Select Category --</option>
                    @foreach ($categories as $category)
                        <option value="{{ $category->id }}">{{ $category->name }}</option>
