@@ -9,6 +9,7 @@ use App\Product as Product;
 use App\ProductCategory as ProductCategory;
 use App\ProductImages as ProductImages;
 use App\Dimension as Dimension;
+use App\Categories as Categories;
 
 class ProductController extends Controller
 {
@@ -22,7 +23,8 @@ class ProductController extends Controller
     {
         //
         $products = Product::get();
-        return view('admin.pages.product.index', compact('products'))->with('i', (request()->input('page', 1) - 1) * 10);
+        $categories = Categories::get();
+        return view('admin.pages.product.index', compact('products', 'categories'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**

@@ -30,13 +30,16 @@
               @endphp
 
               <p style="text-align:right">
-                <select class="form-control">
-                  <option value="">111</option>
+                <select class="form-control" style="width:10%;display:inline">
+                  <option>-- Select Category --</option>
+                   @foreach ($categories as $category)
+                       <option value="{{ $category->id }}">{{ $category->name }}</option>
+                   @endforeach
                 </select>
                 <a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a>
               </p>            
               @php
-                       }
+                  }
               @endphp
 
 
