@@ -31,7 +31,7 @@
 
               <p style="text-align:right">
                 <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
-                  <option>-- Select Category --</option>
+                  <option value="">-- Select Category --</option>
                    @foreach ($categories as $category)
                        @php
                          $selected = ($category_id == $category->id) ? "selected" : "" ;
