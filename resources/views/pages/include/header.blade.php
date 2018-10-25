@@ -69,9 +69,9 @@ switch ($segment)
                       <li><i class="fa fa-search"></i></li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                           @guest
-                            <span class="cart_count" style="display: none">Cart={{ Cart::count() }},User=0</span>
+                            <span class="cart_user" style="display: none">Cart={{ Cart::count() }},User=0</span>
                           @else  
-                            <span class="cart_count" style="display: none">Cart={{ Cart::count() }},User=1</span>
+                            <span class="cart_user" style="display: none">Cart={{ Cart::count() }},User=1</span>
                             <li>
                               <div class="dropdown">
                               <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="caret"></span></button>
