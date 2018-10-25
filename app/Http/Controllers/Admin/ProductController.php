@@ -19,10 +19,23 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $products = Product::get();
+        $category_id = $request->input('id');
+        if ( ! empty($category_id))
+             {
+                $products   = DB::table('products')
+                                      ->select('products.id', 'products.name', 'products.slug', 'products.price', 'product_categories.category_id', 'products.page_title')
+                                      ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
+                                      ->where('product_categories.category_id', $category_id)
+                                      ->get();
+             }
+        else
+             {
+                $products = Product::get();
+             }
+        
         $categories = Categories::get();
         return view('admin.pages.product.index', compact('products', 'categories'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
