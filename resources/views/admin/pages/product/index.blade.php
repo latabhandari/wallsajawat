@@ -63,7 +63,7 @@
 
                     <tr>
                       <td>{{ ++$i }}</td>
-                      <td></td>
+                      <td>{{ $categoryinfo['name'] }}</td>
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
