@@ -36,6 +36,7 @@
 
 
               @php
+                        $i = 0;
                         $index_categories = MyHelper::getPermission('index_categories');
                         if ( ! empty($index_categories)) {
               @endphp
@@ -55,7 +56,6 @@
 
                 @foreach ($categories as $data)
                 @php
-                  $i = 0;
                   $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
                 @endphp
 
