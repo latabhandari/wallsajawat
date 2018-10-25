@@ -117,6 +117,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::get('/product/destroyimg/{id}', 'ProductController@destroyimg')->name('admin.product.delete');
 
+
+            Route::get('/product/view/{id}', 'ProductController@view')->name('admin.product.view');
+            
+
             Route::resource('measurement', 'MeasurementController');
 
             Route::resource('offers', 'OffersController');
