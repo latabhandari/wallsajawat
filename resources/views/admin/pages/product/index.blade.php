@@ -13,6 +13,9 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Products</h3>
+              <select>
+                <option value="">111</option>
+              </select>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
