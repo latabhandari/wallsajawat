@@ -67,9 +67,12 @@ switch ($segment)
                   <div class="col-sm-2 menu_icons">
                     <ul class="nav menu-icons pull-right">
                       <li><i class="fa fa-search"></i></li>
-                      <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span><span class="cart_count" style="display: none">Cart={{ Cart::count() }}</span></a></li>
+                      <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
+                          <span class="cart_count" style="display: none">Cart={{ Cart::count() }},
                           @guest
-                          @else   
+                            User=0</span>
+                          @else  
+                            User=1</span>
                             <li>
                               <div class="dropdown">
                               <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="caret"></span></button>
