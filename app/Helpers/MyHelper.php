@@ -12,15 +12,17 @@ use App\Dimension as Dimension;
 use App\Product as Product;
 use App\Categories as Category;
 use App\OrderProducts as OrderProducts;
+use App\ProductCategory as ProductCategory;
 use App\Order as Order;
 use App\Cities as City;
 use App\States as State;
 class MyHelper 
    {
 
-         public static function getCategoryInfoById($id = '', $fields = array())
+         public static function getCategoryInfoById($product_id = '', $fields = array())
    	       {
-   	       	  return Category::where('id', $id)->get($fields)->toArray();
+   	       	  $category_id  = ProductCategory::where('product_id', $product_id)->first()->category_id;
+   	       	  return Category::where('id', $category_id)->get($fields)->toArray();
    	       }
 
          public static function getCustomerShippingAddress($id = '')
