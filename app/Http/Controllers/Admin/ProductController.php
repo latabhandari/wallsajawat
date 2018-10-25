@@ -224,7 +224,7 @@ class ProductController extends Controller
              //
              $status = ! $status;
              Product::where('id', $id)->update(['status' => $status]);
-             return redirect()->route('product.index')->with('success','Changed status successfully');
+             return redirect()->route('product.index')->with('success','Product status changed successfully!');
         }
 
 
