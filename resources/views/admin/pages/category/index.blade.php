@@ -95,7 +95,7 @@
 
                   @php
                     if ($i == 5)
-                    echo "<tr><td colspan=\"6\">----------</td></tr>";
+                    echo "<p></p>";
                   @endphp
 
                 @endforeach
