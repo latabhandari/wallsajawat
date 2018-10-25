@@ -45,6 +45,7 @@
                 <thead>
                 <tr>
                   <th>S. No</th>
+                  <th>Category</th>
                   <th>Name</th>
                   <th>Sku</th>
                   <th>Price</th>
@@ -56,11 +57,13 @@
 
                 @foreach ($products as $data)
                   @php
-                    $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
+                    $status_img   =  ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
+                    $categoryinfo =  MyHelper::getCategoryInfoById($data->category_id, ['name']);
                   @endphp
 
                     <tr>
                       <td>{{ ++$i }}</td>
+                      <td>{{ $categoryinfo['name'] }}</td>
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>

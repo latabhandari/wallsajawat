@@ -18,7 +18,11 @@ use App\States as State;
 class MyHelper 
    {
 
-         
+         public static function getCategoryInfoById($id = '', $fields = array())
+   	       {
+   	       	  return Category::where('id', $id)->get($fields)->toArray();
+   	       }
+
          public static function getCustomerShippingAddress($id = '')
    	       {
    	       	  $info       =  Order::select('shipping_address')->where('id', $id)->first();
