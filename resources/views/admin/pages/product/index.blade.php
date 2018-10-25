@@ -82,7 +82,7 @@
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
-                      <td>Rs. {{ $data->stock_item }}</td>
+                      <td>{{ $data->stock_item }}</td>
                       <td>{{ ($data->page_title) ?  $data->page_title : "N/A" }}</td>
                       <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.product.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
                       <td>
