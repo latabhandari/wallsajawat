@@ -110,7 +110,7 @@
                         <div class="form-group row">
                           
                             <div class="col-md-6">
-                                {!! NoCaptcha::display() !!}
+                                {!! app('captcha')->display() !!}
 
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="error">
