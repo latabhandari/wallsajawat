@@ -36,7 +36,7 @@
 
 
               @php
-                        $i = 0;
+                        $i = 1;
                         $index_categories = MyHelper::getPermission('index_categories');
                         if ( ! empty($index_categories)) {
               @endphp
