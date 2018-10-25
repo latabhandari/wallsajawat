@@ -13,7 +13,6 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 {!! NoCaptcha::renderJs() !!}
-
 @endsection
 
 
@@ -143,11 +142,4 @@
 
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
-
-<script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
-</script>
-
 @endsection
