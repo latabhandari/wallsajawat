@@ -101,7 +101,7 @@
 
                   @php
                     if ($i == 5)
-                    echo "<tr><td colspan=\"8\"><span style=\"border: 1px dashed #e0d5d5;float:left;width:100%;\"></span></td></tr>";
+                    echo "<tr><td colspan=\"9\"><span style=\"border: 1px dashed #e0d5d5;float:left;width:100%;\"></span></td></tr>";
                   @endphp
 
                 @endforeach
