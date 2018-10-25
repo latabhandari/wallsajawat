@@ -42,7 +42,7 @@
             <div class="card">
                 <div class="card-body" style="">
                     @php
-                        $redirect_url = Request::get('redirect_url')
+                        $redirect_url = Request::get('redirect_url');
                         if ($redirect_url)
                         echo "<p>You need to signin or signup to proceed the checkout</p>";
                     @endphp
