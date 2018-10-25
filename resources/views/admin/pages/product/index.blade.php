@@ -32,8 +32,10 @@
               <p style="text-align:right">
                 <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
                   <option>-- Select Category --</option>
+                  {{  $category_id }}
+
                    @foreach ($categories as $category)
-                       <option {{  ($category_id == $category->id) ? "selected" : "" }} value="{{ $category->id }}">{{ $category->name }}</option>
+                       <option  value="{{ $category->id }}">{{ $category->name }}</option>
                    @endforeach
                 </select>
                 <a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a>
