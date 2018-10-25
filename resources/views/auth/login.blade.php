@@ -41,6 +41,11 @@
         <div class="col-sm-6 col-sm-offset-3">
             <div class="card">
                 <div class="card-body" style="">
+                    @php
+                        $redirect_url = Request::get('redirect_url')
+                        if ($redirect_url)
+                        echo "<p>You need to signin or signup to proceed the checkout</p>";
+                    @endphp
 
                     <form method="POST" action="{{ route('login'). '?' . Request::server('QUERY_STRING') }}" aria-label="{{ __('Login') }}">
                         @csrf
