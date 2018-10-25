@@ -82,7 +82,7 @@
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
                       <td>{{ ($data->page_title) ?  $data->page_title : "N/A" }}</td>
-                      <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.product.status', $data->id) }}#">[click here to {{ $status_msg }}]</a></td>
+                      <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.product.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
                       <td>
                         <a class="btn btn-warning" href="{{ route('product.show',$data->id) }}"><span class="fa fa-eye"></span></a>
 
