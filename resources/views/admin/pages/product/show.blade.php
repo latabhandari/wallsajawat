@@ -92,12 +92,12 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th>Created at:</th>
-                        <td>{{ date('D, j M\'y h:i a', $product->created_timestamp) }}</td>
+                        <td>{{ date('D, j M\'y h:i A', $product->created_timestamp) }}</td>
                       </tr>
 
                       <tr>
                         <th>Updated at:</th>
-                        <td>{{ date('D, j M\'y h:i a', $product->updated_timestamp) }}</td>
+                        <td>{{ date('D, j M\'y h:i A', $product->updated_timestamp) }}</td>
                       </tr>
 
 
