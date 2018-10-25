@@ -12,7 +12,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style type="text/css" media="screen">
-.clrwht{color:#fff}
+.clrwht{color:#ffdb50}
 </style>
 @endsection
 
@@ -47,7 +47,7 @@
                     @php
                         $redirect_url = Request::get('redirect_url');
                         if ($redirect_url)
-                        echo "<p class='clrwht'><i class=\"fa fa-check\" aria-hidden=\"true\"></i>&nbsp;You need to signin or signup to proceed the checkout</p>";
+                        echo "<p class='clrchk'><i class=\"fa fa-check\" aria-hidden=\"true\"></i>&nbsp;&nbsp;You need to signin or signup to proceed the checkout</p>";
                     @endphp
 
                     <form method="POST" action="{{ route('login'). '?' . Request::server('QUERY_STRING') }}" aria-label="{{ __('Login') }}">
