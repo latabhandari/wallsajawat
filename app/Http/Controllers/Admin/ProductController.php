@@ -214,5 +214,18 @@ class ProductController extends Controller
              return redirect()->back()->with('suc','Image deleted successfully');
         }
 
+    /**
+     * Change the status.
+     *
+     */
+
+     public function status($id, $status)
+        {
+             //
+             $status = ! $status
+             Product::where('id', $id)->update(['status' => $status]);
+             return redirect()->route('product.index')->with('success','Changed status successfully');
+        }
+
 
 }
