@@ -36,7 +36,7 @@
 
 
               @php
-                        $i = 1;
+                        $i = 0;
                         $index_categories = MyHelper::getPermission('index_categories');
                         if ( ! empty($index_categories)) {
               @endphp
@@ -60,7 +60,7 @@
                 @endphp
 
                 <tr>
-                  <td>{{ $i++ }}</td>
+                  <td>{{ ++$i }}</td>
                   <td>{!! MyHelper::showCategories($data->id) !!}</td>
                   <td>{{ $data->slug }}</td>
                   <td>{{ $data->page_title }}</td>
