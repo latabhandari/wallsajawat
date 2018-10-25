@@ -95,28 +95,15 @@ ul li{list-style-type:none;padding-left:10px}
                 <!-- /.col -->
                 <div class="col-xs-6">
                   <p class="lead">Product Images</p>
-                  <div class="table-responsive">
-                    <table class="table">
-                      <tbody>
-
-                      <tr>
-                        <th style="width:50%">Images:</th>
-
-                        @php
+                  @php
                           if (count($product_images)):
                              echo '<div style=\'float:left;width:100%;margin:15px 0\' class=\'\'>';
                              foreach ($product_images as $img):
-                                echo "<div style=\"float:left;width:80px;text-align:center\" class=\'\'><img src='".asset('catalog/product/'.$img->image)."' width=\"60\" style=\"margin:20px 0 5px 0\" height=\"60\" /><a style=\"float:left;width:100%;display:block\" href='".route('admin.product.delete', ['id' => $img->id])."' onclick=\"return confirm('are you sure?')\"><strong>X</strong></a></div>";
+                                echo "<div style=\"float:left;width:80px;text-align:center\" class=\'\'><img src='".asset('catalog/product/'.$img->image)."' width=\"60\" style=\"margin:20px 0 5px 0\" height=\"60\" /></div>";
                              endforeach;
                              echo '</div>';
                           endif;
-                        @endphp
-
-                        <td></td>
-                      </tr>
-                      
-                   </tbody></table>
-                  </div>
+                  @endphp
                 </div>
 
                 <!-- /.col -->
