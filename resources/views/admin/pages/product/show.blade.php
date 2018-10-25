@@ -75,6 +75,9 @@ ul li{list-style-type:none;padding-left:10px}
                         $roll_dimension = $roll_info->width . ' Width * '.$roll_info->height . ' Height';
 
                         $product_images = App\Helpers\MyHelper::getProductImages($product->id);
+
+                        $status_img   =  ($product->status == 1) ? "bullet-green.png" : "bullet-red.png";
+
                       @endphp
 
                       <tr>
@@ -84,7 +87,7 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th>Status:</th>
-                        <td>{{ ($product->status == 0) ? "Inactive" : "Active" }}</td>
+                        <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" alt="" /></td>
                       </tr>
 
                       <tr>
