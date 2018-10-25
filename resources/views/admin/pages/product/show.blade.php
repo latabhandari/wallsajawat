@@ -59,6 +59,8 @@ ul li{list-style-type:none;padding-left:10px}
                       @php
                         $roll_info = App\Helpers\MyHelper::getRollDimenstionById($product->roll_id);
                         $roll_dimension = $roll_info->width . ' Width * '.$roll_info->height . ' Height';
+
+                        $product_images = App\Helpers\MyHelper::getProductImages($product->id);
                       @endphp
 
                       <tr>
@@ -99,6 +101,17 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th style="width:50%">Images:</th>
+
+                        @php
+                          if (count($product_images)):
+                             echo '<div style=\'float:left;width:100%;margin:15px 0\' class=\'\'>';
+                             foreach ($product_images as $img):
+                                echo "<div style=\"float:left;width:80px;text-align:center\" class=\'\'><img src='".asset('catalog/product/'.$img->image)."' width=\"60\" style=\"margin:20px 0 5px 0\" height=\"60\" /><a style=\"float:left;width:100%;display:block\" href='".route('admin.product.delete', ['id' => $img->id])."' onclick=\"return confirm('are you sure?')\"><strong>X</strong></a></div>";
+                             endforeach;
+                             echo '</div>';
+                          endif;
+                        @endphp
+
                         <td></td>
                       </tr>
                       
@@ -106,19 +119,6 @@ ul li{list-style-type:none;padding-left:10px}
                   </div>
                 </div>
 
-                  <div class="col-xs-6">
-
-                    <div class="col-md-12">
-                      <!-- Box Comment -->
-                      <div class="box box-widget">
-                        <!-- /.box-header -->
-                       
-                        <!-- /.box-body -->
-                        <p class="lead" style="margin-bottom:10px">Comments&nbsp;<i title="refresh" id="refreshcomment" class="fa fa-circle-o-notch" style="font-size:15px;cursor:pointer"></i></p>                        
-                      </div>
-                      <!-- /.box -->
-                    </div>                    
-                </div>
                 <!-- /.col -->
               </div>
 

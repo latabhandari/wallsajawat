@@ -18,6 +18,11 @@ use App\Cities as City;
 use App\States as State;
 class MyHelper 
    {
+   		 public static function getProductImages($id = '')
+   	       {
+   	       	  return ProductImages::where('product_id', $id)->get();
+   	       }
+
    	     public static function getRollDimenstionById($roll_id = '')
    	       {
    	       	  return Dimension::findOrFail($roll_id);
