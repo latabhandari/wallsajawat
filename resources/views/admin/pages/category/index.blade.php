@@ -92,6 +92,12 @@
 				          </td>
                 </tr>
 
+                  @php
+                    if ($i / 5 == 1)
+                    echo "<hr />";
+                  @endphp
+
+
                 @endforeach
                
               
