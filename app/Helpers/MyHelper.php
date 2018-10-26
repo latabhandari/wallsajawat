@@ -22,8 +22,8 @@ class MyHelper
    	      {
    	      	  $month      = date("n");
    	      	  $year       = date("Y");
-   	      	  $start_date = date(0, 0, 0, $month, 1, $year);
-   	      	  $end_date   = date(23, 59, 59, $month, date('j'), $year);
+   	      	  $start_date = mktime(0, 0, 0, $month, 1, $year);
+   	      	  $end_date   = mktime(23, 59, 59, $month, date('j'), $year);
    	      	  return Order::where('unix_timestamp', '>=', $start_date)->where('unix_timestamp', '<=', $end_date)->count();
    	      }
 
