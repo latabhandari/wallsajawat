@@ -37,7 +37,7 @@ class CmsController extends Controller
 
     public function contactpost(Request $request)
      {
-     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required|min:10|numeric']);
+     	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required|min:10|numeric', 'g-recaptcha-response' => 'required|captcha']);
 
      	 $params = $request->all();
 
