@@ -30,6 +30,7 @@
                   <th>#</th>
                   <th>Name</th>
                   <th>Email</th>
+                  <th>Phone</th>
                   <th>Message</th>
                   <th>Ip Address</th>
                   <th>Date/Time</th>
@@ -43,7 +44,8 @@
                   <td>{{ $i++ }}</td>
                   <td>{{ $data->name }}</td>
                   <td>{{ $data->email }}</td>
-                  <td>{{ $data->message }}</td>
+                  <td>{{ $data->msg }}</td>
+                  <td>{{ $data->phone }}</td>
                   <td>{{ $data->ip_address }}</td>
                   <td>{{ date('D, j M\'y h:i a', $data->timestamp) }}</td>
                   <td>

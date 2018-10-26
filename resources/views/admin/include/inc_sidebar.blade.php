@@ -30,6 +30,9 @@ switch ($segment3)
           case 'settings':
                              $settings_active   =   'active';//'menu-open';
                              break;
+          case 'contact-us-users':
+                             $contact_active   =   'active';//'menu-open';
+                             break;
           case 'dimension':
                              $dimension_active  =   'active';//'menu-open';
                              break;
@@ -71,10 +74,16 @@ switch ($segment3)
                   <li class="">
                      <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('user.index') }}"><span>Users</span></a>
                   </li>
+
+                  <li class="">
+                     <a class="{{ isset($contact_active) ? 'activelink' : '' }}" href="{{ route('admin.contactus') }}"><span>Contact Us</span></a>
+                  </li>
                 
                   <li class="">
                      <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.settings') }}"><span>Settings</span></a>
                   </li>
+
+
 
 				          <li class="">
                      <a href="{{ route('admin.logout') }}">Logout</a>
