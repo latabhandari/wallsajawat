@@ -48,21 +48,19 @@ span.short_desc p{font-size:13px}
               </ul>
             </div>-->
 
-              <img id="img_01" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}"/>
+              <div style="height:274px;width:411px;" class="zoomWrapper">
+                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom_03" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}"><div style="background: url(&quot;http://www.elevateweb.co.uk/spinner.gif&quot;) center center no-repeat; height: 274px; width: 411px; z-index: 2000; position: absolute; display: none;"></div><div style="background: url(&quot;http://www.elevateweb.co.uk/spinner.gif&quot;) center center no-repeat; height: 274px; width: 411px; z-index: 2000; position: absolute; display: none;"></div>
+               </div>
 
-              <div id="gal1">
 
-                <div class="product-thumbnails">
-                  <ul class="thumbnails">
+              <div id="gallery_01">
+
+                
                     @foreach ($product_images as $image)
-                    <li>
                         <a href="{{ asset('catalog/product/'.$image->image) }}" data-image="{{ asset('catalog/product/'.$image->image) }}" data-zoom-image="{{ asset('catalog/product/'.$image->image) }}">
                           <img id="img_01" src="{{ asset('catalog/product/'.$image->image) }}" />
                         </a>
-                    </li>
                     @endforeach
-                  </ul>
-                </div>
 
                       
               </div>
@@ -350,15 +348,20 @@ span.short_desc p{font-size:13px}
          });
 
 
-        $("#zoom_03").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+$(document).ready(function () {
+$("#zoom_03").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active", imageCrossfade: true, loadingIcon: "http://www.elevateweb.co.uk/spinner.gif"}); 
 
-//pass the images to Fancybox
 $("#zoom_03").bind("click", function(e) {  
-  var ez =   $('#zoom_03').data('elevateZoom'); 
+  var ez =   $('#zoom_03').data('elevateZoom');
+  ez.closeAll(); //NEW: This function force hides the lens, tint and window 
   $.fancybox(ez.getGalleryList());
   return false;
-});
+}); 
+
+}); 
+
 
 
 </script>
 @endsection
+
