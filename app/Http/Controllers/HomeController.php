@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Categories as Categories;
 use App\Product as Product;
 use Cart;
+use DB;
 
 class HomeController extends Controller
 {
