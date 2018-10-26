@@ -24,7 +24,13 @@ class MyHelper
    	      	  $year       = date("Y");
    	      	  $start_date = mktime(0, 0, 0, $month, 1, $year);
    	      	  $end_date   = mktime(23, 59, 59, $month, date('j'), $year);
-   	      	  return Order::where('unix_timestamp', '>=', $start_date)->where('unix_timestamp', '<=', $end_date)->count();
+   	      	  //return Order::where('unix_timestamp', '>=', $start_date)->where('unix_timestamp', '<=', $end_date)->count();
+   	      	  return     DB::table('orders')
+                             ->where('orders.unix_timestamp', '>=', $start_date)
+                             ->where('orders.unix_timestamp', '<=', $end_date)
+                             ->where('order_products.product_id', '=', $id)
+                             ->count();
+
    	      }
 
    		 public static function getProductImages($id = '')
