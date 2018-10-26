@@ -88,10 +88,8 @@
 							</div>
 
 								@foreach ($orders as $order)
-                              
-									
 										<div class="order-head">
-											<div class="col-sm-6 paddingLeftRght0">
+											<div class="col-sm-7 paddingLeftRght0">
 												<div class="order-date-sec">
 													<div class="col-sm-4">
 														<p class="marginZero">ORDER PLACED</p>
@@ -118,7 +116,7 @@
 												</div>
 											</div>
 
-											<div class="col-sm-6">
+											<div class="col-sm-5">
 												<div class="order-name-sec">
 													<div class="col-sm-8">
 														<p class="marginZero">SHIP TO</p>
