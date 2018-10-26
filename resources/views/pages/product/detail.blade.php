@@ -49,10 +49,9 @@ span.short_desc p{font-size:13px}
               </ul>
             </div>-->
 
-              <div style="height:274px;width:411px;" class="zoomWrapper">
-                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom_03" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}"><div style="background: url(&quot;http://www.elevateweb.co.uk/spinner.gif&quot;) center center no-repeat; height: 274px; width: 411px; z-index: 2000; position: absolute; display: none;"></div><div style="background: url(&quot;http://www.elevateweb.co.uk/spinner.gif&quot;) center center no-repeat; height: 274px; width: 411px; z-index: 2000; position: absolute; display: none;"></div>
-               </div>
-
+              <div class="zoomWrapper">
+                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom_03" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}">
+              </div>
 
               <div id="gallery_01" class="product-thumbnails">
 
