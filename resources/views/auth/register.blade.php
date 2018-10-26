@@ -34,10 +34,7 @@
             <div class="card">
                   <div class="card-body">
 
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
-                        @csrf
-
-                       <div class="form-group row">
+                    <div class="form-group row">
                             
                                <div class="col-md-6 text-center">
                                        <a class="btn btn-block btn-social btn-facebook" href="{{ route('social_login', 'facebook') }}">
@@ -51,13 +48,12 @@
                                        </a>
                                 </div>
 
-                            </div>
-                            
-                        </div>
+                    </div>
 
+                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                        @csrf
 
-                    
-
+                       
                         <div class="form-group row">
                            
 
