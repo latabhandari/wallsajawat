@@ -156,7 +156,7 @@
 
 											<div class="row">
 												<div class="col-sm-12">
-													<h4>Delivered {{ date('D, j M\'y', $deliver_time) }}</h4>
+													<h4>Deliver {{ date('D, j M\'y', $deliver_time) }}</h4>
 												</div>
 											</div>
 

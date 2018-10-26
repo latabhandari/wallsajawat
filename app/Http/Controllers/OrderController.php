@@ -38,16 +38,16 @@ class OrderController extends Controller
         	$order['coupon']             =  session('coupon');
         	$order['discount']           =  session('discount');
 
-        	$cart_total 				 =  MyHelper::removeComma(Cart::total());
-        	$order['total_amount']       =  $cart_total;
+          $cart_total 				         =  MyHelper::removeComma(Cart::total());
+          $order['total_amount']       =  $cart_total;
 
-		    $payable_amount  			 =  $cart_total - $discount;
+          $payable_amount  			       =  $cart_total - $discount;
 
-            $order['payable_amount']     =  $payable_amount;
-        	$order['shipping_address']   =  session('shipping_address');
-        	$order['ip_address']         =  $request->ip();
-        	$order['user_agent']         =  $request->header('User-Agent');
-        	$order['unix_timestamp']     =  time();
+          $order['payable_amount']     =  $payable_amount;
+          $order['shipping_address']   =  session('shipping_address');
+          $order['ip_address']         =  $request->ip();
+          $order['user_agent']         =  $request->header('User-Agent');
+          $order['unix_timestamp']     =  time();
 
         	$order_id                    =  Order::create($order)->id;
 
@@ -55,29 +55,35 @@ class OrderController extends Controller
         	   {
         	   	    $mdata                       =  [];
         	   	    $mid                         =  $row->options->type; 
-        	   	    $mdata['mid']     			 =  $mid;
-				    $measurement_info  			 =  MyHelper::getMeasurement($mid);
-				    $mdata['name']               =  $measurement_info->name;
-				    $mdata['width']  		     =  $row->options->width;
-				    $mdata['height']             =  $row->options->height;
+        	   	    $mdata['mid']     			     =  $mid;
+                  $measurement_info  			     =  MyHelper::getMeasurement($mid);
+                  $mdata['name']               =  $measurement_info->name;
+                  $mdata['width']  		         =  $row->options->width;
+                  $mdata['height']             =  $row->options->height;
 
-				    $data['order_id']            =  $order_id;
-				    $data['product_id']          =  $row->id;
-                    $data['price']               =  round($row->price);
-                    $data['qty']                 =  $row->qty;
-				    $data['dimension']           =  json_encode($mdata);
+                  $data['order_id']            =  $order_id;
+                  $data['product_id']          =  $row->id;
+                  $data['price']               =  round($row->price);
+                  $data['qty']                 =  $row->qty;
+                  $data['dimension']           =  json_encode($mdata);
 
-				    OrderProducts::insert($data);
+				          OrderProducts::insert($data);
+
+                  $stock_item_obj              =  Product::select('stock_item')->where('id', $row->id)->first();
+
+                  $stock_item                  =  $stock_item_obj->stock_item - $row->qty;
+
+                  Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
   		       }
 
   		        /* remove session for coupon and destroy cart */
-    	  		    Session::forget('coupon');
-                    Session::forget('discount');
-    	  		    Session::forget('shipping_address');
-    	  		    Cart::destroy();
+                  Session::forget('coupon');
+                  Session::forget('discount');
+                  Session::forget('shipping_address');
+                  Cart::destroy();
 	  		    /* close */
 
-	  		        return redirect()->route('orders');
+	  		           return redirect()->route('orders');
   		 }
 
   	public function order()
