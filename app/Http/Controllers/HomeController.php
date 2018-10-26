@@ -41,6 +41,6 @@ class HomeController extends Controller
                             ->select('products.id', 'products.name', 'products.slug', 'products.price')
                             ->where('name', 'like', '%'.$search_param.'%')
                             ->get();
-          return view('pages.category.product', compact('products'));
+          return view('pages.search.search', compact('products'));
       }
 }
