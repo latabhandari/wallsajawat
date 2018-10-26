@@ -54,14 +54,17 @@ span.short_desc p{font-size:13px}
                </div>
 
 
-              <div id="gallery_01">
+              <div id="gallery_01" class="product-thumbnails">
 
-                
+                <ul class="thumbnails">
                     @foreach ($product_images as $image)
+                      <li>
                         <a href="{{ asset('catalog/product/'.$image->image) }}" data-image="{{ asset('catalog/product/'.$image->image) }}" data-zoom-image="{{ asset('catalog/product/'.$image->image) }}">
                           <img id="img_01" src="{{ asset('catalog/product/'.$image->image) }}" />
                         </a>
+                      </li>
                     @endforeach
+                </ul>
 
                       
               </div>
