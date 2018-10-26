@@ -91,7 +91,7 @@
                               
 									
 										<div class="order-head">
-											<div class="col-sm-4 paddingLeftRght0">
+											<div class="col-sm-6 paddingLeftRght0">
 												<div class="order-date-sec">
 													<div class="col-sm-5">
 														<p class="marginZero">ORDER PLACED</p>
@@ -110,10 +110,15 @@
 														</div>
 													@endif
 
+													<div class="col-sm-4">
+														<p class="marginZero">PAYABLE AMOUNT</p>
+														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
+													</div>
 
 												</div>
 											</div>
-											<div class="col-sm-8">
+
+											<div class="col-sm-6">
 												<div class="order-name-sec">
 													<div class="col-sm-8">
 														<p class="marginZero">SHIP TO</p>
@@ -123,11 +128,6 @@
 														<div class="row">
 															<div class="col-sm-12">
 																<p class="order-no marginZero">ORDER # {{ $order->order_number }}</p>
-															</div>
-															
-															<div class="col-sm-12">
-																<p class="order-details-txt col-sm-6 paddingLeftRght0 text-center">Order details</p>
-																<p class="order-invoice-txt col-sm-6 paddingLeftRght0">Invoice No. XXX </p>
 															</div>
 														</div>
 													</div>
