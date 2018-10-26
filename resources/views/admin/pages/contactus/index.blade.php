@@ -46,7 +46,7 @@
                   <td>{{ $data->email }}</td>
                   <td>{{ $data->msg }}</td>
                   <td>{{ $data->phone }}</td>
-                  <td>{{ $data->ip_address }}</td>
+                  <td>{{ $data->ip }}</td>
                   <td>{{ date('D, j M\'y h:i a', $data->timestamp) }}</td>
                   <td>
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['admin.contactus.destroy', $data->id]]) !!}
