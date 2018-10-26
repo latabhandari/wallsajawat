@@ -232,39 +232,5 @@
        });
     </script>
 
-    <script>
-
-        /*    var j = jQuery.noConflict();
-            j(document).ready(function(){
-             j(".searchbtn").click(function(){
-              j(".mysearch").slideToggle();
-                });
-            });
-        */
-
-  $(document).ready(function() {
-            // validate the comment form when it is submitted
-  
-            // validate signup form on keyup and submit
-                $("#searchfrm").validate({
-                          rules: {
-                                          search: {
-                                                            required: true, 
-                                                            minlength: 3,
-                                                  }
-                          },
-
-                          submitHandler: function()  {
-
-                                                            return true;
-                                                     }
-                });
-
-
-  });
-
-    </script>
-
-
    </body>
 </html>
