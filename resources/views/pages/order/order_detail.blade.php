@@ -93,24 +93,24 @@
 										<div class="order-head">
 											<div class="col-sm-6 paddingLeftRght0">
 												<div class="order-date-sec">
-													<div class="col-sm-2">
+													<div class="col-sm-4">
 														<p class="marginZero">ORDER PLACED</p>
 														<p class="placed-date">{{ date('D, j M\'y H:i', $order->unix_timestamp) }}</p>
 													</div>
 
-													<div class="col-sm-3">
+													<div class="col-sm-2">
 														<p class="marginZero">TOTAL</p>
 														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
 													</div>
 
 													@if ($order->coupon)
 														<div class="col-sm-3">
-															<p class="marginZero">COUPON</p>
-															<p class="placed-amount">{{ $order->coupon }} - <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount }}</p>
+															<p class="marginZero">DISCOUNT</p>
+															<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount }}</p>
 														</div>
 													@endif
 
-													<div class="col-sm-4">
+													<div class="col-sm-3">
 														<p class="marginZero">PAYABLE AMOUNT</p>
 														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
 													</div>
