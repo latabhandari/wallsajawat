@@ -1,6 +1,5 @@
 <?php
 $segment = Request::segment(2);
-
 switch ($segment)
    {
           case 'our-range':
@@ -57,7 +56,6 @@ switch ($segment)
                             <li class="{{ isset($wallpaper_installer_active) ? 'active' : '' }}"><a href="{{ route('wallpaper_installer') }}">WALLPAPER INSTALLER</a></li>
                             <li class="{{ isset($how_measure_active) ? 'active' : '' }}"><a href="{{ route('how_to_measure') }}">HOW TO MEASURE</a></li>
                             <li class="{{ isset($offers_active) ? 'active' : '' }}"><a href="{{ route('offers') }}">OFFERS</a></li>
-                            <li class="{{ isset($contact_active) ? 'active' : '' }}"><a href="{{ route('contact') }}">CONTACT US</a></li>
 
                           </ul>
                         </div>
@@ -66,7 +64,7 @@ switch ($segment)
                   </div>
                   <div class="col-md-2 col-sm-12 menu_icons">
                     <ul class="nav menu-icons pull-right">
-                      <li class="searchbtn"><i class="fa fa-search"></i></li>
+                      <li><input class="searchtxt" type="text" name="search" id="search" placeholder="search..." autocomplete="off" /></li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                           @guest
                             <span class="cart_user" style="display:none">Cart={{ Cart::count() }},User=0</span>
