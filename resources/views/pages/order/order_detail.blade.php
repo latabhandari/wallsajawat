@@ -132,11 +132,6 @@
 												</div>
 											</div>
 										</div>
-							
-							
-								
-
-								
 									
 										<div class="order-main-body">
 											<div class="row">
@@ -169,7 +164,7 @@
 													<div class="row">
 														<div class="col-sm-3">
 															<div class="order-img">
-																<img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
+																<img width="120" src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
 															</div>
 														</div>
 														<div class="col-sm-9 order-desc">
