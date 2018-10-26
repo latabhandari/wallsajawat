@@ -16,7 +16,7 @@
 <style>
 .mrgntp{margin:10px 0 0 0;font-size:13px}
 span.short_desc p{font-size:13px}
-.gallery_01 img { width:80px;height:80px }
+#gallery_01 img { width:80px;height:80px }
 </style>
 @endsection
 
