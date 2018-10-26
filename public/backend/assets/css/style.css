@@ -117,6 +117,11 @@ font-size: 18px;
 	border:1px solid #00aeef;
 	color:#000;
 }
+
+.searchtxt{width:145px;font-size:13px;font-weight: normal;padding-left:3px;border:1px solid #ececec;outline:0;}
+.mrgntpnone{margin-top:0px !important}
+
+
 .btn-transparent:hover{
 border-color: #00aeef;
 background: #00aeef;	
