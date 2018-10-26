@@ -263,12 +263,7 @@
                                                             minlength: 3,
                                                   }
                           },
-                          messages: {
-                                          search: {
-                                                            required: "Search field is required",
-                                                            minlength: "Search field must be at least three characters in length."
-                                                  }
-                                },
+
                           submitHandler: function()  {
 
                                                             return true;
