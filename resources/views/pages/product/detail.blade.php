@@ -58,7 +58,7 @@ span.short_desc p{font-size:13px}
                 
                     @foreach ($product_images as $image)
                         <a href="{{ asset('catalog/product/'.$image->image) }}" data-image="{{ asset('catalog/product/'.$image->image) }}" data-zoom-image="{{ asset('catalog/product/'.$image->image) }}">
-                          <img id="img_01" src="{{ asset('catalog/product/'.$image->image) }}" />
+                          <img width="120px" height="120px" id="img_01" src="{{ asset('catalog/product/'.$image->image) }}" />
                         </a>
                     @endforeach
 
