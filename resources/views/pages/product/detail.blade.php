@@ -12,6 +12,9 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style>
+.mrgntpbtm{margin:10px 0}
+</style>
 @endsection
 
 @section('content')
@@ -71,7 +74,7 @@
                 @php
                   $dimension = App\Helpers\MyHelper::getRollDimenstionById($detail->roll_id);
                 @endphp
-                <div class="col-sm-12">Size (Width x Height):{{ $dimension->width }} Feet x P{{ $dimension->height }} Feet:&nbsp;</div>
+                <div class="col-sm-12 mrgntpbtm">Size (Width x Height):{{ $dimension->width }} Feet x {{ $dimension->height }} Feet:&nbsp;</div>
               </div>
             </div>
            
