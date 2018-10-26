@@ -84,7 +84,7 @@
 										<h4>Product</h4>
 									</div>
 									<h5>{{ $row->name }}</h5>
-									<p class="info">{!! $product_info[0]['short_desc'] !!}</p>
+									<span class="info">{!! $product_info[0]['short_desc'] !!}</span>
 									
 								</div>
 								<div class="col-sm-2">
