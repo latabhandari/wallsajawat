@@ -13,6 +13,7 @@ return array(
     'App\\Categories' => $baseDir . '/app/Categories.php',
     'App\\Cities' => $baseDir . '/app/Cities.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Contact' => $baseDir . '/app/Contact.php',
     'App\\Countries' => $baseDir . '/app/Countries.php',
     'App\\Dimension' => $baseDir . '/app/Dimension.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',

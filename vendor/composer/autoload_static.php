@@ -435,6 +435,7 @@ class ComposerStaticInitb93ca2a72c1801499388212c86cbf9e9
         'App\\Categories' => __DIR__ . '/../..' . '/app/Categories.php',
         'App\\Cities' => __DIR__ . '/../..' . '/app/Cities.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
         'App\\Countries' => __DIR__ . '/../..' . '/app/Countries.php',
         'App\\Dimension' => __DIR__ . '/../..' . '/app/Dimension.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
