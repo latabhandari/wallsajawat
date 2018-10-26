@@ -60,6 +60,9 @@ a, a:focus, a:hover{
   font-size: 12.5px;
 }
 
+.searchtxt{width:145px;font-size:13px;font-weight: normal;padding-left:3px;border:1px solid #ececec;outline:0;}
+.mrgntpnone{margin-top:0px !important}
+
 .rgt-top span{
   margin-left: 20px;
   display: inline-block;
