@@ -13,7 +13,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style>
-.mrgntp{margin:10px 0 0 0}
+.mrgntp{margin:10px 0 0 0;font-size:13px}
 </style>
 @endsection
 
