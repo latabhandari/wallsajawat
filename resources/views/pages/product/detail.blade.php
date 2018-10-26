@@ -75,8 +75,10 @@
             <h3>{{ $detail->name }}</h3>
             @php
               $order_this_month = App\Helpers\MyHelper::orderThisMonth($detail->id);
+              if ($order_this_month)
+              echo '<p class="cag-title">'.$order_this_month.' order(s) this month</p>';
             @endphp
-            <p class="cag-title">{{ $order_this_month }} order(s) this month</p>
+            
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
             <span class="short_desc">{!! $detail->short_desc !!} </span>
             <div class="rating">
