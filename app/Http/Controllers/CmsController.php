@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Contact as Contact;
+
 class CmsController extends Controller
 {
     //
@@ -33,8 +35,6 @@ class CmsController extends Controller
      	 return view('pages.cms.contact');
      }
 
-
-
     public function contactpost(Request $request)
      {
      	 request()->validate(['name'  => 'required', 'email' => 'required|email', 'msg' => 'required', 'phone' => 'required|min:10|numeric']);
@@ -49,10 +49,9 @@ class CmsController extends Controller
      	 $data['user_agent']    = 	$request->header('User-Agent');
      	 $data['timestamp']     = 	time(); 
 
-         //Contact::insert($data);  
+         Contact::insert($data);  
 
          return redirect()->route('contact')->with('success','success'); 
-
      }
 
     public function terms()
