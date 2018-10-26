@@ -67,7 +67,7 @@
                     |<span>Style #{{ $detail->sku }}</span>
                   </div>
                 </div>
-                <div class="col-sm-12">Price: df</div>
+                <div class="col-sm-12">Price: <i class="fa fa-inr" aria-hidden="true"></i>&nbsp; {{ $detail->price }}</div>
               </div>
             </div>
            
