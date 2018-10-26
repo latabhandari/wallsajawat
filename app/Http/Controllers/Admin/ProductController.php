@@ -63,7 +63,7 @@ class ProductController extends Controller
     {
         //
 
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'roll_id' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'roll_id' => 'required', 'images' => 'required', 'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg']);
 
         $params                            =    $request->all();
 
@@ -142,7 +142,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'roll_id' => 'required']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required', 'price' => 'required', 'roll_id' => 'required', 'images' => 'required', 'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg']]);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
