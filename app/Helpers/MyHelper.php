@@ -18,6 +18,15 @@ use App\Cities as City;
 use App\States as State;
 class MyHelper 
    {
+   	     public static function orderThisMonth($id = '')
+   	      {
+   	      	  $month      = date("n");
+   	      	  $year       = date("Y");
+   	      	  $start_date = date(0, 0, 0, $month, 1, $year);
+   	      	  $end_date   = date(23, 59, 59, $month, date('j'), $year);
+   	      	  return Order::where('unix_timestamp', '>=', $start_date)->where('unix_timestamp', '<=', $end_date)->count();
+   	      }
+
    		 public static function getProductImages($id = '')
    	       {
    	       	  return ProductImages::where('product_id', $id)->get();

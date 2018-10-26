@@ -73,7 +73,10 @@
           <!-- start product-txtb -->
           <div class="product-txtb">
             <h3>{{ $detail->name }}</h3>
-            <p class="cag-title">1100 orders this month</p>
+            @php
+              $order_this_month = App\Helpers\MyHelper::orderThisMonth($detail->id);
+            @endphp
+            <p class="cag-title">{{ $order_this_month }} order(s) this month</p>
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
             <span class="short_desc">{!! $detail->short_desc !!} </span>
             <div class="rating">
