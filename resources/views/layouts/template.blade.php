@@ -15,6 +15,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -23,11 +24,14 @@
     @include('pages.include.header')
      <div class="mysearch">
               <div class="container">
-            <div class="form-group">
-              <input type="search" name="" placeholder="Search" class="form-control">
-            </div>
-          </div>
-    </div>
+                  <form id="searchfrm" method="POST" action="{{ route('search') }}" aria-label="{{ __('Search') }}">
+                    @csrf
+                    <div class="form-group">
+                      <input type="search" name="search" placeholder="Search" class="form-control" autocomplete="off" />
+                    </div>
+                  </form>
+              </div>
+     </div>
 
     <div class="contanier banner-img">
       <div class="row">
@@ -236,15 +240,42 @@
     </script>
 
     <script>
-var j = jQuery.noConflict();
-j(document).ready(function(){
- j(".searchbtn").click(function(){
-  j(".mysearch").slideToggle();
-    });
-});
 
-  }
-</script>
+        /*    var j = jQuery.noConflict();
+            j(document).ready(function(){
+             j(".searchbtn").click(function(){
+              j(".mysearch").slideToggle();
+                });
+            });
+        */
+
+  $(document).ready(function() {
+            // validate the comment form when it is submitted
+  
+            // validate signup form on keyup and submit
+                $("#searchfrm").validate({
+                          rules: {
+                                          search: {
+                                                            required: true, 
+                                                            minlength: 3,
+                                                  }
+                          },
+                          messages: {
+                                          search: {
+                                                            required: "Search field is required",
+                                                            minlength: "Search field must be at least three characters in length."
+                                                  }
+                                },
+                          submitHandler: function()  {
+
+                                                            return true;
+                                                     }
+                });
+
+
+  });
+
+    </script>
 
 
    </body>
