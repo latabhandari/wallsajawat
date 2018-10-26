@@ -15,28 +15,6 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-12 product-banner">
-      <div class="row">
-        <div class="col-sm-8"> </div>
-        <div class="col-sm-4 product-info">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1>{{ $category_info->name }}</h1>
-            </div>
-            <div class="col-sm-12">
-              <div class="row">
-                <div class="col-sm-3"> <span class="rightbannertxt"><i class="fa fa-share-alt"></i></span></div>
-          				<div class="col-sm-8">
-          					<div class="productpg-info-main">
-          						<p>Fusce eu tellus hendrerit, pellentesque nunc eget, tempus justo. Suspendisse in diam purus. Mauris fringilla ante finibus enim sodales feugiat. </p>	
-          					</div>
-          				</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="col-sm-12">
       <div class="entire-sec text-center"> <a href="">
         <h2>View Entire Collection<span class="caret"></span></h2>
