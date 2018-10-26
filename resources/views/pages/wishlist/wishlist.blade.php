@@ -13,7 +13,7 @@
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style>
-  .imgb img {width:120px;height:120px}
+  .imgb img {width:120px !important;height:120px !important}
 </style>
 @endsection
 
