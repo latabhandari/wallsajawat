@@ -25,16 +25,6 @@
     @include('pages.include.top_head')
 
     @include('pages.include.header')
-     <div class="mysearch">
-              <div class="container">
-                  <form id="searchfrm" method="POST" action="{{ route('search') }}" aria-label="{{ __('Search') }}">
-                    @csrf
-                    <div class="form-group">
-                      <input type="search" name="search" placeholder="Search" class="form-control" autocomplete="off" />
-                    </div>
-                  </form>
-              </div>
-     </div>
 
     <div class="contanier banner-img">
       <div class="row">

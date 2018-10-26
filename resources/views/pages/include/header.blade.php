@@ -64,7 +64,14 @@ switch ($segment)
                   </div>
                   <div class="col-md-3 col-sm-12 menu_icons">
                     <ul class="nav menu-icons pull-right">
-                      <li class="mrgntpnone"><input class="searchtxt" type="text" name="search" id="search" placeholder="search..." autocomplete="off" /></li>
+                      <li class="mrgntpnone">
+                         <form id="searchfrm" method="POST" action="{{ route('search') }}" aria-label="{{ __('Search') }}">
+                            @csrf
+                            <div class="form-group">
+                              <input class="searchtxt" type="text" name="search" id="search" placeholder="Search..." autocomplete="off" />
+                            </div>
+                          </form>
+                      </li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                           @guest
                             <span class="cart_user" style="display:none">Cart={{ Cart::count() }},User=0</span>
