@@ -81,6 +81,7 @@
 										<h4>Product</h4>
 									</div>
 									<h5>{{ $row->name }}</h5>
+									<p>{!! $row->short_desc !!}</p>
 									
 								</div>
 								<div class="col-sm-2">
