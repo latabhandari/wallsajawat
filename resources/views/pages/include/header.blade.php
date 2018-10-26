@@ -31,7 +31,7 @@ switch ($segment)
               <div class="container">
                 <div class="row btn-bar">
                   <div class="col-md-2 logo"><h3><a href="{{ route('home.index') }}">Logo</a></h3></div>
-                  <div class="col-md-8  main_menu">
+                  <div class="col-md-7  main_menu">
                     <nav class="navbar navbar-default">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -62,7 +62,7 @@ switch ($segment)
                       </div>
                     </nav>
                   </div>
-                  <div class="col-md-2 col-sm-12 menu_icons">
+                  <div class="col-md-3 col-sm-12 menu_icons">
                     <ul class="nav menu-icons pull-right">
                       <li class="mrgntpnone"><input class="searchtxt" type="text" name="search" id="search" placeholder="search..." autocomplete="off" /></li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
