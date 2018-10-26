@@ -12,6 +12,7 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <style type="text/css" media="screen">
 .nocart span {
 	font-size:16px;border:1px solid #ddd;line-height:14px;padding:20px 0 20px 10px;font-weight:bold;width:100%;float:left;margin:0 0 20px 0

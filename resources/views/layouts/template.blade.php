@@ -14,8 +14,7 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <style>
     .error{font-weight:normal}
 </style>

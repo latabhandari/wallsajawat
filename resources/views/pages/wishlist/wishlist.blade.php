@@ -12,6 +12,7 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <style>
   .imgb img {width:120px !important;height:120px !important}
 </style>
