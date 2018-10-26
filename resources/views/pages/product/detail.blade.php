@@ -187,7 +187,8 @@
     // validate the comment form when it is submitted
   
     // validate signup form on keyup and submit
-    $("#product").validate({
+
+  /* $("#product").validate({
       rules: {
         width: {
               required: true, 
@@ -212,6 +213,8 @@
           return true;
       }
     });
+   */
+
 
 
   });

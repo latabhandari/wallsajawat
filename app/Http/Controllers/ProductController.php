@@ -62,6 +62,9 @@ class ProductController extends Controller
           $per_square_feet =  $width_height / $square_feet_value;
           $uprice          =  $price * $per_square_feet;
 
+
+
+
           echo json_encode(['status' => true, 'price' => round($uprice), 'type' => ucfirst($mres->name)]);
       }
 
@@ -97,7 +100,7 @@ class ProductController extends Controller
 
      	$productname  		=  $product->name; 
      	$type         		=  $product->type;
-     	$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
+     	/*$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
 
       $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
 
@@ -106,30 +109,13 @@ class ProductController extends Controller
       $width_height      =  $width * $height;
       $per_square_feet   =  $width_height / $square_feet_value;
       $uprice            =  $price * $per_square_feet;
-
-     	/*switch($material_type)
-	      	   {
-	      	   		case 'feet':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $uprice		      =  $price * $width_height;
-			      	   	                 break;
-
-	      	   	    case 'inch':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $per_square_feet =  $width_height / 144;
-			      	   	                 $uprice		      =  $price * $per_square_feet;
-			      	   	                 break;
-	      	   	    case 'centimeter':
-			      	   	                 $width_height    =  $width * $height;
-			      	   	                 $per_square_feet =  $width_height / 929;
-			      	   	                 $uprice		      =  $price * $per_square_feet;
-			      	   	                 break;
-	      	   }
       */
+      $uprice            =  $product->price;
 
      	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
 
     	return redirect()->route('cart');
+      
      }
 
      public function viewCart(Request $request)
