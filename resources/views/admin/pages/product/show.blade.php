@@ -94,11 +94,18 @@ ul li{list-style-type:none;padding-left:10px}
                         <th>Created at:</th>
                         <td>{{ date('D, j M\'y h:i A', $product->created_timestamp) }}</td>
                       </tr>
-
+                      @php
+                       if ($product->updated_timestamp)
+                         {
+                      @endphp
                       <tr>
                         <th>Updated at:</th>
                         <td>{{ date('D, j M\'y h:i A', $product->updated_timestamp) }}</td>
                       </tr>
+
+                      @php
+                         }
+                      @endphp
 
 
                       <tr>
