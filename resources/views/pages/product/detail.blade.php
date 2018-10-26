@@ -14,6 +14,7 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style>
 .mrgntp{margin:10px 0 0 0;font-size:13px}
+span.shrt_desc p{font-size:12px}
 </style>
 @endsection
 
@@ -54,7 +55,7 @@
             <h3>{{ $detail->name }}</h3>
             <p class="cag-title">1100 orders this month</p>
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
-            <p style="font-size:12px"> {!! $detail->short_desc !!} </p>
+            <span class="short_desc">{!! $detail->short_desc !!} </span>
             <div class="rating">
               <div class="row">
                 <div class="col-sm-12">
