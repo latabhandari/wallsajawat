@@ -91,7 +91,6 @@
 					</li>
           @php
             $sq_feet_price = App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id);
-
           @endphp
 					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>
 				</ul>
