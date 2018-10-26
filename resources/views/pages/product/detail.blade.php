@@ -98,7 +98,7 @@
                 @php
                   $dimension = App\Helpers\MyHelper::getRollDimenstionById($detail->roll_id);
                 @endphp
-                <div class="col-sm-12 mrgntp">Size (Width x Height):{{ $dimension->width }} Feet x {{ $dimension->height }} Feet:&nbsp;</div>
+                <div class="col-sm-12 mrgntp">Size (Width x Height):{{ $dimension->width }} Feet x {{ $dimension->height }} Feet&nbsp;</div>
               </div>
             </div>
            

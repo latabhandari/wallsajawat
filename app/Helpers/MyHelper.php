@@ -31,7 +31,6 @@ class MyHelper
                              ->where('orders.unix_timestamp', '<=', $end_date)
                              ->where('order_products.product_id', '=', $id)
                              ->count();
-
    	      }
 
    		 public static function getProductImages($id = '')
