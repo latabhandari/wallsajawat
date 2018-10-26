@@ -50,11 +50,10 @@
             </div>-->
 
               <div class="zoomWrapper">
-                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}">
+                 <img id="zoom" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}">
               </div>
 
               <div id="gallery" class="product-thumbnails">
-
                 <ul class="thumbnails">
                     @foreach ($product_images as $image)
                       <li>
@@ -63,13 +62,8 @@
                         </a>
                       </li>
                     @endforeach
-                </ul>
-
-                      
+                </ul>                     
               </div>
-
-
-
 
             <!-- end product-thumbnails -->
           </div>
