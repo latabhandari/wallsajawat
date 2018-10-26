@@ -12,11 +12,11 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
-<script src="https://www.elevateweb.co.uk/wp-content/themes/radial/jquery.elevatezoom.min.js" type="text/javascript"></script>
+<script src="{{ asset('build/assets/js/jquery.elevatezoom.min.js') }}" type="text/javascript"></script>
 <style>
-.mrgntp{margin:10px 0 0 0;font-size:13px}
-span.short_desc p{font-size:13px}
-#gallery_01 img { width:80px;height:80px }
+  .mrgntp{margin:10px 0 0 0;font-size:13px}
+  span.short_desc p{font-size:13px}
+  #gallery img { width:80px;height:80px }
 </style>
 @endsection
 
@@ -50,10 +50,10 @@ span.short_desc p{font-size:13px}
             </div>-->
 
               <div class="zoomWrapper">
-                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom_03" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}">
+                 <img style="border: 1px solid rgb(232, 232, 230); position: absolute; width: 411px; height: 274px;" id="zoom" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}">
               </div>
 
-              <div id="gallery_01" class="product-thumbnails">
+              <div id="gallery" class="product-thumbnails">
 
                 <ul class="thumbnails">
                     @foreach ($product_images as $image)
@@ -352,10 +352,10 @@ span.short_desc p{font-size:13px}
 
 
 $(document).ready(function () {
-$("#zoom_03").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: "active", imageCrossfade: true, loadingIcon: "http://www.elevateweb.co.uk/spinner.gif"}); 
+$("#zoom").elevateZoom({gallery:'gallery', cursor: 'pointer', galleryActiveClass: "active", imageCrossfade: true, loadingIcon: ""}); 
 
-$("#zoom_03").bind("click", function(e) {  
-  var ez =   $('#zoom_03').data('elevateZoom');
+$("#zoom").bind("click", function(e) {  
+  var ez =   $('#zoom').data('elevateZoom');
   ez.closeAll(); //NEW: This function force hides the lens, tint and window 
   $.fancybox(ez.getGalleryList());
   return false;
