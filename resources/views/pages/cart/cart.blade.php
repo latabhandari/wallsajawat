@@ -80,7 +80,7 @@
 										<h4>Product</h4>
 									</div>
 									<h5>{{ $row->name }}</h5>
-									<p class="minfo">Size (Width x Height): {{ $row->options->width }} {{ $measurement_info->name }} * {{ $row->options->height }} {{ $measurement_info->name }}</p>
+									
 								</div>
 								<div class="col-sm-2">
 									<div class="title hidden-md hidden-sm hidden-lg">
