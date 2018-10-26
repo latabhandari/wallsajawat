@@ -150,7 +150,7 @@
 
 										@php
 										 $prod_image_info = App\Helpers\MyHelper::getProductImage($product->product_id);
-										 $product_info    = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc']);
+										 $product_info    = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug']);
 										 $dimension       = json_decode($product->dimension);
 										@endphp
 
@@ -194,7 +194,7 @@
 														</div>
 														<div class="row">
 															<div class="col-sm-12 ">
-																<button class="btn buyagain-btn" type="submit">Buy it again</button>
+																<a href="{{ route('product.detail', $product_info[0]['slug']) }}"><button class="btn buyagain-btn" type="submit">Buy it again</button></a>
 															</div>
 														</div>
 														</div>
