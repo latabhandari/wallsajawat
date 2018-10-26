@@ -63,7 +63,9 @@
 					@foreach(Cart::content() as $row)
 						@php
 						  $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
+
 						  $measurement_info  = App\Helpers\MyHelper::getMeasurement($row->options->type);
+						  $product_info      = App\Helpers\MyHelper::getProductInfo($row->id, ['short_desc']);
 						@endphp
 
 						<div class="cart-row">
@@ -81,7 +83,7 @@
 										<h4>Product</h4>
 									</div>
 									<h5>{{ $row->name }}</h5>
-									<p>{!! $row->short_desc !!}</p>
+									<p>{!! $product_info[0]['short_desc'] !!}</p>
 									
 								</div>
 								<div class="col-sm-2">
