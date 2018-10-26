@@ -98,7 +98,7 @@
 
 													<div class="col-sm-2">
 														<p class="marginZero">TOTAL</p>
-														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
+														<p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount }}</p>
 													</div>
 
 													@if ($order->coupon)
