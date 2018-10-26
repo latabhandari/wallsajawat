@@ -11,6 +11,7 @@ use App\Order as Order;
 use App\Helpers\MyHelper as MyHelper;
 use Cart;
 use Session;
+use App\Product as Product;
 
 class OrderController extends Controller
 {
