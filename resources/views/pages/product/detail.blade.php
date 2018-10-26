@@ -63,10 +63,11 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
-                    <span>1</span>
+                     <span>1</span>
                     |<span>Style #{{ $detail->sku }}</span>
                   </div>
                 </div>
+                <div class="col-sm-12">Price: df</div>
               </div>
             </div>
            
