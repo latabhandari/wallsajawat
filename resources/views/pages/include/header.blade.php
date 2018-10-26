@@ -64,7 +64,7 @@ switch ($segment)
                   </div>
                   <div class="col-md-2 col-sm-12 menu_icons">
                     <ul class="nav menu-icons pull-right">
-                      <li><input class="searchtxt" type="text" name="search" id="search" placeholder="search..." autocomplete="off" /></li>
+                      <li class="mrgntp0"><input class="searchtxt" type="text" name="search" id="search" placeholder="search..." autocomplete="off" /></li>
                       <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                           @guest
                             <span class="cart_user" style="display:none">Cart={{ Cart::count() }},User=0</span>
