@@ -21,17 +21,12 @@
 
 <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet">
 <div class="login-page sec-padding">
-
-<div class="container">
-
+  <div class="container">
    <!-- <div class="btn-group btn-breadcrumb">
             <a href="{{ route('home.index') }}" class="btn btn-default"><i class="fa fa-home"></i></a>
             <a href="#" class="btn btn-default">Login</a>
     </div> -->
-
-
     <div class="row justify-content-center">
-
         <div class="col-sm-12 text-center">
             <div class="title measure-title">
                 <ul class="navbar">
@@ -68,17 +63,9 @@
                                        </a>
                                 </div>
                             </div>
-                            </div>
+                    </div>
 
-                                
-
-                            
-                     
-
-                    
-
-                        <div class="form-group row">
-                            
+                    <div class="form-group row">
                             <div class="col-md-12">
                                 <input id="email" type="email" placeholder="Email Address" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  autocomplete="off" />
 
@@ -89,7 +76,7 @@
                                 @endif
 
                             </div>
-                        </div>
+                    </div>
 
                         <div class="form-group row">
                         
@@ -128,7 +115,6 @@
 </div>
 </div>
 @endsection
-
 
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>

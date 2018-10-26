@@ -52,11 +52,7 @@
 
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
-
-                       
                         <div class="form-group row">
-                           
-
                             <div class="col-md-12">
                                 <input id="name" type="text" placeholder="Name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" />
 
@@ -69,11 +65,8 @@
                         </div>
 
                         <div class="form-group row">
-                    
-
                             <div class="col-md-12">
                                 <input id="email" type="email" Placeholder="Email Address" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" />
-
                                 @if ($errors->has('email'))
                                     <span class="error" role="alert">
                                         {{ $errors->first('email') }}
@@ -83,9 +76,7 @@
                         </div>
 
                         <div class="form-group row">
-                           
-
-                            <div class="col-md-12">
+                             <div class="col-md-12">
                                 <input id="password" type="password" Placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" />
 
                                 @if ($errors->has('password'))
@@ -97,23 +88,19 @@
                         </div>
 
                         <div class="form-group row">
-                         
                             <div class="col-md-12">
                                 <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" />
                             </div>
                         </div>
 
                         <div class="form-group row">
-                          
                             <div class="col-md-12">
                                 {!! NoCaptcha::display() !!}
-
                                 @if ($errors->has('g-recaptcha-response'))
                                     <span class="error">
                                         {{ $errors->first('g-recaptcha-response') }}
                                     </span>
                                 @endif
-
                             </div>
                         </div>
 
