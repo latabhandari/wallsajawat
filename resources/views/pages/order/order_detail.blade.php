@@ -148,10 +148,9 @@
 										@foreach ($order_products as $product)
 
 										@php
-										  $prod_image_info  = App\Helpers\MyHelper::getProductImage($product->product_id);
-										  $product_info     = App\Helpers\MyHelper::getProductInfo($product->product_id, ['short_desc']);
-										  $dimension        = json_decode($product->dimension);
-
+										 $prod_image_info = App\Helpers\MyHelper::getProductImage($product->product_id);
+										 $product_info    = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc']);
+										 $dimension       = json_decode($product->dimension);
 										@endphp
 
 											<div class="row">
@@ -177,7 +176,7 @@
 															<div class="row">
 														
 																<h4 class="order-product-title col-sm-12">
-																	{{ $product->name }}
+																	{{ $product_info[0]['name'] }}
 																</h4>
 															</div>
 														
