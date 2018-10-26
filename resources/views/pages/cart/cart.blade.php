@@ -17,7 +17,7 @@
 	font-size:16px;border:1px solid #ddd;line-height:14px;padding:20px 0 20px 10px;font-weight:bold;width:100%;float:left;margin:0 0 20px 0
 }
 .cart .imgb img {width:120px;height:120px}
-.info{font-size:12px;line-height:20px}
+span.info p {font-size:12px;line-height:20px}
 </style>
 @endsection
 
