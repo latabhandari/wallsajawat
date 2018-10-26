@@ -141,6 +141,8 @@
 											<div class="col-sm-12">
 										@php
 											$order_products = App\Helpers\MyHelper::getOrderProducts($order->id);
+
+											$deliver_time   = $order->unix_timestamp + (86400 * 3);
 										@endphp
 
 										@foreach ($order_products as $product)
@@ -149,14 +151,15 @@
 										  $prod_image_info  = App\Helpers\MyHelper::getProductImage($product->product_id);
 										  $product_info     = App\Helpers\MyHelper::getProductInfo($product->product_id, ['short_desc']);
 										  $dimension        = json_decode($product->dimension);
-										@endphp
 
+										@endphp
 
 											<div class="row">
 												<div class="col-sm-12">
-													<h4>Delivered XX-Apr-2018</h4>
+													<h4>Delivered {{ date('D, j M\'y', $deliver_time) }}</h4>
 												</div>
 											</div>
+
 											<div class="row">
 												<div class="col-sm-12">
 													<p class="order-status">Your package was delivered</p>
