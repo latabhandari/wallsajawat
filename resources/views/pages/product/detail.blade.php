@@ -68,47 +68,51 @@
                   </div>
                 </div>
                 <div class="col-sm-12">Price:&nbsp;<i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{ $detail->price }}</div>
+                @php
+                  $dimension = App\Helpers\MyHelper::getRollDimenstionById($detail->roll_id);
+                @endphp
+                <div class="col-sm-12">Size (Width x Height):{{ $dimension->width }} Feet x P{{ $dimension->height }} Feet:&nbsp;</div>
               </div>
             </div>
            
             <form name="product" id="product" action="{{ route('product.cart') }}" method="post">
             	@csrf
 
-			<div class="form-element-50-50">        
-				<ul>
-					<li><label>Measurement in</label>
-						<select id="material_type" name="material_type" class="istyle7">
-				     		@foreach ($measurements as $data)
-				                <option data-attr="{{ strtolower($data->name) }}" data-value="{{ $data->square_feet_value }}" value="{{ $data->id }}">{{ $data->name }}</option>
-				            @endforeach
-				     	</select>
-					</li>
-						<li class="width"><label>Width:</label>
-						<input type="text" name="width" id="w_width" value="" class="istyle8" width="50" autocomplete="off" />
-					</li>
-					<li class="height"><label>Height:</label>
-						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
-					</li>
-          @php
-            $sq_feet_price = App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id);
-          @endphp
-					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>
-				</ul>
-			</div>
+          			<div class="form-element-50-50">        
+          				<ul>
+          					<li><label>Measurement in</label>
+          						<select id="material_type" name="material_type" class="istyle7">
+          				     		@foreach ($measurements as $data)
+          				                <option data-attr="{{ strtolower($data->name) }}" data-value="{{ $data->square_feet_value }}" value="{{ $data->id }}">{{ $data->name }}</option>
+          				            @endforeach
+          				     	</select>
+          					</li>
+          						<li class="width"><label>Width:</label>
+          						<input type="text" name="width" id="w_width" value="" class="istyle8" width="50" autocomplete="off" />
+          					</li>
+          					<li class="height"><label>Height:</label>
+          						<input type="text" name="height" id="w_height" value="" class="istyle8" autocomplete="off" />
+          					</li>
+                    @php
+                      $sq_feet_price = App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id);
+                    @endphp
+          					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>
+          				</ul>
+          			</div>
 
-            <div class="">
-              <p><strong>Quantity:</strong> Please select Quantity.</p>
-              <div class="row">
-                <div class="col-sm-12">
-                  <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
-                  <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
+                <div class="">
+                  <p><strong>Quantity:</strong> Please select Quantity.</p>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
+                      <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off" />
+                <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off" />
 
-            </form>
+             </form>
 
           </div>
           <!-- end product-txtb -->
