@@ -14,6 +14,7 @@
 <style type="text/css" media="screen">
   .alert-success{margin:20px 10px 10px 0px;padding:10px;} 	
 </style>
+{!! NoCaptcha::renderJs() !!}
 @endsection
 
 @section('content')
@@ -34,12 +35,7 @@
 </div>
 
 <div class="main contact sec-padding">
- <div class="container">
-	
-			
-			
-					
-
+    <div class="container">
 				<div class="contact-wrap">
 					<div class="row">
 						<div class="col-sm-6">
@@ -94,6 +90,20 @@
 										</span>
 									@endif
 								</div>
+
+								<div class="form-group">
+
+									<label for="captcha" class="width20 floatL">Captcha:</label> 
+                          
+		                            {!! NoCaptcha::display() !!}
+
+	                                @if ($errors->has('g-recaptcha-response'))
+	                                    <span class="error">
+	                                        {{ $errors->first('g-recaptcha-response') }}
+	                                    </span>
+	                                @endif
+		                        </div>
+
 								<div class="form-group">
 									<button type="submit" class="btn contact-submit btn-brand">Submit</button>
 								</div>
