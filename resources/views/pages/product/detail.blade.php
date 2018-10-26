@@ -14,7 +14,7 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
 <style>
 .mrgntp{margin:10px 0 0 0;font-size:13px}
-span.shrt_desc p{font-size:12px}
+span.short_desc p{font-size:12px}
 </style>
 @endsection
 
