@@ -106,8 +106,8 @@ em {
 strong {
 	font-weight: bold;
 }
-.searchtxt{width:145px;font-size:13px;font-weight: normal}
-.mrgntpnone{margin-top:0px}
+.searchtxt{width:145px;font-size:13px;font-weight: normal;padding-left:3px}
+.mrgntpnone{margin-top:0px !important}
 /*-------------------------------------------------------------------------------------------*/
 /* SITE STRUCTURE & APPEARANCE */
 /*-------------------------------------------------------------------------------------------*/
