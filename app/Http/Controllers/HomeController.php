@@ -8,6 +8,7 @@ use App\Categories as Categories;
 use App\Product as Product;
 use Cart;
 use DB;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -43,4 +44,10 @@ class HomeController extends Controller
                             ->get();
           return view('pages.search.search', compact('products'));
       }
+
+    public function logout(Request $request)
+     {
+        Auth::logout();
+        return redirect()->route('home.index');
+     }
 }

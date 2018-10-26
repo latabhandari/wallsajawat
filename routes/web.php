@@ -77,6 +77,8 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/orders', 'OrderController@order')->name('orders');
 
     Route::post('/search', 'HomeController@search')->name('search');
+
+    Route::get('/signout', 'HomeController@logout')->name('signout');
     
 
 });
