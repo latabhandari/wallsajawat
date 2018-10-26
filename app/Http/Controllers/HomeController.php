@@ -31,4 +31,15 @@ class HomeController extends Controller
             $best_selling_products = Product::get();
             return view('pages.home', compact('wallpaper_images', 'best_selling_products'));
         }
+
+    public function search(Request $request)
+      {          
+          $params       = $request->all();
+          $search_param = $params['search']; 
+          $products     = DB::table('products')
+                            ->select('products.id', 'products.name', 'products.slug', 'products.price')
+                            ->where('name', 'like', '%'.$search_param.'%')
+                            ->get();
+          return view('pages.category.product', compact('products'));
+      }
 }
