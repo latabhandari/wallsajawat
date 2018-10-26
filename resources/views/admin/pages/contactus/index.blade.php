@@ -33,7 +33,6 @@
                   <th>Phone</th>
                   <th>Message</th>
                   <th>Ip Address</th>
-                  <th>User Agent</th>
                   <th>Date/Time</th>
                   <th>Action</th>
                 </tr>
@@ -48,7 +47,6 @@
                   <td>{{ $data->phone }}</td>
                   <td>{{ $data->msg }}</td>
                   <td>{{ $data->ip }}</td>
-                  <td>{{ $data->user_agent }}</td>
                   <td>{{ date('D, j M\'y h:i a', $data->timestamp) }}</td>
                   <td>
                      {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['admin.contactus.destroy', $data->id]]) !!}
