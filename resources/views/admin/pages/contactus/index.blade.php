@@ -44,8 +44,8 @@
                   <td>{{ $i++ }}</td>
                   <td>{{ $data->name }}</td>
                   <td>{{ $data->email }}</td>
-                  <td>{{ $data->msg }}</td>
                   <td>{{ $data->phone }}</td>
+                  <td>{{ $data->msg }}</td>
                   <td>{{ $data->ip }}</td>
                   <td>{{ date('D, j M\'y h:i a', $data->timestamp) }}</td>
                   <td>
