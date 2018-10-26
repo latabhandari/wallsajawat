@@ -106,7 +106,7 @@
 													@if ($order->coupon)
 														<div class="col-sm-4">
 															<p class="marginZero">COUPON</p>
-															<p class="placed-amount">CODE - {{ $order->coupon }} - <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount }}</p>
+															<p class="placed-amount">{{ $order->coupon }} - <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount }}</p>
 														</div>
 													@endif
 
