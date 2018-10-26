@@ -52,7 +52,7 @@ class DashboardController extends Controller
 
     public function contactUsUsers()
      {
-         $results = Contact::select('id', 'name', 'email', 'message', 'ip_address', 'timestamp')->get();
+         $results = Contact::select('id', 'name', 'email', 'msg', 'ip_address', 'timestamp')->get();
          return view('admin.pages.contactus.index', compact('results'))->with('i', 1);
      }
 
