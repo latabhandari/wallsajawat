@@ -12,9 +12,10 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<script src="https://www.elevateweb.co.uk/wp-content/themes/radial/jquery.elevatezoom.min.js" type="text/javascript"></script>
 <style>
 .mrgntp{margin:10px 0 0 0;font-size:13px}
-span.short_desc p{font-size:12px}
+span.short_desc p{font-size:13px}
 </style>
 @endsection
 
@@ -28,12 +29,13 @@ span.short_desc p{font-size:12px}
         <div class="col-sm-7">
           <!-- start product-imgb -->
           <div class="product-imgb">
-            <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
+
+            <!--<div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
               <a href="{{ asset('catalog/product/'.$product_images[0]->image) }}">
                 <img src="{{ asset('catalog/product/'.$product_images[0]->image) }}" alt="product" width="612" height="650" class="product-small">
               </a>
             </div>
-            <!-- start product-thumbnails -->
+            
             <div class="product-thumbnails">
               <ul class="thumbnails">
                 @foreach ($product_images as $image)
@@ -44,7 +46,30 @@ span.short_desc p{font-size:12px}
                 </li>
                 @endforeach
               </ul>
-            </div>
+            </div>-->
+
+              <img id="img_01" src="{{ asset('catalog/product/'.$product_images[0]->image) }}" data-zoom-image="{{ asset('catalog/product/'.$product_images[0]->image) }}"/>
+
+              <div id="gal1">
+
+                <div class="product-thumbnails">
+                  <ul class="thumbnails">
+                    @foreach ($product_images as $image)
+                    <li>
+                        <a href="{{ asset('catalog/product/'.$image->image) }}" data-image="{{ asset('catalog/product/'.$image->image) }}" data-zoom-image="{{ asset('catalog/product/'.$image->image) }}">
+                          <img id="img_01" src="{{ asset('catalog/product/'.$image->image) }}" />
+                        </a>
+                    </li>
+                    @endforeach
+                  </ul>
+                </div>
+
+                      
+              </div>
+
+
+
+
             <!-- end product-thumbnails -->
           </div>
           <!-- end product-imgb -->
@@ -155,17 +180,19 @@ span.short_desc p{font-size:12px}
                   $prod_image_info = App\Helpers\MyHelper::getProductImage($featured_product->id);
               @endphp
 
-  <a href="{{ route('product.detail', $featured_product->slug) }}"><li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
-              <div class="imgb">
-                <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="300" height="360" alt="product">
-              </div>
-              <div class="overlay">
-                <h5>{{ $featured_product->name }}</h5>
-                <div class="price">
-                  <span>INR {{ $featured_product->price }}</span>
+              <a href="{{ route('product.detail', $featured_product->slug) }}">
+                <li style="float: left; list-style: none; position: relative; width: 250px; margin-right: 30px;" class="bx-clone" aria-hidden="true">
+                <div class="imgb">
+                  <img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="300" height="360" alt="product">
                 </div>
-              </div>
-            </li></a>
+                <div class="overlay">
+                  <h5>{{ $featured_product->name }}</h5>
+                  <div class="price">
+                    <span>INR {{ $featured_product->price }}</span>
+                  </div>
+                </div>
+                </li>
+              </a>
           @endforeach
 
       </ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a></div></div></div>
