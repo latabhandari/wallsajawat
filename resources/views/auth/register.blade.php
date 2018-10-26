@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="col-sm-7 col-sm-offset-3">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="card">
                   <div class="card-body">
 
@@ -53,7 +53,9 @@
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
+                       
                         <div class="form-group row">
+                           
 
                             <div class="col-md-12">
                                 <input id="name" type="text" placeholder="Name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" />
