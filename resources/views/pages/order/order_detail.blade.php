@@ -11,6 +11,9 @@
 <link href="{{ asset('build/assets/css/style.css') }}" rel="stylesheet" type="text/css">
 <script src="{{ asset('build/assets/js/jquery-3.2.1.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('build/assets/js/site.js') }}"></script>
+<style>
+.order-img img {width:120px;height:120px}
+</style>
 @endsection
 
 @section('content')
@@ -164,7 +167,7 @@
 													<div class="row">
 														<div class="col-sm-3">
 															<div class="order-img">
-																<img width="120" height="120" src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
+																<img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""/>
 															</div>
 														</div>
 														<div class="col-sm-9 order-desc">
