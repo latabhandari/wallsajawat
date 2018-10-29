@@ -161,10 +161,87 @@
         </div>
         <div class="col-sm-4">
           
+      </div>
+    </div>
+  </div>
+  <div class="rating-form">
+    <div class="row">
+      <div class="col-sm-6">
+            <form>
+              <div class="rating-box">
+                <div class="form-group row">
+                  <div class="col-md-4">
+                    <span>Your Rating:</span>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="rating-star">
+                      <div class="row">
+                        <div class="col-md-8">
+                          <i class="fa fa-star active" ></i>
+                          <i class="fa fa-star active"></i>
+                          <i class="fa fa-star active"></i>
+                          <i class="fa fa-star active"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <div class="col-md-4">
+                          <span>Rate it!</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+               <div class="form-group">
+                 <textarea name="review" class="form-control" placeholder="Review"></textarea>
+               </div>
+               <div class="form-group">
+                 <input type="submit" name="" class="btn" value="Submit">
+               </div>
+            </form>
         </div>
       </div>
     </div>
     <!-- end product-description -->
+<div class="comment-block">
+  
+      <div class="media">
+        <div class="media-left">
+        <span>V</span>
+       </div>
+      <div class="media-body">
+        <div class="rate-box">
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+        </div>
+        <div class="head">Very Nice</div>
+        <div class=review" title="vijay">by Vijay  on Oct 29, 2018</div>
+      </div>
+    </div>
+
+    <div class="media">
+        <div class="media-left">
+        <span>L</span>
+       </div>
+      <div class="media-body">
+        <div class="rate-box">
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+          <i class="fa fa-star active"></i>
+        </div>
+        <div class="head">Excellent</div>
+        <div class=review" title="lata">by Lata  on Oct 29, 2018</div>
+      </div>
+    </div>
+
+</div>
+
+
 
     <!-- start recommend-product -->
 
@@ -172,7 +249,7 @@
 
     <div class="recommend-product">
       <h3>Recommend Product</h3>
-      <div class="bx-wrapper" style="max-width: 1090px;">
+      <div class="bx-wrapper" style="max-width: 1140px;">
          <div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 324px;">
           <ul class="bxslider" style="width: 10215%; position: relative; transition-duration: 0s; transform: translate3d(-1120px, 0px, 0px);">
 

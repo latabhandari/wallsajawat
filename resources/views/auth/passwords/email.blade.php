@@ -15,6 +15,7 @@
 
 
 @section('content')
+<div class="forget-page sec-padding">
 <div class="container">
     <div class="row justify-content-center">
 
@@ -27,9 +28,9 @@
             </div>
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-6 col-sm-offset-3">
             <div class="card">
-                <div class="card-body" style="margin:10px 0 40px 60px">
+                <div class="card-body" >
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -40,10 +41,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off">
+                            <div class="col-md-12">
+                                <input id="email" type="email" placeholder="Email Address" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" autocomplete="off">
 
                                 @if ($errors->has('email'))
                                     <span class="error" role="alert">
@@ -53,8 +54,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group text-center" style="overflow: hidden;">
+                            <div class="col-md-4 col-md-offset-2">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
@@ -67,6 +68,7 @@
 
         <div class="col-sm-4"></div>
     </div>
+</div>
 </div>
 @endsection
 

@@ -68,11 +68,11 @@ switch ($segment)
                          <form id="searchfrm" method="POST" action="{{ route('search') }}" aria-label="{{ __('Search') }}">
                             @csrf
                             <div class="form-group">
-                              <input class="searchtxt" type="text" name="search" id="search" placeholder="Search..." autocomplete="off" />
+                              <input class="searchtxt" type="text" name="search" id="search" placeholder="Search..." autocomplete="off" / class="form-control">
                             </div>
                           </form>
                       </li>
-                      <li><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
+                      <li class="cart-block"><a class="crt" href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i><span>{{ Cart::count() }}</span></a></li>
                           @guest
                             <span class="cart_user" style="display:none">Cart={{ Cart::count() }},User=0</span>
                           @else  
