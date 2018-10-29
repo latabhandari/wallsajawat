@@ -77,6 +77,7 @@ switch ($segment)
                             <div class="cart_user" style="display:none">Cart={{ Cart::count() }},User=0</div>
                           @else  
                             <div class="cart_user" style="display:none">Cart={{ Cart::count() }},User=1</div>
+                            
                             <li>
                               <div class="dropdown">
                               <button class="btn btn-primary dropdown-toggle user-option" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="caret"></span></button>
