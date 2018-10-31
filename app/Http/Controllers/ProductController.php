@@ -42,7 +42,12 @@ class ProductController extends Controller
 
           if ( ! empty($enc_order_product_id))
              {
-                echo  Crypt::decryptString($enc_order_product_id);
+              
+                try  {
+                          echo  Crypt::decryptString($enc_order_product_id);
+                      } catch (DecryptException $e) {
+                          //
+                      }
              }
 
 
