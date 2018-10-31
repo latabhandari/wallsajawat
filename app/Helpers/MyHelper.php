@@ -19,7 +19,7 @@ use App\States as State;
 use App\Rating as Rating;
 class MyHelper 
    {
-   	     public function checkRatingExist($order_num = '', $product_id = '')
+   	     public static function checkRatingExist($order_num = '', $product_id = '')
    	       {
    	       		return Rating::where(['order_number' => $order_num, 'product_id' => $product_id])->count();
    	       }
