@@ -224,7 +224,10 @@
     <!-- end product-description -->
     <div class="comment-block">
         @php 
-          echo count($user_ratings);
+          if (count($user_ratings))
+           {
+              foreach ($usre_ratings as $rating_obj)
+                 {
         @endphp
       
           <div class="media">
@@ -239,10 +242,14 @@
               <i class="fa fa-star-o "></i>
               <i class="fa fa-star-o "></i>
             </div>
-            <div class="head">Very Nice</div>
-            <div class=review" title="vijay">by Vijay  on Oct 29, 2018</div>
+            <div class="head">{{ $rating_obj->review }}</div>
+            <div class=review" title="vijay">by {{ $rating_obj->user->name }}  on Oct 29, 2018</div>
           </div>
         </div>
+        @php
+         }
+        }
+       @endphp
 
     </div>
 
