@@ -14,8 +14,29 @@ class CreateRatingsTable extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->increments('id');
+
+            $table->increments('id')->comment('Id');
+
+            $table->unsignedInteger('order_number')->comment('Order Number');
+
+            $table->unsignedInteger('product_id')->comment('Product Id');
+
+            $table->tinyInteger('rating')->unsigned()->comment('Rating');
+
+            $table->text('review')->nullable();
+
+            $table->ipAddress('ip')->comment('Ip Address'); 
+
+            $table->string('user_agent')->comment('User Agent');
+
+            $table->bigInteger('timestamp')->comment('Timestamp'); 
+
             $table->timestamps();
+
+            $table->foreign('order_number')->references('order_number')->on('orders');
+
+            $table->foreign('product_id')->references('id')->on('products');
+
         });
     }
 

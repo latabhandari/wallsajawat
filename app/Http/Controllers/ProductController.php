@@ -45,7 +45,11 @@ class ProductController extends Controller
              {
               
                 try  {
-                          echo  Crypt::decryptString($enc_order_product_id);
+                          $order_product_id = Crypt::decryptString($enc_order_product_id);
+                          list($order_id, $product_id) = explode('-', $order_product_id);
+                          
+
+
                       } catch (DecryptException $e) {
                           //
                       }
