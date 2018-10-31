@@ -487,6 +487,7 @@ class ComposerStaticInitb93ca2a72c1801499388212c86cbf9e9
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Rating' => __DIR__ . '/../..' . '/app/Rating.php',
         'App\\Roles' => __DIR__ . '/../..' . '/app/Roles.php',
         'App\\States' => __DIR__ . '/../..' . '/app/States.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
