@@ -23,7 +23,7 @@ class CreateRatingsTable extends Migration
 
             $table->tinyInteger('rating')->unsigned()->comment('Rating');
 
-            $table->text('review')->nullable();
+            $table->text('review')->nullable()->comment('Review');
 
             $table->ipAddress('ip')->comment('Ip Address'); 
 
