@@ -23,7 +23,7 @@
 }
 
 .rating:not(:checked) > input {
-    
+    visibility: hidden;
     top:-9999px;
     clip:rect(0,0,0,0);
 }
