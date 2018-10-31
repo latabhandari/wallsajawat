@@ -339,10 +339,12 @@
                                                                      dataType: "json",
                                                                      data: {rating: rating, review: review, encrypt_id: '{{ last(request()->segments()) }}' },
 
-
                                                                      success: function (resp) {
 
-                                                                          $("#cal_price").text("INR " + resp.price);
+                                                                          if (resp.status == 'success')
+                                                                            location.href = location.href
+                                                                          else
+                                                                             alert('An error occured! Try again');
                                                                      }
 
                                                                  });

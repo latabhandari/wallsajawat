@@ -82,9 +82,49 @@ class ProfileController extends Controller
 
        }
 
-      public function rating()
+      public function rating(Request $request)
         {
-           print_r($_POST);
+           $params               = $request->all();
+           $rating               = (int) $params['rating'];
+           $review               = $params['review'];
+           $enc_order_product_id = $params['encrypt_id'];
+
+           if ( ! empty($enc_order_product_id))
+               {
+                  try  {
+                            $order_product_id = Crypt::decryptString($enc_order_product_id);
+                            list($order_no, $product_id) = explode('-', $order_product_id);
+                            $record  = Rating::where(['order_number' => $order_no, 'product_id' => $product_id])->count();
+                            if (empty($record) && ($rating >= 1 && $rating <= 5))
+                               {
+                                     $pfields['order_number']            =    $order_no;
+                                     $pfields['product_id']              =    $product_id;
+                                     $pfields['user_id']                 =    Auth::user()->id;
+                                     $pfields['rating']                  =    $rating;
+                                     $pfields['review']                  =    $review;
+                                     $pfields['ip']                      =    $request->ip();
+                                     $pfields['user_agent']              =    $request->header('User-Agent');
+                                     $pfields['timestamp']               =    time();
+
+                                     $ratingobj = Rating::insert($pfields);
+                                     $id        = $ratingobj->id;
+                                     if ($id)
+                                      $arr = ['status' => 'success']; 
+                                    else
+                                      $arr = ['status' => 'failure'];
+                               }
+                            else
+                                      $arr = ['status' => 'failure']; 
+
+                        } catch (DecryptException $e) {
+                             $arr = ['status' => 'failure']; 
+                        }
+               }
+           else
+              {
+                  $arr = ['status' => 'failure'] 
+              }
+                  echo json_encode($arr);
         }
 
 
