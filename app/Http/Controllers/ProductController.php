@@ -41,23 +41,21 @@ class ProductController extends Controller
                                       ->where('product_categories.product_id', '<>', $detail->id)
                                       ->get();
           /* close */
-
+          $rating = 0;
           if ( ! empty($enc_order_product_id))
              {
-              
                 try  {
                           $order_product_id = Crypt::decryptString($enc_order_product_id);
-                          list($order_id, $product_id) = explode('-', $order_product_id);
+                          list($order_no, $product_id) = explode('-', $order_product_id);
+                          $record  = Rating::where(['order_number' => $order_no, 'product_id' => $product_id])->count();
+                          $rating  = empty($record) ? 1 : 0;
 
-
-                        
                       } catch (DecryptException $e) {
                           //
                       }
              }
 
-
-      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));
+      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products', 'rating'));
       }
 
 
