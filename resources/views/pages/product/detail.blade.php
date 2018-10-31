@@ -222,43 +222,29 @@
 
 
     <!-- end product-description -->
-<div class="comment-block">
-  
-      <div class="media">
-        <div class="media-left">
-        <span>V</span>
-       </div>
-      <div class="media-body">
-        <div class="rate-box">
-          <i class="fa fa-star-o "></i>
-          <i class="fa fa-star-o "></i>
-          <i class="fa fa-star-o "></i>
-          <i class="fa fa-star-o "></i>
-          <i class="fa fa-star-o "></i>
+    <div class="comment-block">
+        @php 
+          echo count($user_ratings);
+        @endphp
+      
+          <div class="media">
+            <div class="media-left">
+            <span>V</span>
+           </div>
+          <div class="media-body">
+            <div class="rate-box">
+              <i class="fa fa-star-o "></i>
+              <i class="fa fa-star-o "></i>
+              <i class="fa fa-star-o "></i>
+              <i class="fa fa-star-o "></i>
+              <i class="fa fa-star-o "></i>
+            </div>
+            <div class="head">Very Nice</div>
+            <div class=review" title="vijay">by Vijay  on Oct 29, 2018</div>
+          </div>
         </div>
-        <div class="head">Very Nice</div>
-        <div class=review" title="vijay">by Vijay  on Oct 29, 2018</div>
-      </div>
-    </div>
 
-    <div class="media">
-        <div class="media-left">
-        <span>L</span>
-       </div>
-      <div class="media-body">
-        <div class="rate-box">
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-          <i class="fa fa-star-o"></i>
-        </div>
-        <div class="head">Excellent</div>
-        <div class=review" title="lata">by Lata  on Oct 29, 2018</div>
-      </div>
     </div>
-
-</div>
 
 
 

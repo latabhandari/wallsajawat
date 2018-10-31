@@ -56,7 +56,6 @@ class ProductController extends Controller
              }
 
           $user_ratings = Rating::select('rating', 'review', 'user_id', 'timestamp')->where('product_id', $detail->id)->get();
-          print_r($user_ratings);
 
       	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products', 'rating', 'user_ratings'));
       }
