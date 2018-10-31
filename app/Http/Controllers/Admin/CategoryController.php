@@ -187,4 +187,19 @@ class CategoryController extends Controller
          $id->delete();
          return redirect()->route('categories.index')->with('success','Category deleted successfully');
     }
+
+
+    /**
+     * Change the status.
+     *
+     */
+
+     public function status($id, $status)
+        {
+             //
+             $status = ! $status;
+             Categories::where('id', $id)->update(['status' => $status]);
+             return redirect()->route('category.index')->with('success','Category status changed successfully!');
+        }
+
 }

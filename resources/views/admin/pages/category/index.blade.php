@@ -60,6 +60,7 @@
                 @foreach ($categories as $data)
                 @php
                   $status_img = ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
+                  $status_msg   =  ($data->status == 1) ? "inactive" : "active";
                 @endphp
 
                 <tr>
@@ -70,7 +71,7 @@
                   <td>{{ $data->page_title }}</td>
                   <td>{{ $data->meta_keywords }}</td>
                   <td>{{ $data->meta_description }}</td>
-                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /></td>
+                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.category.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
                   <td>
                     @php
                         $edit_category = MyHelper::getPermission('edit_category');
@@ -82,20 +83,7 @@
                      @php
                         }
                      @endphp
-
-                     @php
-                        $destroy_category = MyHelper::getPermission('destroy_category');
-                        if ( ! empty($destroy_category) && $data->id > 5) {
-                     @endphp
-
-                     {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['categories.destroy', $data->id]]) !!}
-                    <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                    {!! Form::close() !!}
-
-                    @php
-                        }
-                    @endphp
-
+                     
 				          </td>
                 </tr>
 
