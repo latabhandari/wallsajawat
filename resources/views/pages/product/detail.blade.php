@@ -87,11 +87,11 @@
                 <div class="col-sm-12">
                   <div class="rating-star">
                     <ul>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star-half-full " aria-hidden="true"></i></li>
+                      <li><i class="fa fa-star-half-full " aria-hidden="true"></i></li>
                     </ul>
                      <span>1</span>
                     |<span>Style #{{ $detail->sku }}</span>
@@ -177,11 +177,11 @@
                     <div class="rating-star">
                       <div class="row">
                         <div class="col-md-8">
-                          <i class="fa fa-star active" ></i>
-                          <i class="fa fa-star active"></i>
-                          <i class="fa fa-star active"></i>
-                          <i class="fa fa-star active"></i>
-                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o" ></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>
                         </div>
                         <div class="col-md-4">
                           <span>Rate it!</span>
@@ -211,11 +211,11 @@
        </div>
       <div class="media-body">
         <div class="rate-box">
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
+          <i class="fa fa-star-o "></i>
+          <i class="fa fa-star-o "></i>
+          <i class="fa fa-star-o "></i>
+          <i class="fa fa-star-o "></i>
+          <i class="fa fa-star-o "></i>
         </div>
         <div class="head">Very Nice</div>
         <div class=review" title="vijay">by Vijay  on Oct 29, 2018</div>
@@ -228,11 +228,11 @@
        </div>
       <div class="media-body">
         <div class="rate-box">
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
         </div>
         <div class="head">Excellent</div>
         <div class=review" title="lata">by Lata  on Oct 29, 2018</div>

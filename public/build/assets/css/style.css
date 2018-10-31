@@ -41,7 +41,7 @@ a, a:focus, a:hover{
 }
 
 .menu_icons, .logo{
-  margin-top:15px;
+  margin-top:10px!important;
 }
 .logo h3{
   margin-top:0;
@@ -60,7 +60,7 @@ a, a:focus, a:hover{
   font-size: 12.5px;
 }
 
-.searchtxt{width:145px;font-size:13px;font-weight: normal;padding-left:10px;border:1px solid #ececec;outline:0;height:30px;}
+.searchtxt{width:100%;font-size:13px;font-weight: normal;padding-left:10px;border:1px solid #ececec;outline:0;height:30px;}
 .mrgntpnone{margin-top:0px !important}
 
 .rgt-top span{
@@ -131,6 +131,7 @@ a, a:focus, a:hover{
   font-size:20px;
   float: left;
   margin-right: 15px;
+  margin-top:0!important;
 }
 
 .side-bars {
@@ -1046,10 +1047,10 @@ box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 .product-txtb .btn{padding:13px 20px!important;}
 
-li.mrgntpnone{width:66%;}
+li.mrgntpnone{width:50%;}
 li.cart-block{width: 25%;margin-right:0!important;}
 .zoomContainer .zoomLens, .product-imgb .zoomWrapper, 
-.product-imgb .zoomWrapper img{max-height:515px!important;width:100%!important;}
+.product-imgb .zoomWrapper img{max-height:545px!important;width:100%!important;}
 
 .rating-form{
   box-sizing: border-box;
@@ -1250,7 +1251,16 @@ padding-right:0!important;}
 }
 .mysearch {background: #f1f1f1;
     padding-top: 15px;}
+ .menu-icons .searchbtn{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 15px;
+    z-index: 10;
 
+}
 
  @media (min-width : 320px) and (max-width : 767px){
     .rgt-top{font-size: 14px;line-height: 20px;}

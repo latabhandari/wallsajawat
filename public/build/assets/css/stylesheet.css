@@ -1131,8 +1131,9 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
-	max-height: 515px;
+	max-height: 545px;
 	height: auto;
+	min-height: 545px;
 }
 .product-imgb .easyzoom img{
 	width: 650px!important;
@@ -1455,7 +1456,7 @@ p {
 	margin-right: 10px;
 }
 .checkout .rightcol-fixed {
-	margin-top: 42px;
+	margin-top: 58px;
 }
 .checkout .add-coupon {
 	border: 1px solid #ccc;
