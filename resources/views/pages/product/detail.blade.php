@@ -18,7 +18,7 @@
   .mrgntp{margin:10px 0 0 0;font-size:13px}
   span.short_desc p{font-size:13px}
   #gallery img { width:80px;height:80px }
- 
+
 </style>
 @endsection
 
@@ -154,7 +154,7 @@
   <!-- end product-detail -->
   <div class="container">
     <!-- start product-description -->
-    <div class="product-description">
+    <div class="product-description" id="prddesc">
       <div class="row">
         <div class="col-sm-8">
           <h3>Product Description</h3>
