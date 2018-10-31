@@ -169,18 +169,11 @@
   @php
     if ( ! empty($rating))
        {
-         echo '<div'
   @endphp
 
   <div class="rating-form">
     <div class="row">
       <div class="col-sm-6">
-
-            @if(session()->has('ratingsuc'))
-                <div class="alert alert-success"> 
-                {!! session('ratingsuc') !!}
-                </div>
-            @endif
 
             <form name="ratingfrm" id="ratingfrm" action="#" method="post">
               @csrf
@@ -229,9 +222,15 @@
       }
     @endphp
 
-
     <!-- end product-description -->
     <div class="comment-block">
+      
+        @if(session()->has('ratingsuc'))
+                <div class="alert alert-success"> 
+                {!! session('ratingsuc') !!}
+                </div>
+        @endif
+
         @php 
           if (count($user_ratings))
            {
