@@ -237,7 +237,7 @@
            </div>
           <div class="media-body">
             <div class="rate-box">
-               {{ str_repeat('<i class="fa fa-star-o "></i>', $rating_obj->rating) }}
+               {!! str_repeat('<i class="fa fa-star-o "></i>', $rating_obj->rating) !!}
             </div>
             <div class="head">{{ $rating_obj->review }}</div>
             <div class=review" title="vijay">by {{ $rating_obj->user->name }}  on {{ date('D, j M Y h:i a', $rating_obj->timestamp) }}</div>
