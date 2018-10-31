@@ -21,7 +21,7 @@ class MyHelper
    {
    	     public function checkRatingExist($order_num = '', $product_id = '')
    	       {
-   	       		return Rating::where(['order_number' => $order_num, 'product_id' => $product_id])->count()
+   	       		return Rating::where(['order_number' => $order_num, 'product_id' => $product_id])->count();
    	       }
 
    	     public static function orderThisMonth($id = '')
