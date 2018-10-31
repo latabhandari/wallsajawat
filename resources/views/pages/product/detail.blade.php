@@ -228,11 +228,12 @@
            {
               foreach ($user_ratings as $rating_obj)
                  {
+                    $uname = $rating_obj->user->name
         @endphp
       
           <div class="media">
             <div class="media-left">
-            <span>V</span>
+            <span>{{ strtoupper(substr($uname, 0, 1)) }}</span>
            </div>
           <div class="media-body">
             <div class="rate-box">
@@ -243,7 +244,7 @@
               <i class="fa fa-star-o "></i>
             </div>
             <div class="head">{{ $rating_obj->review }}</div>
-            <div class=review" title="vijay">by {{ $rating_obj->user->name }}  on Oct 29, 2018</div>
+            <div class=review" title="vijay">by {{ $rating_obj->user->name }}  on {{ date('D, j M Y h:i a', $rating_obj->timestmap) }}</div>
           </div>
         </div>
         @php
