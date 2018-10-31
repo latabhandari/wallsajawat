@@ -224,7 +224,7 @@
 
     <!-- end product-description -->
     <div class="comment-block">
-      
+
         @if(session()->has('ratingsuc'))
                 <div class="alert alert-success"> 
                 {!! session('ratingsuc') !!}
@@ -342,7 +342,7 @@
                                                                      success: function (resp) {
 
                                                                           if (resp.status == 'success')
-                                                                            location.href = location.href
+                                                                            window.location.reload();
                                                                           else
                                                                              alert('An error occured! Try again');
 
