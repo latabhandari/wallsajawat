@@ -94,16 +94,16 @@ class CheckoutController extends Controller
 						   switch ($type)
 							    {
 							    	case 1:
-							    				$discount     = $record->discount;
-							    				$cal_discount = $cart_total * $discount / 100;
-							    				$total        = $cart_total - $cal_discount; 
+    							    				$discnt       = $record->discount;
+    							    				$discount     = $cart_total * $discnt / 100;
+    							    				$total        = $cart_total - $cal_discount; 
 
-							    				break;
+    							    				break;
 							    	case 2:
-							    				$discount     = $record->discount;
-							    				$total        = $cart_total - $discount; 
+    							    				$discount     = $record->discount;
+    							    				$total        = $cart_total - $discount; 
 
-							    				break;
+    							    				break;
 							    }
 							    	session(['discount' => $discount, 'coupon' => $coupon]);
 							    	$request->session()->flash('discount_status', 'Successfully applied!');
