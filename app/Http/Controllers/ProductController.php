@@ -18,13 +18,13 @@ use App\User as User;
 use App\Profile as Profile;
 use App\Wishlist as Wishlist;
 use Auth;
-
+use Illuminate\Support\Facades\Crypt;
 
 class ProductController extends Controller
 {
     //    
      
-    public function detail($slug)
+    public function detail($slug, $enc_order_product_id = null)
       {
       	  $detail         =  Product::where('slug', $slug)->firstOrFail();
           $product_images =  ProductImages::where('product_id', $detail->id)->get();
@@ -39,6 +39,12 @@ class ProductController extends Controller
                                       ->where('product_categories.product_id', '<>', $detail->id)
                                       ->get();
           /* close */
+
+          if ( ! empty($enc_order_product_id))
+             {
+                echo  Crypt::decryptString($enc_order_product_id);
+             }
+
 
       	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products'));
       }
