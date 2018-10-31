@@ -335,7 +335,7 @@
                                                                      type: "POST",
                                                                      url: WallSajawat.getSitePath('product/option'),
                                                                      dataType: "json",
-                                                                     data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+                                                                     data: $(this).serialize(),
                                                                      success: function (resp) {
 
                                                                           $("#cal_price").text("INR " + resp.price);
