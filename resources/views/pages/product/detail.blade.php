@@ -333,7 +333,7 @@
                           submitHandler: function()  {
                                                             $.ajax({
                                                                      type: "POST",
-                                                                     url: WallSajawat.getSitePath('product/option'),
+                                                                     url: WallSajawat.getSitePath('rating'),
                                                                      dataType: "json",
                                                                      data: $(this).serialize(),
                                                                      success: function (resp) {

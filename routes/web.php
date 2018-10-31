@@ -75,6 +75,8 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/profile', 'ProfileController@profile')->name('profile');
     Route::post('/profile', 'ProfileController@updateProfile')->name('profile.update');
 
+    Route::post('/rating', 'ProfileController@rating')->name('rating');
+
     Route::get('/orderstore', 'OrderController@store')->name('order.store');
     Route::get('/orders', 'OrderController@order')->name('orders');
 

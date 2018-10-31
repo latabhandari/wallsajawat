@@ -82,5 +82,10 @@ class ProfileController extends Controller
 
        }
 
+      public function rating()
+        {
+           print_r($_POST);
+        }
+
 
 }
