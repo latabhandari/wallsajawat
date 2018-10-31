@@ -226,7 +226,7 @@
         @php 
           if (count($user_ratings))
            {
-              foreach ($usre_ratings as $rating_obj)
+              foreach ($user_ratings as $rating_obj)
                  {
         @endphp
       
