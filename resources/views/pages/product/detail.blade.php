@@ -28,7 +28,7 @@
     clip:rect(0,0,0,0);
 }
 
-.rating:not(:checked) > span {
+.rating:not(:checked) > label {
     float:right;
     width:1em;
     padding:0 .1em;
@@ -41,29 +41,29 @@
     
 }
 
-.rating:not(:checked) > span:before {
+.rating:not(:checked) > label:before {
     content: '★ ';
 }
 
-.rating > input:checked ~ span {
+.rating > input:checked ~ label {
     color: orange;
 
 }
 
-.rating:not(:checked) > span:hover,
-.rating:not(:checked) > span:hover ~ span {
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
     color: orange;
 }
 
-.rating > input:checked + span:hover,
-.rating > input:checked + span:hover ~ span,
-.rating > input:checked ~ span:hover,
-.rating > input:checked ~ span:hover ~ span,
-.rating > span:hover ~ input:checked ~ span {
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
     color: #ea0;
 }
 
-.rating > span:active {
+.rating > label:active {
     position:relative;
     top:2px;
     left:2px;
@@ -250,11 +250,11 @@
                           </select>-->
 
                           <fieldset class="rating">
-                              <input type="radio" id="star5" name="star" value="5" /><span for="star5" title="">5 stars</span>
-                              <input type="radio" id="star4" name="star" value="4" /><span for="star4" title="">4 stars</span>
-                              <input type="radio" id="star3" name="star" value="3" /><span for="star3" title="">3 stars</span>
-                              <input type="radio" id="star2" name="star" value="2" /><span for="star2" title="">2 stars</span>
-                              <input type="radio" id="star1" name="star" value="1" /><span for="star1" title="">1 star</span>
+                              <input type="radio" id="star5" name="star" value="5" /><label for="star5" title="">5 stars</label>
+                              <input type="radio" id="star4" name="star" value="4" /><label for="star4" title="">4 stars</label>
+                              <input type="radio" id="star3" name="star" value="3" /><label for="star3" title="">3 stars</label>
+                              <input type="radio" id="star2" name="star" value="2" /><label for="star2" title="">2 stars</label>
+                              <input type="radio" id="star1" name="star" value="1" /><label for="star1" title="">1 star</label>
                           </fieldset>
 
                         </div>
