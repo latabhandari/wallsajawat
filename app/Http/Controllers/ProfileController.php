@@ -55,13 +55,13 @@ class ProfileController extends Controller
 
          if ( ! empty($params['password']) OR ! empty($params['password_confirmation']))
            {
-              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6']);
+              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => 'required', 'mobile' => 'required|min:10|numeric', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6']);
 
               $fields['password']           =    Hash::make($params['password']);
            }
         else
            {
-              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => ' required', 'mobile' => 'required']);
+              request()->validate(['name' => 'required', 'address' => 'required', 'city' => 'required', 'state' => 'required', 'pin' => ' required', 'mobile' => 'required|min:10|numeric']);
            }         
 
          $fields['name']                    =    $params['name'];
