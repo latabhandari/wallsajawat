@@ -16,8 +16,14 @@ use App\ProductCategory as ProductCategory;
 use App\Order as Order;
 use App\Cities as City;
 use App\States as State;
+use App\Rating as Rating;
 class MyHelper 
    {
+   	     public function checkRatingExist($order_num = '', $product_id = '')
+   	       {
+   	       		return Rating::where(['order_number' => $order_num, 'product_id' => $product_id])->count()
+   	       }
+
    	     public static function orderThisMonth($id = '')
    	      {
    	      	  $month      = date("n");

@@ -154,6 +154,7 @@
 										 $dimension             = json_decode($product->dimension);
 
 										 $enc_order_product_id  = Crypt::encryptString($order->order_number.'-'.$product->product_id);
+										 $check_rating_exist    = App\Helpers\MyHelper::checkRatingExist($order->order_number, $product->product_id);
 
 										@endphp
 
@@ -209,9 +210,19 @@
 															<button class="btn askproduct-btn" type="submit"><a href="">Refund/ Replace Order</a></button>
 														</div>
 														
+														@php
+															if (empty($check_rating_exist))
+																 {
+														@endphp
+														
 														<div class="col-sm-12 paddingLeftRght0 overhidden">
-															<a href="{{ route('product.detail.rating', [$product_info[0]['slug'], $enc_order_product_id]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
+															<a style="color:#fff" href="{{ route('product.detail.rating', [$product_info[0]['slug'], $enc_order_product_id]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
 														</div>
+
+														@php
+															}
+														@endphp
+
 													</div>
 												</div>
 											</div>
