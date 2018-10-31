@@ -331,7 +331,7 @@
                                        },
 
                           submitHandler: function()  {
-                                                            let rating =  $('#rating :selected').val();
+                                                            let rating =  $('#star :selected').val();
                                                             let review =  $('#review').val();
                                                             $.ajax({
                                                                      type: "POST",
