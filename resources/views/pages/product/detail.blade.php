@@ -164,6 +164,12 @@
       </div>
     </div>
   </div>
+
+  @php
+    if ( ! empty($rating))
+       {
+  @endphp
+
   <div class="rating-form">
     <div class="row">
       <div class="col-sm-6">
@@ -202,6 +208,11 @@
         </div>
       </div>
     </div>
+    @php
+      }
+    @endphp
+
+
     <!-- end product-description -->
 <div class="comment-block">
   
