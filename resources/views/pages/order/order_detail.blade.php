@@ -153,7 +153,7 @@
 										 $product_info    = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug']);
 										 $dimension       = json_decode($product->dimension);
 
-										 $enc_order_id    = Crypt::encryptString($order->order_number]);
+										 $enc_order_id    = Crypt::encryptString($order->order_number);
 
 
 										@endphp
