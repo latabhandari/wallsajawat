@@ -12,6 +12,7 @@ use App\Cities as Cities;
 use App\States as States;
 use App\User as User;
 use App\Profile as Profile;
+use App\Rating as Rating;
 
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
