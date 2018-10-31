@@ -387,6 +387,9 @@
                                                             maxlength: 255
                                                  }
                                        },
+                                 messages: {
+                                                star: "required !",
+                                           },
 
                           submitHandler: function()  {
                                                             let rating =  $('input[name=star]:checked', '#ratingfrm').val();
