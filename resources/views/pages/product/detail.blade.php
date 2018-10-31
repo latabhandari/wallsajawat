@@ -331,11 +331,13 @@
                                        },
 
                           submitHandler: function()  {
+                                                            let rating =  $('#rating :selected').val();
+                                                            let review =  $('#review').val();
                                                             $.ajax({
                                                                      type: "POST",
                                                                      url: WallSajawat.getSitePath('rating'),
                                                                      dataType: "json",
-                                                                     data: $(this).serialize(),
+                                                                     data: {rating: rating, review: review, encrypt_id: {{ Request::segment(1) }} },
                                                                      success: function (resp) {
 
                                                                           $("#cal_price").text("INR " + resp.price);
