@@ -55,9 +55,11 @@ class ProductController extends Controller
                       }
              }
 
-      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products', 'rating'));
-      }
+          $user_ratings = Rating::where('product_id', $detail->id)->get();
+          print_r($user_ratings);
 
+      	  return view('pages.product.detail', compact('detail', 'measurements', 'product_images', 'featured_products', 'rating', 'user_ratings'));
+      }
 
     public function option(Request $request)
       {
@@ -76,9 +78,6 @@ class ProductController extends Controller
           $width_height    =  $width * $height;
           $per_square_feet =  $width_height / $square_feet_value;
           $uprice          =  $price * $per_square_feet;
-
-
-
 
           echo json_encode(['status' => true, 'price' => round($uprice), 'type' => ucfirst($mres->name)]);
       }
