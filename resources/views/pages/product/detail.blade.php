@@ -378,6 +378,7 @@
     // validate signup form on keyup and submit
 
     $("#ratingfrm").validate({
+                                errorElement: 'span',
                                 rules: {
                                           star: {
                                                             required: true, 
