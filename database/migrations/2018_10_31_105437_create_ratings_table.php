@@ -21,6 +21,8 @@ class CreateRatingsTable extends Migration
 
             $table->unsignedInteger('product_id')->comment('Product Id');
 
+            $table->unsignedInteger('user_id')->comment('Product Id');
+
             $table->tinyInteger('rating')->unsigned()->comment('Rating');
 
             $table->text('review')->nullable()->comment('Review');
@@ -36,6 +38,8 @@ class CreateRatingsTable extends Migration
             $table->foreign('order_number')->references('order_number')->on('orders');
 
             $table->foreign('product_id')->references('id')->on('products');
+
+            $table->foreign('user_id')->references('id')->on('users');
 
         });
     }

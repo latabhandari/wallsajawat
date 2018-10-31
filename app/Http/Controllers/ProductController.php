@@ -17,6 +17,7 @@ use App\Helpers\MyHelper;
 use App\User as User;
 use App\Profile as Profile;
 use App\Wishlist as Wishlist;
+use App\Rating as Rating;
 use Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
@@ -47,9 +48,9 @@ class ProductController extends Controller
                 try  {
                           $order_product_id = Crypt::decryptString($enc_order_product_id);
                           list($order_id, $product_id) = explode('-', $order_product_id);
-                          
 
 
+                        
                       } catch (DecryptException $e) {
                           //
                       }
