@@ -217,7 +217,7 @@
 														@endphp
 														
 														<div class="col-sm-12 paddingLeftRght0 overhidden">
-															<a style="color:#fff" href="{{ route('product.detail.rating', [$product_info[0]['slug'], $enc_order_product_id]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
+															<a style="color:#fff" href="{{ route('product.detail.rating', [$product_info[0]['slug'], $enc_order_product_id]) }}#ratingfrm"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
 														</div>
 
 														@php
