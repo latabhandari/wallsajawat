@@ -45,6 +45,8 @@ Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/product/{slug}', 'ProductController@detail')->name('product.detail');
 
+    Route::get('/product/{slug}/{random_id}', 'ProductController@detail')->name('product.detail.rating');
+
     Route::post('/product/option', 'ProductController@option')->name('product.option');
     Route::post('/product/cart', 'ProductController@cart')->name('product.cart');
     Route::get('/cart', 'ProductController@viewCart')->name('cart');
