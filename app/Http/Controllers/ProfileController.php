@@ -113,7 +113,10 @@ class ProfileController extends Controller
                                      $ratingobj = Rating::create($pfields);
                                      $id        = $ratingobj->id;
                                      if ($id)
-                                      $arr = ['status' => 'success']; 
+                                       {
+                                         $request->session()->flash('ratingsuc', 'Successfully submitted!');
+                                         $arr = ['status' => 'success'];
+                                       }
                                     else
                                       $arr = ['status' => 'failure'];
                                }
