@@ -105,7 +105,7 @@ class ProfileController extends Controller
                                      $pfields['product_id']              =    $product_id;
                                      $pfields['user_id']                 =    Auth::user()->id;
                                      $pfields['rating']                  =    $rating;
-                                     $pfields['review']                  =    $review;
+                                     $pfields['review']                  =    substr($review, 0, 255);
                                      $pfields['ip']                      =    $request->ip();
                                      $pfields['user_agent']              =    $request->header('User-Agent');
                                      $pfields['timestamp']               =    time();
