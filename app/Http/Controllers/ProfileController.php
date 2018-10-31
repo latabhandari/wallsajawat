@@ -110,7 +110,7 @@ class ProfileController extends Controller
                                      $pfields['user_agent']              =    $request->header('User-Agent');
                                      $pfields['timestamp']               =    time();
 
-                                     $ratingobj = Rating::insert($pfields);
+                                     $ratingobj = Rating::create($pfields);
                                      $id        = $ratingobj->id;
                                      if ($id)
                                       $arr = ['status' => 'success']; 
