@@ -173,7 +173,7 @@
   <div class="rating-form">
     <div class="row">
       <div class="col-sm-6">
-            <form name="rating" id="rating" action="#" method="post">
+            <form name="ratingfrm" id="ratingfrm" action="#" method="post">
               @csrf
               <div class="rating-box">
                 <div class="form-group row">
@@ -319,6 +319,32 @@
     // validate the comment form when it is submitted
   
     // validate signup form on keyup and submit
+
+    $("#ratingfrm").validate({
+                                rules: {
+                                          star: {
+                                                            required: true, 
+                                                },
+                                          review:{
+                                                            maxlength: 255
+                                                 }
+                                       },
+
+                          submitHandler: function()  {
+                                                            $.ajax({
+                                                                     type: "POST",
+                                                                     url: WallSajawat.getSitePath('product/option'),
+                                                                     dataType: "json",
+                                                                     data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+                                                                     success: function (resp) {
+
+                                                                          $("#cal_price").text("INR " + resp.price);
+                                                                     }
+
+                                                                 });
+                                                     }
+                });
+
 
   /* $("#product").validate({
       rules: {
