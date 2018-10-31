@@ -150,10 +150,10 @@
 
 										@php
 										 $prod_image_info       = App\Helpers\MyHelper::getProductImage($product->product_id);
-										 $product_info          = App\Helpers\MyHelper::getProductInfo($product->product_id, ['id', 'name', 'short_desc', 'slug']);
+										 $product_info          = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug']);
 										 $dimension             = json_decode($product->dimension);
 
-										 $enc_order_product_id  = Crypt::encryptString($order->order_number.'-'.$product_info[0]['id']);
+										 $enc_order_product_id  = Crypt::encryptString($order->order_number.'-'.$product->product_id);
 
 										@endphp
 
