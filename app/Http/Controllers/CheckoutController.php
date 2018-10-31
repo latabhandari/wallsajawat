@@ -96,7 +96,7 @@ class CheckoutController extends Controller
 							    	case 1:
     							    				$discnt       = $record->discount;
     							    				$discount     = $cart_total * $discnt / 100;
-    							    				$total        = $cart_total - $cal_discount; 
+    							    				$total        = $cart_total - $discount; 
 
     							    				break;
 							    	case 2:
