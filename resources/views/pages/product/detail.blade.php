@@ -210,7 +210,7 @@
                  <textarea name="review" id="review" class="form-control" placeholder="Review"></textarea>
                </div>
                <div class="form-group">
-                 <input type="submit" name="submit" class="btn" value="Submit" id="submit" />
+                 <input type="submit" name="submit" class="btn" value="Submit" id="sbmtrt" />
                </div>
             </form>
         </div>
@@ -323,6 +323,8 @@
                           submitHandler: function()  {
                                                             let rating =  $('#star :selected').val();
                                                             let review =  $('#review').val();
+                                                            $("#sbmtrt").attr('disabled', true);
+
                                                             $.ajax({
                                                                      type: "POST",
                                                                      url: WallSajawat.getSitePath('rating'),
@@ -335,6 +337,8 @@
                                                                             location.href = location.href
                                                                           else
                                                                              alert('An error occured! Try again');
+
+                                                                             $("#sbmtrt").attr('disabled', false);
                                                                      }
 
                                                                  });
