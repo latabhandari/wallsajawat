@@ -173,7 +173,8 @@
   <div class="rating-form">
     <div class="row">
       <div class="col-sm-6">
-            <form>
+            <form name="rating" id="rating" action="#" method="post">
+              @csrf
               <div class="rating-box">
                 <div class="form-group row">
                   <div class="col-md-4">
