@@ -199,7 +199,7 @@ class CategoryController extends Controller
              //
              $status = ! $status;
              Categories::where('id', $id)->update(['status' => $status]);
-             return redirect()->route('category.index')->with('success','Category status changed successfully!');
+             return redirect()->route('categories.index')->with('success','Category status changed successfully!');
         }
 
 }
