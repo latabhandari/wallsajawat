@@ -35,7 +35,7 @@
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:200%;
+    font-size:150%;
     line-height:1.2;
     color:#ddd;
     
