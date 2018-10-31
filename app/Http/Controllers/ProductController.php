@@ -19,6 +19,7 @@ use App\Profile as Profile;
 use App\Wishlist as Wishlist;
 use Auth;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class ProductController extends Controller
 {
