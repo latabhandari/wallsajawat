@@ -73,13 +73,12 @@
                     $status_img   =  ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
                     $status_msg   =  ($data->status == 1) ? "inactive" : "active";
                     $categoryinfo =  MyHelper::getCategoryInfoById($data->id, ['name']);
-                    print_r($categoryinfo);
 
                   @endphp
 
                     <tr>
                       <td>{{ ++$i }}</td>
-                      <td>fsdf</td>
+                      <td>{{ $categoryinfo[0]['name'] }}</td>
                       <td>{{ $data->name }}</td>
                       <td>{{ $data->sku }}</td>
                       <td>Rs. {{ $data->price }}</td>
