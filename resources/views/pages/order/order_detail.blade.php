@@ -14,6 +14,7 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <style>
 .order-img img {width:120px;height:120px}
+ .btn.focus, .btn:focus, .btn:hover {color:#fff }
 </style>
 @endsection
 
