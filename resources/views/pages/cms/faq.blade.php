@@ -203,10 +203,10 @@
                 <div class="panel panel-default">
 			      	<div class="panel-heading">
 			        	<h4 class="panel-title">
-			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Do you ship overseas?</a>
+			          	  <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Do you ship overseas?</a>
 			        	</h4>
 					</div>
-			      <div id="collapse9" class="panel-collapse collapse">
+			      <div id="collapse10" class="panel-collapse collapse">
 			        <div class="panel-body">Yes, we do – to USA, UK, Middle East and the Far East, but shipping charges would be extra.</div>
 			      </div>
                  </div>
