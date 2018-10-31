@@ -21,7 +21,7 @@ class CreateRatingsTable extends Migration
 
             $table->unsignedInteger('product_id')->comment('Product Id');
 
-            $table->unsignedInteger('user_id')->comment('Product Id');
+            $table->unsignedInteger('user_id')->comment('User Id');
 
             $table->tinyInteger('rating')->unsigned()->comment('Rating');
 
