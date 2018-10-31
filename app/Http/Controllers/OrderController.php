@@ -12,6 +12,7 @@ use App\Helpers\MyHelper as MyHelper;
 use Cart;
 use Session;
 use App\Product as Product;
+use Illuminate\Support\Facades\Crypt;
 
 class OrderController extends Controller
 {

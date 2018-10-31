@@ -152,6 +152,10 @@
 										 $prod_image_info = App\Helpers\MyHelper::getProductImage($product->product_id);
 										 $product_info    = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug']);
 										 $dimension       = json_decode($product->dimension);
+
+										 $enc_order_id    = Crypt::encryptString($order->order_number]);
+
+
 										@endphp
 
 											<div class="row">
@@ -207,7 +211,7 @@
 														</div>
 														
 														<div class="col-sm-12 paddingLeftRght0 overhidden">
-															<a href="{{ route('product.detail.rating', [$product_info[0]['slug'], $order->order_number]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
+															<a href="{{ route('product.detail.rating', [$enc_order_id, $order->order_number]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
 														</div>
 													</div>
 												</div>
