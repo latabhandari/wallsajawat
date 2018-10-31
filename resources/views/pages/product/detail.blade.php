@@ -337,7 +337,9 @@
                                                                      type: "POST",
                                                                      url: WallSajawat.getSitePath('rating'),
                                                                      dataType: "json",
-                                                                     data: {rating: rating, review: review, encrypt_id: {{ last(request()->segments()) }} },
+                                                                     data: {rating: rating, review: review, encrypt_id: '{{ last(request()->segments()) }}' },
+
+
                                                                      success: function (resp) {
 
                                                                           $("#cal_price").text("INR " + resp.price);
