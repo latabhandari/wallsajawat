@@ -184,11 +184,18 @@
                     <div class="rating-star">
                       <div class="row">
                         <div class="col-md-8">
-                          <i class="fa fa-star-o" ></i>
+                          <!-- <i class="fa fa-star-o" ></i>
                           <i class="fa fa-star-o"></i>
                           <i class="fa fa-star-o"></i>
                           <i class="fa fa-star-o"></i>
-                          <i class="fa fa-star-o"></i>
+                          <i class="fa fa-star-o"></i>-->
+                          <select name="star" id="star">
+                             <option value="1">1 star</option>
+                             <option value="2">2 star</option>
+                             <option value="3">3 star</option>
+                             <option value="4">4 star</option>
+                             <option value="5">5 star</option>
+                          </select>
                         </div>
                         <div class="col-md-4">
                           <span>Rate it!</span>
@@ -200,10 +207,10 @@
                </div>
 
                <div class="form-group">
-                 <textarea name="review" class="form-control" placeholder="Review"></textarea>
+                 <textarea name="review" id="review" class="form-control" placeholder="Review"></textarea>
                </div>
                <div class="form-group">
-                 <input type="submit" name="" class="btn" value="Submit">
+                 <input type="submit" name="submit" class="btn" value="Submit" id="submit" />
                </div>
             </form>
         </div>
