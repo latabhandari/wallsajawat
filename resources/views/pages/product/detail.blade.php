@@ -331,7 +331,7 @@
                           submitHandler: function()  {
                                                             let rating =  $('#star :selected').val();
                                                             let review =  $('#review').val();
-                                                            $("#sbmtrt").attr('disabled', true);
+                                                            $("#sbmtrt").attr({'disabled': true, 'value': '...'});
 
                                                             $.ajax({
                                                                      type: "POST",
@@ -341,12 +341,12 @@
 
                                                                      success: function (resp) {
 
-                                                                          if (resp.status == 'success')
-                                                                            window.location.reload();
-                                                                          else
-                                                                             alert('An error occured! Try again');
+                                                                        if (resp.status == 'success')
+                                                                          window.location.reload();
+                                                                        else
+                                                                          alert('An error occured! Try again');
 
-                                                                             $("#sbmtrt").attr('disabled', false);
+                                                                          $("#sbmtrt").attr({'disabled': false, 'value': 'Submit'});
                                                                      }
 
                                                                  });
