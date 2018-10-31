@@ -207,7 +207,7 @@
 														</div>
 														
 														<div class="col-sm-12 paddingLeftRght0 overhidden">
-															<a href="{{ route('product.detail.rating', [$product_info[0]['slug'], $order->order_number]) }}"><button class="btn reviewproduct-btn" type="button"><a href="">Write a product review</a></button></a>
+															<a href="{{ route('product.detail.rating', [$product_info[0]['slug'], $order->order_number]) }}"><button class="btn reviewproduct-btn" type="button">Write a product review</button></a>
 														</div>
 													</div>
 												</div>
