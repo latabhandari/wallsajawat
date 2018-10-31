@@ -235,7 +235,7 @@
                   <div class="col-md-8">
                     <div class="rating-star">
                       <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-9">
                           <!-- <i class="fa fa-star-o" ></i>
                           <i class="fa fa-star-o"></i>
                           <i class="fa fa-star-o"></i>
@@ -258,7 +258,7 @@
                           </fieldset>
 
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                           <span>Rate it!</span>
                         </div>
                       </div>
@@ -282,6 +282,7 @@
     @endphp
 
     <!-- end product-description -->
+
     <div class="comment-block">
 
         @if(session()->has('ratingsuc'))
