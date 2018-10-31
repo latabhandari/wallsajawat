@@ -207,7 +207,7 @@
 														</div>
 														
 														<div class="col-sm-12 paddingLeftRght0 overhidden">
-															<button class="btn reviewproduct-btn" type="submit"><a href="">Write a product review</a></button>
+															<a href="{{ route('product.detail.rating', $order->order_id) }}"><button class="btn reviewproduct-btn" type="button"><a href="">Write a product review</a></button></a>
 														</div>
 													</div>
 												</div>

@@ -32,8 +32,8 @@ class OrderController extends Controller
      */
     public function store(Request $request)
         {
-			    $discount 					 = 	session('discount');
-			    $order_number                =  rand(11111111, 99999999);
+			    $discount 					         = 	session('discount');
+			    $order_number                =  rand(111111111, 999999999);
         	$order['order_number']       =  $order_number;
         	$order['user_id']            =  Auth::user()->id;
         	$order['coupon']             =  session('coupon');
