@@ -388,7 +388,7 @@
                                        },
 
                           submitHandler: function()  {
-                                                            let rating =  $('input[name=start]:checked', '#ratingfrm').val();
+                                                            let rating =  $('input[name=star]:checked', '#ratingfrm').val();
                                                             let review =  $('#review').val();
                                                             $("#sbmtrt").attr({'disabled': true, 'value': '...'});
 
