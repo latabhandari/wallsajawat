@@ -13,6 +13,9 @@ use App\States as States;
 use App\User as User;
 use App\Profile as Profile;
 
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Contracts\Encryption\DecryptException;
+
 class ProfileController extends Controller
 {
     //
@@ -122,7 +125,7 @@ class ProfileController extends Controller
                }
            else
               {
-                  $arr = ['status' => 'failure'] 
+                  $arr = ['status' => 'failure']; 
               }
                   echo json_encode($arr);
         }
