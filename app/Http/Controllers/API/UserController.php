@@ -274,7 +274,7 @@ class UserController extends Controller
 	  {
 	  	   $search    = request('search');
 	  	   $products  = DB::table('products')
-                            ->select('products.id', 'products.name', 'products.slug', 'products.price', DB::raw('products.group_concat(id) as ids'))
+                            ->select('products.id', 'products.name', 'products.slug', 'products.price', DB::raw('group_concat(id) as ids'))
                             ->where('name', 'like', '"%'.$search.'%"')
                             ->limit(15)
                             ->get();
