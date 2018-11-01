@@ -45,7 +45,7 @@ class CheckoutController extends Controller
 
       public function checkoutStore(Request $request)
            {
-               request()->validate(['name' => 'required', 'address' => 'required', 'city_id' => 'required', 'state_id' => 'required', 'postal_code' => 'required|digits:6|numeric', 'mobile' => 'required']);
+               request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city_id' => 'required|string|max:255', 'state_id' => 'required|string|max:255', 'postal_code' => 'required|numeric|digits:6', 'mobile' => 'required|numeric|digits:6']);
 
                $params                             =    $request->all();
 
