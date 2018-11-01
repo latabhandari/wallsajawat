@@ -92,7 +92,7 @@ span.info p {font-size:12px;line-height:20px}
 									<div class="title hidden-md hidden-sm hidden-lg">
 										<h4>Item Price</h4>
 									</div>
-									<i class="fa fa-inr">&nbsp;</i> {{ round($row->price) }}</div>
+									<i class="fa fa-inr">&nbsp;</i>{{ round($row->price) }}</div>
 								<div class="col-sm-2">
 									<div class="title hidden-md hidden-sm hidden-lg">
 										<h4>Quantity</h4>
@@ -109,7 +109,7 @@ span.info p {font-size:12px;line-height:20px}
 									<div class="title hidden-md hidden-sm hidden-lg">
 										<h4>Action</h4>
 									</div>
-									<i class="fa fa-inr">&nbsp;</i> {{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
+									<i class="fa fa-inr">&nbsp;</i>{{ number_format((float) ($row->price * $row->qty), 2, '.', '') }}</div>
 							</div>
 						</div>
 					
