@@ -22,7 +22,7 @@ class MyHelper
    	     public static function getProductRating($id = '') 
    	     {
 				$table  = env('DB_PREFIX', '') . (new Rating())->getTable();
-				$query  = DB::select('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ?', array($id))->get()->toArray();
+				$query  = DB::select('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ?', array($id))->toArray();
 				print_r($query); die;
 
 				$count   = $query[0]->count;
