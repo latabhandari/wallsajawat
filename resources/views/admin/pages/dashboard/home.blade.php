@@ -68,7 +68,7 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3>{{  $total_products_month }}</h3>
-              <p>Total Products (This Month)</p>
+              <p>Upload Products (This Month)</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
