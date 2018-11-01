@@ -34,7 +34,7 @@ class DashboardController extends Controller
             $new_users               =  User::where('role_id', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
             $total_users             =  User::where('role_id', 0)->count();
 
-            $total_orders_month      =  Order::where('timestamp', '>=', $start_time)->where('timestamp', '<=', $end_time)->count();
+            $total_orders_month      =  Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
             $total_orders            =  Order::count();
 
 
