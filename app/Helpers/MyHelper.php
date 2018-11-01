@@ -26,7 +26,10 @@ class MyHelper
 
 				$count   = $query[0]->count;
 				$rating  = $query[0]->rating;
+				if ( ! empty($count))
 				return  floor($rating / $count);
+			     else
+			    return ;
    	     }
 
    	     public static function checkRatingExist($order_num = '', $product_id = '')
