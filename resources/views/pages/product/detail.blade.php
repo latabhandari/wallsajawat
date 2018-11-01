@@ -129,6 +129,9 @@
               $order_this_month = App\Helpers\MyHelper::orderThisMonth($detail->id);
               if ($order_this_month)
               echo '<p class="cag-title">'.$order_this_month.' order(s) this month</p>';
+
+              $prating = App\Helpers\MyHelper::getProductRating($detail->id);
+              
             @endphp
             
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
@@ -137,6 +140,9 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="rating-star">
+
+
+
                     <ul>
                       <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
                       <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
@@ -145,6 +151,8 @@
                       <li><i class="fa fa-star-half-full " aria-hidden="true"></i></li>
                     </ul>
                      <span>1</span>
+
+
                     |<span>Style #{{ $detail->sku }}</span>
                   </div>
                 </div>
@@ -157,7 +165,7 @@
             </div>
            
             <form name="product" id="product" action="{{ route('product.cart') }}" method="post">
-            	@csrf
+            	  @csrf
 
           			<div class="form-element-50-50">        
           				<ul>
