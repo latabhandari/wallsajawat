@@ -121,7 +121,7 @@ span.info p {font-size:12px;line-height:20px}
 									<span>Total</span>
 								</div>
 								<div class="col-sm-2">
-									<i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}
+									<i class="fa fa-inr">&nbsp;</i>{{ Cart::total() }}
 								</div>
 							</div>
 						</div>
