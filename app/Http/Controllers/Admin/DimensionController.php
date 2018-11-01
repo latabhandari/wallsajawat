@@ -40,7 +40,7 @@ class DimensionController extends Controller
     public function store(Request $request)
     {
         //
-         request()->validate(['name' => 'required', 'width' => 'required', 'height' => 'required']);
+         request()->validate(['name' => 'required', 'width' => 'required|numeric', 'height' => 'required|numeric']);
 
          $params                             =    $request->all();
          $fields['name']                     =    $params['name'];
@@ -88,7 +88,7 @@ class DimensionController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'width' => 'required', 'height' => 'required']);
+        request()->validate(['name' => 'required', 'width' => 'required|numeric', 'height' => 'required|numeric']);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
