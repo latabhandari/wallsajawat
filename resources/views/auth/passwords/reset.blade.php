@@ -33,7 +33,7 @@
                             
 
                             <div class="col-md-12">
-                                <input id="email" type="email" placeholder="Address" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}">
+                                <input id="email" type="email" placeholder="E-mail Address" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="error" role="alert">
@@ -44,7 +44,6 @@
                         </div>
 
                         <div class="form-group row">
-                          
 
                             <div class="col-md-12">
                                 <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
@@ -58,9 +57,8 @@
                         </div>
 
                         <div class="form-group row">
-                           
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
