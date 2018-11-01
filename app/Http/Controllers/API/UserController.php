@@ -21,8 +21,6 @@ use App\Categories as Categories;
 use App\Product as Products;
 use App\ProductImages as ProductImages;
 
-use DB;
-
 class UserController extends Controller 
 {
 
