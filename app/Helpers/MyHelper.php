@@ -21,8 +21,8 @@ class MyHelper
    {
    	     public static function getProductRating($id = '') 
    	     {
-				$count  = Rating::where(['product_id' => $product_id])->count();
-				$rating = Rating::where(['product_id' => $product_id])->sum('rating');
+				//$count  = Rating::where(['product_id' => $product_id])->count();
+				//$rating = Rating::where(['product_id' => $product_id])->sum('rating');
 
 				$table  = (new Rating())->getTable();
 				$query  = DB::select('SELECT count(*) as count, sum(`rating`) FROM ' . $table. ' WHERE product_id = ?', array($id));
