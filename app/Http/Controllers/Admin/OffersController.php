@@ -43,7 +43,7 @@ class OffersController extends Controller
     {
          //
 
-         request()->validate(['coupon' => 'required|unique:offers,coupon', 'type' => 'required', 'discount' => 'required', 'start_date' => 'required', 'end_date' => 'required']);
+         request()->validate(['coupon' => 'required|unique:offers,coupon', 'type' => 'required', 'discount' => 'required|numeric', 'start_date' => 'required', 'end_date' => 'required']);
  
          $params                            =    $request->all();
 

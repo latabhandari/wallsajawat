@@ -45,7 +45,7 @@ class CheckoutController extends Controller
 
       public function checkoutStore(Request $request)
            {
-               request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city_id' => 'required|string|max:255', 'state_id' => 'required|string|max:255', 'postal_code' => 'required|numeric|digits:6', 'mobile' => 'required|numeric|digits:6']);
+               request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city_id' => 'required|string|max:255', 'state_id' => 'required|string|max:255', 'postal_code' => 'required|numeric|digits:6', 'mobile' => 'required|numeric|digits:10']);
 
                $params                             =    $request->all();
 
@@ -111,7 +111,7 @@ class CheckoutController extends Controller
 						}
 					else
 						{
-							$arr = ["status" => false, "msg" => "coupon code does not exist!"];
+							            $arr = ["status" => false, "msg" => "coupon code does not exist!"];
 						}
               	 }
               else
