@@ -21,6 +21,7 @@ use App\Categories as Categories;
 use App\Product as Products;
 use App\ProductImages as ProductImages;
 
+
 class UserController extends Controller 
 {
 
@@ -275,7 +276,23 @@ class UserController extends Controller
 	  	   $products  = DB::table('products')
                             ->select('products.id', 'products.name', 'products.slug', 'products.price')
                             ->where('name', 'like', '%'.$search.'%')
+                            ->limit(15)
                             ->get();
-           return response()->json(['success' => $products, 'udata' => 1]);  
+                            
+           $products_json = [];
+           if (count($products))
+            {
+            	foreach ($products as $product) 
+        		 {
+					 $image 			 = ProductImages::select('image')->where('product_id', $id)->first();
+					 $product['id']      = $product->id;
+					 $product['name']    = $product->name;
+					 $product['price']   = $product->price;
+					 $product['slug']    = $product->slug;
+					 $product['img_url'] = asset('catalog/product/'.$image->image);
+					 $products_json[]    = $product;
+        		 }
+            }                 
+           return response()->json(['success' => $products_json]);  
 	  }
 }
