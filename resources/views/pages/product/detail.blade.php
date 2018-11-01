@@ -17,7 +17,7 @@
 span.short_desc p{font-size:13px}
 #gallery img { width:80px;height:80px }
 .rating {float:left}
-.lnehght22{line-height:22px}
+.lnehght24{line-height:24px !important}
 .rating:not(:checked) > input {visibility:hidden;top:-9999px;clip:rect(0,0,0,0)}
 .rating:not(:checked) > label {float:right;width:1em;padding:0 .1em;overflow:hidden;white-space:nowrap;cursor:pointer;font-size:150%;line-height:1.2;color:#ddd}
 .rating:not(:checked) > label:before {content:'★ ';}
@@ -97,7 +97,7 @@ span.short_desc p{font-size:13px}
                        {
                     @endphp
                     <ul>
-                      {!! str_repeat('<li class=\'lnehght22\'><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
+                      {!! str_repeat('<li class=\'lnehght24\'><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
                     </ul>
                      <span>{{ $prating }}</span>
                     |
