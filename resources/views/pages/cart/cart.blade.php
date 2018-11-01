@@ -58,7 +58,7 @@ span.info p {font-size:12px;line-height:20px}
 								<div class="col-sm-4 hidden-xs">Product</div>
 								<div class="col-sm-2 hidden-xs">Item Price</div>
 								<div class="col-sm-2 hidden-xs">Quantity</div>
-								<div class="col-sm-2 hidden-xs">Action</div>
+								<div class="col-sm-2 hidden-xs">Total</div>
 							</div>
 						</div>
 
