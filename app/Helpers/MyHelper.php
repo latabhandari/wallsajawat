@@ -22,7 +22,6 @@ class MyHelper
    	     public static function getProductRating($id = '') 
    	     {
 				$table  =  DB::getTablePrefix() . (new Rating())->getTable();
-				echo $table; die;
 				$query  = DB::selectOne('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ? LIMIT 1', array($id));
 
 				$count   = $query->count;
