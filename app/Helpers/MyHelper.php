@@ -21,13 +21,12 @@ class MyHelper
    {
    	     public static function getProductRating($id = '') 
    	     {
-				//$count  = Rating::where(['product_id' => $product_id])->count();
-				//$rating = Rating::where(['product_id' => $product_id])->sum('rating');
-
 				$table  = env('DB_PREFIX', '') . (new Rating())->getTable();
 				$query  = DB::select('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ?', array($id))->first();
 
-				print_r($query); die;
+				$count   = $query[0]->count;
+				$rating  = $query[0]->rating;
+				return  floor($rating / $count);
    	     }
 
    	     public static function checkRatingExist($order_num = '', $product_id = '')
