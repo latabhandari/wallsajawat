@@ -141,20 +141,19 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="rating-star">
-
-
-
+                    @php
+                     if ($prating)
+                       {
+                    @endphp
                     <ul>
-                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star-half-full " aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star-half-full " aria-hidden="true"></i></li>
+                      {!! str_repeat('<li><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
                     </ul>
-                     <span>1</span>
-
-
-                    |<span>Style #{{ $detail->sku }}</span>
+                     <span>{{ $prating }}</span>
+                    |
+                    @php
+                     }
+                    @endphp
+                    <span>Style #{{ $detail->sku }}</span>
                   </div>
                 </div>
                 <div class="col-sm-12">Price:&nbsp;<i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{ $detail->price }}</div>
