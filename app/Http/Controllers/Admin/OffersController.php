@@ -42,7 +42,6 @@ class OffersController extends Controller
     public function store(Request $request)
     {
          //
-
          request()->validate(['coupon' => 'required|unique:offers,coupon', 'type' => 'required', 'discount' => 'required|numeric', 'start_date' => 'required', 'end_date' => 'required']);
  
          $params                            =    $request->all();
