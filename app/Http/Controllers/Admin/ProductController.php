@@ -62,8 +62,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-
-        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required|numeric', 'price' => 'required|numeric', 'roll_id' => 'required', 'images' => 'required', 'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg']);
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required|numeric', 'price' => 'required|numeric', 'roll_id' => 'required', 'images' => 'required', 'images.*' => 'image|mimes:jpeg,png,jpg,gif']);
 
         $params                            =    $request->all();
 
@@ -142,7 +141,11 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $check_image_exist = ProductImages::where('product_id', $id)->count();
+        if ($check_image_exist)
         request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required|numeric', 'price' => 'required|numeric', 'roll_id' => 'required']);
+           else
+        request()->validate(['categories'  => 'required|array|min:1', 'name' => 'required', 'sku' => 'required', 'stock_item' => 'required|numeric', 'price' => 'required|numeric', 'roll_id' => 'required', 'images' => 'required', 'images.*' => 'image|mimes:jpeg,png,jpg,gif']);
 
         $params                             =    $request->all();
         $fields['name']                     =    $params['name'];
