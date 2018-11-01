@@ -278,13 +278,13 @@ class UserController extends Controller
                             ->where('name', 'like', '%'.$search.'%')
                             ->limit(15)
                             ->get();
-                            
+
            $products_json = [];
            if (count($products))
             {
             	foreach ($products as $product) 
         		 {
-					 $image 			 = ProductImages::select('image')->where('product_id', $id)->first();
+					 $image 			 = ProductImages::select('image')->where('product_id', $product->id)->first();
 					 $product['id']      = $product->id;
 					 $product['name']    = $product->name;
 					 $product['price']   = $product->price;
