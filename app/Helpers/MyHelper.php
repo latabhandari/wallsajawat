@@ -23,10 +23,9 @@ class MyHelper
    	     {
 				$table  = env('DB_PREFIX', '') . (new Rating())->getTable();
 				$query  = DB::selectOne('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ? LIMIT 1', array($id));
-				print_r($query); die;
 
-				$count   = $query[0]->count;
-				$rating  = $query[0]->rating;
+				$count   = $query->count;
+				$rating  = $query->rating;
 				if ( ! empty($count))
 				return  floor($rating / $count);
 			     else
