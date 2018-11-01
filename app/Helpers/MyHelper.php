@@ -19,7 +19,7 @@ use App\States as State;
 use App\Rating as Rating;
 class MyHelper 
    {
-   	     public function getProductRating($id = '') 
+   	     public static function getProductRating($id = '') 
    	     {
 				$count  = Rating::where(['product_id' => $product_id])->count();
 				$rating = Rating::where(['product_id' => $product_id])->sum('rating');
@@ -27,7 +27,7 @@ class MyHelper
 				$table  = (new Rating())->getTable();
 				$query  = DB::select('SELECT count(*) as count, sum(`rating`) FROM ' . $table. ' WHERE product_id = ?', array($id));
 
-				print_r($query);
+				print_r($query); die;
    	     }
 
    	     public static function checkRatingExist($order_num = '', $product_id = '')
