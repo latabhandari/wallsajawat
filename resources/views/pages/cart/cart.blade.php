@@ -58,7 +58,7 @@ span.info p {font-size:12px;line-height:20px}
 								<div class="col-sm-4 hidden-xs">Product</div>
 								<div class="col-sm-2 hidden-xs">Item Price</div>
 								<div class="col-sm-2 hidden-xs">Quantity</div>
-								<div class="col-sm-2 hidden-xs">Total</div>
+								<div class="col-sm-2 hidden-xs">Sub Total</div>
 							</div>
 						</div>
 
@@ -118,7 +118,7 @@ span.info p {font-size:12px;line-height:20px}
 						<div class="subtotal">
 							<div class="row">
 								<div class="col-sm-10 text-right">
-									<span>Subtotal</span>
+									<span>Total</span>
 								</div>
 								<div class="col-sm-2">
 									<i class="fa fa-inr">&nbsp;</i> {{ Cart::total() }}
