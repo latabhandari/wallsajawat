@@ -282,13 +282,13 @@ class UserController extends Controller
            $products_json = [];
            if (count($products))
             {
-            	foreach ($products as $product) 
+            	foreach ($products as $pr) 
         		 {
-					 $image 			 = ProductImages::select('image')->where('product_id', $product->id)->first();
-					 $product['id']      = $product->id;
-					 $product['name']    = $product->name;
-					 $product['price']   = $product->price;
-					 $product['slug']    = $product->slug;
+					 $image 			 = ProductImages::select('image')->where('product_id', $pr->id)->first();
+					 $product['id']      = $pr->id;
+					 $product['name']    = $pr->name;
+					 $product['price']   = $pr->price;
+					 $product['slug']    = $pr->slug;
 					 $product['img_url'] = asset('catalog/product/'.$image->image);
 					 $products_json[]    = $product;
         		 }
