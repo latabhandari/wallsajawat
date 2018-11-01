@@ -129,10 +129,7 @@
               $order_this_month = App\Helpers\MyHelper::orderThisMonth($detail->id);
               if ($order_this_month)
               echo '<p class="cag-title">'.$order_this_month.' order(s) this month</p>';
-
               $prating = App\Helpers\MyHelper::getProductRating($detail->id);
-              echo $prating;
-
             @endphp
             
             <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
