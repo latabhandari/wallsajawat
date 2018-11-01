@@ -33,5 +33,7 @@ Route::post('details', 'API\UserController@details');
 Route::post('edit_profile', 'API\UserController@edit_profile');
 Route::post('change_password', 'API\UserController@change_password');
 
+Route::get('search', 'API\UserController@search');
+
 });
 ?>

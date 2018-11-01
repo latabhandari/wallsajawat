@@ -21,14 +21,12 @@ use App\Categories as Categories;
 use App\Product as Products;
 use App\ProductImages as ProductImages;
 
-
-
 class UserController extends Controller 
 {
 
-public $successStatus = 200;
+    public $successStatus = 200;
 
-/** 
+    /** 
      * login api 
      * 
      * @return \Illuminate\Http\Response 
@@ -134,8 +132,7 @@ public $successStatus = 200;
 			$user2 = Auth::user(); 
 			$user_id = $user2->id;
 			Profile::where('user_id', $user2->id)->update(['device_token' => $input['device_token']]);
-			return response()->json(['success' => [['token' => $user2->createToken('MyApp')->accessToken, 'name'=>$user2->name]], 'udata' => 1]); 
-
+			return response()->json(['success' => [['token' => $user2->createToken('MyApp')->accessToken, 'name'=>$user2->name]], 'udata' => 1]);
 		}
 		
     }
@@ -271,4 +268,9 @@ public $successStatus = 200;
 		$categories = Categories::where([['status','=',1],['parent_id','=', $parent_id]])->select('name', 'id', 'icon')->get();
 		return response()->json(['success' => $categories, 'udata' => 1]);       
 	}
+
+	public function search()
+	  {
+	  	   $search = request('search');
+	  }
 }
