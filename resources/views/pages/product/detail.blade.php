@@ -146,7 +146,7 @@ span.short_desc p{font-size:13px}
           			</div>
 
                 <div class="">
-                  <p><strong>Quantity:</strong> Please select Quantity.</p>
+                  <p><strong>Quantity:</strong> Please Select Quantity.</p>
                   <div class="row">
                     <div class="col-sm-12">
                       <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
