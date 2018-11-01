@@ -24,7 +24,7 @@ class MyHelper
 				//$count  = Rating::where(['product_id' => $product_id])->count();
 				//$rating = Rating::where(['product_id' => $product_id])->sum('rating');
 
-				$table  = (new Rating())->getTable();
+				$table  = env('DB_PREFIX', '') . (new Rating())->getTable();
 				$query  = DB::select('SELECT count(*) as count, sum(`rating`) FROM ' . $table. ' WHERE product_id = ?', array($id));
 
 				print_r($query); die;
