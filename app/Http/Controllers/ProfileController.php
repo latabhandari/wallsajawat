@@ -58,13 +58,13 @@ class ProfileController extends Controller
 
          if ( ! empty($params['password']) OR ! empty($params['password_confirmation']))
            {
-             request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city' => 'required|string|max:255', 'state' => 'required|string|max:255', 'pin' => 'required|numeric|digits:6', 'mobile' => 'required|numeric|digits:10', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6']);
+             request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city' => 'required|string|max:255', 'state' => 'required|string|max:255', 'pin' => 'required|numeric|digits:6', 'mobile' => 'required|numeric|digits:10', 'password' => 'required|min:6|confirmed', 'password_confirmation' => 'required|min:6'], ['']);
 
              $fields['password']           =    Hash::make($params['password']);
            }
         else
            {
-             request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city' => 'required|string|max:255', 'state' => 'required|string|max:255', 'pin' => ' required|numeric|digits:6', 'mobile' => 'required|numeric|numeric|digits:10']);
+             request()->validate(['name' => 'required|string|max:255|regex:/^[a-zA-Z]+$/u', 'address' => 'required', 'city' => 'required|string|max:255', 'state' => 'required|string|max:255', 'pin' => ' required|numeric|digits:6', 'mobile' => 'required|numeric|numeric|digits:10'], ['name.reqex' => 'sfsdf']);
            }         
 
          $fields['name']                    =    $params['name'];
