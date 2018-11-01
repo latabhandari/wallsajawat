@@ -63,7 +63,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
-         request()->validate(['name' => 'required', 'slug' => 'required', 'status' => 'required']);
+         request()->validate(['name' => 'required|string|regex:/^[a-zA-Z]+$/u', 'slug' => 'required', 'status' => 'required']);
 
          $params                            =    $request->all();
 
@@ -133,7 +133,8 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        request()->validate(['name' => 'required', 'slug' => 'required']);
+        
+        request()->validate(['name' => 'required|string|regex:/^[a-zA-Z]+$/u', 'slug' => 'required']);
 
         $params                             =    $request->all();
         //$fields['parent_id']                =    $params['parent'];
