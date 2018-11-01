@@ -272,5 +272,6 @@ class UserController extends Controller
 	public function search()
 	  {
 	  	   $search = request('search');
+	  	   echo $search;
 	  }
 }
