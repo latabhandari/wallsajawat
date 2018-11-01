@@ -274,7 +274,7 @@ class UserController extends Controller
 	  	   $search    = request('search');
 	  	   $products  = DB::table('products')
                             ->select('products.id', 'products.name', 'products.slug', 'products.price')
-                            ->where('name', 'like', '%'.$search_param.'%')
+                            ->where('name', 'like', '%'.$search.'%')
                             ->get();
            return response()->json(['success' => $products, 'udata' => 1]);  
 	  }
