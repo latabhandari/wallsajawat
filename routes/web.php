@@ -80,7 +80,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/orderstore', 'OrderController@store')->name('order.store');
     Route::get('/orders', 'OrderController@order')->name('orders');
 
-    Route::post('/search', 'HomeController@search')->name('search');
+    Route::get('/search', 'HomeController@search')->name('search');
 
     Route::get('/signout', 'HomeController@logout')->name('signout');
     
