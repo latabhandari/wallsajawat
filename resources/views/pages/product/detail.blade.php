@@ -25,6 +25,7 @@ span.short_desc p{font-size:13px}
 .rating:not(:checked) > label:hover,.rating:not(:checked) > label:hover ~ label {color:orange}
 .rating > input:checked + label:hover,.rating > input:checked + label:hover ~ label,.rating > input:checked ~ label:hover,.rating > input:checked ~ label:hover ~ label,.rating > label:hover ~ input:checked ~ label {color:#ea0}
 .rating > label:active {position:relative;top:2px;left:2px}
+.padd0{padding-left:0px !important;}
 </style>
 @endsection
 @section('content')
@@ -100,11 +101,15 @@ span.short_desc p{font-size:13px}
                       {!! str_repeat('<li class=\'lnehght24\'><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
                     </ul>
                      <span>{{ $prating }}</span>
-                    |
+                    |<span>Style #{{ $detail->sku }}</span>
                     @php
-                     }
+                     } else {
                     @endphp
-                    <span>Style #{{ $detail->sku }}</span>
+                        <span class="padd0">Style #{{ $detail->sku }}</span>
+                    @php
+                      }
+                    @endphp
+                    
                   </div>
                 </div>
                 <div class="col-sm-12">Price:&nbsp;<i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{ $detail->price }}</div>
