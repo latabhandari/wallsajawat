@@ -122,12 +122,12 @@ class MyHelper
    	       			return $record->first();
    	       		else
    	       			 {
-   	       			 	$obj = new stdClass();
+   	       			 	$obj = new \stdClass();
 						$obj->image = '';
 						return $obj;
    	       			 }
    	       }
-   	       
+
 		  public static function getSessionValue($key = null)
 		   {
 		  	  	return Session::get($key);
