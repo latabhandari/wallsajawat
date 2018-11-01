@@ -56,13 +56,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $messages = [
-                      'unique' => 'The :attribute you entered already belongs to an existing account'
+                      'unique' => 'The :attribute you entered already belongs to an existing account',
+                      'regex' => 'Password field contains 1 uppercase letter, 1 lowercase letter and 1 special character'
                     ];
 
         return Validator::make($data, [
           'name' => 'required|string|max:255',
           'email' => 'required|string|email|max:255|unique:users',
-          'password' => 'required|string|min:6|regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/|confirmed',
+          'password' => 'required|string|min:6|regex:^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!?]).*$|confirmed',
           'g-recaptcha-response' => 'required|captcha'
         ],  $messages);
     }
