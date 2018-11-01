@@ -65,20 +65,6 @@
                                }
                       @endphp
 
-                       @php
-                                $destroy_role = MyHelper::getPermission('destroy_role');
-                                if ( ! empty($destroy_role)) {
-                      @endphp
-
-
-                        {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['roles.destroy', $data->id]]) !!}
-                        <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button></td>
-                        {!! Form::close() !!}
-
-                         @php
-                                }
-                         @endphp
-
                       </td>
                 </tr>
 
