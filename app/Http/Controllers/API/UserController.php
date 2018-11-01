@@ -21,6 +21,8 @@ use App\Categories as Categories;
 use App\Product as Products;
 use App\ProductImages as ProductImages;
 
+use DB;
+
 class UserController extends Controller 
 {
 
@@ -271,7 +273,11 @@ class UserController extends Controller
 
 	public function search()
 	  {
-	  	   $search = request('search');
-	  	   echo $search;
+	  	   $search    = request('search');
+	  	   $products  = DB::table('products')
+                            ->select('products.id', 'products.name', 'products.slug', 'products.price')
+                            ->where('name', 'like', '%'.$search_param.'%')
+                            ->get();
+           return response()->json(['success' => $products, 'udata' => 1]);  
 	  }
 }
