@@ -17,6 +17,7 @@ use App\City as City;
 use App\Newsletter as Newsletter;
 use App\Contact as Contact;
 use App\Product as Product;
+use App\Order as Order;
 
 class DashboardController extends Controller
 {
@@ -33,9 +34,16 @@ class DashboardController extends Controller
             $new_users               =  User::where('role_id', 0)->where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
             $total_users             =  User::where('role_id', 0)->count();
 
+            $total_orders_month      =  Order::where('created_timestamp', '>=', $start_time)->where('created_timestamp', '<=', $end_time)->count();
+            $total_orders            =  Order::count();
+
+
             $total_category          =  Category::where('parent_id', '=', 0)->count();
-            $total_sub_category      =  Category::where('parent_id', '!=', 0)->count();            
-            return view('admin.pages.dashboard.home', compact('total_products_month', 'total_products', 'total_users', 'new_users', 'total_category', 'total_sub_category'));
+            $total_sub_category      =  Category::where('parent_id', '!=', 0)->count();    
+
+
+
+            return view('admin.pages.dashboard.home', compact('total_products_month', 'total_products', 'total_users', 'new_users', 'total_category', 'total_sub_category', 'total_orders_month', 'total_orders'));
         }
         
     public function subscribes()
