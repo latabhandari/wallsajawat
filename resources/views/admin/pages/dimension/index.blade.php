@@ -48,10 +48,7 @@
                   <td>{{ date('D, j M Y h:i a', $data->created_at_timestamp) }}</td>
                   <td>
                      <a class="btn btn-primary" href="{{ route('dimension.edit',$data->id) }}"><span class="fa fa-edit"></span></a>
-                     {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['dimension.destroy', $data->id]]) !!}
-                    <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                    {!! Form::close() !!}
-				  </td>
+				          </td>
                 </tr>
 
                 @endforeach
