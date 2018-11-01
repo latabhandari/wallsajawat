@@ -56,7 +56,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $messages = [
-                      'unique' => 'The :email you entered already belongs to an existing account'
+                      'unique' => 'The :attribute you entered already belongs to an existing account'
                     ];
 
         return Validator::make($data, [
