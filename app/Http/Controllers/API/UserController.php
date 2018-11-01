@@ -273,11 +273,9 @@ class UserController extends Controller
 	public function search()
 	  {
 	  	   $search    = request('search');
-	  	   $products  = DB::table('products')
-                            ->select(DB::raw('group_concat(id) as ids'), 'products.id', 'products.name', 'products.slug', 'products.price')
-                            ->where('name', 'like', '"%'.$search.'%"')
-                            ->limit(15)
-                            ->get();
+            $table    = DB::getTablePrefix() . (new Products())->getTable();
+			$query    = DB::select('SELECT group_concat(id) as ids, `id`, `name`, `slug`, `price` FROM ' . $table. ' WHERE name LIKE :search', array(':search' => "'%'.$search.'%"));
+
            print_r($products); die;
 
            $products_json = [];
