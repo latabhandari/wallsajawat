@@ -42,7 +42,7 @@ class RolesController extends Controller
     {
         //
 
-         request()->validate(['name'  => 'required']);
+         request()->validate(['name'  => 'required|string|regex:/^[a-zA-Z]+$/u']);
 
          $params    =  $request->all();
 
@@ -216,7 +216,7 @@ class RolesController extends Controller
     {
         //
          
-         request()->validate(['name'  => 'required']);
+         request()->validate(['name'  => 'required|string|regex:/^[a-zA-Z]+$/u']);
 
          $params    =  $request->all();
      
