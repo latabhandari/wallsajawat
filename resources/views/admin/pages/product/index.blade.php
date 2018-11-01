@@ -98,18 +98,6 @@
                            }
                         @endphp
 
-                        @php
-                              $destroy_product = MyHelper::getPermission('destroy_product');
-                              if ( ! empty($destroy_product)) {
-                        @endphp
-                         {!! Form::open(['style' => 'display:inline', 'method' => 'DELETE', 'route' => ['product.destroy', $data->id]]) !!}
-                           <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure ?')"><span class="fa fa-trash"></span></button>
-                         {!! Form::close() !!}
-
-                        @php
-                           }
-                        @endphp
-
     				          </td>
                     </tr>
 
