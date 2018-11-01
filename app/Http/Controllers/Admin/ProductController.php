@@ -27,7 +27,7 @@ class ProductController extends Controller
         if ( ! empty($category_id))
              {
                 $products   = DB::table('products')
-                                      ->select('products.id', 'products.name', 'products.slug', 'products.price', 'product_categories.category_id', 'products.page_title', 'products.status','products.sku')
+                                      ->select('products.id', 'products.name', 'products.slug', 'products.price', 'product_categories.category_id', 'products.page_title', 'products.status','products.sku', 'products.stock_item')
                                       ->join('product_categories', 'products.id', '=', 'product_categories.product_id')
                                       ->where('product_categories.category_id', $category_id)
                                       ->get();
