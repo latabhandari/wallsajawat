@@ -123,7 +123,7 @@ class MyHelper
    	       		else
    	       			 {
    	       			 	$obj = new \stdClass();
-						$obj->image = '';
+						$obj->image = 'default.jpg';
 						return $obj;
    	       			 }
    	       }
