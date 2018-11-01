@@ -276,6 +276,7 @@ class UserController extends Controller
 	  	   $products  = DB::table('products')
                             ->select('products.id', 'products.name', 'products.slug', 'products.price', DB::raw('group_concat(id) as ids'))
                             ->where('name', 'like', '"%'.$search.'%"')
+                            ->groupBy('id')
                             ->limit(15)
                             ->get();
            print_r($products); die;
