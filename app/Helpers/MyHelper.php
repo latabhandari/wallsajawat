@@ -121,8 +121,13 @@ class MyHelper
    	       		if ($record->count())
    	       			return $record->first();
    	       		else
-   	       			return $record->image = '';
+   	       			 {
+   	       			 	$obj = new stdClass();
+						$obj->image = '';
+						return $obj;
+   	       			 }
    	       }
+   	       
 		  public static function getSessionValue($key = null)
 		   {
 		  	  	return Session::get($key);
