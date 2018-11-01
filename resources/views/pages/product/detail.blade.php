@@ -1,7 +1,5 @@
 @extends('layouts.master')
-
 @section('title', $detail->name)
-
 @section('top_yield')
 <link href="{{ asset('build/assets/css/easyzoom.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ asset('build/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -15,65 +13,21 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <script src="{{ asset('build/assets/js/jquery.elevatezoom.min.js') }}" type="text/javascript"></script>
 <style>
-  .mrgntp{margin:10px 0 0 0;font-size:13px}
-  span.short_desc p{font-size:13px}
-  #gallery img { width:80px;height:80px }
-  .rating {
-    float:left;
-}
-
-.rating:not(:checked) > input {
-    visibility: hidden;
-    top:-9999px;
-    clip:rect(0,0,0,0);
-}
-
-.rating:not(:checked) > label {
-    float:right;
-    width:1em;
-    padding:0 .1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:150%;
-    line-height:1.2;
-    color:#ddd;
-    
-}
-
-.rating:not(:checked) > label:before {
-    content: '★ ';
-}
-
-.rating > input:checked ~ label {
-    color: orange;
-
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-    color: orange;
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
-}
-
-.rating > label:active {
-    position:relative;
-    top:2px;
-    left:2px;
-}
-
+.mrgntp{margin:10px 0 0 0;font-size:13px}
+span.short_desc p{font-size:13px}
+#gallery img { width:80px;height:80px }
+.rating {float:left}
+.lnehght22{line-height:22px}
+.rating:not(:checked) > input {visibility:hidden;top:-9999px;clip:rect(0,0,0,0)}
+.rating:not(:checked) > label {float:right;width:1em;padding:0 .1em;overflow:hidden;white-space:nowrap;cursor:pointer;font-size:150%;line-height:1.2;color:#ddd}
+.rating:not(:checked) > label:before {content:'★ ';}
+.rating > input:checked ~ label {color:orange}
+.rating:not(:checked) > label:hover,.rating:not(:checked) > label:hover ~ label {color:orange}
+.rating > input:checked + label:hover,.rating > input:checked + label:hover ~ label,.rating > input:checked ~ label:hover,.rating > input:checked ~ label:hover ~ label,.rating > label:hover ~ input:checked ~ label {color:#ea0}
+.rating > label:active {position:relative;top:2px;left:2px}
 </style>
 @endsection
-
 @section('content')
-
 <div class="main-container">
   <!-- start product-detail -->
   <div class="product-detail">
@@ -143,7 +97,7 @@
                        {
                     @endphp
                     <ul>
-                      {!! str_repeat('<li><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
+                      {!! str_repeat('<li class=\'lnehght22\'><i class="fa fa-star-o" aria-hidden="true"></i></li>', $prating) !!}
                     </ul>
                      <span>{{ $prating }}</span>
                     |
