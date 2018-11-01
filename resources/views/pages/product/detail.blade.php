@@ -208,7 +208,7 @@
       <div class="row">
         <div class="col-sm-8">
           <h3>Product Description</h3>
-          <p>{!! $detail->description !!}</p>
+          <p>{!! ($detail->description) ? $detail->description : 'No Description!' !!}</p>
         </div>
         <div class="col-sm-4">
           
