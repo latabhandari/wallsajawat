@@ -43,7 +43,7 @@ ul li{list-style-type:none;padding-left:10px}
                           </div>
 
                           
-                          <div class="col-sm-3">
+                          <div class="col-sm-4">
                             <p class="marginZero"><strong>AMOUNT PAID</strong></p>
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
                           </div>
@@ -96,23 +96,23 @@ ul li{list-style-type:none;padding-left:10px}
                                 <tr>
                                   <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
                                   <td>{{ $product_info[0]['name'] }}<br />Sku: {{ $product_info[0]['sku'] }}</td>
-                                  <td>Rs. {{ $data->price }} /-</td>
+                                  <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->price }} /-</td>
                                   <td>{{ $data->qty }}</td>
-                                  <td>Rs. {{ ($data->qty) * ($data->price) }}</td>
+                                  <td><i class="fa fa-inr" aria-hidden="true"></i> {{ ($data->qty) * ($data->price) }}</td>
                                 </tr>
                               @endforeach
                             @endif
                                 <tr>
                                   <td colspan="4"></td>
-                                  <td align="left">Sub Total: Rs. {{ $order->total_amount }}</td>
+                                  <td align="left"><strong>Sub Total:</strong> <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount }}</td>
                                 </tr>
                                 <tr>
                                   <td colspan="4"></td>
-                                  <td align="left">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
+                                  <td align="left"><strong>Discount:</strong> <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount ? $order->discount : 0 }}</td>
                                 </tr>
                                 <tr>
                                   <td colspan="4"></td>
-                                  <td align="left">Amount Paid: Rs. {{ $order->payable_amount }}</td>
+                                  <td align="left"><strong>Amount Paid:</strong> <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</td>
                                 </tr>
 
                           </tbody>
