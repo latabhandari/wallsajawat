@@ -138,6 +138,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::resource('dimension', 'DimensionController');
 
+
+            Route::get('/orders', 'OrderController@index')->name('admin.orders');
+
             
             //Route::resource('city', 'CityController');
 

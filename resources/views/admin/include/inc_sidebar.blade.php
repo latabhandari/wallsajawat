@@ -36,6 +36,9 @@ switch ($segment3)
           case 'dimension':
                              $dimension_active  =   'active';//'menu-open';
                              break;
+          case 'orders':
+                             $order_active      =   'active';//'menu-open';
+                             break;
    }
 ?>
 <style>
@@ -73,6 +76,10 @@ switch ($segment3)
 
                   <li class="">
                      <a class="{{ isset($users) ? 'activelink' : '' }}" href="{{ route('user.index') }}"><span>Users</span></a>
+                  </li>
+
+                  <li class="">
+                     <a class="{{ isset($order_active) ? 'activelink' : '' }}" href="{{ route('admin.orders') }}"><span>Orders</span></a>
                   </li>
 
                   <li class="">

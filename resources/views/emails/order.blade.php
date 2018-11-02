@@ -14,7 +14,7 @@
           </tr>
           <tr>
             <td class="free-text">
-              We wanted to let you know that we just shipped off your order <a href="">#23141</a>. You'll find all the details below.
+              We wanted to let you know that we just shipped off your order #{{ $order_number }}. You'll find all the details below.
             </td>
           </tr>
           <tr>
