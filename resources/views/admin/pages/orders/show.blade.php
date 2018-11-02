@@ -25,22 +25,22 @@ ul li{list-style-type:none;padding-left:10px}
                 <div class="col-xs-12">
                   <p class="lead">Details</p>
 
-                  <div class="col-xs-12">
+                  <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
                       <div class="col-sm-7 paddingLeftRght0">
                         <div class="order-date-sec">
                           <div class="col-sm-4">
-                            <p class="marginZero">ORDER PLACED</p>
+                            <p class="marginZero"><strong>ORDER PLACED</strong></p>
                             <p class="placed-date">Fri, 2 Nov'18 09:18 AM</p>
                           </div>
 
                           <div class="col-sm-2">
-                            <p class="marginZero">TOTAL</p>
+                            <p class="marginZero"><strong>TOTAL</strong></p>
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
                           </div>
 
                           
                           <div class="col-sm-3">
-                            <p class="marginZero">PAYABLE AMOUNT</p>
+                            <p class="marginZero"><strong>PAYABLE AMOUNT</strong></p>
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
                           </div>
 
@@ -50,13 +50,13 @@ ul li{list-style-type:none;padding-left:10px}
                       <div class="col-sm-5">
                         <div class="order-name-sec">
                           <div class="col-sm-8">
-                            <p class="marginZero">SHIP TO</p>
+                            <p class="marginZero"><strong>SHIP TO</strong></p>
                             <p class="user-order-name">fbd, Adimaly, Kerala, 121005</p>
                           </div>
                           <div class="col-sm-4 text-right paddingLeftRght0">
                             <div class="row">
                               <div class="col-sm-12">
-                                <p class="order-no marginZero">ORDER # 449922320</p>
+                                <p class="order-no marginZero"><strong>ORDER #</strong> 449922320</p>
                               </div>
                             </div>
                           </div>
@@ -64,7 +64,7 @@ ul li{list-style-type:none;padding-left:10px}
                       </div>
                     </div>
 
-                    <div class="col-xs-6">
+                    <div class="col-xs-12">
                       <div class="table-responsive">
                         @php
                           $order_products = $order->products;
