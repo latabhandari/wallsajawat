@@ -37,6 +37,11 @@ ul li{list-style-type:none;padding-left:10px}
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount  }}</p>
                           </div>
 
+                          <div class="col-sm-2">
+                            <p class="marginZero"><strong>Discount</strong></p>
+                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> Rs. {{ $order->discount ? $order->discount : 0  }}</p>
+                          </div>
+
                           
                           <div class="col-sm-3">
                             <p class="marginZero"><strong>AMOUNT PAID</strong></p>
