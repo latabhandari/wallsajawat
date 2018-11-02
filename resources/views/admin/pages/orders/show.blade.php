@@ -48,7 +48,7 @@ ul li{list-style-type:none;padding-left:10px}
                           @endphp
 
                             <tr>
-                              <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $product_info[0]['name'] }}"></td>
+                              <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
                               <td>{{ $product_info[0]['name'] }}</td>
                               <td>Rs. {{ $data->price }} /-</td>
                               <td>{{ $data->qty }}</td>
