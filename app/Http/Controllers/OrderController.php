@@ -80,8 +80,8 @@ class OrderController extends Controller
 
                   /* create array for email */
 
-                  $prod_image_info              =     App\Helpers\MyHelper::getProductImage($row->id);
-                  $product_info                 =     App\Helpers\MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
+                  $prod_image_info              =     MyHelper::getProductImage($row->id);
+                  $product_info                 =     MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
 
                   $order_products               =     array();
 
