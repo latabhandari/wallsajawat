@@ -33,7 +33,7 @@ class OrderController extends Controller
     {
         //
         $order = Order::findOrFail($id);
-		$ship_info                         =    json_decode($order->shipping_address;
+		$ship_info                         =    json_decode($order->shipping_address);
 		$cityobj                           =    City::select('name')->where('id', $ship_info->city)->first();
 		$stateobj                          =    State::select('name')->where('id', $ship_info->state)->first();
 		$shipping_address                  =    $ship_info->name . ', ' . $ship_info->address  . ', ' .  $cityobj->name  . ', ' .  $stateobj->name  . ', ' .  $ship_info->pin;
