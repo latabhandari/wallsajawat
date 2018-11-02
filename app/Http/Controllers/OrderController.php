@@ -13,6 +13,8 @@ use Cart;
 use Session;
 use App\Product as Product;
 use Illuminate\Support\Facades\Crypt;
+use App\Cities as City;
+use App\States as State;
 
 class OrderController extends Controller
 {
