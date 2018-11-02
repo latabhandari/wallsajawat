@@ -25,10 +25,41 @@ ul li{list-style-type:none;padding-left:10px}
                 <div class="col-xs-6">
                   <p class="lead">Details</p>
                   <div class="table-responsive">
+                    @php
+                      $order_products = $order::find($order->id)->products;
+                      print_r($order_products);
+
+                    @endphp
                     <table class="table">
+                      <thead>
+                        <tr>
+                          <th>S. No</th>
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Qty</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
                       <tbody>
-                    
-                      </tbody></table>
+                        @if(count($orders))   
+                          @foreach ($orders as $data)
+                            <tr>
+                              <td>{{ ++$i }}</td>
+                              <td>{{ $data->order_number }}</td>
+                              <td>{{ $data->user->name }}</td>
+                              <td>{{ $data->user->email }}</td>
+                              <td>Rs. {{ $data->total_amount }} /-</td>
+                              <td>Rs. {{ $data->discount ? $data->discount : 0 }} /-</td>
+                              <td>Rs. {{ $data->payable_amount }} /-</td>
+                              <td>{{ date('D, j M Y h:i a', $data->unix_timestamp)  }}</td>
+                              <td><a class="btn btn-warning" href="{{ route('admin.order.show',$data->id) }}"><span class="fa fa-eye"></span></a></td>
+                            </tr>
+                          @endforeach
+                        @endif
+                      </tbody>
+
+                    </table>
                   </div>
                   
                 </div>
