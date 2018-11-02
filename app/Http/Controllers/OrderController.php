@@ -89,9 +89,11 @@ class OrderController extends Controller
 
                   $order_products               =     array();
 
-                   die('sdfasdsdfsdf');
+
 
                   $dimension                    =     MyHelper::getRollDimenstionById($mid);
+
+                  print_r($dimension); die;
 
                   $order_products['image']      =     $prod_image_info->image;
                   $order_products['name']       =     $product_info[0]['name'];
