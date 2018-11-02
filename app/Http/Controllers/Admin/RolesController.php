@@ -48,7 +48,7 @@ class RolesController extends Controller
 
          if ( ! ( ! empty($params['index_categories']) || ! empty($params['create_category']) || ! empty($params['edit_category']) || ! empty($params['destroy_category']) || ! empty($params['index_products']) || ! empty($params['create_product']) || ! empty($params['edit_product']) || ! empty($params['destroy_product']) || ! empty($params['index_roles']) || ! empty($params['create_role']) || ! empty($params['edit_role']) || ! empty($params['destroy_role']) || ! empty($params['index_offers'])  || ! empty($params['create_offer']) || ! empty($params['edit_offer']) || ! empty($params['destroy_offer'])  || ! empty($params['index_users'])  || ! empty($params['create_user'])  || ! empty($params['edit_user'])  || ! empty($params['destroy_user'])))
           {
-                return redirect()->route('roles.create')->withInput($request->input())->with('error','Please assign permission to role');
+                return redirect()->route('roles.create')->withInput($request->input())->with('error','Please assign permission to role.');
           }
 
 
@@ -228,7 +228,7 @@ class RolesController extends Controller
 
          if ( ! ( ! empty($params['index_categories']) || ! empty($params['create_category']) || ! empty($params['edit_category']) || ! empty($params['destroy_category']) || ! empty($params['index_products']) || ! empty($params['create_product']) || ! empty($params['edit_product']) || ! empty($params['destroy_product']) || ! empty($params['index_roles']) || ! empty($params['create_role']) || ! empty($params['edit_role']) || ! empty($params['destroy_role']) || ! empty($params['index_offers'])  || ! empty($params['create_offer']) || ! empty($params['edit_offer']) || ! empty($params['destroy_offer'])  || ! empty($params['index_users'])  || ! empty($params['create_user'])  || ! empty($params['edit_user'])  || ! empty($params['destroy_user'])))
           {
-                return redirect()->route('roles.create')->withInput($request->input())->with('error','Please assign permission to role');
+                return redirect()->route('roles.create')->withInput($request->input())->with('error','Please assign permission to role.');
           }
 
      
