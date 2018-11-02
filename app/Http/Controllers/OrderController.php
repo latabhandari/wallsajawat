@@ -102,6 +102,8 @@ class OrderController extends Controller
                   $order_products['width']      =     $dimension->width;
                   $order_products['height']     =     $dimension->height;
                   $order_summ_products[]        =     $order_products; 
+
+                  print_r($order_summ_products); die;
   		       }
 
               $order_array['cart_contents']      =    $order_summ_products;
@@ -123,8 +125,8 @@ class OrderController extends Controller
 
               /* send order email */
 
-              die('sdfsdf');
-              
+             
+
               Mail::send('emails.order', $order_array, function ($message)
                 {
                     $message->from(env('MAIL_FROM_ADDRESS', ''), env('MAIL_FROM_NAME', ''));
