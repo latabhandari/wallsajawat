@@ -152,6 +152,11 @@
 													<h4>Deliver {{ date('D, j M\'y', $deliver_time) }}</h4>
 												</div>
 										</div>
+										<div class="row">
+												<div class="col-sm-12">
+													<p class="order-status">Your package was delivered</p>
+												</div>
+										</div>
 
 										@foreach ($order_products as $product)
 
@@ -165,13 +170,7 @@
 
 										@endphp
 
-											
-
-											<div class="row">
-												<div class="col-sm-12">
-													<p class="order-status">Your package was delivered</p>
-												</div>
-											</div>
+										
 											<div class="row">
 												<div class="col-sm-9">
 													<div class="row">
