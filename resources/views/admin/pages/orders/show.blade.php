@@ -24,55 +24,98 @@ ul li{list-style-type:none;padding-left:10px}
                 <!-- accepted payments column -->
                 <div class="col-xs-12">
                   <p class="lead">Details</p>
-                  <div class="table-responsive">
-                    @php
-                      $order_products = $order->products;
-                    @endphp
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>Image</th>
-                          <th>Name</th>
-                          <th>Price</th>
-                          <th>Qty</th>
-                          <th>Total</th>
-                        </tr>
-                      </thead>
-                      
-                      <tbody>
-                        @if(count($order_products))   
-                          @foreach ($order_products as $data)
-                          @php
-                            $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
-                            $product_info      = App\Helpers\MyHelper::getProductInfo($data->product_id, ['name', 'short_desc', 'sku']);
-                          @endphp
 
-                            <tr>
-                              <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
-                              <td>{{ $product_info[0]['name'] }}<br />Sku: {{ $product_info[0]['sku'] }}</td>
-                              <td>Rs. {{ $data->price }} /-</td>
-                              <td>{{ $data->qty }}</td>
-                              <td>Rs. {{ ($data->qty) * ($data->price) }}</td>
-                            </tr>
-                          @endforeach
-                        @endif
-                            <tr>
-                              <td colspan="4"></td>
-                              <td align="left">Sub Total: Rs. {{ $order->total_amount }}</td>
-                            </tr>
-                            <tr>
-                              <td colspan="4"></td>
-                              <td align="left">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
-                            </tr>
-                            <tr>
-                              <td colspan="4"></td>
-                              <td align="left">Amount Paid: Rs. {{ $order->payable_amount }}</td>
-                            </tr>
+                  <div class="col-xs-12">
+                      <div class="col-sm-7 paddingLeftRght0">
+                        <div class="order-date-sec">
+                          <div class="col-sm-4">
+                            <p class="marginZero">ORDER PLACED</p>
+                            <p class="placed-date">Fri, 2 Nov'18 09:18 AM</p>
+                          </div>
 
-                      </tbody>
+                          <div class="col-sm-2">
+                            <p class="marginZero">TOTAL</p>
+                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
+                          </div>
 
-                    </table>
-                  </div>
+                          
+                          <div class="col-sm-3">
+                            <p class="marginZero">PAYABLE AMOUNT</p>
+                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="col-sm-5">
+                        <div class="order-name-sec">
+                          <div class="col-sm-8">
+                            <p class="marginZero">SHIP TO</p>
+                            <p class="user-order-name">fbd, Adimaly, Kerala, 121005</p>
+                          </div>
+                          <div class="col-sm-4 text-right paddingLeftRght0">
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <p class="order-no marginZero">ORDER # 449922320</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                      <div class="table-responsive">
+                        @php
+                          $order_products = $order->products;
+                        @endphp
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Image</th>
+                              <th>Name</th>
+                              <th>Price</th>
+                              <th>Qty</th>
+                              <th>Total</th>
+                            </tr>
+                          </thead>
+                          
+                          <tbody>
+                            @if(count($order_products))   
+                              @foreach ($order_products as $data)
+                              @php
+                                $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
+                                $product_info      = App\Helpers\MyHelper::getProductInfo($data->product_id, ['name', 'short_desc', 'sku']);
+                              @endphp
+
+                                <tr>
+                                  <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
+                                  <td>{{ $product_info[0]['name'] }}<br />Sku: {{ $product_info[0]['sku'] }}</td>
+                                  <td>Rs. {{ $data->price }} /-</td>
+                                  <td>{{ $data->qty }}</td>
+                                  <td>Rs. {{ ($data->qty) * ($data->price) }}</td>
+                                </tr>
+                              @endforeach
+                            @endif
+                                <tr>
+                                  <td colspan="4"></td>
+                                  <td align="left">Sub Total: Rs. {{ $order->total_amount }}</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4"></td>
+                                  <td align="left">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4"></td>
+                                  <td align="left">Amount Paid: Rs. {{ $order->payable_amount }}</td>
+                                </tr>
+
+                          </tbody>
+
+                        </table>
+                      </div>
+                    </div>
+
                   
                 </div>
                 <!-- /.col -->
