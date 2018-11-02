@@ -27,7 +27,7 @@ ul li{list-style-type:none;padding-left:10px}
                   <div class="table-responsive">
                     @php
                       $order_products = $order::find($order->id)->products;
-                      print_r($order_products);
+                      print_r($order_products); die;
 
                     @endphp
                     <table class="table">
