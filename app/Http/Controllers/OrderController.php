@@ -93,7 +93,6 @@ class OrderController extends Controller
 
                   $dimension                    =     MyHelper::getRollDimenstionById($mid);
 
-                  print_r($dimension); die;
 
                   $order_products['image']      =     $prod_image_info->image;
                   $order_products['name']       =     $product_info[0]['name'];
@@ -123,6 +122,9 @@ class OrderController extends Controller
               $order_array['payable_amount']     =    $payable_amount;
 
               /* send order email */
+
+              die('sdfsdf');
+              
               Mail::send('emails.order', $order_array, function ($message)
                 {
                     $message->from(env('MAIL_FROM_ADDRESS', ''), env('MAIL_FROM_NAME', ''));
