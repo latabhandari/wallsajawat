@@ -36,7 +36,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
         {
-          die('sdf');
+
 			    $discount 					         = 	session('discount');
 			    $order_number                =  rand(111111111, 999999999);
         	$order['order_number']       =  $order_number;
@@ -82,6 +82,7 @@ class OrderController extends Controller
                   Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
 
                   /* create array for email */
+                  die('sdfasd');
 
                   $prod_image_info              =     MyHelper::getProductImage($row->id);
                   $product_info                 =     MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
