@@ -36,6 +36,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
         {
+          die('sdf');
 			    $discount 					         = 	session('discount');
 			    $order_number                =  rand(111111111, 999999999);
         	$order['order_number']       =  $order_number;
