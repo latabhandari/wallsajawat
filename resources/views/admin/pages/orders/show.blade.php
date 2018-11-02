@@ -96,7 +96,7 @@ ul li{list-style-type:none;padding-left:10px}
                                 <tr>
                                   <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
                                   <td>{{ $product_info[0]['name'] }}<br />Sku: {{ $product_info[0]['sku'] }}</td>
-                                  <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->price }} /-</td>
+                                  <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->price }}</td>
                                   <td>{{ $data->qty }}</td>
                                   <td><i class="fa fa-inr" aria-hidden="true"></i> {{ ($data->qty) * ($data->price) }}</td>
                                 </tr>
