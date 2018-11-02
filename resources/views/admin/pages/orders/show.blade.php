@@ -27,13 +27,10 @@ ul li{list-style-type:none;padding-left:10px}
                   <div class="table-responsive">
                     @php
                       $order_products = $order->products;
-                      print_r($order_products); die;
-
                     @endphp
                     <table class="table">
                       <thead>
                         <tr>
-                          <th>S. No</th>
                           <th>Image</th>
                           <th>Name</th>
                           <th>Price</th>
@@ -41,19 +38,19 @@ ul li{list-style-type:none;padding-left:10px}
                           <th>Total</th>
                         </tr>
                       </thead>
+                      @php
+                        $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
+                        $product_info      = App\Helpers\MyHelper::getProductInfo($row->id, ['name', 'short_desc']);
+                      @endphp
                       <tbody>
-                        @if(count($orders))   
-                          @foreach ($orders as $data)
+                        @if(count($order_products))   
+                          @foreach ($order_products as $data)
                             <tr>
-                              <td>{{ ++$i }}</td>
-                              <td>{{ $data->order_number }}</td>
-                              <td>{{ $data->user->name }}</td>
-                              <td>{{ $data->user->email }}</td>
-                              <td>Rs. {{ $data->total_amount }} /-</td>
-                              <td>Rs. {{ $data->discount ? $data->discount : 0 }} /-</td>
-                              <td>Rs. {{ $data->payable_amount }} /-</td>
-                              <td>{{ date('D, j M Y h:i a', $data->unix_timestamp)  }}</td>
-                              <td><a class="btn btn-warning" href="{{ route('admin.order.show',$data->id) }}"><span class="fa fa-eye"></span></a></td>
+                              <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $product_info[0]['name'] }}"></td>
+                              <td>{{ $product_info[0]['name'] }}</td>
+                              <td>Rs. {{ $data->price }} /-</td>
+                              <td>{{ $data->qty }}</td>
+                              <td>{{ ($data->qty) * ($data->price) }}</td>
                             </tr>
                           @endforeach
                         @endif
