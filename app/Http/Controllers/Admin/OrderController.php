@@ -18,7 +18,7 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::all();
-        return view('admin.pages.order.index', compact('orders'))->with('i', (request()->input('page', 1) - 1) * 10);
+        return view('admin.pages.orders.index', compact('orders'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
 
