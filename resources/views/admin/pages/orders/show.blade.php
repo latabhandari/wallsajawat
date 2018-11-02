@@ -15,7 +15,7 @@ ul li{list-style-type:none;padding-left:10px}
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Order's Information</h3>
+              <h3 class="box-title">Order's Summary</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -23,25 +23,24 @@ ul li{list-style-type:none;padding-left:10px}
               <div class="row">
                 <!-- accepted payments column -->
                 <div class="col-xs-12">
-                  <p class="lead">Details</p>
-
+                  
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
                       <div class="col-sm-7 paddingLeftRght0">
                         <div class="order-date-sec">
                           <div class="col-sm-4">
                             <p class="marginZero"><strong>ORDER PLACED</strong></p>
-                            <p class="placed-date">Fri, 2 Nov'18 09:18 AM</p>
+                            <p class="placed-date">{{ date('D, j M Y h:i a', $order->unix_timestamp)  }}</p>
                           </div>
 
                           <div class="col-sm-2">
                             <p class="marginZero"><strong>TOTAL</strong></p>
-                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
+                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ date('D, j M Y h:i a', $order->total_amount)  }}</p>
                           </div>
 
                           
                           <div class="col-sm-3">
-                            <p class="marginZero"><strong>PAYABLE AMOUNT</strong></p>
-                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> 1500</p>
+                            <p class="marginZero"><strong>AMOUNT PAID</strong></p>
+                            <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ date('D, j M Y h:i a', $order->payable_amount)  }}</p>
                           </div>
 
                         </div>
@@ -51,7 +50,7 @@ ul li{list-style-type:none;padding-left:10px}
                         <div class="order-name-sec">
                           <div class="col-sm-8">
                             <p class="marginZero"><strong>SHIP TO</strong></p>
-                            <p class="user-order-name">fbd, Adimaly, Kerala, 121005</p>
+                            <p class="user-order-name">{{ $shipping_address }}</p>
                           </div>
                           <div class="col-sm-4 text-right paddingLeftRght0">
                             <div class="row">
@@ -65,6 +64,7 @@ ul li{list-style-type:none;padding-left:10px}
                     </div>
 
                     <div class="col-xs-12">
+                      <p class="lead">Items</p>
                       <div class="table-responsive">
                         @php
                           $order_products = $order->products;
