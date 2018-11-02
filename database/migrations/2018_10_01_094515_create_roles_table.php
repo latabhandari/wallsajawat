@@ -17,7 +17,7 @@ class CreateRolesTable extends Migration
             $table->increments('id')->comment('Id');
             $table->string('name')->comment('Name');
             $table->text('permission')->comment('Permission')->nullable();
-            $table->unsignedTinyInteger('status')->comment('0 - Inactive, 1- Active');
+            $table->unsignedTinyInteger('status')->comment('0 - Inactive, 1- Active')->default(1);
             $table->integer('created_at_timestamp')->comment('Created TimeStamp')->nullable();
             $table->integer('updated_at_timestamp')->comment('Updated TimeStamp')->nullable();
             $table->timestamps();
