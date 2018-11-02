@@ -52,10 +52,18 @@ ul li{list-style-type:none;padding-left:10px}
                               <td>{{ $product_info[0]['name'] }}</td>
                               <td>Rs. {{ $data->price }} /-</td>
                               <td>{{ $data->qty }}</td>
-                              <td>{{ ($data->qty) * ($data->price) }}</td>
+                              <td>Rs. {{ ($data->qty) * ($data->price) }}</td>
                             </tr>
                           @endforeach
                         @endif
+                            <tr>
+                              <td colspan="5" align="right">Sub Total: Rs {{ $order->total_amount }}</td>
+                              <td colspan="5" align="right">Discount: Rs {{ $order->discount ? $order->discount : 0 }} }}</td>
+                              <td colspan="5" align="right">Amount Paid: Rs {{ $order->payable_amount }}</td>
+    
+                            </tr>
+
+
                       </tbody>
 
                     </table>
