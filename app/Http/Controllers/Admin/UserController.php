@@ -29,7 +29,7 @@ class UserController extends Controller
 	    {
 	        //
 	        $user  = User::findOrFail($id);
-	        $roles = where('status', 1)->get();
+	        $roles = Roles::where('status', 1)->get();
 	        return view('admin.pages.users.edit',compact('user', 'roles'));
 	    }
 
