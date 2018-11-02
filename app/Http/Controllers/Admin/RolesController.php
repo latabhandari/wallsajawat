@@ -42,8 +42,13 @@ class RolesController extends Controller
     public function store(Request $request)
     {
         //
-
          request()->validate(['name'  => 'required|string|regex:/(^[A-Za-z ]+$)+/']);
+
+         if ( ! (empty($params['index_categories']) || empty($params['create_category']) || empty($params['edit_category']) || empty($params['destroy_category']) || empty($params['index_products']) || empty($params['create_product']) || empty($params['edit_product']) || empty($params['destroy_product']) || empty($params['index_roles']) || empty($params['create_role']) || empty($params['edit_role']) || empty($params['destroy_role']) || empty($params['index_offers'])  || empty($params['create_offer']) || empty($params['edit_offer']) || empty($params['destroy_offer'])  || empty($params['index_users'])  || empty($params['create_user'])  || empty($params['edit_user'])  || empty($params['destroy_user'])))
+          {
+                return redirect()->route('role.create')->withInput($request->input())->with('error','please select any option');
+          }
+
 
          $params    =  $request->all();
 
@@ -150,19 +155,19 @@ class RolesController extends Controller
          $permission['index_users']               =    0;
 
          if (isset($params['create_user']))
-         $permission['create_user']                 =    $params['create_user'];
+         $permission['create_user']               =    $params['create_user'];
             else
-         $permission['create_user']                 =    0;
+         $permission['create_user']               =    0;
 
          if (isset($params['edit_user']))
-         $permission['edit_user']                =    $params['edit_user'];
+         $permission['edit_user']                 =    $params['edit_user'];
             else
-         $permission['edit_user']                =    0;
+         $permission['edit_user']                 =    0;
 
          if (isset($params['destroy_user']))
-         $permission['destroy_user']             =    $params['destroy_user'];
+         $permission['destroy_user']              =    $params['destroy_user'];
             else
-         $permission['destroy_user']             =    0;
+         $permission['destroy_user']              =    0;
 
          // close
 
