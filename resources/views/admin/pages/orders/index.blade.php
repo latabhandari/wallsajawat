@@ -49,9 +49,8 @@
                       <td>Rs. {{ $data->total_amount }} /-</td>
                       <td>Rs. {{ $data->discount ? $data->discount : 0 }} /-</td>
                       <td>Rs. {{ $data->payable_amount }} /-</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td>{{ date('D, j M Y h:i a', $data->unix_timestamp)  }}</td>
+                      <td><a class="btn btn-warning" href="{{ route('admin.order.show',$data->id) }}"><span class="fa fa-eye"></span></a></td>
                     </tr>
                   @endforeach
 
