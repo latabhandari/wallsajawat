@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Order as Order;
-use App\City as City;
-use App\State as State;
+use App\Cities as City;
+use App\States as State;
 
 class OrderController extends Controller
 {
