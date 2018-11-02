@@ -53,10 +53,12 @@ class CheckoutController extends Controller
                $fields['mobile']                   =    $params['mobile'];
                //User::find(Auth::user()->id)->update($fields);
 
+               $pfields['name']                    =    $params['name'];
                $pfields['address']                 =    $params['address'];
                $pfields['city']                    =    $params['city_id'];
                $pfields['state']                   =    $params['state_id'];
                $pfields['pin']                     =    $params['postal_code'];
+               $pfields['mobile']                  =    $params['mobile'];
 
                session(['shipping_address' => json_encode($pfields)]);
 

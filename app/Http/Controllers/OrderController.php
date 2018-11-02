@@ -69,6 +69,7 @@ class OrderController extends Controller
                   $data['qty']                 =  $row->qty;
                   $data['dimension']           =  json_encode($mdata);
 
+
 				          OrderProducts::insert($data);
 
                   $stock_item_obj              =  Product::select('stock_item')->where('id', $row->id)->first();
@@ -76,18 +77,40 @@ class OrderController extends Controller
                   $stock_item                  =  $stock_item_obj->stock_item - $row->qty;
 
                   Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
+
+                  /* create array for email */
+
+                  $prod_image_info              =     App\Helpers\MyHelper::getProductImage($row->id);
+                  $product_info                 =     App\Helpers\MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
+
+                  $order_products               =     array();
+
+                  $order_products['image']      =     $prod_image_info->image;
+                  $order_products['name']       =     $product_info[0]['name'];
+                  $order_products['short_desc'] =     $product_info[0]['short_desc'];
+                  $order_products['pruice']     =     $product_info[0]['price'];
+                  $order_products['qty']        =     $product_info[0]['qty'];
+                  $order_products['width']      =     $row->options->width;
+                  $order_products['height']     =     $row->options->height;
+                  $order_summ_products[]        =     $order_products; 
   		       }
 
-              $order_array['cart_contents']      =  Cart::content();
-              $order_array['shipping_address']   =  session('shipping_address');
+              $order_array['cart_contents']      =    $order_summ_products;
 
-              $order_array['order_number']       =  $order_number;
-              $order_array['coupon']             =  session('coupon');
-              $order_array['discount']           =  session('discount');
+              $ship_info                         =    json_decode(session('shipping_address'));
+              $cityobj                           =    City::select('name')->where('id', $ship_info->city)->first();
+              $stateobj                          =    State::select('name')->where('id', $ship_info->state)->first();
+              $shipping_address                  =    $ship_info->name . '<br />' . $ship_info->address  . '<br />' .  $cityobj->name  . '<br />' .  $stateobj->name  . '<br />' .  $ship_info->pin;
 
-              $order_array['total_amount']       =  $cart_total;
+              $order_array['shipping_address']   =    $shipping_address;
 
-              $order_array['payable_amount']     =  $payable_amount;
+              $order_array['order_number']       =    $order_number;
+              $order_array['coupon']             =    session('coupon');
+              $order_array['discount']           =    session('discount');
+
+              $order_array['total_amount']       =    $cart_total;
+
+              $order_array['payable_amount']     =    $payable_amount;
 
               /* send order email */
               Mail::send('emails.order', $order_array, function ($message)
