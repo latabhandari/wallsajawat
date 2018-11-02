@@ -22,7 +22,7 @@ ul li{list-style-type:none;padding-left:10px}
 
               <div class="row">
                 <!-- accepted payments column -->
-                <div class="col-xs-6">
+                <div class="col-xs-12">
                   <p class="lead">Details</p>
                   <div class="table-responsive">
                     @php
