@@ -27,10 +27,12 @@
                 <thead>
                 <tr>
                   <th>S. No</th>
-                  <th>Order No</th>
+                  <th>Order #</th>
                   <th>Name</th>
                   <th>Email</th>
-                  <th>Price</th>
+                  <th>Total Price</th>
+                  <th>Discount</th>
+                  <th>Amount Paid</th>
                   <th>Date</th>
                   <th>Action</th>
                 </tr>
@@ -44,7 +46,11 @@
                       <td>{{ $data->order_number }}</td>
                       <td>{{ $data->user->name }}</td>
                       <td>{{ $data->user->email }}</td>
-                      <td>{{ $data->price }}</td>
+                      <td>Rs. {{ $data->total_amount }} /-</td>
+                      <td>Rs. {{ $data->discount ? $data->discount : 0 }} /-</td>
+                      <td>Rs. {{ $data->payable_amount }} /-</td>
+                      <td></td>
+                      <td></td>
                       <td></td>
                     </tr>
                   @endforeach
