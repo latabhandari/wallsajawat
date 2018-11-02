@@ -134,6 +134,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
             Route::resource('roles', 'RolesController');
 
+            Route::get('/roles/status/{id}/{status}', 'RolesController@status')->name('admin.roles.status');
+
             Route::resource('user', 'UserController');
 
             Route::resource('dimension', 'DimensionController');

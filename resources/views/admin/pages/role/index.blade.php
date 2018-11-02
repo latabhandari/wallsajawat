@@ -59,7 +59,7 @@
                 <tr>
                   <td>{{ ++$i }}</td>
                   <td>{{ $data->name }}</td>
-                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.product.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
+                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.roles.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
                   <td>
                      @php
                           $edit_role = MyHelper::getPermission('edit_role');

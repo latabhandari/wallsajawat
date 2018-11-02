@@ -375,4 +375,17 @@ class RolesController extends Controller
     {
         //
     }
+
+     /**
+     * Change the status.
+     *
+     */
+
+     public function status($id, $status)
+        {
+             //
+             $status = ! $status;
+             Roles::where('id', $id)->update(['status' => $status]);
+             return redirect()->route('roles.index')->with('success','Roles status changed successfully!');
+        }
 }
