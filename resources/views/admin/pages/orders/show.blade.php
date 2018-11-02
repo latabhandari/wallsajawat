@@ -103,8 +103,8 @@ ul li{list-style-type:none;padding-left:10px}
                               @endforeach
                             @endif
                                 <tr>
-                                  <td colspan="4"></td>
-                                  <td align="left"><strong>Sub Total:</strong> <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount }}</td>
+                                  <td colspan="3"></td>
+                                  <td colspan="2" align="left"><strong>Sub Total:</strong> <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount }}</td>
                                 </tr>
                                 <tr>
                                   <td colspan="4"></td>
