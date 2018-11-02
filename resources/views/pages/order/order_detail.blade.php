@@ -98,7 +98,7 @@
 												<div class="order-date-sec">
 													<div class="col-sm-4">
 														<p class="marginZero">ORDER PLACED</p>
-														<p class="placed-date">{{ date('D, j M\'y H:i', $order->unix_timestamp) }}</p>
+														<p class="placed-date">{{ date('D, j M\'y H:i A', $order->unix_timestamp) }}</p>
 													</div>
 
 													<div class="col-sm-2">
