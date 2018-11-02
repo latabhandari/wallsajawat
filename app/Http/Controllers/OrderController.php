@@ -15,6 +15,7 @@ use App\Product as Product;
 use Illuminate\Support\Facades\Crypt;
 use App\Cities as City;
 use App\States as State;
+use Mail;
 
 class OrderController extends Controller
 {
