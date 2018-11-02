@@ -44,12 +44,12 @@ ul li{list-style-type:none;padding-left:10px}
                           @foreach ($order_products as $data)
                           @php
                             $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
-                            $product_info      = App\Helpers\MyHelper::getProductInfo($data->product_id, ['name', 'short_desc']);
+                            $product_info      = App\Helpers\MyHelper::getProductInfo($data->product_id, ['name', 'short_desc', 'sku']);
                           @endphp
 
                             <tr>
                               <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="80" height="80" alt="{{ $product_info[0]['name'] }}"></td>
-                              <td>{{ $product_info[0]['name'] }}</td>
+                              <td>{{ $product_info[0]['name'] }}<br />Sku: {{ $product_info[0]['sku'] }}</td>
                               <td>Rs. {{ $data->price }} /-</td>
                               <td>{{ $data->qty }}</td>
                               <td>Rs. {{ ($data->qty) * ($data->price) }}</td>
@@ -57,12 +57,14 @@ ul li{list-style-type:none;padding-left:10px}
                           @endforeach
                         @endif
                             <tr>
-                              <td colspan="5" align="right">Sub Total: Rs {{ $order->total_amount }}</td>
-                              <td colspan="5" align="right">Discount: Rs {{ $order->discount ? $order->discount : 0 }} }}</td>
-                              <td colspan="5" align="right">Amount Paid: Rs {{ $order->payable_amount }}</td>
-    
+                              <td colspan="5" align="right">Sub Total: Rs. {{ $order->total_amount }}</td>
                             </tr>
-
+                            <tr>
+                              <td colspan="5" align="right">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
+                            </tr>
+                            <tr>
+                              <td colspan="5" align="right">Amount Paid: Rs. {{ $order->payable_amount }}</td>
+                            </tr>
 
                       </tbody>
 
