@@ -38,13 +38,15 @@ ul li{list-style-type:none;padding-left:10px}
                           <th>Total</th>
                         </tr>
                       </thead>
-                      @php
-                        $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
-                        $product_info      = App\Helpers\MyHelper::getProductInfo($row->id, ['name', 'short_desc']);
-                      @endphp
+                      
                       <tbody>
                         @if(count($order_products))   
                           @foreach ($order_products as $data)
+                          @php
+                            $prod_image_info   = App\Helpers\MyHelper::getProductImage($data->product_id);
+                            $product_info      = App\Helpers\MyHelper::getProductInfo($data->product_id, ['name', 'short_desc']);
+                          @endphp
+
                             <tr>
                               <td><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" width="281" height="345" alt="{{ $product_info[0]['name'] }}"></td>
                               <td>{{ $product_info[0]['name'] }}</td>
