@@ -82,12 +82,14 @@ class OrderController extends Controller
                   Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
 
                   /* create array for email */
-                  die('sdfasd');
+
 
                   $prod_image_info              =     MyHelper::getProductImage($row->id);
                   $product_info                 =     MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
 
                   $order_products               =     array();
+
+                   die('sdfasdsdfsdf');
 
                   $dimension                    =     MyHelper::getRollDimenstionById($mid);
 
