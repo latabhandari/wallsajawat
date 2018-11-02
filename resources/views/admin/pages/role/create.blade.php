@@ -22,11 +22,11 @@
                                 <p><i class="fa fa-exclamation-circle"></i> {{ $error }} </p>
                             @endforeach
                     </div>
-                    @endif
+               @endif
                     
-                    @if(Session::has('error'))
-                    <div class="alert-box success">
-                      <h4 class='error'>{{ Session::get('error') }}</h2>
+               @if(Session::has('error'))
+                    <div class="alert-danger alert">
+                        <p><i class="fa fa-exclamation-circle"></i> {{ Session::get('error') }} </p>
                     </div>
                @endif
 
