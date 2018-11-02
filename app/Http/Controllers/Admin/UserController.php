@@ -36,7 +36,7 @@ class UserController extends Controller
 
 	  public function store(Request $request)
 	   {
-	  	     request()->validate(['name' => 'required', 'email' => 'required', 'password' => 'required', 'role' => 'required', 'mobile' => 'required']);
+	  	     request()->validate(['name' => 'required|string|max:255|regex:/(^[A-Za-z ]+$)+/', 'email' => 'required|string|max:255', 'password' => 'required', 'role' => 'required', 'mobile' => 'required|numeric|digits:10']);
 
 	         $params            				=    $request->all();
 	         $query                             =    User::where(['email' => $params['email'], 'verified' => 1]);
@@ -67,7 +67,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
      {
         //
-         request()->validate(['name' => 'required', 'email' => 'required', 'role' => 'required', 'mobile' => 'required']);
+         request()->validate(['name' => 'required|string|max:255|regex:/(^[A-Za-z ]+$)+/', 'email' => 'required', 'role' => 'required', 'mobile' => 'required|numeric|digits:10']);
 
          $params            				=    $request->all();
 

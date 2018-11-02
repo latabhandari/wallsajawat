@@ -169,7 +169,6 @@
 										 $check_rating_exist    = App\Helpers\MyHelper::checkRatingExist($order->order_number, $product->product_id);
 
 										@endphp
-
 										
 											<div class="row">
 												<div class="col-sm-9">

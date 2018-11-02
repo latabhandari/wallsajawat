@@ -42,7 +42,7 @@ class OffersController extends Controller
     public function store(Request $request)
     {
          //
-         request()->validate(['coupon' => 'required|string||string|max:255|unique:offers,coupon', 'type' => 'required', 'discount' => 'required|numeric', 'start_date' => 'required', 'end_date' => 'required']);
+         request()->validate(['coupon' => 'required|string|max:255|unique:offers,coupon', 'type' => 'required', 'discount' => 'required|numeric', 'start_date' => 'required', 'end_date' => 'required']);
  
          $params                            =    $request->all();
 
