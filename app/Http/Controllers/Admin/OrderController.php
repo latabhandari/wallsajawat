@@ -21,6 +21,17 @@ class OrderController extends Controller
         return view('admin.pages.orders.index', compact('orders'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
-
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+        $order = Order::findOrFail($id);
+        return view('admin.pages.orders.show',compact('order'));
+    }
 
 }
