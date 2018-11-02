@@ -103,15 +103,21 @@ class OrderController extends Controller
                   $order_products['height']     =     $dimension->height;
                   $order_summ_products[]        =     $order_products; 
 
-                  print_r($order_summ_products); die;
+                  print_r(Cart::content()); 
   		       }
 
+echo "1";
               $order_array['cart_contents']      =    $order_summ_products;
 
               $ship_info                         =    json_decode(session('shipping_address'));
+
+              echo "122";
+
               $cityobj                           =    City::select('name')->where('id', $ship_info->city)->first();
               $stateobj                          =    State::select('name')->where('id', $ship_info->state)->first();
               $shipping_address                  =    $ship_info->name . '<br />' . $ship_info->address  . '<br />' .  $cityobj->name  . '<br />' .  $stateobj->name  . '<br />' .  $ship_info->pin;
+
+              echo "12sdf2"; die;
 
               $order_array['shipping_address']   =    $shipping_address;
 
