@@ -63,15 +63,14 @@ class OrderController extends Controller
         	   	    $mdata['mid']     			     =  $mid;
                   $measurement_info  			     =  MyHelper::getMeasurement($mid);
                   $mdata['name']               =  $measurement_info->name;
-                  $mdata['width']  		         =  $row->options->width;
-                  $mdata['height']             =  $row->options->height;
+                  $mdata['width']  		         =  (string) $row->options->width;
+                  $mdata['height']             =  (string) $row->options->height;
 
                   $data['order_id']            =  $order_id;
                   $data['product_id']          =  $row->id;
                   $data['price']               =  round($row->price);
                   $data['qty']                 =  $row->qty;
                   $data['dimension']           =  json_encode($mdata);
-
 
 				          OrderProducts::insert($data);
 
