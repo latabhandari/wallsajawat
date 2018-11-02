@@ -21,7 +21,7 @@ class UserController extends Controller
    
      public function create($userid = null)
 	   {
-	   	    $roles = Roles::get();
+	   	    $roles = Roles::where('status', 1)->get();
 			return view('admin.pages.users.create', compact('roles'));
 	   }
 
@@ -29,7 +29,7 @@ class UserController extends Controller
 	    {
 	        //
 	        $user  = User::findOrFail($id);
-	        $roles = Roles::get();
+	        $roles = where('status', 1)->get();
 	        return view('admin.pages.users.edit',compact('user', 'roles'));
 	    }
 
