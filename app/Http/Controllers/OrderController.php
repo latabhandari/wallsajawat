@@ -88,13 +88,15 @@ class OrderController extends Controller
 
                   $order_products               =     array();
 
+                  $dimension                    =     MyHelper::getRollDimenstionById($mid);
+
                   $order_products['image']      =     $prod_image_info->image;
                   $order_products['name']       =     $product_info[0]['name'];
                   $order_products['short_desc'] =     $product_info[0]['short_desc'];
                   $order_products['price']      =     $product_info[0]['price'];
                   $order_products['qty']        =     $row->qty;
-                  $order_products['width']      =     $row->options->width;
-                  $order_products['height']     =     $row->options->height;
+                  $order_products['width']      =     $dimension->width;
+                  $order_products['height']     =     $dimension->height;
                   $order_summ_products[]        =     $order_products; 
   		       }
 
