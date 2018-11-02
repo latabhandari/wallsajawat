@@ -147,6 +147,12 @@
 											$deliver_time   = $order->unix_timestamp + (86400 * 3);
 										@endphp
 
+										<div class="row">
+												<div class="col-sm-12">
+													<h4>Deliver {{ date('D, j M\'y', $deliver_time) }}</h4>
+												</div>
+										</div>
+
 										@foreach ($order_products as $product)
 
 										@php
@@ -159,11 +165,7 @@
 
 										@endphp
 
-											<div class="row">
-												<div class="col-sm-12">
-													<h4>Deliver {{ date('D, j M\'y', $deliver_time) }}</h4>
-												</div>
-											</div>
+											
 
 											<div class="row">
 												<div class="col-sm-12">
