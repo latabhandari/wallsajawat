@@ -46,9 +46,9 @@
                       <td>{{ $data->order_number }}</td>
                       <td>{{ $data->user->name }}</td>
                       <td>{{ $data->user->email }}</td>
-                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->total_amount }} /-</td>
-                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->discount ? $data->discount : 0 }} /-</td>
-                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->payable_amount }} /-</td>
+                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->total_amount }}</td>
+                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->discount ? $data->discount : 0 }} </td>
+                      <td><i class="fa fa-inr" aria-hidden="true"></i> {{ $data->payable_amount }}</td>
                       <td>{{ date('D, j M Y h:i a', $data->unix_timestamp)  }}</td>
                       <td><a class="btn btn-warning" href="{{ route('admin.order.show',$data->id) }}"><span class="fa fa-eye"></span></a></td>
                     </tr>
