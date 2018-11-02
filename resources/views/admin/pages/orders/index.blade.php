@@ -23,7 +23,7 @@
                   </div>
               @endif
 
-              <table id="category" class="table table-bordered table-striped">
+              <table id="orders" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>S. No</th>
@@ -80,7 +80,7 @@
 <script src="{{ URL::asset('backend/theme/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
 <script>
   $(function () {
-    $('#category').DataTable({
+    $('#orders').DataTable({
       'paging'      : true,
       'lengthChange': false,
       'searching'   : true,
