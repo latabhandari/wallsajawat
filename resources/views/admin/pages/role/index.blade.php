@@ -44,16 +44,22 @@
                 <tr>
                   <th>S. No</th>
                   <th>Name</th>
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
 
                 @foreach ($roles as $data)
+                @php
+                    $status_img   =  ($data->status == 1) ? "bullet-green.png" : "bullet-red.png";
+                    $status_msg   =  ($data->status == 1) ? "inactive" : "active";
+                @endphp
 
                 <tr>
                   <td>{{ ++$i }}</td>
                   <td>{{ $data->name }}</td>
+                  <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.product.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
                   <td>
                      @php
                           $edit_role = MyHelper::getPermission('edit_role');
