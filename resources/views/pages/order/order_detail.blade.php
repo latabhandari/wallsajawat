@@ -190,10 +190,14 @@
 																<h5 class="col-sm-3 col-xs-4 paddingRght0">Quantity</h5><span class="col-sm-1 col-xs-2 paddingTop10">:</span><div class="wallpaper-quantity col-sm-8 col-xs-6">{{ $product->qty }}</div>
 															</div>
 
-															
+															@if($product_info[0]['short_desc'])
 															<div class="row">
 																<h5 class="col-sm-3 col-xs-4 paddingRght0">Description</h5><span class="col-sm-1 col-xs-1 paddingTop10">:</span><div class="wallpaper-material col-sm-8 col-xs-6">{!! $product_info[0]['short_desc'] !!}</div>
 															</div>
+															@endif
+
+
+
 															<div class="row">	
 															<h4 class="placed-amount col-sm-12"><i class="fa fa-inr" aria-hidden="true"></i> {{ $product->price }}</h4>
 														</div>
