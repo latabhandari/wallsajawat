@@ -106,10 +106,12 @@ ul li{list-style-type:none;padding-left:10px}
                                   <td colspan="3"></td>
                                   <td colspan="2" align="center"><strong>Sub Total </strong>:&nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->total_amount }}</td>
                                 </tr>
+                                @if ($order->discount)
                                 <tr>
                                   <td colspan="3"></td>
-                                  <td colspan="2" align="center"><strong>Discount </strong>:&nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount ? $order->discount : 0 }}</td>
+                                  <td colspan="2" align="center"><strong>Discount </strong>:&nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->discount }}</td>
                                 </tr>
+                                @endif
                                 <tr>
                                   <td colspan="3"></td>
                                   <td colspan="2" align="center"><strong>Amount Paid </strong>:&nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</td>
