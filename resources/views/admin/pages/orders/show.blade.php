@@ -61,10 +61,12 @@ ul li{list-style-type:none;padding-left:10px}
                               <td align="left">Sub Total: Rs. {{ $order->total_amount }}</td>
                             </tr>
                             <tr>
-                              <td colspan="5" align="left">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
+                              <td colspan="4"></td>
+                              <td align="left">Discount: Rs. {{ $order->discount ? $order->discount : 0 }}</td>
                             </tr>
                             <tr>
-                              <td colspan="5" align="left">Amount Paid: Rs. {{ $order->payable_amount }}</td>
+                              <td colspan="4"></td>
+                              <td align="left">Amount Paid: Rs. {{ $order->payable_amount }}</td>
                             </tr>
 
                       </tbody>
