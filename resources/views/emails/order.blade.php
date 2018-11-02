@@ -41,7 +41,7 @@
                             <tbody><tr>
                               <td class="mini-block">
                                 <span class="header-sm">Shipping Address</span><br>
-                                {{ $shipping_address }}
+                                {!! $shipping_address !!}
                               </td>
                             </tr>
                           </tbody></table>
@@ -59,7 +59,7 @@
                                 <span class="header-sm">Date Shipped</span><br>
                                 {{ date('D, j M\'y', time() + (86400 * 3)) }}<br>
                                 <br>
-                                <span class="header-sm">Order</span> <br>
+                                <span class="header-sm">Order #</span> <br>
                                 {{ $order_number }}
                               </td>
                             </tr>
@@ -141,7 +141,7 @@
                     <td class="item-col price" style="text-align: left; border-top: 1px solid #cccccc;">
                       <span class="total-space">Rs. {{ $total_amount }}</span> <br>
                       <span class="total-space">Rs. {{ $discount ? $discount : 0 }}</span><br>
-                      <span class="total-space" style="font-weight:bold; color: #4d4d4d"><i class="fa fa-inr">&nbsp;</i>{{ $payable_amount }}</span>
+                      <span class="total-space" style="font-weight:bold; color: #4d4d4d"><i class="fa fa-inr">&nbsp;</i>Rs. {{ $payable_amount }}</span>
                     </td>
                   </tr>
                 </tbody></table>
