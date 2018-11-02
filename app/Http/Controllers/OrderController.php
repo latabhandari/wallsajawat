@@ -78,6 +78,29 @@ class OrderController extends Controller
                   Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
   		       }
 
+              $order_array['cart_contents']      =  Cart::content();
+              $order_array['shipping_address']   =  session('shipping_address');
+
+              $order_array['order_number']       =  $order_number;
+              $order_array['coupon']             =  session('coupon');
+              $order_array['discount']           =  session('discount');
+
+              $order_array['total_amount']       =  $cart_total;
+
+              $order_array['payable_amount']     =  $payable_amount;
+
+              /* send order email */
+              Mail::send('emails.order', $order_array, function ($message)
+                {
+                    $message->from(env('MAIL_FROM_ADDRESS', ''), env('MAIL_FROM_NAME', ''));
+                    $message->to(Auth::user()->email);
+
+                    //Add a subject
+                    $message->subject("WallSajawat - Order");
+                });
+
+              /* close */
+
   		        /* remove session for coupon and destroy cart */
                   Session::forget('coupon');
                   Session::forget('discount');
