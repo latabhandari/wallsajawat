@@ -26,7 +26,7 @@ ul li{list-style-type:none;padding-left:10px}
                   <p class="lead">Details</p>
                   <div class="table-responsive">
                     @php
-                      $order_products = $order::find($order->id)->products;
+                      $order_products = $order->products;
                       print_r($order_products); die;
 
                     @endphp
