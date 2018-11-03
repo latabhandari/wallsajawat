@@ -15,12 +15,12 @@
 <style type="text/css" media="screen">
 
 .social_containter {
-    position: static;
+    position: absolute;
     right: 15px;
     background: #f9f9f9;
     padding: 5px;
     border-radius: 5px;
-    top: -92px;
+    bottom:75px;
     z-index: 9999;
 }
 
