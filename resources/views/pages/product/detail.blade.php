@@ -87,7 +87,7 @@ span.short_desc p{font-size:13px}
               $prating = App\Helpers\MyHelper::getProductRating($detail->id);
             @endphp
             
-            <p class="wishlist"><a href="javascript:void(0)" id="addwishlist">[Add to wishlist]</a></p>
+            <p class="wishlist"><a href="javascript:void(0)" id="addwishlist" data-attr="{{ $detail->id }}">[Add to wishlist]</a></p>
             <span class="short_desc">{!! $detail->short_desc !!} </span>
             <div class="rating">
               <div class="row">
@@ -481,8 +481,6 @@ span.short_desc p{font-size:13px}
 
               }
          }
-
-        
 
         $(document).ready(function() {
                $('.bxslider').bxSlider({

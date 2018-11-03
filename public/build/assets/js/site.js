@@ -26,12 +26,13 @@ $(document).ready(function() {
 
 
 $("#addwishlist").on('click', function() {
+    let id = parseInt($(this).attr('data-attr'));
 
     $.ajax({
                type: "POST",
                url: WallSajawat.getSitePath('wishlist'),
                dataType: "json",
-               data: {"pid": pid},
+               data: {"pid": id},
                success: function (resp) {
                   alert(resp.msg);
                }
