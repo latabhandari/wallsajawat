@@ -26,7 +26,7 @@ ul li{list-style-type:none;padding-left:10px}
                     <span>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</span>
                   </div>
 
-                  <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
+                  <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0 15px 15px;width:97%">
                       <div class="col-sm-12 paddingLeftRght0">
                         <div class="order-date-sec">
 
