@@ -39,25 +39,10 @@
   font-weight: 200;
 }
 
-.social {
-  opacity: 0;
-  position: relative;
-  margin: 8px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  display: inline-block;
-  color: #FFF;
-  font-size: 20px;
-  text-align: center;
-  i {
-   margin-top: 10px;
-  }
   
   a {
     color: #FFF;
   }
-}
 
 .twitter {
   background: #00aced;
