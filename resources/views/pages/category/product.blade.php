@@ -38,7 +38,7 @@
 .social {
 
   position: relative;
-  margin: 8px;
+  margin: 3px;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -126,19 +126,20 @@
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
                  <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
 
-                  <span class="righttxt"><i class="fa fa-share-alt"></i>
+                    <span class="righttxt">
+                       <i class="fa fa-share-alt"></i>
+                       <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
+                    </span> 
 
-                  <div class="social_containter">
-                    <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
-                    <div class="social facebook"><i class="fa fa-facebook"></i></div>
-                    <div class=" social google"><i class="fa fa-google-plus"></i></div>
-                    <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
-                  </div>
+                     <div class="social_containter">
+                        <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
+                        <div class="social facebook"><i class="fa fa-facebook"></i></div>
+                        <div class=" social google"><i class="fa fa-google-plus"></i></div>
+                        <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
+                      </div>
 
 
-
-
-                  <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a></span> </div>
+                 </div>
                </div>
               </div>
           @endforeach
