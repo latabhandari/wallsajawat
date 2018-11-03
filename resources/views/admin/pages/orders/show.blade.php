@@ -24,9 +24,9 @@ ul li{list-style-type:none;padding-left:10px}
                 <!-- accepted payments column -->
                 <div class="col-xs-12">
 
-                  <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
+                  <div class="col-xs-12">
                     <h2>Order Number #{{  $order->order_number }}</h2>
-                    <h4>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</h4>
+                    <span>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</span>
                   </div>
 
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
