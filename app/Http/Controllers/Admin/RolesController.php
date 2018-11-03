@@ -42,7 +42,7 @@ class RolesController extends Controller
     public function store(Request $request)
     {
         //
-         request()->validate(['name'  => 'required|string|regex:/(^[A-Za-z ]+$)+/']);
+         request()->validate(['name'  => 'required|string|regex:/(^[A-Za-z ]+$)+/', 'status' => 'required']);
 
          $params    =  $request->all();
 
@@ -53,6 +53,7 @@ class RolesController extends Controller
 
 
          $fields['name']                    =    $params['name'];
+         $fields['status']                  =    $params['status'];
 
          if (isset($params['index_categories']))
          $permission['index_categories']       =    $params['index_categories'];
@@ -222,7 +223,7 @@ class RolesController extends Controller
     {
         //
          
-         request()->validate(['name'  => 'required|string|regex:/(^[A-Za-z ]+$)+/']);
+         request()->validate(['name'  => 'required|string|regex:/(^[A-Za-z ]+$)+/', 'status' => 'required']);
 
          $params    =  $request->all();
 
@@ -233,6 +234,7 @@ class RolesController extends Controller
 
      
          $fields['name']                    =    $params['name'];
+         $fields['status']                  =    $params['status'];
 
          if (isset($params['index_categories']))
          $permission['index_categories']       =    $params['index_categories'];

@@ -13,7 +13,7 @@ class Roles extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'permission', 'created_at_timestamp', 'updated_at_timestamp'
+        'name', 'status', 'permission', 'created_at_timestamp', 'updated_at_timestamp'
     ];
 
 }

@@ -77,10 +77,22 @@
                     </li>
 
 
+
+
                   </ul>
                     
                 </div>
               </div>
+
+              <div class="form-group">
+                  <label for="category">Status&nbsp;</label>
+                  <select class="form-control" name="status">
+                      <option value="1">Active</option>
+                      <option value="0">Inactive</option>
+                  </select>
+
+              </div>
+
 
 
               <!-- /.box-body -->
