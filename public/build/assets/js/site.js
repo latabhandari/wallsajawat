@@ -27,7 +27,7 @@ $(document).ready(function() {
                     }
                 });
 
-                $("#addwishlist").on('click', function() {
+                $("#addwishlist, .addwishlist").on('click', function() {
                     let id = parseInt($(this).attr('data-attr'));
 
                     $.ajax({
