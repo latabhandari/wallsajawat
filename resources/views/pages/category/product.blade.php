@@ -133,6 +133,9 @@
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
 
                   <div class="social_containter" id="share_container_{{ $product->id }}">
+                    @php
+                     ehco  $url = URL::to('/product/'.$product->slug);
+                    @endphp
             
                     <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ Request::url() }}"><i class="fa fa-facebook"></i></a></div>
                     <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ Request::url() }}&text={{ $product->name }}"><i class="fa fa-twitter"></i></a></div>
