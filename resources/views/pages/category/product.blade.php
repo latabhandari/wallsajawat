@@ -15,13 +15,8 @@
 <style type="text/css" media="screen">
 
 .social_containter {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  filter:url('#goo');
+  
 }
-.social_containter i {color:#fff;margin:10px 0 0 0;}
 
 .button {
   z-index: 99;
@@ -39,10 +34,19 @@
   font-weight: 200;
 }
 
-  
-  a {
-    color: #FFF;
-  }
+.social {
+
+  position: relative;
+  margin: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+}
+.social i {color:#fff;margin:10px 0 0 0;}
 
 .twitter {
   background: #00aced;
