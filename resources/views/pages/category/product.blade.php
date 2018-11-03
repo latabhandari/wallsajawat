@@ -139,7 +139,7 @@
                   <div class="social_containter" id="share_container_{{ $product->id }}">
             
                     <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ Request::url() }}"><i class="fa fa-facebook"></i></a></div>
-                    <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ Request::url() }}&text={{ $info->page_title }}"><i class="fa fa-twitter"></i></a></div>
+                    <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ Request::url() }}&text={{ $product->name }}"><i class="fa fa-twitter"></i></a></div>
                     <div class=" social google"><a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{ Request::url() }}"><i class="fa fa-google-plus"></i></a></div>
 
                   </div>
