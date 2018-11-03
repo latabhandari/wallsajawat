@@ -23,7 +23,8 @@ ul li{list-style-type:none;padding-left:10px}
 
                   <div class="col-xs-12">
                     <h3>Order Number #{{  $order->order_number }}</h3>
-                    <span>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</span>
+                    <span>Order Placed: {{ date('D, j M Y h:i a', $order->unix_timestamp)  }}</span>
+                    <span>Ip Address: {{ $order->ip_address  }}</span>
                   </div>
 
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0 15px 15px;width:97%">
