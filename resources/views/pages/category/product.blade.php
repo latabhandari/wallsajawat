@@ -139,10 +139,7 @@
                   <span class="righttxt"><i class="fa fa-share-alt"></i>
 
                   <div class="social_containter" style="display: none">
-                    <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
-                    <div class="social facebook"><i class="fa fa-facebook"></i></div>
-                    <div class=" social google"><i class="fa fa-google-plus"></i></div>
-                    <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
+                    <span class="need-share-button_dropdown need-share-button_dropdown-middle-right" style="margin-top: -20px;"><span class="need-share-button_link need-share-button_mailto" data-network="mailto"></span><span class="need-share-button_link need-share-button_twitter" data-network="twitter"></span><span class="need-share-button_link need-share-button_pinterest" data-network="pinterest"></span><span class="need-share-button_link need-share-button_facebook" data-network="facebook"></span><span class="need-share-button_link need-share-button_googleplus" data-network="googleplus"></span><span class="need-share-button_link need-share-button_linkedin" data-network="linkedin"></span></span>
                   </div>
 
 
