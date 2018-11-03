@@ -129,6 +129,14 @@
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
+
+                  <div class="social_containter">
+                        <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
+                        <div class="social facebook"><i class="fa fa-facebook"></i></div>
+                        <div class=" social google"><i class="fa fa-google-plus"></i></div>
+                        <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
+                  </div>
+
                  <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
 
                     <span class="righttxt">
@@ -137,13 +145,8 @@
                     </span> 
                  </div>
                </div>
-               
-               <div class="social_containter">
-                        <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
-                        <div class="social facebook"><i class="fa fa-facebook"></i></div>
-                        <div class=" social google"><i class="fa fa-google-plus"></i></div>
-                        <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
-               </div>
+
+              
 
               </div>
 
