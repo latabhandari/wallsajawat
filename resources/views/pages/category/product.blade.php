@@ -132,17 +132,18 @@
                 <div class="box-inner">
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
 
-                  <div class="social_containter">
+                  <div class="social_containter" id="share_container_{{ $product->id }}">
                         <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
                         <div class="social facebook"><i class="fa fa-facebook"></i></div>
                         <div class=" social google"><i class="fa fa-google-plus"></i></div>
                         <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
                   </div>
 
-                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
+                 <div class="img-price"> <span class="lefttxt">
+                  <i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
 
                     <span class="righttxt">
-                       <i class="fa fa-share-alt"></i>
+                       <a href="javascript:void(0)" id="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
                        <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
                     </span> 
                  </div>
@@ -168,3 +169,20 @@
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 @endsection
+
+<script>
+  $(document).ready(function(){
+
+    $("#share").on('click', function() {
+
+      let id = parseInt($(this).attr('data-attr'));
+
+      $('.social_containter').css('display', 'none');
+      $('#social_containter_' + id).css('display', '');
+
+
+
+    });
+
+
+  });
