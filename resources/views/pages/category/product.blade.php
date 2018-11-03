@@ -53,7 +53,7 @@
   color: #FFF;
   text-align: center;
 }
-.social i {color:#fff;margin:6px 0 0 0;}
+.social i {color:#fff;margin:6px 0 0 0;font-size:12px;}
 
 .twitter {
   background: #00aced;
