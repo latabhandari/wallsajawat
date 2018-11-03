@@ -12,6 +12,75 @@
 <script type="text/javascript" src="{{ asset('build/assets/js/jquery.validate.min.js') }}"></script>
 <meta name="keywords" content="{{ $category_info->meta_keywords }}" />
 <meta name="description" content="{{  $category_info->meta_description }}" />
+<style type="text/css" media="screen">
+
+.social_containter {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  filter:url('#goo');
+}
+
+.button {
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #B388EB, #8093F1);
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.social {
+  opacity: 0;
+  position: relative;
+  margin: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+  i {
+   margin-top: 10px;
+  }
+  
+  a {
+    color: #FFF;
+  }
+}
+
+.twitter {
+  background: #00aced;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.google {
+  background: #dd4b39;
+}
+
+.youtube {
+  background: #bb0000;
+}
+
+.clicked {
+  opacity: 1;
+  transition: 1.2s all ease;
+  transform: translateY(56px);
+}
+  
+</style>
 
 @endsection
 
@@ -65,7 +134,21 @@
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
-                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a></span> </div>
+                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
+
+                  <span class="righttxt"><i class="fa fa-share-alt"></i>
+
+                  <div class="social_containter" style="display: none">
+                    <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
+                    <div class="social facebook"><i class="fa fa-facebook"></i></div>
+                    <div class=" social google"><i class="fa fa-google-plus"></i></div>
+                    <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
+                  </div>
+
+
+
+
+                  <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a></span> </div>
                </div>
               </div>
           @endforeach
