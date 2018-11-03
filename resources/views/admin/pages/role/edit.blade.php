@@ -83,6 +83,18 @@
                 </div>
               </div>
 
+              <div class="box-body">
+                <div class="form-group">
+                    <label for="status">Status&nbsp;</label>
+                    <select class="form-control" name="status">
+                        <option value="1" {{ ($roles->status == 1) ? "selected='selected'" : "" }}>Active</option>
+                        <option value="0" {{ ($roles->status == 0) ? "selected='selected'" : "" }}>Inactive</option>
+                    </select>
+
+                </div>
+              </div>
+
+
               <div class="box-footer">
                 <button type="submit" class="btn btn-success btn-flat">Submit</button>
               </div>
