@@ -22,6 +22,7 @@
     border-radius: 5px;
     bottom:75px;
     z-index: 9999;
+    display:none
 }
 
 .button {
@@ -44,14 +45,14 @@
 
   position: relative;
   margin: 3px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 100%;
   display: inline-block;
   color: #FFF;
   text-align: center;
 }
-.social i {color:#fff;margin:8px 0 0 0;}
+.social i {color:#fff;margin:6px 0 0 0;}
 
 .twitter {
   background: #00aced;
