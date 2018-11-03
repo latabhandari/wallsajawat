@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-			'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
+			      'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
             'unix_timestamp' => time(),
             'verified' => 1 //ucomment
         ]);
