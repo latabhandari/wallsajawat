@@ -21,6 +21,12 @@ $(document).ready(function() {
                                                      }
                 });
 
+                 $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
                 $("#addwishlist").on('click', function() {
                     let id = parseInt($(this).attr('data-attr'));
 
