@@ -130,16 +130,18 @@
 
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
-                  <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
+
+                  @php
+                      $url = route('product.detail', $product->slug)
+                  @endphp
+
+                  <a href="{{ $url }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
 
                   <div class="social_containter" id="share_container_{{ $product->id }}">
-                    @php
-                     echo  $url = URL::to('/product/'.$product->slug);
-                    @endphp
             
-                    <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ Request::url() }}"><i class="fa fa-facebook"></i></a></div>
-                    <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ Request::url() }}&text={{ $product->name }}"><i class="fa fa-twitter"></i></a></div>
-                    <div class=" social google"><a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{ Request::url() }}"><i class="fa fa-google-plus"></i></a></div>
+                    <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ $url }}"><i class="fa fa-facebook"></i></a></div>
+                    <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ $url }}&text={{ $product->name }}"><i class="fa fa-twitter"></i></a></div>
+                    <div class=" social google"><a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{ $url }}"><i class="fa fa-google-plus"></i></a></div>
 
                   </div>
 
