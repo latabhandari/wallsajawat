@@ -9,7 +9,7 @@
         <table cellspacing="0" cellpadding="0" width="600" class="w320">
           <tbody><tr>
             <td class="header-lg">
-              Your order has shipped!
+              Your order has been successfully placed!
             </td>
           </tr>
           <tr>
@@ -56,7 +56,7 @@
                           <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse:separate !important;">
                             <tbody><tr>
                               <td class="mini-block">
-                                <span class="header-sm">Date Shipped</span><br>
+                                <span class="header-sm">Delivery Date</span><br>
                                 {{ date('D, j M\'y', time() + (86400 * 3)) }}<br>
                                 <br>
                                 <span class="header-sm">Order #</span> <br>
