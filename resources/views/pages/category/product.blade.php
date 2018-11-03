@@ -175,16 +175,10 @@
 
     $("#share").on('click', function() {
 
-
-
       let id = parseInt($(this).attr('data-attr'));
 
-       console.log(id);
-
       $('.social_containter').css('display', 'none');
-      $('#social_containter_' + id).css('display', 'block');
-
-
+      $('#share_container_' + id).css('display', 'block');
 
     });
 
