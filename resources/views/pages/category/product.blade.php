@@ -17,7 +17,6 @@
 .social_containter {
   
 }
-.righttxt i {font-size:14px}
 
 .button {
   z-index: 99;
