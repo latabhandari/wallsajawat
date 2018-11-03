@@ -178,6 +178,8 @@
       let id = parseInt($(this).attr('data-attr'));
 
       $('.social_containter').css('display', 'none');
+
+      console.log('share_container_' + id)
       $('#share_container_' + id).css('display', 'block !important');
 
     });
