@@ -143,7 +143,7 @@
                   <i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
 
                     <span class="righttxt">
-                       <a href="javascript:void(0)" id="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
+                       <a href="javascript:void(0)" class="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
                        <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
                     </span> 
                  </div>
@@ -173,14 +173,13 @@
 <script>
   $(document).ready(function() {
 
-    $("#share").on('click', function() {
+    $(".share").on('click', function() {
 
       let id = parseInt($(this).attr('data-attr'));
 
       $('.social_containter').css('display', 'none');
 
-      console.log('share_container_' + id)
-      $('#share_container_' + id).css('display', 'block !important');
+      $('#share_container_' + id).css('display', 'block');
 
     });
 
