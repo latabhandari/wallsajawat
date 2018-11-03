@@ -30,7 +30,7 @@ ul li{list-style-type:none;padding-left:10px}
 
                           <div class="col-sm-3">
                             <p class="marginZero"><strong>CUSTOMER INFO</strong></p>
-                            <p class="placed-date"><i class="fa fa-user"></i> {{ $order->user->name  }}<br /><i class="fa fa-email"></i>{{ $order->user->email  }}<br /><i class="fa fa-mobile"></i>{{ $order->user->mobile  }}</p>
+                            <p class="placed-date"><i class="fa fa-user"></i>&nbsp;{{ $order->user->name  }}<br /><i class="fa fa-enveloper"></i>&nbsp;{{ $order->user->email  }}<br /><i class="fa fa-mobile"></i>&nbsp;{{ $order->user->mobile  }}</p>
                           </div>
 
                           <div class="col-sm-3">
