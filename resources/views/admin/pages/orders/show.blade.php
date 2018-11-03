@@ -23,19 +23,19 @@ ul li{list-style-type:none;padding-left:10px}
               <div class="row">
                 <!-- accepted payments column -->
                 <div class="col-xs-12">
-                  
+
+                  <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
+                    <h2>Order Number #{{  $order->order_number }}</h2>
+                    <h4>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</h4>
+                  </div>
+
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
                       <div class="col-sm-8 paddingLeftRght0">
                         <div class="order-date-sec">
 
-                          <div class="col-sm-3">
+                          <div class="col-sm-4">
                             <p class="marginZero"><strong>CUSTOMER INFO</strong></p>
                             <p class="placed-date"><i class="fa fa-user"></i>&nbsp;{{ $order->user->name  }}<br /><i class="fa fa-envelope"></i>&nbsp;{{ $order->user->email  }}<br /><i class="fa fa-mobile"></i>&nbsp;{{ $order->user->mobile  }}</p>
-                          </div>
-
-                          <div class="col-sm-3">
-                            <p class="marginZero"><strong>ORDER PLACED</strong></p>
-                            <p class="placed-date">{{ date('D, j M Y H:i', $order->unix_timestamp)  }}</p>
                           </div>
 
                           <div class="col-sm-2">
@@ -54,24 +54,20 @@ ul li{list-style-type:none;padding-left:10px}
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
                           </div>
 
-                        </div>
-                      </div>
-
-                      <div class="col-sm-4">
-                        <div class="order-name-sec">
-                          <div class="col-sm-8">
-                            <p class="marginZero"><strong>SHIP TO</strong></p>
-                            <p class="user-order-name">{{ $shipping_address }}</p>
-                          </div>
-                          <div class="col-sm-4 text-right paddingLeftRght0">
-                            <div class="row">
-                              <div class="col-sm-12">
-                                <p class="order-no marginZero"><strong>ORDER #</strong> 449922320</p>
+                          <div class="col-sm-4">
+                            <div class="order-name-sec">
+                              <div class="col-sm-8">
+                                <p class="marginZero"><strong>SHIP TO</strong></p>
+                                <p class="user-order-name">{{ $shipping_address }}</p>
                               </div>
                             </div>
                           </div>
+
+
                         </div>
                       </div>
+
+
                     </div>
 
                     <div class="col-xs-12">
