@@ -482,19 +482,7 @@ span.short_desc p{font-size:13px}
               }
          }
 
-        $("#addwishlist").on('click', function() {
-
-                  $.ajax({
-                             type: "POST",
-                             url: WallSajawat.getSitePath('wishlist'),
-                             dataType: "json",
-                             data: {"pid": pid},
-                             success: function (resp) {
-                                alert(resp.msg);
-                             }
-
-                         });
-        }); 
+        
 
         $(document).ready(function() {
                $('.bxslider').bxSlider({

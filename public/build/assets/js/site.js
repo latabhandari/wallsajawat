@@ -24,3 +24,17 @@ $(document).ready(function() {
 
   });
 
+
+$("#addwishlist").on('click', function() {
+
+    $.ajax({
+               type: "POST",
+               url: WallSajawat.getSitePath('wishlist'),
+               dataType: "json",
+               data: {"pid": pid},
+               success: function (resp) {
+                  alert(resp.msg);
+               }
+
+           });
+}); 
