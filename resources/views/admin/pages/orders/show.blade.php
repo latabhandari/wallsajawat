@@ -25,7 +25,7 @@ ul li{list-style-type:none;padding-left:10px}
                 <div class="col-xs-12">
 
                   <div class="col-xs-12">
-                    <h2>Order Number #{{  $order->order_number }}</h2>
+                    <h3>Order Number #{{  $order->order_number }}</h3>
                     <span>Order Placed: {{ date('D, j M Y H:i', $order->unix_timestamp)  }}</span>
                   </div>
 
