@@ -30,7 +30,7 @@ ul li{list-style-type:none;padding-left:10px}
                   </div>
 
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
-                      <div class="col-sm-8 paddingLeftRght0">
+                      <div class="col-sm-12 paddingLeftRght0">
                         <div class="order-date-sec">
 
                           <div class="col-sm-4">
@@ -54,7 +54,7 @@ ul li{list-style-type:none;padding-left:10px}
                             <p class="placed-amount"><i class="fa fa-inr" aria-hidden="true"></i> {{ $order->payable_amount }}</p>
                           </div>
 
-                          <div class="col-sm-4">
+                          <div class="col-sm-2">
                             <div class="order-name-sec">
                               <div class="col-sm-8">
                                 <p class="marginZero"><strong>SHIP TO</strong></p>
