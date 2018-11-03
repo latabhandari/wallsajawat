@@ -22,7 +22,8 @@
     border-radius: 5px;
     bottom:75px;
     z-index: 9999;
-    display:none
+    display:none;
+    opacity: 0.9
 }
 
 .button {
