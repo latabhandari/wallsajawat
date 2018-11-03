@@ -17,6 +17,7 @@
 .social_containter {
   
 }
+.righttxt i {font-size:16px}
 
 .button {
   z-index: 99;
@@ -38,12 +39,11 @@
 
   position: relative;
   margin: 8px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   display: inline-block;
   color: #FFF;
-  font-size: 20px;
   text-align: center;
 }
 .social i {color:#fff;margin:10px 0 0 0;}
