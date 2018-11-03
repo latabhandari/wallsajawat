@@ -27,9 +27,15 @@ ul li{list-style-type:none;padding-left:10px}
                   <div class="col-xs-12" style="border:1px solid #ccc;padding:15px;margin:15px 0">
                       <div class="col-sm-7 paddingLeftRght0">
                         <div class="order-date-sec">
+
+                          <div class="col-sm-4">
+                            <p class="marginZero"><strong>CUSTOMER INFO</strong></p>
+                            <p class="placed-date">{{ $order->user->name  }}<br />{{ $order->user->email  }}<br />{{ $order->user->mobile  }}</p>
+                          </div>
+
                           <div class="col-sm-4">
                             <p class="marginZero"><strong>ORDER PLACED</strong></p>
-                            <p class="placed-date">{{ date('D, j M Y h:i a', $order->unix_timestamp)  }}</p>
+                            <p class="placed-date">{{ date('D, j M Y H:i', $order->unix_timestamp)  }}</p>
                           </div>
 
                           <div class="col-sm-2">
