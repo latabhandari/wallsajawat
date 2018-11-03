@@ -21,6 +21,7 @@
   height: 100vh;
   filter:url('#goo');
 }
+.social_containter i {color:#fff;margin:10px 0 0 0;}
 
 .button {
   z-index: 99;
