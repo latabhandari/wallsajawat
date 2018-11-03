@@ -57,7 +57,7 @@ ul li{list-style-type:none;padding-left:10px}
                         </div>
                       </div>
 
-                      <div class="col-sm-5">
+                      <div class="col-sm-4">
                         <div class="order-name-sec">
                           <div class="col-sm-8">
                             <p class="marginZero"><strong>SHIP TO</strong></p>
