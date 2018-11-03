@@ -175,6 +175,8 @@
 
     $("#share").on('click', function() {
 
+      console.log(34);
+
       let id = parseInt($(this).attr('data-attr'));
 
       $('.social_containter').css('display', 'none');
