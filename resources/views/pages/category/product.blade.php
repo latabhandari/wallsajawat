@@ -134,7 +134,7 @@
 
                   <div class="social_containter" id="share_container_{{ $product->id }}">
                     @php
-                     ehco  $url = URL::to('/product/'.$product->slug);
+                     echo  $url = URL::to('/product/'.$product->slug);
                     @endphp
             
                     <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ Request::url() }}"><i class="fa fa-facebook"></i></a></div>
