@@ -14,9 +14,6 @@ ul li{list-style-type:none;padding-left:10px}
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Order's Summary</h3>
-            </div>
             <!-- /.box-header -->
             <div class="box-body">
 
