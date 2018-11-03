@@ -17,7 +17,7 @@
 .social_containter {
   
 }
-.righttxt i {font-size:16px}
+.righttxt i {font-size:14px}
 
 .button {
   z-index: 99;
@@ -46,7 +46,7 @@
   color: #FFF;
   text-align: center;
 }
-.social i {color:#fff;margin:10px 0 0 0;}
+.social i {color:#fff;margin:8px 0 0 0;}
 
 .twitter {
   background: #00aced;
@@ -128,7 +128,7 @@
 
                   <span class="righttxt"><i class="fa fa-share-alt"></i>
 
-                  <div class="social_containter" style="display: none">
+                  <div class="social_containter">
                     <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
                     <div class="social facebook"><i class="fa fa-facebook"></i></div>
                     <div class=" social google"><i class="fa fa-google-plus"></i></div>
