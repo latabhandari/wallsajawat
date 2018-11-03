@@ -131,10 +131,6 @@
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
                   <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
-                  @php
-                    $url = 
-
-                  @endphp
 
                   <div class="social_containter" id="share_container_{{ $product->id }}">
             
