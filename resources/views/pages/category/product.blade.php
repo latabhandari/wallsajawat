@@ -15,7 +15,13 @@
 <style type="text/css" media="screen">
 
 .social_containter {
-  
+    position: static;
+    right: 15px;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    top: -92px;
+    z-index: 9999;
 }
 
 .button {
@@ -129,18 +135,16 @@
                        <i class="fa fa-share-alt"></i>
                        <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
                     </span> 
+                 </div>
+               </div>
+              </div>
 
-                     <div class="social_containter">
+               <div class="social_containter">
                         <div class="social twitter"><a href="https://twitter.com/sa_sha26" target="_blank"><i class="fa fa-twitter"></i></a></div>
                         <div class="social facebook"><i class="fa fa-facebook"></i></div>
                         <div class=" social google"><i class="fa fa-google-plus"></i></div>
                         <div class="social youtube"><a href="https://www.youtube.com/channel/UCCATAa8MWoBuH-sR_Jlx29A" target="_blank"><i class="fa fa-youtube"></i></a></div>
-                      </div>
-
-
-                 </div>
                </div>
-              </div>
           @endforeach
         @else
                 <p style="padding:0 0 0 15px">Sorry no product found.!</p>
