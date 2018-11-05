@@ -55,14 +55,6 @@
           </div>
         </div>
 
-       
-      </div>
-
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-          <!-- small box -->
-        
-        <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
@@ -75,6 +67,14 @@
             </div>
           </div>
         </div>
+       
+      </div>
+
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+          <!-- small box -->
+        
+        <!-- ./col -->
 
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -102,17 +102,6 @@
           </div>
         </div>
 
-        <!-- ./col -->
-    </div>
-
-      <!-- /.row -->
-
-
-      <!-- Small boxes (Stat box) -->
-      <div class="row">
-          <!-- small box -->
-        
-        <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
@@ -127,12 +116,9 @@
         </div>
 
         <!-- ./col -->
-  
     </div>
 
-      <!-- /.row -->
-
-       
+      <!-- /.row -->       
       <!-- Main row -->
     </section> 
 
