@@ -85,7 +85,7 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/signout', 'HomeController@logout')->name('signout');
 
 
-    Route::get('/wishlist_cart/{id}', 'HomeController@wishlist_addtocart')->name('wishlist.cart');
+    Route::get('/wishlist_cart/{id}', 'HomeController@wishlist_cart')->name('wishlist.cart');
     
 
 });
