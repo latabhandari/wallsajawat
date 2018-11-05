@@ -163,8 +163,8 @@
                                     <div class="img-price">
                                         <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
                                         <span class="righttxt">
-                                            <i class="fa fa-share-alt"></i>
-                                            <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $selling_products->id }}"><i class="fa fa-star"></i></a>
+                                          <a href="javascript:void(0)" class="share" data-attr="{{ $selling_products->id }}"><i class="fa fa-share-alt"></i></a>
+                                          <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $selling_products->id }}"><i class="fa fa-star"></i></a>
                                         </span>
                                     </div>
                                 </div>
