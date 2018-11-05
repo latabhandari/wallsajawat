@@ -48,7 +48,7 @@ class DashboardController extends Controller
                     $date_end    = mktime(23, 59, 59, $month, date("t", $strtotime), $year);
 
                     $order_month =  Order::where('unix_timestamp', '>=', $date_start)->where('unix_timestamp', '<=', $date_end)->count();
-                    $mname       =  date("M", $date_start);
+                    $mname       =  date("M'y", $date_start);
                     $order['name']      = $mname;
                     $order['y']         = $order_month;
                     $order['drilldown'] = 'sfsdfsd';
