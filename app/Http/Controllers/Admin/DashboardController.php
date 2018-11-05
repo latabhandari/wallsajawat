@@ -42,8 +42,8 @@ class DashboardController extends Controller
             for ($i = 6; $i >= 0; $i--)
                  {
                     $strtotime   = strtotime("-$i months");
-                    $month       = date('n');
-                    $year        = date('Y');
+                    $month       = date('n', $strtotime);
+                    $year        = date('Y', $strtotime);
                     $date_start  = mktime(0, 0, 0, $month, 1, $year);
                     $date_end    = mktime(23, 59, 59, $month, date("t"), $year);
 
