@@ -109,7 +109,7 @@ class ProductController extends Controller
      	$material_type_id =  $params['material_type'];
      	$id           		=  $params['id'];
       $qty              =  $params['qty'];
-     	$product      		=  Product::find($id);
+     	$product      		=  Product::findOrFail($id);
 
      	$productname  		=  $product->name; 
      	$type         		=  $product->type;
@@ -130,6 +130,24 @@ class ProductController extends Controller
     	return redirect()->route('cart');
       
      }
+
+
+     public function wishlist_addtocart($id = '')
+        {
+            $id               =  $params['id'];
+            $qty              =  1;
+            $product          =  Product::findOrFail($id);
+
+            $productname      =  $product->name; 
+            $type             =  $product->type;
+
+            $uprice           =  $product->price;
+
+            Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => '', 'width' => '', 'height' => '']]);
+
+            return redirect()->route('cart');
+      
+        }
 
      public function viewCart(Request $request)
      {
