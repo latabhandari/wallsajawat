@@ -167,8 +167,8 @@ Highcharts.chart('container', {
     },
 
     tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.xd}</b><br/>'
+        headerFormat: '<span style="font-size:11px">Sales in Rs.</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.sale}</b><br/>'
     },
 
     "series": [

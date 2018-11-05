@@ -48,10 +48,14 @@ class DashboardController extends Controller
                     $date_end    = mktime(23, 59, 59, $month, date("t", $strtotime), $year);
 
                     $order_month =  Order::where('unix_timestamp', '>=', $date_start)->where('unix_timestamp', '<=', $date_end)->count();
+                    $sale        =  Order::where('unix_timestamp', '>=', $date_start)->where('unix_timestamp', '<=', $date_end)->sum('amount_paid');
+
+                    print_r($sale);
+
                     $mname       =  date("M'y", $date_start);
                     $order['name']      = $mname;
                     $order['y']         = $order_month;
-                    $order['xd']         = 2000;
+                    $order['sale']      = 2000;
                     $order['drilldown'] = 'sfsdfsd';
                     $order_array[]      = $order;
                  }
