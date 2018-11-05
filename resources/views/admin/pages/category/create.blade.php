@@ -33,7 +33,7 @@
             <!-- form start -->
 
             {!! Form::open(['route' => 'categories.store', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
-
+              <p><span class="req">*</span> indicates required fields</p>
               <div class="box-body">
 
                 <!--<div class="form-group">
