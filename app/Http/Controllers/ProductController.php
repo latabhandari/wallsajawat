@@ -134,7 +134,6 @@ class ProductController extends Controller
 
      public function wishlist_cart($id = '')
         {
-            $id               =  $params['id'];
             $qty              =  1;
             $product          =  Product::findOrFail($id);
 
