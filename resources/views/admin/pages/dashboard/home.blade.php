@@ -32,8 +32,8 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{  $total_sub_category }}</h3>
-              <p>Total Sub Category</p>
+              <h3>{{  $total_products }}</h3>
+              <p>Total Products</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -46,8 +46,8 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>{{  $total_products }}</h3>
-              <p>Total Products</p>
+              <h3>{{  $total_products_month }}</h3>
+              <p>Upload Products (This Month)</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -67,8 +67,8 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{  $total_products_month }}</h3>
-              <p>Upload Products (This Month)</p>
+              <h3>{{  $total_users }}</h3>
+              <p>Total Users</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -80,8 +80,8 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>{{  $total_users }}</h3>
-              <p>Total Users</p>
+              <h3>{{  $new_users }}</h3>
+              <p>New Users (This Month)</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -93,8 +93,8 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{  $new_users }}</h3>
-              <p>New Users (This Month)</p>
+              <h3>{{  $total_orders_month }}</h3>
+              <p>New Orders (This Month)</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
@@ -117,8 +117,8 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{  $total_orders_month }}</h3>
-              <p>New Orders (This Month)</p>
+              <h3>{{  $total_orders }}</h3>
+              <p>Total Orders</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -126,18 +126,6 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3>{{  $total_orders }}</h3>
-              <p>Total Orders</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
-          </div>
-        </div>
         <!-- ./col -->
   
     </div>
