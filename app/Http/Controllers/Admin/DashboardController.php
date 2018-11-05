@@ -51,7 +51,7 @@ class DashboardController extends Controller
                     $mname       =  date("M", $date_start);
                     $order['name']      = $mname;
                     $order['y']         = $order_month;
-                    $order['drilldown'] = $mname;
+                    $order['drilldown'] = 'sfsdfsd';
                     $order_array[]      = $order;
                  }
 
