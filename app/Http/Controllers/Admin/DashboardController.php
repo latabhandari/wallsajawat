@@ -41,10 +41,21 @@ class DashboardController extends Controller
 
             for ($i = 6; $i >= 0; $i--)
                  {
-                    echo date("F 1, Y", strtotime("-$i months"));
+                    $strtotime   = strtotime("-$i months");
+                    $month       = date('n');
+                    $year        = date('Y');
+                    $date_start  = mktime(0, 0, 0, $month, 1, $year);
+                    $date_end    = mktime(23, 59, 59, $month, date("t"), $year);
+
+                    $order_month =  Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->count();
+                    $mname       =  date("M", $date_start);
+                    $order['name']      = $mname;
+                    $order['y']         = $order_month;
+                    $order['drilldown'] = $mname;
+                    $order_array[]      = $order;
                  }
 
-            return view('admin.pages.dashboard.home', compact('total_products_month', 'total_products', 'total_users', 'new_users', 'total_category', 'total_orders_month', 'total_orders'));
+            return view('admin.pages.dashboard.home', compact('total_products_month', 'total_products', 'total_users', 'new_users', 'total_category', 'total_orders_month', 'total_orders', 'order_array'));
         }
         
     public function subscribes()
