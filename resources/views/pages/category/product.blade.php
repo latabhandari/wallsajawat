@@ -16,11 +16,10 @@
 
 .social_containter {
     position: absolute;
-    right: 15px;
+    right: 0;
     background: #f9f9f9;
     padding: 5px;
-    border-radius: 5px;
-    bottom:75px;
+    bottom:55px;
     z-index: 9999;
     display:none;
     opacity: 0.9
