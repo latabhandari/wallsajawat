@@ -35,6 +35,8 @@
             <!-- form start -->
 
             {!! Form::model($offers, ['files' => true, 'autocomplete' => 'off', 'role' => 'form', 'method' => 'PATCH', 'route' => ['offers.update', $offers->id]]) !!}
+            
+            <p style="padding:10px 0 0 10px"><strong><span class="req">*</span></strong> indicates required fields</p>
 
               <div class="box-body">
 
