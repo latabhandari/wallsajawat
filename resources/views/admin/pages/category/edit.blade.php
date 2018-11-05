@@ -32,6 +32,8 @@
 
             {!! Form::model($category, ['files' => true, 'autocomplete' => 'off', 'role' => 'form', 'method' => 'PATCH', 'route' => ['categories.update', $category->id]]) !!}
 
+              <p style="padding:10px 0 0 10px"><strong><span class="req">*</span></strong> indicates required fields</p>
+
               <div class="box-body">
 
                  <!--<div class="form-group">

@@ -34,6 +34,8 @@
 
             {!! Form::open(['route' => 'product.store', 'role' => 'form', 'autocomplete' => 'off', 'files' => true]) !!}
 
+              <p style="padding:10px 0 0 10px"><strong><span class="req">*</span></strong> indicates required fields</p>
+
               <div class="box-body">
 
                 <div class="form-group">
@@ -81,7 +83,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="image">Images&nbsp;</label>
+                  <label for="image">Images&nbsp;<span class="req">*</span></label>
                   <input type="file" name="images[]" placeholder="Upload Images" multiple />
                 </div>
 
