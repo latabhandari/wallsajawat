@@ -39,7 +39,7 @@ class DashboardController extends Controller
 
             $total_category          =  Category::where('parent_id', '=', 0)->count();
 
-            for ($i = 5; $i >= 0; $i--)
+            for ($i = 11; $i >= 0; $i--)
                  {
                     $strtotime   = strtotime("-$i months");
                     $month       = date('n', $strtotime);
