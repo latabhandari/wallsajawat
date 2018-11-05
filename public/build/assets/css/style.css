@@ -775,8 +775,6 @@ footer {
   width: 100%;
   max-height: 248px;
   height: auto;
-  position: absolute;
- 
 }
 
 .selling-imgs .box-inner{
@@ -785,6 +783,7 @@ footer {
   margin-bottom:20px;
   border:1px solid #e6e6e6;
   overflow: hidden;
+  position: absolute;
 }
 
 .selling-imgs:hover .box-inner{box-shadow:0 20px 25px rgba(0, 0, 0, 0.15);transform: translateY(-8px)}
