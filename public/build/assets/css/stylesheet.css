@@ -1730,7 +1730,6 @@ p {
 
 /* recommend-product */
 .recommend-product {
-	padding: 30px 0;
 	position: relative;
 	z-index: 1;
 }
