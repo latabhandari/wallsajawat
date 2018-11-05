@@ -53,12 +53,12 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th>Short Description:</th>
-                        <td>{!! $product->short_desc !!}</td>
+                        <td>{!! ($product->short_desc) ? $product->short_desc : 'N/A' !!}</td>
                       </tr>
 
                       <tr>
                         <th>Description:</th>
-                        <td>{!! $product->description !!}</td>
+                        <td>{!! ($product->description) ? $product->description : 'N/A' !!}</td>
                       </tr>
 
                       <tr>
@@ -110,17 +110,17 @@ ul li{list-style-type:none;padding-left:10px}
 
                       <tr>
                         <th>Page Title:</th>
-                        <td>{{ $product->page_title }}</td>
+                        <td>{{ ($product->page_title) ? $product->page_title : 'N/A' }}</td>
                       </tr>
 
                       <tr>
                         <th>Meta Description:</th>
-                        <td>{{ $product->meta_description }}</td>
+                        <td>{{ ($product->meta_description) ? $product->meta_description : 'N/A' }}</td>
                       </tr>
 
                       <tr>
                         <th>Meta keywords:</th>
-                        <td>{{ $product->meta_keywords }}</td>
+                        <td>{{ ($product->meta_keywords) ? $product->meta_keywords : 'N/A' }}</td>
                       </tr>
 
                     </tbody></table>
