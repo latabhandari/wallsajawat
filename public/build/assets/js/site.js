@@ -42,6 +42,16 @@ $(document).ready(function() {
                            });
                 }); 
 
+                $(".share").on('click', function() {
+
+                  let id = parseInt($(this).attr('data-attr'));
+
+                  $('.social_containter').css('display', 'none');
+
+                  $('#share_container_' + id).css('display', 'block');
+
+                });
+
 
   });
 

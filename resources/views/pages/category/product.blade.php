@@ -108,23 +108,4 @@
 
 @section('bottom_yield')
 <script src="{{ asset('build/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
-
-
-<script>
-  $(document).ready(function() {
-
-    $(".share").on('click', function() {
-
-      let id = parseInt($(this).attr('data-attr'));
-
-      $('.social_containter').css('display', 'none');
-
-      $('#share_container_' + id).css('display', 'block');
-
-    });
-
-
-  });
-</script>
-
 @endsection
