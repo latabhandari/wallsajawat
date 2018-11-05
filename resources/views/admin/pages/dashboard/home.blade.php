@@ -175,12 +175,11 @@ Highcharts.chart('container', {
         {
             "name": "Browsers",
             "colorByPoint": true,
-            "data": [
+            "data": 
                 @php
-                print_r($order_array);
                   echo json_encode($order_array)
                 @endphp
-            ]
+            
         }
     ],
     "drilldown": {
