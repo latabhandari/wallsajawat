@@ -19,7 +19,7 @@
     right: 0;
     background: #f9f9f9;
     padding: 5px;
-    bottom:55px;
+    bottom:54px;
     z-index: 9999;
     display:none;
     opacity: 0.9
