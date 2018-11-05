@@ -132,7 +132,7 @@ class ProductController extends Controller
      }
 
 
-     public function wishlist_addtocart($id = '')
+     public function wishlist_cart($id = '')
         {
             $id               =  $params['id'];
             $qty              =  1;
