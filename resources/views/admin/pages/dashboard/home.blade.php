@@ -139,7 +139,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Browser market shares. January, 2018'
+        text: 'Order Statistics'
     },
     subtitle: {
         text: 'Click the columns to view versions. Source'
@@ -149,7 +149,7 @@ Highcharts.chart('container', {
     },
     yAxis: {
         title: {
-            text: 'Total percent market share'
+            text: 'Total Order'
         }
 
     },
@@ -173,13 +173,12 @@ Highcharts.chart('container', {
 
     "series": [
         {
-            "name": "Browsers",
+            "name": "Month",
             "colorByPoint": true,
             "data": 
                 @php
                   echo json_encode($order_array)
                 @endphp
-            
         }
     ],
     "drilldown": {
