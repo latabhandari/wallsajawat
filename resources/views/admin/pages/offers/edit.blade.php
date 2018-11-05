@@ -102,12 +102,15 @@
 <script src="{{ URL::asset('backend/theme/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
 <script>
    //Date picker
+  // set default dates
+   var start = new Date();
+
     $('#datepicker1, #datepicker2').datepicker({
-      autoclose: true
+      autoclose: true,
+      startDate: start
     })
 
-    // set default dates
-  var start = new Date();
+
   // set end date to max one year period:
   var end = new Date(new Date().setYear(start.getFullYear()+1));
 
