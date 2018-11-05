@@ -69,7 +69,7 @@
                   </div><i class="fa fa-inr">&nbsp;</i> {{ $row->price }}</div>
                 <div class="col-sm-4"><div class="title hidden-md hidden-sm hidden-lg">
                     <h4>Action</h4>
-                  </div>&nbsp;&nbsp;<a class="remove" style="margin-top:0px" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left">Remove</button></a>&nbsp;&nbsp;<a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a>&nbsp;&nbsp;<a href="{{ route('wishlist.cart', $row->id) }}" title="Add to Cart" class="btn pull-left">Add to Cart</a></div>
+                  </div><a class="remove" style="margin:0 0 0 3px" onclick="return confirm('are you sure?');" href="{{ route('wishlist.remove', $row->random_string) }}"><button type="button" class="btn pull-left">Remove</button></a><a href="{{ route('product.detail', $row->slug) }}" title="Product Detail" class="btn pull-left">Detail</a><a style="margin:0 0 0 3px" href="{{ route('wishlist.cart', $row->id) }}" title="Add to Cart" class="btn pull-left">Add to Cart</a></div>
               </div>
             </div>
 
