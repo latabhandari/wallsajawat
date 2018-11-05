@@ -106,7 +106,8 @@
 <script>
    //Date picker
     $('#datepicker1, #datepicker2').datepicker({
-      autoclose: true
+      autoclose: true,
+      minDate:new Date()
     })
 
   // set default dates
