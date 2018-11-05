@@ -39,8 +39,29 @@
 
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
-                  <a href="{{ route('product.detail', $product->slug) }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
-                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> <span class="righttxt"><i class="fa fa-share-alt"></i><i class="fa fa-star"></i></span> </div>
+
+                  @php
+                      $url = route('product.detail', $product->slug)
+                  @endphp
+                  
+                  <a href="{{ $url }}"><img src="{{ asset('catalog/product/'.$prod_image_info->image) }}" alt=""></a>
+
+                   <div class="social_containter" id="share_container_{{ $product->id }}">
+            
+                    <div class="social facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{ $url }}"><i class="fa fa-facebook"></i></a></div>
+                    <div class="social twitter"><a target="_blank" href="http://twitter.com/share?url={{ $url }}&text={{ $product->name }}"><i class="fa fa-twitter"></i></a></div>
+                    <div class=" social google"><a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&url={{ $url }}"><i class="fa fa-google-plus"></i></a></div>
+
+                  </div>
+
+                 <div class="img-price"> <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
+
+                  <span class="righttxt">
+                    <a href="javascript:void(0)" class="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
+                    <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
+                  </span> 
+
+                </div>
                </div>
               </div>
           @endforeach
