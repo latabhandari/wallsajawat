@@ -13,6 +13,6 @@ class Product extends Model
 
     public function roll()
      {
-     	return $this->belongsTo(Dimension::class, 'role_id', 'id');
+     	return $this->belongsTo(Dimension::class, 'id', 'role_id');
      }
 }
