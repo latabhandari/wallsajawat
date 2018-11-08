@@ -68,7 +68,7 @@ class ProductController extends Controller
           $mid     =  $params['mid'];
           $pid     =  $params['pid'];
 
-          $pprice  =  Proudct::select('price')->where('id', $pid)->firstOrFail();
+          $pprice  =  Product::select('price')->where('id', $pid)->firstOrFail();
 
 
           $price   =  MyHelper::getProductSquareFeetPrice($pid);
@@ -82,7 +82,7 @@ class ProductController extends Controller
           $uprice             =  $price * $per_square_feet;
 
           $roll_count         =  ceil($uprice / $price);
-          
+
           echo json_encode(['status' => true, 'price' => $roll_count, 'type' => ucfirst($mres->name)]);
       }
 
