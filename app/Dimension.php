@@ -14,8 +14,4 @@ class Dimension extends Model
 	
 	protected $fillable = ['id', 'name', 'width', 'height', 'created_at_timestamp', 'updated_at_timestamp'];
 
-    public function roll()
-     {
-     	return $this->hasOne(Product::class, 'roll_id', 'id');
-     }
 }
