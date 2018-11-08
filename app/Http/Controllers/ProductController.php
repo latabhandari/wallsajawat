@@ -76,7 +76,7 @@ class ProductController extends Controller
           $square_feet_value =  $mres->square_feet_value; // get value in square feet for ex; 1 feet, 144 inch, 629 cm
 
 
-          $width_height      =  ($width * $height) * $square_feet_value;
+          $width_height      =  ($width * $height) / $square_feet_value;
 
           $roll              =  ceil($width_height / $tdim);
 
