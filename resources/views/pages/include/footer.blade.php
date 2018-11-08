@@ -2,7 +2,7 @@
                     <div class="container">
                         <div class="row footer-sec">
                             <div class="col-sm-4 foot-sec1">
-                                <div class="white-logo"><h3><a href="index.php">Logo</a></h3></div>
+                                <div class="white-logo"><h3><a href="{{ route('home.index') }}">Logo</a></h3></div>
                                 <p>Discover the widest range <br>
                                 of unique wallpapers, also customize<br>
                                 your own designs and buy them online. <br>
