@@ -70,20 +70,26 @@ class ProductController extends Controller
 
           $pprice  =  Product::select('price')->where('id', $pid)->firstOrFail();
 
-
-          $price   =  MyHelper::getProductSquareFeetPrice($pid);
+          $price   =  MyHelper::getProductSquareFeetPrice($pid); // get product 1feet * 1feet price //
 
           $mres    =  Measurement::select('name', 'square_feet_value')->where('id', $mid)->firstOrFail();
 
-          $square_feet_value  =  $mres->square_feet_value;
+          $square_feet_value  =  $mres->square_feet_value; // 1 feet, 144 inch, 629 cm
 
           $width_height       =  $width * $height;
-          $per_square_feet    =  $width_height / $square_feet_value;
-          $uprice             =  $price * $per_square_feet;
 
-          $roll_count         =  ceil($uprice / $pprice->price);
 
-          echo json_encode(['status' => true, 'price' => $roll_count, 'type' => ucfirst($mres->name)]);
+
+
+          //$per_square_feet    =  $width_height / $square_feet_value;
+
+          //$uprice             =  $price * $per_square_feet;
+
+          //$roll_count         =  ceil($uprice / $pprice->price);
+
+          $roll                 =  $width_height / $square_feet_value;
+
+          echo json_encode(['status' => true, 'roll' => $roll_count, 'type' => ucfirst($mres->name)]);
       }
 
 
