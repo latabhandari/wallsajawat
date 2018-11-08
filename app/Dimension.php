@@ -16,6 +16,6 @@ class Dimension extends Model
 
     public function roll()
      {
-     	return $this->belongsTo(Product::class, 'roll_id', 'id');
+     	return $this->hasOne(Product::class, 'roll_id', 'id');
      }
 }
