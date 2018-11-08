@@ -118,6 +118,10 @@ class MyHelper
 
 	   	       	 //$roll_info       = Dimension::where("id", $product_roll_id)->first();
    	       	     $roll_info         = Product::find($id)->roll;
+
+   	       	     print_r($roll_info);
+
+
 	   	       	 $total_dimension = $roll_info->width * $roll_info->height;
 
 	   	       	 return $total_dimension;
