@@ -69,6 +69,7 @@ class ProductController extends Controller
           $pid     =  $params['pid'];
 
           $price   =  MyHelper::getProductSquareFeetPrice($pid);
+          $tdim    =  MyHelper::getProductRollDimension($pid);
 
           $mres    =  Measurement::select('name', 'square_feet_value')->where('id', $mid)->firstOrFail();
 
@@ -77,7 +78,7 @@ class ProductController extends Controller
 
           $width_height      =  $width * $height;
 
-          $roll              =  ceil($width_height / $square_feet_value);
+          $roll              =  ceil($width_height / $tdim);
 
 
           //$per_square_feet   =  $width_height / $square_feet_value;
