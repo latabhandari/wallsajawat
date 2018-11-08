@@ -72,13 +72,13 @@ class ProductController extends Controller
 
           $mres    =  Measurement::select('name', 'square_feet_value')->where('id', $mid)->firstOrFail();
 
-          $square_feet_value = $mres->square_feet_value;
+          $square_feet_value  =  $mres->square_feet_value;
 
-          $width_height    =  $width * $height;
-          $per_square_feet =  $width_height / $square_feet_value;
-          $uprice          =  $price * $per_square_feet;
+          $width_height       =  $width * $height;
+          $per_square_feet    =  $width_height / $square_feet_value;
+          $uprice             =  $price * $per_square_feet;
 
-          echo json_encode(['status' => true, 'price' => round($uprice), 'type' => ucfirst($mres->name)]);
+          echo json_encode(['status' => true, 'price' => $uprice, 'type' => ucfirst($mres->name)]);
       }
 
 
