@@ -113,22 +113,17 @@ class MyHelper
 
    	       public static function getProductRollDimension($id)
    	       {
-	   	       	 //$product_info    = Product::where("id", $id)->first();
-	   	       	 //$product_roll_id = $product_info->roll_id;
+	   	       	 $product_info     = Product::where("id", $id)->first();
+	   	       	 $product_roll_id  = $product_info->roll_id;
 
-	   	       	 //$roll_info       = Dimension::where("id", $product_roll_id)->first();
-   	       	     $roll_info         = Product::find($id)->roll;
+	   	       	 $roll_info        = Dimension::where("id", $product_roll_id)->first();
+   	       	     $roll_info        = Product::find($id)->roll;
 
-   	       	     print_r($roll_info);
-
-
-	   	       	 $total_dimension = $roll_info->width * $roll_info->height;
+	   	       	 $total_dimension  = $roll_info->width * $roll_info->height;
 
 	   	       	 return $total_dimension;
 					
    	       }
-
-
 
 
    	      public static function getMeasurement($id)

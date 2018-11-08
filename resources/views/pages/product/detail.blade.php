@@ -141,7 +141,10 @@ span.short_desc p{font-size:13px}
                     @php
                       $sq_feet_price = App\Helpers\MyHelper::getProductSquareFeetPrice($detail->id);
                     @endphp
-          					<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>
+          					<!--<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>-->
+
+                    <li>Roll : <span id="cal_price"></span></li>
+
           				</ul>
           			</div>
 
@@ -422,7 +425,10 @@ span.short_desc p{font-size:13px}
      {  
           var size = $('option:selected', this).attr('data-value');
           var measurement = $('option:selected', this).attr('data-attr');
-          $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement);
+
+         // $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement); aded 8 nov
+
+
         /*var size_format = $(this).val();
       
       if(size_format == "feet")
@@ -474,7 +480,8 @@ span.short_desc p{font-size:13px}
                              data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
                              success: function (resp) {
 
-                                  $("#cal_price").text("INR " + resp.price);
+                                  //$("#cal_price").text("INR " + resp.price);
+                                  $("#cal_price").text("INR " + resp.roll);
                              }
 
                          });

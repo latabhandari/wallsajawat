@@ -80,7 +80,7 @@ class ProductController extends Controller
 
           $roll              =  ceil($width_height / $tdim);
 
-          echo json_encode(['status' => true, 'price' => $roll, 'type' => ucfirst($mres->name)]);
+          echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
 
 
