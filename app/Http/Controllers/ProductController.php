@@ -81,7 +81,7 @@ class ProductController extends Controller
           $per_square_feet    =  $width_height / $square_feet_value;
           $uprice             =  $price * $per_square_feet;
 
-          $roll_count         =  ceil($uprice / $pprice);
+          $roll_count         =  ceil($uprice / $pprice->price);
 
           echo json_encode(['status' => true, 'price' => $roll_count, 'type' => ucfirst($mres->name)]);
       }
