@@ -89,7 +89,7 @@ class ProductController extends Controller
 
           $roll                 =  $width_height / $square_feet_value;
 
-          echo json_encode(['status' => true, 'roll' => $roll_count, 'type' => ucfirst($mres->name)]);
+          echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
 
 
