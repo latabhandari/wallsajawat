@@ -143,7 +143,7 @@ span.short_desc p{font-size:13px}
                     @endphp
           					<!--<li>Price : <span id="cal_price"><i class="fa fa-inr">&nbsp;</i>{{ $sq_feet_price }} / Sq.Feet</span></li>-->
 
-                    <li>Roll : <span id="cal_price"></span></li>
+                    <li id="cal_price"></li>
 
           				</ul>
           			</div>
@@ -481,7 +481,7 @@ span.short_desc p{font-size:13px}
                              success: function (resp) {
 
                                   //$("#cal_price").text("INR " + resp.price);
-                                  $("#cal_price").text("INR " + resp.roll);
+                                  $("#cal_price").text("Roll: " + resp.roll);
                              }
 
                          });
