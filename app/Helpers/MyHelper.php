@@ -17,12 +17,24 @@ use App\Order as Order;
 use App\Cities as City;
 use App\States as State;
 use App\Rating as Rating;
+use App\Wishlist as Wishlist;
 class MyHelper 
    {
+
+   		public static function getWishlistProductsId()
+   	       {
+   	       	  if (Auth::check())
+   	       	  	 {
+   	       	  	 	print_r(Wishlist::select('pid')->where('user_id', Auth()->user->id)->get(););
+   	       	  	 	return Wishlist::select('pid')->where('user_id', Auth()->user->id)->get();
+   	       	  	 }
+   	       }
+
+
    	     public static function getProductRating($id = '') 
    	     {
 				$table  =  DB::getTablePrefix() . (new Rating())->getTable();
-				$query  = DB::selectOne('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ? LIMIT 1', array($id));
+				$query  =  DB::selectOne('SELECT count(*) as count, sum(`rating`) as rating FROM ' . $table. ' WHERE product_id = ? LIMIT 1', array($id));
 
 				$count   = $query->count;
 				$rating  = $query->rating;
@@ -84,6 +96,7 @@ class MyHelper
    	       	  return Product::where('id', $id)->get($fields)->toArray();
    	       }
 
+   	      
    	      public static function getCategories()
    	       {
    	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->limit(5)->orderBy('id', 'asc')->get();
