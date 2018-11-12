@@ -76,16 +76,16 @@ class ProductController extends Controller
 
           $square_feet_value   =  $mres->square_feet_value; // get value in square feet for ex; 1 feet, 144 inch, 629.0304 cm
  
-          $cwidth              =  $width / 12;
-          $cheight             =  $height / 12;
+          $cwidth              =  $width / $square_feet_value;
+          $cheight             =  $height / $square_feet_value;
 
           //$width_height      =  ($width * $height) / $square_feet_value;
 
-          $roll1              =  ceil($cwidth / 150);
+         // $roll1               =  ceil($cwidth / $tdim['width']);
 
-          $roll2              =  ceil($cheight / 200);
+         // $roll2               =  ceil($cheight / $tdim['height']);
 
-          $roll = ($roll1 > $roll2) ? $roll1 : $roll2;
+          $roll               = max(ceil($cwidth / $tdim['width']), ceil($cheight / $tdim['height']));
 
           echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
