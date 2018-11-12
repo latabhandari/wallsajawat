@@ -62,6 +62,8 @@
           $wishlist_products_id  =  App\Helpers\MyHelper::getWishlistProductsId();
           if (isset($wishlist_products_id->pid))
           $wishlist_pid[]  =  explode(',', array_filter($wishlist_products_id->pid));
+
+        print_r($wishlist_pid);
         @endphp
 
           @foreach ($products as $product)
