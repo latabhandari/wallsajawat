@@ -37,13 +37,9 @@ $(document).ready(function() {
                                data: {"pid": id},
                                success: function (resp) {
 
+                                  $(this).after('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>');
 
-                                console.log($(this).parent().attr('class'));
-                                console.log(1);
-
-                                  $(this).parent().eq(1).remove().append('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>');
-
-                                  alert(1);
+                                  alert(resp.msg);
                                }
 
                            });
