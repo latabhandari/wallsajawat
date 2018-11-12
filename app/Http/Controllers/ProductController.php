@@ -84,7 +84,7 @@ class ProductController extends Controller
           $roll1              =  ceil($cwidth / $tdim);
           $roll2              =  ceil($cheight / $tdim);
 
-          $roll = ($roll1 > $roll2) ? $roll1 ? $roll2;
+          $roll = ($roll1 > $roll2) ? $roll1 : $roll2;
 
           echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
