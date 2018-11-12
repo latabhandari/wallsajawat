@@ -28,7 +28,8 @@ $(document).ready(function() {
                 });
 
                 $("#addwishlist, .addwishlist").on('click', function() {
-                    let id = parseInt($(this).attr('data-attr'));
+                    let currentElement = this;
+                    let id = parseInt($(currentElement).attr('data-attr'));
 
                     $.ajax({
                                type: "POST",
@@ -39,7 +40,7 @@ $(document).ready(function() {
 
 
 
-                                  $('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>').insertAfter(this);
+                                  $('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>').insertAfter(currentElement);
 
 
                                   alert(resp.msg);
