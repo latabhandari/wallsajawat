@@ -506,6 +506,8 @@ span.short_desc p{font-size:13px}
                                             });
 
               }
+              else
+                 $("#cal_price").html('').css('display', 'none');
          }
 
         $(document).ready(function() {
