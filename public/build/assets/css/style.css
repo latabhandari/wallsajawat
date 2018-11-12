@@ -62,7 +62,7 @@ a, a:focus, a:hover{
 
 .wshlst{color:#5d5d5d !important}
 
-.ctgry{color:#003366;padding:0 15px}
+.ctgry{color:#003366;padding:0 15px;text-align:left}
 
 .searchtxt{width:100%;font-size:13px;font-weight: normal;padding-left:10px;border:1px solid #ececec;outline:0;height:30px;}
 .mrgntpnone{margin-top:0px !important}
