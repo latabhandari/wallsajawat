@@ -94,7 +94,7 @@
                        @if(in_array($product->id, $wishlist_pid))
                           <i class="fa fa-star">dfgdfg</i>
                        @else
-                          <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
+                          <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star">dfs</i></a>
                        @endif
                     </span> 
                  </div>
