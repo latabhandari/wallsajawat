@@ -58,8 +58,10 @@
         @if(count($products))
 
         @php
-          $wishlist_products_id = App\Helpers\MyHelper::getWishlistProductsId();
-          print_r( $wishlist_products_id );
+          $wishlist_pid          =  array();
+          $wishlist_products_id  =  App\Helpers\MyHelper::getWishlistProductsId();
+          if (isset($wishlist_products_id->pid))
+          $wishlist_pid[]  =  explode(',', array_filter($wishlist_products_id->pid));
         @endphp
 
           @foreach ($products as $product)
@@ -90,7 +92,11 @@
 
                     <span class="righttxt">
                        <a href="javascript:void(0)" class="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
-                       <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
+                       @if(in_array($product->id, $wishlist_pid))
+                          <i class="fa fa-star"></i>
+                       @else
+                          <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
+                       @endif
                     </span> 
                  </div>
                </div>
