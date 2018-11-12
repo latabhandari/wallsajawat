@@ -478,6 +478,7 @@ span.short_desc p{font-size:13px}
                              url: WallSajawat.getSitePath('product/option'),
                              dataType: "json",
                              data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+                             async: true,
                              success: function (resp) {
 
                                   //$("#cal_price").text("INR " + resp.price);
