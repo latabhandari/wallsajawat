@@ -25,7 +25,7 @@ class MyHelper
    	       {
    	       	  if (Auth::check())
    	       	  	 {
-   	       	  	 	$table  =  new Wishlist()->getTable();
+   	       	  	 	$table  =  (new Wishlist())->getTable();
    	       	  	 	//return Wishlist::select('pid')->where('user_id', Auth::user()->id)->get();
    	       	  	 	$res = DB::table($table)->pluck('id');
    	       	  	 	print_r($res);
