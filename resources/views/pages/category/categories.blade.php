@@ -49,10 +49,7 @@
               <div class="col-sm-3 text-center selling-imgs"> 
                 <div class="box-inner">
                   <a href="{{ route('category.product', $category->slug) }}"><img src="{{ asset('catalog/category/'.$category->wallpaper_image) }}" alt=""></a>
-                 <div class="img-price">
-                   <span class="lefttxt">&nbsp;&nbsp;{{ $category->name }}</span> 
-                   <span class="righttxt"></span> 
-                 </div>
+                 <div class="img-price ctgry">{{ $category->name }}</div>
                </div>
               </div>
           @endforeach
