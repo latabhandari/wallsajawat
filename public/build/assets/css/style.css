@@ -60,7 +60,7 @@ a, a:focus, a:hover{
   font-size: 12.5px;
 }
 
-.wshlst{color:#6d6c6c}
+.wshlst{color:#5d5d5d !important}
 
 .searchtxt{width:100%;font-size:13px;font-weight: normal;padding-left:10px;border:1px solid #ececec;outline:0;height:30px;}
 .mrgntpnone{margin-top:0px !important}
