@@ -34,7 +34,7 @@
     </div>
     <div class="col-sm-12">
       <div class="entire-sec text-center">
-        <h2>View All Categories ({{ count($categories) }})<span class="caret"></span></h2>
+        <h2>View All Categories ({{ count($categories) }})</h2>
       </div>
     </div>
   </div>
