@@ -486,6 +486,12 @@ span.short_desc p{font-size:13px}
                                                dataType: "json",
                                                data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
                                                async: false,
+                                               beforeSend : function()    {           
+                                                    if(currentRequest != null) {
+                                                        currentRequest.abort();
+                                                    }
+                                                },
+
                                                success: function (resp) {
 
                                                     //$("#cal_price").text("INR " + resp.price);
