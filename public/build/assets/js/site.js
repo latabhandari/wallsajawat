@@ -38,10 +38,9 @@ $(document).ready(function() {
                                data: {"pid": id},
                                success: function (resp) {
 
-
-
                                   $('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>').insertAfter(currentElement);
-
+                                  
+                                  $(currentElement).remove();
 
                                   alert(resp.msg);
                                }
