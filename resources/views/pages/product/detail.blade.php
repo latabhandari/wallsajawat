@@ -485,7 +485,6 @@ span.short_desc p{font-size:13px}
                                                url: WallSajawat.getSitePath('product/option'),
                                                dataType: "json",
                                                data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
-                                               async: false,
                                                beforeSend : function()    {           
                                                     if(currentRequest != null) {
                                                         currentRequest.abort();
@@ -496,7 +495,7 @@ span.short_desc p{font-size:13px}
 
                                                     //$("#cal_price").text("INR " + resp.price);
                                                     $("#cal_price").text("Roll: " + resp.roll);
-                                                    
+
                                                },
 
                                                error:function(e){
