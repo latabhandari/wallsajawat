@@ -133,7 +133,12 @@
         </div>
         <div class="container selling-img-sec">
                 @php
-                    $i = 0;
+                   $wishlist_pid          =  array();
+                   $wishlist_products_id  =  App\Helpers\MyHelper::getWishlistProductsId();
+                   if (isset($wishlist_products_id->pid))
+                   $wishlist_pid          =  array_filter(explode(',', $wishlist_products_id->pid));
+
+                   $i = 0;
                 @endphp            
                 @foreach ($best_selling_products as $selling_products)
                      @php
@@ -164,7 +169,13 @@
                                         <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $selling_products->price }}/roll</span>
                                         <span class="righttxt">
                                           <a href="javascript:void(0)" class="share" data-attr="{{ $selling_products->id }}"><i class="fa fa-share-alt"></i></a>
-                                          <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $selling_products->id }}"><i class="fa fa-star"></i></a>
+
+                                          @if(in_array($product->id, $wishlist_pid))
+                                              <i class="fa fa-star wshlst" title="Already added in your wishlist"></i>
+                                          @else
+                                              <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $selling_products->id }}"><i class="fa fa-star"></i></a>
+                                          @endif
+
                                         </span>
                                     </div>
                                 </div>
