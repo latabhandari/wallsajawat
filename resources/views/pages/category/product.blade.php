@@ -92,7 +92,7 @@
                     <span class="righttxt">
                        <a href="javascript:void(0)" class="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
                        @if(in_array($product->id, $wishlist_pid))
-                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star">dfgdfg</i>
                        @else
                           <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $product->id }}"><i class="fa fa-star"></i></a>
                        @endif
