@@ -494,7 +494,7 @@ span.short_desc p{font-size:13px}
                                                success: function (resp) {
 
                                                     //$("#cal_price").text("INR " + resp.price);
-                                                    $("#cal_price").text("Roll: " + resp.roll);
+                                                    $("#cal_price").text("Roll: " + resp.roll).css('display','');
 
                                                },
 
