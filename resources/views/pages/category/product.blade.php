@@ -62,8 +62,6 @@
           $wishlist_products_id  =  App\Helpers\MyHelper::getWishlistProductsId();
           if (isset($wishlist_products_id->pid))
           $wishlist_pid          =  array_filter(explode(',', $wishlist_products_id->pid));
-
-        print_r($wishlist_pid);
         @endphp
 
           @foreach ($products as $product)
@@ -89,9 +87,8 @@
                   </div>
 
 
-                 <div class="img-price"> <span class="lefttxt">
-                  <i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
-
+                 <div class="img-price"> 
+                    <span class="lefttxt"><i class="fa fa-inr"></i>&nbsp;&nbsp;{{ $product->price }} /roll</span> 
                     <span class="righttxt">
                        <a href="javascript:void(0)" class="share" data-attr="{{ $product->id }}"><i class="fa fa-share-alt"></i></a>
                        @if(in_array($product->id, $wishlist_pid))
