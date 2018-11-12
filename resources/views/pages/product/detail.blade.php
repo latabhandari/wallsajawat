@@ -479,19 +479,20 @@ span.short_desc p{font-size:13px}
 
           if (w_width && w_height)
              {
-                  $.ajax({
-                             type: "POST",
-                             url: WallSajawat.getSitePath('product/option'),
-                             dataType: "json",
-                             data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
-                             async: false,
-                             success: function (resp) {
+                  var currentRequest = null;
+                  currentRequest  =  $.ajax({
+                                               type: "POST",
+                                               url: WallSajawat.getSitePath('product/option'),
+                                               dataType: "json",
+                                               data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+                                               async: false,
+                                               success: function (resp) {
 
-                                  //$("#cal_price").text("INR " + resp.price);
-                                  $("#cal_price").text("Roll: " + resp.roll);
-                             }
+                                                    //$("#cal_price").text("INR " + resp.price);
+                                                    $("#cal_price").text("Roll: " + resp.roll);
+                                               }
 
-                         });
+                                            });
 
               }
          }
