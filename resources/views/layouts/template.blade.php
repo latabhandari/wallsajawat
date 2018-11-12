@@ -170,7 +170,7 @@
                                         <span class="righttxt">
                                           <a href="javascript:void(0)" class="share" data-attr="{{ $selling_products->id }}"><i class="fa fa-share-alt"></i></a>
 
-                                          @if(in_array($product->id, $wishlist_pid))
+                                          @if(in_array($selling_products->id, $wishlist_pid))
                                               <i class="fa fa-star wshlst" title="Already added in your wishlist"></i>
                                           @else
                                               <a href="javascript:void(0)" class="addwishlist" data-attr="{{ $selling_products->id }}"><i class="fa fa-star"></i></a>
