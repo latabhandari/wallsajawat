@@ -25,8 +25,8 @@ class MyHelper
    	       {
    	       	  if (Auth::check())
    	       	  	 {
-   	       	  	 	print_r(Wishlist::select('pid')->where('user_id', Auth()->user->id)->get());
-   	       	  	 	return Wishlist::select('pid')->where('user_id', Auth()->user->id)->get();
+   	       	  	 	print_r(Wishlist::select('pid')->where('user_id', Auth::user()->id)->get());
+   	       	  	 	return Wishlist::select('pid')->where('user_id', Auth::user()->id)->get();
    	       	  	 }
    	       }
 
