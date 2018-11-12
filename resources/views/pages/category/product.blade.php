@@ -56,6 +56,11 @@
     <div class="col-sm-12">
       <div class="row">
         @if(count($products))
+
+        @php
+          $wishlist_products_id = App\Helpers\MyHelper::getWishlistProductsId();
+        @endphp
+
           @foreach ($products as $product)
               @php
                         $prod_image_info = App\Helpers\MyHelper::getProductImage($product->id);
