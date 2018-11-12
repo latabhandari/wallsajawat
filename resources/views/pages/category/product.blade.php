@@ -59,6 +59,7 @@
 
         @php
           $wishlist_products_id = App\Helpers\MyHelper::getWishlistProductsId();
+          print_r( $wishlist_products_id );
         @endphp
 
           @foreach ($products as $product)
