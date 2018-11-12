@@ -426,6 +426,9 @@ span.short_desc p{font-size:13px}
           var size = $('option:selected', this).attr('data-value');
           var measurement = $('option:selected', this).attr('data-attr');
 
+          $('#w_width').val('');
+          $('#w_width').val('');
+
          // $("#cal_price").text("INR "+(price / size).toFixed(5)+"/ Sq. " + measurement); aded 8 nov
 
 
@@ -450,6 +453,8 @@ span.short_desc p{font-size:13px}
       //$("#cal_price").text()");
       });
 
+
+
       $("#w_width").bind("keyup keypress blur change",function(){
       pricecalculate();
     });
@@ -467,6 +472,7 @@ span.short_desc p{font-size:13px}
 
         function pricecalculate()
          {
+
           var w_width  =  $('#w_width').val();
           var w_height =  $('#w_height').val();
           var mid      =  $("#material_type option:selected").val();
@@ -478,7 +484,7 @@ span.short_desc p{font-size:13px}
                              url: WallSajawat.getSitePath('product/option'),
                              dataType: "json",
                              data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
-                             async: true,
+                             async: false,
                              success: function (resp) {
 
                                   //$("#cal_price").text("INR " + resp.price);
