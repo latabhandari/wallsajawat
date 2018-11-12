@@ -25,8 +25,8 @@ class MyHelper
    	       {
    	       	  if (Auth::check())
    	       	  	 {
-   	       	  	 	$table  =  (new Wishlist())->getTable();
-   	       	  	 	return DB::table($table)->pluck('id');
+   	       	  	 	$table  =  DB::getTablePrefix() . (new Wishlist())->getTable();
+   	       	  	 	return DB::selectOne('SELECT GROUP_CONCAT(pid) as pid FROM ' . $table. ' WHERE `user_id` = ?', array(Auth::user()->id);
    	       	  	 }
    	       }
 
