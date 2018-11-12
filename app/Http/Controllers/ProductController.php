@@ -74,11 +74,17 @@ class ProductController extends Controller
 
           $mres    =  Measurement::select('name', 'square_feet_value')->where('id', $mid)->firstOrFail();
 
-          $square_feet_value =  $mres->square_feet_value; // get value in square feet for ex; 1 feet, 144 inch, 629 cm
+          $square_feet_value   =  $mres->square_feet_value; // get value in square feet for ex; 1 feet, 144 inch, 629.0304 cm
+ 
+          $cwidth              =  $width / $square_feet_value;
+          $cheight             =  $height / $square_feet_value;
 
-          $width_height      =  ($width * $height) / $square_feet_value;
+          //$width_height      =  ($width * $height) / $square_feet_value;
 
-          $roll              =  ceil($width_height / $tdim);
+          $roll1              =  ceil($cwidth / $tdim);
+          $roll2              =  ceil($cheight / $tdim);
+
+          $roll = ($roll1 > $roll2) ? $roll1 ? $roll2;
 
           echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
