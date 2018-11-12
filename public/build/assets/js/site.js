@@ -38,7 +38,7 @@ $(document).ready(function() {
                                success: function (resp) {
 
 
-                                console.log($(this).parent());
+                                console.log($(this).parent().attr('class'));
                                 console.log(1);
 
                                   $(this).parent().eq(1).remove().append('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>');
