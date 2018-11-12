@@ -86,7 +86,7 @@ class MyHelper
 
    	      public static function getCategories()
    	       {
-   	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->get();
+   	       	  return Category::select('id', 'name', 'slug')->where('status', 1)->limit(5)->orderBy('id', 'asc')->get();
    	       }
 
    	      public static function getOrderProducts($orderid = '')
