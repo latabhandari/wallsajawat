@@ -25,7 +25,10 @@ class MyHelper
    	       {
    	       	  if (Auth::check())
    	       	  	 {
-   	       	  	 	return Wishlist::select('pid')->where('user_id', Auth::user()->id)->get();
+   	       	  	 	$table  =  DB::getTablePrefix() . (new Wishlist())->getTable();
+   	       	  	 	//return Wishlist::select('pid')->where('user_id', Auth::user()->id)->get();
+   	       	  	 	$res = DB::table($table)->pluck('id');
+   	       	  	 	print_r($res);
    	       	  	 }
    	       }
 
