@@ -76,13 +76,14 @@ class ProductController extends Controller
 
           $square_feet_value   =  $mres->square_feet_value; // get value in square feet for ex; 1 feet, 144 inch, 629.0304 cm
  
-          $cwidth              =  $width / $square_feet_value;
-          $cheight             =  $height / $square_feet_value;
+          $cwidth              =  $width / 12;
+          $cheight             =  $height / 12;
 
           //$width_height      =  ($width * $height) / $square_feet_value;
 
-          $roll1              =  ceil($cwidth / 1800);
-          $roll2              =  ceil($cheight / 2400);
+          $roll1              =  ceil($cwidth / 150);
+
+          $roll2              =  ceil($cheight / 200);
 
           $roll = ($roll1 > $roll2) ? $roll1 : $roll2;
 
