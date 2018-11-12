@@ -81,8 +81,8 @@ class ProductController extends Controller
 
           //$width_height      =  ($width * $height) / $square_feet_value;
 
-          $roll1              =  ceil($cwidth / $tdim);
-          $roll2              =  ceil($cheight / $tdim);
+          $roll1              =  ceil($cwidth / 150);
+          $roll2              =  ceil($cheight / 200);
 
           $roll = ($roll1 > $roll2) ? $roll1 : $roll2;
 
