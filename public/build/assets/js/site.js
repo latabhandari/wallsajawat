@@ -36,6 +36,8 @@ $(document).ready(function() {
                                dataType: "json",
                                data: {"pid": id},
                                success: function (resp) {
+
+                                  $(this).parent().eq(1).remove().append('<i class="fa fa-star wshlst" title="Already added in your wishlist"></i>');
                                   alert(resp.msg);
                                }
 
