@@ -472,42 +472,37 @@ span.short_desc p{font-size:13px}
 
         function pricecalculate()
          {
+            var w_width  =  $('#w_width').val();
+            var w_height =  $('#w_height').val();
+            var mid      =  $("#material_type option:selected").val();
 
-          var w_width  =  $('#w_width').val();
-          var w_height =  $('#w_height').val();
-          var mid      =  $("#material_type option:selected").val();
+            if (w_width && w_height)
+               {
+                    var currentRequest = null;
+                    currentRequest  =  $.ajax({
+                                                 type: "POST",
+                                                 url: WallSajawat.getSitePath('product/option'),
+                                                 dataType: "json",
+                                                 data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
+                                                 beforeSend : function()    {           
+                                                      if(currentRequest != null) {
+                                                          currentRequest.abort();
+                                                      }
+                                                  },
+                                                 success: function (resp) {
 
-          if (w_width && w_height)
-             {
-                  var currentRequest = null;
-                  currentRequest  =  $.ajax({
-                                               type: "POST",
-                                               url: WallSajawat.getSitePath('product/option'),
-                                               dataType: "json",
-                                               data: {"width": w_width, "height": w_height, "mid": mid, "pid": pid},
-                                               beforeSend : function()    {           
-                                                    if(currentRequest != null) {
-                                                        currentRequest.abort();
-                                                    }
-                                                },
+                                                      // $("#cal_price").text("INR " + resp.price);
+                                                      $("#cal_price").text("Roll: " + resp.roll).css('display','');
 
-                                               success: function (resp) {
+                                                 },
+                                                 error: function(e) {
+                                                    // Error
+                                                 }
+                                              });
 
-                                                    //$("#cal_price").text("INR " + resp.price);
-                                                    $("#cal_price").text("Roll: " + resp.roll).css('display','');
-
-                                               },
-
-                                               error:function(e){
-                                                  // Error
-                                               }
-
-
-                                            });
-
-              }
+                }
               else
-                 $("#cal_price").html('').css('display', 'none');
+                  $("#cal_price").html('').css('display', 'none');
          }
 
         $(document).ready(function() {
