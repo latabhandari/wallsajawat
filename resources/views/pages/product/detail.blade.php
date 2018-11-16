@@ -81,10 +81,8 @@ span.short_desc p{font-size:13px}
           <div class="product-txtb">
 
             @if (\Session::has('out_of_stock'))
-                <div class="alert alert-success">
-                    <ul>
-                        <li>{!! \Session::get('out_of_stock') !!}</li>
-                    </ul>
+                <div class="alert alert-danger">
+                        <span>{!! \Session::get('out_of_stock') !!}</span>
                 </div>
             @endif
 
