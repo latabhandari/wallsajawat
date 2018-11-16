@@ -156,7 +156,6 @@ span.short_desc p{font-size:13px}
           			</div>
 
                 @if( ! empty($detail->stock_item))
-                  <div class="">
                     <p><strong>Quantity:</strong> Please Select Quantity.</p>
                     <div class="row">
                       <div class="col-sm-12">
@@ -164,7 +163,6 @@ span.short_desc p{font-size:13px}
                         <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
                       </div>
                     </div>
-                  </div>
                 @else
                   <div class="row">
                     <div class="col-sm-12">
