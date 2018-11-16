@@ -48,7 +48,9 @@ Route::group(['prefix' => 'beta'], function() {
     Route::get('/product/{slug}/{random_id}', 'ProductController@detail')->name('product.detail.rating');
 
     Route::post('/product/option', 'ProductController@option')->name('product.option');
-    Route::post('/product/cart', 'ProductController@cart')->name('product.cart');
+
+    Route::post('/product/cart', 'ProductController@cart')->name('product.cart')->middleware('product.stock');
+
     Route::get('/cart', 'ProductController@viewCart')->name('cart');
     Route::get('/cart/delete/{rowId}', 'ProductController@deleteItem')->name('cart.item.delete');
     Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update');
