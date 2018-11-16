@@ -19,7 +19,7 @@ class CheckProductInStock
     {
           $params           =  $request->all();
           $id               =  $params['id'];
-          $product          =  Product::selct('stock_item')->where('slug', $slug)->firstOrFail();
+          $product          =  Product::select('stock_item')->where('slug', $slug)->firstOrFail();
           $stock_item       =  (int) $product->stock_item;
           if (empty($stock_item))
           return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock');
