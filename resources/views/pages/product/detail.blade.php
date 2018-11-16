@@ -155,6 +155,9 @@ span.short_desc p{font-size:13px}
           				</ul>
           			</div>
 
+                @if(empty($detail->stock_item))
+
+
                 <div class="">
                   <p><strong>Quantity:</strong> Please Select Quantity.</p>
                   <div class="row">
@@ -165,6 +168,13 @@ span.short_desc p{font-size:13px}
                   </div>
                 </div>
 
+                @else
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <button  type="submit" class="btn btn-danger">OUT OF STOCK</button>
+                    </div>
+                  </div>
+                @endif
                 <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off" />
 
              </form>
