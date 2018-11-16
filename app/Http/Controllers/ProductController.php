@@ -138,7 +138,7 @@ class ProductController extends Controller
         $product          =  Product::findOrFail($id);
         $stock_item       =  (int) $product->stock_item;
         if (empty($stock_item))
-        return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock']);
+        return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock');
 
 
        	$params		        =  $request->all();
