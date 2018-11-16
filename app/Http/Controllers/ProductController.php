@@ -135,17 +135,18 @@ class ProductController extends Controller
     public function cart(Request $request)
      {
 
+        $params           =  $request->all();
+        $id               =  $params['id'];
+
         $product          =  Product::findOrFail($id);
         $stock_item       =  (int) $product->stock_item;
         if (empty($stock_item))
         return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock');
-
-
-       	$params		        =  $request->all();
+       	
        	$width        		=  $params['width'];
        	$height       		=  $params['height'];
        	$material_type_id =  $params['material_type'];
-       	$id           		=  $params['id'];
+       	
         $qty              =  $params['qty'];
        
 
