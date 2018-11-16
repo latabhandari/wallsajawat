@@ -22,9 +22,9 @@
                                     <div class="col-sm-4">
                                         <h3>FOLLOW US ON</h3>
                                         <ul class="nav navbar-nav follow-list">
-                                            <li><i class="fa fa-facebook-f"></i></li>
-                                            <li><i class="fa fa-twitter"></i></li>
-                                            <li><i class="fa fa-instagram"></i></li>
+                                            <li><a href="https://www.facebook.com/Wall-Sajawat-1102408909952441/" target="_blank" title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                            <li><a href="https://twitter.com/WSajawat" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.instagram.com/wallsajawat/?hl=en" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-4">

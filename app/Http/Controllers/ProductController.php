@@ -79,13 +79,13 @@ class ProductController extends Controller
           $cwidth              =  $width / $square_feet_value;
           $cheight             =  $height / $square_feet_value;
 
-          //$width_height      =  ($width * $height) / $square_feet_value;
+          // $width_height      =  ($width * $height) / $square_feet_value;
 
-         // $roll1               =  ceil($cwidth / $tdim['width']);
+          // $roll1             =  ceil($cwidth / $tdim['width']);
 
-         // $roll2               =  ceil($cheight / $tdim['height']);
+          // $roll2             =  ceil($cheight / $tdim['height']);
 
-          $roll               = max(ceil($cwidth / $tdim['width']), ceil($cheight / $tdim['height']));
+          $roll                 =  max(ceil($cwidth / $tdim['width']), ceil($cheight / $tdim['height']));
 
           echo json_encode(['status' => true, 'roll' => $roll, 'type' => ucfirst($mres->name)]);
       }
@@ -134,32 +134,31 @@ class ProductController extends Controller
 
     public function cart(Request $request)
      {
-     	$params		        =  $request->all();
-     	$width        		=  $params['width'];
-     	$height       		=  $params['height'];
-     	$material_type_id =  $params['material_type'];
-     	$id           		=  $params['id'];
-      $qty              =  $params['qty'];
-     	$product      		=  Product::findOrFail($id);
+       	$params		        =  $request->all();
+       	$width        		=  $params['width'];
+       	$height       		=  $params['height'];
+       	$material_type_id =  $params['material_type'];
+       	$id           		=  $params['id'];
+        $qty              =  $params['qty'];
+       	$product      		=  Product::findOrFail($id);
 
-     	$productname  		=  $product->name; 
-     	$type         		=  $product->type;
-     	/*$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
+       	$productname  		=  $product->name; 
+       	$type         		=  $product->type;
+       	/*$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
 
-      $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
+        $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
 
-      $square_feet_value = $mres->square_feet_value;
+        $square_feet_value = $mres->square_feet_value;
 
-      $width_height      =  $width * $height;
-      $per_square_feet   =  $width_height / $square_feet_value;
-      $uprice            =  $price * $per_square_feet;
-      */
-      $uprice            =  $product->price;
+        $width_height      =  $width * $height;
+        $per_square_feet   =  $width_height / $square_feet_value;
+        $uprice            =  $price * $per_square_feet;
+        */
+        $uprice            =  $product->price;
 
-     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
+       	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
 
-    	return redirect()->route('cart');
-      
+      	return redirect()->route('cart');
      }
 
 
@@ -236,11 +235,7 @@ class ProductController extends Controller
             {
                  $arr = ['status' => false, "msg" => "You need to signin or signup to add a wishlist"];
             }
-                 echo json_encode($arr );
+                 echo json_encode($arr);
        }
-
-
-
-
 }
 
