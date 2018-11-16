@@ -155,7 +155,7 @@ span.short_desc p{font-size:13px}
           				</ul>
           			</div>
 
-                @if(empty($detail->stock_item))
+                @if( ! empty($detail->stock_item))
 
 
                 <div class="">
@@ -175,6 +175,7 @@ span.short_desc p{font-size:13px}
                     </div>
                   </div>
                 @endif
+
                 <input type="hidden" name="id" id="id" value="{{ $detail->id }}" autocomplete="off" />
 
              </form>
