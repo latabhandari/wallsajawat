@@ -134,31 +134,38 @@ class ProductController extends Controller
 
     public function cart(Request $request)
      {
-     	$params		        =  $request->all();
-     	$width        		=  $params['width'];
-     	$height       		=  $params['height'];
-     	$material_type_id =  $params['material_type'];
-     	$id           		=  $params['id'];
-      $qty              =  $params['qty'];
-     	$product      		=  Product::findOrFail($id);
 
-     	$productname  		=  $product->name; 
-     	$type         		=  $product->type;
-     	/*$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
+        $product          =  Product::findOrFail($id);
+        $stock_item       =  (int) $product->stock_item;
+        if (empty($stock_item))
+        return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock']);
 
-      $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
 
-      $square_feet_value = $mres->square_feet_value;
+       	$params		        =  $request->all();
+       	$width        		=  $params['width'];
+       	$height       		=  $params['height'];
+       	$material_type_id =  $params['material_type'];
+       	$id           		=  $params['id'];
+        $qty              =  $params['qty'];
+       
 
-      $width_height      =  $width * $height;
-      $per_square_feet   =  $width_height / $square_feet_value;
-      $uprice            =  $price * $per_square_feet;
-      */
-      $uprice            =  $product->price;
+       	$productname  		=  $product->name; 
+       	$type         		=  $product->type;
+       	/*$price         		=  MyHelper::getProductSquareFeetPrice($product->id);
 
-     	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
+        $mres             =  Measurement::select('square_feet_value')->where('id', $material_type_id)->firstOrFail();
 
-    	return redirect()->route('cart');
+        $square_feet_value = $mres->square_feet_value;
+
+        $width_height      =  $width * $height;
+        $per_square_feet   =  $width_height / $square_feet_value;
+        $uprice            =  $price * $per_square_feet;
+        */
+        $uprice            =  $product->price;
+
+       	Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => $material_type_id, 'width' => $width, 'height' => $height]]);
+
+      	return redirect()->route('cart');
       
      }
 

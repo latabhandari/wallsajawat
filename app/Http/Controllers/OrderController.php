@@ -62,8 +62,10 @@ class OrderController extends Controller
         	   	    $mdata                       =  [];
         	   	    $mid                         =  $row->options->type; 
         	   	    $mdata['mid']     			     =  $mid;
+                  
                   $measurement_info  			     =  MyHelper::getMeasurement($mid);
                   $mdata['name']               =  $measurement_info->name;
+
                   $mdata['width']  		         =  (string) $row->options->width;
                   $mdata['height']             =  (string) $row->options->height;
 

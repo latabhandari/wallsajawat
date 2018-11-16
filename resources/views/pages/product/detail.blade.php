@@ -79,6 +79,15 @@ span.short_desc p{font-size:13px}
         <div class="col-sm-5">
           <!-- start product-txtb -->
           <div class="product-txtb">
+
+            @if (\Session::has('out_of_stock'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('out_of_stock') !!}</li>
+                    </ul>
+                </div>
+            @endif
+
             <h3>{{ $detail->name }}</h3>
             @php
               $order_this_month = App\Helpers\MyHelper::orderThisMonth($detail->id);

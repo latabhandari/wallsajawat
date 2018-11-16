@@ -23,9 +23,10 @@ class Profile extends Model
        	  return $this->belongsTo(Cities::class, 'city', 'id');
        }
 
- /* public function state()
+  /* public function state()
        {
        	  return $this->belongsTo(States::class, 'state', 'id');
        }
 	*/
+       
 }

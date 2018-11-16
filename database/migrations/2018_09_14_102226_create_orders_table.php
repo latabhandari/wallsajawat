@@ -35,6 +35,8 @@ class CreateOrdersTable extends Migration
 
             $table->string('user_agent')->comment('User Agent');
 
+            $table->enum('status', ['1', '2', '3', '4', '5'])->comment('1 - PENDING, 2 - PROCESSING, 3 - SHIPPED, 4 - RETURNED, 5 - CANCELLED')->default('1');
+
             $table->unsignedInteger('unix_timestamp')->comment('Unix Timestamp');
 
             $table->timestamps();
