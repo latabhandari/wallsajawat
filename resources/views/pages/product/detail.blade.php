@@ -26,6 +26,7 @@ span.short_desc p{font-size:13px}
 .rating > input:checked + label:hover,.rating > input:checked + label:hover ~ label,.rating > input:checked ~ label:hover,.rating > input:checked ~ label:hover ~ label,.rating > label:hover ~ input:checked ~ label {color:#ea0}
 .rating > label:active {position:relative;top:2px;left:2px}
 .padd0{padding-left:0px !important;}
+.dngr{color:#ff0000 !important;}
 </style>
 @endsection
 @section('content')
@@ -166,7 +167,7 @@ span.short_desc p{font-size:13px}
                 @else
                   <div class="row">
                     <div class="col-sm-12">
-                      <button type="button" class="btn btn-danger">OUT OF STOCK</button>
+                      <button type="button" class="btn btn-danger dngr">OUT OF STOCK</button>
                     </div>
                   </div>
                 @endif
