@@ -156,22 +156,19 @@ span.short_desc p{font-size:13px}
           			</div>
 
                 @if( ! empty($detail->stock_item))
-
-
-                <div class="">
-                  <p><strong>Quantity:</strong> Please Select Quantity.</p>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
-                      <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
+                  <div class="">
+                    <p><strong>Quantity:</strong> Please Select Quantity.</p>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <input type="number" name="qty"  min="1" max="25" class="form-control" value="1" />
+                        <button  type="submit" class="btn"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Bag</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-
                 @else
                   <div class="row">
                     <div class="col-sm-12">
-                      <button  type="submit" class="btn btn-danger">OUT OF STOCK</button>
+                      <button type="button" class="btn btn-danger">OUT OF STOCK</button>
                     </div>
                   </div>
                 @endif
