@@ -51,7 +51,7 @@
 
           @foreach($wishlists as $row)
             @php
-              $prod_image_info   = App\Helpers\MyHelper::getProductImage($row->id);
+              $prod_image_info  = App\Helpers\MyHelper::getProductImage($row->id);
             @endphp
 
             <div class="cart-row">
