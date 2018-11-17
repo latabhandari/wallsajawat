@@ -25,6 +25,13 @@
       <!-- start cart -->
       <div class="cart">
         <div class="row">
+
+          @if (\Session::has('wishlist_deleted'))
+              <div class="alert alert-success" style="padding:5px 15px">
+                      <span>{!! \Session::get('wishlist_deleted') !!}</span>
+              </div>
+          @endif
+
           <div class="col-sm-8">
             <h2>YOUR WISHLIST</h2>
           </div>

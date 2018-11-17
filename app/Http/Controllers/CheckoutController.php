@@ -27,7 +27,7 @@ class CheckoutController extends Controller
     public function checkout()
        {
           if (Cart::count()) {
-                if(\Auth::check())
+                if (\Auth::check())
                  {
                        $user   = \Auth::user();
                        $states = States::where('country_id', env('DEFAULT_COUNTRY', 101))->get();
@@ -120,14 +120,14 @@ class CheckoutController extends Controller
               	 {
               	 	        $arr = ["status" => false, "msg" => "please enter coupon code!"];
               	 }
-              			    echo json_encode($arr);
+              			      echo json_encode($arr);
           } 
 
 
     public function wishlistRemove($random_id = '')
        {
           Wishlist::where(['random_string' => $random_id])->delete();
-          return redirect()->back();
+          return redirect()->back()->with('wishlist_deleted', 'Deleted Successfully!');
        }
 
 
