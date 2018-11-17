@@ -36,7 +36,7 @@ class CheckoutController extends Controller
                  }
                 else
                   {
-                      return redirect(route('login').'?redirect_url='.route('cart.checkout'));
+                      return redirect(route('login') . '?redirect_url=' . urlencode(route('cart.checkout')));
                   }
           }
           else
