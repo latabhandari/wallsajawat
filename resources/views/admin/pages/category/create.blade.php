@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="{{ URL::asset('backend/assets/css/slim.min.css') }}" />
     <style>
     .slim>img, .slim>input[type=file]{width:200px !important;height:200px !important}
+    .slim[data-ratio="1:1"]>img, .slim[data-ratio="1:1"]>input[type=file] {
+      margin-bottom:0px;
+    }
    </style>
 @stop
 
