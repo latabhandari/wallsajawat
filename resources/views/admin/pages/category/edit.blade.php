@@ -88,9 +88,8 @@
 
                   <div class="slim" data-label="Drag your image here" style="cursor:pointer;" data-size="250,250" data-ratio="1:1" >
                       <input type="file" accept="image/jpeg, image/gif, image/png, image/jpg"  id="wallpaper_image" name="wallpaper_image">
+                      <img src="{{ URL::asset('catalog/category/'.$category->wallpaper_image) }}" alt="" width="120" />
                   </div>
-
-                  <img src="{{ URL::asset('catalog/category/'.$category->wallpaper_image) }}" alt="" width="120" />
 
 
                 </div>
