@@ -84,7 +84,7 @@
                   <label for="wallpaper_image">Image</label>
                   <!-- <input class="form-control slim" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" /> -->
 
-                  <div class="slim" data-label="Click here to Upload" style="cursor:pointer;" data-size="250,250" data-ratio="1:1" >
+                  <div class="slim" data-label="Drag your image here" style="cursor:pointer;" data-size="250,250" data-ratio="1:1" >
                       <input type="file" accept="image/jpeg, image/gif, image/png, image/jpg"  id="wallpaper_image">
                   </div>
 
