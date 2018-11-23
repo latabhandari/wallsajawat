@@ -1,7 +1,7 @@
 @extends('admin.layout.master')
 
 @section('css')
-    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ URL::asset('backend/assets/css/slim.min.css') }}" />
 @stop
 
 @php
