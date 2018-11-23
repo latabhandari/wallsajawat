@@ -260,13 +260,13 @@ class UserController extends Controller
     } 
 	public function categories() 
     {
-		$categories = Categories::where([['status','=',1],['parent_id','=', 0]])->select('name', 'id', 'icon')->get();
+		$categories = Categories::where([['status','=',1],['parent_id','=', 0]])->select('name', 'id', 'wallpaper_image')->get();
 		return response()->json(['success' => $categories, 'udata' => 1]);     
 	}	
 	public function subcategories() 
     {
 		$parent_id = request('parent_id');
-		$categories = Categories::where([['status','=',1],['parent_id','=', $parent_id]])->select('name', 'id', 'icon')->get();
+		$categories = Categories::where([['status','=',1],['parent_id','=', $parent_id]])->select('name', 'id', 'wallpaper_image')->get();
 		return response()->json(['success' => $categories, 'udata' => 1]);       
 	}
 
