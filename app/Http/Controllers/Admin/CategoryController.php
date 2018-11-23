@@ -8,7 +8,7 @@ use App\Categories as Categories;
 use App\Helpers\MyHelper as MyHelper;
 use Auth;
 use Route;
-use App\Slim as Slim;
+use App\Helpers\Slim as Slim;
 
 
 class CategoryController extends Controller
