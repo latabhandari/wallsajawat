@@ -1,4 +1,17 @@
 @extends('admin.layout.master')
+
+@section('css')
+    <link rel="stylesheet" href="{{ URL::asset('backend/assets/css/slim.min.css') }}" />
+    <style>
+    .slim>img, .slim>input[type=file]{width:250px !important;height:250px !important}
+    .slim[data-ratio="1:1"]>img, .slim[data-ratio="1:1"]>input[type=file] {
+      margin-bottom:0px !important;
+    }
+    .slim{width:250px !important;height:250px !important}
+   </style>
+@stop
+
+
 @php
    use App\Helpers\MyHelper as MyHelper;
 @endphp
@@ -63,11 +76,24 @@
                   </select>
                 </div>-->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="wallpaper_image">Image</label>
                   <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
                    <img src="{{ URL::asset('catalog/category/'.$category->wallpaper_image) }}" alt="" width="120" />
+                </div>-->
+
+                <div class="form-group">
+                  <label for="wallpaper_image">Image</label>
+                  <!-- <input class="form-control slim" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" /> -->
+
+                  <div class="slim" data-label="Drag your image here" style="cursor:pointer;" data-size="250,250" data-ratio="1:1" >
+                      <input type="file" accept="image/jpeg, image/gif, image/png, image/jpg"  id="wallpaper_image" name="wallpaper_image">
+                      <img src="{{ URL::asset('catalog/category/'.$category->wallpaper_image) }}" alt="" width="120" />
+                  </div>
+
+
                 </div>
+
 
                 <div class="form-group">
                   <label for="page_title">Page Title&nbsp;</label>
@@ -126,17 +152,6 @@
 
 @section('pagejs')
 
-    <script src="{{ URL::asset('backend/theme/bower_components/ckeditor/ckeditor.js') }}"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="{{ URL::asset('backend/theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
-    <script>
-     $(function () {
-      // Replace the <textarea id="editor1"> with a CKEditor
-      // instance, using default configuration.
-      CKEDITOR.replace('editor1')
-         //bootstrap WYSIHTML5 - text editor
-       $('.textarea').wysihtml5()
-   })
-</script>
+    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min.js') }}"></script>
 
 @stop

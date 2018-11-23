@@ -167,6 +167,7 @@ class CategoryController extends Controller
 
         //$fields['wallpaper_pos']            =    $params['wallpaper_pos'];
 
+        /*
         if ($request->hasFile('wallpaper_image')) 
           {
              $file                       =    $request->file('wallpaper_image');
@@ -179,6 +180,29 @@ class CategoryController extends Controller
              $fields['wallpaper_image']  =    $wimage;
 
           }
+        */
+
+
+        /* file upload here using slim */
+
+         $images                                =    Slim::getImages("wallpaper_image");
+         if ( ! empty($images))
+             $image                             =    $images[0];
+
+             // let's create some shortcuts
+             $name                              =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', strtolower($image['output']['name']));
+             $data                              =    $image['output']['data'];
+
+             $destinationPath                   =    public_path('catalog/category');
+
+             $file                              =    Slim::saveFile($data, $name, $destinationPath);
+
+             $fields['wallpaper_image']         =    $file['name'];
+        endif
+
+         /* close */
+
+
 
         $fields['updated_at_timestamp']     =    time();
 
