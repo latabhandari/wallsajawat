@@ -131,7 +131,7 @@
 
 @section('pagejs')
 
-    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min') }}"></script>
+    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min.js') }}"></script>
 
 </script>
 
