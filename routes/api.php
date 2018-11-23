@@ -25,7 +25,11 @@ Route::post('cities', 'API\UserController@cities');
 Route::post('products', 'API\UserController@products');
 Route::get('categories', 'API\UserController@categories');
 Route::post('subcategories', 'API\UserController@subcategories');
+
 Route::get('products', 'API\UserController@products');//
+Route::get('category/products/{id}', 'API\UserController@category_products');//
+
+
 Route::post('forgot_password', 'API\ForgotPasswordController@forget');
 Route::post('social_register', 'API\UserController@social_register');
 Route::group(['middleware' => 'auth:api'], function(){

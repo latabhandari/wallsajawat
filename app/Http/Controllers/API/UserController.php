@@ -270,6 +270,32 @@ class UserController extends Controller
 		return response()->json(['success' => $categories, 'udata' => 1]);       
 	}
 
+	public function category_products($id = null) 
+    { 
+    	 $products = DB::table('products')
+            			->select('products.id', 'products.name', 'products.slug', 'products.price')
+						->join('product_categories', 'products.id', '=', 'product_categories.product_id')
+			            ->where('category_id', $id)
+			            ->get();
+
+		   $products_json = [];
+           if (count($products))
+            {
+            	foreach ($products as $pr) 
+        		 {
+					 $image 			 = ProductImages::select('image')->where('product_id', $pr->id)->first();
+					 $product['id']      = $pr->id;
+					 $product['name']    = $pr->name;
+					 $product['price']   = $pr->price;
+					 $product['slug']    = $pr->slug;
+					 $product['img_url'] = asset('catalog/product/'.$image->image);
+					 $products_json[]    = $product;
+        		 }
+            }                 
+           			 return response()->json(['success' => $products_json]);   
+    } 
+
+
 	public function search()
 	  {
 	  	   $search    = request('search');
