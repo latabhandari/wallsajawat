@@ -100,7 +100,7 @@ class CategoryController extends Controller
 
          $file                              =    Slim::saveFile($data, $name, $destinationPath);
 
-         $fields['wallpaper_image']         =    $name;
+         $fields['wallpaper_image']         =    $file['name'];
 
          /* close */
 
