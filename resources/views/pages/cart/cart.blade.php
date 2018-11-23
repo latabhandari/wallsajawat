@@ -152,7 +152,7 @@ span.info p {font-size:12px;line-height:20px}
 						<span>No product in cart</span>
 					</div>
 					<div class="col-sm-12">
-						<a style="width:19%" href="{{ route('home.index') }}" class="btn btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
+						<a style="width: auto;display: inline-block;" href="{{ route('home.index') }}" class="btn btn-block">Continue Shopping <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>

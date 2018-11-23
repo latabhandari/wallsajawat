@@ -59,8 +59,8 @@
 		<!---->
 	</div>
 
-
-
+</div>
+<div class="order-main">
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
@@ -353,8 +353,8 @@
 		</div>
 	</div>
 </div>
-
 </div>
+
 @endsection
 
 @section('bottom_yield')

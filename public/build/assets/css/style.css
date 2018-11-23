@@ -1338,6 +1338,7 @@ span#cal_price{font-size:14px;}
 .product-txtb .btn{padding: 14px 10px!important;
     font-size: 13px!important;}
 .product-txtb #product .form-control{width: 80px;margin-right: 10px;}
+.order-main .container{padding-left:0;padding-right: 0;}
 
 
 }
