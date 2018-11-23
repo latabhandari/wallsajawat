@@ -93,7 +93,7 @@ class CategoryController extends Controller
          $image                             =    $images[0];
 
          // let's create some shortcuts
-         $name                              =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', strtolower($image['output']['name']));
+         $name                              =    preg_replace("/[^a-z0-9\_\-\.]/i", '', strtolower($image['output']['name']));
          $data                              =    $image['output']['data'];
 
          $destinationPath                   =    public_path('catalog/category');
@@ -190,7 +190,7 @@ class CategoryController extends Controller
              $image                             =    $images[0];
 
              // let's create some shortcuts
-             $name                              =    uniqid( ) . preg_replace("/[^a-z0-9\_\-\.]/i", '', strtolower($image['output']['name']));
+             $name                              =    preg_replace("/[^a-z0-9\_\-\.]/i", '', strtolower($image['output']['name']));
              $data                              =    $image['output']['data'];
 
              $destinationPath                   =    public_path('catalog/category');
