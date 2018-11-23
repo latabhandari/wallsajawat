@@ -186,7 +186,7 @@ class CategoryController extends Controller
         /* file upload here using slim */
 
          $images                                =    Slim::getImages("wallpaper_image");
-         if ( ! empty($images))
+         if ( ! empty($images)):
              $image                             =    $images[0];
 
              // let's create some shortcuts
@@ -198,7 +198,7 @@ class CategoryController extends Controller
              $file                              =    Slim::saveFile($data, $name, $destinationPath);
 
              $fields['wallpaper_image']         =    $file['name'];
-        endif;
+        endif
 
          /* close */
 
