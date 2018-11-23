@@ -62,12 +62,25 @@
                      <option value="4">-- 4 --</option>
                      <option value="5">-- 5 --</option>
                   </select>
-                </div> -->
+                </div> 
 
                 <div class="form-group">
                   <label for="wallpaper_image">Image</label>
                   <input class="form-control" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" />
+                </div> -->
+
+                <div class="form-group">
+                  <label for="wallpaper_image">Image</label>
+                  <!-- <input class="form-control slim" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" /> -->
+
+                  <div class="slim" name="wallpaper_image" data-label="Click here to Upload" style="cursor:pointer;" data-size="200,200" data-ratio="1:1" >
+                      <input type="file" accept="image/jpeg, image/gif, image/png, image/jpg"  id="profile">
+                  </div>
+
+
                 </div>
+
+                        
 
                 <div class="form-group">
                   <label for="page_title">Page Title&nbsp;</label>
@@ -118,18 +131,8 @@
 
 @section('pagejs')
 
-    <script src="{{ URL::asset('backend/theme/bower_components/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ URL::asset('backend/theme/bower_components/ckeditor/ckeditor.js') }}"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="{{ URL::asset('backend/theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
-    <script>
-     $(function () {
-      // Replace the <textarea id="editor1"> with a CKEditor
-      // instance, using default configuration.
-      CKEDITOR.replace('editor1')
-         //bootstrap WYSIHTML5 - text editor
-       $('.textarea').wysihtml5()
-   })
+    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min') }}"></script>
+
 </script>
 
 @stop
