@@ -1,5 +1,9 @@
 @extends('admin.layout.master')
 
+@section('css')
+    <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min.js') }}"></script>
+@stop
+
 @php
    use App\Helpers\MyHelper as MyHelper;
 @endphp
@@ -132,7 +136,5 @@
 @section('pagejs')
 
     <script src="{{ URL::asset('backend/assets/js/slim.kickstart.min.js') }}"></script>
-
-</script>
 
 @stop
