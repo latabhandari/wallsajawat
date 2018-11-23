@@ -3,11 +3,11 @@
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('backend/assets/css/slim.min.css') }}" />
     <style>
-    .slim>img, .slim>input[type=file]{width:200px !important;height:200px !important}
+    .slim>img, .slim>input[type=file]{width:250px !important;height:250px !important}
     .slim[data-ratio="1:1"]>img, .slim[data-ratio="1:1"]>input[type=file] {
       margin-bottom:0px !important;
     }
-    .slim{width:200px !important;height:200px !important}
+    .slim{width:250px !important;height:250px !important}
    </style>
 @stop
 
@@ -84,7 +84,7 @@
                   <label for="wallpaper_image">Image</label>
                   <!-- <input class="form-control slim" name="wallpaper_image" placeholder="Wallpaper Image" type="file" value="" /> -->
 
-                  <div class="slim" data-label="Click here to Upload" style="cursor:pointer;" data-size="200,200" data-ratio="1:1" >
+                  <div class="slim" data-label="Click here to Upload" style="cursor:pointer;" data-size="250,250" data-ratio="1:1" >
                       <input type="file" accept="image/jpeg, image/gif, image/png, image/jpg"  id="wallpaper_image">
                   </div>
 
