@@ -7,6 +7,7 @@
     .slim[data-ratio="1:1"]>img, .slim[data-ratio="1:1"]>input[type=file] {
       margin-bottom:0px !important;
     }
+    .slim{width:200px !important;height:200px !important}
    </style>
 @stop
 
