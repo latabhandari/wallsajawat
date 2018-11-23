@@ -293,6 +293,6 @@ class UserController extends Controller
 					 $products_json[]    = $product;
         		 }
             }                 
-           return response()->json(['success' => $products_json]);  
+           			 return response()->json(['success' => $products_json]);  
 	  }
 }
