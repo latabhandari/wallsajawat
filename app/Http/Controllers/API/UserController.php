@@ -260,7 +260,7 @@ class UserController extends Controller
     } 
 	public function categories() 
     {
-		$categories = Categories::where([['status','=',1],['parent_id','=', 0]])->select('name', 'id', 'wallpaper_image')->get();
+		$categories = Categories::where([['status','=',1],['parent_id','=', 0]])->select('name', 'id', 'wallpaper_image AS img')->get();
 		return response()->json(['success' => $categories, 'udata' => 1]);     
 	}	
 	public function subcategories() 
