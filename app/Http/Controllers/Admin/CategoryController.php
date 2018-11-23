@@ -8,6 +8,8 @@ use App\Categories as Categories;
 use App\Helpers\MyHelper as MyHelper;
 use Auth;
 use Route;
+use App\Slim as Slim;
+
 
 class CategoryController extends Controller
 {
@@ -74,7 +76,7 @@ class CategoryController extends Controller
 
          //$fields['wallpaper_pos']           =    $params['wallpaper_pos'];
 
-         if ($request->hasFile('wallpaper_image')) 
+         /*if ($request->hasFile('wallpaper_image')) 
           {
              $file                          =    $request->file('wallpaper_image');
              $destinationPath               =    public_path('catalog/category');
@@ -83,6 +85,25 @@ class CategoryController extends Controller
              $file->move($destinationPath, $wimage);
              $fields['wallpaper_image']     =    $wimage;
           }
+          */
+
+         /* file upload here using slim */
+
+         $images                            =    Slim::getImages("wallpaper_image");
+         $image                             =    $images[0];
+
+         // let's create some shortcuts
+         $name                              =    $image['output']['name'];
+         $data                              =    $image['output']['data'];
+
+         $destinationPath                   =    public_path('catalog/category');
+
+         $file                              =    Slim::saveFile($data, $name, $destinationPath);
+
+         $fields['wallpaper_image']         =    $name;
+
+         /* close */
+
                  
          $fields['created_at_timestamp']    =    time();
 
