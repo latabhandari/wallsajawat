@@ -99,7 +99,7 @@ class Cart
         $content = $this->getContent();
 
         if ($content->has($cartItem->rowId)) {
-            //$cartItem->qty += $content->get($cartItem->rowId)->qty;
+            //$cartItem->qty += $content->get($cartItem->rowId)->qty; // this will increment qty by 1 if we back again and press add to cart button if item already exist in cart        //comment by vijay
         }
 
         $content->put($cartItem->rowId, $cartItem);
