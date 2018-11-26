@@ -43,7 +43,6 @@ span.info p {font-size:12px;line-height:20px}
  @endif
 
 
-
 @if(Cart::count())
 <form name="updateform" action="{{ route('cart.item.update') }}" method="POST">
 	@csrf

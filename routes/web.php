@@ -55,7 +55,7 @@ Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/cart/delete/{rowId}', 'ProductController@deleteItem')->name('cart.item.delete');
 
-    Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update')->middleware('quantity.stock');;
+    Route::post('/cart/update', 'ProductController@updateItem')->name('cart.item.update')->middleware('quantity.stock');
 
     Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->name('social_login');
     Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->name('social_callback');
