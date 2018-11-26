@@ -175,16 +175,16 @@ class ProductController extends Controller
             Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => '', 'width' => '', 'height' => '']]);
 
             return redirect()->route('cart');
-            
+
         }
 
      public function viewCart(Request $request)
      {
-      /* here delete the coupon discount */
-        $request->session()->forget('discount');
-      /* close delete the coupon discount */
+        /* here delete the coupon discount */
+           $request->session()->forget('discount');
+        /* close delete the coupon discount */
 
-     	return view('pages.cart.cart');
+     	  return view('pages.cart.cart');
      }
 
      public function deleteItem($rowId)
@@ -197,10 +197,9 @@ class ProductController extends Controller
       {
       		$params = $request->all();
       		foreach ($params['update'] as $rowId => $quantity)
-            Cart::update($rowId, $quantity); // Will update the quantity
+            Cart::update($rowId, $quantity); // We're updating the quantity //
         	return redirect()->route('cart');
       }
-
 
       public function getCities($state_id = '')
         {
