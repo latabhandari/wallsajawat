@@ -184,11 +184,6 @@ class ProductController extends Controller
            $request->session()->forget('discount');
         /* close delete the coupon discount */
 
-$ff = Cart::content();
-
-echo $ff['162e973400649a184c65705ca4c8d118']->id;
-       // print_r(Cart::content());
-
      	  return view('pages.cart.cart');
      }
 

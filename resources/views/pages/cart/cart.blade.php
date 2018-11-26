@@ -36,11 +36,6 @@ span.info p {font-size:12px;line-height:20px}
 </div>
 
 
- @if (\Session::has('error_msg'))
-                <div class="alert alert-danger" style="padding:5px 15px">
-                        <span>{!! \Session::get('error_msg') !!}</span>
-                </div>
- @endif
 
 
 @if(Cart::count())
@@ -52,6 +47,14 @@ span.info p {font-size:12px;line-height:20px}
 				<div class="cart">
 					<div class="row">
 						<div class="col-sm-8">
+
+							 @if (\Session::has('error_msg'))
+                			   <div class="alert alert-danger" style="padding:5px 15px">
+				                        <span>{!! \Session::get('error_msg') !!}</span>
+				                </div>
+							 @endif
+
+
 							<h2>YOUR BAG</h2>
 						</div>
 						<div class="col-sm-4">
