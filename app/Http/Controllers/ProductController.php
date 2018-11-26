@@ -184,6 +184,8 @@ class ProductController extends Controller
            $request->session()->forget('discount');
         /* close delete the coupon discount */
 
+        dd(Cart::content());
+
      	  return view('pages.cart.cart');
      }
 
