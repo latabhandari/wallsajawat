@@ -29,4 +29,5 @@ class CheckProductInStock
 
           return $next($request);
     }
+    
 }
