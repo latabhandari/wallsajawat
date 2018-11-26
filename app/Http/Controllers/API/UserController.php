@@ -288,7 +288,7 @@ class UserController extends Controller
 					 $product['name']    = $pr->name;
 					 $product['price']   = $pr->price;
 					 $product['slug']    = $pr->slug;
-					 $product['img_url'] = $image->image;
+					 $product['img_url'] = asset('catalog/product/'.$image->image);
 					 $products_json[]    = $product;
         		 }
             }                 
