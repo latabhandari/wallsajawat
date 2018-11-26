@@ -162,7 +162,7 @@
 
 										@php
 										 $prod_image_info       = App\Helpers\MyHelper::getProductImage($product->product_id);
-										 $product_info          = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug']);
+										 $product_info          = App\Helpers\MyHelper::getProductInfo($product->product_id, ['name', 'short_desc', 'slug', 'stock_item']);
 										 $dimension             = json_decode($product->dimension);
 
 										 $enc_order_product_id  = Crypt::encryptString($order->order_number.'-'.$product->product_id);
@@ -203,7 +203,13 @@
 														</div>
 														<div class="row">
 															<div class="col-sm-12 ">
-																<a href="{{ route('product.detail', $product_info[0]['slug']) }}"><button class="btn buyagain-btn" type="submit">Buy it again</button></a>
+
+																@if(empty($product_info[0]['stock_item']))
+																	<button class="btn buyagain-btn" type="button">Out of Stock</button>
+																@else
+																	<a href="{{ route('product.detail', $product_info[0]['slug']) }}"><button class="btn buyagain-btn" type="button">Buy it again</button></a>
+																@endif
+
 															</div>
 														</div>
 														</div>
