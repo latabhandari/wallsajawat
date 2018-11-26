@@ -175,7 +175,7 @@ class ProductController extends Controller
             Cart::add(['id' => $id, 'name' => $productname, 'qty' => $qty, 'price' => $uprice, 'options' => ['type' => '', 'width' => '', 'height' => '']]);
 
             return redirect()->route('cart');
-      
+            
         }
 
      public function viewCart(Request $request)
@@ -200,6 +200,7 @@ class ProductController extends Controller
             Cart::update($rowId, $quantity); // Will update the quantity
         	return redirect()->route('cart');
       }
+
 
       public function getCities($state_id = '')
         {
