@@ -67,7 +67,7 @@ switch ($segment)
                       <li class="mrgntpnone">
                          <form id="searchfrm" method="get" action="{{ route('search') }}" aria-label="{{ __('Search') }}">
                             @csrf
-                            <div class="form-group">
+                            <div class="form-group" style="margin-bottom:3px">
                               <input class="searchtxt" type="text" name="search" id="search" placeholder="Products..." autocomplete="off" / class="form-control"><button class="searchbtn"><i class="fa fa-search"></i></button>
                             </div>
                           </form>

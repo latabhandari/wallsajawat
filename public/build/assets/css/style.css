@@ -196,7 +196,7 @@ display: inline-block;
 }
 
 ul.follow-list li a, ul.follow-list li a:hover{color:#fff;background:none}
-#searchfrm .error{margin:0;}
+#searchfrm .error{margin:0;font-size:13px}
 
 
 .mrgnlft40{margin-left:40px;}
