@@ -8,6 +8,7 @@ $(document).ready(function() {
   
             // validate signup form on keyup and submit
                 $("#searchfrm").validate({
+                          errorElement: 'p',
                           rules: {
                                           search: {
                                                             required: true, 
