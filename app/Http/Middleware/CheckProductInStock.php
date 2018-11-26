@@ -25,7 +25,7 @@ class CheckProductInStock
           return redirect()->back()->with('error_msg', 'Sorry. Out of stock');
 
           if ($params['qty'] > $stock_item)
-          return redirect()->back()->with('error_msg', 'Sorry. Quantity '.$quantity.' is currently unavailable');
+          return redirect()->back()->with('error_msg', 'Sorry. only '.$quantity.' Quantity are left');
       
           return $next($request);
     }

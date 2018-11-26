@@ -27,7 +27,7 @@ class CheckQuantityCart
             $product          =    Product::select('stock_item')->where('id', $product_id)->firstOrFail();
             $stock_item       =    (int) $product->stock_item;
             if ($quantity > $stock_item)
-            return redirect()->back()->with('error_msg', 'Sorry. Quantity '.$quantity.' is currently unavailable');
+            return redirect()->back()->with('error_msg', 'Sorry. only '.$quantity.' Quantity are left');
 
           endforeach;
 
