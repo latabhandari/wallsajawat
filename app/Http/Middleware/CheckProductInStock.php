@@ -22,12 +22,9 @@ class CheckProductInStock
           $product          =  Product::select('stock_item')->where('id', $id)->firstOrFail();
           $stock_item       =  (int) $product->stock_item;
           if (empty($stock_item))
-          return redirect()->back()->with('out_of_stock', 'Sorry. Out of stock');
-
-          if ($params['qty'] > $stock_item)
-          return redirect()->back()->with('out_of_stock', 'Sorry. '.$params['qty'].' quantity is currently not available');
-
+          return redirect()->back()->with('error_msg', 'Sorry. Out of stock');
+           else
           return $next($request);
     }
-    
+
 }
