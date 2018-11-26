@@ -56,8 +56,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         $messages = [
-                      'unique' => 'The :attribute you entered already belongs to an existing account',
-                      'regex' => 'Password field contains 1 uppercase letter, 1 lowercase letter and 1 special character.'
+                      'email.unique' => 'The :attribute you entered already belongs to an existing account',
+                      'password.regex' => 'Password field contains 1 uppercase letter, 1 lowercase letter and 1 special character.'
                     ];
 
         return Validator::make($data, [
