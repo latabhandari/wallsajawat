@@ -9,6 +9,11 @@ $(document).ready(function() {
             // validate signup form on keyup and submit
                 $("#searchfrm").validate({
                           errorElement: 'p',
+
+                          errorPlacement: function(error, element) {
+                            error.insertAfter(element.parent());
+                          },
+                          
                           rules: {
                                           search: {
                                                             required: true, 
