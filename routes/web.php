@@ -49,7 +49,7 @@ Route::group(['prefix' => 'beta'], function() {
 
     Route::post('/product/option', 'ProductController@option')->name('product.option');
 
-    Route::post('/product/cart', 'ProductController@cart')->name('product.cart')->middleware(['product.stock', 'quantity.stock']);
+    Route::post('/product/cart', 'ProductController@cart')->name('product.cart')->middleware(['product.stock']);
 
     Route::get('/cart', 'ProductController@viewCart')->name('cart');
 

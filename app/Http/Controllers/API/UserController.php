@@ -32,16 +32,16 @@ class UserController extends Controller
      * 
      * @return \Illuminate\Http\Response 
      */ 
-    public function login(){ 
-        if(Auth::attempt(['email' => request('email'), 'password' => request('password'), 'verified' => 1])){ 
+    public function login() { 
+        if(Auth::attempt(['email' => request('email'), 'password' => request('password'), 'verified' => 1])) { 
 			
-            $user = Auth::user(); 
+            $user    = Auth::user(); 
 			$user_id = $user->id;
 			Profile::where('user_id', $user_id)->update(['device_token' => request('device_token')]);
             //$success['token'] =  $user->createToken('MyApp')-> accessToken; 
             return response()->json(['success' => [['token' => $user->createToken('MyApp')-> accessToken, 'name'=>$user->name]], 'udata' => 1]); 
         } 
-        else{ 
+        else { 
             //return response()->json(['error'=>'Unauthorised'], 401); 
 			 return response()->json(['error' => [['token' => 'Unauthorised']], 'udata' => 0]); 
         } 
@@ -113,15 +113,13 @@ class UserController extends Controller
 		$input = $request->all(); 
 		$get = User::select('id' , 'email')->where([['email', '=' ,$input['email']]])->first();	
 		if($get['id']){
-			Auth::attempt(['email' => $get->email, 'password' => 'socialloginwastu', 'verified' => 1]) ;
+			Auth::attempt(['email' => $get->email, 'password' => 'socialloginwastu', 'verified' => 1]);
 			$user = Auth::user(); 
 			$user_id = $user->id;
 			Profile::where('user_id', $user_id)->update(['device_token' => $input['device_token']]);
 			return response()->json(['success' => [['token' => $user->createToken('MyApp')->accessToken, 'name'=>$user->name]], 'udata' => 1]); 
-			
-
 		}	
-		else{
+		else {
 
 			$input['password'] = bcrypt('socialloginwastu'); 
 			$input['email_token'] = bin2hex(openssl_random_pseudo_bytes(30));
