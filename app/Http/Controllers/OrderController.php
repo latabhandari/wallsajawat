@@ -79,22 +79,20 @@ class OrderController extends Controller
 
                   $stock_item_obj              =  Product::select('stock_item')->where('id', $row->id)->first();
 
-                  $stock_item                  =  $stock_item_obj->stock_item - $row->qty;
+                  $stock_item                  =  (int) $stock_item_obj->stock_item - $row->qty;
+
+                  $stock_item                  =  ($stock_item > 0) ? $stock_item : 0;
 
                   Product::where('id', $row->id)->update(['stock_item' => $stock_item]);
 
                   /* create array for email */
-
 
                   $prod_image_info              =     MyHelper::getProductImage($row->id);
                   $product_info                 =     MyHelper::getProductInfo($row->id, ['name', 'short_desc', 'price']);
 
                   $order_products               =     array();
 
-
-
                   $dimension                    =     MyHelper::getRollDimenstionById($mid);
-
 
                   $order_products['image']      =     $prod_image_info->image;
                   $order_products['name']       =     $product_info[0]['name'];
