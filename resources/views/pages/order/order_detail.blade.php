@@ -205,7 +205,7 @@
 															<div class="col-sm-12 ">
 
 																@if(empty($product_info[0]['stock_item']))
-																	<button class="btn buyagain-btn" type="button">Out of Stock</button>
+																	<button class="btn buyagain-btn" type="button" style="cursor:default">Out of Stock</button>
 																@else
 																	<a href="{{ route('product.detail', $product_info[0]['slug']) }}"><button class="btn buyagain-btn" type="button">Buy it again</button></a>
 																@endif
