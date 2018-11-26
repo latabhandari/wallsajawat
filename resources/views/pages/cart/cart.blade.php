@@ -35,6 +35,15 @@ span.info p {font-size:12px;line-height:20px}
 	</div>
 </div>
 
+
+ @if (\Session::has('error_msg'))
+                <div class="alert alert-danger" style="padding:5px 15px">
+                        <span>{!! \Session::get('error_msg') !!}</span>
+                </div>
+ @endif
+
+
+
 @if(Cart::count())
 <form name="updateform" action="{{ route('cart.item.update') }}" method="POST">
 	@csrf
