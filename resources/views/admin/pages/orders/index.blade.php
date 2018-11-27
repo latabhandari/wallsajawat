@@ -21,6 +21,10 @@
             <div class="box-body">
 
               <div style="float:left;width:100%">
+
+                <form name="order_frm" id="" action="">
+                  @csrf
+
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
                       <label for="status">Start Date&nbsp;</label>
                       <input type="text" name="datepicker1" value="" class="form-control" placeholder="Start Date" id="datepicker1" />
@@ -35,6 +39,9 @@
                       <label for="status">&nbsp;</label>
                       <button type="submit" class="btn btn-primary" style="display:block;margin:0 0 0 10px">Submit</button>
                   </div>
+                </form>
+
+
               </div>
 
 
