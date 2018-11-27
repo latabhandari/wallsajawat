@@ -19,10 +19,22 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-              <div class="form-group">
-                  <label for="status">State&nbsp;</label>
-                  <input type="text" name="" value="" class="form-control" />
+              <div>
+                  <div class="form-group">
+                      <label for="status">Start Date&nbsp;</label>
+                      <input type="text" name="" value="" class="form-control" style="width: 20%" />
+                  </div>
+
+                  <div class="form-group">
+                      <label for="status">Start Date&nbsp;</label>
+                      <input type="text" name="" value="" class="form-control" style="width: 20%" />
+                  </div>
+
+                  <div class="form-group">
+                      <<button type="submit">Submit</button>
+                  </div>
               </div>
+
 
 
 
