@@ -27,12 +27,12 @@
 
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
                       <label for="status">Start Date&nbsp;</label>
-                      <input type="text" name="start_date" value="" class="form-control" placeholder="Start Date" id="datepicker1" />
+                      <input type="text" name="start_date" value="{{ $start_date }}" class="form-control" placeholder="Start Date" id="datepicker1" />
                   </div>
 
                   <div class="form-group" style="float:left;width:20%">
                       <label for="status">End Date&nbsp;</label>
-                      <input type="text" name="end_date" value="" class="form-control" placeholder="End Date" id="datepicker2" />
+                      <input type="text" name="end_date" value="{{ $end_date }}" class="form-control" placeholder="End Date" id="datepicker2" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">

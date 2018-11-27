@@ -36,7 +36,7 @@ class OrderController extends Controller
         else
                 $orders = Order::orderBy('unix_timestamp', 'desc')->get();
 
-         return view('admin.pages.orders.index', compact('orders'))->with('i', (request()->input('page', 1) - 1) * 10);
+         return view('admin.pages.orders.index', compact('orders', 'start_date', 'end_date'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 
     /**
