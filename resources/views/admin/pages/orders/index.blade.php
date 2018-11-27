@@ -79,7 +79,7 @@
                   @endforeach
 
                 @else
-                    <tr><td colspan="8">No data!</td></tr>";
+                    <tr><td colspan="8">No data!</td></tr>
                 @endif
                 </tbody>
                 
