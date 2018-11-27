@@ -30,7 +30,6 @@ class OrderController extends Controller
                 list($month, $date, $year) = explode('/', $end_date);
                 $end_time                  = mktime(23, 59, 59, $month, $date, $year);
 
-                echo $start_time .' '.$end_time ; die;
 
                 $orders = Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $start_time)->orderBy('unix_timestamp', 'desc')->get();
             }
