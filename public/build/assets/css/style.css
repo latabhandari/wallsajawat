@@ -1068,7 +1068,7 @@ box-shadow: 0 0 20px rgba(0,0,0,0.15);
 li.mrgntpnone{width:50%;}
 li.cart-block{width: 25%;margin-right:0!important;}
 .zoomContainer .zoomLens, .product-imgb .zoomWrapper, 
-.product-imgb .zoomWrapper img{max-height:545px!important;width:100%!important;}
+.product-imgb .zoomWrapper img{max-height:545px!important;/*width:100%!important;*/width:auto}
 
 .rating-form{
   box-sizing: border-box;
