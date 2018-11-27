@@ -20,18 +20,18 @@
             <div class="box-body">
 
               <div style="float:left;width:100%">
-                  <div class="form-group" style="float:left;width:20%">
+                  <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
                       <label for="status">Start Date&nbsp;</label>
                       <input type="text" name="" value="" class="form-control" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
-                      <label for="status">Start Date&nbsp;</label>
+                      <label for="status">End Date&nbsp;</label>
                       <input type="text" name="" value="" class="form-control" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
-                      <button type="submit">Submit</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
               </div>
 
