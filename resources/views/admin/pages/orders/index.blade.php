@@ -11,21 +11,6 @@
       <div class="row">
 
         <div class="col-xs-12">
-          <!-- Calender -->
-          <div class="col-xs-6">
-            <form name="">
-
-               <div class="form-group">
-                  <label for="status">State&nbsp;</label>
-                  <input type="text" name="" value="" class="form-control" />
-                </div>
-            </form>
-          </div>
-            <!-- close -->
-
-        </div>
-
-        <div class="col-xs-12">
           <div class="box">
 
             <div class="box-header">
@@ -33,6 +18,13 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+
+              <div class="form-group">
+                  <label for="status">State&nbsp;</label>
+                  <input type="text" name="" value="" class="form-control" />
+              </div>
+
+
 
               @if ($success = Session::get('success'))
                   <div class="alert alert-success">
