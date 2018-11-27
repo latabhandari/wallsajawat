@@ -20,14 +20,14 @@
             <div class="box-body">
 
               <div style="float:left;width:100%">
-                  <div class="form-group" style="float:left;width:30%">
+                  <div class="form-group" style="float:left;width:20%">
                       <label for="status">Start Date&nbsp;</label>
-                      <input type="text" name="" value="" class="form-control" style="width: 20%" />
+                      <input type="text" name="" value="" class="form-control" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
                       <label for="status">Start Date&nbsp;</label>
-                      <input type="text" name="" value="" class="form-control" style="width: 20%" />
+                      <input type="text" name="" value="" class="form-control" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
