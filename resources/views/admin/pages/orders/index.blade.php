@@ -19,19 +19,19 @@
             <!-- /.box-header -->
             <div class="box-body">
 
-              <div>
-                  <div class="form-group">
+              <div style="float:left;width:100%">
+                  <div class="form-group" style="float:left;width:30%">
                       <label for="status">Start Date&nbsp;</label>
                       <input type="text" name="" value="" class="form-control" style="width: 20%" />
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group" style="float:left;width:30%">
                       <label for="status">Start Date&nbsp;</label>
                       <input type="text" name="" value="" class="form-control" style="width: 20%" />
                   </div>
 
-                  <div class="form-group">
-                      <<button type="submit">Submit</button>
+                  <div class="form-group" style="float:left;width:30%">
+                      <button type="submit">Submit</button>
                   </div>
               </div>
 
