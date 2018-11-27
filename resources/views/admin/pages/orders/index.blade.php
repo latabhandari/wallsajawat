@@ -127,7 +127,7 @@
 
     $('#datepicker1, #datepicker2').datepicker({
       autoclose: true,
-      startDate: start
+      //startDate: start
     })
 
   // set end date to max one year period:
