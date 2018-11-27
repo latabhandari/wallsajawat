@@ -22,17 +22,17 @@
 
               <div style="float:left;width:100%">
 
-                <form name="order_frm" id="" action="{{ route('orders') }}">
+                <form name="filter_frm" id="filter_frm" method="POST" action="{{ route('orders.filter') }}">
                   @csrf
 
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
                       <label for="status">Start Date&nbsp;</label>
-                      <input type="text" name="datepicker1" value="" class="form-control" placeholder="Start Date" id="datepicker1" />
+                      <input type="text" name="start_date" value="" class="form-control" placeholder="Start Date" id="datepicker1" />
                   </div>
 
                   <div class="form-group" style="float:left;width:20%">
                       <label for="status">End Date&nbsp;</label>
-                      <input type="text" name="datepicker2" value="" class="form-control" placeholder="End Date" id="datepicker2" />
+                      <input type="text" name="end_date" value="" class="form-control" placeholder="End Date" id="datepicker2" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">

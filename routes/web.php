@@ -83,6 +83,7 @@ Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/orderstore', 'OrderController@store')->name('order.store');
     Route::get('/orders', 'OrderController@order')->name('orders');
+    Route::post('/orders', 'OrderController@order')->name('orders.filter');
 
     Route::get('/search', 'HomeController@search')->name('search');
 
