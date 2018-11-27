@@ -83,7 +83,6 @@ Route::group(['prefix' => 'beta'], function() {
 
     Route::get('/orderstore', 'OrderController@store')->name('order.store');
     Route::get('/orders', 'OrderController@order')->name('orders');
-    Route::post('/orders', 'OrderController@order')->name('orders.filter');
 
     Route::get('/search', 'HomeController@search')->name('search');
 
@@ -150,6 +149,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
 
             Route::get('/orders', 'OrderController@index')->name('admin.orders');
+            Route::post('/orders', 'OrderController@order')->name('admin.orders.filter');
             Route::get('/orders/show/{id}', 'OrderController@show')->name('admin.order.show');
 
             

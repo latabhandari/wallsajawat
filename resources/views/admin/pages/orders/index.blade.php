@@ -22,7 +22,7 @@
 
               <div style="float:left;width:100%">
 
-                <form name="filter_frm" id="filter_frm" method="POST" action="{{ route('orders.filter') }}">
+                <form name="filter_frm" id="filter_frm" method="POST" action="{{ route('admin.orders.filter') }}">
                   @csrf
 
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
@@ -41,11 +41,7 @@
                   </div>
                 </form>
 
-
               </div>
-
-
-
 
               @if ($success = Session::get('success'))
                   <div class="alert alert-success">
