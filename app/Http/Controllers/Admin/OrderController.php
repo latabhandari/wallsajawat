@@ -24,13 +24,7 @@ class OrderController extends Controller
         $end_date    =  isset($params['end_date']) ? $params['end_date'] : '';
         if ( ! empty($start_date) && ! empty($end_date))
             {
-                list($month, $date, $year) = explode('/', $start_date);
-                $start_time                = mktime(0, 0, 0, $month, $date, $year);
-
-                list($month, $date, $year) = explode('/', $end_date);
-                $end_time                  = mktime(23, 59, 59, $month, $date, $year);
-
-                $orders = Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $start_time)->orderBy('unix_timestamp', 'desc')->get();
+               
             }
         else
                 $orders = Order::orderBy('unix_timestamp', 'desc')->get();
