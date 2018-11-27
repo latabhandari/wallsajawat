@@ -1746,8 +1746,9 @@ p {
 	text-align: center;
 }
 .recommend-product li .imgb img {
-	width: 100%;
-	height: auto;
+	/*width: 100%;
+	height: auto;*/
+	height: 250px
 }
 .recommend-product .overlay {
 	padding: 10px 5px;
