@@ -9,22 +9,24 @@
 @section('content')
   <section class="content">
       <div class="row">
+
         <div class="col-xs-12">
-          <div class="box">
-
-            <!-- Calender -->
-
+          <!-- Calender -->
+          <div class="col-xs-6">
             <form name="">
+
                <div class="form-group">
                   <label for="status">State&nbsp;</label>
                   <input type="text" name="" value="" class="form-control" />
                 </div>
             </form>
-
-
-
+          </div>
             <!-- close -->
 
+        </div>
+
+        <div class="col-xs-12">
+          <div class="box">
 
             <div class="box-header">
               <h3 class="box-title">Orders</h3>
