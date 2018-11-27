@@ -32,7 +32,7 @@
 
                   <div class="form-group" style="float:left;width:30%">
                       <label for="status">&nbsp;</label>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary" style="display:block;margin:0 0 0 10px">Submit</button>
                   </div>
               </div>
 
