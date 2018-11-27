@@ -86,7 +86,6 @@ a, a:focus, a:hover{
 .main_menu ul li a {
   font-size: 16px;
   color: #000;
-  text-transform:uppercase;
 }
 
 .header .navbar{margin-bottom:0;} 
@@ -807,7 +806,6 @@ footer {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.bx-clone>.overlay>h5{margin:0; padding-bottom:0;}
 /*signup-page*/
 .login-banner {
   background-image: url(../images/background1.png);
@@ -976,7 +974,6 @@ font-size: 24px;
 .measure-content p img{
   width:100%;
 }
-.measure-content >h3>strong{font-size:22px;}
 .installer-page .measure-content ul li{
   display: inline-block;
   width: 33%;
