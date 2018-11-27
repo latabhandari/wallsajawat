@@ -20,8 +20,8 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $params = $request->all();
-        $start_date  =  $params['start_date'];
-        $end_date    =  $params['end_date'];
+        $start_date  =  isset($params['start_date']) ? $params['start_date'] : '';
+        $end_date    =  isset($params['end_date']) ? $params['end_date'] : '';
         if ( ! empty($start_date) && ! empty($end_date))
             {
                 list($month, $date, $year) = explode('/', $start_date);
