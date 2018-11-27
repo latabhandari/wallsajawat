@@ -31,7 +31,7 @@ class OrderController extends Controller
                 $end_time                  = mktime(23, 59, 59, $month, $date, $year);
 
 
-                $orders = Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $start_time)->orderBy('unix_timestamp', 'desc')->get();
+                $orders = Order::where('unix_timestamp', '>=', $start_time)->where('unix_timestamp', '<=', $end_time)->orderBy('unix_timestamp', 'desc')->get();
             }
         else
                 $orders = Order::orderBy('unix_timestamp', 'desc')->get();
