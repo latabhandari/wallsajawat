@@ -22,7 +22,7 @@
 
               <div style="float:left;width:100%">
 
-                <form name="order_frm" id="" action="">
+                <form name="order_frm" id="" action="{{ route('orders') }}">
                   @csrf
 
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
