@@ -149,7 +149,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'beta/admin', 'middleware' => 
 
 
             Route::get('/orders', 'OrderController@index')->name('admin.orders');
-            Route::post('/orders', 'OrderController@order')->name('admin.orders.filter');
+            Route::post('/orders', 'OrderController@index')->name('admin.orders.filter');
             Route::get('/orders/show/{id}', 'OrderController@show')->name('admin.order.show');
 
             
