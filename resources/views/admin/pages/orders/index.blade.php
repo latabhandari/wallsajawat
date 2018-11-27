@@ -25,12 +25,13 @@
                       <input type="text" name="" value="" class="form-control" />
                   </div>
 
-                  <div class="form-group" style="float:left;width:30%">
+                  <div class="form-group" style="float:left;width:20%">
                       <label for="status">End Date&nbsp;</label>
                       <input type="text" name="" value="" class="form-control" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
+                      <label for="status">&nbsp;</label>
                       <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
               </div>
