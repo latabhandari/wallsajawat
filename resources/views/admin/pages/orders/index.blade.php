@@ -4,6 +4,7 @@
 @endphp
 @section('css')
  <link rel="stylesheet" href="{{ URL::asset('backend/theme/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+ <link rel="stylesheet" href="{{ URL::asset('backend/theme/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" />
 @stop
 
 @section('content')
@@ -22,12 +23,12 @@
               <div style="float:left;width:100%">
                   <div class="form-group" style="float:left;width:20%;margin:0 2% 0 0">
                       <label for="status">Start Date&nbsp;</label>
-                      <input type="text" name="" value="" class="form-control" />
+                      <input type="text" name="datepicker1" value="" class="form-control" placeholder="Start Date" id="datepicker1" />
                   </div>
 
                   <div class="form-group" style="float:left;width:20%">
                       <label for="status">End Date&nbsp;</label>
-                      <input type="text" name="" value="" class="form-control" />
+                      <input type="text" name="datepicker2" value="" class="form-control" placeholder="End Date" id="datepicker2" />
                   </div>
 
                   <div class="form-group" style="float:left;width:30%">
@@ -114,4 +115,30 @@
     })
   })
 </script>
+
+<script src="{{ URL::asset('backend/theme/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script>
+   //Date picker
+   // set default dates
+   var start = new Date();
+
+    $('#datepicker1, #datepicker2').datepicker({
+      autoclose: true,
+      startDate: start
+    })
+
+  // set end date to max one year period:
+  var end = new Date(new Date().setYear(start.getFullYear()+1));
+
+      $('#datepicker1').datepicker({
+          startDate : start,
+          endDate   : end
+      // update "toDate" defaults whenever "fromDate" changes
+      }).on('changeDate', function(){
+          // set the "toDate" start to not be later than "fromDate" ends:
+          $('#datepicker2').datepicker('setStartDate', new Date($(this).val()));
+      }); 
+
+</script>
+
 @stop
