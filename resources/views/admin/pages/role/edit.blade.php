@@ -143,7 +143,7 @@
 
                        <li>Queries
                              <ul class="permission">
-                               <li><input name="index_queries" type="checkbox" value="1" {{ ($permission_obj["index_queries"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Contact Us&nbsp;&nbsp;&nbsp;
+                               <li><input name="index_queries" type="checkbox" value="1" {{ ($permission_obj["index_queries"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Contact Us Queries&nbsp;&nbsp;&nbsp;
                              </ul>
                        </li>
 

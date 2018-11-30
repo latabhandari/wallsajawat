@@ -93,10 +93,9 @@
 
                     <li>Queries
                              <ul class="permission">
-                               <li><input name="index_queries" type="checkbox" value="1">&nbsp;View Contact Us&nbsp;&nbsp;&nbsp;
+                               <li><input name="index_queries" type="checkbox" value="1">&nbsp;View Contact Us Queries&nbsp;&nbsp;&nbsp;
                              </ul>
                     </li>
-
 
                   </ul>
                     
