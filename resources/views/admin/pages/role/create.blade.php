@@ -45,17 +45,17 @@
 
                <div class="box-body">
                 <div class="form-group">
-                  <label for="category">Permission&nbsp;<span class="req">*</span></label>
+                  <label for="category">Permission&nbsp;<span class="req">*</span>&nbsp;&nbsp;<input type='checkbox' id='select_all' name='select_all' /><span style="font-weight:normal;font-size:12px;padding:0 0 0 2px">Select All</span></label>
                   <ul style="line-height:24px">
-                    <li>Category
+                    <li>Categories
                        <ul class="permission">
-                         <li><input name="index_categories" type="checkbox" value="1">&nbsp;View Category&nbsp;&nbsp;&nbsp;<input name="create_category" type="checkbox" value="1">&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input name="edit_category" type="checkbox" value="1">&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input name="destroy_category" type="checkbox" value="1">&nbsp;Delete Category</li>
+                         <li><input name="index_categories" type="checkbox" value="1">&nbsp;View Categories&nbsp;&nbsp;&nbsp;<input name="create_category" type="checkbox" value="1">&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input name="edit_category" type="checkbox" value="1">&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input name="destroy_category" type="checkbox" value="1">&nbsp;Delete Category</li>
                        </ul>
                     </li>
 
-                    <li>Product
+                    <li>Products
                        <ul class="permission">
-                         <li><input name="index_products" type="checkbox" value="1">&nbsp;View Product&nbsp;&nbsp;&nbsp;<input name="create_product" type="checkbox" value="1">&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input name="edit_product" type="checkbox" value="1">&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input name="destroy_product" type="checkbox" value="1">&nbsp;Delete Product</li>
+                         <li><input name="index_products" type="checkbox" value="1">&nbsp;View Products&nbsp;&nbsp;&nbsp;<input name="create_product" type="checkbox" value="1">&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input name="edit_product" type="checkbox" value="1">&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input name="destroy_product" type="checkbox" value="1">&nbsp;Delete Product</li>
                        </ul>
                     </li>
 
@@ -64,6 +64,15 @@
                          <li><input name="index_offers" type="checkbox" value="1">&nbsp;View Offers&nbsp;&nbsp;&nbsp;<input name="create_offer" type="checkbox" value="1">&nbsp;Add Offer&nbsp;&nbsp;&nbsp;<input name="edit_offer" type="checkbox" value="1">&nbsp;Edit Offer&nbsp;&nbsp;&nbsp;<input name="destroy_offer" type="checkbox" value="1">&nbsp;Delete Offer</li>
                        </ul>
                     </li>
+
+
+                    <li>Dimension
+                       <ul class="permission">
+                         <li><input name="index_dimension" type="checkbox" value="1">&nbsp;View Dimension&nbsp;&nbsp;&nbsp;<input name="create_dimension" type="checkbox" value="1">&nbsp;Add Dimension&nbsp;&nbsp;&nbsp;<input name="edit_dimension" type="checkbox" value="1">&nbsp;Edit Dimension&nbsp;&nbsp;&nbsp;<input name="destroy_dimension" type="checkbox" value="1">&nbsp;Delete Dimension</li>
+                       </ul>
+                    </li>
+
+
 
                     <li>Roles
                        <ul class="permission">
@@ -77,7 +86,17 @@
                              </ul>
                     </li>
 
+                    <li>Orders
+                             <ul class="permission">
+                               <li><input name="index_orders" type="checkbox" value="1">&nbsp;View Orders&nbsp;&nbsp;&nbsp;
+                             </ul>
+                    </li>
 
+                    <li>Queries
+                             <ul class="permission">
+                               <li><input name="index_queries" type="checkbox" value="1">&nbsp;View Contact Us&nbsp;&nbsp;&nbsp;
+                             </ul>
+                    </li>
 
 
                   </ul>
@@ -117,4 +136,23 @@
       </div>
       <!-- /.row -->
  </section>
+@stop
+
+@section('pagejs')
+<script>
+
+  $(document).ready(function() {
+
+    $("#select_all").change(function() {
+            if (this.checked) {
+                $("input[type='checkbox']").prop('checked', true);
+            } else {
+                $("input[type='checkbox']").prop('checked', false);
+            }
+    });
+
+  });
+
+</script>
+
 @stop

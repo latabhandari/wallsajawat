@@ -20,6 +20,11 @@
             <!-- /.box-header -->
             <div class="box-body">
 
+              @php
+                    $index_orders = MyHelper::getPermission('index_orders');
+                    if ( ! empty($index_orders)) {
+              @endphp
+
               <div style="float:left;width:100%">
 
                 <form name="filter_frm" id="filter_frm" method="POST" action="{{ route('admin.orders.filter') }}">
@@ -48,6 +53,8 @@
                       <p>{{ $success }}</p>
                   </div>
               @endif
+
+             
 
               <table id="orders" class="table table-bordered table-striped">
                 <thead>
@@ -84,6 +91,18 @@
                 </tbody>
                 
               </table>
+
+              @php
+                        }
+                        else
+                        {
+              @endphp
+              <p>Sorry, you don't have permission to access orders.
+
+              @php
+                        }
+              @endphp
+
 
             </div>
             <!-- /.box-body -->

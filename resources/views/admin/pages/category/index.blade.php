@@ -71,7 +71,23 @@
                   <td>{{ $data->page_title }}</td>
                   <td>{{ $data->meta_keywords }}</td>
                   <td>{{ $data->meta_description }}</td>
+
+                  @php
+                    if ($data->id > 5) {
+                  @endphp
+
                   <td><img src="{{ URL::asset('backend/assets/images/'.$status_img) }}" /><a href="{{ route('admin.category.status', [$data->id, $data->status]) }}">[click here to {{ $status_msg }}]</a></td>
+
+                  @php
+                    } else {
+                  @endphp
+                    <td>----</td>
+
+                  @php
+                    }
+                  @endphp
+
+
                   <td>
                     @php
                         $edit_category = MyHelper::getPermission('edit_category');
@@ -99,8 +115,15 @@
                 
               </table>
 
+               @php
+                        }
+                        else
+                        {
+              @endphp
+              <p>Sorry, you don't have permission to access categories list.
+
               @php
-                    }
+                        }
               @endphp
 
 

@@ -30,15 +30,7 @@
               @endphp
 
               <p style="text-align:right">
-                <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
-                  <option value="">-- Select Category --</option>
-                   @foreach ($categories as $category)
-                       @php
-                         $selected = ($category_id == $category->id) ? "selected" : "" ;
-                       @endphp
-                       <option {{ $selected }} value="{{ $category->id }}">{{ $category->name }}</option>
-                   @endforeach
-                </select>
+                
                 <a class="" href="{{ route('product.create') }}"><button type="button" class="btn btn-primary">Add Product</button></a>
               </p>            
               @php
@@ -51,6 +43,15 @@
                         if ( ! empty($index_products)) {
               @endphp
 
+              <select class="form-control" style="width:15%;display:inline;margin:0 10px 0 0" onchange="filter(this.value)">
+                <option value="">-- Select Category --</option>
+                 @foreach ($categories as $category)
+                     @php
+                       $selected = ($category_id == $category->id) ? "selected" : "" ;
+                     @endphp
+                     <option {{ $selected }} value="{{ $category->id }}">{{ $category->name }}</option>
+                 @endforeach
+              </select>
 
               <table id="products" class="table table-bordered table-striped">
                 <thead>
@@ -107,9 +108,15 @@
               </table>
 
               @php
-                    }
+                        }
+                        else
+                        {
               @endphp
+              <p>Sorry, you don't have permission to access products list.
 
+              @php
+                        }
+              @endphp
             </div>
             <!-- /.box-body -->
           </div>

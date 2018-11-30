@@ -90,8 +90,6 @@ switch ($segment3)
                      <a class="{{ isset($settings_active) ? 'activelink' : '' }}" href="{{ route('admin.settings') }}"><span>Settings</span></a>
                   </li>
 
-
-
 				          <li class="">
                      <a href="{{ route('admin.logout') }}">Logout</a>
                   </li>

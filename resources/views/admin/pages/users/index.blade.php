@@ -43,7 +43,6 @@
                         if ( ! empty($index_users)) {
               @endphp
 
-
               <table id="users" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -90,10 +89,17 @@
                 </tbody>
               </table>
 
-              @php
-                     }
+             @php
+                        }
+                        else
+                        {
               @endphp
-            
+              <p>Sorry, you don't have permission to access users list.
+
+              @php
+                        }
+              @endphp
+
             </div>
             <!-- /.box-body -->
           </div>

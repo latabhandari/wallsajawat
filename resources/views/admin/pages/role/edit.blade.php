@@ -48,18 +48,18 @@
 
               <div class="box-body">
                 <div class="form-group">
-                  <label for="category">Permission&nbsp;<span class="req">*</span></label>
+                  <label for="category">Permission&nbsp;<span class="req">*</span>&nbsp;&nbsp;<input type='checkbox' id='select_all' name='select_all' /><span style="font-weight:normal;font-size:12px;padding:0 0 0 2px">Select All</span></label></label>
                   <ul>
-                    <li>Category
+                    <li>Categories
                        <ul class="permission">
-                         <li><input name="index_categories" type="checkbox" {{ ($permission_obj["index_categories"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Category&nbsp;&nbsp;&nbsp;<input name="create_category" type="checkbox" value="1" {{ ($permission_obj["create_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input name="edit_category" type="checkbox" value="1" {{ ($permission_obj["edit_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input name="destroy_category" type="checkbox" value="1" {{ ($permission_obj["destroy_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Category</li>
+                         <li><input name="index_categories" type="checkbox" {{ ($permission_obj["index_categories"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Categories&nbsp;&nbsp;&nbsp;<input name="create_category" type="checkbox" value="1" {{ ($permission_obj["create_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input name="edit_category" type="checkbox" value="1" {{ ($permission_obj["edit_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input name="destroy_category" type="checkbox" value="1" {{ ($permission_obj["destroy_category"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Category</li>
                       </ul>
                     </li>
 
 
-                    <li>Product
+                    <li>Products
                        <ul class="permission">
-                         <li><input name="index_products" type="checkbox" {{ ($permission_obj["index_products"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Product&nbsp;&nbsp;&nbsp;<input name="create_product" type="checkbox" value="1" {{ ($permission_obj["create_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input name="edit_product" type="checkbox" value="1" {{ ($permission_obj["edit_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input name="destroy_product" type="checkbox" value="1" {{ ($permission_obj["destroy_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Product</li>
+                         <li><input name="index_products" type="checkbox" {{ ($permission_obj["index_products"] == 1) ? "checked='checked'" : ""  }} value="1">&nbsp;View Products&nbsp;&nbsp;&nbsp;<input name="create_product" type="checkbox" value="1" {{ ($permission_obj["create_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input name="edit_product" type="checkbox" value="1" {{ ($permission_obj["edit_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input name="destroy_product" type="checkbox" value="1" {{ ($permission_obj["destroy_product"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Product</li>
                       </ul>
                     </li>
 
@@ -69,7 +69,13 @@
                       </ul>
                     </li>
 
-                      <li>Roles
+                    <li>Dimension
+                       <ul class="permission">
+                         <li><input name="index_dimension" type="checkbox" value="1" {{ ($permission_obj["index_dimension"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Dimension&nbsp;&nbsp;&nbsp;<input name="create_dimension" type="checkbox" value="1" {{ ($permission_obj["create_dimension"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Dimension&nbsp;&nbsp;&nbsp;<input name="edit_dimension" type="checkbox" value="1" {{ ($permission_obj["edit_dimension"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Dimension&nbsp;&nbsp;&nbsp;<input name="destroy_dimension" type="checkbox" value="1" {{ ($permission_obj["destroy_dimension"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Dimension</li>
+                       </ul>
+                    </li>
+
+                     <li>Roles
                          <ul class="permission">
                            <li><input name="index_roles" type="checkbox" value="1" {{ ($permission_obj["index_roles"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Roles&nbsp;&nbsp;&nbsp;<input name="create_role" type="checkbox" value="1" {{ ($permission_obj["create_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Roles&nbsp;&nbsp;&nbsp;<input name="edit_role" type="checkbox" value="1" {{ ($permission_obj["edit_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Roles&nbsp;&nbsp;&nbsp;<input name="destroy_role" type="checkbox" value="1" {{ ($permission_obj["destroy_role"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Roles</li>
                          </ul>
@@ -80,6 +86,19 @@
                            <li><input name="index_users" type="checkbox" value="1" {{ ($permission_obj["index_users"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Users&nbsp;&nbsp;&nbsp;<input name="create_user" type="checkbox" value="1" {{ ($permission_obj["create_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Add Users&nbsp;&nbsp;&nbsp;<input name="edit_user" type="checkbox" value="1" {{ ($permission_obj["edit_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Edit Users&nbsp;&nbsp;&nbsp;<input name="destroy_user" type="checkbox" value="1" {{ ($permission_obj["destroy_user"] == 1) ? "checked='checked'" : ""  }}>&nbsp;Delete Users</li>
                          </ul>
                       </li>
+
+                      <li>Orders
+                           <ul class="permission">
+                             <li><input name="index_orders" type="checkbox" value="1" {{ ($permission_obj["index_orders"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Orders&nbsp;&nbsp;&nbsp;
+                           </ul>
+                      </li>
+
+                       <li>Queries
+                             <ul class="permission">
+                               <li><input name="index_queries" type="checkbox" value="1" {{ ($permission_obj["index_queries"] == 1) ? "checked='checked'" : ""  }}>&nbsp;View Contact Us&nbsp;&nbsp;&nbsp;
+                             </ul>
+                       </li>
+
                   </ul>                    
                 </div>
               </div>
@@ -113,4 +132,23 @@
       </div>
       <!-- /.row -->
  </section>
+@stop
+
+@section('pagejs')
+<script>
+
+  $(document).ready(function() {
+
+    $("#select_all").change(function() {
+            if (this.checked) {
+                $("input[type='checkbox']").prop('checked', true);
+            } else {
+                $("input[type='checkbox']").prop('checked', false);
+            }
+    });
+
+  });
+
+</script>
+
 @stop

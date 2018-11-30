@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="image">Images&nbsp;<span class="req">*</span></label>
+                  <label for="image">Upload Multiple Images&nbsp;<span class="req">*</span></label>
                   <input type="file" name="images[]" placeholder="Upload Images" multiple />
                 </div>
 

@@ -147,6 +147,30 @@ class RolesController extends Controller
          // close
 
 
+        // Dimension
+
+         if (isset($params['index_dimension']))
+         $permission['index_dimension']           =    $params['index_dimension'];
+            else
+         $permission['index_dimension']           =    0;
+
+         if (isset($params['create_dimension']))
+         $permission['create_dimension']          =    $params['create_dimension'];
+            else
+         $permission['create_dimension']          =    0;
+
+         if (isset($params['edit_dimension']))
+         $permission['edit_dimension']            =    $params['edit_dimension'];
+            else
+         $permission['edit_dimension']            =    0;
+
+         if (isset($params['destroy_dimension']))
+         $permission['destroy_dimension']         =    $params['destroy_dimension'];
+            else
+         $permission['destroy_dimension']         =    0;
+
+         // close
+
 
          // Users
 
@@ -172,8 +196,24 @@ class RolesController extends Controller
 
          // close
 
+         // view orders
+
+         if (isset($params['index_orders']))
+         $permission['index_orders']              =    $params['index_orders'];
+            else
+         $permission['index_orders']              =    0;
 
          // close
+
+         // view queries
+
+         if (isset($params['index_queries']))
+         $permission['index_queries']              =    $params['index_queries'];
+            else
+         $permission['index_queries']              =    0;
+
+         // close
+
 
 
          $permission_array['permission']         =    $permission;
@@ -329,6 +369,29 @@ class RolesController extends Controller
          // close
 
 
+        // Dimension
+
+         if (isset($params['index_dimension']))
+         $permission['index_dimension']           =    $params['index_dimension'];
+            else
+         $permission['index_dimension']           =    0;
+
+         if (isset($params['create_dimension']))
+         $permission['create_dimension']          =    $params['create_dimension'];
+            else
+         $permission['create_dimension']          =    0;
+
+         if (isset($params['edit_dimension']))
+         $permission['edit_dimension']            =    $params['edit_dimension'];
+            else
+         $permission['edit_dimension']            =    0;
+
+         if (isset($params['destroy_dimension']))
+         $permission['destroy_dimension']             =    $params['destroy_dimension'];
+            else
+         $permission['destroy_dimension']             =    0;
+
+         // close
 
          // Users
 
@@ -351,6 +414,23 @@ class RolesController extends Controller
          $permission['destroy_user']             =    $params['destroy_user'];
             else
          $permission['destroy_user']             =    0;
+
+         // close
+
+
+         // view orders
+
+         if (isset($params['index_orders']))
+         $permission['index_orders']              =    $params['index_orders'];
+            else
+         $permission['index_orders']              =    0;
+
+         // view queries
+
+         if (isset($params['index_queries']))
+         $permission['index_queries']              =    $params['index_queries'];
+            else
+         $permission['index_queries']              =    0;
 
          // close
 

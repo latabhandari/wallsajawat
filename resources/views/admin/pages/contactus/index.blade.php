@@ -24,6 +24,11 @@
                   </div>
               @endif
 
+               @php
+                        $index_queries = MyHelper::getPermission('index_queries');
+                        if ( ! empty($index_queries)) {
+              @endphp             
+
               <table id="city" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -59,6 +64,18 @@
                 </tbody>
                 
               </table>
+
+              @php
+                        }
+                        else
+                        {
+              @endphp
+              <p>Sorry, you don't have permission to access user's queries.
+
+              @php
+                        }
+              @endphp
+
 
             </div>
             <!-- /.box-body -->

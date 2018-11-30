@@ -99,7 +99,14 @@
               </table>
 
               @php
-                      }
+                        }
+                        else
+                        {
+              @endphp
+              <p>Sorry, you don't have permission to access offers.
+
+              @php
+                        }
               @endphp
 
 
