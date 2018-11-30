@@ -27,27 +27,30 @@
 
     @include('pages.include.header')
 
-    <div class="slider">
-  <div class="slide_viewer">
-    <div class="slide_group">
-      <div class="slide">
-	<img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
-      </div>
-      <div class="slide">
-	<img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
-      </div>
-      <div class="slide">
-	<img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
-      </div>
-      <div class="slide">
-	<img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
-      </div>
-    </div>
-  </div>
-</div><!-- End // .slider -->
+    @php
+   print_r($_SESSION);
+    @endphp
 
-<div class="slide_buttons">
-</div>
+    <div class="slider">
+        <div class="slide_viewer">
+          <div class="slide_group">
+            <div class="slide">
+      	           <img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+      	           <img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+      	           <img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
+            </div>
+            <div class="slide">
+                	 <img src="{{ asset('build/assets/images/1.jpg') }}" alt="">
+            </div>
+          </div>
+        </div>
+    </div><!-- End // .slider -->
+
+<div class="slide_buttons"></div>
 
 <div class="directional_nav">
   <div class="previous_btn" title="Previous">
@@ -74,54 +77,46 @@
 </div><!-- End // .directional_nav -->
 
 <div class="container-fluid secn-2">
+    <div class="row">
+        <div class="col-sm-12">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="heading-sec text-center">
-                                <h2 class="text-center"> TOP SELLERS</h2>
-                                <h4 class="subheading">Wallpaper</h4>
-                        </div>
-                               
-                        </div>
-                    </div>
-             
-
-              
-                <div class="col-sm-12">
-
-                    @php
-                       $i = 1;
-                    @endphp      
-                    @foreach ($wallpaper_images as $wall_image)  
-                     <div class="work-overlay sub-img{{ $i++ }}" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
-                        <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
-                    </div>
-                    @endforeach
-
-                    <div class="sub-img6" style="background-image: url({{ asset('build/assets/images/All-elements.png') }});min-height: 300px;width:318px;margin-left: 3px">
-                        <a href="{{ route('categories') }}">
-                            <h5>All</h5>
-                            <h4>Top Sellers</h4>
-                        </a>
-                    </div>
-                    
+                <div class="heading-sec text-center">
+                        <h2 class="text-center"> TOP SELLERS</h2>
+                        <h4 class="subheading">Wallpaper</h4>
                 </div>
             </div>
+        </div>
+     
+        <div class="col-sm-12">
+
+            @php
+               $i = 1;
+            @endphp      
+            @foreach ($wallpaper_images as $wall_image)  
+             <div class="work-overlay sub-img{{ $i++ }}" style="background-image: url({{ asset('catalog/category/'.$wall_image->wallpaper_image) }})">
+                <a href="{{ route('category.product', $wall_image->slug) }}"><h5>{{ $wall_image->name }}</h5></a>
             </div>
+            @endforeach
 
+            <div class="sub-img6" style="background-image: url({{ asset('build/assets/images/All-elements.png') }});min-height: 300px;width:318px;margin-left: 3px">
+                <a href="{{ route('categories') }}">
+                    <h5>All</h5>
+                    <h4>Top Sellers</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
 
-
-
-    <div class="slider-sec">
+  <div class="slider-sec">
         <div class="heading-sec text-center">
-                                <h2 class="text-center"> TOP SELLERS</h2>
-                                <h4 class="subheading">Posters</h4>
-                        </div>
+              <h2 class="text-center"> TOP SELLERS</h2>
+              <h4 class="subheading">Posters</h4>
+        </div>
         <div class="center-container">
             <ul class="bxslider">
                 <!-- <a class="prev" id="prev" onClick="plusSlides(-1)" width="15">&#10094;</a>-->
                 <li>
-                    
                     <div class="img-block">
                         <img src="{{ asset('build/assets/images/Sliderimg1.png') }}">
                         <div class="trending-content">
@@ -130,14 +125,12 @@
                     </div>
                 </li>
                 <li>
-                    
                     <div class="img-block">
                         <img src="{{ asset('build/assets/images/Sliderimg2.png') }}">
                         <div class="trending-content">
                             <h4>ILLUTRATION ART</h4>
                         </div>
                     </div>
-                    
                 </li>
                 <li>
                     
@@ -150,17 +143,13 @@
                     </div>
                 </li>
                 <li>
-                    
                     <div class="img-block">
                         <img src="{{ asset('build/assets/images/Sliderimg3.png') }}">
                         <div class="trending-content">
                             <h4>NATURE AND LANDSCAPE</h4>
                         </div>
-                        
                     </div>
-                    
                 </li>
-                
             </ul>
             <!--  <a class="next" onClick="plusSlides(1)">&#10095;</a> </div>-->
         </div>
