@@ -27,10 +27,6 @@
 
     @include('pages.include.header')
 
-    @php
-   dd(Auth::user()->role_id);
-    @endphp
-
     <div class="slider">
         <div class="slide_viewer">
           <div class="slide_group">
