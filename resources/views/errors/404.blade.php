@@ -16,7 +16,7 @@
 <div class="row">
         <div class="col-md-12 mt-1 mb-1 text-center">
             <h1>{{ $exception->getMessage() }}</h1>
-            <a href="{{ route('/') }}">Back to home</a>
+            <a href="{{ route('home.index') }}">Back to home</a>
         </div>
 </div>
 
