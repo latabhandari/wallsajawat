@@ -17,7 +17,7 @@
 	<div class="row">
 	        <div class="col-md-12 mt-1 mb-1 text-center" style="margin:70px 0">
 	            <h1>404, Page Not Found</h1>
-	            <a href="{{ route('home.index') }}">Back to home</a>
+	            <a href="{{ route('home.index') }}">&lraquo; Back to home</a>
 	        </div>
 	</div>
 </div>
