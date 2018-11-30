@@ -50,13 +50,13 @@
                   <ul style="line-height:24px">
                     <li>Categories&nbsp;&nbsp;<input type='checkbox' id='cat_all' name='cat_all' /><span style="font-weight:normal;font-size:11px;padding:0 0 0 2px">Select All</span>
                        <ul class="permission">
-                         <li><input class='categry' name="index_categories" type="checkbox" value="1">&nbsp;View Categories&nbsp;&nbsp;&nbsp;<input class='categry' name="create_category" type="checkbox" value="1">&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input class='categry' name="edit_category" type="checkbox" value="1">&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<input class='categry' name="destroy_category" type="checkbox" value="1">&nbsp;Delete Category</li>
+                         <li><input class='categry' name="index_categories" type="checkbox" value="1">&nbsp;View Categories&nbsp;&nbsp;&nbsp;<input class='categry' name="create_category" type="checkbox" value="1">&nbsp;Add Category&nbsp;&nbsp;&nbsp;<input class='categry' name="edit_category" type="checkbox" value="1">&nbsp;Edit Category&nbsp;&nbsp;&nbsp;<!--<input class='categry' name="destroy_category" type="checkbox" value="1">&nbsp;Delete Category--></li>
                        </ul>
                     </li>
 
                     <li>Products&nbsp;&nbsp;<input type='checkbox' id='prd_all' name='prd_all' /><span style="font-weight:normal;font-size:11px;padding:0 0 0 2px">Select All</span>
                        <ul class="permission">
-                         <li><input class='prdct' name="index_products" type="checkbox" value="1">&nbsp;View Products&nbsp;&nbsp;&nbsp;<input name="create_product" class='prdct' type="checkbox" value="1">&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input class='prdct' name="edit_product" type="checkbox" value="1">&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<input class='prdct' name="destroy_product" type="checkbox" value="1">&nbsp;Delete Product</li>
+                         <li><input class='prdct' name="index_products" type="checkbox" value="1">&nbsp;View Products&nbsp;&nbsp;&nbsp;<input name="create_product" class='prdct' type="checkbox" value="1">&nbsp;Add Product&nbsp;&nbsp;&nbsp;<input class='prdct' name="edit_product" type="checkbox" value="1">&nbsp;Edit Product&nbsp;&nbsp;&nbsp;<!--<input class='prdct' name="destroy_product" type="checkbox" value="1">&nbsp;Delete Product--></li>
                        </ul>
                     </li>
 
@@ -69,15 +69,13 @@
 
                     <li>Dimension&nbsp;&nbsp;<input type='checkbox' id='dmn_all' name='dmn_all' /><span style="font-weight:normal;font-size:11px;padding:0 0 0 2px">Select All</span>
                        <ul class="permission">
-                         <li><input class='dmns' name="index_dimension" type="checkbox" value="1">&nbsp;View Dimension&nbsp;&nbsp;&nbsp;<input class='dmns' name="create_dimension" type="checkbox" value="1">&nbsp;Add Dimension&nbsp;&nbsp;&nbsp;<input class='dmns' name="edit_dimension" type="checkbox" value="1">&nbsp;Edit Dimension&nbsp;&nbsp;&nbsp;<input class='dmns' name="destroy_dimension" type="checkbox" value="1">&nbsp;Delete Dimension</li>
+                         <li><input class='dmns' name="index_dimension" type="checkbox" value="1">&nbsp;View Dimension&nbsp;&nbsp;&nbsp;<input class='dmns' name="create_dimension" type="checkbox" value="1">&nbsp;Add Dimension&nbsp;&nbsp;&nbsp;<input class='dmns' name="edit_dimension" type="checkbox" value="1">&nbsp;Edit Dimension&nbsp;&nbsp;&nbsp;<!--<input class='dmns' name="destroy_dimension" type="checkbox" value="1">&nbsp;Delete Dimension--></li>
                        </ul>
                     </li>
 
-
-
                     <li>Roles&nbsp;&nbsp;<input type='checkbox' id='roles_all' name='roles_all' /><span style="font-weight:normal;font-size:11px;padding:0 0 0 2px">Select All</span>
                        <ul class="permission">
-                         <li><input class='rls' name="index_roles" type="checkbox" value="1">&nbsp;View Roles&nbsp;&nbsp;&nbsp;<input class='rls' name="create_role" type="checkbox" value="1">&nbsp;Add Role&nbsp;&nbsp;&nbsp;<input class='rls' name="edit_role" type="checkbox" value="1">&nbsp;Edit Role&nbsp;&nbsp;&nbsp;<input class='rls' name="destroy_role" type="checkbox" value="1">&nbsp;Delete Role</li>
+                         <li><input class='rls' name="index_roles" type="checkbox" value="1">&nbsp;View Roles&nbsp;&nbsp;&nbsp;<input class='rls' name="create_role" type="checkbox" value="1">&nbsp;Add Role&nbsp;&nbsp;&nbsp;<input class='rls' name="edit_role" type="checkbox" value="1">&nbsp;Edit Role&nbsp;&nbsp;&nbsp;<!--<input class='rls' name="destroy_role" type="checkbox" value="1">&nbsp;Delete Role--></li>
                        </ul>
                     </li>
 
