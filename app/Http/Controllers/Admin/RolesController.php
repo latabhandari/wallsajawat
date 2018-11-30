@@ -18,7 +18,7 @@ class RolesController extends Controller
     {
         //
         //$roles = Roles::latest()->paginate(10);
-        $roles = Roles::where('id', '>', 1)->get();
+        $roles = Roles::where('id', '>', 1)->where('id', '!=', 2)->get(); // !=2 for retailer user //
         return view('admin.pages.role.index', compact('roles'))->with('i', (request()->input('page', 1) - 1) * 10);
     }
 

@@ -26,9 +26,8 @@ class AccountController extends Controller
 
      	if (Auth::attempt($userdata)) 
      	   {
-
      		   $role_id = Auth::user()->role_id;
-               if (! empty($role_id))
+               if (! empty($role_id) && $role_id !== 2) //$role_id = 2 for retailer user //
                	 {
                	 	return redirect()->route('admin.dashboard');
                	 }
