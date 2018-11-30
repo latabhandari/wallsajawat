@@ -50,6 +50,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Mobile</th>
+                  <th>Type</th>
                   <th>Registerd Time</th>
                   <th>Action</th>
                 </tr>
@@ -61,6 +62,7 @@
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->email }}</td>
                         <td>{{ $data->mobile }}</td>
+                        <td>{{ $data->role->name }}</td>
                         <td>{{ date('D, j M\'y h:i a', $data->unix_timestamp) }}</td>
                         <td>
                             @php

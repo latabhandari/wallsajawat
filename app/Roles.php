@@ -16,4 +16,9 @@ class Roles extends Model
         'name', 'status', 'permission', 'created_at_timestamp', 'updated_at_timestamp'
     ];
 
+    public function role()
+       {
+          return $this->belongsTo(User::class, 'role_id', 'id');
+       }	
+
 }
