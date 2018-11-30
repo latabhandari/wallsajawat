@@ -110,8 +110,10 @@
 		</div>	
 	
 	</div>
+				<div class="measure-last-tl" >
 				<p>Most wallpaper designs are pretty flexible and trimming the edges to achieve a perfect finish does not harm the overall look. Always use a measuring tape to get the most accurate measurement. Finally, add a few extra inches along the sides of your wallpaper. This will give you a little breathing space in case of any odd mistakes!
 				Got any queries? Simply call us </p>
+				</div>
 			</div>
 	</div>
 </div>

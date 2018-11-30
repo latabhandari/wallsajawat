@@ -53,7 +53,7 @@
     <div class="col-sm-12 text-left selling-img-heading">
       <h4>AVAILABLE DESIGNS({{ count($products) }})</h4>
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-12 product-imgs-main">
       <div class="row">
         @if(count($products))
 
