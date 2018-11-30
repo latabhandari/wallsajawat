@@ -28,7 +28,7 @@
     @include('pages.include.header')
 
     @php
-   print_r($_SESSION);
+   dd(session()->all());
     @endphp
 
     <div class="slider">
