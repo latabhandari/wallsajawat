@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="heading-sec text-center">
                         <h2 class="text-center"> TOP SELLERS</h2>
-                        <h4 class="subheading">Wallpaper</h4>
+                        <h4 class="subheading">Category</h4>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
   <div class="slider-sec">
         <div class="heading-sec text-center">
               <h2 class="text-center"> TOP SELLERS</h2>
-              <h4 class="subheading">Posters</h4>
+              <h4 class="subheading">Wallpaper</h4>
         </div>
         <div class="center-container">
             <ul class="bxslider">
