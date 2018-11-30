@@ -31,6 +31,8 @@ class CreateUsersTable extends Migration
                 $table->string('ip_address')->comment('Ip Address')->nullable();
                 $table->rememberToken();
                 $table->timestamps();
+
+                $table->foreign('role_id')->references('id')->on('roles');
 				
         });
     }
