@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Profile as Profile;
 use App\Cities as Cities;
+use App\Roles as Roles;
 
 class User extends Authenticatable
 {
@@ -36,5 +37,10 @@ class User extends Authenticatable
       {
           return $this->hasOne(Profile::class, 'user_id', 'id');
       } 
+
+    public function role()
+       {
+          return $this->hasOne(Roles::class, 'id', 'role_id');
+       }    
 
 }

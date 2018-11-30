@@ -62,7 +62,7 @@
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->email }}</td>
                         <td>{{ $data->mobile }}</td>
-                        <td>{{ $data->role->name }}</td>
+                        <td>{{ $data->role['name'] }}</td>
                         <td>{{ date('D, j M\'y h:i a', $data->unix_timestamp) }}</td>
                         <td>
                             @php
