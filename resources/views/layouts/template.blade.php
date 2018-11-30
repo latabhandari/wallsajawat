@@ -28,7 +28,7 @@
     @include('pages.include.header')
 
     @php
-   dd(session()->all());
+   dd(Auth::user()->role_id);
     @endphp
 
     <div class="slider">
