@@ -112,10 +112,10 @@ class UserController extends Controller
         }
 		$input = $request->all(); 
 		$get = User::select('id' , 'email')->where([['email', '=' ,$input['email']]])->first();	
-		if($get['id']){
-			Auth::attempt(['email' => $get->email, 'password' => 'socialloginwastu', 'verified' => 1]);
-			$user = Auth::user(); 
-			$user_id = $user->id;
+		if($get['id']) {
+			//Auth::attempt(['email' => $get->email, 'password' => 'socialloginwastu', 'verified' => 1]);
+			$user    = Auth::attempt(['email' => $get->email, 'verified' => 1]);
+			$user_id  = $user->id;
 			Profile::where('user_id', $user_id)->update(['device_token' => $input['device_token']]);
 			return response()->json(['success' => [['token' => $user->createToken('MyApp')->accessToken, 'name'=>$user->name]], 'udata' => 1]); 
 		}	
