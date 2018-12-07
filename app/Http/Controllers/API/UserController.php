@@ -92,7 +92,7 @@ class UserController extends Controller
 			'provider' => 'required|max:255', 
 			'provider_id' => 'required|max:255', 
         ]);
-		function getToken($length){
+		function getToken($length) {
 			$token = "";
 			$codeAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			$codeAlphabet.= "abcdefghijklmnopqrstuvwxyz";
