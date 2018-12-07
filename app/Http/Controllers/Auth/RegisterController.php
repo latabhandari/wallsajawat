@@ -89,8 +89,7 @@ class RegisterController extends Controller
 
         Profile::create(['user_id' => $user->id]);
 
-        $email = new EmailVerification($user);
-        Mail::to($user->email)->send($email);
+        
 
         return $user;
 
@@ -104,10 +103,15 @@ class RegisterController extends Controller
 
         // $this->guard()->login($user);
 
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+        $email = new EmailVerification($user);
+        Mail::to($user->email)->send($email);
+
+        //return $this->registered($request, $user)
+                       // ?: redirect($this->redirectPath());
+
+        return redirect(route('register'))->with('success','Email Sent!');
     }
-    
+
 
     protected function redirectTo()
         {
