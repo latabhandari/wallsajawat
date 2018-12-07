@@ -93,7 +93,7 @@ class RegisterController extends Controller
 
         //return $user;
 
-        return this->redirectTo();
+        return $this->redirectTo();
 
     }
 
