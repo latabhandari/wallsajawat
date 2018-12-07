@@ -83,13 +83,13 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
 			      'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
             'unix_timestamp' => time(),
-            'verified' => 1 //ucomment
+            'verified' => 0 //ucomment
         ]);
 
 
         Profile::create(['user_id' => $user->id]);
 
-        
+
 
         return $user;
 
@@ -109,7 +109,7 @@ class RegisterController extends Controller
         //return $this->registered($request, $user)
                        // ?: redirect($this->redirectPath());
 
-        return redirect(route('register'))->with('success','Email Sent!');
+        return redirect(route('register'))->with('success','success');
     }
 
 

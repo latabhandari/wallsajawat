@@ -51,8 +51,17 @@
 
                     </div>
 
+                    @if ($success = Session::get('success'))
+                          <div class="alert alert-success">
+                              <h3>A vefification link has been sent to your email address</h3>
+                              <p>Please click on the link that has been sent to your email account to verify your email.</p>
+                          </div>
+                    @endif
+
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
+
+
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <input id="name" type="text" placeholder="Name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" />
