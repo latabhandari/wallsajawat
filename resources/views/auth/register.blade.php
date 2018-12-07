@@ -53,7 +53,7 @@
 
                     @if ($success = Session::get('success'))
                           <div class="alert alert-success">
-                              <p><strong>A verification link has been sent to your email address</strong></p>
+                              <p><strong>A verification link has been sent to your email.</strong></p>
                               <p>Please click on the link that has been sent to your email account to verify your email.</p>
                           </div>
                     @endif
