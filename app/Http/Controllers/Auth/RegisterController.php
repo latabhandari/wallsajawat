@@ -92,6 +92,7 @@ class RegisterController extends Controller
         Mail::to($user->email)->send($email);
 
         //return $user;
+        Auth::login($this->create($request->all()));
         return redirect($this->redirectPath());
 
     }
