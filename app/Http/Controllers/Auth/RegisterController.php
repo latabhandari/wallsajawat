@@ -47,6 +47,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -91,11 +92,22 @@ class RegisterController extends Controller
         $email = new EmailVerification($user);
         Mail::to($user->email)->send($email);
 
-        //return $user;
-
-        return $this->redirectTo();
+        return $user;
 
     }
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        // $this->guard()->login($user);
+
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath());
+    }
+    
 
     protected function redirectTo()
         {
