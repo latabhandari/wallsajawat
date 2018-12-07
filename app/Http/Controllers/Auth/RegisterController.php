@@ -90,8 +90,9 @@ class RegisterController extends Controller
 
         $email = new EmailVerification($user);
         Mail::to($user->email)->send($email);
-        
-        return $user;
+
+        //return $user;
+        return redirect($this->redirectPath());
 
     }
 
