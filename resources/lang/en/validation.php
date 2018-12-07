@@ -133,7 +133,7 @@ return [
                                         'captcha' => 'Captcha error! try again later or contact site admin.',
                                   ],
         'email' => [
-                   'check_unique_users' => 'The :email you entered belongs to an existing account.',
+                   'check_unique_users' => 'The :attribute you entered belongs to an existing account.',
         ]
     ],
 

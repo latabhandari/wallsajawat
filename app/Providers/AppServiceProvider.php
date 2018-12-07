@@ -22,7 +22,10 @@ class AppServiceProvider extends ServiceProvider
 
 
         Validator::extend('check_unique_users', function ($attribute, $value, $parameters, $validator) {
-            return User::where('email', $value)->where('verified', '1')->exists();
+            echo $value; die;
+            $user = User::where('email', $value)->where('verified', 1)->first();
+            return  ($user === null) ? true : false;
+
         });
 
 
