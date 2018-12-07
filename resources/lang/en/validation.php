@@ -132,6 +132,9 @@ return [
                                         'required' => 'Please verify that you are not a robot.',
                                         'captcha' => 'Captcha error! try again later or contact site admin.',
                                   ],
+        'email' => [
+                   'check_unique_users' => 'The :email you entered belongs to an existing account.',
+        ]
     ],
 
     /*
