@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
 use Validator;
+use App\User as User;
 
 class AppServiceProvider extends ServiceProvider
 {
