@@ -20,9 +20,7 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
 
-
         Validator::extend('check_unique_users', function ($attribute, $value, $parameters, $validator) {
-            echo $value; die;
             $user = User::where('email', $value)->where('verified', 1)->first();
             return  ($user === null) ? true : false;
 
