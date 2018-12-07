@@ -25,7 +25,6 @@ class AppServiceProvider extends ServiceProvider
             return $user === null ? true : false;
         });
 
-
     }
 
     /**

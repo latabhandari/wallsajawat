@@ -85,7 +85,12 @@ class RegisterController extends Controller
             'verified' => 1 //ucomment
         ]);
 
+
         Profile::create(['user_id' => $user->id]);
+
+        $email = new EmailVerification($user);
+        Mail::to($user->email)->send($email);
+        
         return $user;
 
     }
