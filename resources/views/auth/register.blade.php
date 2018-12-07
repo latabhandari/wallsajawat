@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-sm-8 col-sm-offset-3">
             <div class="card">
                   <div class="card-body">
 
@@ -53,7 +53,7 @@
 
                     @if ($success = Session::get('success'))
                           <div class="alert alert-success">
-                              <h3>A vefification link has been sent to your email address</h3>
+                              <h3>A verification link has been sent to your email address</h3>
                               <p>Please click on the link that has been sent to your email account to verify your email.</p>
                           </div>
                     @endif
