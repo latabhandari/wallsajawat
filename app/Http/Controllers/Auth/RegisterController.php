@@ -83,16 +83,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
 			      'email_token' => bin2hex(openssl_random_pseudo_bytes(30)),
             'unix_timestamp' => time(),
-            'verified' => 0 //ucomment
+            'verified' => 0
         ]);
-
 
         Profile::create(['user_id' => $user->id]);
 
-
-
         return $user;
-
     }
 
     public function register(Request $request)
@@ -111,7 +107,6 @@ class RegisterController extends Controller
 
         return redirect(route('register'))->with('success','success');
     }
-
 
     protected function redirectTo()
         {
